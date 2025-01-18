@@ -1,0 +1,4 @@
+GDXXRW           44.4.0 06604687 Sep 19, 2023          WEI x86 64bit/MS Window
+Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\testData.xlsx
+Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\testData.gdx
+Total time = 1813 Ms

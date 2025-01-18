@@ -1,0 +1,8 @@
+Zur Analyse des Wertes des Stromspeichers wird ein 2-stufiges stochastische
+Entscheidungsmodell etabliert. In der ersten Stufe werden Gebote f¨ur den
+Regelleistungsmarkt abgegeben. In der zweiten Stufe werden Gebote f¨ur
+den Regelarbeitsmarkt abgegeben.
+Dabei sind mehrere Szenarion zu betrachten, diese werden die Unsicherheiten hinsichtlich des Preises und des Wetters abbilden. Hierf¨ur sind zus¨atzlich
+die Korrelation zwischen dem Preis und der Wettervorhersage zu untersuchen. Um die Korrelation zu analysieren werden die Preise mit der Wettervorhersage kombiniert und in einem 2D-Diagramm abgebildet. An Hand
+dieses 2D-Diagramms wird dann mittels Least-Square-Methode die Korrelation berechnet. Um einen eventuellen Einfluss der Jahreszeiten auf diese Korrelation zu ber¨ucksichtigen wird hierzu ein ”Mixed-Effect-Model” zus¨atzlich
+angewendet.

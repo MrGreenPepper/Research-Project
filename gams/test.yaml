@@ -1,0 +1,7 @@
+- PandasExcelReader:
+    file: testData.xlsx
+    symbols:
+      - name: negDemand
+        range: negDemand!A1
+- GDXWriter:
+    file: "[value]"

@@ -1,0 +1,14 @@
+.venv/ 
+.wenv/
+*venv/
+*wvenv/
+*venv\
+*wvenv\
+.gams\python\venv\
+.gams\python\wvenv\
+.gams/python/venv/
+.gams/python/wvenv/
+gams\python\venv\
+gams\python\wvenv\
+gams/python/venv/
+gams/python/wvenv/

@@ -1,0 +1,21 @@
+
+Energiewirtschaftsgesetz
+
+Im EEG 2023 ist im § 4 der leistungsbezogene Ausbaupfad für die Nutzung der erneuerbaren Energie (EE) im Strombereich festgelegt: Im Jahr 2030 sollen 115 Gigawatt Windenergie an Land, 215 Gigawatt Photovoltaik und 8,4 Gigawatt Biomasseanlagen installiert sein. Damit sollen bis zu diesem Zeitpunkt mindestens 80 Prozent des deutschen Bruttostromverbrauchs aus EE-Erzeugung stammen.
+
+
+Standortfragen über Lastprofile abbilden?
+
+Welche Unsicherheiten:
+Wetter (auch für intraday market?)
+Preis
+
+Was soll alles optimiert werden?
+Portfolio
+Flexibilitätsoptionen
+Vermarktung
+
+
+welches EEG?
+nur zukünftige Projekte oder auch heutige schon mit einbeziehen?
+mehrere Modelle oder ein kombiniertes modell?

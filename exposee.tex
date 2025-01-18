@@ -1,0 +1,197 @@
+\documentclass[british,         % thesis language
+BCOR=2mm,                       % binding correction for printing (ca. 1mm per 10 pages for hardcover binding)
+11pt,                           % font size
+a4paper,						% page layout
+oneside,						% oneside/twoside option for printing
+cdgeometry,                     % setting of page geometry (format, height, page margins; set to 'cdgeometry=false' for individual type area calculation by package 'typearea'
+toc=chapterentrydotfill,        % dots in table of contents
+toc=indent,                     % indentation of toc items
+bibliography=totoc,         	% bibliography to table of contents
+listof=totoc,                   % lists to table of contents
+numbers=noenddot,				% last number in table of contents without dot
+parskip=full,                   % line break with a free line
+cdmath=false					% regular font in math mode
+]{article}                  % document class ('tudscrreprt' in most cases)
+
+
+%\usepackage{titlesec}		
+\usepackage{scrextend}			% für addmargin zum einrücken von Absätzen   \begin{addmargin}[25pt]{0pt} \end{addmargin}
+
+\setlength{\headheight}{40pt} 
+
+\title{Exposee Modellgestützte Analyse von Vermarktungsoptionen für Batteriespeicher gekoppelte Wind- und PV-Systeme}
+\author{Sebastian Trümper}
+\date{ }
+
+\begin{document}
+%\headlogo[]{bilder/ee_logo.png}
+
+\maketitle
+
+\tableofcontents
+
+
+\section{Einleitung}
+Aufgrund neuer gesetzlicher Vorgaben ist der Regelleistungsmarkt, 
+insbesondere der Sekundärregelleistungsmarkt, 
+für Anbieter erneuerbarer Energien interessanter geworden. Ein besonderes Augenmerk liegt dabei auf die mögliche Erweiterung des Energieparks 
+um eine Speichermöglichkeit. Diese Arbeit soll dazu dienen den grundsätzlichen Wert einer solchen Speichermöglichkeit
+am Sekundärregelleistungsmarkt zu ermitteln.
+Im Weiteren ist fraglich, ob ein zusätzlicher Nutzen des Stromspeichers durch direkte Kombination mit einem 
+Wind-/Solarpark erzielt werden kann.
+
+
+\section{Genaue Ausgestaltung der Forschungsfrage}
+Gegenstand dieser Arbeit ist die Wertermittlung einer solchen Speichermöglichkeit innerhalb des deutschen sekundären Regelleistungsmarktes. 
+Dabei gilt ein besonderes Augenmerk den Unsicherheiten hinsichtlich des Preises und des Wetters bzw. der Wettervorhersagen.
+
+
+\section{Forschungsvorhaben}
+Um die wissenschaftliche Frage zu beantworten, soll ein Modell zur Analyse erstellt werden. 
+Das Modell soll folgende Bereiche abdecken: 
+\begin{itemize}
+	\item Modell eines Stromspeichers (Kapazität von 2h als Industriestandard)
+	\item Modell des Regelleistungsmarktes insbesondere des sekundären Regelleistungsmarktes
+	\item Abbildung der Unsicherheiten hinsichtlich Wetter, Strom- und Regelpreis
+\end{itemize}
+
+
+
+\section{Methodik}
+(Es gibt eine Variablenzusammenfassung am Ende dieses Abschnitts)\\
+Im Kontext der Speicherwertermittlung sind mehrere Szenarien zu betrachten, 
+diese werden die Unsicherheiten hinsichtlich des Preises und des Wetters abbilden.
+
+Hierzu sind mögliche Korrelationen zwischen dem Preis und der Wettervorhersage zu beachten.
+Um die Korrelation zu analysieren, werden die Preise mit 
+der Wettervorhersage kombiniert und in einem 2D-Diagramm abgebildet. Anhand dieses 2D-Diagramms wird
+dann mittels der "Least-Square-Methode" die Korrelation berechnet. Um einen eventuellen Einfluss der Jahreszeiten 
+auf diese Korrelation zu berücksichtigen, wird hierzu ein "Mixed-Effect-Model" zusätzlich angewendet.\\
+
+Zur Analyse des Wertes des Stromspeichers wird ein 2-stufiges stochastische Entscheidungsmodell etabliert. 
+In der ersten Stufe werden Gebote für den Regelleistungsmarkt abgegeben. In der zweiten Stufe werden Gebote für den Regelarbeitsmarkt
+abgegeben. Zu beachten ist das beide Märkte "pay as you bid" Märkte sind, die Höhe des Gewinns ist also direkt vom 
+gebotenen Preis abhängig.\\
+
+%Eventuell den Grad der Unsicherheit der Wettervorhersage mit rein nehmen%
+
+(das Folgende ist jeweils für neg. und positive Regelleistungsmarkt aus zu fertigen)
+
+
+\begin{flushleft}\textbf{Zu optimierende math. Terme:}\end{flushleft}
+\begin{tabular}{l l}
+	$\chi_s * \lambda_s^l * P(\lambda_s^l, PBV)$& 		mögl. Gewinn Regelleistungsmarkt\\
+	$\gamma_s * \lambda_s^a * P(s,\lambda_s^a)$&		mögl. Gewinn Regelarbeitsmarkt\\
+\end{tabular}
+
+
+
+\begin{flushleft}\textbf{Optimierungsfunktion:}\\\end{flushleft}
+\begin{addmargin}[25pt]{0pt}
+$\max \pi = \chi_s * \lambda_s^l * P(\lambda_s^l, PBV) + \sum_{s} \gamma_s * \lambda_s^a *P(s,\lambda_s^a)$\\
+\end{addmargin}
+
+\begin{flushleft}\textbf{Nebenbedingungen:}\end{flushleft}
+\begin{addmargin}[25pt]{0pt}
+	$ \gamma_s \geq \chi_s$ \\%Die Gebotsmenge am Regelarbeitsmarkt muss min. dem der am Regelleistungsmarkt entsprechen\\
+	$ \gamma_s, \chi_s \leq K$\\ % Gebotsmenge darf Netzanschluss nicht übersteigen
+	$\chi_s = \chi_{s+1}$\\
+	$\lambda_s^l = \lambda_{s+1}^l $ \\
+\end{addmargin}
+
+
+
+Bei einer möglichen Modellerweiterung um einen Wind-/Solarpark würde sich dann die Optimierungsfunktion
+um einen möglichen Gewinn durch den Park erweitern.\\
+
+
+	\begin{itemize}
+		\item $ P(s, \lambda_s^a) * \psi_s * \lambda_s^e$ mögl. Einspeisung im Falle das \\Regelarbeitsmarkt-Gebot Zuschlag erhält\\
+		\item $ (1 - P(s, \lambda_s^a)) * \psi_s * \lambda_s^e$ mögl. Einspeisung im Falle das \\Regelarbeitsmarkt-Gebot nicht den Zuschlag erhält\\
+		\item 	$c(\gamma_s, \psi_s) = \left\{
+			\begin{array}{ll}
+				0 & \gamma_s + \psi_s \leq K \\
+				C * (\gamma_s + \psi_s - K) & \gamma_s + \psi_s \geq K \\
+			\end{array}
+		\right. $ Kosten/Strafe für Nichterbringung der Leistung\\
+
+	\end{itemize}
+	
+	
+
+
+Damit würde sich dann die folgende, erweiterte Optimierungsfunktion ergeben:\\
+\begin{addmargin}[25pt]{0pt}
+	$\max \pi = \chi_s * \lambda_s^l * P(\lambda_s^l, PBV) \\
+	+ \sum_{s} \gamma_s * \lambda_s^a * P(s,\lambda_s^a)\\
+	+P(s, \lambda_s^a) * \psi_s * \lambda_s^e\\
+	+(1 - P(s, \lambda_s^a)) * \psi_s * \lambda_s^e\\
+	- \left\{
+		\begin{array}{ll}
+			0 & \gamma_s + \psi_s \leq K \\
+			C * (\gamma_s + \psi_s - K) & \gamma_s + \psi_s \geq K \\
+		\end{array}
+	\right. $
+	\end{addmargin}
+
+
+\begin{tabular}{ c l }
+	\textbf{Variablen:}&\\
+	$\pi$& Gewinn \\
+	$ \rho $& Prognose \\
+	$ B  $& Bedarf \\
+	$ PBV = \rho / B$ & Prognose-Bedarf-Verhältnis\\
+	$ s $& Szenario \\
+	$ \chi_s $ & Regelleistungsmarkt Gebots-Menge \\
+	$\lambda_s^l$ & Regelleistungsmarkt Gebots-Preis \\
+	$ P(\lambda_s^l, PBV)$& Wahrscheinlichkeit für Zuschlag bei Preis $\lambda_s^l$ am Regelleistungsmarkt\\
+	$ \gamma_s  $ & Regelarbeitsmarkt Gebots-Menge \\
+	$ \lambda_s^a  $& Regelarbeitsmarkt Gebots-Preis \\
+	$ P(s, \lambda_s^a)$& Wahrscheinlichkeit für Zuschlag bei Preis $\lambda_s^a$ am Regelarbeitsmarkt\\
+	$ P(s) $& Wahrscheinlichkeit für Szenario s \\
+	$ K $& Kapazität Netzanschlusspunkt\\
+	$ \lambda_s^e $& Strompreis für reguläre Einspeisung \\
+	$ \psi $ & Strommenge der regulären Einspeisung \\
+	$ c(\gamma_s, \psi)$& Kosten für Strafe \\
+	$ C $& Strafe für nicht erbrachte Leistung \\
+\end{tabular}\\
+
+
+\section{Ablaufplan}
+
+\subsection{Basismodell}
+\begin{enumerate}
+	\item Modellierung des Stromspeichers inkl. Netzanschlusspunkt
+	\item Modellierung des Regelleistungsmarktes
+	\item Modell für Vermarktung des Stromspeichers am Regelleistungsmarkt
+	\item Testdaten für eine Simulation von Punkt 1.–3. in das Modell einspeisen
+	\item Kontrollieren, ob das Modell realistische Werte erzeugt
+	\item Ladesteuerung des Stromspeichers für den Regelarbeitsmarkt
+	\item Korrelation zwischen den verschiedenen Szenarion untersuchen
+	\item Formeln und Daten anhand von 7. aufarbeiten und einspeisen
+	\item Optimierung und Verfeinerung des Modells (z.B. diverse Speichertechnologien mit detaillierten Lastverläufen)
+\end{enumerate}
+
+\subsection{Modell Erweiterung}
+\begin{enumerate}
+	\item 	Modellierung von Wind-/Solarpark
+	\item 	Modellierung des primären Strommarktes
+	\item 	Vermarktung des Wind-/Solarpark Stroms am primären Strommarkt
+	\item 	Kombination der Basis sowie der Modellerweiterung
+\end{enumerate}
+
+Optional: Speicheraufteilung zu verschiedenen Zwecken
+
+\subsection{Wissenschaftliche Dokumentation der Arbeit}
+\begin{enumerate}
+	\item Fragestellung und Relevanz aufzeigen
+	\item 	Methodik Erklärung
+	\item 	Modell Erklärung
+	\item 	Daten Erklärung
+	\item 	Auswertung der Ergebnisse
+	\item 	Ergebnisse in Kontext setzten
+	\item 	Zusammenfassung schreiben
+	\item 	Schlussfolgerungen ziehen
+\end{enumerate}
+
+\end{document}
