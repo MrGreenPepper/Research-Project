@@ -1,12 +1,14 @@
 
---- Job main.gms Start 01/13/25 17:56:37 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows
+Debug-Server started. Listening at port 3563
+Debug-Server: Socket connected to GAMS
+--- Job main.gms Start 01/18/25 19:18:18 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
-    C:\GAMS\44\gmsprmNT.txt
+    C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
     Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms"
     PageSize 0
     ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225a\"
-    SysDir C:\GAMS\44\
+    SysDir C:\GAMS\46\
     LogOption 3
     ErrMsg 1
     ErrorLog 99
@@ -17,28 +19,40 @@ Licensee: Course License                                 S241105|0002AO-GEN
           C:\Users\sebas\Documents\GAMS\gamslice.txt
           License Admin: Hannes Hobbie, hannes.hobbie@tu-dresden.de        
           Course license for use within the course and related course work
+          The evaluation period of the license will expire on May 04, 2025
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
-GAMS 44.4.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
+GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
 --- main.gms(1) 2 Mb
---- . testData.gms(26) 3 Mb
+--- . testData.gms(31) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
---- . testData.gms(39) 3 Mb
---- main.gms(15) 3 Mb 4 Errors
-*** Error 143 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
-    A suffix is missing
-*** Error 120 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
-    Unknown identifier entered as set
-*** Error 340 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
-    A label/element with the same name exist. You may have forgotten
-       to quote a label/element reference. For example,
-       set i / a,b,c /; parameter x(i); x('a') = 10;
-*** Error 171 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
-    Domain violation for set
---- main.gms(41) 3 Mb 5 Errors
-*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
-    Solve statement not checked because of previous errors
---- main.gms(41) 3 Mb 5 Errors
-*** Status: Compilation error(s)
---- Job main.gms Stop 01/13/25 17:56:39 elapsed 0:00:01.953
+Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+--- . testData.gms(57) 3 Mb
+--- Initialize embedded library embconnectcclib64.dll
+--- Execute embedded library embconnectcclib64.dll
+Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+--- . testData.gms(70) 3 Mb
+--- Initialize embedded library embconnectcclib64.dll
+--- Execute embedded library embconnectcclib64.dll
+Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+--- . testData.gms(83) 3 Mb
+--- Initialize embedded library embconnectcclib64.dll
+--- Execute embedded library embconnectcclib64.dll
+Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+--- . testData.gms(96) 3 Mb
+--- Initialize embedded library embconnectcclib64.dll
+--- Execute embedded library embconnectcclib64.dll
+Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+
+--- main.gms(40) 3 Mb
+--- Starting execution: elapsed 0:00:02.418
+--- Generating LP model test
+--- main.gms(126) 4 Mb
+*** Error at line 126: Execution halted: Triggered by pending CtrlC event
+--- main.gms(136) 4 Mb 1 Error
+*** SOLVE abortedDebug-Server: Socket disconnected
+
+--- main.gms(136) 4 Mb 1 Error
+*** Status: Execution error(s)
+--- Job main.gms Stop 01/18/25 19:18:59 elapsed 0:00:41.555

@@ -1,7 +1,7 @@
 
 Debug-Server started. Listening at port 3563
 Debug-Server: Socket connected to GAMS
---- Job main.gms Start 01/18/25 19:17:46 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job main.gms Start 01/18/25 19:20:51 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -43,15 +43,3 @@ Warning: PandasExcelReader is deprecated and will be removed in a future release
 --- . testData.gms(96) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
---- . testData.gms(96) 3 Mb 1 Error
-*** Error 194 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\testData.gms
-    Symbol redefined - a second data statement for the same symbol
-       or a data statement after an assignment
-       Hint: You could use $onMulti to merge the data from different
-             data statements or $onMultiR to replace existing data
-             with data from a later data statement
---- main.gms(40) 3 Mb 2 Errors
-*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
-    Solve statement not checked because of previous errorsDebug-Server: Socket disconnected
-*** Error: Unexpected GAMSCMEX return code: -1073741819
