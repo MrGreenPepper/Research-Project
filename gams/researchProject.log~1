@@ -1,7 +1,5 @@
 
-Debug-Server started. Listening at port 3563
-Debug-Server: Socket connected to GAMS
---- Job main.gms Start 01/18/25 19:19:00 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job main.gms Start 01/19/25 22:54:54 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -23,36 +21,84 @@ Licensee: Course License                                 S241105|0002AO-GEN
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
---- main.gms(1) 2 Mb
---- . testData.gms(31) 3 Mb
+--- main.gms(4) 2 Mb
+--- . testData.gms(43) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
---- . testData.gms(57) 3 Mb
+--- . testData.gms(56) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
---- . testData.gms(70) 3 Mb
+--- . testData.gms(82) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
---- . testData.gms(83) 3 Mb
+--- . testData.gms(95) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
---- . testData.gms(96) 3 Mb
+--- . testData.gms(108) 3 Mb
+--- Initialize embedded library embconnectcclib64.dll
+--- Execute embedded library embconnectcclib64.dll
+Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+--- . testData.gms(121) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 
---- main.gms(40) 3 Mb
---- Starting execution: elapsed 0:00:02.489
---- Generating LP model test
---- main.gms(126) 4 Mb
-*** Error at line 126: Execution halted: Triggered by pending CtrlC event
---- main.gms(136) 4 Mb 1 Error
-*** SOLVE abortedDebug-Server: Socket disconnected
+--- main.gms(98) 3 Mb
+--- Starting execution: elapsed 0:00:02.976
+--- Generating MIP model test
+--- main.gms(219) 13 Mb
+---   41,516 rows  14,441 columns  90,211 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+02, 1.000E+02] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 4.369E-01, 1.036E+03]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:03.038
 
---- main.gms(136) 4 Mb 1 Error
-*** Status: Execution error(s)
---- Job main.gms Stop 01/18/25 19:19:27 elapsed 0:00:26.830
+IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- Space for names approximately 1.82 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 10.80 Mb (peak 10.91 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.75 Mb (peak 3.90 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Parallel mode: deterministic, using up to 16 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 14 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 11665 rows and 1991 columns.
+Reduced LP has 29850 rows, 12450 columns, and 65095 nonzeros.
+Presolve time = 0.05 sec. (32.48 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =     229927089.357112
+Iteration:   225   Dual objective     =     221352596.162830
+Initializing dual steep norms . . .
+Iteration:   226   Dual objective     =     221351990.532973
+
+Dual simplex solved model.
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.09sec (det. 87.22 ticks)
+
+
+Optimal solution found
+Objective:    221351990.532975
+
+--- Reading solution for model test
+*** Status: Normal completion
+--- Job main.gms Stop 01/19/25 22:54:58 elapsed 0:00:03.483
