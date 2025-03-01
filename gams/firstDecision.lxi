@@ -1,0 +1,70 @@
+B 3 C o m p i l a t i o n
+B 179 Equation Listing    SOLVE testFirstDecision Using LP From line 168
+D 182 profitEQ
+D 187 conConst_Q_outrRLDA_RA
+D 192 conConst_Q_outrDA_RA
+D 197 conConst_Q_out_RA
+D 202 storConQ_out_RL
+D 207 storConQ_in_RL
+D 212 storConQ_DA
+D 217 storConQ_out_RA
+D 222 storConQ_in_RA
+D 227 storConQ_outrRL_RA
+D 232 storConQ_inrRL_RA
+D 237 storConQ_outrDA_RA
+D 242 storConQ_inrDA_RA
+D 247 storConQ_outrRLDA_RA
+D 252 storConQ_inrRLDA_RA
+D 257 marketCon_Q_outrRL_RA
+D 262 marketCon_Q_inrRL_RA
+D 267 marketCon_Q_outrRLDA_RA
+D 272 marketCon_Q_inrRLDA_RA
+B 278 Column Listing      SOLVE testFirstDecision Using LP From line 168
+E 281 Profit
+E 288 Q_in_RL
+E 312 Q_out_RL
+E 336 Q_rRL_DA
+E 354 Q_outrRLDA_RA
+E 378 Q_inrRLDA_RA
+E 399 Q_outrRL_RA
+E 420 Q_inrRL_RA
+E 441 Q_outrDA_RA
+E 462 Q_inrDA_RA
+E 480 Q_DA
+E 501 Q_in_RA
+E 528 Q_out_RA
+B 550 Range Statistics    SOLVE testFirstDecision Using LP From line 168
+B 561 Model Statistics    SOLVE testFirstDecision Using LP From line 168
+B 574 Solution Report     SOLVE testFirstDecision Using LP From line 168
+F 607 profitEQ
+F 608 conConst_Q_outrRLDA_RA
+F 609 conConst_Q_outrDA_RA
+F 610 conConst_Q_out_RA
+F 611 storConQ_out_RL
+F 612 storConQ_in_RL
+F 613 storConQ_DA
+F 614 storConQ_out_RA
+F 615 storConQ_in_RA
+F 616 storConQ_outrRL_RA
+F 617 storConQ_inrRL_RA
+F 618 storConQ_outrDA_RA
+F 619 storConQ_inrDA_RA
+F 620 storConQ_outrRLDA_RA
+F 621 storConQ_inrRLDA_RA
+F 622 marketCon_Q_outrRL_RA
+F 623 marketCon_Q_inrRL_RA
+F 624 marketCon_Q_outrRLDA_RA
+F 625 marketCon_Q_inrRLDA_RA
+G 629 Profit
+G 631 Q_in_RL
+G 639 Q_out_RL
+G 647 Q_rRL_DA
+G 655 Q_outrRLDA_RA
+G 663 Q_inrRLDA_RA
+G 671 Q_outrRL_RA
+G 679 Q_inrRL_RA
+G 687 Q_outrDA_RA
+G 695 Q_inrDA_RA
+G 703 Q_DA
+G 711 Q_in_RA
+G 719 Q_out_RA

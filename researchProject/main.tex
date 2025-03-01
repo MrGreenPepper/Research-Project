@@ -1,0 +1,96 @@
+\documentclass{article}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{setspace}
+
+\title{researchProject}
+\author{Mr Green Pepper}
+\date{February 2025}
+
+\begin{document}
+\doublespacing
+\maketitle
+\section{Modell}
+\subsection{Allgemeine Modellerklärung}
+Zur Analyse des vorliegenden Problems wird eine stochastische Programmierung verwendet. Innerhalb einer solchen stochastischen Programmierung wird ein Szenariobaum erstellt. Die Knoten stellen dabei Entscheidungen dar und die Äste bilden verschiedene mögliche Ausgänge ab. In unserem Fall können wir aktiv bestimmte Teile des Szenariobaums aktivieren bzw. deaktivieren.
+\\
+\\
+\textbf{Beispiel: Aktivierung/Deaktivierung verschiedener Szenariobaumteilstränge}
+Mit der Entscheidung am Day Ahead Markt teil zu nehmen aktivieren wir den Teil des Szenariobaums für den Day Ahead Markt. Anschließend wir selbstständig die Entscheidung getroffen zu welchem Preis und zu welcher Menge am Day Ahead Markt geboten werden soll. Auch die Preis- bzw. Mengenentscheidung aktivieren bestimmte Teile des Szenariobaums, die anderen nicht gewählten Pfade werden automatisch deaktiviert. Nachdem eine Gebotsabgabe erfolgt ist, ist die Annahme eines solchen Gebots ein zufallbedingtes Ereignis.
+
+Illustriet stellt sich dann das ganze wie folgt dar:
+\subsection{Variables - simplified model}
+\textbf{Vereinfachungen:}
+\begin{itemize}
+    \item angenommene Gebote werden auch in voller Höhe abgerufen
+    \item 
+\end{itemize}
+
+asdf
+
+
+asdf
+
+
+asdf
+
+
+asdf
+
+
+\begin{table}[]
+\doublespacing
+    \centering
+    \begin{tabular}{c|c|c}
+            original & GAMS & explanation \\
+         $f_{DA}$ & $priceForeCastDA(t)$ & forecast price day ahead market\\
+         $f_{RT}$ & $priceForeCastRT(t)$ &  forecast price real time market\\
+
+         $p_{DA}$ & $ priceProbDA $ & probability for price $p_{DA}$ \\
+         $p_{RT}$ & $ priceProbRT $ & probability for price $p_{RT}$ \\
+         
+         $E^{in}_{DA}$ & $EnergyInDA(t)$ & energy in day ahead market \\
+         $E^{out}_{DA}$ & $EnergyOutDA(t)$ & energy out day ahead market \\
+
+         $E^{in}_{RT}$ & $EnergyInRT(t)$ & energy in real time market \\
+         $E^{out}_{RT}$ & $EnergyOutRT(t)$ & energy out  real time market \\
+
+         $z^{in}(t)$ & $binaryInDA(t)$ & binary variable if bid is accepted\\
+         $z^{out}(t)$ & $binaryOutDA(t)$ & binary variable if bid is accepted\\
+
+
+    \end{tabular}
+    \caption{Variables}
+    \label{tab:my_label}
+\end{table}
+
+
+
+
+\subsection{Variables - simplified model + wind park}
+
+\begin{table}[]
+\doublespacing
+    \centering
+    \begin{tabular}{c|c|c}
+            original & GAMS & explanation \\
+         $f_{DA}$ & $priceForeCastDA(t)$ & forecast price day ahead market\\
+         $f_{RT}$ & $priceForeCastRT(t)$ &  forecast price real time market\\
+         
+         $E^{in}_{DA}$ & $EnergyInDA(t)$ & energy in day ahead market \\
+         $E^{out}_{DA}$ & $EnergyOutDA(t)$ & energy out day ahead market \\
+
+         $E^{in}_{RT}$ & $EnergyInRT(t)$ & energy in real time market \\
+         $E^{out}_{RT}$ & $EnergyOutRT(t)$ & energy out  real time market \\
+         
+         $E^{in}_{stor}$ & $$ &  \\
+         $E^{out}_{stor}$ & $$ &  \\
+
+    \end{tabular}
+    \caption{Variables}
+    \label{tab:my_label}
+\end{table}
+
+
+\subsection{Variables - extended model + wind park}
+
+\end{document}

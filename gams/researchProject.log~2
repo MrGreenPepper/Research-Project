@@ -1,12 +1,12 @@
 
---- Job main.gms Start 01/19/25 22:47:42 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job main.gms Start 02/06/25 12:42:48 44.4.0 06604687 WEX-WEI x86 64bit/MS Windows
 --- Applying:
-    C:\GAMS\46\gmsprmNT.txt
+    C:\GAMS\44\gmsprmNT.txt
 --- GAMS Parameters defined
     Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms"
     PageSize 0
     ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225a\"
-    SysDir C:\GAMS\46\
+    SysDir C:\GAMS\44\
     LogOption 3
     ErrMsg 1
     ErrorLog 99
@@ -17,89 +17,38 @@ Licensee: Course License                                 S241105|0002AO-GEN
           C:\Users\sebas\Documents\GAMS\gamslice.txt
           License Admin: Hannes Hobbie, hannes.hobbie@tu-dresden.de        
           Course license for use within the course and related course work
-          The evaluation period of the license will expire on May 04, 2025
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
-GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+GAMS 44.4.0   Copyright (C) 1987-2023 GAMS Development. All rights reserved
 --- Starting compilation
---- main.gms(1) 2 Mb
+--- main.gms(4) 2 Mb
 --- . testData.gms(43) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 --- . testData.gms(56) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 --- . testData.gms(82) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 --- . testData.gms(95) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 --- . testData.gms(108) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 --- . testData.gms(121) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
-Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 
---- main.gms(95) 3 Mb
---- Starting execution: elapsed 0:00:02.936
---- Generating MIP model test
---- main.gms(216) 13 Mb
----   41,516 rows  14,441 columns  90,211 non-zeroes
---- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 1.000E+02, 1.000E+02] - Zero values observed as well
---- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 1.873E-01, 6.474E+02]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:03.000
-
-IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
-
---- GAMS/CPLEX licensed for continuous and discrete problems.
---- GMO setup time: 0.00s
---- Space for names approximately 1.82 Mb
---- Use option 'names no' to turn use of names off
---- GMO memory 10.80 Mb (peak 10.91 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 22.1.1.0 link memory 0.75 Mb (peak 3.90 Mb)
---- Starting Cplex
-
-Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
-CPXPARAM_Advance                                 0
-CPXPARAM_MIP_Display                             4
-CPXPARAM_MIP_Pool_Capacity                       0
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-Parallel mode: deterministic, using up to 16 threads for concurrent optimization:
- * Starting dual Simplex on 1 thread...
- * Starting Barrier on 14 threads...
- * Starting primal Simplex on 1 thread...
-Tried aggregator 1 time.
-LP Presolve eliminated 11665 rows and 1991 columns.
-Reduced LP has 29850 rows, 12450 columns, and 65095 nonzeros.
-Presolve time = 0.05 sec. (32.71 ticks)
-
-Iteration log . . .
-Iteration:     1   Dual objective     =     121173602.902174
-Iteration:   225   Dual objective     =     107793856.302683
-Initializing dual steep norms . . .
-Iteration:   226   Dual objective     =     107783569.124663
-Iteration:   838   Dual objective     =     107481395.950709
-
-Dual simplex solved model.
-
-
---- LP status (1): optimal.
---- Cplex Time: 0.14sec (det. 132.75 ticks)
-
-
-Optimal solution found
-Objective:    107466518.538888
-
---- Reading solution for model test
-*** Status: Normal completion
---- Job main.gms Stop 01/19/25 22:47:45 elapsed 0:00:03.463
+--- main.gms(105) 3 Mb 2 Errors
+*** Error 150 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
+    Symbolic equations redefined
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- main.gms(110) 3 Mb 3 Errors
+*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms
+    Solve statement not checked because of previous errors
+--- main.gms(111) 3 Mb 3 Errors
+*** Status: Compilation error(s)
+--- Job main.gms Stop 02/06/25 12:42:52 elapsed 0:00:03.594

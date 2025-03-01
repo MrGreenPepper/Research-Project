@@ -1,0 +1,1353 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Set
+   2  s_RL_in         /s_RL_in1*s_RL_in3/
+   3  s_RL_out            /s_RL_out1*s_RL_out3/
+   4  s_DA            /s_DA1*s_DA3/
+   5  s_RA_in         /s_RA_in1*s_RA_in3/
+   6  s_RA_out            /s_RA_out1*s_RA_out3/
+   7  ;
+   8   
+   9  Scalar
+  10  *storage properties
+  11  r               /100/
+  12  stor_cap        /1000/
+  13  *port capacity
+  14  a               /150/
+  15  *usability
+  16  m               /10000000/
+  17  ;
+  18   
+  19  Variables
+  20  Profit_RL_in
+  21  Profit_RL_out
+  22  Profit_DA
+  23  Profit_RA_in
+  24  Profit_RA_out
+  25  Profit_RL
+  26  Profit_RA
+  27  Profit_G
+  28  ;
+  29   
+  30  Positive Variables
+  31  X_RL_in
+  32  X_RL_out
+  33  X_DA
+  34  X_RA_in
+  35  X_RA_out
+  36  Q_RL_in
+  37  Q_RL_out
+  38  Q_DA
+  39  Q_RA_in
+  40  Q_RA_out
+  41  ;
+  42   
+  43  Binary Variables
+  44  B_RL_in
+  45  B_RL_out
+  46  B_DA
+  47  B_RA_in
+  48  B_RA_out
+  49  ;
+  50   
+  51  Parameter
+  52  *forecast prices
+  53  p_RL_in(s_RL_in)                    /s_RL_in1 900, s_RL_in2 100, s_RL_in3 110/
+  54  p_RL_out(s_RL_out)                  /s_RL_out1 90, s_RL_out2 100, s_RL_out3 110/
+  55  p_DA(s_DA)                  /s_DA1 90, s_DA2 100, s_DA3 110/
+  56  p_RA_in(s_RA_in)                    /s_RA_in1 90, s_RA_in2 100, s_RA_in3 110/
+  57  p_RA_out(s_RA_out)                  /s_RA_out1 90, s_RA_out2 100, s_RA_out3 110/
+  58  *forecast probabilities
+  59  w_RL_in                             /s_RL_in1 0.3, s_RL_in2 0.5, s_RL_in3 0.20/
+  60  w_RL_out                                /s_RL_out1 0.3, s_RL_out2 0.5, s_RL_out3 0.20/
+  61  w_DA                                /s_DA1 0.3, s_DA2 0.5, s_DA3 0.20/
+  62  w_RA_in                             /s_RA_in1 0.3, s_RA_in2 0.5, s_RA_in3 0.20/
+  63  w_RA_out                                /s_RA_out1 0.3, s_RA_out2 0.5, s_RA_out3 0.20/
+  64  *market data - clearing prices
+  65  c_RL_in                             /s_RL_in1 100, s_RL_in2 100, s_RL_in3 100/
+  66  c_RL_out                                /s_RL_out1 100, s_RL_out2 100, s_RL_out3 100/
+  67  c_DA                                /s_DA1 100, s_DA2 100, s_DA3 100/
+  68  c_RA_in                             /s_RA_in1 100, s_RA_in2 100, s_RA_in3 100/
+  69  c_RA_out                                /s_RA_out1 100, s_RA_out2 100, s_RA_out3 100/
+  70  *storage properties
+  71  ;
+  72   
+  73  Equations
+  74  *profits
+  75  eq_profit_RL_in_
+  76  eq_profit_RL_out_
+  77  eq_profit_DA_
+  78  eq_profit_RA_in_
+  79  eq_profit_RA_out_
+  80  eq_profit_RL
+  81  eq_profit_RA
+  82  eq_profit_g
+  83   
+  84  *general constraints
+  85  a_con
+  86   
+  87  *NLP in NL constraints1
+  88  bq_RL_in_lin1
+  89  bq_RL_out_lin1
+  90  bq_DA1
+  91  bq_RA_in1
+  92  bq_RA_out1
+  93   
+  94  *NLP in NL constraints2
+  95  *bq_RL_in_lin2
+  96  *bq_RL_out_lin2
+  97  bq_DA2
+  98  bq_RA_in2
+  99  bq_RA_out2
+ 100   
+ 101  *NLP in NL constraints3
+ 102  bq_RL_in_lin3
+ 103  bq_RL_out_lin3
+ 104  bq_DA3
+ 105  bq_RA_in3
+ 106  bq_RA_out3
+ 107   
+ 108  *clearing prices
+ 109  clearing_RL_in_up(s_RL_in)
+ 110  clearing_RL_out_up(s_RL_out)
+ 111  clearing_RA_in_up(s_RA_in)
+ 112  clearing_RA_out_up(s_RA_out)
+ 113  clearing_DA_up(s_DA)
+ 114   
+ 115  clearing_RL_in_down(s_RL_in)
+ 116  clearing_RL_out_down(s_RL_out)
+ 117  clearing_RA_in_down(s_RA_in)
+ 118  clearing_RA_out_down(s_RA_out)
+ 119  clearing_DA_down(s_DA)
+ 120   
+ 121  *storage const
+ 122  store_RL_in1
+ 123  store_RL_out1
+ 124  store_RA_in1
+ 125  store_RA_out1
+ 126  store_DA1
+ 127   
+ 128  store_RL_in2
+ 129  store_RL_out2
+ 130  store_RA_in2
+ 131  store_RA_out2
+ 132  store_DA2
+ 133  ;
+ 134   
+ 135   
+ 136  eq_profit_RL_in_..                      Profit_RL_in =e= sum(s_RL_in, p_RL_in(s_RL_in) * Q_RL_in(s_RL_in) * w_RL_in(s_RL_in));
+ 137  eq_profit_RL_out_..                     Profit_RL_out =e= sum(s_RL_out, p_RL_out(s_RL_out) * Q_RL_out(s_RL_out) * w_RL_out(s_RL_out));
+ 138  eq_profit_DA_..                         Profit_DA =e= sum(s_DA, p_DA(s_DA) * X_DA(s_DA) * w_DA(s_DA));
+ 139  eq_profit_RA_in_..                      Profit_RA_in =e= sum(s_RA_in, p_RA_in(s_RA_in) * X_RA_in(s_RA_in) * w_RA_in(s_RA_in));
+ 140  eq_profit_RA_out_..                     Profit_RA_out =e= sum(s_RA_out, p_RA_out(s_RA_out) * X_RA_out(s_RA_out) * w_RA_out(s_RA_out));
+ 141  eq_profit_RL..                          Profit_RL =e= profit_RL_in + profit_RL_out;
+ 142  eq_profit_RA..                          Profit_RA =e= profit_RA_in + profit_RA_out;
+ 143  eq_profit_g..                           Profit_G =e= profit_RL + profit_RA;
+ 144   
+ 145  *general constraints
+ 146  a_con..                       a + sum(s_RA_in, X_RA_in(s_RA_in)) =g= sum(s_DA, X_DA(s_DA)) + sum(s_RA_out, X_RA_out(s_RA_out));
+ 147   
+ 148  *NLP in NL constraints1
+ 149  bq_RL_in_lin1(s_RL_in)..                X_RL_in(s_RL_in) =l= B_RL_in(s_RL_in) * r;
+ 150  bq_RL_out_lin1(s_RL_out)..              X_RL_out(s_RL_out) =l= B_RL_out(s_RL_out) * r;
+ 151  bq_RA_in1(s_RA_in)..                    X_RA_in(s_RA_in) =l= B_RA_in(s_RA_in) * r;
+ 152  bq_RA_out1(s_RA_out)..                  X_RA_out(s_RA_out) =l= B_RA_out(s_RA_out) * r;
+ 153  bq_DA1(s_DA)..                          X_DA(s_DA) =l= B_DA(s_DA) * r;
+ 154   
+ 155  *NLP in NL constraints2
+ 156  *bq_RL_in_lin2(s_RL_in)..                Q_RL_in(s_RL_in) - X_RL_in(s_RL_in) =g= (1 -  B_RL_in(s_RL_in)) * r;
+ 157  *bq_RL_out_lin2(s_RL_out)..              Q_RL_out(s_RL_out) - X_RL_out(s_RL_out) =g= (1 - B_RL_out(s_RL_out)) * r;
+ 158  bq_RA_in2(s_RA_in)..                    Q_RA_in(s_RA_in) - X_RA_in(s_RA_in)  =g= (1 - B_RA_in(s_RA_in)) * r;
+ 159  bq_RA_out2(s_RA_out)..                  Q_RA_out(s_RA_out) - X_RA_out(s_RA_out)  =g= (1 - B_RA_out(s_RA_out)) * r;
+ 160  bq_DA2(s_DA)..                          Q_DA(s_DA) - X_DA(s_DA)  =g= (1 - B_DA(s_DA)) * r;
+ 161   
+ 162  *NLP in NL constraints3
+ 163  bq_RL_in_lin3(s_RL_in)..                Q_RL_in(s_RL_in) - X_RL_in(s_RL_in) =g= 0;
+ 164  bq_RL_out_lin3(s_RL_out)..              Q_RL_out(s_RL_out) - X_RL_out(s_RL_out) =g= 0;
+ 165  bq_RA_in3(s_RA_in)..                    Q_RA_in(s_RA_in) - X_RA_in(s_RA_in) =g= 0;
+ 166  bq_RA_out3(s_RA_out)..                  Q_RA_out(s_RA_out) - X_RA_out(s_RA_out) =g= 0;
+ 167  bq_DA3(s_DA)..                          Q_DA(s_DA) - X_DA(s_DA) =g= 0;
+ 168   
+ 169  *clearing prices
+ 170  clearing_RL_in_up(s_RL_in)..            c_RL_in(s_RL_in) =l= p_RL_in(s_RL_in) + m * B_RL_in(s_RL_in);
+ 171  clearing_RL_out_up(s_RL_out)..          c_RL_out(s_RL_out) =l= p_RL_out(s_RL_out) + m * B_RL_out(s_RL_out);
+ 172  clearing_RA_in_up(s_RA_in)..            c_RA_in(s_RA_in) =l= p_RA_in(s_RA_in) + m * B_RA_in(s_RA_in);
+ 173  clearing_RA_out_up(s_RA_out)..          c_RA_out(s_RA_out) =l= p_RA_out(s_RA_out) + m * B_RA_out(s_RA_out);
+ 174  clearing_DA_up(s_DA)..                  c_DA(s_DA) =l= p_DA(s_DA) + m * B_DA(s_DA);
+ 175   
+ 176  clearing_RL_in_down(s_RL_in)..          c_RL_in(s_RL_in) =g= p_RL_in(s_RL_in) - m * (1 - B_RL_in(s_RL_in));
+ 177  clearing_RL_out_down(s_RL_out)..        c_RL_out(s_RL_out) =g= p_RL_out(s_RL_out) - m * (1 - B_RL_out(s_RL_out));
+ 178  clearing_RA_in_down(s_RA_in)..          c_RA_in(s_RA_in) =g= p_RA_in(s_RA_in) - m * (1 - B_RA_in(s_RA_in));
+ 179  clearing_RA_out_down(s_RA_out)..        c_RA_out(s_RA_out) =g= p_RA_out(s_RA_out) - m * (1 - B_RA_out(s_RA_out));
+ 180  clearing_DA_down(s_DA)..                c_DA(s_DA) =g= p_DA(s_DA) - m * (1 - B_DA(s_DA));
+ 181   
+ 182  *storage const
+ 183  store_RL_in1..                sum(s_RL_in, Q_RL_in(s_RL_in)) =g= 0;
+ 184  store_RL_out1..              sum(s_RL_out, Q_RL_out(s_RL_out)) =g= 0;
+ 185  store_RA_in1..                    sum(s_RA_in, X_RA_in(s_RA_in)) =g= 0;
+ 186  store_RA_out1..                  sum(s_RA_out, X_RA_out(s_RA_out)) =g= 0;
+ 187  store_DA1..                          sum(s_DA, X_DA(s_DA)) =g= 0;
+ 188   
+ 189  store_RL_in2..                sum(s_RL_in, Q_RL_in(s_RL_in)) =l= r;
+ 190  store_RL_out2..              sum(s_RL_out, Q_RL_out(s_RL_out)) =l= r;
+ 191  store_RA_in2..                    sum(s_RA_in, X_RA_in(s_RA_in)) =l= r;
+ 192  store_RA_out2..                  sum(s_RA_out, X_RA_out(s_RA_out)) =l= r;
+ 193  store_DA2..                          sum(s_DA, X_DA(s_DA)) =l= r;
+ 194  Model full_modell_test / all /;
+ 195  Solve full_modell_test maximising profit_g using MIP;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE full_modell_test Using MIP From line 195
+
+
+---- eq_profit_RL_in_  =E=  
+
+eq_profit_RL_in_..  Profit_RL_in - 270*Q_RL_in(s_RL_in1) - 50*Q_RL_in(s_RL_in2) - 22*Q_RL_in(s_RL_in3) =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_RL_out_  =E=  
+
+eq_profit_RL_out_..  Profit_RL_out - 27*Q_RL_out(s_RL_out1) - 50*Q_RL_out(s_RL_out2) - 22*Q_RL_out(s_RL_out3) =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_DA_  =E=  
+
+eq_profit_DA_..  Profit_DA - 27*X_DA(s_DA1) - 50*X_DA(s_DA2) - 22*X_DA(s_DA3) =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_RA_in_  =E=  
+
+eq_profit_RA_in_..  Profit_RA_in - 27*X_RA_in(s_RA_in1) - 50*X_RA_in(s_RA_in2) - 22*X_RA_in(s_RA_in3) =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_RA_out_  =E=  
+
+eq_profit_RA_out_..  Profit_RA_out - 27*X_RA_out(s_RA_out1) - 50*X_RA_out(s_RA_out2) - 22*X_RA_out(s_RA_out3) =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_RL  =E=  
+
+eq_profit_RL..  - Profit_RL_in - Profit_RL_out + Profit_RL =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_RA  =E=  
+
+eq_profit_RA..  - Profit_RA_in - Profit_RA_out + Profit_RA =E= 0 ; (LHS = 0)
+     
+
+---- eq_profit_g  =E=  
+
+eq_profit_g..  - Profit_RL - Profit_RA + Profit_G =E= 0 ; (LHS = 0)
+     
+
+---- a_con  =G=  
+
+a_con..  - X_DA(s_DA1) - X_DA(s_DA2) - X_DA(s_DA3) + X_RA_in(s_RA_in1) + X_RA_in(s_RA_in2) + X_RA_in(s_RA_in3) - X_RA_out(s_RA_out1) - X_RA_out(s_RA_out2) - X_RA_out(s_RA_out3) =G= -150 ; (LHS = 0)
+     
+
+---- bq_RL_in_lin1  =L=  
+
+bq_RL_in_lin1(s_RL_in1)..  X_RL_in(s_RL_in1) - 100*B_RL_in(s_RL_in1) =L= 0 ; (LHS = 0)
+     
+bq_RL_in_lin1(s_RL_in2)..  X_RL_in(s_RL_in2) - 100*B_RL_in(s_RL_in2) =L= 0 ; (LHS = 0)
+     
+bq_RL_in_lin1(s_RL_in3)..  X_RL_in(s_RL_in3) - 100*B_RL_in(s_RL_in3) =L= 0 ; (LHS = 0)
+     
+
+---- bq_RL_out_lin1  =L=  
+
+bq_RL_out_lin1(s_RL_out1)..  X_RL_out(s_RL_out1) - 100*B_RL_out(s_RL_out1) =L= 0 ; (LHS = 0)
+     
+bq_RL_out_lin1(s_RL_out2)..  X_RL_out(s_RL_out2) - 100*B_RL_out(s_RL_out2) =L= 0 ; (LHS = 0)
+     
+bq_RL_out_lin1(s_RL_out3)..  X_RL_out(s_RL_out3) - 100*B_RL_out(s_RL_out3) =L= 0 ; (LHS = 0)
+     
+
+---- bq_DA1  =L=  
+
+bq_DA1(s_DA1)..  X_DA(s_DA1) - 100*B_DA(s_DA1) =L= 0 ; (LHS = 0)
+     
+bq_DA1(s_DA2)..  X_DA(s_DA2) - 100*B_DA(s_DA2) =L= 0 ; (LHS = 0)
+     
+bq_DA1(s_DA3)..  X_DA(s_DA3) - 100*B_DA(s_DA3) =L= 0 ; (LHS = 0)
+     
+
+---- bq_RA_in1  =L=  
+
+bq_RA_in1(s_RA_in1)..  X_RA_in(s_RA_in1) - 100*B_RA_in(s_RA_in1) =L= 0 ; (LHS = 0)
+     
+bq_RA_in1(s_RA_in2)..  X_RA_in(s_RA_in2) - 100*B_RA_in(s_RA_in2) =L= 0 ; (LHS = 0)
+     
+bq_RA_in1(s_RA_in3)..  X_RA_in(s_RA_in3) - 100*B_RA_in(s_RA_in3) =L= 0 ; (LHS = 0)
+     
+
+---- bq_RA_out1  =L=  
+
+bq_RA_out1(s_RA_out1)..  X_RA_out(s_RA_out1) - 100*B_RA_out(s_RA_out1) =L= 0 ; (LHS = 0)
+     
+bq_RA_out1(s_RA_out2)..  X_RA_out(s_RA_out2) - 100*B_RA_out(s_RA_out2) =L= 0 ; (LHS = 0)
+     
+bq_RA_out1(s_RA_out3)..  X_RA_out(s_RA_out3) - 100*B_RA_out(s_RA_out3) =L= 0 ; (LHS = 0)
+     
+
+---- bq_DA2  =G=  
+
+bq_DA2(s_DA1)..  - X_DA(s_DA1) + Q_DA(s_DA1) + 100*B_DA(s_DA1) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+bq_DA2(s_DA2)..  - X_DA(s_DA2) + Q_DA(s_DA2) + 100*B_DA(s_DA2) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+bq_DA2(s_DA3)..  - X_DA(s_DA3) + Q_DA(s_DA3) + 100*B_DA(s_DA3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- bq_RA_in2  =G=  
+
+bq_RA_in2(s_RA_in1)..  - X_RA_in(s_RA_in1) + Q_RA_in(s_RA_in1) + 100*B_RA_in(s_RA_in1) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+bq_RA_in2(s_RA_in2)..  - X_RA_in(s_RA_in2) + Q_RA_in(s_RA_in2) + 100*B_RA_in(s_RA_in2) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+bq_RA_in2(s_RA_in3)..  - X_RA_in(s_RA_in3) + Q_RA_in(s_RA_in3) + 100*B_RA_in(s_RA_in3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- bq_RA_out2  =G=  
+
+bq_RA_out2(s_RA_out1)..  - X_RA_out(s_RA_out1) + Q_RA_out(s_RA_out1) + 100*B_RA_out(s_RA_out1) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+bq_RA_out2(s_RA_out2)..  - X_RA_out(s_RA_out2) + Q_RA_out(s_RA_out2) + 100*B_RA_out(s_RA_out2) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+bq_RA_out2(s_RA_out3)..  - X_RA_out(s_RA_out3) + Q_RA_out(s_RA_out3) + 100*B_RA_out(s_RA_out3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- bq_RL_in_lin3  =G=  
+
+bq_RL_in_lin3(s_RL_in1)..  - X_RL_in(s_RL_in1) + Q_RL_in(s_RL_in1) =G= 0 ; (LHS = 0)
+     
+bq_RL_in_lin3(s_RL_in2)..  - X_RL_in(s_RL_in2) + Q_RL_in(s_RL_in2) =G= 0 ; (LHS = 0)
+     
+bq_RL_in_lin3(s_RL_in3)..  - X_RL_in(s_RL_in3) + Q_RL_in(s_RL_in3) =G= 0 ; (LHS = 0)
+     
+
+---- bq_RL_out_lin3  =G=  
+
+bq_RL_out_lin3(s_RL_out1)..  - X_RL_out(s_RL_out1) + Q_RL_out(s_RL_out1) =G= 0 ; (LHS = 0)
+     
+bq_RL_out_lin3(s_RL_out2)..  - X_RL_out(s_RL_out2) + Q_RL_out(s_RL_out2) =G= 0 ; (LHS = 0)
+     
+bq_RL_out_lin3(s_RL_out3)..  - X_RL_out(s_RL_out3) + Q_RL_out(s_RL_out3) =G= 0 ; (LHS = 0)
+     
+
+---- bq_DA3  =G=  
+
+bq_DA3(s_DA1)..  - X_DA(s_DA1) + Q_DA(s_DA1) =G= 0 ; (LHS = 0)
+     
+bq_DA3(s_DA2)..  - X_DA(s_DA2) + Q_DA(s_DA2) =G= 0 ; (LHS = 0)
+     
+bq_DA3(s_DA3)..  - X_DA(s_DA3) + Q_DA(s_DA3) =G= 0 ; (LHS = 0)
+     
+
+---- bq_RA_in3  =G=  
+
+bq_RA_in3(s_RA_in1)..  - X_RA_in(s_RA_in1) + Q_RA_in(s_RA_in1) =G= 0 ; (LHS = 0)
+     
+bq_RA_in3(s_RA_in2)..  - X_RA_in(s_RA_in2) + Q_RA_in(s_RA_in2) =G= 0 ; (LHS = 0)
+     
+bq_RA_in3(s_RA_in3)..  - X_RA_in(s_RA_in3) + Q_RA_in(s_RA_in3) =G= 0 ; (LHS = 0)
+     
+
+---- bq_RA_out3  =G=  
+
+bq_RA_out3(s_RA_out1)..  - X_RA_out(s_RA_out1) + Q_RA_out(s_RA_out1) =G= 0 ; (LHS = 0)
+     
+bq_RA_out3(s_RA_out2)..  - X_RA_out(s_RA_out2) + Q_RA_out(s_RA_out2) =G= 0 ; (LHS = 0)
+     
+bq_RA_out3(s_RA_out3)..  - X_RA_out(s_RA_out3) + Q_RA_out(s_RA_out3) =G= 0 ; (LHS = 0)
+     
+
+---- clearing_RL_in_up  =L=  
+
+clearing_RL_in_up(s_RL_in1)..  - 10000000*B_RL_in(s_RL_in1) =L= 800 ; (LHS = 0)
+     
+clearing_RL_in_up(s_RL_in2)..  - 10000000*B_RL_in(s_RL_in2) =L= 0 ; (LHS = 0)
+     
+clearing_RL_in_up(s_RL_in3)..  - 10000000*B_RL_in(s_RL_in3) =L= 10 ; (LHS = 0)
+     
+
+---- clearing_RL_out_up  =L=  
+
+clearing_RL_out_up(s_RL_out1)..  - 10000000*B_RL_out(s_RL_out1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+clearing_RL_out_up(s_RL_out2)..  - 10000000*B_RL_out(s_RL_out2) =L= 0 ; (LHS = 0)
+     
+clearing_RL_out_up(s_RL_out3)..  - 10000000*B_RL_out(s_RL_out3) =L= 10 ; (LHS = 0)
+     
+
+---- clearing_RA_in_up  =L=  
+
+clearing_RA_in_up(s_RA_in1)..  - 10000000*B_RA_in(s_RA_in1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+clearing_RA_in_up(s_RA_in2)..  - 10000000*B_RA_in(s_RA_in2) =L= 0 ; (LHS = 0)
+     
+clearing_RA_in_up(s_RA_in3)..  - 10000000*B_RA_in(s_RA_in3) =L= 10 ; (LHS = 0)
+     
+
+---- clearing_RA_out_up  =L=  
+
+clearing_RA_out_up(s_RA_out1)..  - 10000000*B_RA_out(s_RA_out1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+clearing_RA_out_up(s_RA_out2)..  - 10000000*B_RA_out(s_RA_out2) =L= 0 ; (LHS = 0)
+     
+clearing_RA_out_up(s_RA_out3)..  - 10000000*B_RA_out(s_RA_out3) =L= 10 ; (LHS = 0)
+     
+
+---- clearing_DA_up  =L=  
+
+clearing_DA_up(s_DA1)..  - 10000000*B_DA(s_DA1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+clearing_DA_up(s_DA2)..  - 10000000*B_DA(s_DA2) =L= 0 ; (LHS = 0)
+     
+clearing_DA_up(s_DA3)..  - 10000000*B_DA(s_DA3) =L= 10 ; (LHS = 0)
+     
+
+---- clearing_RL_in_down  =G=  
+
+clearing_RL_in_down(s_RL_in1)..  - 10000000*B_RL_in(s_RL_in1) =G= -9999200 ; (LHS = 0)
+     
+clearing_RL_in_down(s_RL_in2)..  - 10000000*B_RL_in(s_RL_in2) =G= -10000000 ; (LHS = 0)
+     
+clearing_RL_in_down(s_RL_in3)..  - 10000000*B_RL_in(s_RL_in3) =G= -9999990 ; (LHS = 0)
+     
+
+---- clearing_RL_out_down  =G=  
+
+clearing_RL_out_down(s_RL_out1)..  - 10000000*B_RL_out(s_RL_out1) =G= -10000010 ; (LHS = 0)
+     
+clearing_RL_out_down(s_RL_out2)..  - 10000000*B_RL_out(s_RL_out2) =G= -10000000 ; (LHS = 0)
+     
+clearing_RL_out_down(s_RL_out3)..  - 10000000*B_RL_out(s_RL_out3) =G= -9999990 ; (LHS = 0)
+     
+
+---- clearing_RA_in_down  =G=  
+
+clearing_RA_in_down(s_RA_in1)..  - 10000000*B_RA_in(s_RA_in1) =G= -10000010 ; (LHS = 0)
+     
+clearing_RA_in_down(s_RA_in2)..  - 10000000*B_RA_in(s_RA_in2) =G= -10000000 ; (LHS = 0)
+     
+clearing_RA_in_down(s_RA_in3)..  - 10000000*B_RA_in(s_RA_in3) =G= -9999990 ; (LHS = 0)
+     
+
+---- clearing_RA_out_down  =G=  
+
+clearing_RA_out_down(s_RA_out1)..  - 10000000*B_RA_out(s_RA_out1) =G= -10000010 ; (LHS = 0)
+     
+clearing_RA_out_down(s_RA_out2)..  - 10000000*B_RA_out(s_RA_out2) =G= -10000000 ; (LHS = 0)
+     
+clearing_RA_out_down(s_RA_out3)..  - 10000000*B_RA_out(s_RA_out3) =G= -9999990 ; (LHS = 0)
+     
+
+---- clearing_DA_down  =G=  
+
+clearing_DA_down(s_DA1)..  - 10000000*B_DA(s_DA1) =G= -10000010 ; (LHS = 0)
+     
+clearing_DA_down(s_DA2)..  - 10000000*B_DA(s_DA2) =G= -10000000 ; (LHS = 0)
+     
+clearing_DA_down(s_DA3)..  - 10000000*B_DA(s_DA3) =G= -9999990 ; (LHS = 0)
+     
+
+---- store_RL_in1  =G=  
+
+store_RL_in1..  Q_RL_in(s_RL_in1) + Q_RL_in(s_RL_in2) + Q_RL_in(s_RL_in3) =G= 0 ; (LHS = 0)
+     
+
+---- store_RL_out1  =G=  
+
+store_RL_out1..  Q_RL_out(s_RL_out1) + Q_RL_out(s_RL_out2) + Q_RL_out(s_RL_out3) =G= 0 ; (LHS = 0)
+     
+
+---- store_RA_in1  =G=  
+
+store_RA_in1..  X_RA_in(s_RA_in1) + X_RA_in(s_RA_in2) + X_RA_in(s_RA_in3) =G= 0 ; (LHS = 0)
+     
+
+---- store_RA_out1  =G=  
+
+store_RA_out1..  X_RA_out(s_RA_out1) + X_RA_out(s_RA_out2) + X_RA_out(s_RA_out3) =G= 0 ; (LHS = 0)
+     
+
+---- store_DA1  =G=  
+
+store_DA1..  X_DA(s_DA1) + X_DA(s_DA2) + X_DA(s_DA3) =G= 0 ; (LHS = 0)
+     
+
+---- store_RL_in2  =L=  
+
+store_RL_in2..  Q_RL_in(s_RL_in1) + Q_RL_in(s_RL_in2) + Q_RL_in(s_RL_in3) =L= 100 ; (LHS = 0)
+     
+
+---- store_RL_out2  =L=  
+
+store_RL_out2..  Q_RL_out(s_RL_out1) + Q_RL_out(s_RL_out2) + Q_RL_out(s_RL_out3) =L= 100 ; (LHS = 0)
+     
+
+---- store_RA_in2  =L=  
+
+store_RA_in2..  X_RA_in(s_RA_in1) + X_RA_in(s_RA_in2) + X_RA_in(s_RA_in3) =L= 100 ; (LHS = 0)
+     
+
+---- store_RA_out2  =L=  
+
+store_RA_out2..  X_RA_out(s_RA_out1) + X_RA_out(s_RA_out2) + X_RA_out(s_RA_out3) =L= 100 ; (LHS = 0)
+     
+
+---- store_DA2  =L=  
+
+store_DA2..  X_DA(s_DA1) + X_DA(s_DA2) + X_DA(s_DA3) =L= 100 ; (LHS = 0)
+     
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE full_modell_test Using MIP From line 195
+
+
+---- Profit_RL_in  
+
+Profit_RL_in
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_RL_in_
+       -1       eq_profit_RL
+
+
+---- Profit_RL_out  
+
+Profit_RL_out
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_RL_out_
+       -1       eq_profit_RL
+
+
+---- Profit_DA  
+
+Profit_DA
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_DA_
+
+
+---- Profit_RA_in  
+
+Profit_RA_in
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_RA_in_
+       -1       eq_profit_RA
+
+
+---- Profit_RA_out  
+
+Profit_RA_out
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_RA_out_
+       -1       eq_profit_RA
+
+
+---- Profit_RL  
+
+Profit_RL
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_RL
+       -1       eq_profit_g
+
+
+---- Profit_RA  
+
+Profit_RA
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_RA
+       -1       eq_profit_g
+
+
+---- Profit_G  
+
+Profit_G
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       eq_profit_g
+
+
+---- X_RL_in  
+
+X_RL_in(s_RL_in1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RL_in_lin1(s_RL_in1)
+       -1       bq_RL_in_lin3(s_RL_in1)
+
+X_RL_in(s_RL_in2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RL_in_lin1(s_RL_in2)
+       -1       bq_RL_in_lin3(s_RL_in2)
+
+X_RL_in(s_RL_in3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RL_in_lin1(s_RL_in3)
+       -1       bq_RL_in_lin3(s_RL_in3)
+
+
+---- X_RL_out  
+
+X_RL_out(s_RL_out1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RL_out_lin1(s_RL_out1)
+       -1       bq_RL_out_lin3(s_RL_out1)
+
+X_RL_out(s_RL_out2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RL_out_lin1(s_RL_out2)
+       -1       bq_RL_out_lin3(s_RL_out2)
+
+X_RL_out(s_RL_out3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RL_out_lin1(s_RL_out3)
+       -1       bq_RL_out_lin3(s_RL_out3)
+
+
+---- X_DA  
+
+X_DA(s_DA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -27       eq_profit_DA_
+       -1       a_con
+        1       bq_DA1(s_DA1)
+       -1       bq_DA2(s_DA1)
+       -1       bq_DA3(s_DA1)
+        1       store_DA1
+        1       store_DA2
+
+X_DA(s_DA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       eq_profit_DA_
+       -1       a_con
+        1       bq_DA1(s_DA2)
+       -1       bq_DA2(s_DA2)
+       -1       bq_DA3(s_DA2)
+        1       store_DA1
+        1       store_DA2
+
+X_DA(s_DA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -22       eq_profit_DA_
+       -1       a_con
+        1       bq_DA1(s_DA3)
+       -1       bq_DA2(s_DA3)
+       -1       bq_DA3(s_DA3)
+        1       store_DA1
+        1       store_DA2
+
+
+---- X_RA_in  
+
+X_RA_in(s_RA_in1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -27       eq_profit_RA_in_
+        1       a_con
+        1       bq_RA_in1(s_RA_in1)
+       -1       bq_RA_in2(s_RA_in1)
+       -1       bq_RA_in3(s_RA_in1)
+        1       store_RA_in1
+        1       store_RA_in2
+
+X_RA_in(s_RA_in2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       eq_profit_RA_in_
+        1       a_con
+        1       bq_RA_in1(s_RA_in2)
+       -1       bq_RA_in2(s_RA_in2)
+       -1       bq_RA_in3(s_RA_in2)
+        1       store_RA_in1
+        1       store_RA_in2
+
+X_RA_in(s_RA_in3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -22       eq_profit_RA_in_
+        1       a_con
+        1       bq_RA_in1(s_RA_in3)
+       -1       bq_RA_in2(s_RA_in3)
+       -1       bq_RA_in3(s_RA_in3)
+        1       store_RA_in1
+        1       store_RA_in2
+
+
+---- X_RA_out  
+
+X_RA_out(s_RA_out1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -27       eq_profit_RA_out_
+       -1       a_con
+        1       bq_RA_out1(s_RA_out1)
+       -1       bq_RA_out2(s_RA_out1)
+       -1       bq_RA_out3(s_RA_out1)
+        1       store_RA_out1
+        1       store_RA_out2
+
+X_RA_out(s_RA_out2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       eq_profit_RA_out_
+       -1       a_con
+        1       bq_RA_out1(s_RA_out2)
+       -1       bq_RA_out2(s_RA_out2)
+       -1       bq_RA_out3(s_RA_out2)
+        1       store_RA_out1
+        1       store_RA_out2
+
+X_RA_out(s_RA_out3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -22       eq_profit_RA_out_
+       -1       a_con
+        1       bq_RA_out1(s_RA_out3)
+       -1       bq_RA_out2(s_RA_out3)
+       -1       bq_RA_out3(s_RA_out3)
+        1       store_RA_out1
+        1       store_RA_out2
+
+
+---- Q_RL_in  
+
+Q_RL_in(s_RL_in1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -270       eq_profit_RL_in_
+        1       bq_RL_in_lin3(s_RL_in1)
+        1       store_RL_in1
+        1       store_RL_in2
+
+Q_RL_in(s_RL_in2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       eq_profit_RL_in_
+        1       bq_RL_in_lin3(s_RL_in2)
+        1       store_RL_in1
+        1       store_RL_in2
+
+Q_RL_in(s_RL_in3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -22       eq_profit_RL_in_
+        1       bq_RL_in_lin3(s_RL_in3)
+        1       store_RL_in1
+        1       store_RL_in2
+
+
+---- Q_RL_out  
+
+Q_RL_out(s_RL_out1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -27       eq_profit_RL_out_
+        1       bq_RL_out_lin3(s_RL_out1)
+        1       store_RL_out1
+        1       store_RL_out2
+
+Q_RL_out(s_RL_out2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       eq_profit_RL_out_
+        1       bq_RL_out_lin3(s_RL_out2)
+        1       store_RL_out1
+        1       store_RL_out2
+
+Q_RL_out(s_RL_out3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -22       eq_profit_RL_out_
+        1       bq_RL_out_lin3(s_RL_out3)
+        1       store_RL_out1
+        1       store_RL_out2
+
+
+---- Q_DA  
+
+Q_DA(s_DA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_DA2(s_DA1)
+        1       bq_DA3(s_DA1)
+
+Q_DA(s_DA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_DA2(s_DA2)
+        1       bq_DA3(s_DA2)
+
+Q_DA(s_DA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_DA2(s_DA3)
+        1       bq_DA3(s_DA3)
+
+
+---- Q_RA_in  
+
+Q_RA_in(s_RA_in1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RA_in2(s_RA_in1)
+        1       bq_RA_in3(s_RA_in1)
+
+Q_RA_in(s_RA_in2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RA_in2(s_RA_in2)
+        1       bq_RA_in3(s_RA_in2)
+
+Q_RA_in(s_RA_in3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RA_in2(s_RA_in3)
+        1       bq_RA_in3(s_RA_in3)
+
+
+---- Q_RA_out  
+
+Q_RA_out(s_RA_out1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RA_out2(s_RA_out1)
+        1       bq_RA_out3(s_RA_out1)
+
+Q_RA_out(s_RA_out2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RA_out2(s_RA_out2)
+        1       bq_RA_out3(s_RA_out2)
+
+Q_RA_out(s_RA_out3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       bq_RA_out2(s_RA_out3)
+        1       bq_RA_out3(s_RA_out3)
+
+
+---- B_RL_in  
+
+B_RL_in(s_RL_in1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RL_in_lin1(s_RL_in1)
+  -1.000000E+7  clearing_RL_in_up(s_RL_in1)
+  -1.000000E+7  clearing_RL_in_down(s_RL_in1)
+
+B_RL_in(s_RL_in2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RL_in_lin1(s_RL_in2)
+  -1.000000E+7  clearing_RL_in_up(s_RL_in2)
+  -1.000000E+7  clearing_RL_in_down(s_RL_in2)
+
+B_RL_in(s_RL_in3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RL_in_lin1(s_RL_in3)
+  -1.000000E+7  clearing_RL_in_up(s_RL_in3)
+  -1.000000E+7  clearing_RL_in_down(s_RL_in3)
+
+
+---- B_RL_out  
+
+B_RL_out(s_RL_out1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RL_out_lin1(s_RL_out1)
+  -1.000000E+7  clearing_RL_out_up(s_RL_out1)
+  -1.000000E+7  clearing_RL_out_down(s_RL_out1)
+
+B_RL_out(s_RL_out2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RL_out_lin1(s_RL_out2)
+  -1.000000E+7  clearing_RL_out_up(s_RL_out2)
+  -1.000000E+7  clearing_RL_out_down(s_RL_out2)
+
+B_RL_out(s_RL_out3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RL_out_lin1(s_RL_out3)
+  -1.000000E+7  clearing_RL_out_up(s_RL_out3)
+  -1.000000E+7  clearing_RL_out_down(s_RL_out3)
+
+
+---- B_DA  
+
+B_DA(s_DA1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_DA1(s_DA1)
+      100       bq_DA2(s_DA1)
+  -1.000000E+7  clearing_DA_up(s_DA1)
+  -1.000000E+7  clearing_DA_down(s_DA1)
+
+B_DA(s_DA2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_DA1(s_DA2)
+      100       bq_DA2(s_DA2)
+  -1.000000E+7  clearing_DA_up(s_DA2)
+  -1.000000E+7  clearing_DA_down(s_DA2)
+
+B_DA(s_DA3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_DA1(s_DA3)
+      100       bq_DA2(s_DA3)
+  -1.000000E+7  clearing_DA_up(s_DA3)
+  -1.000000E+7  clearing_DA_down(s_DA3)
+
+
+---- B_RA_in  
+
+B_RA_in(s_RA_in1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RA_in1(s_RA_in1)
+      100       bq_RA_in2(s_RA_in1)
+  -1.000000E+7  clearing_RA_in_up(s_RA_in1)
+  -1.000000E+7  clearing_RA_in_down(s_RA_in1)
+
+B_RA_in(s_RA_in2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RA_in1(s_RA_in2)
+      100       bq_RA_in2(s_RA_in2)
+  -1.000000E+7  clearing_RA_in_up(s_RA_in2)
+  -1.000000E+7  clearing_RA_in_down(s_RA_in2)
+
+B_RA_in(s_RA_in3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RA_in1(s_RA_in3)
+      100       bq_RA_in2(s_RA_in3)
+  -1.000000E+7  clearing_RA_in_up(s_RA_in3)
+  -1.000000E+7  clearing_RA_in_down(s_RA_in3)
+
+
+---- B_RA_out  
+
+B_RA_out(s_RA_out1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RA_out1(s_RA_out1)
+      100       bq_RA_out2(s_RA_out1)
+  -1.000000E+7  clearing_RA_out_up(s_RA_out1)
+  -1.000000E+7  clearing_RA_out_down(s_RA_out1)
+
+B_RA_out(s_RA_out2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RA_out1(s_RA_out2)
+      100       bq_RA_out2(s_RA_out2)
+  -1.000000E+7  clearing_RA_out_up(s_RA_out2)
+  -1.000000E+7  clearing_RA_out_down(s_RA_out2)
+
+B_RA_out(s_RA_out3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       bq_RA_out1(s_RA_out3)
+      100       bq_RA_out2(s_RA_out3)
+  -1.000000E+7  clearing_RA_out_up(s_RA_out3)
+  -1.000000E+7  clearing_RA_out_down(s_RA_out3)
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE full_modell_test Using MIP From line 195
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+01, 1.000E+07] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 1.000E+07]
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE full_modell_test Using MIP From line 195
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          42     SINGLE EQUATIONS           88
+BLOCKS OF VARIABLES          23     SINGLE VARIABLES           53
+NON ZERO ELEMENTS           185     DISCRETE VARIABLES         15
+
+
+GENERATION TIME      =        0.047 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE full_modell_test Using MIP From line 195
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   full_modell_test    OBJECTIVE  Profit_G
+     TYPE    MIP                 DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  195
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE            42000.0000
+
+ RESOURCE USAGE, LIMIT          0.016 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.51 Mb (peak 0.51 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.01 Mb)
+--- Starting Cplex
+
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.02sec (det. 0.06 ticks)
+
+--- Returning a primal only solution to GAMS (marginals all set to NA).
+--- Fixing integer variables and solving final LP...
+
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.07 ticks)
+
+
+Proven optimal solution
+MIP Solution:        42000.000000    (0 iterations, 0 nodes)
+Final Solve:         42000.000000    (0 iterations)
+
+Best possible:       42000.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU eq_profit~          .              .              .             EPS         
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU eq_profit~          .              .              .             1.0000      
+---- EQU a_con           -150.0000          .            +INF             .          
+
+---- EQU bq_RL_in_lin1  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1        -INF             .              .              .          
+s_RL_in2        -INF         -100.0000          .              .          
+s_RL_in3        -INF             .              .              .          
+
+---- EQU bq_RL_out_lin1  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1        -INF         -100.0000          .              .          
+s_RL_out2        -INF         -100.0000          .              .          
+s_RL_out3        -INF             .              .              .          
+
+---- EQU bq_DA1  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1        -INF         -100.0000          .              .          
+s_DA2        -INF         -100.0000          .              .          
+s_DA3        -INF             .              .              .          
+
+---- EQU bq_RA_in1  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1        -INF         -100.0000          .              .          
+s_RA_in2        -INF             .              .              .          
+s_RA_in3        -INF             .              .              .          
+
+---- EQU bq_RA_out1  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1        -INF         -100.0000          .              .          
+s_RA_out2        -INF             .              .              .          
+s_RA_out3        -INF             .              .              .          
+
+---- EQU bq_DA2  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1       100.0000       100.0000        +INF             .          
+s_DA2       100.0000       100.0000        +INF             .          
+s_DA3       100.0000       100.0000        +INF            EPS         
+
+---- EQU bq_RA_in2  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1       100.0000       100.0000        +INF             .          
+s_RA_in2       100.0000       100.0000        +INF             .          
+s_RA_in3       100.0000       100.0000        +INF            EPS         
+
+---- EQU bq_RA_out2  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1       100.0000       100.0000        +INF             .          
+s_RA_out2       100.0000       100.0000        +INF             .          
+s_RA_out3       100.0000       100.0000        +INF            EPS         
+
+---- EQU bq_RL_in_lin3  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1          .           100.0000        +INF             .          
+s_RL_in2          .              .            +INF             .          
+s_RL_in3          .              .            +INF             .          
+
+---- EQU bq_RL_out_lin3  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1          .              .            +INF             .          
+s_RL_out2          .           100.0000        +INF             .          
+s_RL_out3          .              .            +INF             .          
+
+---- EQU bq_DA3  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1          .              .            +INF             .          
+s_DA2          .              .            +INF             .          
+s_DA3          .           100.0000        +INF             .          
+
+---- EQU bq_RA_in3  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1          .              .            +INF             .          
+s_RA_in2          .              .            +INF            EPS         
+s_RA_in3          .           100.0000        +INF             .          
+
+---- EQU bq_RA_out3  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1          .              .            +INF             .          
+s_RA_out2          .              .            +INF            EPS         
+s_RA_out3          .           100.0000        +INF             .          
+
+---- EQU clearing_RL_in_up  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1        -INF             .           800.0000          .          
+s_RL_in2        -INF      -1.000000E+7          .              .          
+s_RL_in3        -INF             .            10.0000          .          
+
+---- EQU clearing_RL_out_up  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1        -INF      -1.000000E+7       -10.0000          .          
+s_RL_out2        -INF      -1.000000E+7          .              .          
+s_RL_out3        -INF             .            10.0000          .          
+
+---- EQU clearing_RA_in_up  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1        -INF      -1.000000E+7       -10.0000          .          
+s_RA_in2        -INF      -1.000000E+7          .              .          
+s_RA_in3        -INF             .            10.0000          .          
+
+---- EQU clearing_RA_out_up  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1        -INF      -1.000000E+7       -10.0000          .          
+s_RA_out2        -INF      -1.000000E+7          .              .          
+s_RA_out3        -INF             .            10.0000          .          
+
+---- EQU clearing_DA_up  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1        -INF      -1.000000E+7       -10.0000          .          
+s_DA2        -INF      -1.000000E+7          .              .          
+s_DA3        -INF             .            10.0000          .          
+
+---- EQU clearing_RL_in_down  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1   -9.999200E+6          .            +INF             .          
+s_RL_in2   -1.000000E+7   -1.000000E+7        +INF             .          
+s_RL_in3   -9.999990E+6          .            +INF             .          
+
+---- EQU clearing_RL_out_down  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1   -1.000001E+7   -1.000000E+7        +INF             .          
+s_RL_out2   -1.000000E+7   -1.000000E+7        +INF             .          
+s_RL_out3   -9.999990E+6          .            +INF             .          
+
+---- EQU clearing_RA_in_down  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1   -1.000001E+7   -1.000000E+7        +INF             .          
+s_RA_in2   -1.000000E+7   -1.000000E+7        +INF             .          
+s_RA_in3   -9.999990E+6          .            +INF             .          
+
+---- EQU clearing_RA_out_down  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1   -1.000001E+7   -1.000000E+7        +INF             .          
+s_RA_out2   -1.000000E+7   -1.000000E+7        +INF             .          
+s_RA_out3   -9.999990E+6          .            +INF             .          
+
+---- EQU clearing_DA_down  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1   -1.000001E+7   -1.000000E+7        +INF             .          
+s_DA2   -1.000000E+7   -1.000000E+7        +INF             .          
+s_DA3   -9.999990E+6          .            +INF             .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU store_RL_~          .           100.0000        +INF             .          
+---- EQU store_RL_~          .           100.0000        +INF             .          
+---- EQU store_RA_~          .           100.0000        +INF             .          
+---- EQU store_RA_~          .           100.0000        +INF             .          
+---- EQU store_DA1           .              .            +INF             .          
+---- EQU store_RL_~        -INF          100.0000       100.0000       270.0000      
+---- EQU store_RL_~        -INF          100.0000       100.0000        50.0000      
+---- EQU store_RA_~        -INF          100.0000       100.0000        50.0000      
+---- EQU store_RA_~        -INF          100.0000       100.0000        50.0000      
+---- EQU store_DA2         -INF             .           100.0000          .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR Profit_RL~        -INF        27000.0000        +INF             .          
+---- VAR Profit_RL~        -INF         5000.0000        +INF             .          
+---- VAR Profit_DA         -INF             .            +INF             .          
+---- VAR Profit_RA~        -INF         5000.0000        +INF             .          
+---- VAR Profit_RA~        -INF         5000.0000        +INF             .          
+---- VAR Profit_RL         -INF        32000.0000        +INF             .          
+---- VAR Profit_RA         -INF        10000.0000        +INF             .          
+---- VAR Profit_G          -INF        42000.0000        +INF             .          
+
+---- VAR X_RL_in  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1          .              .            +INF            EPS         
+s_RL_in2          .              .            +INF            EPS         
+s_RL_in3          .              .            +INF            EPS         
+
+---- VAR X_RL_out  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1          .              .            +INF            EPS         
+s_RL_out2          .              .            +INF            EPS         
+s_RL_out3          .              .            +INF            EPS         
+
+---- VAR X_DA  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1          .              .            +INF            EPS         
+s_DA2          .              .            +INF            EPS         
+s_DA3          .              .            +INF            EPS         
+
+---- VAR X_RA_in  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1          .              .            +INF          -23.0000      
+s_RA_in2          .           100.0000        +INF             .          
+s_RA_in3          .              .            +INF          -28.0000      
+
+---- VAR X_RA_out  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1          .              .            +INF          -23.0000      
+s_RA_out2          .           100.0000        +INF             .          
+s_RA_out3          .              .            +INF          -28.0000      
+
+---- VAR Q_RL_in  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1          .           100.0000        +INF             .          
+s_RL_in2          .              .            +INF         -220.0000      
+s_RL_in3          .              .            +INF         -248.0000      
+
+---- VAR Q_RL_out  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1          .              .            +INF          -23.0000      
+s_RL_out2          .           100.0000        +INF             .          
+s_RL_out3          .              .            +INF          -28.0000      
+
+---- VAR Q_DA  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1          .              .            +INF            EPS         
+s_DA2          .              .            +INF            EPS         
+s_DA3          .           100.0000        +INF             .          
+
+---- VAR Q_RA_in  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1          .              .            +INF            EPS         
+s_RA_in2          .           100.0000        +INF             .          
+s_RA_in3          .           100.0000        +INF             .          
+
+---- VAR Q_RA_out  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1          .              .            +INF            EPS         
+s_RA_out2          .           100.0000        +INF             .          
+s_RA_out3          .           100.0000        +INF             .          
+
+---- VAR B_RL_in  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1          .              .             1.0000         EPS         
+s_RL_in2          .             1.0000         1.0000         EPS         
+s_RL_in3          .              .             1.0000         EPS         
+
+---- VAR B_RL_out  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1          .             1.0000         1.0000         EPS         
+s_RL_out2          .             1.0000         1.0000         EPS         
+s_RL_out3          .              .             1.0000         EPS         
+
+---- VAR B_DA  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1          .             1.0000         1.0000         EPS         
+s_DA2          .             1.0000         1.0000         EPS         
+s_DA3          .              .             1.0000         EPS         
+
+---- VAR B_RA_in  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_in1          .             1.0000         1.0000         EPS         
+s_RA_in2          .             1.0000         1.0000         EPS         
+s_RA_in3          .              .             1.0000         EPS         
+
+---- VAR B_RA_out  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RA_out1          .             1.0000         1.0000         EPS         
+s_RA_out2          .             1.0000         1.0000         EPS         
+s_RA_out3          .              .             1.0000         EPS         
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.516 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\fullModel.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\fullModel.lst

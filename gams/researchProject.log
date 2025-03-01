@@ -1,10 +1,10 @@
---- Job main.gms Start 01/20/25 11:22:15 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job main.gms Start 02/20/25 14:03:23 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
     Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\main.gms"
     PageSize 0
-    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225a\"
+    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\"
     SysDir C:\GAMS\46\
     LogOption 3
     ErrMsg 1
@@ -23,8 +23,10 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- main.gms(4) 2 Mb
 --- . testData.gms(43) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
+--- . testData.gms(43) 3 Mb  3 secs
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
+
 --- . testData.gms(56) 3 Mb
 --- Initialize embedded library embconnectcclib64.dll
 --- Execute embedded library embconnectcclib64.dll
@@ -46,58 +48,48 @@ Warning: PandasExcelReader is deprecated and will be removed in a future release
 --- Execute embedded library embconnectcclib64.dll
 Warning: PandasExcelReader is deprecated and will be removed in a future release. Use ExcelReader instead.
 
---- main.gms(98) 3 Mb
---- Starting execution: elapsed 0:00:03.524
---- Generating MIP model test
---- main.gms(219) 13 Mb
----   41,516 rows  14,441 columns  90,211 non-zeroes
+--- main.gms(111) 3 Mb
+--- Starting execution: elapsed 0:00:05.958
+--- Generating RMPEC model test
+--- main.gms(231) 15 Mb
+---   42,599 rows  18,412 columns  94,543 non-zeroes
+---   0 nl-code  0 nl-non-zeroes
+---   3,610 discrete-columns
 --- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 1.000E+02, 1.000E+02] - Zero values observed as well
---- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 4.369E-01, 1.036E+03]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:03.613
+--- RHS       [min, max] : [ 1.000E+00, 1.000E+02] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.000E+00, 1.036E+03]
+--- main.gms(231) 13 Mb
+--- Executing NLPEC (Solvelink=2): elapsed 0:00:06.019
 
-IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+NLPEC 1.6        46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 
---- GAMS/CPLEX licensed for continuous and discrete problems.
---- GMO setup time: 0.00s
---- Space for names approximately 1.82 Mb
---- Use option 'names no' to turn use of names off
---- GMO memory 10.80 Mb (peak 10.91 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 22.1.1.0 link memory 0.75 Mb (peak 3.90 Mb)
---- Starting Cplex
+Reformulates Nonlinear Programs with Equilibrium Constraints
+Michael Ferris, University of Wisconsin
 
-Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
-CPXPARAM_Advance                                 0
-CPXPARAM_MIP_Display                             4
-CPXPARAM_MIP_Pool_Capacity                       0
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-Parallel mode: deterministic, using up to 16 threads for concurrent optimization:
- * Starting dual Simplex on 1 thread...
- * Starting Barrier on 14 threads...
- * Starting primal Simplex on 1 thread...
-Tried aggregator 1 time.
-LP Presolve eliminated 11665 rows and 1991 columns.
-Reduced LP has 29850 rows, 12450 columns, and 65095 nonzeros.
-Presolve time = 0.05 sec. (32.48 ticks)
-
-Iteration log . . .
-Iteration:     1   Dual objective     =     229927089.357112
-Iteration:   225   Dual objective     =     221352596.162830
-Initializing dual steep norms . . .
-Iteration:   226   Dual objective     =     221351990.532973
-
-Dual simplex solved model.
+* Reformulation parameters, after checking for consistency.
+* Reform Type        SINGLE      DOUBLE
+*  refType             mult        mult
+*  slack           positive    positive
+*  constraint      equality    equality
+*  aggregate           none        none
+*  NCPBounds           none        none
 
 
---- LP status (1): optimal.
---- Cplex Time: 0.12sec (det. 87.22 ticks)
+--- The reformulated model C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\gms.dat will be solved by GAMS
+---  gams C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\gms.dat
+---    pf C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\pf.dat
 
+P3 Standard Exception Handler: Problem extracting short path, result contains spaces: C:\Users\sebas\DOCUME~1\CLOUDD~1\Uni\WS24\Research Project\gams\225b\ (maybe 8.3 form is disabled)
+--- Returning from GAMS NLPEC step
 
-Optimal solution found
-Objective:    221351990.532975
-
+***
+*** NLPEC GAMS step failed - please report to support@gams.com
+*** NLPEC Please capture the file nlpec.gms
+*** NLPEC Msg: Impossible return code
+*** NLPEC Exe: gams C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\gms.dat
+*** NLPEC      pf C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\pf.dat
+***
 --- Reading solution for model test
 *** Status: Normal completion
---- Job main.gms Stop 01/20/25 11:22:20 elapsed 0:00:04.115
+--- Job main.gms Stop 02/20/25 14:03:31 elapsed 0:00:08.070

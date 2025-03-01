@@ -1,0 +1,405 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/26/25 23:37:22 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Set
+   2  sDA             /sDA1*sDA3/
+   3  sRT             /sRT1*sRT3/
+   4  t               /t1*t3/
+   5  ;
+   6   
+   7   
+   8  Parameter
+   9  p_DA(sDA)               /sDA1 90, sDA2 100, sDA3 1100/
+  10  prob_DA(sDA)            /sDA1 0.2, sDA2 0.5, sDA3 0.3/
+  11  bid_DA(t)               /t1 90, t2 100, t3 110/
+  12  Variable
+  13  Ertrag
+  14  ;
+  15   
+  16  Positive Variable
+  17  X_DA(t, sDA)
+  18  Q_DA(t, sDA)
+  19  stor_state
+  20  abc(t)
+  21  ;
+  22   
+  23  Binary Variables
+  24  b_DA_accepted(t, sDA)
+  25  B_P_DA
+  26  B_Q_DA
+  27  ;
+  28   
+  29  Scalar
+  30  Cap             /100/
+  31  rate            /100/
+  32  reload          /50/
+  33  M               /1000000000000000/
+  34  ;
+  35   
+  36  Equations
+  37  ErtragQ
+  38  wahl1
+  39   
+  40  lin1
+  41  lin2
+  42  lin3
+  43   
+  44  bidDA_con1
+  45  bidDA_con2
+  46   
+  47  stor1
+  48  stor2
+  49  stor_state1
+  50  stor_state2
+  51  abc_con
+  52   
+  53  ;
+  54   
+  55  ErtragQ..                   Ertrag =e= sum(t, sum(sDA,  p_DA(sDA) * prob_DA(sDA) * Q_DA(t, sDA)));
+  56  wahl1..                     sum(sDA, B_P_DA(sDA)) =l= 1;
+  57   
+  58  lin1(t, sDA)..                 X_DA(t, sDA) =l= B_Q_DA(t, sDA) * rate;
+  59  lin2(t, sDA)..                 Q_DA(t, sDA) - X_DA(t, sDA) =g= (1-B_Q_DA(t, sDA)) * rate;
+  60  lin3(t, sDA)..                 Q_DA(t, sDA) - X_DA(t, sDA) =g= 0;
+  61   
+  62   
+  63  bidDA_con1(t,sDA)..         bid_DA(t) =l= p_DA(sDA) + M * B_Q_DA(t, sDA);
+  64  bidDA_con2(t,sDA)..         bid_DA(t) =g= p_DA(sDA) - M * (1- B_Q_DA(t, sDA));
+  65   
+  66  stor1(t)..                      sum(sDA, Q_DA(t, sDA)) =l= rate;
+  67  stor2(t)..                      sum(sDA, Q_DA(t, sDA)) =g= 0;
+  68  stor_state1(t)..              stor_state(t) =l= Cap;
+  69  stor_state2(t)..              stor_state(t+1) =e= stor_state(t) - sum(sDA, X_DA(t, sDA)) + abc(t);
+  70  abc_con(t)..                   abc(t) =l= reload;
+  71  Model Demo / all /;
+  72  solve Demo maximising Ertrag using MIP;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/26/25 23:37:22 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE Demo Using MIP From line 72
+
+
+---- ErtragQ  =E=  
+
+ErtragQ..  Ertrag - 18*Q_DA(t1,sDA1) - 50*Q_DA(t1,sDA2) - 330*Q_DA(t1,sDA3) - 18*Q_DA(t2,sDA1) - 50*Q_DA(t2,sDA2) - 330*Q_DA(t2,sDA3) - 18*Q_DA(t3,sDA1) - 50*Q_DA(t3,sDA2) - 330*Q_DA(t3,sDA3) =E= 0 ; (LHS = 0)
+     
+
+---- wahl1  =L=  
+
+wahl1..  B_P_DA(sDA1) + B_P_DA(sDA2) + B_P_DA(sDA3) =L= 1 ; (LHS = 0)
+     
+
+---- lin1  =L=  
+
+lin1(t1,sDA1)..  X_DA(t1,sDA1) - 100*B_Q_DA(t1,sDA1) =L= 0 ; (LHS = 0)
+     
+lin1(t1,sDA2)..  X_DA(t1,sDA2) - 100*B_Q_DA(t1,sDA2) =L= 0 ; (LHS = 0)
+     
+lin1(t1,sDA3)..  X_DA(t1,sDA3) - 100*B_Q_DA(t1,sDA3) =L= 0 ; (LHS = 0)
+     
+REMAINING 6 ENTRIES SKIPPED
+
+
+---- lin2  =G=  
+
+lin2(t1,sDA1)..  - X_DA(t1,sDA1) + Q_DA(t1,sDA1) + 100*B_Q_DA(t1,sDA1) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+lin2(t1,sDA2)..  - X_DA(t1,sDA2) + Q_DA(t1,sDA2) + 100*B_Q_DA(t1,sDA2) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+lin2(t1,sDA3)..  - X_DA(t1,sDA3) + Q_DA(t1,sDA3) + 100*B_Q_DA(t1,sDA3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+REMAINING 6 ENTRIES SKIPPED
+
+
+---- lin3  =G=  
+
+lin3(t1,sDA1)..  - X_DA(t1,sDA1) + Q_DA(t1,sDA1) =G= 0 ; (LHS = 0)
+     
+lin3(t1,sDA2)..  - X_DA(t1,sDA2) + Q_DA(t1,sDA2) =G= 0 ; (LHS = 0)
+     
+lin3(t1,sDA3)..  - X_DA(t1,sDA3) + Q_DA(t1,sDA3) =G= 0 ; (LHS = 0)
+     
+REMAINING 6 ENTRIES SKIPPED
+
+
+---- bidDA_con1  =L=  
+
+bidDA_con1(t1,sDA1)..  - 1E15*B_Q_DA(t1,sDA1) =L= 0 ; (LHS = 0)
+     
+bidDA_con1(t1,sDA2)..  - 1E15*B_Q_DA(t1,sDA2) =L= 10 ; (LHS = 0)
+     
+bidDA_con1(t1,sDA3)..  - 1E15*B_Q_DA(t1,sDA3) =L= 1010 ; (LHS = 0)
+     
+REMAINING 6 ENTRIES SKIPPED
+
+
+---- bidDA_con2  =G=  
+
+bidDA_con2(t1,sDA1)..  - 1E15*B_Q_DA(t1,sDA1) =G= -1E15 ; (LHS = 0)
+     
+bidDA_con2(t1,sDA2)..  - 1E15*B_Q_DA(t1,sDA2) =G= -999999999999990 ; (LHS = 0)
+     
+bidDA_con2(t1,sDA3)..  - 1E15*B_Q_DA(t1,sDA3) =G= -999999999998990 ; (LHS = 0)
+     
+REMAINING 6 ENTRIES SKIPPED
+
+
+---- stor1  =L=  
+
+stor1(t1)..  Q_DA(t1,sDA1) + Q_DA(t1,sDA2) + Q_DA(t1,sDA3) =L= 100 ; (LHS = 0)
+     
+stor1(t2)..  Q_DA(t2,sDA1) + Q_DA(t2,sDA2) + Q_DA(t2,sDA3) =L= 100 ; (LHS = 0)
+     
+stor1(t3)..  Q_DA(t3,sDA1) + Q_DA(t3,sDA2) + Q_DA(t3,sDA3) =L= 100 ; (LHS = 0)
+     
+
+---- stor2  =G=  
+
+stor2(t1)..  Q_DA(t1,sDA1) + Q_DA(t1,sDA2) + Q_DA(t1,sDA3) =G= 0 ; (LHS = 0)
+     
+stor2(t2)..  Q_DA(t2,sDA1) + Q_DA(t2,sDA2) + Q_DA(t2,sDA3) =G= 0 ; (LHS = 0)
+     
+stor2(t3)..  Q_DA(t3,sDA1) + Q_DA(t3,sDA2) + Q_DA(t3,sDA3) =G= 0 ; (LHS = 0)
+     
+
+---- stor_state1  =L=  
+
+stor_state1(t1)..  stor_state(t1) =L= 100 ; (LHS = 0)
+     
+stor_state1(t2)..  stor_state(t2) =L= 100 ; (LHS = 0)
+     
+stor_state1(t3)..  stor_state(t3) =L= 100 ; (LHS = 0)
+     
+
+---- stor_state2  =E=  
+
+stor_state2(t1)..  X_DA(t1,sDA1) + X_DA(t1,sDA2) + X_DA(t1,sDA3) - stor_state(t1) + stor_state(t2) - abc(t1) =E= 0 ; (LHS = 0)
+     
+stor_state2(t2)..  X_DA(t2,sDA1) + X_DA(t2,sDA2) + X_DA(t2,sDA3) - stor_state(t2) + stor_state(t3) - abc(t2) =E= 0 ; (LHS = 0)
+     
+stor_state2(t3)..  X_DA(t3,sDA1) + X_DA(t3,sDA2) + X_DA(t3,sDA3) - stor_state(t3) - abc(t3) =E= 0 ; (LHS = 0)
+     
+
+---- abc_con  =L=  
+
+abc_con(t1)..  abc(t1) =L= 50 ; (LHS = 0)
+     
+abc_con(t2)..  abc(t2) =L= 50 ; (LHS = 0)
+     
+abc_con(t3)..  abc(t3) =L= 50 ; (LHS = 0)
+     
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/26/25 23:37:22 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE Demo Using MIP From line 72
+
+
+---- Ertrag  
+
+Ertrag
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       ErtragQ
+
+
+---- X_DA  
+
+X_DA(t1,sDA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       lin1(t1,sDA1)
+       -1       lin2(t1,sDA1)
+       -1       lin3(t1,sDA1)
+        1       stor_state2(t1)
+
+X_DA(t1,sDA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       lin1(t1,sDA2)
+       -1       lin2(t1,sDA2)
+       -1       lin3(t1,sDA2)
+        1       stor_state2(t1)
+
+X_DA(t1,sDA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       lin1(t1,sDA3)
+       -1       lin2(t1,sDA3)
+       -1       lin3(t1,sDA3)
+        1       stor_state2(t1)
+
+REMAINING 6 ENTRIES SKIPPED
+
+---- Q_DA  
+
+Q_DA(t1,sDA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -18       ErtragQ
+        1       lin2(t1,sDA1)
+        1       lin3(t1,sDA1)
+        1       stor1(t1)
+        1       stor2(t1)
+
+Q_DA(t1,sDA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       ErtragQ
+        1       lin2(t1,sDA2)
+        1       lin3(t1,sDA2)
+        1       stor1(t1)
+        1       stor2(t1)
+
+Q_DA(t1,sDA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+     -330       ErtragQ
+        1       lin2(t1,sDA3)
+        1       lin3(t1,sDA3)
+        1       stor1(t1)
+        1       stor2(t1)
+
+REMAINING 6 ENTRIES SKIPPED
+
+---- stor_state  
+
+stor_state(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       stor_state1(t1)
+       -1       stor_state2(t1)
+
+stor_state(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       stor_state1(t2)
+        1       stor_state2(t1)
+       -1       stor_state2(t2)
+
+stor_state(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       stor_state1(t3)
+        1       stor_state2(t2)
+       -1       stor_state2(t3)
+
+
+---- abc  
+
+abc(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       stor_state2(t1)
+        1       abc_con(t1)
+
+abc(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       stor_state2(t2)
+        1       abc_con(t2)
+
+abc(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       stor_state2(t3)
+        1       abc_con(t3)
+
+
+---- B_P_DA  
+
+B_P_DA(sDA1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       wahl1
+
+B_P_DA(sDA2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       wahl1
+
+B_P_DA(sDA3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       wahl1
+
+
+---- B_Q_DA  
+
+B_Q_DA(t1,sDA1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       lin1(t1,sDA1)
+      100       lin2(t1,sDA1)
+  -1.00000E+15  bidDA_con1(t1,sDA1)
+  -1.00000E+15  bidDA_con2(t1,sDA1)
+
+B_Q_DA(t1,sDA2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       lin1(t1,sDA2)
+      100       lin2(t1,sDA2)
+  -1.00000E+15  bidDA_con1(t1,sDA2)
+  -1.00000E+15  bidDA_con2(t1,sDA2)
+
+B_Q_DA(t1,sDA3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+     -100       lin1(t1,sDA3)
+      100       lin2(t1,sDA3)
+  -1.00000E+15  bidDA_con1(t1,sDA3)
+  -1.00000E+15  bidDA_con2(t1,sDA3)
+
+REMAINING 6 ENTRIES SKIPPED
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/26/25 23:37:22 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE Demo Using MIP From line 72
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+00, 1.000E+15] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 1.000E+15]
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/26/25 23:37:22 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE Demo Using MIP From line 72
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          12     SINGLE EQUATIONS           62
+BLOCKS OF VARIABLES           7     SINGLE VARIABLES           37
+NON ZERO ELEMENTS           135     DISCRETE VARIABLES         12
+
+
+GENERATION TIME      =        0.016 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/26/25 23:37:22 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE Demo Using MIP From line 72
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   Demo                OBJECTIVE  Ertrag
+     TYPE    MIP                 DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  72
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      10 Integer Infeasible
+**** OBJECTIVE VALUE               NA
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.51 Mb (peak 0.51 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.01 Mb)
+--- Starting Cplex
+
+
+--- MIP status (103): integer infeasible.
+--- Cplex Time: 0.00sec (det. 0.02 ticks)
+
+--- Problem is integer infeasible
+
+No solution returned
+
+
+EXECUTION TIME       =        0.047 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\new1.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\new1.lst

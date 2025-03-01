@@ -1,0 +1,20 @@
+\babel@toc {ngerman}{}\relax 
+\contentsline {part}{I\hspace {1em}Modell}{2}{}%
+\contentsline {section}{\numberline {1}Allgemeine Modellerklärung}{2}{}%
+\contentsline {subsection}{\numberline {1.1}Variablen und Abkürzungen}{2}{}%
+\contentsline {subsection}{\numberline {1.2}Allgemeine Modellerklärung}{3}{}%
+\contentsline {subsubsection}{\numberline {1.2.1}Aktivierung/Deaktivierung verschiedener Szenariobaumteilstränge}{4}{}%
+\contentsline {subsubsection}{\numberline {1.2.2}Von Umwandlung in lineares Problem}{8}{}%
+\contentsline {subsubsection}{\numberline {1.2.3}Preisvorhersage}{9}{}%
+\contentsline {subsection}{\numberline {1.3}Marktmodelle}{10}{}%
+\contentsline {subsubsection}{\numberline {1.3.1}Regelleistungsmarkt}{10}{}%
+\contentsline {subsubsection}{\numberline {1.3.2}Day Ahead Markt}{13}{}%
+\contentsline {subsubsection}{\numberline {1.3.3}Regelarbeitsmarkt}{14}{}%
+\contentsline {subsection}{\numberline {1.4}Berechnung optimale Einzelentscheidungen}{14}{}%
+\contentsline {subsubsection}{\numberline {1.4.1}Berechnung optimale Erststufenentscheidungen}{17}{}%
+\contentsline {subsubsection}{\numberline {1.4.2}Berechnung optimale Zweitstufenentscheidung}{23}{}%
+\contentsline {subsubsection}{\numberline {1.4.3}Berechnung optimale Drittstufenentscheidung}{25}{}%
+\contentsline {subsection}{\numberline {1.5}Gesamtes Modell}{26}{}%
+\contentsline {subsection}{\numberline {1.6}Variables - simplified model}{28}{}%
+\contentsline {subsection}{\numberline {1.7}Variables - simplified model + wind park}{30}{}%
+\contentsline {subsection}{\numberline {1.8}Variables - extended model + wind park}{30}{}%

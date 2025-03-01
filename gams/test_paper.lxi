@@ -1,0 +1,40 @@
+B 3 C o m p i l a t i o n
+B 92 Equation Listing    SOLVE paperTest Using RMPEC From line 81
+D 95 storage_min
+D 106 storage_max
+D 117 storage_chargeRate
+D 122 storage_discchargeRate
+D 127 DA_binaryCon
+D 132 RT_binaryCon
+D 137 profit
+B 143 Column Listing      SOLVE paperTest Using RMPEC From line 81
+E 146 StorageState
+E 165 ChargeDA
+E 181 DischargeDA
+E 197 ChargeRT
+E 213 DischargeRT
+E 229 ChargeRate
+E 236 DischargeRate
+E 243 ProfitVar
+E 250 PriceBinaryDA
+E 268 PriceBinaryRT
+B 287 Range Statistics    SOLVE paperTest Using RMPEC From line 81
+B 298 Model Statistics    SOLVE paperTest Using RMPEC From line 81
+B 312 Solution Report     SOLVE paperTest Using RMPEC From line 81
+F 394 storage_min
+F 409 storage_max
+F 426 storage_chargeRate
+F 427 storage_discchargeRate
+F 428 DA_binaryCon
+F 429 RT_binaryCon
+F 430 profit
+G 432 StorageState
+G 447 ChargeDA
+G 462 DischargeDA
+G 477 ChargeRT
+G 492 DischargeRT
+G 509 ChargeRate
+G 510 DischargeRate
+G 511 ProfitVar
+G 513 PriceBinaryDA
+G 521 PriceBinaryRT

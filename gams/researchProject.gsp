@@ -28,6 +28,12 @@
         },
         {
             "codecMib": 106,
+            "file": "test_paper.gms",
+            "name": "test_paper.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
             "file": "testData.gms",
             "name": "testData.gms",
             "type": "gms"

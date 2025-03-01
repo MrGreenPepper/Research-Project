@@ -1,0 +1,32 @@
+\documentclass[british,         % thesis language
+BCOR=2mm,                       % binding correction for printing (ca. 1mm per 10 pages for hardcover binding)
+11pt,                           % font size
+a4paper,						% page layout
+oneside,						% oneside/twoside option for printing
+cdgeometry,                     % setting of page geometry (format, height, page margins; set to 'cdgeometry=false' for individual type area calculation by package 'typearea'
+toc=chapterentrydotfill,        % dots in table of contents
+toc=indent,                     % indentation of toc items
+bibliography=totoc,         	% bibliography to table of contents
+listof=totoc,                   % lists to table of contents
+numbers=noenddot,				% last number in table of contents without dot
+parskip=full,                   % line break with a free line
+cdmath=false					% regular font in math mode
+]{article}                  % document class ('tudscrreprt' in most cases)
+
+
+%\usepackage{titlesec}		
+\usepackage{scrextend}			% für addmargin zum einrücken von Absätzen   \begin{addmargin}[25pt]{0pt} \end{addmargin}
+
+\setlength{\headheight}{40pt} 
+
+
+\begin{document}
+%\headlogo[]{bilder/ee_logo.png}
+
+Die Lösung für das Problem mit $\sum_{Szenarios} P(PreisSzenario) \geq 1 $ ist 
+Mit der Erstufenentscheidung entscheidet man sich auch für einen Szenariobaum.
+Somit bildet man den Erwartungswert mehrerer Szenariobäume und wählt dann den Szenariobaum mit dem höchsten Erwartungswert.
+
+
+
+\end{document}

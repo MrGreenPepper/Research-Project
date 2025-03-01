@@ -1,0 +1,548 @@
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 02/23/25 22:01:01 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Set
+   2  scenarioDA         /sDA1*sDA3/
+   3  scenarioRT         /sRT1*sRT3/
+   4  t           /t1*t10/
+   5  ;
+   6   
+   7  Parameter
+   8  priceDA(scenarioDA)           /sDA1 80, sDA2 90, sDA3 100/
+   9  probDA(scenarioDA)             /sDA1 0.8, sDA2 0.5, sDA3 0.3/
+  10   
+  11  priceRT(scenarioRT)           /sRT1 80, sRT2 90, sRT3 100/
+  12  probRT(scenarioRT)             /sRT1 0.8, sRT2 0.5, sRT3 0.3/
+  13  ;
+  14   
+  15  Scalars
+  16  transmissionRate        /100/
+  17  storageCapacity         /1000/
+  18  ;
+  19   
+  20  Positive Variable
+  21  StorageState
+  22   
+  23  ChargeDA
+  24  DischargeDA
+  25   
+  26  ChargeRT
+  27  DischargeRT
+  28   
+  29  ChargeRate
+  30  DischargeRate
+  31  ;
+  32   
+  33  Variable
+  34  ProfitVar
+  35  ;
+  36   
+  37  Binary Variable
+  38  ScenarioBinary
+  39  ChargeBin
+  40  DisChargeBin
+  41  PriceBinaryDA
+  42  PriceBinaryRT
+  43  ;
+  44   
+  45  Equations
+  46  storage_min
+  47  storage_max
+  48   
+  49  storage_chargeRate
+  50  storage_discchargeRate
+  51   
+  52  DA_binaryCon
+  53  RT_binaryCon
+  54   
+  55  profit
+  56  ;
+  57   
+  58   
+  59  storage_min(t)..                StorageState(t) =g= 0;
+  60  storage_max(t)..                StorageState(t) =l= storageCapacity;
+  61   
+  62   
+  63  storage_chargeRate..            ChargeRate =e= storageCapacity * 0.1;
+  64  storage_discchargeRate..        DischargeRate =e= storageCapacity * 0.1;
+  65   
+  66  DA_binaryCon..                  sum (scenarioDA, PriceBinaryDA(scenarioDA)) =e= 1;
+  67  RT_binaryCon..                  sum (scenarioRT, PriceBinaryRT(scenarioRT)) =e= 1;
+  68   
+  69  profit..                        ProfitVar =e= sum((t, scenarioDA), PriceBinaryDA(scenarioDA) * probDA(scenarioDA)
+  70                                                              * priceDA(scenarioDA) * ChargeDA(t))
+  71                                          + sum((t, scenarioDA), PriceBinaryDA(scenarioDA) * probDA(scenarioDA)
+  72                                                              * priceDA(scenarioDA) * DisChargeDA(t))
+  73                                          + sum((t, scenarioRT), PriceBinaryRT(scenarioRT) * probRT(scenarioRT)
+  74                                                              * priceRT(scenarioRT) * ChargeRT(t))
+  75                                          + sum((t, scenarioRT), PriceBinaryRT(scenarioRT) * probRT(scenarioRT)
+  76                                                              * priceRT(scenarioRT) * DisChargeRT(t));
+  77   
+  78  Model paperTest / all /;
+  79   
+  80   
+  81  solve paperTest maximising ProfitVar using RMPEC;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 02/23/25 22:01:01 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE paperTest Using RMPEC From line 81
+
+
+---- storage_min  =G=  
+
+storage_min(t1)..  StorageState(t1) =G= 0 ; (LHS = 0)
+     
+storage_min(t2)..  StorageState(t2) =G= 0 ; (LHS = 0)
+     
+storage_min(t3)..  StorageState(t3) =G= 0 ; (LHS = 0)
+     
+REMAINING 7 ENTRIES SKIPPED
+
+
+---- storage_max  =L=  
+
+storage_max(t1)..  StorageState(t1) =L= 1000 ; (LHS = 0)
+     
+storage_max(t2)..  StorageState(t2) =L= 1000 ; (LHS = 0)
+     
+storage_max(t3)..  StorageState(t3) =L= 1000 ; (LHS = 0)
+     
+REMAINING 7 ENTRIES SKIPPED
+
+
+---- storage_chargeRate  =E=  
+
+storage_chargeRate..  ChargeRate =E= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- storage_discchargeRate  =E=  
+
+storage_discchargeRate..  DischargeRate =E= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- DA_binaryCon  =E=  
+
+DA_binaryCon..  PriceBinaryDA(sDA1) + PriceBinaryDA(sDA2) + PriceBinaryDA(sDA3) =E= 1 ; (LHS = 0, INFES = 1 ****)
+     
+
+---- RT_binaryCon  =E=  
+
+RT_binaryCon..  PriceBinaryRT(sRT1) + PriceBinaryRT(sRT2) + PriceBinaryRT(sRT3) =E= 1 ; (LHS = 0, INFES = 1 ****)
+     
+
+---- profit  =E=  
+
+profit..  (0)*ChargeDA(t1) + (0)*ChargeDA(t2) + (0)*ChargeDA(t3) + (0)*ChargeDA(t4) + (0)*ChargeDA(t5) + (0)*ChargeDA(t6) + (0)*ChargeDA(t7) + (0)*ChargeDA(t8) + (0)*ChargeDA(t9) + (0)*ChargeDA(t10) + (0)*DischargeDA(t1) + (0)*DischargeDA(t2) + (0)*DischargeDA(t3) + (0)*DischargeDA(t4) + (0)*DischargeDA(t5) + (0)*DischargeDA(t6) + (0)*DischargeDA(t7) + (0)*DischargeDA(t8) + (0)*DischargeDA(t9) + (0)*DischargeDA(t10) + (0)*ChargeRT(t1) + (0)*ChargeRT(t2) + (0)*ChargeRT(t3) + (0)*ChargeRT(t4) + (0)*ChargeRT(t5) + (0)*ChargeRT(t6) + (0)*ChargeRT(t7) + (0)*ChargeRT(t8) + (0)*ChargeRT(t9) + (0)*ChargeRT(t10) + (0)*DischargeRT(t1) + (0)*DischargeRT(t2) + (0)*DischargeRT(t3) + (0)*DischargeRT(t4) + (0)*DischargeRT(t5) + (0)*DischargeRT(t6) + (0)*DischargeRT(t7) + (0)*DischargeRT(t8) + (0)*DischargeRT(t9) + (0)*DischargeRT(t10) + ProfitVar + (0)*PriceBinaryDA(sDA1) + (0)*PriceBinaryDA(sDA2) + (0)*PriceBinaryDA(sDA3) + (0)*PriceBinaryRT(sRT1) + (0)*PriceBinaryRT(sRT2) + (0)*PriceBinaryRT(sRT3) =E= 0 ; (LHS = 0)
+     
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 02/23/25 22:01:01 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE paperTest Using RMPEC From line 81
+
+
+---- StorageState  
+
+StorageState(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storage_min(t1)
+        1       storage_max(t1)
+
+StorageState(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storage_min(t2)
+        1       storage_max(t2)
+
+StorageState(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storage_min(t3)
+        1       storage_max(t3)
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- ChargeDA  
+
+ChargeDA(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+ChargeDA(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+ChargeDA(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- DischargeDA  
+
+DischargeDA(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+DischargeDA(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+DischargeDA(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- ChargeRT  
+
+ChargeRT(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+ChargeRT(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+ChargeRT(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- DischargeRT  
+
+DischargeRT(t1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+DischargeRT(t2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+DischargeRT(t3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       (0)      profit
+
+REMAINING 7 ENTRIES SKIPPED
+
+---- ChargeRate  
+
+ChargeRate
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storage_chargeRate
+
+
+---- DischargeRate  
+
+DischargeRate
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storage_discchargeRate
+
+
+---- ProfitVar  
+
+ProfitVar
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       profit
+
+
+---- PriceBinaryDA  
+
+PriceBinaryDA(sDA1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       DA_binaryCon
+       (0)      profit
+
+PriceBinaryDA(sDA2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       DA_binaryCon
+       (0)      profit
+
+PriceBinaryDA(sDA3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       DA_binaryCon
+       (0)      profit
+
+
+---- PriceBinaryRT  
+
+PriceBinaryRT(sRT1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       RT_binaryCon
+       (0)      profit
+
+PriceBinaryRT(sRT2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       RT_binaryCon
+       (0)      profit
+
+PriceBinaryRT(sRT3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+        1       RT_binaryCon
+       (0)      profit
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 02/23/25 22:01:01 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE paperTest Using RMPEC From line 81
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+00, 1.000E+03] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 02/23/25 22:01:01 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE paperTest Using RMPEC From line 81
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           7     SINGLE EQUATIONS           25
+BLOCKS OF VARIABLES          10     SINGLE VARIABLES           59
+NON ZERO ELEMENTS            75     NON LINEAR N-Z             46
+CODE LENGTH                 483     CONSTANT POOL              19     DISCRETE VARIABLES          6
+
+
+GENERATION TIME      =        0.015 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+GAMS 44.4.0  06604687 Sep 19, 2023          WEX-WEI x86 64bit/MS Windows - 02/23/25 22:01:01 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE paperTest Using RMPEC From line 81
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   paperTest           OBJECTIVE  ProfitVar
+     TYPE    RMPEC               DIRECTION  MAXIMIZE
+     SOLVER  NLPEC               FROM LINE  81
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      3 Unbounded
+**** OBJECTIVE VALUE      10000000000.0000
+
+ RESOURCE USAGE, LIMIT          0.063 10000000000.000
+ ITERATION COUNT, LIMIT         4    2147483647
+ EVALUATION ERRORS              0             0
+
+NLPEC 1.6        44.4.0 06604687 Sep 19, 2023          WEI x86 64bit/MS Window
+
+Reformulates Nonlinear Programs with Equilibrium Constraints
+Michael Ferris, University of Wisconsin
+
+* Reformulation parameters, after checking for consistency.
+* Reform Type        SINGLE      DOUBLE
+*  refType             mult        mult
+*  slack           positive    positive
+*  constraint      equality    equality
+*  aggregate           none        none
+*  NCPBounds           none        none
+
+
+--- The reformulated model C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\gms.dat will be solved by GAMS
+---  gams C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\gms.dat
+---    pf C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\pf.dat
+
+--- Returning from GAMS NLPEC step
+
+--- Additional Mpec Equations = 0
+--- Additional Mpec Variables = 0
+ 
+ 
+    C O N O P T 3   version 3.17O
+    Copyright (C)   ARKI Consulting and Development A/S
+                    Bagsvaerdvej 246 A
+                    DK-2880 Bagsvaerd, Denmark
+ 
+ 
+    The model has 59 variables and 25 constraints
+    with 75 Jacobian elements, 46 of which are nonlinear.
+    The Hessian of the Lagrangian has 0 elements on the diagonal,
+    120 elements below the diagonal, and 46 nonlinear variables.
+ 
+ ** Warning **  The value of LFITER is out of range.
+                LFITER is decreased from 2147483647 to 1000000000.
+ 
+ ** Warning **  The number of nonlinear derivatives equal to zero
+                in the initial point is large (= 61 percent).
+                A better initial point will probably help the
+                optimization.
+ 
+ 
+                   Pre-triangular equations:   2
+                   Post-triangular equations:  11
+ 
+ 
+ ** Unbounded solution. A variable has reached 'Infinity'.
+    Largest legal value (Rtmaxv) is 1.00E+10
+ 
+    The allowable range can be changed with option:
+ 
+    Rtmaxv=x.xxe+xx
+ 
+ 
+ CONOPT time Total                            0.027 seconds
+   of which: Function evaluations             0.000 =  0.0%
+             1st Derivative evaluations       0.000 =  0.0%
+ 
+
+**** ERRORS/WARNINGS IN VARIABLE ProfitVar
+     1 error(s): The variable is unbounded
+     1 error(s): The variable has reached 'infinity'
+
+---- EQU storage_min  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1           .              .            +INF             .          
+t2           .              .            +INF             .          
+t3           .              .            +INF             .          
+t4           .              .            +INF             .          
+t5           .              .            +INF             .          
+t6           .              .            +INF             .          
+t7           .              .            +INF             .          
+t8           .              .            +INF             .          
+t9           .              .            +INF             .          
+t10          .              .            +INF             .          
+
+---- EQU storage_max  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1         -INF             .          1000.0000          .          
+t2         -INF             .          1000.0000          .          
+t3         -INF             .          1000.0000          .          
+t4         -INF             .          1000.0000          .          
+t5         -INF             .          1000.0000          .          
+t6         -INF             .          1000.0000          .          
+t7         -INF             .          1000.0000          .          
+t8         -INF             .          1000.0000          .          
+t9         -INF             .          1000.0000          .          
+t10        -INF             .          1000.0000          .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU storage_c~       100.0000       100.0000       100.0000         EPS         
+---- EQU storage_d~       100.0000       100.0000       100.0000         EPS         
+---- EQU DA_binary~         1.0000         1.0000         1.0000         EPS         
+---- EQU RT_binary~         1.0000         1.0000         1.0000          .          
+---- EQU profit              .              .              .             1.0000      
+
+---- VAR StorageState  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1           .              .            +INF            EPS         
+t2           .              .            +INF            EPS         
+t3           .              .            +INF            EPS         
+t4           .              .            +INF            EPS         
+t5           .              .            +INF            EPS         
+t6           .              .            +INF            EPS         
+t7           .              .            +INF            EPS         
+t8           .              .            +INF            EPS         
+t9           .              .            +INF            EPS         
+t10          .              .            +INF            EPS         
+
+---- VAR ChargeDA  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1           .       2.6978417E+7        +INF           46.3333  NOPT
+t2           .       2.6978417E+7        +INF           46.3333  NOPT
+t3           .       2.6978417E+7        +INF           46.3333  NOPT
+t4           .       2.6978417E+7        +INF           46.3333  NOPT
+t5           .       2.6978417E+7        +INF           46.3333  NOPT
+t6           .       2.6978417E+7        +INF           46.3333  NOPT
+t7           .       2.6978417E+7        +INF           46.3333  NOPT
+t8           .       2.6978417E+7        +INF           46.3333  NOPT
+t9           .              .            +INF           46.3333  NOPT
+t10          .              .            +INF           46.3333  NOPT
+
+---- VAR DischargeDA  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1           .              .            +INF           46.3333  NOPT
+t2           .              .            +INF           46.3333  NOPT
+t3           .              .            +INF           46.3333  NOPT
+t4           .              .            +INF           46.3333  NOPT
+t5           .              .            +INF           46.3333  NOPT
+t6           .              .            +INF           46.3333  NOPT
+t7           .              .            +INF           46.3333  NOPT
+t8           .              .            +INF           46.3333  NOPT
+t9           .              .            +INF           46.3333  NOPT
+t10          .              .            +INF           46.3333  NOPT
+
+---- VAR ChargeRT  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1           .              .            +INF           46.3333  NOPT
+t2           .              .            +INF           46.3333  NOPT
+t3           .              .            +INF           46.3333  NOPT
+t4           .              .            +INF           46.3333  NOPT
+t5           .              .            +INF           46.3333  NOPT
+t6           .              .            +INF           46.3333  NOPT
+t7           .              .            +INF           46.3333  NOPT
+t8           .              .            +INF           46.3333  NOPT
+t9           .              .            +INF           46.3333  NOPT
+t10          .              .            +INF           46.3333  NOPT
+
+---- VAR DischargeRT  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+t1           .              .            +INF           46.3333  NOPT
+t2           .              .            +INF           46.3333  NOPT
+t3           .              .            +INF           46.3333  NOPT
+t4           .              .            +INF           46.3333  NOPT
+t5           .              .            +INF           46.3333  NOPT
+t6           .              .            +INF           46.3333  NOPT
+t7           .              .            +INF           46.3333  NOPT
+t8           .              .            +INF           46.3333  NOPT
+t9           .              .            +INF           46.3333  NOPT
+t10          .              .            +INF           46.3333  NOPT
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR ChargeRate          .           100.0000        +INF             .          
+---- VAR Discharge~          .           100.0000        +INF             .          
+---- VAR ProfitVar         -INF      1.000000E+10        +INF             .     UNBND
+
+---- VAR PriceBinaryDA  
+
+            LOWER          LEVEL          UPPER         MARGINAL
+
+sDA1          .             0.3333         1.0000          .          
+sDA2          .             0.3333         1.0000         EPS         
+sDA3          .             0.3333         1.0000         EPS         
+
+---- VAR PriceBinaryRT  
+
+            LOWER          LEVEL          UPPER         MARGINAL
+
+sRT1          .             0.3333         1.0000         EPS         
+sRT2          .             0.3333         1.0000         EPS         
+sRT3          .             0.3333         1.0000         EPS         
+
+
+**** REPORT SUMMARY :       40     NONOPT ( NOPT)
+                             0 INFEASIBLE
+                             1  UNBOUNDED (UNBND)
+                             0  REDEFINED
+                             2     ERRORS ( ****)
+
+
+EXECUTION TIME       =        0.359 SECONDS      4 MB  44.4.0 06604687 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\test_paper.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\test_paper.lst

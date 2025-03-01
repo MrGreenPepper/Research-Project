@@ -1,65 +1,42 @@
 B 3 C o m p i l a t i o n
-B 150 Include File Summary
-B 162 Equation Listing    SOLVE test Using MIP From line 219
-D 165 capacityConst1
-D 176 capacityConst2
-D 187 storageManagement1
-D 198 storageManagement2
-D 209 storageConst1
-D 220 storageConst2
-D 231 storageConst3
-D 242 storageConst4
-D 253 storageConst5
-D 264 storageConst6
-D 275 revenueP
-D 286 revenueEnergyPos
-D 297 revenueEnergyNeg
-D 308 revenueCapacityPos
-D 319 revenueCapacityNeg
-D 330 revenue
-B 338 Column Listing      SOLVE test Using MIP From line 219
-E 341 StoragePosE
-E 381 StorageNegE
-E 418 StoragePosC
-E 467 StorageNegC
-E 501 StorageLoading
-E 520 StorageLoadingStatus
-E 542 ParkProduction
-E 576 ParkRevenue
-E 595 EnergyRevenuePos
-E 614 EnergyRevenueNeg
-E 633 CapacityRevenuePos
-E 652 CapacityRevenueNeg
-E 671 profit
-B 679 Range Statistics    SOLVE test Using MIP From line 219
-B 690 Model Statistics    SOLVE test Using MIP From line 219
-B 703 Solution Report     SOLVE test Using MIP From line 219
-F 736 capacityConst1
-F 2546 capacityConst2
-F 11576 storageManagement1
-F 13386 storageManagement2
-F 15196 storageConst1
-F 17006 storageConst2
-F 18816 storageConst3
-F 20626 storageConst4
-F 22436 storageConst5
-F 31466 storageConst6
-F 40496 revenueP
-F 40862 revenueEnergyPos
-F 41228 revenueEnergyNeg
-F 41594 revenueCapacityPos
-F 41960 revenueCapacityNeg
-F 42328 revenue
-G 42330 StoragePosE
-G 44140 StorageNegE
-G 45950 StoragePosC
-G 47760 StorageNegC
-G 49570 StorageLoading
-G 51380 StorageLoadingStatus
-G 53190 ParkProduction
-G 55000 ParkRevenue
-G 55366 EnergyRevenuePos
-G 55732 EnergyRevenueNeg
-G 56098 CapacityRevenuePos
-G 56464 CapacityRevenueNeg
-G 56832 profit
+B 163 Include File Summary
+B 175 Equation Listing    SOLVE test Using RMPEC From line 231
+D 178 capacityConst1
+D 189 capacityConst2
+D 200 storageManagement1
+D 211 storageManagement2
+D 222 storageConst1
+D 233 storageConst2
+D 244 storageConst3
+D 255 storageConst4
+D 266 storageConst5
+D 277 storageConst6
+D 288 revenueP
+D 299 revenueEnergyPos
+D 310 revenueEnergyNeg
+D 321 revenueCapacityPos
+D 332 revenueCapacityNeg
+D 343 revenue
+D 354 revenueG
+D 359 strategeChoiceOneCon
+D 370 strategeChoiceTwoCon
+B 382 Column Listing      SOLVE test Using RMPEC From line 231
+E 385 StoragePosE
+E 425 StorageNegE
+E 462 StoragePosC
+E 511 StorageNegC
+E 545 StorageLoading
+E 564 StorageLoadingStatus
+E 586 ParkProduction
+E 620 ParkRevenue
+E 639 EnergyRevenuePos
+E 658 EnergyRevenueNeg
+E 677 CapacityRevenuePos
+E 696 CapacityRevenueNeg
+E 715 profit
+E 734 profitG
+E 741 StrategeChoiceOne
+E 757 StrategeChoiceTwo
+B 774 Range Statistics    SOLVE test Using RMPEC From line 231
+B 785 Model Statistics    SOLVE test Using RMPEC From line 231
+B 799 Solution Report     SOLVE test Using RMPEC From line 231

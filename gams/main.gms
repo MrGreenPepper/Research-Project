@@ -27,12 +27,15 @@ EnergyRevenuePos(t)
 EnergyRevenueNeg(t)
 CapacityRevenuePos(t)
 CapacityRevenueNeg(t)
-profit
+profit(t)
+profitG
 ;
 
 Binary Variable
 ParkSwitch(t)
 StorageSwitch(t)
+StrategeChoiceOne(t, so)
+StrategeChoiceTwo(t, st)
 ;
 
 Scalar
@@ -63,6 +66,10 @@ revenueEnergyNeg(t)
 revenueCapacityPos(t)
 revenueCapacityNeg(t)
 revenue
+revenueG
+*binary constraints
+strategeChoiceOneCon
+strategeChoiceTwoCon
 ;
 
 
@@ -83,16 +90,22 @@ storageConst6(t, st, so)..          StorageNegE(t, st) =g= StorageNegC(t, so);
 
 *revenues
 revenueP(t)..                       ParkRevenue(t) =e= sum(st, (ParkProduction(t, st) * regularMarketPrices(t) * (1-ScenarioTwoProp(st))));
-revenueCapacityNeg(t)..             CapacityRevenueNeg(t) =e= sum(so, StorageNegC(t, so) * monthAvgNegC(t) * ScenarioOneFactor(so) * ScenarioOneProp(so));
+revenueCapacityNeg(t)..             CapacityRevenueNeg(t) =e= sum((so,st), StorageNegC(t, so) * monthAvgNegC(t) * ScenarioOneFactor(so) * ScenarioOneProp(so));
 revenueCapacityPos(t)..             CapacityRevenuePos(t) =e=  sum(so, StoragePosC(t, so) * monthAvgPosC(t) * ScenarioOneFactor(so) * ScenarioOneProp(so));
-revenueEnergyPos(t)..               EnergyRevenuePos(t) =e= sum(st, (StoragePosE(t, st) * monthAvgPosE(t) * ScenarioTwoFactor(st) * ScenarioTwoProp(st) - StorageLoading(t, st) * regularMarketPrices(t)));
+revenueEnergyPos(t)..               EnergyRevenuePos(t) =e= sum(st, (StoragePosE(t, st) * monthAvgPosE(t) * ScenarioTwoFactor(st) * scenarioTwoProp(st) - StorageLoading(t, st) * regularMarketPrices(t)));
 revenueEnergyNeg(t)..               EnergyRevenueNeg(t) =e= sum(st, StorageNegE(t, st) * monthAvgPosE(t) * ScenarioTwoFactor(st) * ScenarioTwoProp(st));
 
-                                        
+strategeChoiceOneCon(t)..				1 =e= sum(so, StrategeChoiceOne(t, so));
+strategeChoiceTwoCon(t)..				1 =e= sum(st, StrategeChoiceTwo(t, st));                     
                                                     
-revenue..                           profit =e= sum(t,  ParkRevenue(t)
+revenue(t)..                           profit(t) =e= ParkRevenue(t)
                                                 + EnergyRevenuePos(t) + EnergyRevenueNeg(t)
-                                                + CapacityRevenueNeg(t) + CapacityRevenuePos(t));
+                                                + CapacityRevenueNeg(t) + CapacityRevenuePos(t);
 
+revenueG..                           profitG =e= sum(t, profit(t))
 model test / all / ;
-solve test maximising profit using MIP;
+*solve test maximising profit using MIP;
+
+*solves but in development
+solve test maximising profitG using RMPEC;
+*solve test maximising profit using RMIP;
