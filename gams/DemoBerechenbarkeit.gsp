@@ -16,26 +16,50 @@
         },
         {
             "codecMib": 106,
-            "file": "fullModel.gms",
-            "name": "fullModel.gms",
+            "file": "general_test.gms",
+            "name": "general_test.gms",
             "type": "gms"
         },
         {
             "codecMib": 106,
-            "file": "fullModel.lst",
-            "name": "fullModel.lst",
+            "file": "general_test.lst",
+            "name": "general_test.lst",
             "type": "lst"
         },
         {
             "codecMib": 106,
-            "file": "new1.gms",
-            "name": "new1.gms",
+            "file": "perfectKnowledge.gms",
+            "name": "perfectKnowledge.gms",
             "type": "gms"
         },
         {
             "codecMib": 106,
-            "file": "new1.lst",
-            "name": "new1.lst",
+            "file": "perfectKnowledge.lst",
+            "name": "perfectKnowledge.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "secondDecisionTest.gms",
+            "name": "secondDecisionTest.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "secondDecisionTest.lst",
+            "name": "secondDecisionTest.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "thirdDecisionTest.gms",
+            "name": "thirdDecisionTest.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "thirdDecisionTest.lst",
+            "name": "thirdDecisionTest.lst",
             "type": "lst"
         }
     ],

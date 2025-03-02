@@ -35,7 +35,6 @@ M               /1000000000000000/
 
 Equations
 ErtragQ
-wahl1
 
 lin1
 lin2
@@ -52,21 +51,21 @@ abc_con
 
 ;
 
-ErtragQ..                   Ertrag =e= sum(t, sum(sDA,  p_DA(sDA) * prob_DA(sDA) * Q_DA(t, sDA)));
-wahl1..                     sum(sDA, B_P_DA(sDA)) =l= 1;
+ErtragQ..                      Ertrag =e= sum(t, sum(sDA,  p_DA(sDA) * prob_DA(sDA) * X_DA(t, sDA)));
 
-lin1(t, sDA)..                 X_DA(t, sDA) =l= B_Q_DA(t, sDA) * rate;
-lin2(t, sDA)..                 Q_DA(t, sDA) - X_DA(t, sDA) =g= (1-B_Q_DA(t, sDA)) * rate;
-lin3(t, sDA)..                 Q_DA(t, sDA) - X_DA(t, sDA) =g= 0;
+lin1(t, sDA)..                  X_DA(t, sDA) =l= B_Q_DA(t, sDA) * rate;
+lin2(t, sDA)..                  Q_DA(t, sDA) - X_DA(t, sDA) =l= (1-B_Q_DA(t, sDA)) * rate;
+lin3(t, sDA)..                  Q_DA(t, sDA) - X_DA(t, sDA) =g= 0;
 
 
-bidDA_con1(t,sDA)..         bid_DA(t) =l= p_DA(sDA) + M * B_Q_DA(t, sDA);
-bidDA_con2(t,sDA)..         bid_DA(t) =g= p_DA(sDA) - M * (1- B_Q_DA(t, sDA));
+bidDA_con1(t,sDA)..             bid_DA(t) =l= p_DA(sDA) + M * B_Q_DA(t, sDA);
+bidDA_con2(t,sDA)..             bid_DA(t) =g= p_DA(sDA) - M * (1- B_Q_DA(t, sDA));
 
 stor1(t)..                      sum(sDA, Q_DA(t, sDA)) =l= rate;
 stor2(t)..                      sum(sDA, Q_DA(t, sDA)) =g= 0;
-stor_state1(t)..              stor_state(t) =l= Cap;
-stor_state2(t)..              stor_state(t+1) =e= stor_state(t) - sum(sDA, X_DA(t, sDA)) + abc(t);
-abc_con(t)..                   abc(t) =l= reload;
+stor_state1(t)..                stor_state(t) =l= Cap;
+stor_state2(t)..                stor_state(t+1) =e= stor_state(t) - sum(sDA, X_DA(t, sDA)) + abc(t);
+abc_con(t)..                    abc(t) =l= reload;
+
 Model Demo / all /;
 solve Demo maximising Ertrag using MIP;

@@ -74,10 +74,7 @@ marketCon_Q_inrRLDA_RA
 ;
  
 
-*working
-*sum(s_in_RL, sum(s_out_RL, omega_RL_out(s_out_RL)) * (Q_in_RL(s_in_RL)));
-*sum(s_in_RL, sum(s_out_RL, (omega_RL_in(s_in_RL) * omega_RL_out(s_out_RL) * (Q_in_RL(s_in_RL)))));
-
+*Obj function:
 profitEQ..      Profit  =e=
 * accepted  RL\ in \ out:
                 sum(s_out_RL,sum(s_in_RL, (omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL))   *(
@@ -122,7 +119,7 @@ profitEQ..      Profit  =e=
 
 
  
-*Nebenbedingungen
+*   Nebenbedingungen
 
 *Anschlusspunkt:
 conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));

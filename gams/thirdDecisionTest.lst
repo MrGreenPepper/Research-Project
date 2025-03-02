@@ -1,0 +1,816 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:28:11 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2  s_in_RL             /s_in_RL1*s_in_RL3/
+   3  s_out_RL            /s_out_RL1*s_out_RL3/
+   4  s_DA                /s_DA1*s_DA3/
+   5  s_in_RA             /s_in_RA1*s_in_RA3/
+   6  s_out_RA            /s_out_RA1*s_out_RA3/
+   7  ;
+   8   
+   9  Scalars
+  10  a           /150/
+  11  r           /100/
+  12  M           /100000/
+  13  ;
+  14   
+  15  Parameters
+  16  omega_RL_in(s_in_RL)                        /s_in_RL1 0.7,  s_in_RL2 0.5,   s_in_RL3 0.3/
+  17  omega_RL_out(s_out_RL)                      /s_out_RL1 0.7, s_out_RL2 0.5,  s_out_RL3 0.3/
+  18  omega_DA(s_DA)                              /s_DA1 0.7,     s_DA2 0.5,      s_DA3 0.3/
+  19  omega_RA_in(s_in_RA)                        /s_in_RA1 0.7,  s_in_RA2 0.5,   s_in_RA3 0.3/
+  20  omega_RA_out(s_out_RA)                      /s_out_RA1 0.7, s_out_RA2 0.5,  s_out_RA3 0.3/
+  21  p_in_RL(s_in_RL)                            /s_in_RL1 90,   s_in_RL2 100,   s_in_RL3 110/
+  22  p_out_RL(s_out_RL)                          /s_out_RL1 90,  s_out_RL2 100,  s_out_RL3 110/
+  23  p_DA(s_DA)                                  /s_DA1 90,      s_DA2 100,      s_DA3 110/
+  24  p_in_RA(s_in_RA)                            /s_in_RA1 90,   s_in_RA2 100,   s_in_RA3 110/
+  25  p_out_RA(s_out_RA)                          /s_out_RA1 90,  s_out_RA2 100,  s_out_RA3 110/
+  26   
+  27  q_in_RL(s_in_RL)                            /s_in_RL1 100,  s_in_RL2 0,     s_in_RL3 0/
+  28  q_out_RL(s_out_RL)                          /s_out_RL1 100, s_out_RL2 0,    s_out_RL3 0/
+  29  q_DA(s_DA)                                  /s_DA1 100,     s_DA2 0,        s_DA3 0/
+  30   
+  31  c_in_RL                                     /100/
+  32  c_out_RL                                    /100/
+  33  c_DA                                        /100/
+  34  ;
+  35   
+  36  Variables
+  37  Profit
+  38  * accepted  RL\ in \ out:
+  39  ;
+  40   
+  41  Positive Variables
+  42  Q_rRL_DA
+  43  Q_outrRLDA_RA
+  44  Q_inrRLDA_RA
+  45  Q_outrRL_RA
+  46  Q_inrRL_RA
+  47  *accepted RL in     \ declined out:
+  48  Q_outrDA_RA
+  49  *declined RL in\ accepted out:
+  50  Q_inrDA_RA
+  51  Q_outrRL_RA
+  52  *declined RL in\ out:
+  53   
+  54  Q_in_RA(s_in_RA)
+  55  Q_out_RA(s_out_RA)
+  56  ;
+  57   
+  58  Binary Variables
+  59  B_in_RL(s_in_RL)
+  60  B_out_RL(s_out_RL)
+  61  B_DA(s_DA)
+  62  ;
+  63   
+  64   
+  65  Equations
+  66  profitEQ
+  67  *Nebenbedingungen
+  68  *Anschlusspunkt:
+  69  conConst_Q_outrRLDA_RA
+  70  conConst_Q_outrDA_RA
+  71  conConst_Q_out_RA
+  72  *Batterie Restriktionen:
+  73  storConQ_out_RL
+  74  storConQ_in_RL
+  75  storConQ_DA
+  76  storConQ_out_RA
+  77  storConQ_in_RA
+  78  storConQ_outrRL_RA
+  79  storConQ_inrRL_RA
+  80  storConQ_outrDA_RA
+  81  storConQ_inrDA_RA
+  82  storConQ_outrRLDA_RA
+  83  storConQ_inrRLDA_RA
+  84  *Markt Restriktionen:
+  85  marketCon_Q_outrRL_RA
+  86  marketCon_Q_inrRL_RA
+  87  marketCon_Q_outrRLDA_RA
+  88  marketCon_Q_inrRLDA_RA
+  89   
+  90  marketBidCon_c_in_RL1
+  91  marketBidCon_c_in_RL2
+  92  marketBidCon_c_out_RL1
+  93  marketBidCon_c_out_RL2
+  94   
+  95  marketBidCon_c_out_DA1
+  96  marketBidCon_c_out_DA2
+  97  ;
+  98   
+  99   
+ 100  *working
+ 101  *sum(s_in_RL, sum(s_out_RL, omega_RL_out(s_out_RL)) * (Q_in_RL(s_in_RL)));
+ 102  *sum(s_in_RL, sum(s_out_RL, (omega_RL_in(s_in_RL) * omega_RL_out(s_out_RL) * (Q_in_RL(s_in_RL)))));
+ 103   
+ 104  profitEQ..      Profit  =e=
+ 105   
+ 106                  sum(s_in_RL, q_in_RL(s_in_RL) * p_in_RL(s_in_RL) * B_in_RL(s_in_RL))
+ 107                  + sum(s_out_RL, + q_out_RL(s_out_RL) * p_out_RL(s_out_RL) * B_out_RL(s_out_RL))
+ 108                  + sum(s_DA, q_DA(s_DA) * p_DA(s_DA) * B_DA(s_DA) )
+ 109                  + sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 110                  + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA));
+ 111   
+ 112   
+ 113   
+ 114   
+ 115   
+ 116  *Nebenbedingungen
+ 117   
+ 118  *Anschlusspunkt:
+ 119  conConst_Q_outrRLDA_RA..    a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
+ 120  conConst_Q_outrDA_RA..      a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
+ 121  conConst_Q_out_RA..         a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
+ 122  *Batterie Restriktionen:
+ 123  storConQ_out_RL..           sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
+ 124  storConQ_in_RL..            sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
+ 125  storConQ_DA..               sum(s_DA, Q_DA(s_DA)) =l= r;
+ 126  storConQ_out_RA..           sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
+ 127  storConQ_in_RA..            sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
+ 128  storConQ_outrRL_RA..        sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
+ 129  storConQ_inrRL_RA..         sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
+ 130  storConQ_outrDA_RA..        sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
+ 131  storConQ_inrDA_RA..         sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
+ 132  storConQ_outrRLDA_RA..      sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
+ 133  storConQ_inrRLDA_RA..       sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
+ 134  *Markt Restriktionen:
+ 135  marketCon_Q_outrRL_RA..     sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+ 136  marketCon_Q_inrRL_RA..      sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+ 137  marketCon_Q_outrRLDA_RA..   sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+ 138  marketCon_Q_inrRLDA_RA..    sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+ 139  *Modell Restriktionen:
+ 140  *   (Linearität)
+ 141  *X_out_RL =l= B_out_RL * r;
+ 142  *Q_out_RL - X_out_RL =l= (1-B_out_RL) * r;
+ 143  *Q_out_RL =g= 0;
+ 144  *X_in_RL =l= B_in_RL * r;
+ 145  *Q_in_RL - X_in_RL =l= (1-B_in_RL) * r;
+ 146  *Q_in_RL =g= 0;
+ 147  *X_DA =l= B_DA * r;
+ 148  *Q_DA - X_DA =l= (1-B_DA) * r;
+ 149  *Q_DA =g= 0;
+ 150  *   (Angenommene/Abgelehnte Gebote)
+ 151  marketBidCon_c_in_RL1(s_in_RL).. c_in_RL =l= p_in_RL(s_in_RL) + M * B_in_RL(s_in_RL);
+ 152  marketBidCon_c_in_RL2(s_in_RL).. c_in_RL =g= p_in_RL(s_in_RL) - M * (1 - B_in_RL(s_in_RL));
+ 153  marketBidCon_c_out_RL1(s_out_RL).. c_out_RL =l= p_out_RL(s_out_RL) + M * B_out_RL(s_out_RL);
+ 154  marketBidCon_c_out_RL2(s_out_RL).. c_out_RL =g= p_out_RL(s_out_RL) - M * (1 - B_out_RL(s_out_RL));
+ 155  marketBidCon_c_out_DA1(s_DA).. c_DA =l= p_DA(s_DA) + M * B_DA(s_DA);
+ 156  marketBidCon_c_out_DA2(s_DA).. c_DA =g= p_DA(s_DA) - M * (1 - B_DA(s_DA));
+ 157   
+ 158  Model testThirdDecision /all/;
+ 159  Solve testThirdDecision maximising Profit using MIP;
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:28:11 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE testThirdDecision Using MIP From line 159
+
+
+---- profitEQ  =E=  
+
+profitEQ..  Profit - 63*Q_in_RA(s_in_RA1) - 50*Q_in_RA(s_in_RA2) - 33*Q_in_RA(s_in_RA3) - 63*Q_out_RA(s_out_RA1) - 50*Q_out_RA(s_out_RA2) - 33*Q_out_RA(s_out_RA3) - 9000*B_in_RL(s_in_RL1) - 9000*B_out_RL(s_out_RL1) - 9000*B_DA(s_DA1) =E= 0 ; (LHS = 0)
+     
+
+---- conConst_Q_outrRLDA_RA  =G=  
+
+conConst_Q_outrRLDA_RA..  - Q_rRL_DA(s_DA1) - Q_rRL_DA(s_DA2) - Q_rRL_DA(s_DA3) - Q_outrRLDA_RA(s_out_RA1) - Q_outrRLDA_RA(s_out_RA2) - Q_outrRLDA_RA(s_out_RA3) + Q_in_RA(s_in_RA1) + Q_in_RA(s_in_RA2) + Q_in_RA(s_in_RA3) =G= -150 ; (LHS = 0)
+     
+
+---- conConst_Q_outrDA_RA  =G=  
+
+conConst_Q_outrDA_RA..  - Q_outrDA_RA(s_out_RA1) - Q_outrDA_RA(s_out_RA2) - Q_outrDA_RA(s_out_RA3) + Q_in_RA(s_in_RA1) + Q_in_RA(s_in_RA2) + Q_in_RA(s_in_RA3) =G= -50 ; (LHS = 0)
+     
+
+---- conConst_Q_out_RA  =G=  
+
+conConst_Q_out_RA..  Q_in_RA(s_in_RA1) + Q_in_RA(s_in_RA2) + Q_in_RA(s_in_RA3) - Q_out_RA(s_out_RA1) - Q_out_RA(s_out_RA2) - Q_out_RA(s_out_RA3) =G= -150 ; (LHS = 0)
+     
+
+---- storConQ_out_RL  =L=  
+
+                NONE
+
+
+---- storConQ_in_RL  =L=  
+
+                NONE
+
+
+---- storConQ_DA  =L=  
+
+                NONE
+
+
+---- storConQ_out_RA  =L=  
+
+storConQ_out_RA..  Q_out_RA(s_out_RA1) + Q_out_RA(s_out_RA2) + Q_out_RA(s_out_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_in_RA  =L=  
+
+storConQ_in_RA..  Q_in_RA(s_in_RA1) + Q_in_RA(s_in_RA2) + Q_in_RA(s_in_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_outrRL_RA  =L=  
+
+storConQ_outrRL_RA..  Q_outrRL_RA(s_out_RA1) + Q_outrRL_RA(s_out_RA2) + Q_outrRL_RA(s_out_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_inrRL_RA  =L=  
+
+storConQ_inrRL_RA..  Q_inrRL_RA(s_in_RA1) + Q_inrRL_RA(s_in_RA2) + Q_inrRL_RA(s_in_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_outrDA_RA  =L=  
+
+storConQ_outrDA_RA..  Q_outrDA_RA(s_out_RA1) + Q_outrDA_RA(s_out_RA2) + Q_outrDA_RA(s_out_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_inrDA_RA  =L=  
+
+storConQ_inrDA_RA..  Q_inrDA_RA(s_in_RA1) + Q_inrDA_RA(s_in_RA2) + Q_inrDA_RA(s_in_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_outrRLDA_RA  =L=  
+
+storConQ_outrRLDA_RA..  Q_outrRLDA_RA(s_out_RA1) + Q_outrRLDA_RA(s_out_RA2) + Q_outrRLDA_RA(s_out_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- storConQ_inrRLDA_RA  =L=  
+
+storConQ_inrRLDA_RA..  Q_inrRLDA_RA(s_in_RA1) + Q_inrRLDA_RA(s_in_RA2) + Q_inrRLDA_RA(s_in_RA3) =L= 100 ; (LHS = 0)
+     
+
+---- marketCon_Q_outrRL_RA  =G=  
+
+marketCon_Q_outrRL_RA..  Q_outrRL_RA(s_out_RA1) + Q_outrRL_RA(s_out_RA2) + Q_outrRL_RA(s_out_RA3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- marketCon_Q_inrRL_RA  =G=  
+
+marketCon_Q_inrRL_RA..  Q_inrRL_RA(s_in_RA1) + Q_inrRL_RA(s_in_RA2) + Q_inrRL_RA(s_in_RA3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- marketCon_Q_outrRLDA_RA  =G=  
+
+marketCon_Q_outrRLDA_RA..  Q_outrRLDA_RA(s_out_RA1) + Q_outrRLDA_RA(s_out_RA2) + Q_outrRLDA_RA(s_out_RA3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- marketCon_Q_inrRLDA_RA  =G=  
+
+marketCon_Q_inrRLDA_RA..  Q_inrRLDA_RA(s_in_RA1) + Q_inrRLDA_RA(s_in_RA2) + Q_inrRLDA_RA(s_in_RA3) =G= 100 ; (LHS = 0, INFES = 100 ****)
+     
+
+---- marketBidCon_c_in_RL1  =L=  
+
+marketBidCon_c_in_RL1(s_in_RL1)..  - 100000*B_in_RL(s_in_RL1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+marketBidCon_c_in_RL1(s_in_RL2)..  - 100000*B_in_RL(s_in_RL2) =L= 0 ; (LHS = 0)
+     
+marketBidCon_c_in_RL1(s_in_RL3)..  - 100000*B_in_RL(s_in_RL3) =L= 10 ; (LHS = 0)
+     
+
+---- marketBidCon_c_in_RL2  =G=  
+
+marketBidCon_c_in_RL2(s_in_RL1)..  - 100000*B_in_RL(s_in_RL1) =G= -100010 ; (LHS = 0)
+     
+marketBidCon_c_in_RL2(s_in_RL2)..  - 100000*B_in_RL(s_in_RL2) =G= -100000 ; (LHS = 0)
+     
+marketBidCon_c_in_RL2(s_in_RL3)..  - 100000*B_in_RL(s_in_RL3) =G= -99990 ; (LHS = 0)
+     
+
+---- marketBidCon_c_out_RL1  =L=  
+
+marketBidCon_c_out_RL1(s_out_RL1)..  - 100000*B_out_RL(s_out_RL1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+marketBidCon_c_out_RL1(s_out_RL2)..  - 100000*B_out_RL(s_out_RL2) =L= 0 ; (LHS = 0)
+     
+marketBidCon_c_out_RL1(s_out_RL3)..  - 100000*B_out_RL(s_out_RL3) =L= 10 ; (LHS = 0)
+     
+
+---- marketBidCon_c_out_RL2  =G=  
+
+marketBidCon_c_out_RL2(s_out_RL1)..  - 100000*B_out_RL(s_out_RL1) =G= -100010 ; (LHS = 0)
+     
+marketBidCon_c_out_RL2(s_out_RL2)..  - 100000*B_out_RL(s_out_RL2) =G= -100000 ; (LHS = 0)
+     
+marketBidCon_c_out_RL2(s_out_RL3)..  - 100000*B_out_RL(s_out_RL3) =G= -99990 ; (LHS = 0)
+     
+
+---- marketBidCon_c_out_DA1  =L=  
+
+marketBidCon_c_out_DA1(s_DA1)..  - 100000*B_DA(s_DA1) =L= -10 ; (LHS = 0, INFES = 10 ****)
+     
+marketBidCon_c_out_DA1(s_DA2)..  - 100000*B_DA(s_DA2) =L= 0 ; (LHS = 0)
+     
+marketBidCon_c_out_DA1(s_DA3)..  - 100000*B_DA(s_DA3) =L= 10 ; (LHS = 0)
+     
+
+---- marketBidCon_c_out_DA2  =G=  
+
+marketBidCon_c_out_DA2(s_DA1)..  - 100000*B_DA(s_DA1) =G= -100010 ; (LHS = 0)
+     
+marketBidCon_c_out_DA2(s_DA2)..  - 100000*B_DA(s_DA2) =G= -100000 ; (LHS = 0)
+     
+marketBidCon_c_out_DA2(s_DA3)..  - 100000*B_DA(s_DA3) =G= -99990 ; (LHS = 0)
+     
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:28:11 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE testThirdDecision Using MIP From line 159
+
+
+---- Profit  
+
+Profit
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       profitEQ
+
+
+---- Q_rRL_DA  
+
+Q_rRL_DA(s_DA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrRLDA_RA
+
+Q_rRL_DA(s_DA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrRLDA_RA
+
+Q_rRL_DA(s_DA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrRLDA_RA
+
+
+---- Q_outrRLDA_RA  
+
+Q_outrRLDA_RA(s_out_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrRLDA_RA
+        1       storConQ_outrRLDA_RA
+        1       marketCon_Q_outrRLDA_RA
+
+Q_outrRLDA_RA(s_out_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrRLDA_RA
+        1       storConQ_outrRLDA_RA
+        1       marketCon_Q_outrRLDA_RA
+
+Q_outrRLDA_RA(s_out_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrRLDA_RA
+        1       storConQ_outrRLDA_RA
+        1       marketCon_Q_outrRLDA_RA
+
+
+---- Q_inrRLDA_RA  
+
+Q_inrRLDA_RA(s_in_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrRLDA_RA
+        1       marketCon_Q_inrRLDA_RA
+
+Q_inrRLDA_RA(s_in_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrRLDA_RA
+        1       marketCon_Q_inrRLDA_RA
+
+Q_inrRLDA_RA(s_in_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrRLDA_RA
+        1       marketCon_Q_inrRLDA_RA
+
+
+---- Q_outrRL_RA  
+
+Q_outrRL_RA(s_out_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_outrRL_RA
+        1       marketCon_Q_outrRL_RA
+
+Q_outrRL_RA(s_out_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_outrRL_RA
+        1       marketCon_Q_outrRL_RA
+
+Q_outrRL_RA(s_out_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_outrRL_RA
+        1       marketCon_Q_outrRL_RA
+
+
+---- Q_inrRL_RA  
+
+Q_inrRL_RA(s_in_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrRL_RA
+        1       marketCon_Q_inrRL_RA
+
+Q_inrRL_RA(s_in_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrRL_RA
+        1       marketCon_Q_inrRL_RA
+
+Q_inrRL_RA(s_in_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrRL_RA
+        1       marketCon_Q_inrRL_RA
+
+
+---- Q_outrDA_RA  
+
+Q_outrDA_RA(s_out_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrDA_RA
+        1       storConQ_outrDA_RA
+
+Q_outrDA_RA(s_out_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrDA_RA
+        1       storConQ_outrDA_RA
+
+Q_outrDA_RA(s_out_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       conConst_Q_outrDA_RA
+        1       storConQ_outrDA_RA
+
+
+---- Q_inrDA_RA  
+
+Q_inrDA_RA(s_in_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrDA_RA
+
+Q_inrDA_RA(s_in_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrDA_RA
+
+Q_inrDA_RA(s_in_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+        1       storConQ_inrDA_RA
+
+
+---- Q_in_RA  
+
+Q_in_RA(s_in_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -63       profitEQ
+        1       conConst_Q_outrRLDA_RA
+        1       conConst_Q_outrDA_RA
+        1       conConst_Q_out_RA
+        1       storConQ_in_RA
+
+Q_in_RA(s_in_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       profitEQ
+        1       conConst_Q_outrRLDA_RA
+        1       conConst_Q_outrDA_RA
+        1       conConst_Q_out_RA
+        1       storConQ_in_RA
+
+Q_in_RA(s_in_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -33       profitEQ
+        1       conConst_Q_outrRLDA_RA
+        1       conConst_Q_outrDA_RA
+        1       conConst_Q_out_RA
+        1       storConQ_in_RA
+
+
+---- Q_out_RA  
+
+Q_out_RA(s_out_RA1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -63       profitEQ
+       -1       conConst_Q_out_RA
+        1       storConQ_out_RA
+
+Q_out_RA(s_out_RA2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -50       profitEQ
+       -1       conConst_Q_out_RA
+        1       storConQ_out_RA
+
+Q_out_RA(s_out_RA3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -33       profitEQ
+       -1       conConst_Q_out_RA
+        1       storConQ_out_RA
+
+
+---- B_in_RL  
+
+B_in_RL(s_in_RL1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+    -9000       profitEQ
+  -100000       marketBidCon_c_in_RL1(s_in_RL1)
+  -100000       marketBidCon_c_in_RL2(s_in_RL1)
+
+B_in_RL(s_in_RL2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -100000       marketBidCon_c_in_RL1(s_in_RL2)
+  -100000       marketBidCon_c_in_RL2(s_in_RL2)
+
+B_in_RL(s_in_RL3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -100000       marketBidCon_c_in_RL1(s_in_RL3)
+  -100000       marketBidCon_c_in_RL2(s_in_RL3)
+
+
+---- B_out_RL  
+
+B_out_RL(s_out_RL1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+    -9000       profitEQ
+  -100000       marketBidCon_c_out_RL1(s_out_RL1)
+  -100000       marketBidCon_c_out_RL2(s_out_RL1)
+
+B_out_RL(s_out_RL2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -100000       marketBidCon_c_out_RL1(s_out_RL2)
+  -100000       marketBidCon_c_out_RL2(s_out_RL2)
+
+B_out_RL(s_out_RL3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -100000       marketBidCon_c_out_RL1(s_out_RL3)
+  -100000       marketBidCon_c_out_RL2(s_out_RL3)
+
+
+---- B_DA  
+
+B_DA(s_DA1)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+    -9000       profitEQ
+  -100000       marketBidCon_c_out_DA1(s_DA1)
+  -100000       marketBidCon_c_out_DA2(s_DA1)
+
+B_DA(s_DA2)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -100000       marketBidCon_c_out_DA1(s_DA2)
+  -100000       marketBidCon_c_out_DA2(s_DA2)
+
+B_DA(s_DA3)
+                (.LO, .L, .UP, .M = 0, 0, 1, 0)
+  -100000       marketBidCon_c_out_DA1(s_DA3)
+  -100000       marketBidCon_c_out_DA2(s_DA3)
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:28:11 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE testThirdDecision Using MIP From line 159
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 1.000E+01, 1.000E+05] - Zero values observed as well
+Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 1.000E+05]
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:28:11 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE testThirdDecision Using MIP From line 159
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS          25     SINGLE EQUATIONS           34
+BLOCKS OF VARIABLES          13     SINGLE VARIABLES           37
+NON ZERO ELEMENTS            85     DISCRETE VARIABLES          9
+
+
+GENERATION TIME      =        0.000 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:28:11 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE testThirdDecision Using MIP From line 159
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   testThirdDecision   OBJECTIVE  Profit
+     TYPE    MIP                 DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  159
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE            39600.0000
+
+ RESOURCE USAGE, LIMIT          0.015 10000000000.000
+ ITERATION COUNT, LIMIT         0    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.51 Mb (peak 0.51 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.01sec (det. 0.03 ticks)
+
+--- Returning a primal only solution to GAMS (marginals all set to NA).
+--- Fixing integer variables and solving final LP...
+
+
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.03 ticks)
+
+
+Proven optimal solution
+MIP Solution:        39600.000000    (0 iterations, 0 nodes)
+Final Solve:         39600.000000    (0 iterations)
+
+Best possible:       39600.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU profitEQ            .              .              .             1.0000      
+---- EQU conConst_~      -150.0000          .            +INF             .          
+---- EQU conConst_~       -50.0000       100.0000        +INF             .          
+---- EQU conConst_~      -150.0000          .            +INF             .          
+---- EQU storConQ_out_RL                  (EMPTY)
+---- EQU storConQ_in_RL                  (EMPTY)
+---- EQU storConQ_DA                  (EMPTY)
+---- EQU storConQ_~        -INF          100.0000       100.0000        63.0000      
+---- EQU storConQ_~        -INF          100.0000       100.0000        63.0000      
+---- EQU storConQ_~        -INF          100.0000       100.0000         EPS         
+---- EQU storConQ_~        -INF          100.0000       100.0000         EPS         
+---- EQU storConQ_~        -INF             .           100.0000          .          
+---- EQU storConQ_~        -INF             .           100.0000          .          
+---- EQU storConQ_~        -INF          100.0000       100.0000         EPS         
+---- EQU storConQ_~        -INF          100.0000       100.0000         EPS         
+---- EQU marketCon~       100.0000       100.0000        +INF             .          
+---- EQU marketCon~       100.0000       100.0000        +INF             .          
+---- EQU marketCon~       100.0000       100.0000        +INF             .          
+---- EQU marketCon~       100.0000       100.0000        +INF             .          
+
+---- EQU marketBidCon_c_in_RL1  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RL1        -INF      -100000.0000       -10.0000          .          
+s_in_RL2        -INF             .              .              .          
+s_in_RL3        -INF             .            10.0000          .          
+
+---- EQU marketBidCon_c_in_RL2  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RL1   -100010.0000   -100000.0000        +INF             .          
+s_in_RL2   -100000.0000          .            +INF             .          
+s_in_RL3    -99990.0000          .            +INF             .          
+
+---- EQU marketBidCon_c_out_RL1  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RL1        -INF      -100000.0000       -10.0000          .          
+s_out_RL2        -INF             .              .              .          
+s_out_RL3        -INF             .            10.0000          .          
+
+---- EQU marketBidCon_c_out_RL2  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RL1   -100010.0000   -100000.0000        +INF             .          
+s_out_RL2   -100000.0000          .            +INF             .          
+s_out_RL3    -99990.0000          .            +INF             .          
+
+---- EQU marketBidCon_c_out_DA1  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1        -INF      -100000.0000       -10.0000          .          
+s_DA2        -INF             .              .              .          
+s_DA3        -INF             .            10.0000          .          
+
+---- EQU marketBidCon_c_out_DA2  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1   -100010.0000   -100000.0000        +INF             .          
+s_DA2   -100000.0000          .            +INF             .          
+s_DA3    -99990.0000          .            +INF             .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR Profit            -INF        39600.0000        +INF             .          
+
+---- VAR Q_rRL_DA  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1          .              .            +INF            EPS         
+s_DA2          .              .            +INF            EPS         
+s_DA3          .              .            +INF            EPS         
+
+---- VAR Q_outrRLDA_RA  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RA1          .              .            +INF            EPS         
+s_out_RA2          .              .            +INF            EPS         
+s_out_RA3          .           100.0000        +INF             .          
+
+---- VAR Q_inrRLDA_RA  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RA1          .              .            +INF            EPS         
+s_in_RA2          .              .            +INF            EPS         
+s_in_RA3          .           100.0000        +INF             .          
+
+---- VAR Q_outrRL_RA  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RA1          .              .            +INF            EPS         
+s_out_RA2          .              .            +INF            EPS         
+s_out_RA3          .           100.0000        +INF             .          
+
+---- VAR Q_inrRL_RA  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RA1          .              .            +INF            EPS         
+s_in_RA2          .              .            +INF            EPS         
+s_in_RA3          .           100.0000        +INF             .          
+
+---- VAR Q_outrDA_RA  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RA1          .              .            +INF            EPS         
+s_out_RA2          .              .            +INF            EPS         
+s_out_RA3          .              .            +INF            EPS         
+
+---- VAR Q_inrDA_RA  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RA1          .              .            +INF            EPS         
+s_in_RA2          .              .            +INF            EPS         
+s_in_RA3          .              .            +INF            EPS         
+
+---- VAR Q_in_RA  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RA1          .           100.0000        +INF             .          
+s_in_RA2          .              .            +INF          -13.0000      
+s_in_RA3          .              .            +INF          -30.0000      
+
+---- VAR Q_out_RA  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RA1          .           100.0000        +INF             .          
+s_out_RA2          .              .            +INF          -13.0000      
+s_out_RA3          .              .            +INF          -30.0000      
+
+---- VAR B_in_RL  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_in_RL1          .             1.0000         1.0000      9000.0000      
+s_in_RL2          .              .             1.0000         EPS         
+s_in_RL3          .              .             1.0000         EPS         
+
+---- VAR B_out_RL  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_out_RL1          .             1.0000         1.0000      9000.0000      
+s_out_RL2          .              .             1.0000         EPS         
+s_out_RL3          .              .             1.0000         EPS         
+
+---- VAR B_DA  
+
+             LOWER          LEVEL          UPPER         MARGINAL
+
+s_DA1          .             1.0000         1.0000      9000.0000      
+s_DA2          .              .             1.0000         EPS         
+s_DA3          .              .             1.0000         EPS         
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.031 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\thirdDecisionTest.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\thirdDecisionTest.lst

@@ -1,5 +1,5 @@
 
---- Job firstDecision.gms Start 03/01/25 18:22:55 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job firstDecision.gms Start 03/02/25 12:28:04 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -22,7 +22,7 @@ Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
 --- firstDecision.gms(168) 3 Mb
---- Starting execution: elapsed 0:00:00.006
+--- Starting execution: elapsed 0:00:00.008
 --- Generating LP model testFirstDecision
 --- firstDecision.gms(168) 4 Mb
 ---   19 rows  37 columns  118 non-zeroes
@@ -30,7 +30,7 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- RHS       [min, max] : [ 1.000E+02, 1.500E+02] - Zero values observed as well
 --- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
 --- Matrix    [min, max] : [ 1.000E+00, 8.505E+02]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.013
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.014
 
 IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 
@@ -61,4 +61,4 @@ Objective:       654412.500000
 
 --- Reading solution for model testFirstDecision
 *** Status: Normal completion
---- Job firstDecision.gms Stop 03/01/25 18:22:55 elapsed 0:00:00.040
+--- Job firstDecision.gms Stop 03/02/25 12:28:04 elapsed 0:00:00.050

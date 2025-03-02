@@ -49,28 +49,32 @@ Equations
 profitEQ
 *Nebenbedingungen
 *Anschlusspunkt:
-*conConst_Q_outrRLDA_RA
-*conConst_Q_outrDA_RA
-*conConst_Q_out_RA
+conConst_Q_outrRLDA_RA
+conConst_Q_outrDA_RA
+conConst_Q_out_RA
 *Batterie Restriktionen:
-*storConQ_out_RL
-*storConQ_in_RL
-*storConQ_DA
-*storConQ_out_RA
-*storConQ_in_RA
-*storConQ_outrRL_RA
-*storConQ_inrRL_RA
-*storConQ_outrDA_RA
-*storConQ_inrDA_RA
-*storConQ_outrRLDA_RA
-*storConQ_inrRLDA_RA
+storConQ_out_RL
+storConQ_in_RL
+storConQ_DA
+storConQ_out_RA
+storConQ_in_RA
+storConQ_outrRL_RA
+storConQ_inrRL_RA
+storConQ_outrDA_RA
+storConQ_inrDA_RA
+storConQ_outrRLDA_RA
+storConQ_inrRLDA_RA
 *Markt Restriktionen:
-*marketCon_Q_outrRL_RA
-*marketCon_Q_inrRL_RA
-*marketCon_Q_outrRLDA_RA
-*marketCon_Q_inrRLDA_RA
+marketCon_Q_outrRL_RA
+marketCon_Q_inrRL_RA
+marketCon_Q_outrRLDA_RA
+marketCon_Q_inrRLDA_RA
 ;
+ 
 
+*working
+*sum(s_in_RL, sum(s_out_RL, omega_RL_out(s_out_RL)) * (Q_in_RL(s_in_RL)));
+*sum(s_in_RL, sum(s_out_RL, (omega_RL_in(s_in_RL) * omega_RL_out(s_out_RL) * (Q_in_RL(s_in_RL)))));
 
 profitEQ..      Profit  =e=
 * accepted  RL\ in \ out:
@@ -119,26 +123,26 @@ profitEQ..      Profit  =e=
 *Nebenbedingungen
 
 *Anschlusspunkt:
-*conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
-*conConst_Q_outrDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
-*conConst_Q_out_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
+conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
+conConst_Q_outrDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
+conConst_Q_out_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
 *Batterie Restriktionen:
-*storConQ_out_RL.. sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
-*storConQ_in_RL.. sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
-*storConQ_DA.. sum(s_DA, Q_DA(s_DA)) =l= r;
-*storConQ_out_RA.. sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
-*storConQ_in_RA.. sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
-*storConQ_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
-*storConQ_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
-*storConQ_outrDA_RA.. sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
-*storConQ_inrDA_RA.. sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
-*storConQ_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
-*storConQ_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
+storConQ_out_RL.. sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
+storConQ_in_RL.. sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
+storConQ_DA.. sum(s_DA, Q_DA(s_DA)) =l= r;
+storConQ_out_RA.. sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
+storConQ_in_RA.. sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
+storConQ_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
+storConQ_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
+storConQ_outrDA_RA.. sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
+storConQ_inrDA_RA.. sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
+storConQ_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
+storConQ_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
 *Markt Restriktionen:
-*marketCon_Q_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
-*marketCon_Q_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
-*marketCon_Q_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
-*marketCon_Q_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+marketCon_Q_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+marketCon_Q_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+marketCon_Q_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+marketCon_Q_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
 *Modell Restriktionen:
 *   (Linearität)
 *X_out_RL =l= B_out_RL * r;
@@ -159,4 +163,4 @@ profitEQ..      Profit  =e=
 *c_DA =g= p(s_DA) - M * (1 - B_DA(s_DA))\quad\forall s_DA;
 
 Model testFirstDecision /all/;
-Solve testFirstDecision maximising Profit using MIP;
+Solve testFirstDecision maximising Profit using LP;

@@ -92,8 +92,8 @@ bq_RA_in1
 bq_RA_out1
 
 *NLP in NL constraints2
-*bq_RL_in_lin2
-*bq_RL_out_lin2
+bq_RL_in_lin2
+bq_RL_out_lin2
 bq_DA2
 bq_RA_in2
 bq_RA_out2
@@ -143,7 +143,7 @@ eq_profit_RA..                          Profit_RA =e= profit_RA_in + profit_RA_o
 eq_profit_g..                           Profit_G =e= profit_RL + profit_RA;
 
 *general constraints
-a_con..                       a + sum(s_RA_in, X_RA_in(s_RA_in)) =g= sum(s_DA, X_DA(s_DA)) + sum(s_RA_out, X_RA_out(s_RA_out));
+a_con..                                 a + sum(s_RA_in, X_RA_in(s_RA_in)) =g= sum(s_DA, X_DA(s_DA)) + sum(s_RA_out, X_RA_out(s_RA_out));
 
 *NLP in NL constraints1
 bq_RL_in_lin1(s_RL_in)..                X_RL_in(s_RL_in) =l= B_RL_in(s_RL_in) * r;
@@ -153,8 +153,8 @@ bq_RA_out1(s_RA_out)..                  X_RA_out(s_RA_out) =l= B_RA_out(s_RA_out
 bq_DA1(s_DA)..                          X_DA(s_DA) =l= B_DA(s_DA) * r;
 
 *NLP in NL constraints2
-*bq_RL_in_lin2(s_RL_in)..                Q_RL_in(s_RL_in) - X_RL_in(s_RL_in) =g= (1 -  B_RL_in(s_RL_in)) * r;
-*bq_RL_out_lin2(s_RL_out)..              Q_RL_out(s_RL_out) - X_RL_out(s_RL_out) =g= (1 - B_RL_out(s_RL_out)) * r;
+bq_RL_in_lin2(s_RL_in)..                Q_RL_in(s_RL_in) - X_RL_in(s_RL_in) =l= (1 -  B_RL_in(s_RL_in)) * r;
+bq_RL_out_lin2(s_RL_out)..              Q_RL_out(s_RL_out) - X_RL_out(s_RL_out) =l= (1 - B_RL_out(s_RL_out)) * r;
 bq_RA_in2(s_RA_in)..                    Q_RA_in(s_RA_in) - X_RA_in(s_RA_in)  =g= (1 - B_RA_in(s_RA_in)) * r;
 bq_RA_out2(s_RA_out)..                  Q_RA_out(s_RA_out) - X_RA_out(s_RA_out)  =g= (1 - B_RA_out(s_RA_out)) * r;
 bq_DA2(s_DA)..                          Q_DA(s_DA) - X_DA(s_DA)  =g= (1 - B_DA(s_DA)) * r;

@@ -1,0 +1,40 @@
+B 3 C o m p i l a t i o n
+B 82 Equation Listing    SOLVE Demo Using MIP From line 71
+D 85 ErtragQ
+D 90 lin1
+D 101 lin2
+D 112 lin3
+D 123 bidDA_con1
+D 134 bidDA_con2
+D 145 stor1
+D 154 stor2
+D 163 stor_state1
+D 172 stor_state2
+D 181 abc_con
+B 191 Column Listing      SOLVE Demo Using MIP From line 71
+E 194 Ertrag
+E 201 X_DA
+E 229 Q_DA
+E 254 stor_state
+E 274 abc
+E 292 B_Q_DA
+B 318 Range Statistics    SOLVE Demo Using MIP From line 71
+B 329 Model Statistics    SOLVE Demo Using MIP From line 71
+B 342 Solution Report     SOLVE Demo Using MIP From line 71
+F 387 ErtragQ
+F 389 lin1
+F 403 lin2
+F 417 lin3
+F 431 bidDA_con1
+F 445 bidDA_con2
+F 459 stor1
+F 467 stor2
+F 475 stor_state1
+F 483 stor_state2
+F 491 abc_con
+G 501 Ertrag
+G 503 X_DA
+G 517 Q_DA
+G 531 stor_state
+G 539 abc
+G 547 B_Q_DA

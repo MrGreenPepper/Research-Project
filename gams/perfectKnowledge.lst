@@ -1,4 +1,4 @@
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 1
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:24:58 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -97,8 +97,8 @@ C o m p i l a t i o n
   92  bq_RA_out1
   93   
   94  *NLP in NL constraints2
-  95  *bq_RL_in_lin2
-  96  *bq_RL_out_lin2
+  95  bq_RL_in_lin2
+  96  bq_RL_out_lin2
   97  bq_DA2
   98  bq_RA_in2
   99  bq_RA_out2
@@ -158,8 +158,8 @@ C o m p i l a t i o n
  153  bq_DA1(s_DA)..                          X_DA(s_DA) =l= B_DA(s_DA) * r;
  154   
  155  *NLP in NL constraints2
- 156  *bq_RL_in_lin2(s_RL_in)..                Q_RL_in(s_RL_in) - X_RL_in(s_RL_in) =g= (1 -  B_RL_in(s_RL_in)) * r;
- 157  *bq_RL_out_lin2(s_RL_out)..              Q_RL_out(s_RL_out) - X_RL_out(s_RL_out) =g= (1 - B_RL_out(s_RL_out)) * r;
+ 156  bq_RL_in_lin2(s_RL_in)..                Q_RL_in(s_RL_in) - X_RL_in(s_RL_in) =l= (1 -  B_RL_in(s_RL_in)) * r;
+ 157  bq_RL_out_lin2(s_RL_out)..              Q_RL_out(s_RL_out) - X_RL_out(s_RL_out) =l= (1 - B_RL_out(s_RL_out)) * r;
  158  bq_RA_in2(s_RA_in)..                    Q_RA_in(s_RA_in) - X_RA_in(s_RA_in)  =g= (1 - B_RA_in(s_RA_in)) * r;
  159  bq_RA_out2(s_RA_out)..                  Q_RA_out(s_RA_out) - X_RA_out(s_RA_out)  =g= (1 - B_RA_out(s_RA_out)) * r;
  160  bq_DA2(s_DA)..                          Q_DA(s_DA) - X_DA(s_DA)  =g= (1 - B_DA(s_DA)) * r;
@@ -201,7 +201,7 @@ C o m p i l a t i o n
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 2
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:24:58 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE full_modell_test Using MIP From line 195
 
@@ -294,6 +294,24 @@ bq_RA_out1(s_RA_out1)..  X_RA_out(s_RA_out1) - 100*B_RA_out(s_RA_out1) =L= 0 ; (
 bq_RA_out1(s_RA_out2)..  X_RA_out(s_RA_out2) - 100*B_RA_out(s_RA_out2) =L= 0 ; (LHS = 0)
      
 bq_RA_out1(s_RA_out3)..  X_RA_out(s_RA_out3) - 100*B_RA_out(s_RA_out3) =L= 0 ; (LHS = 0)
+     
+
+---- bq_RL_in_lin2  =L=  
+
+bq_RL_in_lin2(s_RL_in1)..  - X_RL_in(s_RL_in1) + Q_RL_in(s_RL_in1) + 100*B_RL_in(s_RL_in1) =L= 100 ; (LHS = 0)
+     
+bq_RL_in_lin2(s_RL_in2)..  - X_RL_in(s_RL_in2) + Q_RL_in(s_RL_in2) + 100*B_RL_in(s_RL_in2) =L= 100 ; (LHS = 0)
+     
+bq_RL_in_lin2(s_RL_in3)..  - X_RL_in(s_RL_in3) + Q_RL_in(s_RL_in3) + 100*B_RL_in(s_RL_in3) =L= 100 ; (LHS = 0)
+     
+
+---- bq_RL_out_lin2  =L=  
+
+bq_RL_out_lin2(s_RL_out1)..  - X_RL_out(s_RL_out1) + Q_RL_out(s_RL_out1) + 100*B_RL_out(s_RL_out1) =L= 100 ; (LHS = 0)
+     
+bq_RL_out_lin2(s_RL_out2)..  - X_RL_out(s_RL_out2) + Q_RL_out(s_RL_out2) + 100*B_RL_out(s_RL_out2) =L= 100 ; (LHS = 0)
+     
+bq_RL_out_lin2(s_RL_out3)..  - X_RL_out(s_RL_out3) + Q_RL_out(s_RL_out3) + 100*B_RL_out(s_RL_out3) =L= 100 ; (LHS = 0)
      
 
 ---- bq_DA2  =G=  
@@ -507,7 +525,7 @@ store_RA_out2..  X_RA_out(s_RA_out1) + X_RA_out(s_RA_out2) + X_RA_out(s_RA_out3)
 
 store_DA2..  X_DA(s_DA1) + X_DA(s_DA2) + X_DA(s_DA3) =L= 100 ; (LHS = 0)
      
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 3
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:24:58 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE full_modell_test Using MIP From line 195
 
@@ -579,16 +597,19 @@ Profit_G
 X_RL_in(s_RL_in1)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
         1       bq_RL_in_lin1(s_RL_in1)
+       -1       bq_RL_in_lin2(s_RL_in1)
        -1       bq_RL_in_lin3(s_RL_in1)
 
 X_RL_in(s_RL_in2)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
         1       bq_RL_in_lin1(s_RL_in2)
+       -1       bq_RL_in_lin2(s_RL_in2)
        -1       bq_RL_in_lin3(s_RL_in2)
 
 X_RL_in(s_RL_in3)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
         1       bq_RL_in_lin1(s_RL_in3)
+       -1       bq_RL_in_lin2(s_RL_in3)
        -1       bq_RL_in_lin3(s_RL_in3)
 
 
@@ -597,16 +618,19 @@ X_RL_in(s_RL_in3)
 X_RL_out(s_RL_out1)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
         1       bq_RL_out_lin1(s_RL_out1)
+       -1       bq_RL_out_lin2(s_RL_out1)
        -1       bq_RL_out_lin3(s_RL_out1)
 
 X_RL_out(s_RL_out2)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
         1       bq_RL_out_lin1(s_RL_out2)
+       -1       bq_RL_out_lin2(s_RL_out2)
        -1       bq_RL_out_lin3(s_RL_out2)
 
 X_RL_out(s_RL_out3)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
         1       bq_RL_out_lin1(s_RL_out3)
+       -1       bq_RL_out_lin2(s_RL_out3)
        -1       bq_RL_out_lin3(s_RL_out3)
 
 
@@ -714,6 +738,7 @@ X_RA_out(s_RA_out3)
 Q_RL_in(s_RL_in1)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
      -270       eq_profit_RL_in_
+        1       bq_RL_in_lin2(s_RL_in1)
         1       bq_RL_in_lin3(s_RL_in1)
         1       store_RL_in1
         1       store_RL_in2
@@ -721,6 +746,7 @@ Q_RL_in(s_RL_in1)
 Q_RL_in(s_RL_in2)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
       -50       eq_profit_RL_in_
+        1       bq_RL_in_lin2(s_RL_in2)
         1       bq_RL_in_lin3(s_RL_in2)
         1       store_RL_in1
         1       store_RL_in2
@@ -728,6 +754,7 @@ Q_RL_in(s_RL_in2)
 Q_RL_in(s_RL_in3)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
       -22       eq_profit_RL_in_
+        1       bq_RL_in_lin2(s_RL_in3)
         1       bq_RL_in_lin3(s_RL_in3)
         1       store_RL_in1
         1       store_RL_in2
@@ -738,6 +765,7 @@ Q_RL_in(s_RL_in3)
 Q_RL_out(s_RL_out1)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
       -27       eq_profit_RL_out_
+        1       bq_RL_out_lin2(s_RL_out1)
         1       bq_RL_out_lin3(s_RL_out1)
         1       store_RL_out1
         1       store_RL_out2
@@ -745,6 +773,7 @@ Q_RL_out(s_RL_out1)
 Q_RL_out(s_RL_out2)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
       -50       eq_profit_RL_out_
+        1       bq_RL_out_lin2(s_RL_out2)
         1       bq_RL_out_lin3(s_RL_out2)
         1       store_RL_out1
         1       store_RL_out2
@@ -752,6 +781,7 @@ Q_RL_out(s_RL_out2)
 Q_RL_out(s_RL_out3)
                 (.LO, .L, .UP, .M = 0, 0, +INF, 0)
       -22       eq_profit_RL_out_
+        1       bq_RL_out_lin2(s_RL_out3)
         1       bq_RL_out_lin3(s_RL_out3)
         1       store_RL_out1
         1       store_RL_out2
@@ -816,18 +846,21 @@ Q_RA_out(s_RA_out3)
 B_RL_in(s_RL_in1)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
      -100       bq_RL_in_lin1(s_RL_in1)
+      100       bq_RL_in_lin2(s_RL_in1)
   -1.000000E+7  clearing_RL_in_up(s_RL_in1)
   -1.000000E+7  clearing_RL_in_down(s_RL_in1)
 
 B_RL_in(s_RL_in2)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
      -100       bq_RL_in_lin1(s_RL_in2)
+      100       bq_RL_in_lin2(s_RL_in2)
   -1.000000E+7  clearing_RL_in_up(s_RL_in2)
   -1.000000E+7  clearing_RL_in_down(s_RL_in2)
 
 B_RL_in(s_RL_in3)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
      -100       bq_RL_in_lin1(s_RL_in3)
+      100       bq_RL_in_lin2(s_RL_in3)
   -1.000000E+7  clearing_RL_in_up(s_RL_in3)
   -1.000000E+7  clearing_RL_in_down(s_RL_in3)
 
@@ -837,18 +870,21 @@ B_RL_in(s_RL_in3)
 B_RL_out(s_RL_out1)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
      -100       bq_RL_out_lin1(s_RL_out1)
+      100       bq_RL_out_lin2(s_RL_out1)
   -1.000000E+7  clearing_RL_out_up(s_RL_out1)
   -1.000000E+7  clearing_RL_out_down(s_RL_out1)
 
 B_RL_out(s_RL_out2)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
      -100       bq_RL_out_lin1(s_RL_out2)
+      100       bq_RL_out_lin2(s_RL_out2)
   -1.000000E+7  clearing_RL_out_up(s_RL_out2)
   -1.000000E+7  clearing_RL_out_down(s_RL_out2)
 
 B_RL_out(s_RL_out3)
                 (.LO, .L, .UP, .M = 0, 0, 1, 0)
      -100       bq_RL_out_lin1(s_RL_out3)
+      100       bq_RL_out_lin2(s_RL_out3)
   -1.000000E+7  clearing_RL_out_up(s_RL_out3)
   -1.000000E+7  clearing_RL_out_down(s_RL_out3)
 
@@ -924,7 +960,7 @@ B_RA_out(s_RA_out3)
   -1.000000E+7  clearing_RA_out_up(s_RA_out3)
   -1.000000E+7  clearing_RA_out_down(s_RA_out3)
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 4
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:24:58 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Range Statistics    SOLVE full_modell_test Using MIP From line 195
 
@@ -935,20 +971,20 @@ RHS       [min, max] : [ 1.000E+01, 1.000E+07] - Zero values observed as well
 Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 1.000E+07]
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 5
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:24:58 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE full_modell_test Using MIP From line 195
 
 
 MODEL STATISTICS
 
-BLOCKS OF EQUATIONS          42     SINGLE EQUATIONS           88
+BLOCKS OF EQUATIONS          44     SINGLE EQUATIONS           94
 BLOCKS OF VARIABLES          23     SINGLE VARIABLES           53
-NON ZERO ELEMENTS           185     DISCRETE VARIABLES         15
+NON ZERO ELEMENTS           203     DISCRETE VARIABLES         15
 
 
-GENERATION TIME      =        0.047 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 16:09:28 Page 6
+GENERATION TIME      =        0.016 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:24:58 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE full_modell_test Using MIP From line 195
 
@@ -963,18 +999,18 @@ Solution Report     SOLVE full_modell_test Using MIP From line 195
 **** MODEL STATUS      1 Optimal
 **** OBJECTIVE VALUE            42000.0000
 
- RESOURCE USAGE, LIMIT          0.016 10000000000.000
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
  ITERATION COUNT, LIMIT         0    2147483647
 --- GAMS/CPLEX licensed for continuous and discrete problems.
 --- GMO setup time: 0.00s
---- GMO memory 0.51 Mb (peak 0.51 Mb)
+--- GMO memory 0.51 Mb (peak 0.52 Mb)
 --- Dictionary memory 0.00 Mb
 --- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.01 Mb)
 --- Starting Cplex
 
 
 --- MIP status (101): integer optimal solution.
---- Cplex Time: 0.02sec (det. 0.06 ticks)
+--- Cplex Time: 0.00sec (det. 0.10 ticks)
 
 --- Returning a primal only solution to GAMS (marginals all set to NA).
 --- Fixing integer variables and solving final LP...
@@ -1018,7 +1054,7 @@ s_RL_in3        -INF             .              .              .
                  LOWER          LEVEL          UPPER         MARGINAL
 
 s_RL_out1        -INF         -100.0000          .              .          
-s_RL_out2        -INF         -100.0000          .              .          
+s_RL_out2        -INF             .              .              .          
 s_RL_out3        -INF             .              .              .          
 
 ---- EQU bq_DA1  
@@ -1044,6 +1080,22 @@ s_RA_in3        -INF             .              .              .
 s_RA_out1        -INF         -100.0000          .              .          
 s_RA_out2        -INF             .              .              .          
 s_RA_out3        -INF             .              .              .          
+
+---- EQU bq_RL_in_lin2  
+
+                LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_in1        -INF          100.0000       100.0000          .          
+s_RL_in2        -INF          100.0000       100.0000         EPS         
+s_RL_in3        -INF             .           100.0000          .          
+
+---- EQU bq_RL_out_lin2  
+
+                 LOWER          LEVEL          UPPER         MARGINAL
+
+s_RL_out1        -INF          100.0000       100.0000         EPS         
+s_RL_out2        -INF          100.0000       100.0000          .          
+s_RL_out3        -INF             .           100.0000          .          
 
 ---- EQU bq_DA2  
 
@@ -1122,7 +1174,7 @@ s_RL_in3        -INF             .            10.0000          .
                  LOWER          LEVEL          UPPER         MARGINAL
 
 s_RL_out1        -INF      -1.000000E+7       -10.0000          .          
-s_RL_out2        -INF      -1.000000E+7          .              .          
+s_RL_out2        -INF             .              .              .          
 s_RL_out3        -INF             .            10.0000          .          
 
 ---- EQU clearing_RA_in_up  
@@ -1162,7 +1214,7 @@ s_RL_in3   -9.999990E+6          .            +INF             .
                  LOWER          LEVEL          UPPER         MARGINAL
 
 s_RL_out1   -1.000001E+7   -1.000000E+7        +INF             .          
-s_RL_out2   -1.000000E+7   -1.000000E+7        +INF             .          
+s_RL_out2   -1.000000E+7          .            +INF             .          
 s_RL_out3   -9.999990E+6          .            +INF             .          
 
 ---- EQU clearing_RA_in_down  
@@ -1218,14 +1270,14 @@ s_DA3   -9.999990E+6          .            +INF             .
                 LOWER          LEVEL          UPPER         MARGINAL
 
 s_RL_in1          .              .            +INF            EPS         
-s_RL_in2          .              .            +INF            EPS         
+s_RL_in2          .              .            +INF             .          
 s_RL_in3          .              .            +INF            EPS         
 
 ---- VAR X_RL_out  
 
                  LOWER          LEVEL          UPPER         MARGINAL
 
-s_RL_out1          .              .            +INF            EPS         
+s_RL_out1          .              .            +INF             .          
 s_RL_out2          .              .            +INF            EPS         
 s_RL_out3          .              .            +INF            EPS         
 
@@ -1306,7 +1358,7 @@ s_RL_in3          .              .             1.0000         EPS
                  LOWER          LEVEL          UPPER         MARGINAL
 
 s_RL_out1          .             1.0000         1.0000         EPS         
-s_RL_out2          .             1.0000         1.0000         EPS         
+s_RL_out2          .              .             1.0000         EPS         
 s_RL_out3          .              .             1.0000         EPS         
 
 ---- VAR B_DA  
@@ -1339,7 +1391,7 @@ s_RA_out3          .              .             1.0000         EPS
                              0  UNBOUNDED
 
 
-EXECUTION TIME       =        0.516 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+EXECUTION TIME       =        0.063 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
 
 
 USER: Course License                                 S241105|0002AO-GEN
@@ -1349,5 +1401,5 @@ USER: Course License                                 S241105|0002AO-GEN
 
 **** FILE SUMMARY
 
-Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\fullModel.gms
-Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\fullModel.lst
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\perfectKnowledge.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\perfectKnowledge.lst

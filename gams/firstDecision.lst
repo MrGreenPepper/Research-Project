@@ -1,4 +1,4 @@
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 18:22:55 Page 1
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -174,7 +174,7 @@ C o m p i l a t i o n
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 18:22:55 Page 2
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE testFirstDecision Using LP From line 168
 
@@ -273,7 +273,7 @@ marketCon_Q_outrRLDA_RA..  - Q_out_RL(s_out_RL1) - Q_out_RL(s_out_RL2) - Q_out_R
 
 marketCon_Q_inrRLDA_RA..  - Q_in_RL(s_in_RL1) - Q_in_RL(s_in_RL2) - Q_in_RL(s_in_RL3) + Q_inrRLDA_RA(s_in_RA1) + Q_inrRLDA_RA(s_in_RA2) + Q_inrRLDA_RA(s_in_RA3) =G= 0 ; (LHS = 0)
      
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 18:22:55 Page 3
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE testFirstDecision Using LP From line 168
 
@@ -545,7 +545,7 @@ Q_out_RA(s_out_RA3)
        -1       conConst_Q_out_RA
         1       storConQ_out_RA
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 18:22:55 Page 4
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Range Statistics    SOLVE testFirstDecision Using LP From line 168
 
@@ -556,7 +556,7 @@ RHS       [min, max] : [ 1.000E+02, 1.500E+02] - Zero values observed as well
 Bound     [min, max] : [        NA,        NA] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 8.505E+02]
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 18:22:55 Page 5
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE testFirstDecision Using LP From line 168
 
@@ -569,7 +569,7 @@ NON ZERO ELEMENTS           118
 
 
 GENERATION TIME      =        0.000 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 18:22:55 Page 6
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE testFirstDecision Using LP From line 168
 

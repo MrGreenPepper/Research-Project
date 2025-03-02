@@ -22,12 +22,6 @@
         },
         {
             "codecMib": 106,
-            "file": "test.yaml",
-            "name": "test.yaml",
-            "type": "yaml"
-        },
-        {
-            "codecMib": 106,
             "file": "test_paper.gms",
             "name": "test_paper.gms",
             "type": "gms"
