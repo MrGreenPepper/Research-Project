@@ -13,19 +13,19 @@ M           /100000/
 ;
 
 Parameters
-omega_RL_in(s_in_RL)                        /s_in_RL1 0.7,  s_in_RL2 0.5,   s_in_RL3 0.3/
-omega_RL_out(s_out_RL)                      /s_out_RL1 0.7, s_out_RL2 0.5,  s_out_RL3 0.3/
-omega_DA(s_DA)                              /s_DA1 0.7,     s_DA2 0.5,      s_DA3 0.3/
-omega_RA_in(s_in_RA)                        /s_in_RA1 0.7,  s_in_RA2 0.5,   s_in_RA3 0.3/
-omega_RA_out(s_out_RA)                      /s_out_RA1 0.7, s_out_RA2 0.5,  s_out_RA3 0.3/
-p_in_RL(s_in_RL)                            /s_in_RL1 90,   s_in_RL2 100,   s_in_RL3 110/
-p_out_RL(s_out_RL)                          /s_out_RL1 90,  s_out_RL2 100,  s_out_RL3 110/
-p_DA(s_DA)                                  /s_DA1 90,      s_DA2 100,      s_DA3 110/
-p_in_RA(s_in_RA)                            /s_in_RA1 90,   s_in_RA2 100,   s_in_RA3 110/
-p_out_RA(s_out_RA)                          /s_out_RA1 90,  s_out_RA2 100,  s_out_RA3 110/
+omega_RL_in(s_in_RL)                        /s_in_RL1 	0.7,  	s_in_RL2 	0.5,	s_in_RL3 	0.3/
+omega_RL_out(s_out_RL)                      /s_out_RL1 	0.7, 	s_out_RL2 	0.5,	s_out_RL3 	0.3/
+omega_DA(s_DA)                              /s_DA1 		0.7,    s_DA2 		0.5,	s_DA3 		0.3/
+omega_RA_in(s_in_RA)                        /s_in_RA1 	0.7,  	s_in_RA2 	0.5,	s_in_RA3 	0.3/
+omega_RA_out(s_out_RA)                      /s_out_RA1 	0.7, 	s_out_RA2 	0.5,	s_out_RA3 	0.3/
+p_in_RL(s_in_RL)                            /s_in_RL1 	90,   	s_in_RL2 	100,   	s_in_RL3 	110/
+p_out_RL(s_out_RL)                          /s_out_RL1 	90,  	s_out_RL2 	100,  	s_out_RL3 	110/
+p_DA(s_DA)                                  /s_DA1 		90,     s_DA2 		100,    s_DA3 		110/
+p_in_RA(s_in_RA)                            /s_in_RA1 	90,   	s_in_RA2 	100,   	s_in_RA3 	110/
+p_out_RA(s_out_RA)                          /s_out_RA1 	90,  	s_out_RA2 	100,  	s_out_RA3 	110/
 
-q_in_RL(s_in_RL)                            /s_in_RL1 100,  s_in_RL2 0,     s_in_RL3 0/
-q_out_RL(s_out_RL)                          /s_out_RL1 100, s_out_RL2 0,    s_out_RL3 0/
+q_in_RL(s_in_RL)                            /s_in_RL1 	100,  	s_in_RL2 	0,     	s_in_RL3 	0/
+q_out_RL(s_out_RL)                          /s_out_RL1 	100, 	s_out_RL2 	0,    	s_out_RL3 	0/
 
 c_in_RL                                     /50/
 c_out_RL                                    /50/
@@ -42,11 +42,14 @@ Q_outrRLDA_RA
 Q_inrRLDA_RA
 Q_outrRL_RA
 Q_inrRL_RA
+
 *accepted RL in     \ declined out:
 Q_outrDA_RA
+
 *declined RL in\ accepted out:
 Q_inrDA_RA
 Q_outrRL_RA
+
 *declined RL in\ out:
 Q_DA(s_DA)
 Q_in_RA(s_in_RA)
@@ -61,11 +64,13 @@ B_out_RL(s_out_RL)
 
 Equations
 profitEQ
-*Nebenbedingungen
+
+*   Nebenbedingungen
 *Anschlusspunkt:
 conConst_Q_outrRLDA_RA
 conConst_Q_outrDA_RA
 conConst_Q_out_RA
+
 *Batterie Restriktionen:
 storConQ_out_RL
 storConQ_in_RL
@@ -78,6 +83,7 @@ storConQ_outrDA_RA
 storConQ_inrDA_RA
 storConQ_outrRLDA_RA
 storConQ_inrRLDA_RA
+
 *Markt Restriktionen:
 marketCon_Q_outrRL_RA
 marketCon_Q_inrRL_RA

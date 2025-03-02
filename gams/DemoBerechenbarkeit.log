@@ -1,9 +1,9 @@
 
---- Job firstDecision.gms Start 03/02/25 12:28:04 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job secondDecisionTest.gms Start 03/02/25 12:31:59 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\firstDecision.gms"
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\secondDecisionTest.gms"
     PageSize 0
     ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\"
     SysDir C:\GAMS\46\
@@ -21,16 +21,17 @@ Licensee: Course License                                 S241105|0002AO-GEN
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
---- firstDecision.gms(168) 3 Mb
---- Starting execution: elapsed 0:00:00.008
---- Generating LP model testFirstDecision
---- firstDecision.gms(168) 4 Mb
----   19 rows  37 columns  118 non-zeroes
+--- secondDecisionTest.gms(160) 3 Mb
+--- Starting execution: elapsed 0:00:00.009
+--- Generating MIP model testSecondDecision
+--- secondDecisionTest.gms(160) 4 Mb
+---   29 rows  37 columns  93 non-zeroes
+---   6 discrete-columns
 --- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 1.000E+02, 1.500E+02] - Zero values observed as well
---- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 1.000E+00, 8.505E+02]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:00.014
+--- RHS       [min, max] : [ 4.000E+01, 9.996E+04] - Zero values observed as well
+--- Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.000E+00, 1.000E+05]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.016
 
 IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 
@@ -43,22 +44,52 @@ IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 
 Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
 CPXPARAM_Advance                                 0
-CPXPARAM_Simplex_Display                         2
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Generic callback                                 0x50
+Tried aggregator 1 time.
+MIP Presolve eliminated 28 rows and 37 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.03 ticks)
+
+Root node processing (before b&c):
+  Real time             =    0.00 sec. (0.03 ticks)
+Parallel b&c, 16 threads:
+  Real time             =    0.00 sec. (0.00 ticks)
+  Sync time (average)   =    0.00 sec.
+  Wait time (average)   =    0.00 sec.
+                          ------------
+Total (root+branch&cut) =    0.00 sec. (0.03 ticks)
+
+--- MIP status (101): integer optimal solution.
+--- Cplex Time: 0.01sec (det. 0.03 ticks)
+
+--- Returning a primal only solution to GAMS (marginals all set to NA).
+--- Fixing integer variables and solving final LP...
+
+Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
+CPXPARAM_Advance                                 2
 CPXPARAM_MIP_Display                             4
 CPXPARAM_MIP_Pool_Capacity                       0
 CPXPARAM_MIP_Tolerances_AbsMIPGap                0
 Tried aggregator 1 time.
-LP Presolve eliminated 18 rows and 37 columns.
+LP Presolve eliminated 28 rows and 37 columns.
 All rows and columns eliminated.
 Presolve time = 0.00 sec. (0.02 ticks)
 
---- LP status (1): optimal.
---- Cplex Time: 0.00sec (det. 0.02 ticks)
+--- Fixed MIP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.03 ticks)
 
 
-Optimal solution found
-Objective:       654412.500000
+Proven optimal solution
+MIP Solution:       297675.000000    (0 iterations, 0 nodes)
+Final Solve:        297675.000000    (0 iterations)
 
---- Reading solution for model testFirstDecision
+Best possible:      297675.000000
+Absolute gap:            0.000000
+Relative gap:            0.000000
+
+--- Reading solution for model testSecondDecision
 *** Status: Normal completion
---- Job firstDecision.gms Stop 03/02/25 12:28:04 elapsed 0:00:00.050
+--- Job secondDecisionTest.gms Stop 03/02/25 12:32:00 elapsed 0:00:00.059

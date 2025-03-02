@@ -1,4 +1,4 @@
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:19:18 Page 1
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:59 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -66,106 +66,109 @@ C o m p i l a t i o n
   61   
   62  Equations
   63  profitEQ
-  64  *Nebenbedingungen
-  65  *Anschlusspunkt:
-  66  conConst_Q_outrRLDA_RA
-  67  conConst_Q_outrDA_RA
-  68  conConst_Q_out_RA
-  69  *Batterie Restriktionen:
-  70  storConQ_out_RL
-  71  storConQ_in_RL
-  72  storConQ_DA
-  73  storConQ_out_RA
-  74  storConQ_in_RA
-  75  storConQ_outrRL_RA
-  76  storConQ_inrRL_RA
-  77  storConQ_outrDA_RA
-  78  storConQ_inrDA_RA
-  79  storConQ_outrRLDA_RA
-  80  storConQ_inrRLDA_RA
-  81  *Markt Restriktionen:
-  82  marketCon_Q_outrRL_RA
-  83  marketCon_Q_inrRL_RA
-  84  marketCon_Q_outrRLDA_RA
-  85  marketCon_Q_inrRLDA_RA
-  86   
-  87  marketBidCon_c_in_RL1
-  88  marketBidCon_c_in_RL2
-  89  marketBidCon_c_out_RL1
-  90  marketBidCon_c_out_RL2
-  91  ;
-  92   
-  93   
-  94  *working
-  95  *sum(s_in_RL, sum(s_out_RL, omega_RL_out(s_out_RL)) * (Q_in_RL(s_in_RL)));
-  96  *sum(s_in_RL, sum(s_out_RL, (omega_RL_in(s_in_RL) * omega_RL_out(s_out_RL) * (Q_in_RL(s_in_RL)))));
-  97   
-  98  profitEQ..      Profit  =e=
-  99   
- 100                  sum(s_in_RL, q_in_RL(s_in_RL) * p_in_RL(s_in_RL) * B_in_RL(s_in_RL)) +
- 101                  sum(s_out_RL, + q_out_RL(s_out_RL) * p_out_RL(s_out_RL) * B_out_RL(s_out_RL))
- 102                  +sum(s_out_RL,sum(s_in_RL, (1-(omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL)))    *(
- 103                          sum(s_DA, omega_DA(s_DA)   *(
- 104                                  Q_DA(s_DA) * p_DA(s_DA)
- 105                                  + sum(s_in_RA, Q_inrDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 106                                  + sum(s_out_RA, Q_outrDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
- 107                          + sum(s_DA,(1-omega_DA(s_DA)) * (
- 108                                  sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 109                                  + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA)))))));
- 110   
- 111   
- 112   
+  64   
+  65  *   Nebenbedingungen
+  66  *Anschlusspunkt:
+  67  conConst_Q_outrRLDA_RA
+  68  conConst_Q_outrDA_RA
+  69  conConst_Q_out_RA
+  70   
+  71  *Batterie Restriktionen:
+  72  storConQ_out_RL
+  73  storConQ_in_RL
+  74  storConQ_DA
+  75  storConQ_out_RA
+  76  storConQ_in_RA
+  77  storConQ_outrRL_RA
+  78  storConQ_inrRL_RA
+  79  storConQ_outrDA_RA
+  80  storConQ_inrDA_RA
+  81  storConQ_outrRLDA_RA
+  82  storConQ_inrRLDA_RA
+  83   
+  84  *Markt Restriktionen:
+  85  marketCon_Q_outrRL_RA
+  86  marketCon_Q_inrRL_RA
+  87  marketCon_Q_outrRLDA_RA
+  88  marketCon_Q_inrRLDA_RA
+  89   
+  90  marketBidCon_c_in_RL1
+  91  marketBidCon_c_in_RL2
+  92  marketBidCon_c_out_RL1
+  93  marketBidCon_c_out_RL2
+  94  ;
+  95   
+  96   
+  97  *working
+  98  *sum(s_in_RL, sum(s_out_RL, omega_RL_out(s_out_RL)) * (Q_in_RL(s_in_RL)));
+  99  *sum(s_in_RL, sum(s_out_RL, (omega_RL_in(s_in_RL) * omega_RL_out(s_out_RL) * (Q_in_RL(s_in_RL)))));
+ 100   
+ 101  profitEQ..      Profit  =e=
+ 102   
+ 103                  sum(s_in_RL, q_in_RL(s_in_RL) * p_in_RL(s_in_RL) * B_in_RL(s_in_RL)) +
+ 104                  sum(s_out_RL, + q_out_RL(s_out_RL) * p_out_RL(s_out_RL) * B_out_RL(s_out_RL))
+ 105                  +sum(s_out_RL,sum(s_in_RL, (1-(omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL)))    *(
+ 106                          sum(s_DA, omega_DA(s_DA)   *(
+ 107                                  Q_DA(s_DA) * p_DA(s_DA)
+ 108                                  + sum(s_in_RA, Q_inrDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 109                                  + sum(s_out_RA, Q_outrDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
+ 110                          + sum(s_DA,(1-omega_DA(s_DA)) * (
+ 111                                  sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 112                                  + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA)))))));
  113   
- 114  *Nebenbedingungen
+ 114   
  115   
- 116  *Anschlusspunkt:
- 117  conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
- 118  conConst_Q_outrDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
- 119  conConst_Q_out_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
- 120  *Batterie Restriktionen:
- 121  storConQ_out_RL.. sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
- 122  storConQ_in_RL.. sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
- 123  storConQ_DA.. sum(s_DA, Q_DA(s_DA)) =l= r;
- 124  storConQ_out_RA.. sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
- 125  storConQ_in_RA.. sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
- 126  storConQ_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
- 127  storConQ_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
- 128  storConQ_outrDA_RA.. sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
- 129  storConQ_inrDA_RA.. sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
- 130  storConQ_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
- 131  storConQ_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
- 132  *Markt Restriktionen:
- 133  marketCon_Q_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
- 134  marketCon_Q_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
- 135  marketCon_Q_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
- 136  marketCon_Q_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
- 137  *Modell Restriktionen:
- 138  *   (Linearität)
- 139  *X_out_RL =l= B_out_RL * r;
- 140  *Q_out_RL - X_out_RL =l= (1-B_out_RL) * r;
- 141  *Q_out_RL =g= 0;
- 142  *X_in_RL =l= B_in_RL * r;
- 143  *Q_in_RL - X_in_RL =l= (1-B_in_RL) * r;
- 144  *Q_in_RL =g= 0;
- 145  *X_DA =l= B_DA * r;
- 146  *Q_DA - X_DA =l= (1-B_DA) * r;
- 147  *Q_DA =g= 0;
- 148  *   (Angenommene/Abgelehnte Gebote)
- 149  marketBidCon_c_in_RL1(s_in_RL).. c_in_RL =l= p_in_RL(s_in_RL) + M * B_in_RL(s_in_RL);
- 150  marketBidCon_c_in_RL2(s_in_RL).. c_in_RL =g= p_in_RL(s_in_RL) - M * (1 - B_in_RL(s_in_RL));
- 151  marketBidCon_c_out_RL1(s_out_RL).. c_out_RL =l= p_out_RL(s_out_RL) + M * B_out_RL(s_out_RL);
- 152  marketBidCon_c_out_RL2(s_out_RL).. c_out_RL =g= p_out_RL(s_out_RL) - M * (1 - B_out_RL(s_out_RL));
- 153  *c_DA =l= p(s_DA) + M * B_DA(s_DA)\quad\forall s_DA;
- 154  *c_DA =g= p(s_DA) - M * (1 - B_DA(s_DA))\quad\forall s_DA;
- 155   
- 156  Model testFirstDecision /all/;
- 157  Solve testFirstDecision maximising Profit using MIP;
+ 116   
+ 117  *Nebenbedingungen
+ 118   
+ 119  *Anschlusspunkt:
+ 120  conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
+ 121  conConst_Q_outrDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
+ 122  conConst_Q_out_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
+ 123  *Batterie Restriktionen:
+ 124  storConQ_out_RL.. sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
+ 125  storConQ_in_RL.. sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
+ 126  storConQ_DA.. sum(s_DA, Q_DA(s_DA)) =l= r;
+ 127  storConQ_out_RA.. sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
+ 128  storConQ_in_RA.. sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
+ 129  storConQ_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
+ 130  storConQ_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
+ 131  storConQ_outrDA_RA.. sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
+ 132  storConQ_inrDA_RA.. sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
+ 133  storConQ_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
+ 134  storConQ_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
+ 135  *Markt Restriktionen:
+ 136  marketCon_Q_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+ 137  marketCon_Q_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+ 138  marketCon_Q_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+ 139  marketCon_Q_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+ 140  *Modell Restriktionen:
+ 141  *   (Linearität)
+ 142  *X_out_RL =l= B_out_RL * r;
+ 143  *Q_out_RL - X_out_RL =l= (1-B_out_RL) * r;
+ 144  *Q_out_RL =g= 0;
+ 145  *X_in_RL =l= B_in_RL * r;
+ 146  *Q_in_RL - X_in_RL =l= (1-B_in_RL) * r;
+ 147  *Q_in_RL =g= 0;
+ 148  *X_DA =l= B_DA * r;
+ 149  *Q_DA - X_DA =l= (1-B_DA) * r;
+ 150  *Q_DA =g= 0;
+ 151  *   (Angenommene/Abgelehnte Gebote)
+ 152  marketBidCon_c_in_RL1(s_in_RL).. c_in_RL =l= p_in_RL(s_in_RL) + M * B_in_RL(s_in_RL);
+ 153  marketBidCon_c_in_RL2(s_in_RL).. c_in_RL =g= p_in_RL(s_in_RL) - M * (1 - B_in_RL(s_in_RL));
+ 154  marketBidCon_c_out_RL1(s_out_RL).. c_out_RL =l= p_out_RL(s_out_RL) + M * B_out_RL(s_out_RL);
+ 155  marketBidCon_c_out_RL2(s_out_RL).. c_out_RL =g= p_out_RL(s_out_RL) - M * (1 - B_out_RL(s_out_RL));
+ 156  *c_DA =l= p(s_DA) + M * B_DA(s_DA)\quad\forall s_DA;
+ 157  *c_DA =g= p(s_DA) - M * (1 - B_DA(s_DA))\quad\forall s_DA;
+ 158   
+ 159  Model testSecondDecision /all/;
+ 160  Solve testSecondDecision maximising Profit using MIP;
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:19:18 Page 2
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:59 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Equation Listing    SOLVE testFirstDecision Using MIP From line 157
+Equation Listing    SOLVE testSecondDecision Using MIP From line 160
 
 
 ---- profitEQ  =E=  
@@ -298,9 +301,9 @@ marketBidCon_c_out_RL2(s_out_RL2)..  - 100000*B_out_RL(s_out_RL2) =G= -99950 ; (
      
 marketBidCon_c_out_RL2(s_out_RL3)..  - 100000*B_out_RL(s_out_RL3) =G= -99940 ; (LHS = 0)
      
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:19:18 Page 3
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:59 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Column Listing      SOLVE testFirstDecision Using MIP From line 157
+Column Listing      SOLVE testSecondDecision Using MIP From line 160
 
 
 ---- Profit  
@@ -545,9 +548,9 @@ B_out_RL(s_out_RL3)
   -100000       marketBidCon_c_out_RL1(s_out_RL3)
   -100000       marketBidCon_c_out_RL2(s_out_RL3)
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:19:18 Page 4
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:59 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Range Statistics    SOLVE testFirstDecision Using MIP From line 157
+Range Statistics    SOLVE testSecondDecision Using MIP From line 160
 
 
 RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
@@ -556,9 +559,9 @@ RHS       [min, max] : [ 4.000E+01, 9.996E+04] - Zero values observed as well
 Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 1.000E+05]
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:19:18 Page 5
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:59 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Model Statistics    SOLVE testFirstDecision Using MIP From line 157
+Model Statistics    SOLVE testSecondDecision Using MIP From line 160
 
 
 MODEL STATISTICS
@@ -568,23 +571,23 @@ BLOCKS OF VARIABLES          13     SINGLE VARIABLES           37
 NON ZERO ELEMENTS            93     DISCRETE VARIABLES          6
 
 
-GENERATION TIME      =        0.000 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/01/25 19:19:18 Page 6
+GENERATION TIME      =        0.015 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:59 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Solution Report     SOLVE testFirstDecision Using MIP From line 157
+Solution Report     SOLVE testSecondDecision Using MIP From line 160
 
 
                S O L V E      S U M M A R Y
 
-     MODEL   testFirstDecision   OBJECTIVE  Profit
-     TYPE    MIP                 DIRECTION  MAXIMIZE
-     SOLVER  CPLEX               FROM LINE  157
+     MODEL   testSecondDecision   OBJECTIVE  Profit
+     TYPE    MIP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX                FROM LINE  160
 
 **** SOLVER STATUS     1 Normal Completion
 **** MODEL STATUS      1 Optimal
 **** OBJECTIVE VALUE           297675.0000
 
- RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ RESOURCE USAGE, LIMIT          0.015 10000000000.000
  ITERATION COUNT, LIMIT         0    2147483647
 --- GAMS/CPLEX licensed for continuous and discrete problems.
 --- GMO setup time: 0.00s
@@ -595,7 +598,7 @@ Solution Report     SOLVE testFirstDecision Using MIP From line 157
 
 
 --- MIP status (101): integer optimal solution.
---- Cplex Time: 0.00sec (det. 0.03 ticks)
+--- Cplex Time: 0.01sec (det. 0.03 ticks)
 
 --- Returning a primal only solution to GAMS (marginals all set to NA).
 --- Fixing integer variables and solving final LP...
@@ -774,7 +777,7 @@ s_out_RL3          .              .             1.0000         EPS
                              0  UNBOUNDED
 
 
-EXECUTION TIME       =        0.047 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+EXECUTION TIME       =        0.046 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
 
 
 USER: Course License                                 S241105|0002AO-GEN

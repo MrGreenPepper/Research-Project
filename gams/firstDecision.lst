@@ -1,4 +1,4 @@
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 1
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:36 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -41,142 +41,145 @@ C o m p i l a t i o n
   36  Q_inrRLDA_RA
   37  Q_outrRL_RA
   38  Q_inrRL_RA
-  39  *accepted RL in     \ declined out:
-  40  Q_outrDA_RA
-  41  *declined RL in\ accepted out:
-  42  Q_inrDA_RA
-  43  Q_outrRL_RA
-  44  *declined RL in\ out:
-  45  Q_DA(s_DA)
-  46  Q_in_RA(s_in_RA)
-  47  Q_out_RA(s_out_RA)
-  48  ;
-  49   
-  50  Equations
-  51  profitEQ
-  52  *Nebenbedingungen
-  53  *Anschlusspunkt:
-  54  conConst_Q_outrRLDA_RA
-  55  conConst_Q_outrDA_RA
-  56  conConst_Q_out_RA
-  57  *Batterie Restriktionen:
-  58  storConQ_out_RL
-  59  storConQ_in_RL
-  60  storConQ_DA
-  61  storConQ_out_RA
-  62  storConQ_in_RA
-  63  storConQ_outrRL_RA
-  64  storConQ_inrRL_RA
-  65  storConQ_outrDA_RA
-  66  storConQ_inrDA_RA
-  67  storConQ_outrRLDA_RA
-  68  storConQ_inrRLDA_RA
-  69  *Markt Restriktionen:
-  70  marketCon_Q_outrRL_RA
-  71  marketCon_Q_inrRL_RA
-  72  marketCon_Q_outrRLDA_RA
-  73  marketCon_Q_inrRLDA_RA
-  74  ;
-  75   
-  76   
-  77  *working
-  78  *sum(s_in_RL, sum(s_out_RL, omega_RL_out(s_out_RL)) * (Q_in_RL(s_in_RL)));
-  79  *sum(s_in_RL, sum(s_out_RL, (omega_RL_in(s_in_RL) * omega_RL_out(s_out_RL) * (Q_in_RL(s_in_RL)))));
-  80   
-  81  profitEQ..      Profit  =e=
-  82  * accepted  RL\ in \ out:
-  83                  sum(s_out_RL,sum(s_in_RL, (omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL))   *(
-  84                          (Q_in_RL (s_in_RL) *p_in_RL(s_in_RL)  + Q_out_RL(s_out_RL) * p_out_RL(s_out_RL))
-  85                          + sum(s_DA, omega_DA(s_DA)   *(
-  86                              Q_rRL_DA(s_DA) * p_DA(s_DA)
-  87                              + sum(s_in_RA, Q_inrRLDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
-  88                              + sum(s_out_RA, Q_outrRLDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
-  89                          + sum(s_DA, (1-omega_DA(s_DA))  *(
-  90                              sum(s_in_RA, Q_inrRL_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
-  91                              + sum(s_out_RA, Q_outrRL_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA) ) )))))
-  92  *accepted RL in     \ declined out:
-  93                  +sum(s_out_RL,sum(s_in_RL,(omega_RL_in(s_in_RL)*(1-omega_RL_out(s_out_RL))   *(
-  94                          (Q_in_RL(s_in_RL) * p_in_RL(s_in_RL))
-  95                          + sum(s_DA, omega_DA(s_DA) *(
-  96                              Q_rRL_DA(s_DA) * p_DA(s_DA)
-  97                              + sum(s_in_RA, Q_inrRLDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
-  98                              + sum(s_out_RA, Q_outrDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
-  99                          + sum(s_DA,(1-omega_DA(s_DA))
- 100                              * ( sum(s_in_RA, Q_inrRL_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 101                              + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))))))
- 102  *declined RL in\ accepted out:
- 103                  +sum(s_out_RL,sum(s_in_RL,(1-omega_RL_in(s_in_RL))*omega_RL_out(s_out_RL))   *(
- 104                          (Q_out_RL(s_out_RL) * p_out_RL(s_out_RL))
- 105                          + sum(s_DA, omega_DA(s_DA)  *(
- 106                                  (Q_rRL_DA(s_DA) * p_DA(s_DA))
- 107                                  + sum(s_in_RA, Q_inrDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 108                                  + sum(s_out_RA, Q_outrRLDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
- 109                          + sum(s_DA,(1-omega_DA(s_DA)) * (
- 110                                  sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 111                                  + sum(s_out_RA, Q_outrRL_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))))
- 112  *declined RL in\ out:
- 113                  +sum(s_out_RL,sum(s_in_RL, (1-(omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL)))    *(
- 114                          sum(s_DA, omega_DA(s_DA)   *(
- 115                                  Q_DA(s_DA) * p_DA(s_DA)
- 116                                  + sum(s_in_RA, Q_inrDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 117                                  + sum(s_out_RA, Q_outrDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
- 118                          + sum(s_DA,(1-omega_DA(s_DA)) * (
- 119                                  sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
- 120                                  + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA)))))));
- 121   
- 122   
- 123   
+  39   
+  40  *accepted RL in     \ declined out:
+  41  Q_outrDA_RA
+  42   
+  43  *declined RL in\ accepted out:
+  44  Q_inrDA_RA
+  45  Q_outrRL_RA
+  46   
+  47  *declined RL in\ out:
+  48  Q_DA(s_DA)
+  49  Q_in_RA(s_in_RA)
+  50  Q_out_RA(s_out_RA)
+  51  ;
+  52   
+  53  Equations
+  54  profitEQ
+  55   
+  56  *   Nebenbedingungen
+  57  *Anschlusspunkt:
+  58  conConst_Q_outrRLDA_RA
+  59  conConst_Q_outrDA_RA
+  60  conConst_Q_out_RA
+  61   
+  62  *Batterie Restriktionen:
+  63  storConQ_out_RL
+  64  storConQ_in_RL
+  65  storConQ_DA
+  66  storConQ_out_RA
+  67  storConQ_in_RA
+  68  storConQ_outrRL_RA
+  69  storConQ_inrRL_RA
+  70  storConQ_outrDA_RA
+  71  storConQ_inrDA_RA
+  72  storConQ_outrRLDA_RA
+  73  storConQ_inrRLDA_RA
+  74   
+  75  *Markt Restriktionen:
+  76  marketCon_Q_outrRL_RA
+  77  marketCon_Q_inrRL_RA
+  78  marketCon_Q_outrRLDA_RA
+  79  marketCon_Q_inrRLDA_RA
+  80  ;
+  81   
+  82   
+  83  *Obj function:
+  84  profitEQ..      Profit  =e=
+  85  * accepted  RL\ in \ out:
+  86                  sum(s_out_RL,sum(s_in_RL, (omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL))   *(
+  87                          (Q_in_RL (s_in_RL) *p_in_RL(s_in_RL)  + Q_out_RL(s_out_RL) * p_out_RL(s_out_RL))
+  88                          + sum(s_DA, omega_DA(s_DA)   *(
+  89                              Q_rRL_DA(s_DA) * p_DA(s_DA)
+  90                              + sum(s_in_RA, Q_inrRLDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+  91                              + sum(s_out_RA, Q_outrRLDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
+  92                          + sum(s_DA, (1-omega_DA(s_DA))  *(
+  93                              sum(s_in_RA, Q_inrRL_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+  94                              + sum(s_out_RA, Q_outrRL_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA) ) )))))
+  95  *accepted RL in     \ declined out:
+  96                  +sum(s_out_RL,sum(s_in_RL,(omega_RL_in(s_in_RL)*(1-omega_RL_out(s_out_RL))   *(
+  97                          (Q_in_RL(s_in_RL) * p_in_RL(s_in_RL))
+  98                          + sum(s_DA, omega_DA(s_DA) *(
+  99                              Q_rRL_DA(s_DA) * p_DA(s_DA)
+ 100                              + sum(s_in_RA, Q_inrRLDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 101                              + sum(s_out_RA, Q_outrDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
+ 102                          + sum(s_DA,(1-omega_DA(s_DA))
+ 103                              * ( sum(s_in_RA, Q_inrRL_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 104                              + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))))))
+ 105  *declined RL in\ accepted out:
+ 106                  +sum(s_out_RL,sum(s_in_RL,(1-omega_RL_in(s_in_RL))*omega_RL_out(s_out_RL))   *(
+ 107                          (Q_out_RL(s_out_RL) * p_out_RL(s_out_RL))
+ 108                          + sum(s_DA, omega_DA(s_DA)  *(
+ 109                                  (Q_rRL_DA(s_DA) * p_DA(s_DA))
+ 110                                  + sum(s_in_RA, Q_inrDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 111                                  + sum(s_out_RA, Q_outrRLDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
+ 112                          + sum(s_DA,(1-omega_DA(s_DA)) * (
+ 113                                  sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 114                                  + sum(s_out_RA, Q_outrRL_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))))
+ 115  *declined RL in\ out:
+ 116                  +sum(s_out_RL,sum(s_in_RL, (1-(omega_RL_in(s_in_RL)*omega_RL_out(s_out_RL)))    *(
+ 117                          sum(s_DA, omega_DA(s_DA)   *(
+ 118                                  Q_DA(s_DA) * p_DA(s_DA)
+ 119                                  + sum(s_in_RA, Q_inrDA_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 120                                  + sum(s_out_RA, Q_outrDA_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA))))
+ 121                          + sum(s_DA,(1-omega_DA(s_DA)) * (
+ 122                                  sum(s_in_RA, Q_in_RA(s_in_RA) * p_in_RA(s_in_RA) * omega_RA_in(s_in_RA))
+ 123                                  + sum(s_out_RA, Q_out_RA(s_out_RA) * p_out_RA(s_out_RA) * omega_RA_out(s_out_RA)))))));
  124   
- 125  *Nebenbedingungen
+ 125   
  126   
- 127  *Anschlusspunkt:
- 128  conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
- 129  conConst_Q_outrDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
- 130  conConst_Q_out_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
- 131  *Batterie Restriktionen:
- 132  storConQ_out_RL.. sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
- 133  storConQ_in_RL.. sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
- 134  storConQ_DA.. sum(s_DA, Q_DA(s_DA)) =l= r;
- 135  storConQ_out_RA.. sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
- 136  storConQ_in_RA.. sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
- 137  storConQ_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
- 138  storConQ_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
- 139  storConQ_outrDA_RA.. sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
- 140  storConQ_inrDA_RA.. sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
- 141  storConQ_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
- 142  storConQ_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
- 143  *Markt Restriktionen:
- 144  marketCon_Q_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
- 145  marketCon_Q_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
- 146  marketCon_Q_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
- 147  marketCon_Q_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
- 148  *Modell Restriktionen:
- 149  *   (Linearität)
- 150  *X_out_RL =l= B_out_RL * r;
- 151  *Q_out_RL - X_out_RL =l= (1-B_out_RL) * r;
- 152  *Q_out_RL =g= 0;
- 153  *X_in_RL =l= B_in_RL * r;
- 154  *Q_in_RL - X_in_RL =l= (1-B_in_RL) * r;
- 155  *Q_in_RL =g= 0;
- 156  *X_DA =l= B_DA * r;
- 157  *Q_DA - X_DA =l= (1-B_DA) * r;
- 158  *Q_DA =g= 0;
- 159  *   (Angenommene/Abgelehnte Gebote)
- 160  *c_in_RL =l= p(s_in_RL) + M * B_in_RL(s_in_RL)\quad\forall s_in_RL;
- 161  *c_in_RL =g= p(s_in_RL) - M * (1 - B_in_RL(s_in_RL))\quad\forall s_in_RL;
- 162  *c_out_RL =l= p(s_out_RL) + M * B_out_RL(s_out_RL)\quad\forall s_out_RL;
- 163  *c_out_RL =g= p(s_out_RL) - M * (1 - B_out_RL(s_out_RL))\quad\forall s_out_RL;
- 164  *c_DA =l= p(s_DA) + M * B_DA(s_DA)\quad\forall s_DA;
- 165  *c_DA =g= p(s_DA) - M * (1 - B_DA(s_DA))\quad\forall s_DA;
- 166   
- 167  Model testFirstDecision /all/;
- 168  Solve testFirstDecision maximising Profit using LP;
+ 127   
+ 128  *   Nebenbedingungen
+ 129   
+ 130  *Anschlusspunkt:
+ 131  conConst_Q_outrRLDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) +sum(s_DA, Q_rRL_DA(s_DA));
+ 132  conConst_Q_outrDA_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_outrDA_RA(s_out_RA)) +sum(s_DA, Q_DA(s_DA));
+ 133  conConst_Q_out_RA.. a + sum(s_in_RA, Q_in_RA(s_in_RA)) =g= sum(s_out_RA, Q_out_RA(s_out_RA));
+ 134  *Batterie Restriktionen:
+ 135  storConQ_out_RL.. sum(s_out_RL, Q_out_RL(s_out_RL)) =l= r;
+ 136  storConQ_in_RL.. sum(s_in_RL, Q_in_RL(s_in_RL)) =l= r;
+ 137  storConQ_DA.. sum(s_DA, Q_DA(s_DA)) =l= r;
+ 138  storConQ_out_RA.. sum(s_out_RA, Q_out_RA(s_out_RA)) =l= r;
+ 139  storConQ_in_RA.. sum(s_in_RA, Q_in_RA(s_in_RA)) =l= r;
+ 140  storConQ_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =l= r;
+ 141  storConQ_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =l= r;
+ 142  storConQ_outrDA_RA.. sum(s_out_RA, Q_outrDA_RA(s_out_RA)) =l= r;
+ 143  storConQ_inrDA_RA.. sum(s_in_RA, Q_inrDA_RA(s_in_RA)) =l= r;
+ 144  storConQ_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =l= r;
+ 145  storConQ_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =l= r;
+ 146  *Markt Restriktionen:
+ 147  marketCon_Q_outrRL_RA.. sum(s_out_RA, Q_outrRL_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+ 148  marketCon_Q_inrRL_RA.. sum(s_in_RA, Q_inrRL_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+ 149  marketCon_Q_outrRLDA_RA.. sum(s_out_RA, Q_outrRLDA_RA(s_out_RA)) =g= sum(s_out_RL, Q_out_RL(s_out_RL));
+ 150  marketCon_Q_inrRLDA_RA.. sum(s_in_RA, Q_inrRLDA_RA(s_in_RA)) =g= sum(s_in_RL, Q_in_RL(s_in_RL));
+ 151  *Modell Restriktionen:
+ 152  *   (Linearität)
+ 153  *X_out_RL =l= B_out_RL * r;
+ 154  *Q_out_RL - X_out_RL =l= (1-B_out_RL) * r;
+ 155  *Q_out_RL =g= 0;
+ 156  *X_in_RL =l= B_in_RL * r;
+ 157  *Q_in_RL - X_in_RL =l= (1-B_in_RL) * r;
+ 158  *Q_in_RL =g= 0;
+ 159  *X_DA =l= B_DA * r;
+ 160  *Q_DA - X_DA =l= (1-B_DA) * r;
+ 161  *Q_DA =g= 0;
+ 162  *   (Angenommene/Abgelehnte Gebote)
+ 163  *c_in_RL =l= p(s_in_RL) + M * B_in_RL(s_in_RL)\quad\forall s_in_RL;
+ 164  *c_in_RL =g= p(s_in_RL) - M * (1 - B_in_RL(s_in_RL))\quad\forall s_in_RL;
+ 165  *c_out_RL =l= p(s_out_RL) + M * B_out_RL(s_out_RL)\quad\forall s_out_RL;
+ 166  *c_out_RL =g= p(s_out_RL) - M * (1 - B_out_RL(s_out_RL))\quad\forall s_out_RL;
+ 167  *c_DA =l= p(s_DA) + M * B_DA(s_DA)\quad\forall s_DA;
+ 168  *c_DA =g= p(s_DA) - M * (1 - B_DA(s_DA))\quad\forall s_DA;
+ 169   
+ 170  Model testFirstDecision /all/;
+ 171  Solve testFirstDecision maximising Profit using LP;
 
 
 COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 2
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:36 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Equation Listing    SOLVE testFirstDecision Using LP From line 168
+Equation Listing    SOLVE testFirstDecision Using LP From line 171
 
 
 ---- profitEQ  =E=  
@@ -273,9 +276,9 @@ marketCon_Q_outrRLDA_RA..  - Q_out_RL(s_out_RL1) - Q_out_RL(s_out_RL2) - Q_out_R
 
 marketCon_Q_inrRLDA_RA..  - Q_in_RL(s_in_RL1) - Q_in_RL(s_in_RL2) - Q_in_RL(s_in_RL3) + Q_inrRLDA_RA(s_in_RA1) + Q_inrRLDA_RA(s_in_RA2) + Q_inrRLDA_RA(s_in_RA3) =G= 0 ; (LHS = 0)
      
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 3
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:36 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Column Listing      SOLVE testFirstDecision Using LP From line 168
+Column Listing      SOLVE testFirstDecision Using LP From line 171
 
 
 ---- Profit  
@@ -545,9 +548,9 @@ Q_out_RA(s_out_RA3)
        -1       conConst_Q_out_RA
         1       storConQ_out_RA
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 4
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:36 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Range Statistics    SOLVE testFirstDecision Using LP From line 168
+Range Statistics    SOLVE testFirstDecision Using LP From line 171
 
 
 RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
@@ -556,9 +559,9 @@ RHS       [min, max] : [ 1.000E+02, 1.500E+02] - Zero values observed as well
 Bound     [min, max] : [        NA,        NA] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 8.505E+02]
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 5
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:36 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Model Statistics    SOLVE testFirstDecision Using LP From line 168
+Model Statistics    SOLVE testFirstDecision Using LP From line 171
 
 
 MODEL STATISTICS
@@ -568,17 +571,17 @@ BLOCKS OF VARIABLES          13     SINGLE VARIABLES           37
 NON ZERO ELEMENTS           118
 
 
-GENERATION TIME      =        0.000 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:28:04 Page 6
+GENERATION TIME      =        0.015 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/02/25 12:31:36 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
-Solution Report     SOLVE testFirstDecision Using LP From line 168
+Solution Report     SOLVE testFirstDecision Using LP From line 171
 
 
                S O L V E      S U M M A R Y
 
      MODEL   testFirstDecision   OBJECTIVE  Profit
      TYPE    LP                  DIRECTION  MAXIMIZE
-     SOLVER  CPLEX               FROM LINE  168
+     SOLVER  CPLEX               FROM LINE  171
 
 **** SOLVER STATUS     1 Normal Completion
 **** MODEL STATUS      1 Optimal
@@ -730,7 +733,7 @@ s_out_RA3          .              .            +INF         -405.0000
                              0  UNBOUNDED
 
 
-EXECUTION TIME       =        0.032 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+EXECUTION TIME       =        0.047 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
 
 
 USER: Course License                                 S241105|0002AO-GEN

@@ -1,5 +1,5 @@
 {
-    "file": "firstDecision.gms",
+    "file": "secondDecisionTest.gms",
     "name": "DemoBerechenbarkeit",
     "nodes": [
         {

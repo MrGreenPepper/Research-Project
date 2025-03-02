@@ -1,9 +1,9 @@
 
---- Job general_test.gms Start 03/02/25 12:12:40 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job firstDecision.gms Start 03/02/25 12:31:29 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\general_test.gms"
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\firstDecision.gms"
     PageSize 0
     ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\"
     SysDir C:\GAMS\46\
@@ -21,15 +21,44 @@ Licensee: Course License                                 S241105|0002AO-GEN
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
---- general_test.gms(56) 3 Mb 1 Error
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\general_test.gms
-    Unknown symbol
---- general_test.gms(58) 3 Mb 2 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\general_test.gms
-    Unknown symbol
---- general_test.gms(71) 3 Mb 3 Errors
-*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\general_test.gms
-    Solve statement not checked because of previous errors
---- general_test.gms(71) 3 Mb 3 Errors
-*** Status: Compilation error(s)
---- Job general_test.gms Stop 03/02/25 12:12:40 elapsed 0:00:00.008
+--- firstDecision.gms(171) 3 Mb
+--- Starting execution: elapsed 0:00:00.010
+--- Generating LP model testFirstDecision
+--- firstDecision.gms(171) 4 Mb
+---   19 rows  37 columns  118 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E+02, 1.500E+02] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.000E+00, 8.505E+02]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:00.019
+
+IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.50 Mb (peak 0.50 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.00 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_Simplex_Display                         2
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Tried aggregator 1 time.
+LP Presolve eliminated 18 rows and 37 columns.
+All rows and columns eliminated.
+Presolve time = 0.00 sec. (0.02 ticks)
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.02 ticks)
+
+
+Optimal solution found
+Objective:       654412.500000
+
+--- Reading solution for model testFirstDecision
+*** Status: Normal completion
+--- Job firstDecision.gms Stop 03/02/25 12:31:29 elapsed 0:00:00.057

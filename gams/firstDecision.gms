@@ -36,11 +36,14 @@ Q_outrRLDA_RA
 Q_inrRLDA_RA
 Q_outrRL_RA
 Q_inrRL_RA
+
 *accepted RL in     \ declined out:
 Q_outrDA_RA
+
 *declined RL in\ accepted out:
 Q_inrDA_RA
 Q_outrRL_RA
+
 *declined RL in\ out:
 Q_DA(s_DA)
 Q_in_RA(s_in_RA)
@@ -49,11 +52,13 @@ Q_out_RA(s_out_RA)
 
 Equations
 profitEQ
-*Nebenbedingungen
+
+*   Nebenbedingungen
 *Anschlusspunkt:
 conConst_Q_outrRLDA_RA
 conConst_Q_outrDA_RA
 conConst_Q_out_RA
+
 *Batterie Restriktionen:
 storConQ_out_RL
 storConQ_in_RL
@@ -66,6 +71,7 @@ storConQ_outrDA_RA
 storConQ_inrDA_RA
 storConQ_outrRLDA_RA
 storConQ_inrRLDA_RA
+
 *Markt Restriktionen:
 marketCon_Q_outrRL_RA
 marketCon_Q_inrRL_RA

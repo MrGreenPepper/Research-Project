@@ -1,9 +1,9 @@
 Set
 s_RL_in         /s_RL_in1*s_RL_in3/
-s_RL_out            /s_RL_out1*s_RL_out3/
+s_RL_out        /s_RL_out1*s_RL_out3/
 s_DA            /s_DA1*s_DA3/
 s_RA_in         /s_RA_in1*s_RA_in3/
-s_RA_out            /s_RA_out1*s_RA_out3/
+s_RA_out        /s_RA_out1*s_RA_out3/
 ;
 
 Scalar
@@ -50,23 +50,23 @@ B_RA_out
 
 Parameter
 *forecast prices
-p_RL_in(s_RL_in)                    /s_RL_in1 900, s_RL_in2 100, s_RL_in3 110/
-p_RL_out(s_RL_out)                  /s_RL_out1 90, s_RL_out2 100, s_RL_out3 110/
-p_DA(s_DA)                  /s_DA1 90, s_DA2 100, s_DA3 110/
-p_RA_in(s_RA_in)                    /s_RA_in1 90, s_RA_in2 100, s_RA_in3 110/
-p_RA_out(s_RA_out)                  /s_RA_out1 90, s_RA_out2 100, s_RA_out3 110/
+p_RL_in(s_RL_in)                    /s_RL_in1 	900, 	s_RL_in2 	100, 	s_RL_in3 	110/
+p_RL_out(s_RL_out)                  /s_RL_out1 	90, 	s_RL_out2 	100, 	s_RL_out3 	110/
+p_DA(s_DA)                          /s_DA1 		90, 	s_DA2 		100, 	s_DA3 		110/
+p_RA_in(s_RA_in)                    /s_RA_in1 	90, 	s_RA_in2 	100, 	s_RA_in3 	110/
+p_RA_out(s_RA_out)                  /s_RA_out1 	90, 	s_RA_out2 	100, 	s_RA_out3 	110/
 *forecast probabilities
-w_RL_in                             /s_RL_in1 0.3, s_RL_in2 0.5, s_RL_in3 0.20/
-w_RL_out                                /s_RL_out1 0.3, s_RL_out2 0.5, s_RL_out3 0.20/
-w_DA                                /s_DA1 0.3, s_DA2 0.5, s_DA3 0.20/
-w_RA_in                             /s_RA_in1 0.3, s_RA_in2 0.5, s_RA_in3 0.20/
-w_RA_out                                /s_RA_out1 0.3, s_RA_out2 0.5, s_RA_out3 0.20/
+w_RL_in                             /s_RL_in1 	0.3, 	s_RL_in2 	0.5, 	s_RL_in3 	0.20/
+w_RL_out                            /s_RL_out1 	0.3, 	s_RL_out2 	0.5, 	s_RL_out3 	0.20/
+w_DA                                /s_DA1 		0.3,	s_DA2 		0.5, 	s_DA3 		0.20/
+w_RA_in                             /s_RA_in1 	0.3, 	s_RA_in2 	0.5, 	s_RA_in3 	0.20/
+w_RA_out                            /s_RA_out1 	0.3, 	s_RA_out2 	0.5, 	s_RA_out3 	0.20/
 *market data - clearing prices
-c_RL_in                             /s_RL_in1 100, s_RL_in2 100, s_RL_in3 100/                    
-c_RL_out                                /s_RL_out1 100, s_RL_out2 100, s_RL_out3 100/                   
-c_DA                                /s_DA1 100, s_DA2 100, s_DA3 100/
-c_RA_in                             /s_RA_in1 100, s_RA_in2 100, s_RA_in3 100/
-c_RA_out                                /s_RA_out1 100, s_RA_out2 100, s_RA_out3 100/
+c_RL_in                             /s_RL_in1 	100, 	s_RL_in2 	100, 	s_RL_in3 	100/                    
+c_RL_out                            /s_RL_out1 	100, 	s_RL_out2 	100, 	s_RL_out3 	100/                   
+c_DA                                /s_DA1 		100, 	s_DA2 		100, 	s_DA3 		100/
+c_RA_in                             /s_RA_in1 	100, 	s_RA_in2 	100, 	s_RA_in3 	100/
+c_RA_out                            /s_RA_out1 	100, 	s_RA_out2 	100, 	s_RA_out3 	100/
 *storage properties
 ;
 
