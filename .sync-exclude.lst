@@ -1,0 +1,8 @@
+].venv
+]^(?! ).*
+concept.*
+]/.venv/
+].wvenv
+]/.wvenv/
+]/.venv
+].venv/

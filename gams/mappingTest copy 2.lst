@@ -1,0 +1,578 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/17/25 21:05:57 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2          t_block / b1*b2 /
+   3      t_hour / h1*h8 /
+   4      t_quarter / q1*q32 /
+   5      map_quarter_hour(t_quarter, t_hour)
+   6      map_quarter_block(t_quarter, t_block)
+   7      map_hour_block(t_hour, t_block);
+   8   
+   9  Loop(t_hour,
+  10      Loop(t_quarter$(ord(t_quarter) > 4 * (ord(t_hour) - 1) and ord(t_quarter) <= 4 * ord(t_hour)),
+  11          map_quarter_hour(t_quarter, t_hour) = YES;
+  12      );
+  13  );
+  14   
+  15  Loop(t_block,
+  16      Loop(t_quarter$(ord(t_quarter) > 16 * (ord(t_block) - 1) and ord(t_quarter) <= 16 * ord(t_block)),
+  17          map_quarter_block(t_quarter, t_block) = YES;
+  18      );
+  19  );
+  20   
+  21  Loop(t_block,
+  22      Loop(t_hour$(ord(t_hour) > 4 * (ord(t_block) - 1) and ord(t_hour) <= 4 * ord(t_block)),
+  23          map_hour_block(t_hour, t_block) = YES;
+  24      );
+  25  );
+  26   
+  27  Parameter
+  28  p_DA(t_hour)                    / h1 1, h2 15, h3 1, h4 1, h5 1, h6 1, h7 1, h8 1/
+  29  p_RL(t_block)                                   / b1 2, b2 17/
+  30  ;
+  31  Variables
+  32      obj "Zielfunktion"
+  33  ;
+  34   
+  35  Positive Variable
+  36      q_DA(t_hour)   "Entscheidung auf Stundenebene"
+  37      q_RA(t_quarter) "Entscheidung auf Viertelstundenebene"
+  38          q_RL(t_block)
+  39  ;
+  40   
+  41  Scalar
+  42  storCap         /100/
+  43  parkCap         /100/
+  44  r               /100/
+  45  p_RA            /4/
+  46  a                               /125/
+  47  ;
+  48   
+  49  Equation
+  50   cost_eq
+  51   marketCon_RLRA
+  52   parkCap_con
+  53   
+  54   storageCap_con_RL
+  55   storageCap_con_RA
+  56   anschluss_con
+  57   conRLr
+  58  ;
+  59   
+  60   
+  61   
+  62  cost_eq..                                                      obj =e=  sum(t_hour, p_DA(t_hour) * q_DA(t_hour)) + sum(t_quarter, p_RA * q_RA(t_quarter)) + sum(t_block, p_RL(t_block) * q_RL(t_block) * 4);
+  63   
+  64  anschluss_con(t_quarter)..                                                                                        a =g= sum(t_hour$map_quarter_hour(t_quarter, t_hour), q_DA(t_hour)) + ( q_RA(t_quarter) * 4 );
+  65  storageCap_con_RL(t_block)..                                          q_RL(t_block) =l= storCap;
+  66  storageCap_con_RA(t_quarter)..                                          q_RA(t_quarter) =l= r/4;
+  67  parkCap_con(t_hour)..                                                                                             q_DA(t_hour) =l= parkCap;
+  68   
+  69  marketCon_RLRA(t_quarter)..                                       q_RA(t_quarter) * 4 =g= sum(t_block$map_quarter_block(t_quarter, t_block), q_RL(t_block));
+  70  conRLr(t_quarter)..                                            q_RA(t_quarter) =l= r/4;
+  71   
+  72  Model myModel /all/;
+  73  Solve myModel using lp maximizing obj;
+  74   
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/17/25 21:05:57 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE myModel Using LP From line 73
+
+
+---- cost_eq  =E=  
+
+cost_eq..  obj - q_DA(h1) - 15*q_DA(h2) - q_DA(h3) - q_DA(h4) - q_DA(h5) - q_DA(h6) - q_DA(h7) - q_DA(h8) - 4*q_RA(q1) - 4*q_RA(q2) - 4*q_RA(q3) - 4*q_RA(q4) - 4*q_RA(q5) - 4*q_RA(q6) - 4*q_RA(q7) - 4*q_RA(q8) - 4*q_RA(q9) - 4*q_RA(q10) - 4*q_RA(q11) - 4*q_RA(q12) - 4*q_RA(q13) - 4*q_RA(q14) - 4*q_RA(q15) - 4*q_RA(q16) - 4*q_RA(q17) - 4*q_RA(q18) - 4*q_RA(q19) - 4*q_RA(q20) - 4*q_RA(q21) - 4*q_RA(q22) - 4*q_RA(q23) - 4*q_RA(q24) - 4*q_RA(q25) - 4*q_RA(q26) - 4*q_RA(q27) - 4*q_RA(q28) - 4*q_RA(q29) - 4*q_RA(q30) - 4*q_RA(q31) - 4*q_RA(q32) - 8*q_RL(b1) - 68*q_RL(b2) =E= 0 ; (LHS = 0)
+     
+
+---- marketCon_RLRA  =G=  
+
+marketCon_RLRA(q1)..  4*q_RA(q1) - q_RL(b1) =G= 0 ; (LHS = 0)
+     
+marketCon_RLRA(q2)..  4*q_RA(q2) - q_RL(b1) =G= 0 ; (LHS = 0)
+     
+marketCon_RLRA(q3)..  4*q_RA(q3) - q_RL(b1) =G= 0 ; (LHS = 0)
+     
+REMAINING 29 ENTRIES SKIPPED
+
+
+---- parkCap_con  =L=  
+
+parkCap_con(h1)..  q_DA(h1) =L= 100 ; (LHS = 0)
+     
+parkCap_con(h2)..  q_DA(h2) =L= 100 ; (LHS = 0)
+     
+parkCap_con(h3)..  q_DA(h3) =L= 100 ; (LHS = 0)
+     
+REMAINING 5 ENTRIES SKIPPED
+
+
+---- storageCap_con_RL  =L=  
+
+storageCap_con_RL(b1)..  q_RL(b1) =L= 100 ; (LHS = 0)
+     
+storageCap_con_RL(b2)..  q_RL(b2) =L= 100 ; (LHS = 0)
+     
+
+---- storageCap_con_RA  =L=  
+
+storageCap_con_RA(q1)..  q_RA(q1) =L= 25 ; (LHS = 0)
+     
+storageCap_con_RA(q2)..  q_RA(q2) =L= 25 ; (LHS = 0)
+     
+storageCap_con_RA(q3)..  q_RA(q3) =L= 25 ; (LHS = 0)
+     
+REMAINING 29 ENTRIES SKIPPED
+
+
+---- anschluss_con  =G=  
+
+anschluss_con(q1)..  - q_DA(h1) - 4*q_RA(q1) =G= -125 ; (LHS = 0)
+     
+anschluss_con(q2)..  - q_DA(h1) - 4*q_RA(q2) =G= -125 ; (LHS = 0)
+     
+anschluss_con(q3)..  - q_DA(h1) - 4*q_RA(q3) =G= -125 ; (LHS = 0)
+     
+REMAINING 29 ENTRIES SKIPPED
+
+
+---- conRLr  =L=  
+
+conRLr(q1)..  q_RA(q1) =L= 25 ; (LHS = 0)
+     
+conRLr(q2)..  q_RA(q2) =L= 25 ; (LHS = 0)
+     
+conRLr(q3)..  q_RA(q3) =L= 25 ; (LHS = 0)
+     
+REMAINING 29 ENTRIES SKIPPED
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/17/25 21:05:57 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Column Listing      SOLVE myModel Using LP From line 73
+
+
+---- obj  Zielfunktion
+
+obj
+                (.LO, .L, .UP, .M = -INF, 0, +INF, 0)
+        1       cost_eq
+
+
+---- q_DA  Entscheidung auf Stundenebene
+
+q_DA(h1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       cost_eq
+        1       parkCap_con(h1)
+       -1       anschluss_con(q1)
+       -1       anschluss_con(q2)
+       -1       anschluss_con(q3)
+       -1       anschluss_con(q4)
+
+q_DA(h2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -15       cost_eq
+        1       parkCap_con(h2)
+       -1       anschluss_con(q5)
+       -1       anschluss_con(q6)
+       -1       anschluss_con(q7)
+       -1       anschluss_con(q8)
+
+q_DA(h3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -1       cost_eq
+        1       parkCap_con(h3)
+       -1       anschluss_con(q9)
+       -1       anschluss_con(q10)
+       -1       anschluss_con(q11)
+       -1       anschluss_con(q12)
+
+REMAINING 5 ENTRIES SKIPPED
+
+---- q_RA  Entscheidung auf Viertelstundenebene
+
+q_RA(q1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -4       cost_eq
+        4       marketCon_RLRA(q1)
+        1       storageCap_con_RA(q1)
+       -4       anschluss_con(q1)
+        1       conRLr(q1)
+
+q_RA(q2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -4       cost_eq
+        4       marketCon_RLRA(q2)
+        1       storageCap_con_RA(q2)
+       -4       anschluss_con(q2)
+        1       conRLr(q2)
+
+q_RA(q3)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -4       cost_eq
+        4       marketCon_RLRA(q3)
+        1       storageCap_con_RA(q3)
+       -4       anschluss_con(q3)
+        1       conRLr(q3)
+
+REMAINING 29 ENTRIES SKIPPED
+
+---- q_RL  
+
+q_RL(b1)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+       -8       cost_eq
+       -1       marketCon_RLRA(q1)
+       -1       marketCon_RLRA(q2)
+       -1       marketCon_RLRA(q3)
+       -1       marketCon_RLRA(q4)
+       -1       marketCon_RLRA(q5)
+       -1       marketCon_RLRA(q6)
+       -1       marketCon_RLRA(q7)
+       -1       marketCon_RLRA(q8)
+       -1       marketCon_RLRA(q9)
+       -1       marketCon_RLRA(q10)
+       -1       marketCon_RLRA(q11)
+       -1       marketCon_RLRA(q12)
+       -1       marketCon_RLRA(q13)
+       -1       marketCon_RLRA(q14)
+       -1       marketCon_RLRA(q15)
+       -1       marketCon_RLRA(q16)
+        1       storageCap_con_RL(b1)
+
+q_RL(b2)
+                (.LO, .L, .UP, .M = 0, 0, +INF, 0)
+      -68       cost_eq
+       -1       marketCon_RLRA(q17)
+       -1       marketCon_RLRA(q18)
+       -1       marketCon_RLRA(q19)
+       -1       marketCon_RLRA(q20)
+       -1       marketCon_RLRA(q21)
+       -1       marketCon_RLRA(q22)
+       -1       marketCon_RLRA(q23)
+       -1       marketCon_RLRA(q24)
+       -1       marketCon_RLRA(q25)
+       -1       marketCon_RLRA(q26)
+       -1       marketCon_RLRA(q27)
+       -1       marketCon_RLRA(q28)
+       -1       marketCon_RLRA(q29)
+       -1       marketCon_RLRA(q30)
+       -1       marketCon_RLRA(q31)
+       -1       marketCon_RLRA(q32)
+        1       storageCap_con_RL(b2)
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/17/25 21:05:57 Page 4
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Range Statistics    SOLVE myModel Using LP From line 73
+
+
+RANGE STATISTICS (ABSOLUTE NON-ZERO FINITE VALUES)
+
+RHS       [min, max] : [ 2.500E+01, 1.250E+02] - Zero values observed as well
+Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+Matrix    [min, max] : [ 1.000E+00, 6.800E+01]
+
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/17/25 21:05:57 Page 5
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Model Statistics    SOLVE myModel Using LP From line 73
+
+
+MODEL STATISTICS
+
+BLOCKS OF EQUATIONS           7     SINGLE EQUATIONS          139
+BLOCKS OF VARIABLES           4     SINGLE VARIABLES           43
+NON ZERO ELEMENTS           245
+
+
+GENERATION TIME      =        0.000 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/17/25 21:05:57 Page 6
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Solution Report     SOLVE myModel Using LP From line 73
+
+
+               S O L V E      S U M M A R Y
+
+     MODEL   myModel             OBJECTIVE  obj
+     TYPE    LP                  DIRECTION  MAXIMIZE
+     SOLVER  CPLEX               FROM LINE  73
+
+**** SOLVER STATUS     1 Normal Completion
+**** MODEL STATUS      1 Optimal
+**** OBJECTIVE VALUE            11575.0000
+
+ RESOURCE USAGE, LIMIT          0.000 10000000000.000
+ ITERATION COUNT, LIMIT         4    2147483647
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- GMO memory 0.52 Mb (peak 0.52 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 0.00 Mb (peak 0.01 Mb)
+--- Starting Cplex
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 0.00sec (det. 0.18 ticks)
+
+
+Optimal solution found
+Objective:        11575.000000
+
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- EQU cost_eq             .              .              .             1.0000      
+
+---- EQU marketCon_RLRA  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+q1           .            75.0000        +INF             .          
+q2           .            75.0000        +INF             .          
+q3           .            75.0000        +INF             .          
+q4           .            75.0000        +INF             .          
+q5           .              .            +INF           -8.0000      
+q6           .              .            +INF             .          
+q7           .              .            +INF             .          
+q8           .              .            +INF             .          
+q9           .            75.0000        +INF             .          
+q10          .            75.0000        +INF             .          
+q11          .            75.0000        +INF             .          
+q12          .            75.0000        +INF             .          
+q13          .            75.0000        +INF             .          
+q14          .            75.0000        +INF             .          
+q15          .            75.0000        +INF             .          
+q16          .            75.0000        +INF             .          
+q17          .              .            +INF             .          
+q18          .              .            +INF             .          
+q19          .              .            +INF             .          
+q20          .              .            +INF             .          
+q21          .              .            +INF             .          
+q22          .              .            +INF             .          
+q23          .              .            +INF             .          
+q24          .              .            +INF             .          
+q25          .              .            +INF             .          
+q26          .              .            +INF             .          
+q27          .              .            +INF             .          
+q28          .              .            +INF             .          
+q29          .              .            +INF             .          
+q30          .              .            +INF             .          
+q31          .              .            +INF             .          
+q32          .              .            +INF             .          
+
+---- EQU parkCap_con  
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+h1        -INF           25.0000       100.0000          .          
+h2        -INF          100.0000       100.0000         3.0000      
+h3        -INF           25.0000       100.0000          .          
+h4        -INF           25.0000       100.0000          .          
+h5        -INF           25.0000       100.0000          .          
+h6        -INF           25.0000       100.0000          .          
+h7        -INF           25.0000       100.0000          .          
+h8        -INF           25.0000       100.0000          .          
+
+---- EQU storageCap_con_RL  
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+b1        -INF           25.0000       100.0000          .          
+b2        -INF          100.0000       100.0000        68.0000      
+
+---- EQU storageCap_con_RA  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+q1         -INF           25.0000        25.0000         EPS         
+q2         -INF           25.0000        25.0000         4.0000      
+q3         -INF           25.0000        25.0000         4.0000      
+q4         -INF           25.0000        25.0000         4.0000      
+q5         -INF            6.2500        25.0000          .          
+q6         -INF            6.2500        25.0000          .          
+q7         -INF            6.2500        25.0000          .          
+q8         -INF            6.2500        25.0000          .          
+q9         -INF           25.0000        25.0000         EPS         
+q10        -INF           25.0000        25.0000         4.0000      
+q11        -INF           25.0000        25.0000         4.0000      
+q12        -INF           25.0000        25.0000         4.0000      
+q13        -INF           25.0000        25.0000         EPS         
+q14        -INF           25.0000        25.0000         4.0000      
+q15        -INF           25.0000        25.0000         4.0000      
+q16        -INF           25.0000        25.0000         4.0000      
+q17        -INF           25.0000        25.0000         EPS         
+q18        -INF           25.0000        25.0000         4.0000      
+q19        -INF           25.0000        25.0000         4.0000      
+q20        -INF           25.0000        25.0000         4.0000      
+q21        -INF           25.0000        25.0000         EPS         
+q22        -INF           25.0000        25.0000         4.0000      
+q23        -INF           25.0000        25.0000         4.0000      
+q24        -INF           25.0000        25.0000         4.0000      
+q25        -INF           25.0000        25.0000         EPS         
+q26        -INF           25.0000        25.0000         4.0000      
+q27        -INF           25.0000        25.0000         4.0000      
+q28        -INF           25.0000        25.0000         4.0000      
+q29        -INF           25.0000        25.0000         EPS         
+q30        -INF           25.0000        25.0000         4.0000      
+q31        -INF           25.0000        25.0000         4.0000      
+q32        -INF           25.0000        25.0000         4.0000      
+
+---- EQU anschluss_con  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+q1       -125.0000      -125.0000        +INF           -1.0000      
+q2       -125.0000      -125.0000        +INF             .          
+q3       -125.0000      -125.0000        +INF             .          
+q4       -125.0000      -125.0000        +INF             .          
+q5       -125.0000      -125.0000        +INF           -9.0000      
+q6       -125.0000      -125.0000        +INF           -1.0000      
+q7       -125.0000      -125.0000        +INF           -1.0000      
+q8       -125.0000      -125.0000        +INF           -1.0000      
+q9       -125.0000      -125.0000        +INF           -1.0000      
+q10      -125.0000      -125.0000        +INF             .          
+q11      -125.0000      -125.0000        +INF             .          
+q12      -125.0000      -125.0000        +INF             .          
+q13      -125.0000      -125.0000        +INF           -1.0000      
+q14      -125.0000      -125.0000        +INF             .          
+q15      -125.0000      -125.0000        +INF             .          
+q16      -125.0000      -125.0000        +INF             .          
+q17      -125.0000      -125.0000        +INF           -1.0000      
+q18      -125.0000      -125.0000        +INF             .          
+q19      -125.0000      -125.0000        +INF             .          
+q20      -125.0000      -125.0000        +INF             .          
+q21      -125.0000      -125.0000        +INF           -1.0000      
+q22      -125.0000      -125.0000        +INF             .          
+q23      -125.0000      -125.0000        +INF             .          
+q24      -125.0000      -125.0000        +INF             .          
+q25      -125.0000      -125.0000        +INF           -1.0000      
+q26      -125.0000      -125.0000        +INF             .          
+q27      -125.0000      -125.0000        +INF             .          
+q28      -125.0000      -125.0000        +INF             .          
+q29      -125.0000      -125.0000        +INF           -1.0000      
+q30      -125.0000      -125.0000        +INF             .          
+q31      -125.0000      -125.0000        +INF             .          
+q32      -125.0000      -125.0000        +INF             .          
+
+---- EQU conRLr  
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+q1         -INF           25.0000        25.0000          .          
+q2         -INF           25.0000        25.0000          .          
+q3         -INF           25.0000        25.0000          .          
+q4         -INF           25.0000        25.0000          .          
+q5         -INF            6.2500        25.0000          .          
+q6         -INF            6.2500        25.0000          .          
+q7         -INF            6.2500        25.0000          .          
+q8         -INF            6.2500        25.0000          .          
+q9         -INF           25.0000        25.0000          .          
+q10        -INF           25.0000        25.0000          .          
+q11        -INF           25.0000        25.0000          .          
+q12        -INF           25.0000        25.0000          .          
+q13        -INF           25.0000        25.0000          .          
+q14        -INF           25.0000        25.0000          .          
+q15        -INF           25.0000        25.0000          .          
+q16        -INF           25.0000        25.0000          .          
+q17        -INF           25.0000        25.0000          .          
+q18        -INF           25.0000        25.0000          .          
+q19        -INF           25.0000        25.0000          .          
+q20        -INF           25.0000        25.0000          .          
+q21        -INF           25.0000        25.0000          .          
+q22        -INF           25.0000        25.0000          .          
+q23        -INF           25.0000        25.0000          .          
+q24        -INF           25.0000        25.0000          .          
+q25        -INF           25.0000        25.0000          .          
+q26        -INF           25.0000        25.0000          .          
+q27        -INF           25.0000        25.0000          .          
+q28        -INF           25.0000        25.0000          .          
+q29        -INF           25.0000        25.0000          .          
+q30        -INF           25.0000        25.0000          .          
+q31        -INF           25.0000        25.0000          .          
+q32        -INF           25.0000        25.0000          .          
+
+                           LOWER          LEVEL          UPPER         MARGINAL
+
+---- VAR obj               -INF        11575.0000        +INF             .          
+
+  obj  Zielfunktion
+
+---- VAR q_DA  Entscheidung auf Stundenebene
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+h1          .            25.0000        +INF             .          
+h2          .           100.0000        +INF             .          
+h3          .            25.0000        +INF             .          
+h4          .            25.0000        +INF             .          
+h5          .            25.0000        +INF             .          
+h6          .            25.0000        +INF             .          
+h7          .            25.0000        +INF             .          
+h8          .            25.0000        +INF             .          
+
+---- VAR q_RA  Entscheidung auf Viertelstundenebene
+
+           LOWER          LEVEL          UPPER         MARGINAL
+
+q1           .            25.0000        +INF             .          
+q2           .            25.0000        +INF             .          
+q3           .            25.0000        +INF             .          
+q4           .            25.0000        +INF             .          
+q5           .             6.2500        +INF             .          
+q6           .             6.2500        +INF             .          
+q7           .             6.2500        +INF             .          
+q8           .             6.2500        +INF             .          
+q9           .            25.0000        +INF             .          
+q10          .            25.0000        +INF             .          
+q11          .            25.0000        +INF             .          
+q12          .            25.0000        +INF             .          
+q13          .            25.0000        +INF             .          
+q14          .            25.0000        +INF             .          
+q15          .            25.0000        +INF             .          
+q16          .            25.0000        +INF             .          
+q17          .            25.0000        +INF             .          
+q18          .            25.0000        +INF             .          
+q19          .            25.0000        +INF             .          
+q20          .            25.0000        +INF             .          
+q21          .            25.0000        +INF             .          
+q22          .            25.0000        +INF             .          
+q23          .            25.0000        +INF             .          
+q24          .            25.0000        +INF             .          
+q25          .            25.0000        +INF             .          
+q26          .            25.0000        +INF             .          
+q27          .            25.0000        +INF             .          
+q28          .            25.0000        +INF             .          
+q29          .            25.0000        +INF             .          
+q30          .            25.0000        +INF             .          
+q31          .            25.0000        +INF             .          
+q32          .            25.0000        +INF             .          
+
+---- VAR q_RL  
+
+          LOWER          LEVEL          UPPER         MARGINAL
+
+b1          .            25.0000        +INF             .          
+b2          .           100.0000        +INF             .          
+
+
+**** REPORT SUMMARY :        0     NONOPT
+                             0 INFEASIBLE
+                             0  UNBOUNDED
+
+
+EXECUTION TIME       =        0.032 SECONDS      4 MB  46.2.0 ac4adda6 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\mappingTest copy 2.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\mappingTest copy 2.lst

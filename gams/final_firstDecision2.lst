@@ -1,0 +1,477 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/18/25 19:16:49 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2  *scenario sets
+   3          s_in_RL         /s_in_RL1*s_in_RL3/
+   4          s_out_RL            /s_out_RL1*s_out_RL3/
+   5          s_DA            /s_DA1*s_DA3/
+   6          s_in_RA         /s_in_RA1*s_in_RA3/
+   7          s_out_RA            /s_out_RA1*s_out_RA3/
+   8   
+   9  *time sets
+  10          t_block / b1*b2 /
+  11      t_hour / h1*h8 /
+  12      t_quarter / q1*q32 /
+  13      map_quarter_hour(t_quarter, t_hour)
+  14      map_quarter_block(t_quarter, t_block)
+  15      map_hour_block(t_hour, t_block);
+  16  ;
+  17   
+  18  *assign correct mapping
+  19  Loop(t_hour,
+  20      Loop(t_quarter$(ord(t_quarter) > 4 * (ord(t_hour) - 1) and ord(t_quarter) <= 4 * ord(t_hour)),
+  21          map_quarter_hour(t_quarter, t_hour) = YES;
+  22      );
+  23  );
+  24   
+  25  Loop(t_block,
+  26      Loop(t_quarter$(ord(t_quarter) > 16 * (ord(t_block) - 1) and ord(t_quarter) <= 16 * ord(t_block)),
+  27          map_quarter_block(t_quarter, t_block) = YES;
+  28      );
+  29  );
+  30   
+  31  Loop(t_block,
+  32      Loop(t_hour$(ord(t_hour) > 4 * (ord(t_block) - 1) and ord(t_hour) <= 4 * ord(t_block)),
+  33          map_hour_block(t_hour, t_block) = YES;
+  34      );
+  35  );
+  36   
+  37   
+  38  Scalars
+  39          a           /150/
+  40          r           /100/
+  41          batCosts        /10000/
+  42  ;
+  43   
+  44  Parameters
+  45  omega_RL_in(t_block, s_in_RL)                        /s_in_RL1 0.7, s_in_RL2 0.5, s_in_RL3 0.3/
+****                                                               $170$148      $170$161      $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  46  omega_RL_out(t_block, s_out_RL)                      /s_out_RL1 0.7, s_out_RL2 0.5, s_out_RL3 0.3/
+****                                                                $170$148       $170$161       $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  47  omega_DA(t_hour, s_DA)                              /s_DA1 0.7, s_DA2 0.5, s_DA3 0.3/
+****                                                           $170$148   $170$161   $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  48  omega_RA_in(t_quarter, s_in_RA)                         /s_in_RA1 0.7, s_in_RA2 0.5, s_in_RA3 0.3/
+****                                                                  $170$148      $170$161      $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  49  omega_RA_out(t_quarter, s_out_RA)                      /s_out_RA1 0.7, s_out_RA2 0.5, s_out_RA3 0.3/
+****                                                                  $170$148       $170$161       $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  50  p_in_RL(t_block, s_in_RL)                            /s_in_RL1 90, s_in_RL2 100, s_in_RL3 110/
+****                                                               $170,148     $170$161      $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  51  p_out_RL(t_block, s_out_RL)                          /s_out_RL1 90, s_out_RL2 100, s_out_RL3 110/
+****                                                                $170,148      $170$161       $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  52  p_DA(t_hour, s_DA)                                  /s_DA1 90, s_DA2 100, s_DA3 110/
+****                                                           $170,148  $170$161   $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  53  p_in_RA(t_quarter, s_in_RA)                             /s_in_RA1 90, s_in_RA2 100, s_in_RA3 110/
+****                                                                  $170,148     $170$161      $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  54  p_out_RA(t_quarter, s_out_RA)                          /s_out_RA1 90, s_out_RA2 100, s_out_RA3 110/
+****                                                                  $170,148      $170$161       $170$161
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 161  Conflicting dimensions in element
+**** 170  Domain violation for element
+  55  ;
+  56   
+  57  Variables
+  58  Profit
+  59  ;
+  60  Positive Variables
+  61  BatCap
+  62  BatStat(t_quarter)
+  63  * accepted  RL\ in \ out:
+  64  Q_in_RL(t_block, s_in_RL)
+  65  Q_out_RL(t_block, s_out_RL)
+  66  Q_rB_DA(t_hour, s_DA)
+  67  Q_outrB_RA(t_quarter, s_out_RA)
+  68  Q_inrB_RA(t_quarter, s_in_RA)
+  69  Q_rB_reload(t_hour, s_DA)
+  70   
+  71  *accepted RL in     \ declined out:
+  72  Q_outrI_RA(t_quarter, s_out_RA)
+  73  Q_inrI_RA(t_quarter, s_in_RA)
+  74  Q_rI_DA(t_hour, s_DA)
+  75  Q_rI_reload(t_hour, s_DA)
+  76   
+  77  *declined RL in\ accepted out:
+  78  Q_outrO_RA(t_quarter, s_out_RA)
+  79  Q_inrO_RA(t_quarter, s_in_RA)
+  80  Q_rO_DA(t_hour, s_DA)
+  81  Q_rO_reload(t_hour, s_DA)
+  82   
+  83  *declined RL in\ out:
+  84  Q_outrN_RA(t_quarter, s_out_RA)
+  85  Q_inrN_RA(t_quarter, s_in_RA)
+  86  Q_rN_DA(t_hour, s_DA)
+  87  Q_reload(t_hour, s_DA)
+  88  ;
+  89   
+  90  Equations
+  91  profitEQ
+  92   
+  93  *   constraints:
+  94  *battery cap
+  95  batCapCalc
+  96  batStatCap
+  97   
+  98  *access point:
+  99  accPointCon_a_B
+ 100  accPointCon_a_I
+ 101  accPointCon_a_O
+ 102  accPointCon_a_N
+ 103   
+ 104  *battery status restrictions
+ 105  batStatcon_(t_quarter)
+ 106   
+ 107  *battery performance restrictions:
+ 108  storCon_Q_outrB_RL(t_block)
+ 109  storCon_Q_outrI_RL(t_block)
+ 110  storCon_Q_outrO_RL(t_block)
+ 111  storCon_Q_out_RL(t_block)
+ 112   
+ 113  storCon_Q_outrB_RA(t_quarter)
+ 114  storCon_Q_outrI_RA(t_quarter)
+ 115  storCon_Q_outrO_RA(t_quarter)
+ 116  storCon_Q_outrN_RA(t_quarter)
+ 117   
+ 118  storCon_Q_inrB_RA(t_quarter)
+ 119  storCon_Q_inrI_RA(t_quarter)
+ 120  storCon_Q_inrO_RA(t_quarter)
+ 121  storCon_Q_inrN_RA(t_quarter)
+ 122   
+ 123  *market restrictions:
+ 124  marketCon_outrB_RA(t_quarter)
+ 125  *marketCon_outrI_RA(t_quarter)
+ 126  marketCon_outrO_RA(t_quarter)
+ 127  *marketCon_out_RA(t_quarter)
+ 128   
+ 129  marketCon_inrB_RA(t_quarter)
+ 130  marketCon_inrI_RA(t_quarter)
+ 131  *marketCon_inrO_RA(t_quarter)
+ 132  *marketCon_in_RA(t_quarter)
+ 133  ;
+ 134   
+ 135   
+ 136  *obj function:
+ 137  profitEQ..      Profit  =e= - (BatCap * batCosts)
+ 138                                  + sum(t_block,
+ 139  * accepted  RL\ in \ out:
+ 140                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))          * (
+ 141                                                  + (Q_in_RL(t_block, s_in_RL)            * p_in_RL(t_block, s_in_RL))
+ 142                                                  + (Q_out_RL(t_block, s_out_RL)          * p_out_RL(s_out_RL))
+****                                                                                                             $171,148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 171  Domain violation for set
+ 143                                                  + sum(t_hour$map_hour_block(t_hour, t_block),                   (Q_rB_DA(t_hour, s_DA)                          * sum(s_DA, omega_DA(t_hour, s_DA) * p_DA(t_hour, s_DA))        ))
+****                                                                                                                                       $149
+**** 149  Uncontrolled set entered as constant
+ 144                          + sum(t_quarter$map_quarter_block(t_quarter, t_block),  (Q_inrB_RA(t_quarter, s_in_RA)          * omega_RA_in_call(t_quarter, s_in_RA)          * sum(s_in_RA, p_in_RA(t_quarter, s_in_RA) * omega_RA_in(t_quarter, s_in_RA))   )
+****                                                                                                               $149                        $140                $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 145                                                                                                                                          + (Q_outrB_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA)        * sum(s_out_RA, p_out_RA(t_quarter, s_out_RA) * omega_RA_out(t_quarter, s_out_RA))      ) )     )))
+****                                                                                                                                                                           $149                     $140                 $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 146   
+ 147  *accepted RL in     \ declined out:
+ 148                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (
+ 149                                                  + (Q_in_RL(t_block, s_in_RL)            * p_in_RL(t_block, s_in_RL))
+ 150                                                  + sum(t_hour$map_hour_block(t_hour, t_block),                   (Q_rI_DA(t_hour, s_DA)                          * sum(s_DA, omega_DA(t_hour, s_DA) * p_DA(t_hour, s_DA))        ))
+****                                                                                                                                       $149
+**** 149  Uncontrolled set entered as constant
+ 151                          + sum(t_quarter$map_quarter_block(t_quarter, t_block),  (Q_inrI_RA(t_quarter, s_in_RA)          * omega_RA_in_call(t_quarter, s_in_RA)          * sum(s_in_RA, p_in_RA(t_quarter, s_in_RA) * omega_RA_in(t_quarter, s_in_RA))   )
+****                                                                                                               $149                                            $149
+**** 149  Uncontrolled set entered as constant
+ 152                                                                                                                                          + (Q_outrI_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA)        * sum(s_out_RA, p_out_RA(t_quarter, s_out_RA) * omega_RA_out(t_quarter, s_out_RA))      ) )     )))
+****                                                                                                                                                                           $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 153   
+ 154  *declined RL in     \ accepted out:
+ 155                  + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (
+ 156                                                  + (Q_out_RL(t_block, s_out_RL)          * p_out_RL(s_out_RL))
+****                                                                                                             $171,148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 171  Domain violation for set
+ 157                                                  + sum(t_hour$map_hour_block(t_hour, t_block),                   (Q_rO_DA(t_hour, s_DA)                          * sum(s_DA, omega_DA(t_hour, s_DA) * p_DA(t_hour, s_DA))        ))
+****                                                                                                                                       $149
+**** 149  Uncontrolled set entered as constant
+ 158                          + sum(t_quarter$map_quarter_block(t_quarter, t_block),  (Q_inrO_RA(t_quarter, s_in_RA)          * omega_RA_in_call(t_quarter, s_in_RA)          * sum(s_in_RA, p_in_RA(t_quarter, s_in_RA) * omega_RA_in(t_quarter, s_in_RA))   )
+****                                                                                                               $149                                            $149
+**** 149  Uncontrolled set entered as constant
+ 159                                                                                                                                          + (Q_outrO_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA)        * sum(s_out_RA, p_out_RA(t_quarter, s_out_RA) * omega_RA_out(t_quarter, s_out_RA))      ) )     )))
+****                                                                                                                                                                           $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 160   
+ 161  *declined RL in\ out:
+ 162                  + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)))  * (
+ 163                                                  + sum(t_hour$map_hour_block(t_hour, t_block),                   (Q_rN_DA(t_hour, s_DA)                                                  * sum(s_DA, omega_DA(t_hour, s_DA) * p_DA(t_hour, s_DA))        ))
+****                                                                                                                                       $149
+**** 149  Uncontrolled set entered as constant
+ 164                          + sum(t_quarter$map_quarter_block(t_quarter, t_block),  (Q_inrN_RA(t_quarter, s_in_RA)          * omega_RA_in_call(t_quarter, s_in_RA)          * sum(s_in_RA, p_in_RA(t_quarter, s_in_RA) * omega_RA_in(t_quarter, s_in_RA))   )
+****                                                                                                               $149                                            $149
+**** 149  Uncontrolled set entered as constant
+ 165                                                                                                                                          + (Q_outrN_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA)        * sum(s_out_RA, p_out_RA(t_quarter, s_out_RA) * omega_RA_out(t_quarter, s_out_RA))      ) )     )))
+****                                                                                                                                                                           $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 166                                  );
+ 167   
+ 168   
+ 169   
+ 170   
+ 171  *   constraints
+ 172  *battery cap
+ 173  batCapCalc..                                            BatCap =g= max(Q_inrB_RA, Q_inrI_RA, Q_inrO_RA, Q_inrN_RA, Q_outrB_RA, Q_outrI_RA, Q_outrO_RA, Q_outrN_RA);
+****                                                                                  $148       $148       $148       $148        $148        $148        $148        $148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+ 174  *batCapCalc..                                           BatCap =g= max( Q_inrB_RA, Q_inrI_RA, Q_inrO_RA, Q_inrN_RA, Q_outrB_RA, Q_outrI_RA, Q_outrO_RA, Q_outrN_RA,
+ 175  *                                                                                                       Q_in_RL * 4, Q_out_RL * 4);
+ 176   
+ 177   
+ 178  *access point:
+ 179  accPointCon_a_B(t_quarter)..            a + sum(s_in_RA, Q_inrB_RA(s_in_RA)) =g= sum(s_DA, sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_DA(s_DA))) + sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA));
+****                                                                            $171,148                                                                     $171,148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 171  Domain violation for set
+ 180  accPointCon_a_I(t_quarter)..            a + sum(s_in_RA, Q_inrI_RA(s_in_RA)) =g= sum(s_DA, sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_DA(s_DA))) + sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA));
+****                                                                            $171,148                                                                     $171,148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 171  Domain violation for set
+ 181  accPointCon_a_O(t_quarter)..            a + sum(s_in_RA, Q_inrO_RA(s_in_RA)) =g= sum(s_DA, sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_DA(s_DA))) + sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA));
+****                                                                            $171,148                                                                     $171,148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 171  Domain violation for set
+ 182  accPointCon_a_N(t_quarter)..            a + sum(s_in_RA, Q_inrN_RA(s_in_RA))   =g= sum(s_DA, sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_DA(s_DA)))    + sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA));
+****                                                                            $171,148                                                                       $171,148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+**** 171  Domain violation for set
+ 183   
+ 184  *battery performance restrictions:
+ 185  storCon_Q_out_RL(t_block)..                                             sum(s_out_RL, Q_out_RL(t_block, s_out_RL))                      =l= r;
+ 186  storCon_Q_out_RL(t_block)..                                             sum(s_out_RL, Q_out_RL(t_block, s_out_RL))                      =l= r;
+****                 $150
+**** 150  Symbolic equations redefined
+ 187  storCon_Q_in_RL(t_block)..                                              sum(s_in_RL, Q_in_RL(t_block, s_in_RL))                         =l= r;
+****                $140
+**** 140  Unknown symbol
+ 188  storCon_Q_in_RL(t_block)..                                              sum(s_in_RL, Q_in_RL(t_block, s_in_RL))                         =l= r;
+****                $150
+**** 150  Symbolic equations redefined
+ 189   
+ 190  storCon_Q_outrB_RA(t_quarter)..                                 sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA))          =l= r/4;
+ 191  storCon_Q_outrI_RA(t_quarter)..                                 sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA))          =l= r/4;
+ 192  storCon_Q_outrO_RA(t_quarter)..                                 sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA))          =l= r/4;
+ 193  storCon_Q_outrN_RA(t_quarter)..                                 sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA))          =l= r/4;
+ 194   
+ 195  storCon_Q_inrB_RA(t_quarter)..                                  sum(s_in_RA, Q_inrB_RA(t_quarter, s_in_RA))             =l= r/4;
+ 196  storCon_Q_inrI_RA(t_quarter)..                                  sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA))             =l= r/4;
+ 197  storCon_Q_inrO_RA(t_quarter)..                                  sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA))             =l= r/4;
+ 198  storCon_Q_inrN_RA(t_quarter)..                                  sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA))             =l= r/4;
+ 199   
+ 200  *batter cap restrictions
+ 201  batStatCap(t_quarter)..                                                 BatStat(t_quarter) =l= BatCap;
+ 202  batCap_Q_out_RL(t_block)..                                              sum(s_out_RL, Q_out_RL(t_block, s_out_RL)) * 4          =l= BatCap;
+****                $140
+**** 140  Unknown symbol
+ 203  batCap_Q_out_RL(t_block)..                                              sum(s_out_RL, Q_out_RL(t_block, s_out_RL)) * 4          =l= BatCap;
+****                $150
+**** 150  Symbolic equations redefined
+ 204  batCap_Q_in_RL(t_block)..                                               sum(s_in_RL, Q_in_RL(t_block, s_in_RL)) * 4                     =l= BatCap;
+****               $140
+**** 140  Unknown symbol
+ 205  batCap_Q_in_RL(t_block)..                                               sum(s_in_RL, Q_in_RL(t_block, s_in_RL)) * 4                     =l= BatCap;
+****               $150
+**** 150  Symbolic equations redefined
+ 206   
+ 207  batCap_Q_outrB_RA(t_quarter)..                                  sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA))          =l= BatCap;
+****                  $140
+**** 140  Unknown symbol
+ 208  batCap_Q_outrI_RA(t_quarter)..                                  sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA))          =l= BatCap;
+****                  $140
+**** 140  Unknown symbol
+ 209  batCap_Q_outrO_RA(t_quarter)..                                  sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA))          =l= BatCap;
+****                  $140
+**** 140  Unknown symbol
+ 210  batCap_Q_outrN_RA(t_quarter)..                                  sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA))          =l= BatCap;
+****                  $140
+**** 140  Unknown symbol
+ 211   
+ 212  batCap_Q_inrB_RA(t_quarter)..                                   sum(s_in_RA, Q_inrB_RA(t_quarter, s_in_RA))             =l= BatCap;
+****                 $140
+**** 140  Unknown symbol
+ 213  batCap_Q_inrI_RA(t_quarter)..                                   sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA))             =l= BatCap;
+****                 $140
+**** 140  Unknown symbol
+ 214  batCap_Q_inrO_RA(t_quarter)..                                   sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA))             =l= BatCap;
+****                 $140
+**** 140  Unknown symbol
+ 215  batCap_Q_inrN_RA(t_quarter)..                                   sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA))             =l= BatCap;
+****                 $140
+**** 140  Unknown symbol
+ 216   
+ 217  *battery status restrictions
+ 218  *expectet battery value in t+1:
+ 219  batStatcon_(t_quarter)..                                        BatStat(t_quarter + 1) = BatStat(t_quarter)
+ 220  * accepted  RL\ in \ out:
+ 221                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)))               * (
+ 222                                                  + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_reload(t_hour, s_DA) / 4)
+****                                                                                                                            $149
+**** 149  Uncontrolled set entered as constant
+ 223                          + (Q_inrB_RA(t_quarter, s_in_RA)        * omega_RA_in_call(t_quarter, s_in_RA))
+****                                                         $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 224                          - (Q_outrB_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA))       )))
+****                                                           $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 225   
+ 226  *accepted RL in     \ declined out:
+ 227                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))           * (
+ 228                                                  + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_reload(t_hour, s_DA) / 4)
+****                                                                                                                            $149
+**** 149  Uncontrolled set entered as constant
+ 229                          + (Q_inrI_RA(t_quarter, s_in_RA)        * omega_RA_in_call(t_quarter, s_in_RA))
+****                                                         $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 230                          - (Q_outrI_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA))       )))
+****                                                           $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 231   
+ 232  *declined RL in     \ accepted out:
+ 233                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL)))           * (
+ 234                                                  + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_reload(t_hour, s_DA) / 4)
+****                                                                                                                            $149
+**** 149  Uncontrolled set entered as constant
+ 235                          + (Q_inrO_RA(t_quarter, s_in_RA)        * omega_RA_in_call(t_quarter, s_in_RA))
+****                                                         $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 236                          - (Q_outrO_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA))       )))
+****                                                           $149                                          $149
+**** 149  Uncontrolled set entered as constant
+ 237   
+ 238  *declined RL in\ out:
+ 239                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (1-(omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))))           * (
+ 240                                                  + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_reload(t_hour, s_DA) / 4)
+****                                                                                                              $140          $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 241                          + (Q_inrN_RA(t_quarter, s_in_RA)                * omega_RA_in_call(t_quarter, s_in_RA))
+****                                                         $149                                                  $149
+**** 149  Uncontrolled set entered as constant
+ 242                          - (Q_outrN_RA(t_quarter, s_out_RA)      * omega_RA_out_call(t_quarter, s_out_RA))       )));
+****                                                           $149                                          $149        $37
+****  37  '=l=' or '=e=' or '=g=' operator expected
+**** 149  Uncontrolled set entered as constant
+ 243   
+ 244   
+ 245   
+ 246   
+ 247  *park restrictions:
+ 248  parkCon_Q_rB_DA(t_hour)..                                       sum(s_DA, Q_rB_DA(t_hour, s_DA)) =l= parkCap * parkProfile(t_hour) - Q_rB_reload(t_hour, s_DA);
+****                $140                                                                                         $140          $140                                $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 249  parkCon_Q_rI_DA(t_hour)..                                       sum(s_DA, Q_rI_DA(t_hour, s_DA)) =l= parkCap * parkProfile(t_hour) - Q_rI_reload(t_hour, s_DA);
+****                $140                                                                                                                                           $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 250  parkCon_Q_rO_DA(t_hour)..                                       sum(s_DA, Q_rO_DA(t_hour, s_DA)) =l= parkCap * parkProfile(t_hour) - Q_rO_reload(t_hour, s_DA);
+****                $140                                                                                                                                           $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 251  parkCon_Q_rN_DA(t_hour)..                                       sum(s_DA, Q_rN_DA(t_hour, s_DA)) =l= parkCap * parkProfile(t_hour) - Q_rN_reload(t_hour, s_DA);
+****                $140                                                                                                                                           $149
+**** 140  Unknown symbol
+**** 149  Uncontrolled set entered as constant
+ 252   
+ 253   
+ 254   
+ 255   
+ 256  *market restrictions:
+ 257  marketCon_outrB_RA(t_quarter)..                                 sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA) * 4)              =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block));
+****                                                                                                                                                                                                         $148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+ 258  *marketCon_outrI_RA(t_quarter)..                                sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA) * 4)              =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block));
+ 259  marketCon_outrO_RA(t_quarter)..                                 sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA) * 4)              =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block));
+****                                                                                                                                                                                                         $148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+ 260  *marketCon_out_RA(t_quarter)..                                  sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA) * 4)              =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block));
+ 261   
+ 262  marketCon_inrB_RA(t_quarter)..                                  sum(s_in_RA, Q_inrB_RA(t_quarter, s_in_RA) * 4)                 =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block));
+****                                                                                                                                                                                                        $148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+ 263  marketCon_inrI_RA(t_quarter)..                                  sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA) * 4)                 =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block));
+****                                                                                                                                                                                                        $148
+**** 148  Dimension different - The symbol is referenced with more/less
+****         indices as declared
+ 264  *marketCon_inrO_RA(t_quarter)..                                 sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA) * 4)                 =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block));
+ 265  *marketCon_in_RA(t_quarter)..                                   sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA) * 4)                 =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block));
+ 266   
+ 267   
+ 268  Model testFirstDecision /all/;
+ 269  Solve testFirstDecision maximising Profit using LP;
+****                                                    $257
+**** 257  Solve statement not checked because of previous errors
+
+**** 162 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\final_firstDecision2.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\final_firstDecision2.lst
+
+**** USER ERROR(S) ENCOUNTERED

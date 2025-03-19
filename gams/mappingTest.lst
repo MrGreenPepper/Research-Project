@@ -1,0 +1,68 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/16/25 22:49:11 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  Sets
+   2      t_hour / h1*h2 /
+   3      t_quarter / q1*q8 /
+   4      sRL           /sRL1*sRL3/
+   5      sRA           /sRA1*sRA3/
+   6      map_quarter_hour(t_quarter, t_hour);
+   7   
+   8  Loop(t_hour,
+   9      Loop(t_quarter$(ord(t_quarter) > 4 * (ord(t_hour) - 1) and ord(t_quarter) <= 4 * ord(t_hour)),
+  10          map_quarter_hour(t_quarter, t_hour) = YES;
+  11      );
+  12  );
+  13   
+  14  Variables
+  15      obj "Zielfunktion"
+  16  ;
+  17   
+  18  Positive Variable
+  19      x_hour(t_hour, sRL)   "Entscheidung auf Stundenebene"
+  20      x_quarter(t_quarter, sRA) "Entscheidung auf Viertelstundenebene"
+  21  ;
+  22   
+  23  Equation
+  24   cost_eq
+  25   quarter_def
+  26   conx
+  27   cony
+  28  ;
+  29   
+  30  quarter_def(t_quarter)..                                        sum(sRA, x_quarter(t_quarter, sRA)) =g= sum((sRL, (t_hour$map_quarter_hour(t_quarter, t_hour))), x_hour(t_hour, sRL));
+****                                                                                                                    $2     $8                                  $10,119
+****   2  Identifier expected
+****   8  ')' expected
+****  10  ',' expected
+**** 119  Number (primary) expected
+  31  *sum(t_hour$map_quarter_hour(t_quarter, t_hour) --> ist nur für eine stunde wahr --> also aufsummierung über 1
+  32  cost_eq..                                                       obj =e= sum((t_hour, sRL), x_hour(t_hour, sRL)) + sum((t_quarter, sRA), x_quarter(t_quarter, sRA));
+  33   
+  34  conx(t_hour)..                                             sum(sRL, x_hour(t_hour, sRL)) =l= 150;
+  35  cony(t_quarter)..                                          sum(sRA, x_quarter(t_quarter, sRA)) =l= 110;
+  36   
+  37  Model myModel /all/;
+  38  Solve myModel using lp maximizing obj;
+****                                       $257
+**** 257  Solve statement not checked because of previous errors
+
+**** 5 ERROR(S)   0 WARNING(S)
+
+
+COMPILATION TIME     =        0.000 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+
+
+USER: Course License                                 S241105|0002AO-GEN
+      Dresden University of Technology                          DCE3851
+      License for teaching and research at degree granting institutions
+
+
+**** FILE SUMMARY
+
+Input      C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\mappingTest.gms
+Output     C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\mappingTest.lst
+
+**** USER ERROR(S) ENCOUNTERED

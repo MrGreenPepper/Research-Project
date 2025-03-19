@@ -1,0 +1,14 @@
+B 3 C o m p i l a t i o n
+B 37 Equation Listing    SOLVE myModel Using LP From line 26
+D 40 profitEQ
+D 45 con
+B 57 Column Listing      SOLVE myModel Using LP From line 26
+E 60 profit
+E 67 x
+B 87 Range Statistics    SOLVE myModel Using LP From line 26
+B 98 Model Statistics    SOLVE myModel Using LP From line 26
+B 111 Solution Report     SOLVE myModel Using LP From line 26
+F 144 profitEQ
+F 146 con
+G 173 profit
+G 175 x
