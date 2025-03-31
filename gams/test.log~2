@@ -1,0 +1,28 @@
+
+--- Job test.gms Start 03/31/25 16:30:31 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\46\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\test.gms"
+    PageSize 0
+    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\"
+    SysDir C:\GAMS\46\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Course License                                 S241105|0002AO-GEN
+          Dresden University of Technology                          DCE3851
+          C:\Users\sebas\Documents\GAMS\gamslice.txt
+          License Admin: Hannes Hobbie, hannes.hobbie@tu-dresden.de        
+          Course license for use within the course and related course work
+          The evaluation period of the license will expire on May 04, 2025
+Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
+GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+--- Starting compilation
+--- test.gms(23) 3 Mb
+--- Starting execution: elapsed 0:00:00.005
+--- test.gms(23) 4 Mb
+*** Status: Normal completion
+--- Job test.gms Stop 03/31/25 16:30:31 elapsed 0:00:00.005

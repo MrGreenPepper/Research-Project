@@ -1,0 +1,55 @@
+
+Parameters
+
+$call gdxxrw.exe negCap_scenarioPerc.xlsx par=omega_RL_in rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_omega_RL_in.txt
+$gdxIn negCap_scenarioPerc.gdx
+$load omega_RL_in(t_block, s_in_RL) 
+$gdxIn
+
+$call gdxxrw.exe negCap_scenarioValues.xlsx par=p_in_RL rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_p_in_RL.txt
+$gdxIn negCap_scenarioValues.gdx
+$load p_in_RL(t_block, s_in_RL) 
+$gdxIn
+
+$call gdxxrw.exe posCap_scenarioPerc.xlsx par=omega_RL_out rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_omega_RL_out.txt
+$gdxIn posCap_scenarioPerc.gdx
+$load omega_RL_out(t_block, s_out_RL) 
+$gdxIn
+
+$call gdxxrw.exe posCap_scenarioValues.xlsx par=p_out_RL rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_p_out_RL.txt
+$gdxIn posCap_scenarioValues.gdx
+$load p_out_RL(t_block, s_out_RL) 
+$gdxIn
+
+$call gdxxrw.exe da_prices_scenarioPerc.xlsx par=omega_DA rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_omega_DA.txt
+$gdxIn da_prices_scenarioPerc.gdx
+$load omega_DA(t_hour, s_DA) 
+$gdxIn
+
+$call gdxxrw.exe da_prices_scenarioValues.xlsx par=p_DA rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_p_DA.txt
+$gdxIn da_prices_scenarioValues.gdx
+$load p_DA(t_hour, s_DA) 
+$gdxIn
+
+$call gdxxrw.exe negEnAverage_scenarioPerc.xlsx par=omega_RA_in rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_omega_RA_in.txt
+$gdxIn negEnAverage_scenarioPerc.gdx
+$load omega_RA_in(t_quarter, s_in_RA) 
+$gdxIn
+
+$call gdxxrw.exe negEnAverage_scenarioValues.xlsx par=p_in_RA rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_p_in_RA.txt
+$gdxIn negEnAverage_scenarioValues.gdx
+$load p_in_RA(t_quarter, s_in_RA) 
+$gdxIn
+
+
+$call gdxxrw.exe posEnAverage_scenarioPerc.xlsx par=omega_RA_out rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_omega_RA_out.txt
+$gdxIn posEnAverage_scenarioPerc.gdx
+$load omega_RA_out(t_quarter, s_out_RA) 
+$gdxIn
+
+$call gdxxrw.exe posEnAverage_scenarioValues.xlsx par=p_out_RA rng=Sheet1 dim=2 rdim=1 cdim=1 log=log_p_out_RA.txt
+$gdxIn posEnAverage_scenarioValues.gdx
+$load p_out_RA(t_quarter, s_out_RA) 
+$gdxIn
+
+;

@@ -1,4 +1,4 @@
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 1
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 1
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 C o m p i l a t i o n
 
@@ -158,7 +158,7 @@ INCLUDE    C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\te
  230  *solves but in development
  231  solve test maximising profitG using RMPEC;
  232  *solve test maximising profit using RMIP;
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 2
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 2
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Include File Summary
 
@@ -169,8 +169,8 @@ Include File Summary
      2        4 INCLUDE        1       4  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\testData.gms
 
 
-COMPILATION TIME     =        5.938 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 3
+COMPILATION TIME     =        7.297 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 3
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Equation Listing    SOLVE test Using RMPEC From line 231
 
@@ -377,7 +377,7 @@ strategeChoiceTwoCon(t2)..  - StrategeChoiceTwo(t2,st1) - StrategeChoiceTwo(t2,s
      
 REMAINING 358 ENTRIES SKIPPED
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 4
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 4
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Column Listing      SOLVE test Using RMPEC From line 231
 
@@ -769,7 +769,7 @@ StrategeChoiceTwo(t0,st3)
        -1       strategeChoiceTwoCon(t0)
 
 REMAINING 1802 ENTRIES SKIPPED
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 5
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 5
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Range Statistics    SOLVE test Using RMPEC From line 231
 
@@ -780,7 +780,7 @@ RHS       [min, max] : [ 1.000E+00, 1.000E+02] - Zero values observed as well
 Bound     [min, max] : [ 1.000E+00, 1.000E+00] - Zero values observed as well
 Matrix    [min, max] : [ 1.000E+00, 1.036E+03]
 
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 6
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 6
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Model Statistics    SOLVE test Using RMPEC From line 231
 
@@ -794,7 +794,7 @@ CODE LENGTH                   0     CONSTANT POOL              16     DISCRETE V
 
 
 GENERATION TIME      =        0.062 SECONDS     13 MB  46.2.0 ac4adda6 WEX-WEI
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 7
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 7
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE test Using RMPEC From line 231
 
@@ -842,7 +842,7 @@ Michael Ferris, University of Wisconsin
 ***
 
 No solution returned
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 8
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 8
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE test Using RMPEC From line 231
 
@@ -877,12 +877,12 @@ Solution Report     SOLVE test Using RMPEC From line 231
 =C*** NLPEC      pf C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\pf.dat
 =C***
 **** SOLVER STATUS FILE LISTED ABOVE
-GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 02/20/25 14:03:23 Page 9
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 03/19/25 12:56:06 Page 9
 G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
 Solution Report     SOLVE test Using RMPEC From line 231
 
 
-EXECUTION TIME       =        2.015 SECONDS     13 MB  46.2.0 ac4adda6 WEX-WEI
+EXECUTION TIME       =       27.969 SECONDS     13 MB  46.2.0 ac4adda6 WEX-WEI
 
 
 USER: Course License                                 S241105|0002AO-GEN

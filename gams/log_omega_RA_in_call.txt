@@ -1,0 +1,4 @@
+GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAverage_scenarioPerc_call.xlsx
+Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAverage_scenarioPerc_call.gdx
+Total time = 5891 Ms

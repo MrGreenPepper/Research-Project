@@ -1,0 +1,7 @@
+GDXXRW           44.4.0 06604687 Sep 19, 2023          WEI x86 64bit/MS Window
+Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\Result_Miehle.gdx
+Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\Result_Miehle.xlsx
+**** No symbol was defined for range parameter a1:e160
+
+Any changes made to the spreadsheet were not saved
+Total time = 1704 Ms
