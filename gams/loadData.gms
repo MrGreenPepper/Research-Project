@@ -55,28 +55,39 @@ $gdxIn
 
 *RA
 
-Parameter RA_out_expV(t_quarter)
-$gdxIn posEnAvg_expValues.gdx
-$load RA_out_expV 
-$gdxIn
-;
+Scalars
 
-Parameter RA_in_expV(t_quarter)
-$gdxIn negEnAvg_expValues.gdx
-$load RA_in_expV 
-$gdxIn
+RA_out_expV         /169.19651581508515/
+RA_in_expV          /-15.332207041895279/
 ;
 
 
-Parameter omega_RA_in_call(t_quarter, s_in_RA)
-$gdxIn negEnAverage_scenarioPerc_call.gdx
+$call gdxxrw.exe RApriceDown_scenarioPerc.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
+Parameter omega_RA_in_call(s_in_RA)
+$gdxIn RApriceDown_scenarioPerc.gdx
 $load omega_RA_in_call 
 $gdxIn
 ;
 
-Parameter omega_RA_out_call(t_quarter, s_out_RA)
-$gdxIn posEnAverage_scenarioPerc_call.gdx
+$call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_out.txt
+Parameter omega_RA_out_call(s_out_RA)
+$gdxIn RApriceUP_scenarioPerc.gdx
 $load omega_RA_out_call 
+$gdxIn
+;
+
+
+$call gdxxrw.exe RA_probMods_pos.xlsx par=RA_probMod_pos rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_pos.txt
+Parameter RA_probMod_pos(ser)
+$gdxIn RA_probMods_pos.gdx
+$load RA_probMod_pos 
+$gdxIn
+;
+
+$call gdxxrw.exe RA_probMods_neg.xlsx par=RA_probMod_neg rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_neg.txt
+Parameter RA_probMod_neg(ser)
+$gdxIn RA_probMods_neg.gdx
+$load RA_probMod_neg 
 $gdxIn
 ;
 
@@ -117,5 +128,4 @@ $gdxIn windOnProfil_hour.gdx
 $load parkProfile
 $gdxIn
 ;
-
 

@@ -1,0 +1,80 @@
+
+--- Job testBinFunction.gms Start 03/31/25 23:50:13 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Applying:
+    C:\GAMS\46\gmsprmNT.txt
+--- GAMS Parameters defined
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\testBinFunction.gms"
+    PageSize 0
+    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\"
+    SysDir C:\GAMS\46\
+    LogOption 3
+    ErrMsg 1
+    ErrorLog 99
+    IDE 1
+    LstTitleLeftAligned 1
+Licensee: Course License                                 S241105|0002AO-GEN
+          Dresden University of Technology                          DCE3851
+          C:\Users\sebas\Documents\GAMS\gamslice.txt
+          License Admin: Hannes Hobbie, hannes.hobbie@tu-dresden.de        
+          Course license for use within the course and related course work
+          The evaluation period of the license will expire on May 04, 2025
+Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
+GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+--- Starting compilation
+--- testBinFunction.gms(40) 3 Mb
+--- Starting execution: elapsed 0:00:00.006
+--- Generating NLP model asdf
+--- testBinFunction.gms(35) 6 Mb
+---   10 rows  10 columns  21 non-zeroes
+---   51 nl-code  11 nl-non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 2.000E-01, 1.000E+02] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.000E+00, 1.000E+05] - Zero values observed as well
+--- testBinFunction.gms(35) 4 Mb
+--- Executing CONOPT (Solvelink=2): elapsed 0:00:00.009
+
+CONOPT 4         46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+
+ 
+ 
+    C O N O P T   version 4.33
+    Copyright (C) ARKI Consulting and Development A/S
+                  Bagsvaerdvej 246 A
+                  DK-2880 Bagsvaerd, Denmark
+ 
+    Will use up to 16 threads.
+ 
+ 
+    The user model has 10 constraints and 10 variables
+    with 21 Jacobian elements, 11 of which are nonlinear.
+    The Hessian of the Lagrangian has 3 elements on the diagonal,
+    3 elements below the diagonal, and 6 nonlinear variables.
+ 
+    Iter Phase   Ninf   Infeasibility   RGmax      NSB   Step  InItr MX OK
+       0   0          6.0000000000E-01 (Input point)
+ 
+    The pre-triangular part of the model has 4 constraints and 2 variables.
+    The post-triangular part of the model has 6 constraints and variables.
+ 
+    Preprocessed model has no constraints and 2 variables.
+ 
+    Iter Phase   Ninf   Infeasibility   RGmax      NSB   Step  InItr MX OK
+                      0.0000000000E+00 (Full preprocessed model)
+                      0.0000000000E+00 (After scaling)
+ 
+ ** Feasible solution. Value of objective =    0.00000000000
+ 
+    Iter Phase   Ninf     Objective     RGmax      NSB   Step  InItr MX OK
+       1   4          2.0000002000E+01 2.0E-01       2 1.0E+07     1 T  T
+       2   4          2.0000002000E+01 2.0E-08       1
+ 
+ ** Optimal solution. Reduced gradient less than tolerance.
+ 
+--- Reading solution for model asdf
+--- Executing after solve: elapsed 0:00:00.069
+--- testBinFunction.gms(39) 4 Mb
+--- testBinFunction.gms(40) 4 Mb
+--- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\test.gdx
+*** Status: Normal completion
+--- Job testBinFunction.gms Stop 03/31/25 23:50:17 elapsed 0:00:03.396

@@ -1,9 +1,10 @@
 
---- Job first.gms Start 03/20/25 03:52:25 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+Debug-Server started. Listening at port 3563
+--- Job first_optimised.gms Start 04/02/25 22:36:06 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first.gms"
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms"
     PageSize 0
     ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\"
     SysDir C:\GAMS\46\
@@ -19,11 +20,12 @@ Licensee: Course License                                 S241105|0002AO-GEN
           Course license for use within the course and related course work
           The evaluation period of the license will expire on May 04, 2025
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
-GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
+GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reservedDebug-Server: Socket connected to GAMS
+
 --- Starting compilation
---- first.gms(2) 2 Mb
---- . loadTestSet.gms(18) 3 Mb
---- first.gms(5) 3 Mb
+--- first_optimised.gms(2) 2 Mb
+--- . loadTestSet.gms(19) 3 Mb
+--- first_optimised.gms(5) 3 Mb
 --- . loadData.gms(5) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioPerc.gdx
@@ -47,81 +49,39 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- . loadData.gms(50) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
---- . loadData.gms(59) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAvg_expValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAvg_expValues.gdx
 --- . loadData.gms(65) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAvg_expValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAvg_expValues.gdx
+--- call gdxxrw.exe RApriceDown_scenarioValues.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
+--- . loadData.gms(67) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
 --- . loadData.gms(72) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAverage_scenarioPerc_call.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAverage_scenarioPerc_call.gdx
---- . loadData.gms(78) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAverage_scenarioPerc_call.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAverage_scenarioPerc_call.gdx
---- . loadData.gms(113) 3 Mb
+--- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
+--- . loadData.gms(74) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
+--- . loadData.gms(80) 3 Mb
+--- call gdxxrw.exe RA_probMods_pos.xlsx par=RA_probMod_pos rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_pos.txt
+--- . loadData.gms(82) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
+--- . loadData.gms(87) 3 Mb
+--- call gdxxrw.exe RA_probMods_neg.xlsx par=RA_probMod_neg rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_neg.txt
+--- . loadData.gms(89) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+--- . loadData.gms(124) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
---- . loadData.gms(121) 3 Mb
---- first.gms(411) 3 Mb
---- Starting execution: elapsed 0:00:01.116
---- first.gms(160) 4 Mb
---- Generating LP model testFirstDecision
---- first.gms(346) 29 Mb  3 secs
---- first.gms(547) 201 Mb
----   43,039 rows  559,427 columns  3,652,242 non-zeroes
---- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 9.498E-01, 2.317E+05] - Zero values observed as well
---- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 5.887E-04, 4.507E+02]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:16.589
+--- . loadData.gms(131) 3 Mb
+--- first_optimised.gms(716) 3 Mb
+--- Starting execution: elapsed 0:00:04.446
+--- first_optimised.gms(171) 4 Mb
+--- Generating NLP model testFirstDecision
+--- first_optimised.gms(765) 21 Mb
+*** Error at line 765: Execution halted: Triggered by pending CtrlC event
+--- first_optimised.gms(863) 18 Mb 1 Error
+*** SOLVE abortedDebug-Server: Socket disconnected
 
-IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
-
---- GAMS/CPLEX licensed for continuous and discrete problems.
---- GMO setup time: 0.00s
---- Space for names approximately 19.96 Mb
---- Use option 'names no' to turn use of names off
---- GMO memory 238.42 Mb (peak 242.68 Mb)
---- Dictionary memory 0.00 Mb
---- Cplex 22.1.1.0 link memory 11.16 Mb (peak 79.43 Mb)
---- Starting Cplex
-
-Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
-CPXPARAM_Advance                                 0
-CPXPARAM_MIP_Display                             4
-CPXPARAM_MIP_Pool_Capacity                       0
-CPXPARAM_MIP_Tolerances_AbsMIPGap                0
-Parallel mode: deterministic, using up to 16 threads for concurrent optimization:
- * Starting dual Simplex on 1 thread...
- * Starting Barrier on 14 threads...
- * Starting primal Simplex on 1 thread...
-Tried aggregator 1 time.
-LP Presolve eliminated 13446 rows and 192587 columns.
-Aggregator did 1920 substitutions.
-Reduced LP has 27672 rows, 364920 columns, and 1274807 nonzeros.
-Presolve time = 1.16 sec. (746.46 ticks)
-Initializing dual steep norms . . .
-
-Iteration log . . .
-Iteration:     1   Dual objective     =       9127597.442850
-Iteration:   810   Dual objective     =        166578.171936
-
-Dual simplex solved model.
-
-
---- LP status (1): optimal.
---- Cplex Time: 1.81sec (det. 1230.48 ticks)
-
-
-Optimal solution found
-Objective:       164388.276521
-
---- Reading solution for model testFirstDecision
---- first.gms(547) 201 Mb  5 secs
---- Executing after solve: elapsed 0:00:21.406
---- first.gms(549) 201 Mb
---- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\Result_Miehle.gdx
---- first.gms(550) 201 Mb
-*** Status: Normal completion
---- Job first.gms Stop 03/20/25 03:52:48 elapsed 0:00:22.214
+--- first_optimised.gms(863) 18 Mb 1 Error
+*** Status: Execution error(s)
+--- Job first_optimised.gms Stop 04/02/25 22:39:15 elapsed 0:03:09.052

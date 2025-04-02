@@ -31,10 +31,13 @@ Scalars
     batCosts    /60000/
     parkCap     /3/
     BatCap     /3/
+    m           /10000000/
 ;
 
 
 Variables
+seriesOne
+
 Profit
 profitRLout
 profitRLin
@@ -67,6 +70,92 @@ testV2
 testV3
 testV4
 ;
+
+
+
+Variable
+omega_RA_outrN_call
+omega_RA_outrB_call
+omega_RA_outrI_call
+omega_RA_outrO_call
+omega_RA_inrN_call
+omega_RA_inrB_call
+omega_RA_inrI_call
+omega_RA_inrO_call
+
+probMod1_Q_outrN
+probMod2_Q_outrN
+probMod3_Q_outrN
+probMod4_Q_outrN
+probMod5_Q_outrN
+probMod6_Q_outrN
+probMod7_Q_outrN
+probMod8_Q_outrN
+
+probMod1_Q_outrB
+probMod2_Q_outrB
+probMod3_Q_outrB
+probMod4_Q_outrB
+probMod5_Q_outrB
+probMod6_Q_outrB
+probMod7_Q_outrB
+probMod8_Q_outrB
+
+probMod1_Q_outrI
+probMod2_Q_outrI
+probMod3_Q_outrI
+probMod4_Q_outrI
+probMod5_Q_outrI
+probMod6_Q_outrI
+probMod7_Q_outrI
+probMod8_Q_outrI
+
+probMod1_Q_outrO
+probMod2_Q_outrO
+probMod3_Q_outrO
+probMod4_Q_outrO
+probMod5_Q_outrO
+probMod6_Q_outrO
+probMod7_Q_outrO
+probMod8_Q_outrO
+
+probMod1_Q_inrN
+probMod2_Q_inrN
+probMod3_Q_inrN
+probMod4_Q_inrN
+probMod5_Q_inrN
+probMod6_Q_inrN
+probMod7_Q_inrN
+probMod8_Q_inrN
+
+probMod1_Q_inrB
+probMod2_Q_inrB
+probMod3_Q_inrB
+probMod4_Q_inrB
+probMod5_Q_inrB
+probMod6_Q_inrB
+probMod7_Q_inrB
+probMod8_Q_inrB
+
+probMod1_Q_inrI
+probMod2_Q_inrI
+probMod3_Q_inrI
+probMod4_Q_inrI
+probMod5_Q_inrI
+probMod6_Q_inrI
+probMod7_Q_inrI
+probMod8_Q_inrI
+
+probMod1_Q_inrO
+probMod2_Q_inrO
+probMod3_Q_inrO
+probMod4_Q_inrO
+probMod5_Q_inrO
+probMod6_Q_inrO
+probMod7_Q_inrO
+probMod8_Q_inrO
+;
+
 Positive Variables 
 
 BatStat(t_quarter)
@@ -200,6 +289,82 @@ sum_Q_reload_EQ
 *testEQ2
 *testEQ3
 testEQ4
+
+*series probabilty modifications
+RA_probMod1_Q_outrN
+RA_probMod2_Q_outrN
+RA_probMod3_Q_outrN
+RA_probMod4_Q_outrN
+RA_probMod5_Q_outrN
+RA_probMod6_Q_outrN
+RA_probMod7_Q_outrN
+RA_probMod8_Q_outrN
+RA_probMod1_Q_outrB
+RA_probMod2_Q_outrB
+RA_probMod3_Q_outrB
+RA_probMod4_Q_outrB
+RA_probMod5_Q_outrB
+RA_probMod6_Q_outrB
+RA_probMod7_Q_outrB
+RA_probMod8_Q_outrB
+RA_probMod1_Q_outrI
+RA_probMod2_Q_outrI
+RA_probMod3_Q_outrI
+RA_probMod4_Q_outrI
+RA_probMod5_Q_outrI
+RA_probMod6_Q_outrI
+RA_probMod7_Q_outrI
+RA_probMod8_Q_outrI
+RA_probMod1_Q_outrO
+RA_probMod2_Q_outrO
+RA_probMod3_Q_outrO
+RA_probMod4_Q_outrO
+RA_probMod5_Q_outrO
+RA_probMod6_Q_outrO
+RA_probMod7_Q_outrO
+RA_probMod8_Q_outrO
+RA_probMod1_Q_inrN
+RA_probMod2_Q_inrN
+RA_probMod3_Q_inrN
+RA_probMod4_Q_inrN
+RA_probMod5_Q_inrN
+RA_probMod6_Q_inrN
+RA_probMod7_Q_inrN
+RA_probMod8_Q_inrN
+RA_probMod1_Q_inrB
+RA_probMod2_Q_inrB
+RA_probMod3_Q_inrB
+RA_probMod4_Q_inrB
+RA_probMod5_Q_inrB
+RA_probMod6_Q_inrB
+RA_probMod7_Q_inrB
+RA_probMod8_Q_inrB
+RA_probMod1_Q_inrI
+RA_probMod2_Q_inrI
+RA_probMod3_Q_inrI
+RA_probMod4_Q_inrI
+RA_probMod5_Q_inrI
+RA_probMod6_Q_inrI
+RA_probMod7_Q_inrI
+RA_probMod8_Q_inrI
+RA_probMod1_Q_inrO
+RA_probMod2_Q_inrO
+RA_probMod3_Q_inrO
+RA_probMod4_Q_inrO
+RA_probMod5_Q_inrO
+RA_probMod6_Q_inrO
+RA_probMod7_Q_inrO
+RA_probMod8_Q_inrO
+
+calc_omega_RA_outrN_callEQ(t_quarter, s_out_RA)
+calc_omega_RA_outrB_callEQ(t_quarter, s_out_RA)
+calc_omega_RA_outrI_callEQ(t_quarter, s_out_RA)
+calc_omega_RA_outrO_callEQ(t_quarter, s_out_RA)
+calc_omega_RA_inrN_callEQ(t_quarter, s_in_RA)
+calc_omega_RA_inrB_callEQ(t_quarter, s_in_RA)
+calc_omega_RA_inrI_callEQ(t_quarter, s_in_RA)
+calc_omega_RA_inrO_callEQ(t_quarter, s_in_RA)
+
 ;
 
 
@@ -212,31 +377,31 @@ profitEQ..      Profit  =e=
                         + (4 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))                        
                         + (4 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
                         + sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rB_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)  ))
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)))        
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA))    )  ) ) )
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV * sum(s_in_RA, Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrB_call(t_quarter, s_in_RA)))        
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrB_call(t_quarter, s_out_RA))    )  ) ) )
 *accepted RL in     \ declined out:
                 + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (
                         + (4 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))                        
                         + sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rI_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)))      
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA))    )  ) ) )                          
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV * sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrI_call(t_quarter, s_in_RA)))      
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrI_call(t_quarter, s_out_RA))    )  ) ) )                          
 *declined RL in     \ accepted out:
                 + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (
                         + (4 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
                         + sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rO_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)))       
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_out_call(t_quarter, s_out_RA))    )  ) ) )
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV * sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrO_call(t_quarter, s_in_RA)))       
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_outrO_call(t_quarter, s_out_RA))    )  ) ) )
 *declined RL in\ out:
                 + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (
                         + sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rN_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)))        
-                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_out_call(t_quarter, s_out_RA)))  ) ) )
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV * sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrN_call(t_quarter, s_in_RA)))        
+                        + 0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_outrN_call(t_quarter, s_out_RA)))  ) ) )
                 );
  
-*testEQ1(s_in_RL, s_out_RL)..                       testV1(s_in_RL, s_out_RL) =e=  sum(t_block, omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))* (sum(t_quarter, RA_in_expV(t_quarter) * Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)));
+*testEQ1(s_in_RL, s_out_RL)..                       testV1(s_in_RL, s_out_RL) =e=  sum(t_block, omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))* (sum(t_quarter, RA_in_expV * Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)));
 *testEQ2(s_in_RL, s_out_RL)..                       testV2(s_in_RL, s_out_RL) =e= sum(t_quarter, Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL));
 *testEQ3(s_in_RL, s_out_RL)..                       testV3(s_in_RL, s_out_RL) =e= sum(t_quarter, omega_RA_in_call(t_quarter, s_in_RA));
-testEQ4(s_in_RL, s_out_RL)..                       testV4(s_in_RL, s_out_RL) =e= sum(t_quarter, RA_in_expV(t_quarter));
+testEQ4(s_in_RL, s_out_RL)..                       testV4(s_in_RL, s_out_RL) =e= sum(t_quarter, RA_in_expV);
 
 *profits
 profit_RLout_EQ..                       profitRLout =e= + sum(t_block,
@@ -263,24 +428,24 @@ profit_DA_EQ..                          profitDA =e= sum(t_block,
                                                 + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rN_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
                                                 )))
                                                 );
-profit_RAout_EQ..                       profitRAout =e= sum(t_block,
-                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA) )    )
+profit_RAin_EQ..                       profitRAin =e= sum(t_block,
+                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_in_expV * sum(s_in_RA, Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)  * omega_RA_inrB_call(t_quarter, s_in_RA) )    )
                                                 )))
-                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA) )      )
+                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  RA_in_expV * sum(s_in_RA, Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrI_call(t_quarter, s_in_RA) )      )
                                                 )))
-                                                + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA) )      )
+                                                + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  RA_in_expV * sum(s_in_RA, Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrO_call(t_quarter, s_in_RA) )      )
                                                 )))
-                                                + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  RA_in_expV(t_quarter) * sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA) )      )
+                                                + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  RA_in_expV * sum(s_in_RA, Q_inrN_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_inrN_call(t_quarter, s_in_RA) )      )
                                                 )))
                                                 );
-profit_RAin_EQ..                        profitRAin =e= sum(t_block,
-                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA) )    )
+profit_RAout_EQ..                        profitRAout =e= sum(t_block,
+                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrB_call(t_quarter, s_out_RA) )    )
                                                 )))
-                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA) )    )
+                                                + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrI_call(t_quarter, s_out_RA) )    )
                                                 )))
-                                                + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_out_call(t_quarter, s_out_RA) )    )
+                                                + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_outrO_call(t_quarter, s_out_RA) )    )
                                                 )))
-                                                + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV(t_quarter) * sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_out_call(t_quarter, s_out_RA) )    )
+                                                + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), RA_out_expV * sum(s_out_RA, Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) * omega_RA_outrN_call(t_quarter, s_out_RA) )    )
                                                 )))
                                                 );
 
@@ -359,29 +524,169 @@ batStatcon_(t_quarter)..                    BatStat(t_quarter + 1) =e= BatStat(t
 *accepted  RL\ in \ out:
                 +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)))           * (
                         + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_reload(t_hour, s_in_RL, s_out_RL) / 4)                                                         
-                        + sum(s_in_RA, (Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)    * omega_RA_in_call(t_quarter, s_in_RA)))
-                        - sum(s_out_RA, (Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA)))   )))     
+                        + sum(s_in_RA, (Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)    * omega_RA_inrB_call(t_quarter, s_in_RA)))
+                        - sum(s_out_RA, (Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrB_call(t_quarter, s_out_RA)))   )))     
 *
 *accepted RL in     \ declined out:
                 +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))       * (
                         + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_reload(t_hour, s_in_RL, s_out_RL) / 4)                                                        
-                        + sum(s_in_RA, (Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)    * omega_RA_in_call(t_quarter, s_in_RA)))
-                        - sum(s_out_RA, (Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA)))   )))
+                        + sum(s_in_RA, (Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)    * omega_RA_inrI_call(t_quarter, s_in_RA)))
+                        - sum(s_out_RA, (Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrI_call(t_quarter, s_out_RA)))   )))
                             
 *declined RL in     \ accepted out:
                 +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL)))       * (
                         + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_reload(t_hour, s_in_RL, s_out_RL) / 4)                                                        
-                        + sum(s_in_RA, (Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)    * omega_RA_in_call(t_quarter, s_in_RA)))
-                        - sum(s_out_RA, (Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA)))   )))     
+                        + sum(s_in_RA, (Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)    * omega_RA_inrO_call(t_quarter, s_in_RA)))
+                        - sum(s_out_RA, (Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrO_call(t_quarter, s_out_RA)))   )))     
 *
 *declined RL in\ out:
                 +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))))       * (
                         + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_reload(t_hour, s_in_RL, s_out_RL) / 4)                                                        
-                        + sum(s_in_RA, (Q_inrN_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)        * omega_RA_in_call(t_quarter, s_in_RA)))
-                        - sum(s_out_RA, (Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_out_call(t_quarter, s_out_RA)))   )));
+                        + sum(s_in_RA, (Q_inrN_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL)        * omega_RA_inrN_call(t_quarter, s_in_RA)))
+                        - sum(s_out_RA, (Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL)  * omega_RA_outrN_call(t_quarter, s_out_RA) ))   )));
 *
                     
-                            
+*spmOne(t_quarter, s_out_RA, s_in_RL, s_out_RL)..                         testSPM(t_quarter, s_out_RA) =e= omega_RA_out_call(t_quarter, s_out_RA) - 0.1 * seriesOne(t_quarter, s_out_RA, s_in_RL, s_out_RL);
+*binconO(t_quarter, s_out_RA, s_in_RL, s_out_RL)..                         0 =l= Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) + (m * (1-seriesOne(t_quarter, s_out_RA, s_in_RL, s_out_RL)));                                         
+*binconT(t_quarter, s_out_RA, s_in_RL, s_out_RL)..                         0 =g= Q_outrN_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL) - (m * seriesOne(t_quarter, s_out_RA, s_in_RL, s_out_RL)); 
+
+
+*RA dynamics 
+*out
+RA_probMod1_Q_outrN(t_quarter)..                         probMod1_Q_outrN(t_quarter) =e= RA_probMod_pos('ser1') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 1, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_outrN(t_quarter)..                         probMod2_Q_outrN(t_quarter) =e= RA_probMod_pos('ser2') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 2, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_outrN(t_quarter)..                         probMod3_Q_outrN(t_quarter) =e= RA_probMod_pos('ser3') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 3, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_outrN(t_quarter)..                         probMod4_Q_outrN(t_quarter) =e= RA_probMod_pos('ser4') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 4, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_outrN(t_quarter)..                         probMod5_Q_outrN(t_quarter) =e= RA_probMod_pos('ser5') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 5, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_outrN(t_quarter)..                         probMod6_Q_outrN(t_quarter) =e= RA_probMod_pos('ser6') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 6, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_outrN(t_quarter)..                         probMod7_Q_outrN(t_quarter) =e= RA_probMod_pos('ser7') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 7, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_outrN(t_quarter)..                         probMod8_Q_outrN(t_quarter) =e= RA_probMod_pos('ser8') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter - 8, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_outrN_callEQ(t_quarter, s_out_RA)..					omega_RA_outrN_call(t_quarter, s_out_RA) =e= omega_RA_out_call(s_out_RA) * (1 - probMod1_Q_outrN(t_quarter) + probMod2_Q_outrN(t_quarter) 
+																														+ probMod3_Q_outrN(t_quarter) + probMod4_Q_outrN(t_quarter) + probMod5_Q_outrN(t_quarter) 
+																														+ probMod6_Q_outrN(t_quarter) + probMod7_Q_outrN(t_quarter) + probMod8_Q_outrN(t_quarter)
+																														- probMod1_Q_inrN(t_quarter) - probMod2_Q_inrN(t_quarter) 
+																														- probMod3_Q_inrN(t_quarter) - probMod4_Q_inrN(t_quarter) - probMod5_Q_inrN(t_quarter) 
+																														- probMod6_Q_inrN(t_quarter) - probMod7_Q_inrN(t_quarter) - probMod8_Q_inrN(t_quarter));
+
+
+RA_probMod1_Q_outrB(t_quarter)..                         probMod1_Q_outrB(t_quarter) =e= RA_probMod_pos('ser1') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 1, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_outrB(t_quarter)..                         probMod2_Q_outrB(t_quarter) =e= RA_probMod_pos('ser2') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 2, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_outrB(t_quarter)..                         probMod3_Q_outrB(t_quarter) =e= RA_probMod_pos('ser3') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 3, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_outrB(t_quarter)..                         probMod4_Q_outrB(t_quarter) =e= RA_probMod_pos('ser4') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 4, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_outrB(t_quarter)..                         probMod5_Q_outrB(t_quarter) =e= RA_probMod_pos('ser5') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 5, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_outrB(t_quarter)..                         probMod6_Q_outrB(t_quarter) =e= RA_probMod_pos('ser6') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 6, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_outrB(t_quarter)..                         probMod7_Q_outrB(t_quarter) =e= RA_probMod_pos('ser7') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 7, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_outrB(t_quarter)..                         probMod8_Q_outrB(t_quarter) =e= RA_probMod_pos('ser8') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter - 8, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_outrB_callEQ(t_quarter, s_out_RA)..					omega_RA_outrB_call(t_quarter, s_out_RA) =e= omega_RA_out_call(s_out_RA) * (1 - probMod1_Q_outrB(t_quarter) + probMod2_Q_outrB(t_quarter) 
+																														+ probMod3_Q_outrB(t_quarter) + probMod4_Q_outrB(t_quarter) + probMod5_Q_outrB(t_quarter) 
+																														+ probMod6_Q_outrB(t_quarter) + probMod7_Q_outrB(t_quarter) + probMod8_Q_outrB(t_quarter)
+																														- probMod1_Q_inrB(t_quarter) - probMod2_Q_inrB(t_quarter) 
+																														- probMod3_Q_inrB(t_quarter) - probMod4_Q_inrB(t_quarter) - probMod5_Q_inrB(t_quarter) 
+																														- probMod6_Q_inrB(t_quarter) - probMod7_Q_inrB(t_quarter) - probMod8_Q_inrB(t_quarter));
+
+
+RA_probMod1_Q_outrI(t_quarter)..                         probMod1_Q_outrI(t_quarter) =e= RA_probMod_pos('ser1') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 1, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_outrI(t_quarter)..                         probMod2_Q_outrI(t_quarter) =e= RA_probMod_pos('ser2') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 2, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_outrI(t_quarter)..                         probMod3_Q_outrI(t_quarter) =e= RA_probMod_pos('ser3') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 3, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_outrI(t_quarter)..                         probMod4_Q_outrI(t_quarter) =e= RA_probMod_pos('ser4') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 4, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_outrI(t_quarter)..                         probMod5_Q_outrI(t_quarter) =e= RA_probMod_pos('ser5') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 5, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_outrI(t_quarter)..                         probMod6_Q_outrI(t_quarter) =e= RA_probMod_pos('ser6') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 6, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_outrI(t_quarter)..                         probMod7_Q_outrI(t_quarter) =e= RA_probMod_pos('ser7') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 7, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_outrI(t_quarter)..                         probMod8_Q_outrI(t_quarter) =e= RA_probMod_pos('ser8') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter - 8, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_outrI_callEQ(t_quarter, s_out_RA)..					omega_RA_outrI_call(t_quarter, s_out_RA) =e= omega_RA_out_call(s_out_RA) * (1 - probMod1_Q_outrI(t_quarter) + probMod2_Q_outrI(t_quarter) 
+																														+ probMod3_Q_outrI(t_quarter) + probMod4_Q_outrI(t_quarter) + probMod5_Q_outrI(t_quarter) 
+																														+ probMod6_Q_outrI(t_quarter) + probMod7_Q_outrI(t_quarter) + probMod8_Q_outrI(t_quarter)
+																														- probMod1_Q_inrI(t_quarter) - probMod2_Q_inrI(t_quarter) 
+																														- probMod3_Q_inrI(t_quarter) - probMod4_Q_inrI(t_quarter) - probMod5_Q_inrI(t_quarter) 
+																														- probMod6_Q_inrI(t_quarter) - probMod7_Q_inrI(t_quarter) - probMod8_Q_inrI(t_quarter));
+
+
+
+RA_probMod1_Q_outrO(t_quarter)..                         probMod1_Q_outrO(t_quarter) =e= RA_probMod_pos('ser1') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 1, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_outrO(t_quarter)..                         probMod2_Q_outrO(t_quarter) =e= RA_probMod_pos('ser2') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 2, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_outrO(t_quarter)..                         probMod3_Q_outrO(t_quarter) =e= RA_probMod_pos('ser3') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 3, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_outrO(t_quarter)..                         probMod4_Q_outrO(t_quarter) =e= RA_probMod_pos('ser4') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 4, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_outrO(t_quarter)..                         probMod5_Q_outrO(t_quarter) =e= RA_probMod_pos('ser5') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 5, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_outrO(t_quarter)..                         probMod6_Q_outrO(t_quarter) =e= RA_probMod_pos('ser6') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 6, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_outrO(t_quarter)..                         probMod7_Q_outrO(t_quarter) =e= RA_probMod_pos('ser7') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 7, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_outrO(t_quarter)..                         probMod8_Q_outrO(t_quarter) =e= RA_probMod_pos('ser8') * (1- (1/((10000 * sum((s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter - 8, s_out_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_outrO_callEQ(t_quarter, s_out_RA)..					omega_RA_outrO_call(t_quarter, s_out_RA) =e= omega_RA_out_call(s_out_RA) * (1 - probMod1_Q_outrO(t_quarter) + probMod2_Q_outrO(t_quarter) 
+																														+ probMod3_Q_outrO(t_quarter) + probMod4_Q_outrO(t_quarter) + probMod5_Q_outrO(t_quarter) 
+																														+ probMod6_Q_outrO(t_quarter) + probMod7_Q_outrO(t_quarter) + probMod8_Q_outrO(t_quarter)
+																														- probMod1_Q_inrO(t_quarter) - probMod2_Q_inrO(t_quarter)
+																														- probMod3_Q_inrO(t_quarter) - probMod4_Q_inrO(t_quarter) - probMod5_Q_inrO(t_quarter) 
+																														- probMod6_Q_inrO(t_quarter) - probMod7_Q_inrO(t_quarter) - probMod8_Q_inrO(t_quarter));
+
+
+*in
+RA_probMod1_Q_inrN(t_quarter)..                         probMod1_Q_inrN(t_quarter) =e= RA_probMod_neg('ser1') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 1, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_inrN(t_quarter)..                         probMod2_Q_inrN(t_quarter) =e= RA_probMod_neg('ser2') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 2, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_inrN(t_quarter)..                         probMod3_Q_inrN(t_quarter) =e= RA_probMod_neg('ser3') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 3, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_inrN(t_quarter)..                         probMod4_Q_inrN(t_quarter) =e= RA_probMod_neg('ser4') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 4, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_inrN(t_quarter)..                         probMod5_Q_inrN(t_quarter) =e= RA_probMod_neg('ser5') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 5, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_inrN(t_quarter)..                         probMod6_Q_inrN(t_quarter) =e= RA_probMod_neg('ser6') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 6, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_inrN(t_quarter)..                         probMod7_Q_inrN(t_quarter) =e= RA_probMod_neg('ser7') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 7, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_inrN(t_quarter)..                         probMod8_Q_inrN(t_quarter) =e= RA_probMod_neg('ser8') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 8, s_in_RA, s_in_RL, s_out_RL)) +1 )))); 
+
+calc_omega_RA_inrN_callEQ(t_quarter, s_in_RA).. 					omega_RA_inrN_call(t_quarter, s_in_RA) =e= omega_RA_in_call(s_in_RA) * (1 - probMod1_Q_inrN(t_quarter) + probMod2_Q_inrN(t_quarter) 
+																														+ probMod3_Q_inrN(t_quarter) + probMod4_Q_inrN(t_quarter) + probMod5_Q_inrN(t_quarter) 
+																														+ probMod6_Q_inrN(t_quarter) + probMod7_Q_inrN(t_quarter) + probMod8_Q_inrN(t_quarter)
+																														- probMod1_Q_outrN(t_quarter) - probMod2_Q_outrN(t_quarter) 
+																														- probMod3_Q_outrN(t_quarter) - probMod4_Q_outrN(t_quarter) - probMod5_Q_outrN(t_quarter) 
+																														- probMod6_Q_outrN(t_quarter) - probMod7_Q_outrN(t_quarter) - probMod8_Q_outrN(t_quarter));
+
+RA_probMod1_Q_inrB(t_quarter)..                         probMod1_Q_inrB(t_quarter) =e= RA_probMod_neg('ser1') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 1, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_inrB(t_quarter)..                         probMod2_Q_inrB(t_quarter) =e= RA_probMod_neg('ser2') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 2, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_inrB(t_quarter)..                         probMod3_Q_inrB(t_quarter) =e= RA_probMod_neg('ser3') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 3, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_inrB(t_quarter)..                         probMod4_Q_inrB(t_quarter) =e= RA_probMod_neg('ser4') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 4, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_inrB(t_quarter)..                         probMod5_Q_inrB(t_quarter) =e= RA_probMod_neg('ser5') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 5, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_inrB(t_quarter)..                         probMod6_Q_inrB(t_quarter) =e= RA_probMod_neg('ser6') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 6, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_inrB(t_quarter)..                         probMod7_Q_inrB(t_quarter) =e= RA_probMod_neg('ser7') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 7, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_inrB(t_quarter)..                         probMod8_Q_inrB(t_quarter) =e= RA_probMod_neg('ser8') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter - 8, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_inrB_callEQ(t_quarter, s_in_RA).. 					omega_RA_inrB_call(t_quarter, s_in_RA) =e= omega_RA_in_call(s_in_RA) * (1 - probMod1_Q_inrB(t_quarter) + probMod2_Q_inrB(t_quarter) 
+																														+ probMod3_Q_inrB(t_quarter) + probMod4_Q_inrB(t_quarter) + probMod5_Q_inrB(t_quarter) 
+																														+ probMod6_Q_inrB(t_quarter) + probMod7_Q_inrB(t_quarter) + probMod8_Q_inrB(t_quarter)
+																														- probMod1_Q_outrB(t_quarter) - probMod2_Q_outrB(t_quarter) 
+																														- probMod3_Q_outrB(t_quarter) - probMod4_Q_outrB(t_quarter) - probMod5_Q_outrB(t_quarter) 
+																														- probMod6_Q_outrB(t_quarter) - probMod7_Q_outrB(t_quarter) - probMod8_Q_outrB(t_quarter));
+
+RA_probMod1_Q_inrI(t_quarter)..                         probMod1_Q_inrI(t_quarter) =e= RA_probMod_neg('ser1') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 1, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_inrI(t_quarter)..                         probMod2_Q_inrI(t_quarter) =e= RA_probMod_neg('ser2') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 2, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_inrI(t_quarter)..                         probMod3_Q_inrI(t_quarter) =e= RA_probMod_neg('ser3') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 3, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_inrI(t_quarter)..                         probMod4_Q_inrI(t_quarter) =e= RA_probMod_neg('ser4') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 4, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_inrI(t_quarter)..                         probMod5_Q_inrI(t_quarter) =e= RA_probMod_neg('ser5') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 5, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_inrI(t_quarter)..                         probMod6_Q_inrI(t_quarter) =e= RA_probMod_neg('ser6') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 6, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_inrI(t_quarter)..                         probMod7_Q_inrI(t_quarter) =e= RA_probMod_neg('ser7') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 7, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_inrI(t_quarter)..                         probMod8_Q_inrI(t_quarter) =e= RA_probMod_neg('ser8') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter - 8, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_inrI_callEQ(t_quarter, s_in_RA).. 					omega_RA_inrI_call(t_quarter, s_in_RA) =e= omega_RA_in_call(s_in_RA) * (1 - probMod1_Q_inrI(t_quarter) + probMod2_Q_inrI(t_quarter) 
+																														+ probMod3_Q_inrI(t_quarter) + probMod4_Q_inrI(t_quarter) + probMod5_Q_inrI(t_quarter) 
+																														+ probMod6_Q_inrI(t_quarter) + probMod7_Q_inrI(t_quarter) + probMod8_Q_inrI(t_quarter)
+																														- probMod1_Q_outrI(t_quarter) - probMod2_Q_outrI(t_quarter) 
+																														- probMod3_Q_outrI(t_quarter) - probMod4_Q_outrI(t_quarter) - probMod5_Q_outrI(t_quarter) 
+																														- probMod6_Q_outrI(t_quarter) - probMod7_Q_outrI(t_quarter) - probMod8_Q_outrI(t_quarter));
+
+RA_probMod1_Q_inrO(t_quarter)..                         probMod1_Q_inrO(t_quarter) =e= RA_probMod_neg('ser1') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 1, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod2_Q_inrO(t_quarter)..                         probMod2_Q_inrO(t_quarter) =e= RA_probMod_neg('ser2') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 2, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod3_Q_inrO(t_quarter)..                         probMod3_Q_inrO(t_quarter) =e= RA_probMod_neg('ser3') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 3, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod4_Q_inrO(t_quarter)..                         probMod4_Q_inrO(t_quarter) =e= RA_probMod_neg('ser4') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 4, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod5_Q_inrO(t_quarter)..                         probMod5_Q_inrO(t_quarter) =e= RA_probMod_neg('ser5') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 5, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod6_Q_inrO(t_quarter)..                         probMod6_Q_inrO(t_quarter) =e= RA_probMod_neg('ser6') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 6, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod7_Q_inrO(t_quarter)..                         probMod7_Q_inrO(t_quarter) =e= RA_probMod_neg('ser7') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter - 7, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+RA_probMod8_Q_inrO(t_quarter)..                         probMod8_Q_inrO(t_quarter) =e= RA_probMod_neg('ser8') * (1- (1/((10000 * sum((s_in_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter - 8, s_in_RA, s_in_RL, s_out_RL)) +1 ))));
+
+calc_omega_RA_inrO_callEQ(t_quarter, s_in_RA)..					omega_RA_inrO_call(t_quarter, s_in_RA) =e= omega_RA_in_call(s_in_RA) * (1 - probMod1_Q_inrO(t_quarter) + probMod2_Q_inrO(t_quarter) 
+																														+ probMod3_Q_inrO(t_quarter) + probMod4_Q_inrO(t_quarter) + probMod5_Q_inrO(t_quarter) 
+																														+ probMod6_Q_inrO(t_quarter) + probMod7_Q_inrO(t_quarter) + probMod8_Q_inrO(t_quarter)
+																														- probMod1_Q_outrO(t_quarter) - probMod2_Q_outrO(t_quarter) 
+																														- probMod3_Q_outrO(t_quarter) - probMod4_Q_outrO(t_quarter) - probMod5_Q_outrO(t_quarter) 
+																														- probMod6_Q_outrO(t_quarter) - probMod7_Q_outrO(t_quarter) - probMod8_Q_outrO(t_quarter));
+
 
 *park restrictions:
 parkCon_Q_rB_DA(t_hour)..                   sum((s_DA, s_in_RL, s_out_RL), Q_rB_DA(t_hour, s_in_RL, s_out_RL)) =l= parkCap * parkProfile(t_hour) - sum((s_DA, s_in_RL, s_out_RL), Q_rB_reload(t_hour, s_in_RL, s_out_RL));
@@ -405,7 +710,7 @@ marketCon_inrI_RA(t_quarter, s_in_RL, s_out_RL)..                  sum(s_in_RA, 
 
 
 Model testFirstDecision /all/;
-Solve testFirstDecision maximising Profit using LP;
+Solve testFirstDecision maximising Profit using NLP;
 
 execute_unload "Result_Miehle.gdx" BatStat.l
 execute 'gdxxrw.exe Result_Miehle.gdx rng=a1:e160 par=BatStat log=log_exe_test.txt'

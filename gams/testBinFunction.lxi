@@ -1,0 +1,24 @@
+B 3 C o m p i l a t i o n
+B 51 Equation Listing    SOLVE asdf Using NLP From line 35
+D 54 uplimit
+D 63 profiteq
+D 68 test
+D 77 saveeq
+B 87 Column Listing      SOLVE asdf Using NLP From line 35
+E 90 q
+E 113 Profit
+E 120 w
+E 138 save
+B 154 Range Statistics    SOLVE asdf Using NLP From line 35
+B 165 Model Statistics    SOLVE asdf Using NLP From line 35
+B 179 Solution Report     SOLVE asdf Using NLP From line 35
+F 226 uplimit
+F 236 profiteq
+F 238 test
+F 246 saveeq
+G 254 q
+G 264 Profit
+G 266 w
+G 274 save
+B 289 E x e c u t i o n
+I 289 w

@@ -8,6 +8,7 @@ s_out_RA            /s5, s10, s15/
 t_block                / b1*b6 /
 t_hour             / h1*h24 /   
 t_quarter          / q1*q96 /
+ser                 /ser1 * ser8/
 ;
 
 Sets

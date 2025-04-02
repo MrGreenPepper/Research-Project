@@ -1,9 +1,11 @@
 
---- Job first.gms Start 03/20/25 03:52:00 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+Debug-Server started. Listening at port 3563
+Debug-Server: Socket connected to GAMS
+--- Job first_optimised.gms Start 04/02/25 22:39:16 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first.gms"
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms"
     PageSize 0
     ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\"
     SysDir C:\GAMS\46\
@@ -21,9 +23,9 @@ Licensee: Course License                                 S241105|0002AO-GEN
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
---- first.gms(2) 2 Mb
---- . loadTestSet.gms(18) 3 Mb
---- first.gms(5) 3 Mb
+--- first_optimised.gms(2) 2 Mb
+--- . loadTestSet.gms(19) 3 Mb
+--- first_optimised.gms(5) 3 Mb
 --- . loadData.gms(5) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioPerc.gdx
@@ -47,34 +49,39 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- . loadData.gms(50) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
---- . loadData.gms(59) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAvg_expValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAvg_expValues.gdx
 --- . loadData.gms(65) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAvg_expValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAvg_expValues.gdx
+--- call gdxxrw.exe RApriceDown_scenarioPerc.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
+--- . loadData.gms(67) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
 --- . loadData.gms(72) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAverage_scenarioPerc_call.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negEnAverage_scenarioPerc_call.gdx
---- . loadData.gms(78) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAverage_scenarioPerc_call.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posEnAverage_scenarioPerc_call.gdx
---- . loadData.gms(113) 3 Mb
+--- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
+--- . loadData.gms(74) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
+--- . loadData.gms(80) 3 Mb
+--- call gdxxrw.exe RA_probMods_pos.xlsx par=RA_probMod_pos rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_pos.txt
+--- . loadData.gms(82) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
+--- . loadData.gms(87) 3 Mb
+--- call gdxxrw.exe RA_probMods_neg.xlsx par=RA_probMod_neg rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_neg.txt
+--- . loadData.gms(89) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+--- . loadData.gms(124) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
---- . loadData.gms(121) 3 Mb
---- first.gms(408) 3 Mb 2 Errors
-*** Error  71 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first.gms
-    The symbol shown has been declared as an equation, but no
-       Symbolic equation (..) was found. hint - look for commas in the
-       Documentation text for the equations. use quotes around the
-       Text or eliminate the commas.
-*** Error 256 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first.gms
-    Error(s) in analyzing solve statement.
-*** The following LP errors were detected in model testFirstDecision:
-     71 sum_Q_rB_DA_EQ is an undefined equation
-     71 sum_Q_rI_DA_EQ is an undefined equation
-     71 sum_Q_rO_DA_EQ is an undefined equation
---- first.gms(411) 3 Mb 2 Errors
-*** Status: Compilation error(s)
---- Job first.gms Stop 03/20/25 03:52:02 elapsed 0:00:01.230
+--- . loadData.gms(131) 3 Mb
+--- first_optimised.gms(716) 3 Mb
+--- Starting execution: elapsed 0:00:04.896
+--- first_optimised.gms(171) 4 Mb
+--- Generating NLP model testFirstDecision
+--- first_optimised.gms(765) 21 Mb
+*** Error at line 765: Execution halted: Triggered by pending CtrlC event
+--- first_optimised.gms(863) 18 Mb 1 Error
+*** SOLVE abortedDebug-Server: Socket disconnected
+
+--- first_optimised.gms(863) 18 Mb 1 Error
+*** Status: Execution error(s)
+--- Job first_optimised.gms Stop 04/02/25 22:39:40 elapsed 0:00:23.889

@@ -28,6 +28,12 @@
         },
         {
             "codecMib": 106,
+            "file": "first_optimised.lst",
+            "name": "first_optimised.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
             "file": "first_splitted.gms",
             "name": "first_splitted.gms",
             "type": "gms"
@@ -73,6 +79,12 @@
             "file": "main.lst",
             "name": "main.lst",
             "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "temp3563.gdx",
+            "name": "temp3563.gdx",
+            "type": "gdx"
         },
         {
             "codecMib": 106,

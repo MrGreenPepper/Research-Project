@@ -1,4 +1,19 @@
 B 3 C o m p i l a t i o n
-B 34 E x e c u t i o n
-I 34 Coef
-I 40 dir
+B 51 Equation Listing    SOLVE asdf Using MIP From line 35
+D 54 uplimit
+D 59 downlimit
+D 64 profiteq
+B 70 Column Listing      SOLVE asdf Using MIP From line 35
+E 73 input
+E 89 Profit
+B 97 Range Statistics    SOLVE asdf Using MIP From line 35
+B 108 Model Statistics    SOLVE asdf Using MIP From line 35
+B 121 Solution Report     SOLVE asdf Using MIP From line 35
+F 164 uplimit
+F 169 downlimit
+F 176 profiteq
+G 178 input
+G 279 Profit
+B 287 E x e c u t i o n
+I 287 Coef
+I 293 dir
