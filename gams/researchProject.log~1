@@ -1,8 +1,7 @@
 
 Debug-Server started. Listening at port 3563
---- Job first_optimised.gms Start 04/02/25 22:40:21 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
---- Applying:Debug-Server: Socket connected to GAMS
-
+--- Job first_optimised.gms Start 04/02/25 23:27:22 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
     Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms"
@@ -40,6 +39,7 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posCap_scenarioValues.gdx
 --- . loadData.gms(33) 3 Mb
 --- call gdxxrw.exe da_expValues.xlsx par=DA_expV rng=Sheet1!A2:B8569 dim=1 rdim=1 log=log_RA_out_expV.txt
+Debug-Server: Socket connected to GAMS
 --- . loadData.gms(35) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
@@ -52,8 +52,8 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- . loadData.gms(65) 3 Mb
 --- call gdxxrw.exe RApriceDown_scenarioPerc.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
 --- . loadData.gms(67) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
 --- . loadData.gms(72) 3 Mb
 --- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_out.txt
 --- . loadData.gms(74) 3 Mb
@@ -73,15 +73,15 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- . loadData.gms(131) 3 Mb
---- first_optimised.gms(716) 3 Mb
---- Starting execution: elapsed 0:00:04.697
---- first_optimised.gms(171) 4 Mb
---- Generating NLP model testFirstDecision
---- first_optimised.gms(765) 21 Mb
-*** Error at line 765: Execution halted: Triggered by pending CtrlC event
---- first_optimised.gms(863) 18 Mb 1 Error
-*** SOLVE abortedDebug-Server: Socket disconnected
-
---- first_optimised.gms(863) 18 Mb 1 Error
-*** Status: Execution error(s)
---- Job first_optimised.gms Stop 04/02/25 22:41:20 elapsed 0:00:58.116
+--- first_optimised.gms(778) 3 Mb 2 Errors
+*** Error  71 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    The symbol shown has been declared as an equation, but no
+       Symbolic equation (..) was found. hint - look for commas in the
+       Documentation text for the equations. use quotes around the
+       Text or eliminate the commas.
+*** Error 256 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Error(s) in analyzing solve statement.
+*** The following NLP errors were detected in model testFirstDecision:
+     71 testEQ4 is an undefined equation
+--- first_optimised.gms(781) 3 Mb[FIL:"C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms",781,0]Debug-Server: Socket disconnected
+*** Error: Unexpected GAMSCMEX return code: -1073741819

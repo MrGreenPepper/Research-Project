@@ -1,12 +1,12 @@
 52
-4 137 0 0 462  0.00000000000000E+0000 0  0.00000000000000E+0000 0 1
-14167 5955 0 0 9527 8575 3840 1752 0 0 0 0
-31291 23040 0 0 0 0 0 0
-382038 227232
-31291 0 0 0 0 0 0 22813 0 8478
+4 893 0 0 462  0.00000000000000E+0000 0  0.00000000000000E+0000 0 1
+244127 188548 0 0 68342 204983 26880 12264 0 0 0 0
+509147 306432 0 0 0 0 0 0
+3462623 2088864
+509147 0 0 0 0 0 0 449990 0 59157
 0 0 0 0 0 0 0
-1 781 0
-552774 71 20
+1 5461 0
+5871560 74 20
  1.00000000000000E-0004  0.00000000000000E+0000 0
 0  0.00000000000000E+0000 0  0.00000000000000E+0000
  1.00000000000000E+0010 2147483647 0
@@ -23,13 +23,13 @@ C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\gamssolu
 
 C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\gamsdict.dat
 3
-22:55:55
+23:29:47
 04/02/25
 C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\
 C:\GAMS\46\
 C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\
 32767 2147483647
-0 0 148 45748 45630 61997
+0 0 148 45748 45630 62753
 Course License                                 S241105|0002AO-GEN0
 Dresden University of Technology                                 0
 1122735901COCPGEPT                                               0
@@ -202,7 +202,7 @@ License Admin: Hannes Hobbie, hannes.hobbie@tu-dresden.de        0
 1 C:\GAMS\46\gmscmpnt.txt
 C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.dat
 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-0 0  1.00000000000000E+0000 0 62930
+0 0  1.00000000000000E+0000 0 588674
 0 0 0
 0 0 0 1 0
 C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\testFirstDecision.dll
@@ -214,4 +214,4 @@ dat
 
 
 C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
- 3.82038000000000E+0005  2.27232000000000E+0005
+ 3.46262300000000E+0006  2.08886400000000E+0006

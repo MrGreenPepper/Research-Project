@@ -1,7 +1,7 @@
 
 Debug-Server started. Listening at port 3563
 Debug-Server: Socket connected to GAMS
---- Job first_optimised.gms Start 04/02/25 22:39:16 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job first_optimised.gms Start 04/02/25 23:21:39 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -52,10 +52,10 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- . loadData.gms(65) 3 Mb
 --- call gdxxrw.exe RApriceDown_scenarioPerc.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
 --- . loadData.gms(67) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioValues.gdx
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
 --- . loadData.gms(72) 3 Mb
---- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
+--- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_out.txt
 --- . loadData.gms(74) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
@@ -73,15 +73,40 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- . loadData.gms(131) 3 Mb
---- first_optimised.gms(716) 3 Mb
---- Starting execution: elapsed 0:00:04.896
---- first_optimised.gms(171) 4 Mb
---- Generating NLP model testFirstDecision
---- first_optimised.gms(765) 21 Mb
-*** Error at line 765: Execution halted: Triggered by pending CtrlC event
---- first_optimised.gms(863) 18 Mb 1 Error
-*** SOLVE abortedDebug-Server: Socket disconnected
-
---- first_optimised.gms(863) 18 Mb 1 Error
-*** Status: Execution error(s)
---- Job first_optimised.gms Stop 04/02/25 22:39:40 elapsed 0:00:23.889
+--- first_optimised.gms(606) 3 Mb 1 Error
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(607) 3 Mb 2 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(608) 3 Mb 3 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(609) 3 Mb 4 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(610) 3 Mb 5 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(611) 3 Mb 6 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(612) 3 Mb 7 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(613) 3 Mb 8 Errors
+*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Dimension different - The symbol is referenced with more/less
+       indices as declared
+--- first_optimised.gms(778) 3 Mb 9 Errors
+*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
+    Solve statement not checked because of previous errors
+--- first_optimised.gms(781) 3 Mb[FIL:"C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms",781,0]Debug-Server: Socket disconnected
+*** Error: Unexpected GAMSCMEX return code: -1073741819

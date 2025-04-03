@@ -82,12 +82,6 @@
         },
         {
             "codecMib": 106,
-            "file": "temp3563.gdx",
-            "name": "temp3563.gdx",
-            "type": "gdx"
-        },
-        {
-            "codecMib": 106,
             "file": "test_paper.gms",
             "name": "test_paper.gms",
             "type": "gms"
