@@ -5,10 +5,11 @@ s_out_RL            /s5, s10, s15/
 s_DA                   /s5, s10, s15/
 s_in_RA             /s5, s10, s15/
 s_out_RA            /s5, s10, s15/
-t_block                / b1*b42 /
-t_hour             / h1*h168 /   
-t_quarter          / q1*q672 /
+t_block                / b1*b6 /
+t_hour             / h1*h24 /   
+t_quarter          / q1*q96 /
 ser                 /ser1 * ser8/
+s_RA                /s1*s10/
 ;
 
 Sets

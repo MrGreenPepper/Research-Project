@@ -1,13 +1,13 @@
 
 Debug-Server started. Listening at port 3563
 Debug-Server: Socket connected to GAMS
---- Job first_optimised.gms Start 04/02/25 23:19:32 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job first_optimised_historicData.gms Start 04/04/25 22:38:17 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
-    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms"
+    Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms"
     PageSize 0
-    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225o\"
+    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225a\"
     SysDir C:\GAMS\46\
     LogOption 3
     ErrMsg 1
@@ -23,106 +23,128 @@ Licensee: Course License                                 S241105|0002AO-GEN
 Processor information: 1 socket(s), 8 core(s), and 16 thread(s) available
 GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
---- first_optimised.gms(2) 2 Mb
---- . loadTestSet.gms(19) 3 Mb
---- first_optimised.gms(5) 3 Mb
---- . loadData.gms(5) 3 Mb
+--- first_optimised_historicData.gms(4) 2 Mb
+--- . loadHistoricSet.gms(20) 3 Mb
+--- first_optimised_historicData.gms(7) 3 Mb
+--- . loadData_historic.gms(5) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioPerc.gdx
---- . loadData.gms(12) 3 Mb
+--- . loadData_historic.gms(12) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\negCap_scenarioValues.gdx
---- . loadData.gms(19) 3 Mb
+--- . loadData_historic.gms(19) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posCap_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posCap_scenarioPerc.gdx
---- . loadData.gms(26) 3 Mb
+--- . loadData_historic.gms(26) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posCap_scenarioValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\posCap_scenarioValues.gdx
---- . loadData.gms(33) 3 Mb
+--- . loadData_historic.gms(33) 3 Mb
 --- call gdxxrw.exe da_expValues.xlsx par=DA_expV rng=Sheet1!A2:B8569 dim=1 rdim=1 log=log_RA_out_expV.txt
---- . loadData.gms(35) 3 Mb
+--- . loadData_historic.gms(35) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
---- . loadData.gms(43) 3 Mb
+--- . loadData_historic.gms(43) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioPerc.gdx
---- . loadData.gms(50) 3 Mb
+--- . loadData_historic.gms(50) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
---- . loadData.gms(65) 3 Mb
+--- . loadData_historic.gms(57) 3 Mb
+--- call gdxxrw.exe matchingRAData_priceNeg_Q1.xlsx par=RA_price_neg rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_neg.txt
+--- . loadData_historic.gms(59) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q1.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q1.gdx
+--- . loadData_historic.gms(64) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Pos_Q1.xlsx par=RA_price_pos rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_pos.txt
+--- . loadData_historic.gms(66) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
+--- . loadData_historic.gms(71) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Neg_Q1.xlsx par=q_in_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_in_RAmax.txt
+--- . loadData_historic.gms(73) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q1.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q1.gdx
+--- . loadData_historic.gms(78) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Pos_Q1.xlsx par=q_out_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_out_RAmax.txt
+--- . loadData_historic.gms(80) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
+--- . loadData_historic.gms(89) 3 Mb
 --- call gdxxrw.exe RApriceDown_scenarioPerc.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
---- . loadData.gms(67) 3 Mb
+--- . loadData_historic.gms(91) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
---- . loadData.gms(72) 3 Mb
+--- . loadData_historic.gms(96) 3 Mb
 --- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_out.txt
---- . loadData.gms(74) 3 Mb
+--- . loadData_historic.gms(98) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
---- . loadData.gms(80) 3 Mb
+--- . loadData_historic.gms(104) 3 Mb
 --- call gdxxrw.exe RA_probMods_pos.xlsx par=RA_probMod_pos rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_pos.txt
---- . loadData.gms(82) 3 Mb
+--- . loadData_historic.gms(106) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
---- . loadData.gms(87) 3 Mb
+--- . loadData_historic.gms(111) 3 Mb
 --- call gdxxrw.exe RA_probMods_neg.xlsx par=RA_probMod_neg rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_neg.txt
---- . loadData.gms(89) 3 Mb
+--- . loadData_historic.gms(113) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
---- . loadData.gms(124) 3 Mb
+--- . loadData_historic.gms(148) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
---- . loadData.gms(131) 3 Mb
---- first_optimised.gms(597) 3 Mb 2 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(598) 3 Mb 4 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(599) 3 Mb 6 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(600) 3 Mb 8 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(601) 3 Mb 10 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(602) 3 Mb 12 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(603) 3 Mb 14 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(604) 3 Mb 16 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Unknown symbol
-*** Error 148 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Dimension different - The symbol is referenced with more/less
-       indices as declared
---- first_optimised.gms(769) 3 Mb 17 Errors
-*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms
-    Solve statement not checked because of previous errors
---- first_optimised.gms(772) 3 Mb[FIL:"C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised.gms",772,0]Debug-Server: Socket disconnected
-*** Error: Unexpected GAMSCMEX return code: -1073741819
+--- . loadData_historic.gms(155) 3 Mb
+--- first_optimised_historicData.gms(564) 3 Mb
+--- Starting execution: elapsed 0:00:08.211
+--- first_optimised_historicData.gms(217) 4 Mb
+--- Generating MIP model testFirstDecision
+--- first_optimised_historicData.gms(434) 1400 Mb  155 secs
+--- first_optimised_historicData.gms(471) 3494 Mb  235 secs
+--- first_optimised_historicData.gms(579) 5577 Mb  9 secs
+--- first_optimised_historicData.gms(580) 6321 Mb  9 secs
+--- first_optimised_historicData.gms(581) 7031 Mb  9 secs
+--- first_optimised_historicData.gms(582) 7772 Mb  9 secs
+--- first_optimised_historicData.gms(617) 10282 Mb  60 secs
+--- first_optimised_historicData.gms(643) 10941 Mb  3 secs
+--- first_optimised_historicData.gms(644) 11221 Mb  4 secs
+--- first_optimised_historicData.gms(645) 11501 Mb  4 secs
+--- first_optimised_historicData.gms(646) 11782 Mb  4 secs
+--- first_optimised_historicData.gms(647) 12062 Mb  5 secs
+--- first_optimised_historicData.gms(648) 12344 Mb  5 secs
+--- first_optimised_historicData.gms(649) 12623 Mb  5 secs
+--- first_optimised_historicData.gms(650) 12903 Mb  5 secs
+--- first_optimised_historicData.gms(535) 13757 Mb  120 secs
+--- first_optimised_historicData.gms(525) 13970 Mb  80 secs
+--- first_optimised_historicData.gms(550) 14072 Mb  28 secs
+--- first_optimised_historicData.gms(551) 14172 Mb  28 secs
+--- first_optimised_historicData.gms(555) 14274 Mb  28 secs
+--- first_optimised_historicData.gms(556) 14374 Mb  28 secs
+--- first_optimised_historicData.gms(561) 14479 Mb  28 secs
+--- first_optimised_historicData.gms(562) 14579 Mb  27 secs
+--- first_optimised_historicData.gms(567) 14684 Mb  28 secs
+--- first_optimised_historicData.gms(568) 14784 Mb  28 secs
+--- first_optimised_historicData.gms(684) 15092 Mb  4 secs
+--- first_optimised_historicData.gms(685) 15271 Mb  3 secs
+--- first_optimised_historicData.gms(686) 15451 Mb  3 secs
+--- first_optimised_historicData.gms(687) 15631 Mb  3 secs
+--- first_optimised_historicData.gms(688) 15862 Mb  559 secs
+--- first_optimised_historicData.gms(699) 16905 Mb  95 secs
+---   39,961,418 rows  60,497,390 columns  249,582,878 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E-03, 1.800E+05] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.960E-10, 1.560E+03]
+--- Executing CPLEX (Solvelink=2): elapsed 0:28:17.681
+
+IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- Space for names approximately 3780.44 Mb
+--- Use option 'names no' to turn use of names off
+CPLEX Error  1001: Out of memory.
+CPLEX Error  1001: Out of memory.
+*** SOLVER ERROR: Failed calling CPLEX (loading linear problem): 1001
+*** Contact support@gams.com for help.
+--- first_optimised_historicData.gms(699) 16905 Mb  1075 secs
+--- Reading solution for model testFirstDecision
+--- first_optimised_historicData.gms(699) 16905 Mb  1150 secs[FIL:"C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms",699,0]Debug-Server: Socket disconnected

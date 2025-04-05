@@ -4,4 +4,4 @@ Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\
 **** No symbol was defined for range parameter a1:e160
 
 Any changes made to the spreadsheet were not saved
-Total time = 1797 Ms
+Total time = 781 Ms

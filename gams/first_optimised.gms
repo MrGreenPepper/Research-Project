@@ -300,17 +300,17 @@ profit_RAin_EQ
 *sums
 sum_Q_in_RL_EQ
 sum_Q_out_RL_EQ
-*sum_Q_rB_DA_EQ
+sum_Q_rB_DA_EQ
 sum_Q_outrB_RA_EQ
 sum_Q_inrB_RA_EQ
 sum_Q_rB_reload_EQ
 sum_Q_outrI_RA_EQ
 sum_Q_inrI_RA_EQ
-*sum_Q_rI_DA_EQ
+sum_Q_rI_DA_EQ
 sum_Q_rI_reload_EQ
 sum_Q_outrO_RA_EQ
 sum_Q_inrO_RA_EQ
-*sum_Q_rO_DA_EQ
+sum_Q_rO_DA_EQ
 sum_Q_rO_reload_EQ
 sum_Q_outrN_RA_EQ
 sum_Q_inrN_RA_EQ
@@ -509,7 +509,7 @@ profit_RAout_EQ..                        profitRAout =e= sum(t_block,
 * accepted  RL\ in \ out:
 sum_Q_in_RL_EQ..                                sum_Q_in_RL =e= sum((t_block, s_in_RL), Q_in_RL(t_block, s_in_RL));
 sum_Q_out_RL_EQ..                               sum_Q_out_RL =e= sum((t_block, s_out_RL), Q_out_RL(t_block, s_out_RL));
-*sum_Q_rB_DA_EQ..                               sum_Q_rB_DA =e= sum((t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL)                            );
+sum_Q_rB_DA_EQ(s_in_RL, s_out_RL)..                               sum_Q_rB_DA(s_in_RL, s_out_RL) =e= sum((t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL));
 sum_Q_outrB_RA_EQ..                             sum_Q_outrB_RA =e= sum((t_quarter, s_out_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL));
 sum_Q_inrB_RA_EQ..                              sum_Q_inrB_RA =e= sum((t_quarter, s_in_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL));
 sum_Q_rB_reload_EQ..                                sum_Q_rB_reload =e= sum((t_hour, s_in_RL, s_out_RL), Q_rB_reload(t_hour, s_in_RL, s_out_RL));
@@ -517,13 +517,13 @@ sum_Q_rB_reload_EQ..                                sum_Q_rB_reload =e= sum((t_h
 *accepted RL in     \ declined out:
 sum_Q_outrI_RA_EQ..                             sum_Q_outrI_RA =e= sum((t_quarter, s_out_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL));
 sum_Q_inrI_RA_EQ..                              sum_Q_inrI_RA =e= sum((t_quarter, s_in_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL));
-*sum_Q_rI_DA_EQ..                               sum_Q_rI_DA =e= sum((t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL)                            );
+sum_Q_rI_DA_EQ(s_in_RL, s_out_RL)..                               sum_Q_rI_DA(s_in_RL, s_out_RL) =e= sum((t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL)                            );
 sum_Q_rI_reload_EQ..                                sum_Q_rI_reload =e= sum((t_hour, s_in_RL, s_out_RL), Q_rI_reload(t_hour, s_in_RL, s_out_RL)                         );
 
 *declined RL in\ accepted out:
 sum_Q_outrO_RA_EQ..                             sum_Q_outrO_RA =e= sum((t_quarter, s_out_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter, s_out_RA, s_in_RL, s_out_RL));
 sum_Q_inrO_RA_EQ..                              sum_Q_inrO_RA =e= sum((t_quarter, s_in_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL));
-*sum_Q_rO_DA_EQ..                               sum_Q_rO_DA =e= sum((t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL)                            );
+sum_Q_rO_DA_EQ(s_in_RL, s_out_RL)..                               sum_Q_rO_DA(s_in_RL, s_out_RL) =e= sum((t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL)                            );
 sum_Q_rO_reload_EQ..                                sum_Q_rO_reload =e= sum((t_hour, s_in_RL, s_out_RL), Q_rO_reload(t_hour, s_in_RL, s_out_RL)                         );
 
 *declined RL in\ out:
@@ -779,3 +779,40 @@ Solve testFirstDecision maximising Profit using NLP;
 
 execute_unload "Result_Miehle.gdx" BatStat.l
 execute 'gdxxrw.exe Result_Miehle.gdx rng=a1:e160 par=BatStat log=log_exe_test.txt'
+
+execute_unload "res_sum_Q_in_RL.gdx" sum_Q_in_RL.l
+execute 'gdxxrw.exe res_sum_Q_in_RL.gdx o=res_sum_Q_in_RL.xlsx var=sum_Q_in_RL.L'				
+execute_unload "res_sum_Q_out_RL.gdx" sum_Q_out_RL.l
+execute 'gdxxrw.exe res_sum_Q_out_RL.gdx o=res_sum_Q_out_RL.xlsx var=sum_Q_out_RL.L'				
+execute_unload "res_sum_Q_rB_DA.gdx" sum_Q_rB_DA.l
+execute 'gdxxrw.exe res_sum_Q_rB_DA.gdx o=res_sum_Q_rB_DA.xlsx var=sum_Q_rB_DA.L'				
+execute_unload "res_sum_Q_outrB_RA.gdx" sum_Q_outrB_RA.l
+execute 'gdxxrw.exe res_sum_Q_outrB_RA.gdx o=res_sum_Q_outrB_RA.xlsx var=sum_Q_outrB_RA.L'				
+execute_unload "res_sum_Q_inrB_RA.gdx" sum_Q_inrB_RA.l
+execute 'gdxxrw.exe res_sum_Q_inrB_RA.gdx o=res_sum_Q_inrB_RA.xlsx var=sum_Q_inrB_RA.L'				
+execute_unload "res_sum_Q_rB_reload.gdx" sum_Q_rB_reload.l
+execute 'gdxxrw.exe res_sum_Q_rB_reload.gdx o=res_sum_Q_rB_reload.xlsx var=sum_Q_rB_reload.L'				
+execute_unload "res_sum_Q_outrI_RA.gdx" sum_Q_outrI_RA.l
+execute 'gdxxrw.exe res_sum_Q_outrI_RA.gdx o=res_sum_Q_outrI_RA.xlsx var=sum_Q_outrI_RA.L'				
+execute_unload "res_sum_Q_inrI_RA.gdx" sum_Q_inrI_RA.l
+execute 'gdxxrw.exe res_sum_Q_inrI_RA.gdx o=res_sum_Q_inrI_RA.xlsx var=sum_Q_inrI_RA.L'				
+execute_unload "res_sum_Q_rI_DA.gdx" sum_Q_rI_DA.l
+execute 'gdxxrw.exe res_sum_Q_rI_DA.gdx o=res_sum_Q_rI_DA.xlsx var=sum_Q_rI_DA.L'				
+execute_unload "res_sum_Q_rI_reload.gdx" sum_Q_rI_reload.l
+execute 'gdxxrw.exe res_sum_Q_rI_reload.gdx o=res_sum_Q_rI_reload.xlsx var=sum_Q_rI_reload.L'				
+execute_unload "res_sum_Q_outrO_RA.gdx" sum_Q_outrO_RA.l
+execute 'gdxxrw.exe res_sum_Q_outrO_RA.gdx o=res_sum_Q_outrO_RA.xlsx var=sum_Q_outrO_RA.L'				
+execute_unload "res_sum_Q_inrO_RA.gdx" sum_Q_inrO_RA.l
+execute 'gdxxrw.exe res_sum_Q_inrO_RA.gdx o=res_sum_Q_inrO_RA.xlsx var=sum_Q_inrO_RA.L'				
+execute_unload "res_sum_Q_rO_DA.gdx" sum_Q_rO_DA.l
+execute 'gdxxrw.exe res_sum_Q_rO_DA.gdx o=res_sum_Q_rO_DA.xlsx var=sum_Q_rO_DA.L'				
+execute_unload "res_sum_Q_rO_reload.gdx" sum_Q_rO_reload.l
+execute 'gdxxrw.exe res_sum_Q_rO_reload.gdx o=res_sum_Q_rO_reload.xlsx var=sum_Q_rO_reload.L'				
+execute_unload "res_sum_Q_outrN_RA.gdx" sum_Q_outrN_RA.l
+execute 'gdxxrw.exe res_sum_Q_outrN_RA.gdx o=res_sum_Q_outrN_RA.xlsx var=sum_Q_outrN_RA.L'				
+execute_unload "res_sum_Q_inrN_RA.gdx" sum_Q_inrN_RA.l
+execute 'gdxxrw.exe res_sum_Q_inrN_RA.gdx o=res_sum_Q_inrN_RA.xlsx var=sum_Q_inrN_RA.L'				
+execute_unload "res_sum_Q_rN_DA.gdx" sum_Q_rN_DA.l
+execute 'gdxxrw.exe res_sum_Q_rN_DA.gdx o=res_sum_Q_rN_DA.xlsx var=sum_Q_rN_DA.L'				
+execute_unload "res_sum_Q_reload.gdx" sum_Q_reload.l
+execute 'gdxxrw.exe res_sum_Q_reload.gdx o=res_sum_Q_reload.xlsx var=sum_Q_reload.L'				

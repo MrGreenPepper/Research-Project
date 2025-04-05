@@ -1,5 +1,5 @@
 {
-    "file": "first_optimised.gms",
+    "file": "first_optimised_historicData.gms",
     "name": "researchProject",
     "nodes": [
         {
@@ -34,6 +34,66 @@
         },
         {
             "codecMib": 106,
+            "file": "first_optimised_historicData.gms",
+            "name": "first_optimised_historicData.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_historicData.lst",
+            "name": "first_optimised_historicData.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test.gms",
+            "name": "first_optimised_test.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test.lst",
+            "name": "first_optimised_test.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test2.gms",
+            "name": "first_optimised_test2.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test2.lst",
+            "name": "first_optimised_test2.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test3.gms",
+            "name": "first_optimised_test3.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test3.lst",
+            "name": "first_optimised_test3.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test4.gms",
+            "name": "first_optimised_test4.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_test4.lst",
+            "name": "first_optimised_test4.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
             "file": "first_splitted.gms",
             "name": "first_splitted.gms",
             "type": "gms"
@@ -46,8 +106,20 @@
         },
         {
             "codecMib": 106,
+            "file": "loadData_historic.gms",
+            "name": "loadData_historic.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
             "file": "loadFullSet.gms",
             "name": "loadFullSet.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "loadHistoricSet.gms",
+            "name": "loadHistoricSet.gms",
             "type": "gms"
         },
         {
@@ -79,6 +151,12 @@
             "file": "main.lst",
             "name": "main.lst",
             "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "res_sum_Q_reload.gdx",
+            "name": "res_sum_Q_reload.gdx",
+            "type": "gdx"
         },
         {
             "codecMib": 106,

@@ -1,8 +1,3 @@
-].venv
-]^(?! ).*
-concept.*
-]/.venv/
-].wvenv
-]/.wvenv/
-]/.venv
-].venv/
+version https://git-lfs.github.com/spec/v1
+oid sha256:1e21eafc04ff6b21deb316529ce6eee47e2ab534de70b97f2439b4bcdcc392a4
+size 94
