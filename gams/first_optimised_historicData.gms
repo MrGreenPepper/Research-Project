@@ -4,7 +4,9 @@
 $include loadHistoricSet
 
 *$include convertData.gms
-$include loadData_historic.gms
+*$include loadData_historic_Q1.gms
+$include loadData_historic_Q18.gms
+*$include loadData_historic_Q36.gms
 
 
 *assign correct mapping
@@ -267,20 +269,20 @@ profitEQ..      Profit  =e=
 				+ sum(t_hour$map_quarter_hour(t_quarter, t_hour),
 * accepted  RL\ in \ out:
                 + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (
-                        + (0.06125 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))                       
-                        + (0.06125 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
+                        + (0.25 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))                       
+                        + (0.25 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
                         + (0.25 * ((Q_rB_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)  )))
                         + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))       
                         + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  )) 
 *accepted RL in     \ declined out:
                 + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (
-                        + (0.06125 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))                        
+                        + (0.25 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))                        
                         + (0.25 * ((Q_rI_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour))))
                         + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))      
                         + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  ))                      
 *declined RL in     \ accepted out:
                 + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (
-                        + (0.06125 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
+                        + (0.25 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
                         + (0.25 * ((Q_rO_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour))))
                         + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))       
                         + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  ))
@@ -404,10 +406,10 @@ sum_Q_reload_EQ..                               sum_Q_reload =e= sum((t_hour, s_
 
 
 *access point:
-accPointCon_a_B(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL))) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
-accPointCon_a_I(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL))) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
-accPointCon_a_O(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL))) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
-accPointCon_a_N(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_DA(t_hour, s_in_RL, s_out_RL))) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+accPointCon_a_B(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+accPointCon_a_I(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+accPointCon_a_O(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+accPointCon_a_N(t_quarter)..        a + sum((s_RA, s_in_RL, s_out_RL), fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_RA, s_in_RL, s_out_RL), fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
 
 *battery performance restrictions:
 calc_r..                                        r =e= BatCap * rBat;
@@ -519,8 +521,8 @@ Q_outrO_RA_EQ(t_quarter, s_RA, s_in_RL, s_out_RL).. 					Q_outrO_RA(t_quarter, s
 Q_outrN_RA_EQ(t_quarter, s_RA, s_in_RL, s_out_RL).. 					Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) 	=l= q_out_RAmax(t_quarter, s_RA);
 
 
-Q_in_RL_EQ(t_block, s_in_RL)..											Q_in_RL(t_block, s_in_RL) 	=l= BatCap - sum(t_quarter$map_quarter_block(t_quarter, t_block), BatStat(t_quarter));
-Q_out_RL_EQ(t_block, s_out_RL)..										Q_out_RL(t_block, s_out_RL) =l= sum(t_quarter$map_quarter_block(t_quarter, t_block), BatStat(t_quarter));
+Q_in_RL_EQ(t_quarter, s_in_RL)..										sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL))	* 0.25	=l= BatCap - BatStat(t_quarter);
+Q_out_RL_EQ(t_quarter, s_out_RL)..										sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL))	* 0.25	=l= BatStat(t_quarter);
 *accepted RL in     \ declined out:
 *declined RL in\ accepted out:
 *declined RL in\ out:

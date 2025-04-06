@@ -1,0 +1,108 @@
+\chapter*{Sets \& Variables \& Parameters}
+\todo{sauber und ausführlich machen }
+\todo{alle tabellen nochmal korrektur lesen }
+\todo{make tables look nice}
+\todo{eventuell table heads dick machen}
+\textbf{Abbreviations}
+\begin{table}[!h]
+	\begin{tabular}{c|c}
+		Abbreviations & Description                                                                            \\
+		\hline
+		aFRR          & automatic Frequency Restoration Reserve                                                \\
+		GAMS          & General Algebraic Modeling System                                                      \\
+		TSO           & transmission system operators                                                          \\
+		CBMP          & grenzüberschreitenden Grenzpreis                                                       \\
+		ARIMA         & Autoregressive Integrated Moving Average                                               \\
+		SARIMA        & Seasonal Autoregressive Integrated Moving Average                                      \\
+		TBATS         & Trigonometric seasonality Box-Cox transformation ARMA errors Trend Seasonal components \\
+	\end{tabular}
+\end{table}\\
+
+Groß geschriebene Variablen werden endogen ermittelt. Klein geschriebene Variablen werden exogen vorgeschrieben.\\
+
+\begin{tabular}{c|c|c}
+	Variable       & Description                                                                                                      \\
+	\hline
+	$RL$           & Regelleistungsmarkt                                                                                              \\
+	$DA$           & Day Ahead Markt                                                                                                  \\
+	$RA$           & Regelarbeitsmarkt                                                                                                \\
+	$Q^i_{y}$      & Gebotsmenge der Art i(=in/out) am Markt y                                                                        \\
+	($X^i_{y})$    & (lineare Gebotsmenge der Art i(=in/out) am Markt y)                                                              \\
+	$P^i_{y}$      & Gebotspreis der Art i(=in/out) am Markt y                                                                        \\
+	$E^{in}_{DA}$  & $EnergyInDA(t)$                                                                   & energy in day ahead market   \\
+	$E^{out}_{DA}$ & $EnergyOutDA(t)$                                                                  & energy out day ahead market  \\
+	$E^{in}_{RT}$  & $EnergyInRT(t)$                                                                   & energy in real time market   \\
+	$E^{out}_{RT}$ & $EnergyOutRT(t)$                                                                  & energy out  real time market \\
+	$ER$           & emergency reload
+	$B^i_y$        & Binäre Variable die den Zuschlag (B=1) der Art i(=in/out) am Markt y signalisiert                                \\
+	\label{tab:my_label}                                                                                                              \\
+\end{tabular}
+\\
+
+\todo{entweder überall gams äquivalnt ergänzen oder überall weg lassen}
+\textbf{Parameter}
+\begin{table}
+	\centering
+	\begin{tabular}{c|c|c}
+		Parameter               & GAMS Equivalent                                                   & Description                        \\
+		\hline
+		$f_{DA}$                & $priceForeCastDA(t)$                                              & forecast price day ahead market    \\
+		$f_{RT}$                & $priceForeCastRT(t)$                                              & forecast price real time market    \\
+
+		$p_{DA}$                & $ priceProbDA $                                                   & probability for price $p_{DA}$     \\
+		$p_{RT}$                & $ priceProbRT $                                                   & probability for price $p_{RT}$     \\
+
+
+		$r$                     & Rate mit der der Stromspeicher geladen/entladen werden kann                                            \\
+		$a$                     & Anschlusskapazität                                                                                     \\
+		$z^{in}(t)$             & $binaryInDA(t)$                                                   & binary variable if bid is accepted \\
+		$z^{out}(t)$            & $binaryOutDA(t)$                                                  & binary variable if bid is accepted \\
+		$\omega_{DA}(pDA) $     & Wahrscheinlichkeit für Zuschlag bei Preis $P_{DA}$                                                     \\
+		$\omega^i_{y}(P^i_{y})$ & Gebotswahrscheinlichkeit für $P^i_{y}$                                                                 \\
+		$p^i_{y}(s^i_y)$        & Gebotspreis der Art i(=in/out) am Markt y für Szenario $s^i_y$                                         \\
+		$\omega^i_{y}(s^i_y)$   & Gebotswahrscheinlichkeit für entsprechendes Preisszenario $s^i_y$                                      \\
+		$c^i_y$                 & Marktclearingpreis der Art i(=in/out) am Markt y                                                       \\
+		$m$                     & eine sehr große Zahl                                                                                   \\
+	\end{tabular}
+	\caption{Variables}
+	\label{tab:my_label}
+\end{table}
+
+
+
+
+
+\textbf{Variables - simplified model + wind park}
+
+\begin{table}[]
+	\doublespacing
+	\centering
+	\begin{tabular}{c|c|c}
+		Parameter        & GAMS                             & Description                     \\
+		$f_{DA}$         & $priceForeCastDA(t)$             & forecast price day ahead market \\
+		$f_{RT}$         & $priceForeCastRT(t)$             & forecast price real time market \\
+
+		$E^{in}_{DA}$    & $EnergyInDA(t)$                  & energy in day ahead market      \\
+		$E^{out}_{DA}$   & $EnergyOutDA(t)$                 & energy out day ahead market     \\
+
+		$E^{in}_{RT}$    & $EnergyInRT(t)$                  & energy in real time market      \\
+		$E^{out}_{RT}$   & $EnergyOutRT(t)$                 & energy out  real time market    \\
+
+		$E^{in}_{stor}$  & $$                               &                                 \\
+		$E^{out}_{stor}$ & $$                               &                                 \\
+		$p^+_{WP}$       & costs of emergency working point
+		$p^-_{WP}$       & costs of emergency working point
+	\end{tabular}
+	\caption{Variables}
+	\label{tab:my_label}
+\end{table}
+
+\begin{table}
+	\begin{tabular}{|c|c|}
+		$Ertrag_{DA}$ & erzielter Ertrag im Day Ahead Markt     \\
+		$B_{DA}$      & binär Variable welche signalisiert      \\
+		              & ob am Day Ahead Markt teilgenommen wird \\
+		$Q_{DA}$      & gebotene Menge am Day Ahead Markt       \\
+		$P_{DA}$      & gebotener Preis am Day Ahead Markt      \\
+	\end{tabular}
+\end{table}

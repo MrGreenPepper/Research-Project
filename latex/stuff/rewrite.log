@@ -1,0 +1,3854 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  6 APR 2025 00:17
+entering extended mode
+ restricted \write18 enabled.
+ file:line:error style messages enabled.
+ %&-line parsing enabled.
+**"c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex"
+(c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex
+LaTeX2e <2024-11-01> patch level 1
+L3 programming layer <2024-11-02>
+(c:/texlive/2024/texmf-dist/tex/latex/tudscr/tudscrreprt.cls
+Document Class: tudscrreprt 2022/08/09 v2.06o TUD-Script document class (scrreprt)
++------------------------------------------------------------------
+| Corporate Design of Technische Universitaet Dresden
+| Class: tudscrreprt
+| Version: 2022/08/09 v2.06o TUD-Script
+| Author: Falk Hanisch (hanisch.latex@outlook.com)
+| Repository: https://github.com/tud-cd/tudscr
+| Forum: https://latex.wcms-file3.tu-dresden.de/phpBB3/
++------------------------------------------------------------------
+(c:/texlive/2024/texmf-dist/tex/latex/tudscr/tudscrbase.sty
+Package: tudscrbase 2022/08/09 v2.06o TUD-Script package (basics for the bundle)
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-independent basics and keyval usage)
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2024/10/24 v3.43 KOMA-Script package (file load hooks)
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2024/10/24 v3.43 KOMA-Script package (using LaTeX hooks)
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2024/10/24 v3.43 KOMA-Script package (logo)
+))) (c:/texlive/2024/texmf-dist/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 254.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line 370.
+) (c:/texlive/2024/texmf-dist/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+) (c:/texlive/2024/texmf-dist/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count196
+) (c:/texlive/2024/texmf-dist/tex/latex/xpatch/xpatch.sty (c:/texlive/2024/texmf-dist/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-11-02 L3 programming layer (loader) 
+ (c:/texlive/2024/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-05-08 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count197
+\l__pdf_internal_box=\box52
+))
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+ (c:/texlive/2024/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-08-16 L3 Experimental document command parser
+)) (c:/texlive/2024/texmf-dist/tex/latex/letltxmacro/letltxmacro.sty
+Package: letltxmacro 2019/12/03 v1.6 Let assignment for LaTeX macros (HO)
+) (c:/texlive/2024/texmf-dist/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+) (c:/texlive/2024/texmf-dist/tex/latex/trimspaces/trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\tud@res@glue=\skip49
+\tud@res@cnt=\count198
+\tud@toks@=\toks18
+) (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2024/10/24 v3.43 KOMA-Script document class (report)
+(c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2024/10/24 v3.43 KOMA-Script package (KOMA-Script-dependent basics and keyval usage)
+) (c:/texlive/2024/texmf-dist/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2024/10/24 v3.43 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip50
+\scr@dte@tocline@numbox=\box53
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 137.
+Package scrreprt Info: You've used standard option `11pt'.
+(scrreprt)             This is correct!
+(scrreprt)             Internally I'm using `fontsize=11pt'.
+(scrreprt)             If you'd like to set the option with \KOMAoptions,
+(scrreprt)             you'd have to use `fontsize=11pt' there
+(scrreprt)             instead of `11pt', too.
+Class scrreprt Info: You've used standard option `oneside'.
+(scrreprt)           This is correct!
+(scrreprt)           Internally I'm using `twoside=false'.
+(scrreprt)           If you'd like to set the option with \KOMAoptions,
+(scrreprt)           you'd have to use `twoside=false' there
+(scrreprt)           instead of `oneside', too.
+Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input line 2713.
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2024/10/24 v3.43 KOMA-Script font size class option (11pt)
+) (c:/texlive/2024/texmf-dist/tex/latex/koma-script/typearea.sty
+Package: typearea 2024/10/24 v3.43 KOMA-Script package (type area)
+\ta@bcor=\skip51
+\ta@div=\count199
+Package typearea Info: You've used standard option `a4paper'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `paper=a4'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `paper=a4' there
+(typearea)             instead of `a4paper', too.
+Package typearea Info: You've used standard option `oneside'.
+(typearea)             This is correct!
+(typearea)             Internally I'm using `twoside=false'.
+(typearea)             If you'd like to set the option with \KOMAoptions,
+(typearea)             you'd have to use `twoside=false' there
+(typearea)             instead of `oneside', too.
+\ta@hblk=\skip52
+\ta@vblk=\skip53
+\ta@temp=\skip54
+\footheight=\skip55
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 5.69054pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 414.2722pt
+(typearea)              DIV departure   = -5%
+(typearea)              \evensidemargin = 22.19315pt
+(typearea)              \oddsidemargin  = 22.19315pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1802.
+)
+\c@part=\count266
+\c@chapter=\count267
+\c@section=\count268
+\c@subsection=\count269
+\c@subsubsection=\count270
+\c@paragraph=\count271
+\c@subparagraph=\count272
+\scr@dte@chapter@maxnumwidth=\skip56
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\chapter on input line 6020.
+\scr@dte@section@maxnumwidth=\skip57
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\section on input line 6031.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\section on input line 6031.
+\scr@dte@part@maxnumwidth=\skip58
+Class scrreprt Info: using compatibility default `afterindent=true'
+(scrreprt)           for `\part on input line 6040.
+\scr@dte@subsection@maxnumwidth=\skip59
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsection on input line 6050.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsection on input line 6050.
+\scr@dte@subsubsection@maxnumwidth=\skip60
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsubsection on input line 6060.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsubsection on input line 6060.
+\scr@dte@paragraph@maxnumwidth=\skip61
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\paragraph on input line 6071.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\paragraph on input line 6071.
+\scr@dte@subparagraph@maxnumwidth=\skip62
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subparagraph on input line 6081.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subparagraph on input line 6081.
+\abovecaptionskip=\skip63
+\belowcaptionskip=\skip64
+\c@pti@nb@sid@b@x=\box54
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 7269.
+\scr@dte@figure@maxnumwidth=\skip65
+\c@figure=\count273
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 7286.
+\scr@dte@table@maxnumwidth=\skip66
+\c@table=\count274
+Class scrreprt Info: Redefining `\numberline' on input line 7457.
+\bibindent=\dimen141
+) (c:/texlive/2024/texmf-dist/tex/latex/environ/environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+\@envbody=\toks19
+)
+\tud@cdfont@symbols@toks=\toks20
+\tud@cdmath@symbols@toks=\toks21
+\tud@glue@signaturevskip=\skip67
+\tud@dim@widemargin=\dimen142
+\tud@dim@slimmargin=\dimen143
+\tud@dim@bothmargin=\dimen144
+\tud@dim@topmargin=\dimen145
+\tud@dim@barheight=\dimen146
+\tud@dim@headsep=\dimen147
+\tud@dim@footsep=\dimen148
+\tud@dim@logox=\dimen149
+\tud@dim@logoy=\dimen150
+\tud@dim@logowidth=\dimen151
+\tud@dim@line=\dimen152
+\tud@dim@heavyline=\dimen153
+\tud@dim@thinline=\dimen154
+\tud@dim@areaheadvskip=\dimen155
+\tud@dim@areadiff=\dimen156
+\tud@dim@areavskip=\dimen157
+\tud@dim@layoutwidth=\dimen158
+\tud@dim@layoutheight=\dimen159
+\tud@dim@layouthoffset=\dimen160
+\tud@dim@layoutvoffset=\dimen161
+ (c:/texlive/2024/texmf-dist/tex/latex/geometry/geometry.sty
+Package: geometry 2020/01/02 v5.9 Page Geometry
+ (c:/texlive/2024/texmf-dist/tex/generic/iftex/ifvtex.sty
+Package: ifvtex 2019/10/25 v1.7 ifvtex legacy package. Use iftex instead.
+)
+\Gm@cnth=\count275
+\Gm@cntv=\count276
+\c@Gm@tempcnt=\count277
+\Gm@bindingoffset=\dimen162
+\Gm@wd@mp=\dimen163
+\Gm@odd@mp=\dimen164
+\Gm@even@mp=\dimen165
+\Gm@layoutwidth=\dimen166
+\Gm@layoutheight=\dimen167
+\Gm@layouthoffset=\dimen168
+\Gm@layoutvoffset=\dimen169
+\Gm@dimlist=\toks22
+)
+\tud@layer@main@black=\box55
+\tud@layer@main@HKS41=\box56
+\tud@layer@main@white=\box57
+\tud@dim@mainlogoheight=\dimen170
+\tud@layer@head@black=\box58
+\tud@layer@head@HKS41=\box59
+\tud@layer@head@white=\box60
+\tud@layer@head@option=\box61
+\tud@layer@foot@black=\box62
+\tud@layer@foot@HKS41=\box63
+\tud@layer@foot@white=\box64
+\tud@layer@foot@option=\box65
+\tud@layer@foot@cmd=\box66
+Class scrreprt Info: Usage of deprecated command `\At@startsection' mapped to
+(scrreprt)           `\AddtoDoHook{heading/postinit} {...\@gobble}' on input line 7062.
+\tud@title@box=\box67
+\footlogoheight=\skip68
+\pageheadingsvskip=\skip69
+\headingsvskip=\skip70
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2024/11/05 v2.17t AMS math features
+\@mathmargin=\skip71
+
+For additional information on amsmath, use the `?' option.
+(c:/texlive/2024/texmf-dist/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+ (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen171
+)) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen172
+) (c:/texlive/2024/texmf-dist/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count278
+LaTeX Info: Redefining \frac on input line 233.
+\uproot@=\count279
+\leftroot@=\count280
+LaTeX Info: Redefining \overline on input line 398.
+LaTeX Info: Redefining \colon on input line 409.
+\classnum@=\count281
+\DOTSCASE@=\count282
+LaTeX Info: Redefining \ldots on input line 495.
+LaTeX Info: Redefining \dots on input line 498.
+LaTeX Info: Redefining \cdots on input line 619.
+\Mathstrutbox@=\box68
+\strutbox@=\box69
+LaTeX Info: Redefining \big on input line 721.
+LaTeX Info: Redefining \Big on input line 722.
+LaTeX Info: Redefining \bigg on input line 723.
+LaTeX Info: Redefining \Bigg on input line 724.
+\big@size=\dimen173
+LaTeX Font Info:    Redeclaring font encoding OML on input line 742.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 743.
+\macc@depth=\count283
+LaTeX Info: Redefining \bmod on input line 904.
+LaTeX Info: Redefining \pmod on input line 909.
+LaTeX Info: Redefining \smash on input line 939.
+LaTeX Info: Redefining \relbar on input line 969.
+LaTeX Info: Redefining \Relbar on input line 970.
+\c@MaxMatrixCols=\count284
+\dotsspace@=\muskip17
+\c@parentequation=\count285
+\dspbrk@lvl=\count286
+\tag@help=\toks24
+\row@=\count287
+\column@=\count288
+\maxfields@=\count289
+\andhelp@=\toks25
+\eqnshift@=\dimen174
+\alignsep@=\dimen175
+\tagshift@=\dimen176
+\tagwidth@=\dimen177
+\totwidth@=\dimen178
+\lineht@=\dimen179
+\@envbody=\toks26
+\multlinegap=\skip72
+\multlinetaggap=\skip73
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/graphics.sty
+Package: graphics 2024/08/06 v1.4g Standard LaTeX Graphics (DPC,SPQR)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/trig.sty
+Package: trig 2023/12/02 v1.11 sin cos tan (DPC)
+) (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 106.
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen180
+\Gin@req@width=\dimen181
+) (c:/texlive/2024/texmf-dist/tex/latex/tudscr/tudscrcolor.sty
+Package: tudscrcolor 2022/08/09 v2.06o TUD-Script package (corporate design colors)
+ (c:/texlive/2024/texmf-dist/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2024/09/29 v3.02 LaTeX color extensions (UK)
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+ (c:/texlive/2024/texmf-dist/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1349.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1353.
+Package xcolor Info: Model `RGB' extended on input line 1365.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1367.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1368.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1371.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1372.
+)) (c:/texlive/2024/texmf-dist/tex/latex/iwona/omliwona.fd
+File: omliwona.fd 2008/07/22 v0.995 font definition file for OML/iwona (MW)
+) (c:/texlive/2024/texmf-dist/tex/latex/iwona/omsiwona.fd
+File: omsiwona.fd 2008/07/22 v0.995 font definition file for OMS/iwona (MW)
+)
+LaTeX Info: Redefining \textcdln on input line 19.
+LaTeX Info: Redefining \textcdrn on input line 19.
+LaTeX Info: Redefining \textcdsn on input line 19.
+LaTeX Info: Redefining \textcdbn on input line 19.
+LaTeX Info: Redefining \textcdxn on input line 19.
+LaTeX Info: Redefining \textcdli on input line 19.
+LaTeX Info: Redefining \textcdri on input line 19.
+LaTeX Info: Redefining \textcdsi on input line 19.
+LaTeX Info: Redefining \textcdbi on input line 19.
+LaTeX Info: Redefining \textcdxi on input line 19.
+LaTeX Font Info:    Setting tudtt sub-encoding to TS1/4 on input line 19.
+LaTeX Font Info:    Trying to load font information for OT1+opensans-TLF on input line 19.
+ (c:/texlive/2024/texmf-dist/tex/latex/opensans/OT1opensans-TLF.fd
+File: OT1opensans-TLF.fd 2019/06/24 Font definitions for OT1/opensans-TLF.
+) (c:/texlive/2024/texmf-dist/tex/latex/mathastext/mathastext.sty
+Package: mathastext 2024/10/26 v1.4e Use the text font in math mode (JFB)
+
+Package mathastext Info: Starting the math mode configuration.
+\mst@exists@muskip=\muskip18
+\mst@forall@muskip=\muskip19
+\mst@prime@muskip=\muskip20
+\mst@do@nonletters=\toks28
+\mst@undo@nonletters=\toks29
+\mst@do@easynonletters=\toks30
+\mst@undo@easynonletters=\toks31
+\symmtoperatorfont=\mathgroup4
+\symmtletterfont=\mathgroup5
+(   mathastext:   ) ! and ?
+(   mathastext:   ) punctuation: , . : ; and \colon
+LaTeX Info: Redefining \relbar on input line 1197.
+LaTeX Info: Redefining \rightarrowfill on input line 1198.
+LaTeX Info: Redefining \leftarrowfill on input line 1201.
+(   mathastext:   ) + and =
+(   mathastext:   ) parentheses ( ) [ ] and slash /
+(   mathastext:   ) \# \mathdollar \% \& 
+(   mathastext:   ) \imath and \jmath 
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `normal'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 2934.
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `bold'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 2934.
+(   mathastext:   ) \hbar
+(   mathastext:   ) minus is kept as is in subdued normal and bold math versions
+(   mathastext:   ) Subdued `normal' and `bold' math versions.
+
+Package mathastext Info: Loading is complete.  You can now use \Mathastext to
+(mathastext)             modify the normal and bold math versions.  Use it
+(mathastext)             with optional argument or use \MTDeclareVersion to
+(mathastext)             declare additional math versions.
+)
+Now handling font encoding LGR ...
+... processing UTF-8 mapping file for font encoding LGR
+ (c:/texlive/2024/texmf-dist/tex/latex/greek-inputenc/lgrenc.dfu
+File: lgrenc.dfu 2023-03-21 1.9 UTF-8 support for Greek
+   defining Unicode char U+00A8 (decimal 168)
+   defining Unicode char U+00AB (decimal 171)
+   defining Unicode char U+00AF (decimal 175)
+   defining Unicode char U+00B4 (decimal 180)
+   defining Unicode char U+00B7 (decimal 183)
+   defining Unicode char U+00BB (decimal 187)
+   defining Unicode char U+0259 (decimal 601)
+   defining Unicode char U+02D8 (decimal 728)
+   defining Unicode char U+0374 (decimal 884)
+   defining Unicode char U+0375 (decimal 885)
+   defining Unicode char U+037A (decimal 890)
+   defining Unicode char U+037E (decimal 894)
+   defining Unicode char U+0384 (decimal 900)
+   defining Unicode char U+0385 (decimal 901)
+   defining Unicode char U+0386 (decimal 902)
+   defining Unicode char U+0387 (decimal 903)
+   defining Unicode char U+0388 (decimal 904)
+   defining Unicode char U+0389 (decimal 905)
+   defining Unicode char U+038A (decimal 906)
+   defining Unicode char U+038C (decimal 908)
+   defining Unicode char U+038E (decimal 910)
+   defining Unicode char U+038F (decimal 911)
+   defining Unicode char U+0390 (decimal 912)
+   defining Unicode char U+0391 (decimal 913)
+   defining Unicode char U+0392 (decimal 914)
+   defining Unicode char U+0393 (decimal 915)
+   defining Unicode char U+0394 (decimal 916)
+   defining Unicode char U+0395 (decimal 917)
+   defining Unicode char U+0396 (decimal 918)
+   defining Unicode char U+0397 (decimal 919)
+   defining Unicode char U+0398 (decimal 920)
+   defining Unicode char U+0399 (decimal 921)
+   defining Unicode char U+039A (decimal 922)
+   defining Unicode char U+039B (decimal 923)
+   defining Unicode char U+039C (decimal 924)
+   defining Unicode char U+039D (decimal 925)
+   defining Unicode char U+039E (decimal 926)
+   defining Unicode char U+039F (decimal 927)
+   defining Unicode char U+03A0 (decimal 928)
+   defining Unicode char U+03A1 (decimal 929)
+   defining Unicode char U+03A3 (decimal 931)
+   defining Unicode char U+03A4 (decimal 932)
+   defining Unicode char U+03A5 (decimal 933)
+   defining Unicode char U+03A6 (decimal 934)
+   defining Unicode char U+03A7 (decimal 935)
+   defining Unicode char U+03A8 (decimal 936)
+   defining Unicode char U+03A9 (decimal 937)
+   defining Unicode char U+03AA (decimal 938)
+   defining Unicode char U+03AB (decimal 939)
+   defining Unicode char U+03AC (decimal 940)
+   defining Unicode char U+03AD (decimal 941)
+   defining Unicode char U+03AE (decimal 942)
+   defining Unicode char U+03AF (decimal 943)
+   defining Unicode char U+03B0 (decimal 944)
+   defining Unicode char U+03B1 (decimal 945)
+   defining Unicode char U+03B2 (decimal 946)
+   defining Unicode char U+03B3 (decimal 947)
+   defining Unicode char U+03B4 (decimal 948)
+   defining Unicode char U+03B5 (decimal 949)
+   defining Unicode char U+03B6 (decimal 950)
+   defining Unicode char U+03B7 (decimal 951)
+   defining Unicode char U+03B8 (decimal 952)
+   defining Unicode char U+03B9 (decimal 953)
+   defining Unicode char U+03BA (decimal 954)
+   defining Unicode char U+03BB (decimal 955)
+   defining Unicode char U+03BC (decimal 956)
+   defining Unicode char U+03BD (decimal 957)
+   defining Unicode char U+03BE (decimal 958)
+   defining Unicode char U+03BF (decimal 959)
+   defining Unicode char U+03C0 (decimal 960)
+   defining Unicode char U+03C1 (decimal 961)
+   defining Unicode char U+03C2 (decimal 962)
+   defining Unicode char U+03C3 (decimal 963)
+   defining Unicode char U+03C4 (decimal 964)
+   defining Unicode char U+03C5 (decimal 965)
+   defining Unicode char U+03C6 (decimal 966)
+   defining Unicode char U+03C7 (decimal 967)
+   defining Unicode char U+03C8 (decimal 968)
+   defining Unicode char U+03C9 (decimal 969)
+   defining Unicode char U+03CA (decimal 970)
+   defining Unicode char U+03CB (decimal 971)
+   defining Unicode char U+03CC (decimal 972)
+   defining Unicode char U+03CD (decimal 973)
+   defining Unicode char U+03CE (decimal 974)
+   defining Unicode char U+03D0 (decimal 976)
+   defining Unicode char U+03D1 (decimal 977)
+   defining Unicode char U+03D5 (decimal 981)
+   defining Unicode char U+03D6 (decimal 982)
+   defining Unicode char U+03D8 (decimal 984)
+   defining Unicode char U+03D9 (decimal 985)
+   defining Unicode char U+03DA (decimal 986)
+   defining Unicode char U+03DB (decimal 987)
+   defining Unicode char U+03DC (decimal 988)
+   defining Unicode char U+03DD (decimal 989)
+   defining Unicode char U+03DE (decimal 990)
+   defining Unicode char U+03DF (decimal 991)
+   defining Unicode char U+03E0 (decimal 992)
+   defining Unicode char U+03E1 (decimal 993)
+   defining Unicode char U+03F0 (decimal 1008)
+   defining Unicode char U+03F1 (decimal 1009)
+   defining Unicode char U+03F4 (decimal 1012)
+   defining Unicode char U+03F5 (decimal 1013)
+   defining Unicode char U+1F00 (decimal 7936)
+   defining Unicode char U+1F01 (decimal 7937)
+   defining Unicode char U+1F02 (decimal 7938)
+   defining Unicode char U+1F03 (decimal 7939)
+   defining Unicode char U+1F04 (decimal 7940)
+   defining Unicode char U+1F05 (decimal 7941)
+   defining Unicode char U+1F06 (decimal 7942)
+   defining Unicode char U+1F07 (decimal 7943)
+   defining Unicode char U+1F08 (decimal 7944)
+   defining Unicode char U+1F09 (decimal 7945)
+   defining Unicode char U+1F0A (decimal 7946)
+   defining Unicode char U+1F0B (decimal 7947)
+   defining Unicode char U+1F0C (decimal 7948)
+   defining Unicode char U+1F0D (decimal 7949)
+   defining Unicode char U+1F0E (decimal 7950)
+   defining Unicode char U+1F0F (decimal 7951)
+   defining Unicode char U+1F10 (decimal 7952)
+   defining Unicode char U+1F11 (decimal 7953)
+   defining Unicode char U+1F12 (decimal 7954)
+   defining Unicode char U+1F13 (decimal 7955)
+   defining Unicode char U+1F14 (decimal 7956)
+   defining Unicode char U+1F15 (decimal 7957)
+   defining Unicode char U+1F18 (decimal 7960)
+   defining Unicode char U+1F19 (decimal 7961)
+   defining Unicode char U+1F1A (decimal 7962)
+   defining Unicode char U+1F1B (decimal 7963)
+   defining Unicode char U+1F1C (decimal 7964)
+   defining Unicode char U+1F1D (decimal 7965)
+   defining Unicode char U+1F20 (decimal 7968)
+   defining Unicode char U+1F21 (decimal 7969)
+   defining Unicode char U+1F22 (decimal 7970)
+   defining Unicode char U+1F23 (decimal 7971)
+   defining Unicode char U+1F24 (decimal 7972)
+   defining Unicode char U+1F25 (decimal 7973)
+   defining Unicode char U+1F26 (decimal 7974)
+   defining Unicode char U+1F27 (decimal 7975)
+   defining Unicode char U+1F28 (decimal 7976)
+   defining Unicode char U+1F29 (decimal 7977)
+   defining Unicode char U+1F2A (decimal 7978)
+   defining Unicode char U+1F2B (decimal 7979)
+   defining Unicode char U+1F2C (decimal 7980)
+   defining Unicode char U+1F2D (decimal 7981)
+   defining Unicode char U+1F2E (decimal 7982)
+   defining Unicode char U+1F2F (decimal 7983)
+   defining Unicode char U+1F30 (decimal 7984)
+   defining Unicode char U+1F31 (decimal 7985)
+   defining Unicode char U+1F32 (decimal 7986)
+   defining Unicode char U+1F33 (decimal 7987)
+   defining Unicode char U+1F34 (decimal 7988)
+   defining Unicode char U+1F35 (decimal 7989)
+   defining Unicode char U+1F36 (decimal 7990)
+   defining Unicode char U+1F37 (decimal 7991)
+   defining Unicode char U+1F38 (decimal 7992)
+   defining Unicode char U+1F39 (decimal 7993)
+   defining Unicode char U+1F3A (decimal 7994)
+   defining Unicode char U+1F3B (decimal 7995)
+   defining Unicode char U+1F3C (decimal 7996)
+   defining Unicode char U+1F3D (decimal 7997)
+   defining Unicode char U+1F3E (decimal 7998)
+   defining Unicode char U+1F3F (decimal 7999)
+   defining Unicode char U+1F40 (decimal 8000)
+   defining Unicode char U+1F41 (decimal 8001)
+   defining Unicode char U+1F42 (decimal 8002)
+   defining Unicode char U+1F43 (decimal 8003)
+   defining Unicode char U+1F44 (decimal 8004)
+   defining Unicode char U+1F45 (decimal 8005)
+   defining Unicode char U+1F48 (decimal 8008)
+   defining Unicode char U+1F49 (decimal 8009)
+   defining Unicode char U+1F4A (decimal 8010)
+   defining Unicode char U+1F4B (decimal 8011)
+   defining Unicode char U+1F4C (decimal 8012)
+   defining Unicode char U+1F4D (decimal 8013)
+   defining Unicode char U+1F50 (decimal 8016)
+   defining Unicode char U+1F51 (decimal 8017)
+   defining Unicode char U+1F52 (decimal 8018)
+   defining Unicode char U+1F53 (decimal 8019)
+   defining Unicode char U+1F54 (decimal 8020)
+   defining Unicode char U+1F55 (decimal 8021)
+   defining Unicode char U+1F56 (decimal 8022)
+   defining Unicode char U+1F57 (decimal 8023)
+   defining Unicode char U+1F59 (decimal 8025)
+   defining Unicode char U+1F5B (decimal 8027)
+   defining Unicode char U+1F5D (decimal 8029)
+   defining Unicode char U+1F5F (decimal 8031)
+   defining Unicode char U+1F60 (decimal 8032)
+   defining Unicode char U+1F61 (decimal 8033)
+   defining Unicode char U+1F62 (decimal 8034)
+   defining Unicode char U+1F63 (decimal 8035)
+   defining Unicode char U+1F64 (decimal 8036)
+   defining Unicode char U+1F65 (decimal 8037)
+   defining Unicode char U+1F66 (decimal 8038)
+   defining Unicode char U+1F67 (decimal 8039)
+   defining Unicode char U+1F68 (decimal 8040)
+   defining Unicode char U+1F69 (decimal 8041)
+   defining Unicode char U+1F6A (decimal 8042)
+   defining Unicode char U+1F6B (decimal 8043)
+   defining Unicode char U+1F6C (decimal 8044)
+   defining Unicode char U+1F6D (decimal 8045)
+   defining Unicode char U+1F6E (decimal 8046)
+   defining Unicode char U+1F6F (decimal 8047)
+   defining Unicode char U+1F70 (decimal 8048)
+   defining Unicode char U+1F71 (decimal 8049)
+   defining Unicode char U+1F72 (decimal 8050)
+   defining Unicode char U+1F73 (decimal 8051)
+   defining Unicode char U+1F74 (decimal 8052)
+   defining Unicode char U+1F75 (decimal 8053)
+   defining Unicode char U+1F76 (decimal 8054)
+   defining Unicode char U+1F77 (decimal 8055)
+   defining Unicode char U+1F78 (decimal 8056)
+   defining Unicode char U+1F79 (decimal 8057)
+   defining Unicode char U+1F7A (decimal 8058)
+   defining Unicode char U+1F7B (decimal 8059)
+   defining Unicode char U+1F7C (decimal 8060)
+   defining Unicode char U+1F7D (decimal 8061)
+   defining Unicode char U+1F80 (decimal 8064)
+   defining Unicode char U+1F81 (decimal 8065)
+   defining Unicode char U+1F82 (decimal 8066)
+   defining Unicode char U+1F83 (decimal 8067)
+   defining Unicode char U+1F84 (decimal 8068)
+   defining Unicode char U+1F85 (decimal 8069)
+   defining Unicode char U+1F86 (decimal 8070)
+   defining Unicode char U+1F87 (decimal 8071)
+   defining Unicode char U+1F88 (decimal 8072)
+   defining Unicode char U+1F89 (decimal 8073)
+   defining Unicode char U+1F8A (decimal 8074)
+   defining Unicode char U+1F8B (decimal 8075)
+   defining Unicode char U+1F8C (decimal 8076)
+   defining Unicode char U+1F8D (decimal 8077)
+   defining Unicode char U+1F8E (decimal 8078)
+   defining Unicode char U+1F8F (decimal 8079)
+   defining Unicode char U+1F90 (decimal 8080)
+   defining Unicode char U+1F91 (decimal 8081)
+   defining Unicode char U+1F92 (decimal 8082)
+   defining Unicode char U+1F93 (decimal 8083)
+   defining Unicode char U+1F94 (decimal 8084)
+   defining Unicode char U+1F95 (decimal 8085)
+   defining Unicode char U+1F96 (decimal 8086)
+   defining Unicode char U+1F97 (decimal 8087)
+   defining Unicode char U+1F98 (decimal 8088)
+   defining Unicode char U+1F99 (decimal 8089)
+   defining Unicode char U+1F9A (decimal 8090)
+   defining Unicode char U+1F9B (decimal 8091)
+   defining Unicode char U+1F9C (decimal 8092)
+   defining Unicode char U+1F9D (decimal 8093)
+   defining Unicode char U+1F9E (decimal 8094)
+   defining Unicode char U+1F9F (decimal 8095)
+   defining Unicode char U+1FA0 (decimal 8096)
+   defining Unicode char U+1FA1 (decimal 8097)
+   defining Unicode char U+1FA2 (decimal 8098)
+   defining Unicode char U+1FA3 (decimal 8099)
+   defining Unicode char U+1FA4 (decimal 8100)
+   defining Unicode char U+1FA5 (decimal 8101)
+   defining Unicode char U+1FA6 (decimal 8102)
+   defining Unicode char U+1FA7 (decimal 8103)
+   defining Unicode char U+1FA8 (decimal 8104)
+   defining Unicode char U+1FA9 (decimal 8105)
+   defining Unicode char U+1FAA (decimal 8106)
+   defining Unicode char U+1FAB (decimal 8107)
+   defining Unicode char U+1FAC (decimal 8108)
+   defining Unicode char U+1FAD (decimal 8109)
+   defining Unicode char U+1FAE (decimal 8110)
+   defining Unicode char U+1FAF (decimal 8111)
+   defining Unicode char U+1FB0 (decimal 8112)
+   defining Unicode char U+1FB1 (decimal 8113)
+   defining Unicode char U+1FB2 (decimal 8114)
+   defining Unicode char U+1FB3 (decimal 8115)
+   defining Unicode char U+1FB4 (decimal 8116)
+   defining Unicode char U+1FB6 (decimal 8118)
+   defining Unicode char U+1FB7 (decimal 8119)
+   defining Unicode char U+1FB8 (decimal 8120)
+   defining Unicode char U+1FB9 (decimal 8121)
+   defining Unicode char U+1FBA (decimal 8122)
+   defining Unicode char U+1FBB (decimal 8123)
+   defining Unicode char U+1FBC (decimal 8124)
+   defining Unicode char U+1FBD (decimal 8125)
+   defining Unicode char U+1FBE (decimal 8126)
+   defining Unicode char U+1FBF (decimal 8127)
+   defining Unicode char U+1FC0 (decimal 8128)
+   defining Unicode char U+1FC1 (decimal 8129)
+   defining Unicode char U+1FC2 (decimal 8130)
+   defining Unicode char U+1FC3 (decimal 8131)
+   defining Unicode char U+1FC4 (decimal 8132)
+   defining Unicode char U+1FC6 (decimal 8134)
+   defining Unicode char U+1FC7 (decimal 8135)
+   defining Unicode char U+1FC8 (decimal 8136)
+   defining Unicode char U+1FC9 (decimal 8137)
+   defining Unicode char U+1FCA (decimal 8138)
+   defining Unicode char U+1FCB (decimal 8139)
+   defining Unicode char U+1FCC (decimal 8140)
+   defining Unicode char U+1FCD (decimal 8141)
+   defining Unicode char U+1FCE (decimal 8142)
+   defining Unicode char U+1FCF (decimal 8143)
+   defining Unicode char U+1FD0 (decimal 8144)
+   defining Unicode char U+1FD1 (decimal 8145)
+   defining Unicode char U+1FD2 (decimal 8146)
+   defining Unicode char U+1FD3 (decimal 8147)
+   defining Unicode char U+1FD6 (decimal 8150)
+   defining Unicode char U+1FD7 (decimal 8151)
+   defining Unicode char U+1FD8 (decimal 8152)
+   defining Unicode char U+1FD9 (decimal 8153)
+   defining Unicode char U+1FDA (decimal 8154)
+   defining Unicode char U+1FDB (decimal 8155)
+   defining Unicode char U+1FDD (decimal 8157)
+   defining Unicode char U+1FDE (decimal 8158)
+   defining Unicode char U+1FDF (decimal 8159)
+   defining Unicode char U+1FE0 (decimal 8160)
+   defining Unicode char U+1FE1 (decimal 8161)
+   defining Unicode char U+1FE2 (decimal 8162)
+   defining Unicode char U+1FE3 (decimal 8163)
+   defining Unicode char U+1FE4 (decimal 8164)
+   defining Unicode char U+1FE5 (decimal 8165)
+   defining Unicode char U+1FE6 (decimal 8166)
+   defining Unicode char U+1FE7 (decimal 8167)
+   defining Unicode char U+1FE8 (decimal 8168)
+   defining Unicode char U+1FE9 (decimal 8169)
+   defining Unicode char U+1FEA (decimal 8170)
+   defining Unicode char U+1FEB (decimal 8171)
+   defining Unicode char U+1FEC (decimal 8172)
+   defining Unicode char U+1FED (decimal 8173)
+   defining Unicode char U+1FEE (decimal 8174)
+   defining Unicode char U+1FEF (decimal 8175)
+   defining Unicode char U+1FF2 (decimal 8178)
+   defining Unicode char U+1FF3 (decimal 8179)
+   defining Unicode char U+1FF4 (decimal 8180)
+   defining Unicode char U+1FF6 (decimal 8182)
+   defining Unicode char U+1FF7 (decimal 8183)
+   defining Unicode char U+1FF8 (decimal 8184)
+   defining Unicode char U+1FF9 (decimal 8185)
+   defining Unicode char U+1FFA (decimal 8186)
+   defining Unicode char U+1FFB (decimal 8187)
+   defining Unicode char U+1FFC (decimal 8188)
+   defining Unicode char U+1FFD (decimal 8189)
+   defining Unicode char U+1FFE (decimal 8190)
+   defining Unicode char U+2013 (decimal 8211)
+   defining Unicode char U+2014 (decimal 8212)
+   defining Unicode char U+2018 (decimal 8216)
+   defining Unicode char U+2019 (decimal 8217)
+   defining Unicode char U+201A (decimal 8218)
+   defining Unicode char U+2030 (decimal 8240)
+   defining Unicode char U+2039 (decimal 8249)
+   defining Unicode char U+203A (decimal 8250)
+   defining Unicode char U+20AC (decimal 8364)
+   defining Unicode char U+2126 (decimal 8486)
+   defining Unicode char U+10144 (decimal 65860)
+   defining Unicode char U+10145 (decimal 65861)
+   defining Unicode char U+10146 (decimal 65862)
+   defining Unicode char U+10147 (decimal 65863)
+)
+\symtudupgrk=\mathgroup6
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `bold'
+(Font)                  LGR/cmr/m/n --> LGR/cmr/bx/n on input line 19.
+\symtuditgrk=\mathgroup7
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `bold'
+(Font)                  LGR/cmr/m/it --> LGR/cmr/bx/it on input line 19.
+\c@mv@tudnormal@lm=\count290
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@lm'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/l/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudnormal@lm'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/l/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@lm'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@lm'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@lm'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@lm'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/l/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@lm'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@lm'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/l/n on input line 19.
+\c@mv@tudbold@lm=\count291
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@lm'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudbold@lm'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/m/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@lm'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@lm'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@lm'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@lm'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@lm'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@lm'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@lm'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@lm'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@lm'
+(Font)                  OML/cmm/m/it --> OML/iwona/l/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@lm'
+(Font)                  OML/cmm/m/it --> OML/iwona/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@lm'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@lm'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@lm'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@lm'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@lm'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/l/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@lm'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@lm'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@lm'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@lm'
+(Font)                  OT1/iwona/l/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@lm'
+(Font)                  OT1/iwona/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@lm'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@lm'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@lm'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@lm'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@lm'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/l/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@lm'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@lm'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@lm'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@lm'
+(Font)                  OMS/iwona/l/n --> U/eus/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@lm'
+(Font)                  OMS/iwona/m/n --> U/eus/b/n on input line 19.
+\c@mv@tudnormal@lsb=\count292
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@lsb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/l/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudnormal@lsb'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/l/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@lsb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@lsb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@lsb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@lsb'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/l/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@lsb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@lsb'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/l/n on input line 19.
+\c@mv@tudbold@lsb=\count293
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@lsb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/sb/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudbold@lsb'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/sb/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@lsb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@lsb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@lsb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@lsb'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/sb/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@lsb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@lsb'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@lsb'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@lsb'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@lsb'
+(Font)                  OML/cmm/m/it --> OML/iwona/l/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@lsb'
+(Font)                  OML/cmm/m/it --> OML/iwona/sb/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@lsb'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@lsb'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@lsb'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@lsb'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@lsb'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/l/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@lsb'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/sb/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@lsb'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@lsb'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@lsb'
+(Font)                  > OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@lsb'
+(Font)                  > OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@lsb'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@lsb'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@lsb'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@lsb'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@lsb'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/l/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@lsb'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/sb/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@lsb'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/l/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@lsb'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@lsb'
+(Font)                  > U/eus/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@lsb'
+(Font)                  > U/eus/b/n on input line 19.
+\c@mv@tudnormal@msb=\count294
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@msb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudnormal@msb'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/m/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@msb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@msb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@msb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@msb'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@msb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@msb'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/m/n on input line 19.
+\c@mv@tudbold@msb=\count295
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@msb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/sb/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudbold@msb'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/sb/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@msb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@msb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@msb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@msb'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/sb/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@msb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@msb'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@msb'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@msb'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@msb'
+(Font)                  OML/cmm/m/it --> OML/iwona/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@msb'
+(Font)                  OML/cmm/m/it --> OML/iwona/sb/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@msb'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@msb'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@msb'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@msb'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/sb/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@msb'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@msb'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/sb/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@msb'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@msb'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@msb'
+(Font)                  > OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@msb'
+(Font)                  > OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@msb'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@msb'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@msb'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@msb'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@msb'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@msb'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/sb/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@msb'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@msb'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/sb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@msb'
+(Font)                  > U/eus/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@msb'
+(Font)                  > U/eus/b/n on input line 19.
+\c@mv@tudnormal@mb=\count296
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@mb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudnormal@mb'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/m/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@mb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@mb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@mb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@mb'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@mb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@mb'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/m/n on input line 19.
+\c@mv@tudbold@mb=\count297
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@mb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/b/it on input line 19.
+
+Package mathastext Info: Latin letters in math version `tudbold@mb'
+(mathastext)             declared on input line 19
+(mathastext)             will use the font OT1/opensans-TLF/b/it
+(mathastext)             Other characters (digits, ...) and \log-like names
+(mathastext)             will be in `n' shape.
+
+LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@mb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@mb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@mb'
+(Font)                  OT1/opensans-TLF/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@mb'
+(Font)                  OT1/opensans-TLF/l/it --> OT1/opensans-TLF/b/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@mb'
+(Font)                  OT1/opensans-TLF/l/n --> OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@mb'
+(Font)                  OT1/tudtt/l/n --> OT1/tudtt/b/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@mb'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@mb'
+(Font)                  OT1/cmr/m/n --> OT1/iwona/b/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@mb'
+(Font)                  OML/cmm/m/it --> OML/iwona/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@mb'
+(Font)                  OML/cmm/m/it --> OML/iwona/b/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@mb'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@mb'
+(Font)                  OMS/cmsy/m/n --> OMS/iwona/b/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@mb'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@mb'
+(Font)                  OMX/cmex/m/n --> OMX/iwona/b/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@mb'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@mb'
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/b/it on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@mb'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@mb'
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@mb'
+(Font)                  > OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@mb'
+(Font)                  > OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@mb'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@mb'
+(Font)                  OT1/cmr/bx/n --> OT1/opensans-TLF/eb/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@mb'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@mb'
+(Font)                  OT1/cmss/m/n --> OT1/opensans-TLF/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@mb'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/m/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@mb'
+(Font)                  OT1/cmr/m/it --> OT1/opensans-TLF/b/it on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@mb'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@mb'
+(Font)                  OT1/cmtt/m/n --> OT1/tudtt/b/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@mb'
+(Font)                  > U/eus/m/n on input line 19.
+LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@mb'
+(Font)                  > U/eus/b/n on input line 19.
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2024/10/24 v3.43 KOMA-Script package (end user interface for scrlayer)
+ (c:/texlive/2024/texmf-dist/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 2024/10/24 v3.43 KOMA-Script package (defining layers and page styles)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 2182.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
+)
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 5.69054pt
+(typearea)             \paperwidth      = 597.50787pt
+(typearea)              \textwidth      = 414.27214pt
+(typearea)              DIV departure   = -5%
+(typearea)              \evensidemargin = 22.19315pt
+(typearea)              \oddsidemargin  = 22.19315pt
+(typearea)             \paperheight     = 845.04684pt
+(typearea)              \textheight     = 595.80026pt
+(typearea)              \topmargin      = -25.16531pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 19.
+Package typearea Info: Using dirty hack to recalculate internal output
+(typearea)             dimensions of LaTeX on input line 19.
+
+
+LaTeX Warning: Unused global option(s):
+    [british].
+
+(./rewrite.aux)
+\openout1 = `rewrite.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 19.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 19.
+ (c:/texlive/2024/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
+File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
+)
+LaTeX Font Info:    ... okay on input line 19.
+Package scrbase Info: activating english \abstractname on input line 19.
+Package scrbase Info: activating english \partname on input line 19.
+Package scrbase Info: activating english \chaptername on input line 19.
+Package scrbase Info: activating english \appendixname on input line 19.
+Package scrbase Info: activating english \figurename on input line 19.
+Package scrbase Info: activating english \tablename on input line 19.
+Package scrbase Info: activating english \contentsname on input line 19.
+Package scrbase Info: activating english \listfigurename on input line 19.
+Package scrbase Info: activating english \listtablename on input line 19.
+Package scrbase Info: activating english \bibname on input line 19.
+Package scrbase Info: activating english \indexname on input line 19.
+Package scrbase Info: activating english \graduationtext on input line 19.
+Package scrbase Info: activating english \refereename on input line 19.
+Package scrbase Info: activating english \refereeothername on input line 19.
+Package scrbase Info: activating english \advisorname on input line 19.
+Package scrbase Info: activating english \advisorothername on input line 19.
+Package scrbase Info: activating english \supervisorname on input line 19.
+Package scrbase Info: activating english \supervisorothername on input line 19.
+Package scrbase Info: activating english \professorname on input line 19.
+Package scrbase Info: activating english \professorothername on input line 19.
+Package scrbase Info: activating english \datetext on input line 19.
+Package scrbase Info: activating english \dateofbirthtext on input line 19.
+Package scrbase Info: activating english \placeofbirthtext on input line 19.
+Package scrbase Info: activating english \defensedatetext on input line 19.
+Package scrbase Info: activating english \matriculationyearname on input line 19.
+Package scrbase Info: activating english \matriculationnumbername on input line 19.
+Package scrbase Info: activating english \coverpagename on input line 19.
+Package scrbase Info: activating english \titlepagename on input line 19.
+Package scrbase Info: activating english \titlename on input line 19.
+Package scrbase Info: activating english \confirmationname on input line 19.
+Package scrbase Info: activating english \confirmationtext on input line 19.
+Package scrbase Info: activating english \blockingname on input line 19.
+Package scrbase Info: activating english \blockingtext on input line 19.
+Package scrbase Info: activating english \coursename on input line 19.
+Package scrbase Info: activating english \disciplinename on input line 19.
+Package scrbase Info: activating english \listingname on input line 19.
+Package scrbase Info: activating english \listlistingname on input line 19.
+Package scrbase Info: activating english \habilitationname on input line 19.
+Package scrbase Info: activating english \dissertationname on input line 19.
+Package scrbase Info: activating english \diplomathesisname on input line 19.
+Package scrbase Info: activating english \masterthesisname on input line 19.
+Package scrbase Info: activating english \bachelorthesisname on input line 19.
+Package scrbase Info: activating english \studentthesisname on input line 19.
+Package scrbase Info: activating english \studentresearchname on input line 19.
+Package scrbase Info: activating english \projectpapername on input line 19.
+Package scrbase Info: activating english \seminarpapername on input line 19.
+Package scrbase Info: activating english \termpapername on input line 19.
+Package scrbase Info: activating english \researchname on input line 19.
+Package scrbase Info: activating english \logname on input line 19.
+Package scrbase Info: activating english \internshipname on input line 19.
+Package scrbase Info: activating english \reportname on input line 19.
+<TUD-black.pdf, id=1, 256.15298pt x 74.32167pt>
+File: TUD-black.pdf Graphic file (type pdf)
+<use TUD-black.pdf>
+Package pdftex.def Info: TUD-black.pdf  used on input line 19.
+(pdftex.def)             Requested size: 162.1807pt x 47.05765pt.
+<TUD-blue.pdf, id=2, 256.15298pt x 74.32167pt>
+File: TUD-blue.pdf Graphic file (type pdf)
+<use TUD-blue.pdf>
+Package pdftex.def Info: TUD-blue.pdf  used on input line 19.
+(pdftex.def)             Requested size: 162.1807pt x 47.05765pt.
+<TUD-white.pdf, id=3, 256.15298pt x 74.32167pt>
+File: TUD-white.pdf Graphic file (type pdf)
+<use TUD-white.pdf>
+Package pdftex.def Info: TUD-white.pdf  used on input line 19.
+(pdftex.def)             Requested size: 162.1807pt x 47.05765pt.
+<DDC-24.pdf, id=4, 144.20576pt x 51.4994pt>
+File: DDC-24.pdf Graphic file (type pdf)
+<use DDC-24.pdf>
+Package pdftex.def Info: DDC-24.pdf  used on input line 19.
+(pdftex.def)             Requested size: 131.77533pt x 47.05765pt.
+<DDC-27.pdf, id=5, 144.20576pt x 51.4994pt>
+File: DDC-27.pdf Graphic file (type pdf)
+<use DDC-27.pdf>
+Package pdftex.def Info: DDC-27.pdf  used on input line 19.
+(pdftex.def)             Requested size: 131.77533pt x 47.05765pt.
+<DDC-30.pdf, id=6, 144.20576pt x 51.4994pt>
+File: DDC-30.pdf Graphic file (type pdf)
+<use DDC-30.pdf>
+Package pdftex.def Info: DDC-30.pdf  used on input line 19.
+(pdftex.def)             Requested size: 131.77533pt x 47.05765pt.
+<DDC-22.pdf, id=7, 34.71169pt x 69.42436pt>
+File: DDC-22.pdf Graphic file (type pdf)
+<use DDC-22.pdf>
+Package pdftex.def Info: DDC-22.pdf  used on input line 19.
+(pdftex.def)             Requested size: 23.52893pt x 47.05765pt.
+<DDC-25.pdf, id=8, 34.71169pt x 69.42436pt>
+File: DDC-25.pdf Graphic file (type pdf)
+<use DDC-25.pdf>
+Package pdftex.def Info: DDC-25.pdf  used on input line 19.
+(pdftex.def)             Requested size: 23.52893pt x 47.05765pt.
+<DDC-28.pdf, id=9, 34.71169pt x 69.42436pt>
+File: DDC-28.pdf Graphic file (type pdf)
+<use DDC-28.pdf>
+Package pdftex.def Info: DDC-28.pdf  used on input line 19.
+(pdftex.def)             Requested size: 23.52893pt x 47.05765pt.
+
+*geometry* detected driver: <none>
+*geometry* verbose mode - [ preamble ] result:
+* driver: \Gm@driver 
+* paper: custom
+* layout: <same size as paper>
+* layoutoffset:(h,v)=(0.0pt,0.0pt)
+* bindingoffset: 5.69054pt
+* modes: 
+* h-part:(L,W,R)=(71.13188pt, 449.55357pt, 71.13188pt)
+* v-part:(T,H,B)=(56.9055pt, 702.78308pt, 85.35826pt)
+* \paperwidth=597.50787pt
+* \paperheight=845.04684pt
+* \textwidth=449.55357pt
+* \textheight=702.78308pt
+* \oddsidemargin=4.55243pt
+* \evensidemargin=-1.1381pt
+* \topmargin=-52.7645pt
+* \headheight=17.0pt
+* \headsep=20.40001pt
+* \topskip=11.0pt
+* \footskip=42.60748pt
+* \marginparwidth=50.73187pt
+* \marginparsep=10.20001pt
+* \columnsep=14.96pt
+* \skip\footins=10.0pt plus 4.0pt minus 2.0pt
+* \hoffset=0.0pt
+* \voffset=0.0pt
+* \mag=1000
+* \@twocolumnfalse
+* \@twosidefalse
+* \@mparswitchfalse
+* \@reversemarginfalse
+* (1in=72.27pt=25.4mm, 1cm=28.453pt)
+
+(c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count298
+\scratchdimen=\dimen182
+\scratchbox=\box70
+\nofMPsegments=\count299
+\nofMParguments=\count300
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count301
+\MPscratchDim=\dimen183
+\MPnumerator=\count302
+\makeMPintoPDFobject=\count303
+\everyMPtoPDFconversion=\toks33
+) (c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+ (c:/texlive/2024/texmf-dist/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+) (c:/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty
+Package: grfext 2019/12/03 v1.3 Manage graphics extensions (HO)
+ (c:/texlive/2024/texmf-dist/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)) (c:/texlive/2024/texmf-dist/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+ (c:/texlive/2024/texmf-dist/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)) (c:/texlive/2024/texmf-dist/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 485.
+Package grfext Info: Graphics extension search list:
+(grfext)             [.pdf,.png,.jpg,.mps,.jpeg,.jbig2,.jb2,.PDF,.PNG,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 504.
+ (c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+))
+LaTeX Font Info:    Encoding `OT1' has changed to `OML' for symbol font
+(Font)              `mtletterfont' in the math version `normal' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `normal'
+(Font)                  OT1/opensans-TLF/l/n --> OML/cmm/m/it on input line 19.
+LaTeX Font Info:    Encoding `OT1' has changed to `OML' for symbol font
+(Font)              `mtletterfont' in the math version `bold' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `bold'
+(Font)                  OT1/opensans-TLF/l/n --> OML/cmm/b/it on input line 19.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `mtoperatorfont' in the math version `normal' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `normal'
+(Font)                  OT1/opensans-TLF/l/n --> T1/cmr/m/n on input line 19.
+LaTeX Font Info:    Encoding `OT1' has changed to `T1' for symbol font
+(Font)              `mtoperatorfont' in the math version `bold' on input line 19.
+LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `bold'
+(Font)                  OT1/opensans-TLF/l/n --> T1/cmr/bx/n on input line 19.
+
+Package mathastext Info: ...entering subdued mode...
+(mathastext)             ...done on input line 19.
+
+LaTeX Font Info:    Trying to load font information for OT1+iwona on input line 21.
+ (c:/texlive/2024/texmf-dist/tex/latex/iwona/ot1iwona.fd
+File: ot1iwona.fd 2008/07/22 v0.995 font definition file for OT1/iwona (MW)
+)
+LaTeX Font Info:    Trying to load font information for OMX+iwona on input line 21.
+ (c:/texlive/2024/texmf-dist/tex/latex/iwona/omxiwona.fd
+File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
+)
+LaTeX Font Info:    Trying to load font information for LGR+opensans-TLF on input line 21.
+ (c:/texlive/2024/texmf-dist/tex/latex/opensans/LGRopensans-TLF.fd
+File: LGRopensans-TLF.fd 2019/06/24 Font definitions for LGR/opensans-TLF.
+)
+
+LaTeX Font Info:    Font shape `OT1/opensans-TLF/l/sl' in size <10.95> not available
+(Font)              Font shape `OT1/opensans-TLF/l/it' tried instead on input line 51.
+[1
+
+
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_n3lhbv.enc}]
+Overfull \vbox (43.44801pt too high) has occurred while \output is active []
+
+
+
+[2{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_iz27ck.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/sy-iwona.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_uv4o4i.enc}]
+Overfull \hbox (482.87068pt too wide) detected at line 85
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 85--85
+[] 
+ []
+
+Runaway argument?
+ \label {profit_{RL}in_EQ} profitRLin = + \sum (t_{block}, + \sum _{s\ETC.
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:90: Paragraph ended before \flalign was complete.
+<to be read again> 
+                   \par 
+l.90 
+     
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:90: Missing $ inserted.
+<inserted text> 
+                $
+l.90 
+     
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:90: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.90 
+     
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:90: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.90 
+     
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:91: Missing $ inserted.
+<inserted text> 
+                $
+l.91 	+ \sum
+            _{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, ...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.94 \end{flalign}
+                  
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.94 \end{flalign}
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Missing $ inserted.
+<inserted text> 
+                $
+l.94 \end{flalign}
+                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Missing } inserted.
+<inserted text> 
+                }
+l.94 \end{flalign}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.94 \end{flalign}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.94 \end{flalign}
+                  
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (932.42426pt too wide) detected at line 94
+[]
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.94 \end{flalign}
+                  
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Missing $ inserted.
+<inserted text> 
+                $
+l.94 \end{flalign}
+                  
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:94: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.94 \end{flalign}
+                  
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+
+[3]
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing } inserted.
+<inserted text> 
+                }
+l.107 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing { inserted.
+<inserted text> 
+                {
+l.107 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing } inserted.
+<inserted text> 
+                }
+l.107 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing $ inserted.
+<inserted text> 
+                $
+l.107 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.107 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.107 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:107: Missing { inserted.
+<inserted text> 
+                {
+l.107 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (1868.18259pt too wide) detected at line 107
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 107--107
+[] 
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing } inserted.
+<inserted text> 
+                }
+l.120 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing { inserted.
+<inserted text> 
+                {
+l.120 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing } inserted.
+<inserted text> 
+                }
+l.120 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing $ inserted.
+<inserted text> 
+                $
+l.120 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.120 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.120 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:120: Missing { inserted.
+<inserted text> 
+                {
+l.120 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (2612.69113pt too wide) detected at line 120
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 120--120
+[] 
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing } inserted.
+<inserted text> 
+                }
+l.132 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing { inserted.
+<inserted text> 
+                {
+l.132 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing } inserted.
+<inserted text> 
+                }
+l.132 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing $ inserted.
+<inserted text> 
+                $
+l.132 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.132 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.132 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:132: Missing { inserted.
+<inserted text> 
+                {
+l.132 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (2639.63855pt too wide) detected at line 132
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 132--132
+[] 
+ []
+
+Runaway argument?
+ \label {\sum _Q^{in}_{RL}_EQ} \sum _Q^{in}_{RL} = \sum ((t_{block}, \ETC.
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:146: Paragraph ended before \flalign was complete.
+<to be read again> 
+                   \par 
+l.146 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:146: Missing $ inserted.
+<inserted text> 
+                $
+l.146 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:146: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.146 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:146: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.146 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+Runaway argument?
+ \label {\sum _Q^{outrI}_{RA}_EQ} \sum _Q^{outrI}_{RA} = \sum ((t_{qu\ETC.
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:156: Paragraph ended before \flalign was complete.
+<to be read again> 
+                   \par 
+l.156 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:156: Missing $ inserted.
+<inserted text> 
+                $
+l.156 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:156: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.156 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:156: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.156 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:160: Double subscript.
+<argument> ..._Q^{outrO}_{RA}_EQ} \sum _Q^{outrO}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.160 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:160: Double subscript.
+<argument> ..._Q^{outrO}_{RA}_EQ} \sum _Q^{outrO}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.160 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:163: Double subscript.
+<argument> ...m _Q^{inrO}_{RA}_EQ} \sum _Q^{inrO}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.163 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:163: Double subscript.
+<argument> ...m _Q^{inrO}_{RA}_EQ} \sum _Q^{inrO}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.163 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:166: Double subscript.
+<argument> ...}_{RL}, s^{out}_{RL})} \sum _Q^{rO}_
+                                                  {DA}(s^{in}_{RL}, s^{out}_...
+l.166 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:166: Double subscript.
+<argument> ...}_{RL}, s^{out}_{RL})} \sum _Q^{rO}_
+                                                  {DA}(s^{in}_{RL}, s^{out}_...
+l.166 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:169: Double subscript.
+<argument>  \label {\sum _Q_rO_reload_EQ} \sum _Q_
+                                                  rO_reload = \sum ((t_{hour...
+l.169 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:169: Double subscript.
+<argument>  \label {\sum _Q_rO_reload_EQ} \sum _Q_
+                                                  rO_reload = \sum ((t_{hour...
+l.169 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:174: Double subscript.
+<argument> ..._Q^{outrN}_{RA}_EQ} \sum _Q^{outrN}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.174 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:174: Double subscript.
+<argument> ..._Q^{outrN}_{RA}_EQ} \sum _Q^{outrN}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.174 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:177: Double subscript.
+<argument> ...m _Q^{inrN}_{RA}_EQ} \sum _Q^{inrN}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.177 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:177: Double subscript.
+<argument> ...m _Q^{inrN}_{RA}_EQ} \sum _Q^{inrN}_
+                                                  {RA} = \sum ((t_{quarter},...
+l.177 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:180: Double subscript.
+<argument> ...{\sum _Q^{rN}_{DA}_EQ} \sum _Q^{rN}_
+                                                  {DA} = \sum ((t_{hour}, s^...
+l.180 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:180: Double subscript.
+<argument> ...{\sum _Q^{rN}_{DA}_EQ} \sum _Q^{rN}_
+                                                  {DA} = \sum ((t_{hour}, s^...
+l.180 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+
+
+[4]
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:183: Double subscript.
+<argument>  \label {\sum _Q_reload_EQ} \sum _Q_
+                                               reload = \sum ((t_{hour}, s^{...
+l.183 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:183: Double subscript.
+<argument>  \label {\sum _Q_reload_EQ} \sum _Q_
+                                               reload = \sum ((t_{hour}, s^{...
+l.183 \end{flalign}
+                   
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:192: Missing $ inserted.
+<inserted text> 
+                $
+l.192 ...                                       Q^
+                                                  {in}_{RL} * 4, Q^{out}_{RL...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:193: Missing $ inserted.
+<inserted text> 
+                $
+l.193 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing } inserted.
+<inserted text> 
+                }
+l.198 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing $ inserted.
+<inserted text> 
+                $
+l.198 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing { inserted.
+<inserted text> 
+                {
+l.198 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing } inserted.
+<inserted text> 
+                }
+l.198 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing $ inserted.
+<inserted text> 
+                $
+l.198 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.198 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.198 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:198: Missing { inserted.
+<inserted text> 
+                {
+l.198 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (714.73204pt too wide) detected at line 198
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 198--198
+[] 
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing } inserted.
+<inserted text> 
+                }
+l.201 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing $ inserted.
+<inserted text> 
+                $
+l.201 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing { inserted.
+<inserted text> 
+                {
+l.201 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing } inserted.
+<inserted text> 
+                }
+l.201 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing $ inserted.
+<inserted text> 
+                $
+l.201 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.201 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.201 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:201: Missing { inserted.
+<inserted text> 
+                {
+l.201 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (703.91924pt too wide) detected at line 201
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 201--201
+[] 
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing } inserted.
+<inserted text> 
+                }
+l.204 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing $ inserted.
+<inserted text> 
+                $
+l.204 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing { inserted.
+<inserted text> 
+                {
+l.204 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing } inserted.
+<inserted text> 
+                }
+l.204 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing $ inserted.
+<inserted text> 
+                $
+l.204 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.204 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.204 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:204: Missing { inserted.
+<inserted text> 
+                {
+l.204 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (718.82487pt too wide) detected at line 204
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 204--204
+[] 
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing } inserted.
+<inserted text> 
+                }
+l.207 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing $ inserted.
+<inserted text> 
+                $
+l.207 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing { inserted.
+<inserted text> 
+                {
+l.207 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing } inserted.
+<inserted text> 
+                }
+l.207 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing $ inserted.
+<inserted text> 
+                $
+l.207 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.207 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.207 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:207: Missing { inserted.
+<inserted text> 
+                {
+l.207 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+Overfull \hbox (717.48082pt too wide) detected at line 207
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 207--207
+[] 
+ []
+
+
+
+[5]
+Runaway argument?
+ \label {batStatcon_(t_{quarter})} BatStat(t_{quarter} + 1) = BatStat\ETC.
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:288: Paragraph ended before \flalign was complete.
+<to be read again> 
+                   \par 
+l.288 
+      
+I suspect you've forgotten a `}', causing me to apply this
+control sequence to too much text. How can we recover?
+My plan is to forget the whole thing and hope for the best.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:288: Missing $ inserted.
+<inserted text> 
+                $
+l.288 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:288: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.288 
+      
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:288: Display math should end with $$.
+<to be read again> 
+                   \tex_par:D 
+l.288 
+      
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+
+[6]
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:290: Missing $ inserted.
+<inserted text> 
+                $
+l.290 	+\sum
+            _{s^{out}_{RL}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_quarter_bl...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:290: Missing $ inserted.
+<inserted text> 
+                $
+l.290 ...}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_
+                                                  quarter_block(t_{quarter},...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:291: Missing $ inserted.
+<inserted text> 
+                $
+l.291 		+ \sum(t_{hour}$map_
+                            quarter_hour(t_{quarter}, t_{hour}), Q_rB_reload...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:296: Missing $ inserted.
+<inserted text> 
+                $
+l.296 ...}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_
+                                                  quarter_block(t_{quarter},...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:297: Missing $ inserted.
+<inserted text> 
+                $
+l.297 		+ \sum(t_{hour}$map_
+                            quarter_hour(t_{quarter}, t_{hour}), Q_rI_reload...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:300: Missing $ inserted.
+<inserted text> 
+                $
+l.300 
+      
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+
+Overfull \hbox (38.38246pt too wide) in paragraph at lines 289--300
+[]\OT1/opensans-TLF/l/n/10.95 *accepted RL in  out: +$[][] [][] [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]lock\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), (\LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) \OMS/iwona/l/n/10.95 ^^C \LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ))) \OMS/iwona/l/n/10.95 ^^C
+ []
+
+
+Overfull \hbox (55.60817pt too wide) in paragraph at lines 289--300
+\OT1/opensans-TLF/l/n/10.95 (+ [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]our\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), \OT1/opensans-TLF/l/it/10.95 Q[]B[]eload\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )/4) + [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) +
+ []
+
+
+Overfull \hbox (6.05309pt too wide) in paragraph at lines 289--300
+\OT1/opensans-TLF/l/n/10.95 ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )))) \OMS/iwona/l/n/10.95 ^^@ [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) + ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C
+ []
+
+
+Overfull \hbox (134.43279pt too wide) in paragraph at lines 289--300
+\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ))))))) \OMS/iwona/l/n/10.95 ^^C ^^C\OT1/opensans-TLF/l/it/10.95 acceptedRLin declinedout \OT1/opensans-TLF/l/n/10.95 : + [][] [][] [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]lock\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), (\LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) \OMS/iwona/l/n/10.95 ^^C
+ []
+
+
+Overfull \hbox (149.23373pt too wide) in paragraph at lines 289--300
+\OT1/opensans-TLF/l/n/10.95 (1 \OMS/iwona/l/n/10.95 ^^@ \LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )))) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (+ [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]our\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), \OT1/opensans-TLF/l/it/10.95 Q[]I[]eload\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )/4) + [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) +
+ []
+
+
+Overfull \hbox (0.64668pt too wide) in paragraph at lines 289--300
+\OT1/opensans-TLF/l/n/10.95 ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )))) \OMS/iwona/l/n/10.95 ^^@ [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) + ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:302: Missing $ inserted.
+<inserted text> 
+                $
+l.302 	+\sum
+            _{s^{out}_{RL}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_quarter_bl...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:302: Missing $ inserted.
+<inserted text> 
+                $
+l.302 ...}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_
+                                                  quarter_block(t_{quarter},...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:303: Missing $ inserted.
+<inserted text> 
+                $
+l.303 		+ \sum(t_{hour}$map_
+                            quarter_hour(t_{quarter}, t_{hour}), Q_rO_reload...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:308: Missing $ inserted.
+<inserted text> 
+                $
+l.308 ...}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_
+                                                  quarter_block(t_{quarter},...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:309: Missing $ inserted.
+<inserted text> 
+                $
+l.309 		+ \sum(t_{hour}$map_
+                            quarter_hour(t_{quarter}, t_{hour}), Q_rN_reload...
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Misplaced \cr.
+\math@cr@@@ ->\cr 
+                  
+l.313 \end{flalign}
+                   
+I can't figure out why you would want to use a tab mark
+or \cr or \span just now. If something like a right brace
+up above has ended a previous alignment prematurely,
+you're probably due for more error messages, and you
+might try typing `S' now just to see what is salvageable.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Misplaced \noalign.
+\math@cr@@ ... \iffalse }\fi \math@cr@@@ \noalign 
+                                                  {\vskip #1\relax }
+l.313 \end{flalign}
+                   
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Missing $ inserted.
+<inserted text> 
+                $
+l.313 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Missing } inserted.
+<inserted text> 
+                }
+l.313 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (23.33553pt too wide) in paragraph at lines 301--313
+[]\OT1/opensans-TLF/l/n/10.95 *declined RL in  ac-cepted out: +$[][] [][] [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]lock\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), ((1 \OMS/iwona/l/n/10.95 ^^@ \LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C
+ []
+
+
+Overfull \hbox (137.36627pt too wide) in paragraph at lines 301--313
+\LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ))) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (+ [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]our\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), \OT1/opensans-TLF/l/it/10.95 Q[]O[]eload\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )/4) + [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) +
+ []
+
+
+Overfull \hbox (8.0995pt too wide) in paragraph at lines 301--313
+\OT1/opensans-TLF/l/n/10.95 ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )))) \OMS/iwona/l/n/10.95 ^^@ [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) + ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C
+ []
+
+
+Overfull \hbox (42.7474pt too wide) in paragraph at lines 301--313
+\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ))))))) \OMS/iwona/l/n/10.95 ^^C ^^C\OT1/opensans-TLF/l/it/10.95 declinedRLin out \OT1/opensans-TLF/l/n/10.95 : + [][] [][] [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]lock\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), (1 \OMS/iwona/l/n/10.95 ^^@
+ []
+
+
+Overfull \hbox (42.12172pt too wide) in paragraph at lines 301--313
+\OT1/opensans-TLF/l/n/10.95 (\LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (1 \OMS/iwona/l/n/10.95 ^^@ \LGR/opensans-TLF/l/it/10.95 w[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ))))) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (+ [](\OT1/opensans-TLF/l/it/10.95 t[]$\OT1/opensans-TLF/l/n/10.95 map$[]\OT1/opensans-TLF/l/it/10.95 uarter[]our\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 ), \OT1/opensans-TLF/l/it/10.95 Q[]N[]eload\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )/4) +
+ []
+
+
+Overfull \hbox (130.03648pt too wide) in paragraph at lines 301--313
+[][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) + ((1/\OT1/opensans-TLF/l/it/10.95 card\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )) \OMS/iwona/l/n/10.95 ^^C \OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )))) \OMS/iwona/l/n/10.95 ^^@ [][] \OT1/opensans-TLF/l/it/10.95 fakeReload[]\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 t[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 ) +
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Extra }, or forgotten \endgroup.
+\math@cr@@ ...th@cr@@@ \noalign {\vskip #1\relax }
+                                                  
+l.313 \end{flalign}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Misplaced \noalign.
+\black@ #1->\noalign 
+                     {\ifdim #1>\displaywidth \dimen@ \prevdepth \nointerlin...
+l.313 \end{flalign}
+                   
+I expect to see \noalign only after the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+
+Overfull \hbox (248.74382pt too wide) detected at line 313
+[]
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Extra }, or forgotten \endgroup.
+\endalign ->\math@cr \black@ \totwidth@ \egroup 
+                                                \ifingather@ \restorealignst...
+l.313 \end{flalign}
+                   
+I've deleted a group-closing symbol because it seems to be
+spurious, as in `$x}$'. But perhaps the } is legitimate and
+you forgot something else, as in `\hbox{$x}'. In such cases
+the way to recover is to insert both the forgotten and the
+deleted material, e.g., by typing `I$}'.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Missing $ inserted.
+<inserted text> 
+                $
+l.313 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:313: Display math should end with $$.
+<to be read again> 
+                   \endgroup 
+l.313 \end{flalign}
+                   
+The `$' that I just saw supposedly matches a previous `$$'.
+So I shall assume that you typed `$$' both times.
+
+
+
+[7]
+Overfull \hbox (73.11798pt too wide) detected at line 357
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 357--357
+[] 
+ []
+
+
+Overfull \hbox (69.38623pt too wide) detected at line 360
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 360--360
+[] 
+ []
+
+
+Overfull \hbox (74.51848pt too wide) detected at line 363
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 363--363
+[] 
+ []
+
+
+Overfull \hbox (74.02682pt too wide) detected at line 366
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 366--366
+[] 
+ []
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing } inserted.
+<inserted text> 
+                }
+l.374 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing $ inserted.
+<inserted text> 
+                $
+l.374 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing { inserted.
+<inserted text> 
+                {
+l.374 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing } inserted.
+<inserted text> 
+                }
+l.374 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing $ inserted.
+<inserted text> 
+                $
+l.374 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.374 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.374 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:374: Missing { inserted.
+<inserted text> 
+                {
+l.374 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing } inserted.
+<inserted text> 
+                }
+l.377 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing $ inserted.
+<inserted text> 
+                $
+l.377 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing { inserted.
+<inserted text> 
+                {
+l.377 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing } inserted.
+<inserted text> 
+                }
+l.377 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing $ inserted.
+<inserted text> 
+                $
+l.377 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.377 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.377 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:377: Missing { inserted.
+<inserted text> 
+                {
+l.377 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing } inserted.
+<inserted text> 
+                }
+l.380 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing $ inserted.
+<inserted text> 
+                $
+l.380 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing { inserted.
+<inserted text> 
+                {
+l.380 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing } inserted.
+<inserted text> 
+                }
+l.380 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing $ inserted.
+<inserted text> 
+                $
+l.380 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.380 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.380 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:380: Missing { inserted.
+<inserted text> 
+                {
+l.380 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing } inserted.
+<inserted text> 
+                }
+l.383 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing $ inserted.
+<inserted text> 
+                $
+l.383 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing { inserted.
+<inserted text> 
+                {
+l.383 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing } inserted.
+<inserted text> 
+                }
+l.383 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing $ inserted.
+<inserted text> 
+                $
+l.383 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.383 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.383 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:383: Missing { inserted.
+<inserted text> 
+                {
+l.383 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing } inserted.
+<inserted text> 
+                }
+l.387 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing $ inserted.
+<inserted text> 
+                $
+l.387 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing { inserted.
+<inserted text> 
+                {
+l.387 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing } inserted.
+<inserted text> 
+                }
+l.387 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing $ inserted.
+<inserted text> 
+                $
+l.387 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.387 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.387 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:387: Missing { inserted.
+<inserted text> 
+                {
+l.387 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing } inserted.
+<inserted text> 
+                }
+l.390 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing $ inserted.
+<inserted text> 
+                $
+l.390 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing { inserted.
+<inserted text> 
+                {
+l.390 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing } inserted.
+<inserted text> 
+                }
+l.390 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing $ inserted.
+<inserted text> 
+                $
+l.390 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.390 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.390 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:390: Missing { inserted.
+<inserted text> 
+                {
+l.390 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing } inserted.
+<inserted text> 
+                }
+l.394 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing $ inserted.
+<inserted text> 
+                $
+l.394 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing { inserted.
+<inserted text> 
+                {
+l.394 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing } inserted.
+<inserted text> 
+                }
+l.394 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing $ inserted.
+<inserted text> 
+                $
+l.394 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.394 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.394 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:394: Missing { inserted.
+<inserted text> 
+                {
+l.394 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing } inserted.
+<inserted text> 
+                }
+l.397 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing $ inserted.
+<inserted text> 
+                $
+l.397 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing { inserted.
+<inserted text> 
+                {
+l.397 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing } inserted.
+<inserted text> 
+                }
+l.397 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing $ inserted.
+<inserted text> 
+                $
+l.397 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.397 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.397 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:397: Missing { inserted.
+<inserted text> 
+                {
+l.397 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+
+[8]
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing } inserted.
+<inserted text> 
+                }
+l.430 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing $ inserted.
+<inserted text> 
+                $
+l.430 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing { inserted.
+<inserted text> 
+                {
+l.430 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing } inserted.
+<inserted text> 
+                }
+l.430 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing $ inserted.
+<inserted text> 
+                $
+l.430 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.430 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.430 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:430: Missing { inserted.
+<inserted text> 
+                {
+l.430 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing } inserted.
+<inserted text> 
+                }
+l.433 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing $ inserted.
+<inserted text> 
+                $
+l.433 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing { inserted.
+<inserted text> 
+                {
+l.433 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing } inserted.
+<inserted text> 
+                }
+l.433 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing $ inserted.
+<inserted text> 
+                $
+l.433 \end{flalign}
+                   
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing \endgroup inserted.
+<inserted text> 
+                \endgroup 
+l.433 \end{flalign}
+                   
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Misplaced \omit.
+\math@cr@@@ ...@ \@ne \add@amps \maxfields@ \omit 
+                                                  \kern -\alignsep@ \iftag@ ...
+l.433 \end{flalign}
+                   
+I expect to see \omit only after tab marks or the \cr of
+an alignment. Proceed, and I'll ignore this case.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:433: Missing { inserted.
+<inserted text> 
+                {
+l.433 \end{flalign}
+                   
+I've put in what seems to be necessary to fix
+the current column of the current alignment.
+Try to go on, since this might almost work.
+
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:440: LaTeX Error: \begin{flalign} on input line 148 ended by \end{document}.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.440 \end{document}
+                    
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+
+[9] (./rewrite.aux
+./rewrite.aux:8: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.8 ...outrO}_{RA}_EQ}{{0.8}{4}{}{equation.0.8}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:8: Missing $ inserted.
+<inserted text> 
+                $
+l.8 ...outrO}_{RA}_EQ}{{0.8}{4}{}{equation.0.8}{}}
+                                                  
+I've inserted a begin-math/end-math symbol since I think
+you left one out. Proceed, with fingers crossed.
+
+./rewrite.aux:8: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{outrO}_
+                                             {RA}_EQ
+l.8 ...outrO}_{RA}_EQ}{{0.8}{4}{}{equation.0.8}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:8: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{outrO}_{RA}_
+                                                  EQ
+l.8 ...outrO}_{RA}_EQ}{{0.8}{4}{}{equation.0.8}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:8: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.8 ...outrO}_{RA}_EQ}{{0.8}{4}{}{equation.0.8}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:9: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.9 ...{inrO}_{RA}_EQ}{{0.9}{4}{}{equation.0.9}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:9: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{inrO}_
+                                            {RA}_EQ
+l.9 ...{inrO}_{RA}_EQ}{{0.9}{4}{}{equation.0.9}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:9: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{inrO}_{RA}_
+                                                 EQ
+l.9 ...{inrO}_{RA}_EQ}{{0.9}{4}{}{equation.0.9}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:9: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.9 ...{inrO}_{RA}_EQ}{{0.9}{4}{}{equation.0.9}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:10: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.10 ...{out}_{RL})}{{0.10}{4}{}{equation.0.10}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:10: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{rO}_
+                                          {DA}_EQ(s^{in}_{RL}, s^{out}_{RL})
+l.10 ...{out}_{RL})}{{0.10}{4}{}{equation.0.10}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:10: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{rO}_{DA}_
+                                               EQ(s^{in}_{RL}, s^{out}_{RL})
+l.10 ...{out}_{RL})}{{0.10}{4}{}{equation.0.10}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:10: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.10 ...{out}_{RL})}{{0.10}{4}{}{equation.0.10}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:11: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.11 ...O_reload_EQ}{{0.11}{4}{}{equation.0.11}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:11: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q_
+                                     rO_reload_EQ
+l.11 ...O_reload_EQ}{{0.11}{4}{}{equation.0.11}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:11: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.11 ...O_reload_EQ}{{0.11}{4}{}{equation.0.11}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:12: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.12 ...rN}_{RA}_EQ}{{0.12}{4}{}{equation.0.12}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:12: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{outrN}_
+                                             {RA}_EQ
+l.12 ...rN}_{RA}_EQ}{{0.12}{4}{}{equation.0.12}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:12: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{outrN}_{RA}_
+                                                  EQ
+l.12 ...rN}_{RA}_EQ}{{0.12}{4}{}{equation.0.12}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:12: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.12 ...rN}_{RA}_EQ}{{0.12}{4}{}{equation.0.12}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:13: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.13 ...rN}_{RA}_EQ}{{0.13}{5}{}{equation.0.13}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:13: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{inrN}_
+                                            {RA}_EQ
+l.13 ...rN}_{RA}_EQ}{{0.13}{5}{}{equation.0.13}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:13: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{inrN}_{RA}_
+                                                 EQ
+l.13 ...rN}_{RA}_EQ}{{0.13}{5}{}{equation.0.13}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:13: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.13 ...rN}_{RA}_EQ}{{0.13}{5}{}{equation.0.13}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:14: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.14 ...rN}_{DA}_EQ}{{0.14}{5}{}{equation.0.14}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:14: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{rN}_
+                                          {DA}_EQ
+l.14 ...rN}_{DA}_EQ}{{0.14}{5}{}{equation.0.14}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:14: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q^{rN}_{DA}_
+                                               EQ
+l.14 ...rN}_{DA}_EQ}{{0.14}{5}{}{equation.0.14}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:14: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.14 ...rN}_{DA}_EQ}{{0.14}{5}{}{equation.0.14}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+./rewrite.aux:15: Missing \endcsname inserted.
+<to be read again> 
+                   \DOTSB 
+l.15 ...Q_reload_EQ}{{0.15}{5}{}{equation.0.15}{}}
+                                                  
+The control sequence marked <to be read again> should
+not appear between \csname and \endcsname.
+
+./rewrite.aux:15: Double subscript.
+<argument> \DOTSB \sum@ \slimits@ _Q_
+                                     reload_EQ
+l.15 ...Q_reload_EQ}{{0.15}{5}{}{equation.0.15}{}}
+                                                  
+I treat `x_1_2' essentially like `x_1{}_2'.
+
+./rewrite.aux:15: Extra \endcsname.
+\@newl@bel ...dafter \ifx \csname #1@#2\endcsname 
+                                                  \reserved@a \else \@tempsw...
+l.15 ...Q_reload_EQ}{{0.15}{5}{}{equation.0.15}{}}
+                                                  
+I'm ignoring this, since I wasn't doing a \csname.
+
+)
+ ***********
+LaTeX2e <2024-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+c:/Users/sebas/Documents/CloudDrive/Uni/WS24/Research Project/latex/stuff/rewrite.tex:440: Missing $ inserted.
+<inserted text> 
+                $
+l.440 \end{document}
+                    
+I've inserted something that you may have forgotten.
+(See the <inserted text> above.)
+With luck, this will get me unwedged. But if you
+really didn't forget anything, try typing `2' now; then
+my insertion and my current dilemma will both disappear.
+
+
+Overfull \hbox (768.95367pt too wide) in paragraph at lines 8--440
+[]$[][] [][]\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 4[][][] [][] [][]\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 4[][][] [][] [][]\OT1/opensans-TLF/l/it/10.95 Q\OT1/opensans-TLF/l/n/10.95 (\OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 , \OT1/opensans-TLF/l/it/10.95 s[]\OT1/opensans-TLF/l/n/10.95 )[]4[][][] [][] []\OT1/opensans-TLF/l/it/10.95 O[]eload[]Q[]\OT1/opensans-TLF/l/n/10.95 4[][][] [][] [][]\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 4[][][] [][] [][]\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 5[][][] [][] [][]\OT1/opensans-TLF/l/it/10.95 Q[]\OT1/opensans-TLF/l/n/10.95 5[][][] [][] []\OT1/opensans-TLF/l/it/10.95 eload[]Q[]\OT1/opensans-TLF/l/n/10.95 5[][][]$ 
+ []
+
+ )
+(\end occurred inside a group at level 2)
+
+### semi simple group (level 2) entered at line 148 (\begingroup)
+### semi simple group (level 1) entered at line 134 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 13999 strings out of 473329
+ 303233 string characters out of 5723857
+ 997152 words of memory out of 5000000
+ 36994 multiletter control sequences out of 15000+600000
+ 578508 words of font info for 73 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 108i,20n,107p,11000b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Light.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-LightItalic.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonal.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonali.pfb>
+Output written on rewrite.pdf (9 pages, 89439 bytes).
+PDF statistics:
+ 80 PDF objects out of 1000 (max. 8388607)
+ 47 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 46 words of extra memory for PDF output out of 10000 (max. 10000000)
+
