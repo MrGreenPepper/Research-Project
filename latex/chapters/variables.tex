@@ -6,45 +6,48 @@
 \textbf{Abbreviations}
 \begin{table}[!h]
 	\begin{tabular}{c|c}
-		Abbreviations & Description                                                                            \\
+		\textbf{Abbreviations} & \textbf{Description}                              \\
 		\hline
-		aFRR          & automatic Frequency Restoration Reserve                                                \\
-		GAMS          & General Algebraic Modeling System                                                      \\
-		TSO           & transmission system operators                                                          \\
-		CBMP          & grenzüberschreitenden Grenzpreis                                                       \\
-		ARIMA         & Autoregressive Integrated Moving Average                                               \\
-		SARIMA        & Seasonal Autoregressive Integrated Moving Average                                      \\
-		TBATS         & Trigonometric seasonality Box-Cox transformation ARMA errors Trend Seasonal components \\
+		aFRR                   & automatic Frequency Restoration Reserve           \\
+		GAMS                   & General Algebraic Modeling System                 \\
+		TSO                    & transmission system operators                     \\
+		CBMP                   & grenzüberschreitenden Grenzpreis                  \\
+		ARIMA                  & Autoregressive Integrated Moving Average          \\
+		SARIMA                 & Seasonal Autoregressive Integrated Moving Average \\
+		TBATS                  & Trigonometric seasonality Box-Cox transformation  \\
+		                       & ARMA errors Trend Seasonal components             \\
 	\end{tabular}
 \end{table}\\
 
 Groß geschriebene Variablen werden endogen ermittelt. Klein geschriebene Variablen werden exogen vorgeschrieben.\\
 
 \begin{tabular}{c|c|c}
-	Variable       & Description                                                                                                      \\
+	\textbf{Variable} & \textbf{Description}                                                                                             \\
 	\hline
-	$RL$           & Regelleistungsmarkt                                                                                              \\
-	$DA$           & Day Ahead Markt                                                                                                  \\
-	$RA$           & Regelarbeitsmarkt                                                                                                \\
-	$Q^i_{y}$      & Gebotsmenge der Art i(=in/out) am Markt y                                                                        \\
-	($X^i_{y})$    & (lineare Gebotsmenge der Art i(=in/out) am Markt y)                                                              \\
-	$P^i_{y}$      & Gebotspreis der Art i(=in/out) am Markt y                                                                        \\
-	$E^{in}_{DA}$  & $EnergyInDA(t)$                                                                   & energy in day ahead market   \\
-	$E^{out}_{DA}$ & $EnergyOutDA(t)$                                                                  & energy out day ahead market  \\
-	$E^{in}_{RT}$  & $EnergyInRT(t)$                                                                   & energy in real time market   \\
-	$E^{out}_{RT}$ & $EnergyOutRT(t)$                                                                  & energy out  real time market \\
-	$ER$           & emergency reload
-	$B^i_y$        & Binäre Variable die den Zuschlag (B=1) der Art i(=in/out) am Markt y signalisiert                                \\
-	\label{tab:my_label}                                                                                                              \\
+	$RL$              & Regelleistungsmarkt                                                                                              \\
+	$DA$              & Day Ahead Markt                                                                                                  \\
+	$RA$              & Regelarbeitsmarkt                                                                                                \\
+	$Q^i_{y}$         & Gebotsmenge der Art i(=in/out) am Markt y                                                                        \\
+	($X^i_{y})$       & (lineare Gebotsmenge der Art i(=in/out) am Markt y)                                                              \\
+	$P^i_{y}$         & Gebotspreis der Art i(=in/out) am Markt y                                                                        \\
+	$E^{in}_{DA}$     & $EnergyInDA(t)$                                                                   & energy in day ahead market   \\
+	$E^{out}_{DA}$    & $EnergyOutDA(t)$                                                                  & energy out day ahead market  \\
+	$E^{in}_{RT}$     & $EnergyInRT(t)$                                                                   & energy in real time market   \\
+	$E^{out}_{RT}$    & $EnergyOutRT(t)$                                                                  & energy out  real time market \\
+	$ER$              & emergency reload
+	$B^i_y$           & Binäre Variable die den Zuschlag (B=1) der Art i(=in/out) am Markt y signalisiert                                \\
+	\label{tab:my_label}                                                                                                                 \\
 \end{tabular}
 \\
+
+\todo{sets hinzufügen}
 
 \todo{entweder überall gams äquivalnt ergänzen oder überall weg lassen}
 \textbf{Parameter}
 \begin{table}
 	\centering
 	\begin{tabular}{c|c|c}
-		Parameter               & GAMS Equivalent                                                   & Description                        \\
+		\textbf{Parameter}      & \textbf{GAMS} Equivalent                                          & Description                        \\
 		\hline
 		$f_{DA}$                & $priceForeCastDA(t)$                                              & forecast price day ahead market    \\
 		$f_{RT}$                & $priceForeCastRT(t)$                                              & forecast price real time market    \\

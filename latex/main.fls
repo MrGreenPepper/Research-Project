@@ -519,6 +519,21 @@ INPUT chapters/introduction.aux
 INPUT ./chapters/literature.aux
 INPUT ./chapters/literature.aux
 INPUT chapters/literature.aux
+INPUT ./chapters/model/general.aux
+INPUT ./chapters/model/general.aux
+INPUT chapters/model/general.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT chapters/model/marketDescription.aux
+INPUT ./chapters/model/completeModel.aux
+INPUT ./chapters/model/completeModel.aux
+INPUT chapters/model/completeModel.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT chapters/model/dataDescription.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT chapters/model/simplifications.aux
 INPUT ./chapters/model.aux
 INPUT ./chapters/model.aux
 INPUT chapters/model.aux
@@ -787,12 +802,23 @@ OUTPUT chapters/literature.aux
 INPUT ./chapters/literature.tex
 INPUT ./chapters/literature.tex
 INPUT chapters/literature.tex
-INPUT ./chapters/model.tex
-OUTPUT chapters/model.aux
-INPUT ./chapters/model.tex
-INPUT ./chapters/model.tex
-INPUT chapters/model.tex
+INPUT ./chapters/model/general.tex
+INPUT ./chapters/model/general.tex
+OUTPUT chapters/model/general.aux
+INPUT ./chapters/model/general.tex
+INPUT ./chapters/model/general.tex
+INPUT chapters/model/general.tex
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc
+INPUT ./chapters/model/marketDescription.tex
+INPUT ./chapters/model/marketDescription.tex
+OUTPUT chapters/model/marketDescription.aux
+INPUT ./chapters/model/marketDescription.tex
+INPUT ./chapters/model/marketDescription.tex
+INPUT chapters/model/marketDescription.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
@@ -812,14 +838,33 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-LightItalic-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF--base.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT ./chapters/model/completeModel.tex
+OUTPUT chapters/model/completeModel.aux
+INPUT ./chapters/model/completeModel.tex
+INPUT ./chapters/model/completeModel.tex
+INPUT chapters/model/completeModel.tex
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-TS1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-TS1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-TS1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc
+INPUT ./chapters/model/dataDescription.tex
+INPUT ./chapters/model/dataDescription.tex
+OUTPUT chapters/model/dataDescription.aux
+INPUT ./chapters/model/dataDescription.tex
+INPUT ./chapters/model/dataDescription.tex
+INPUT chapters/model/dataDescription.tex
 INPUT ./pictures/capacityData_overview.png
 INPUT ./pictures/capacityData_overview.png
 INPUT ./pictures/capacityData_overview.png
@@ -835,11 +880,16 @@ INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
 INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
 INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
 INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
-INPUT ./pictures/autocorrelation_posCap_4weeks.png
-INPUT ./pictures/autocorrelation_posCap_4weeks.png
-INPUT ./pictures/autocorrelation_posCap_4weeks.png
-INPUT ./pictures/autocorrelation_posCap_4weeks.png
-INPUT ./pictures/autocorrelation_posCap_4weeks.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
 INPUT ./pictures/overviewDAprices_year.png
 INPUT ./pictures/overviewDAprices_year.png
 INPUT ./pictures/overviewDAprices_year.png
@@ -867,60 +917,61 @@ INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
 INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
 INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
 INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
-INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
-INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
-INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
-INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
-INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
-INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
-INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Regular-T1-TLF.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF--base.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
 INPUT ./pictures/posEngOverview.png
 INPUT ./pictures/posEngOverview.png
 INPUT ./pictures/posEngOverview.png
 INPUT ./pictures/posEngOverview.png
 INPUT ./pictures/posEngOverview.png
-INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-LightItalic-T1-TLF.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF--base.tfm
-INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
-INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
-INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-TS1-TLF.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-TS1-TLF.vf
-INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-TS1-TLF--base.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc
+INPUT ./chapters/model/simplifications.tex
+INPUT ./chapters/model/simplifications.tex
+OUTPUT chapters/model/simplifications.aux
+INPUT ./chapters/model/simplifications.tex
+INPUT ./chapters/model/simplifications.tex
+INPUT chapters/model/simplifications.tex
+INPUT ./chapters/model.tex
+OUTPUT chapters/model.aux
+INPUT ./chapters/model.tex
+INPUT ./chapters/model.tex
+INPUT chapters/model.tex
 INPUT ./chapters/results.tex
 OUTPUT chapters/results.aux
 INPUT ./chapters/results.tex
@@ -967,6 +1018,21 @@ INPUT chapters/introduction.aux
 INPUT ./chapters/literature.aux
 INPUT ./chapters/literature.aux
 INPUT chapters/literature.aux
+INPUT ./chapters/model/general.aux
+INPUT ./chapters/model/general.aux
+INPUT chapters/model/general.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT chapters/model/marketDescription.aux
+INPUT ./chapters/model/completeModel.aux
+INPUT ./chapters/model/completeModel.aux
+INPUT chapters/model/completeModel.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT chapters/model/dataDescription.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT chapters/model/simplifications.aux
 INPUT ./chapters/model.aux
 INPUT ./chapters/model.aux
 INPUT chapters/model.aux

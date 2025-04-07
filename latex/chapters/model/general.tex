@@ -1,0 +1,102 @@
+
+\section{General model explanation}
+
+\textbf{was wird in dem model überhaupt dargestellt}
+\todo{noch mit rein erste entscheidung RL --> dann 4 mögliche Ausgänge!!!!!!!!!}
+- profit maximierender ansatz\\
+- reihenfolge der Entscheidungen\\
+- wann klärt sich welche szenario unsicherheit auf\\
+
+Ziel des Modells ist es auf möglichst einfache Weise eine Vermearktungsoptimierugn eines batterie speichers in kombination mit einem windpark vor zu nehmen.
+Generell gibt es verschiedenste Möglichkeiten dies zu modellieren. Der Batteriespeicher wird am sekundären Regelleistungs und Regelarbeitsmarkt vermarktet.
+Der Windpark wird am Day-Ahead-Markt angeboten. Wichtig hierbei ist es alle 3 Märkte miteinander zu verbinden ohne eine zu hohe komplexität zu benötigen die die Berechenbarkeit einschränkt.
+Besonders wichtig ist dies zum Beispiel beim Batteriespeicher. Der aktuelle Ladestatus viertelstündlich neu berechnet. Selbst bei nur 2 möglichen Szenarien
+wären das $ 2^{96} = 79228162514264337593543950336$ mögliche Batteriespeicher Zustände am Ende des Tages. Wenn man beachtet das die Planung immer für den Folgetag erfolgt
+müsste man sogar $2^{182} = 6,13* 10^{54}$ mögliche Batteriespeicher Zustände beachten bevor man wieder Planungssicherheit hat.
+\todo{den part nochmal nachdenken}
+Da dies offensichtlich nicht mehr berechenbar ist muss man von perfekter Vorraussicht ausgehen und so nur einen Batteriespeicherweg berechnen.
+Oder Bestimmte vorgänge innerhalb der Zeitkurve approimieren.
+\todo{den part mit den speicherzuständen eventuell in die Modelierungsansatz Diskussion}
+
+Lösungsansätze für dieses und andere Probleme sind im Abschnitt [] zu finden
+\todo{abshcnitt eränzen}
+Weiterhin ist zu beachten des sich der Windpark und der Batteriespeicher einen gemeinsamen Anschlusspunkt teilen, so ist die maximale Leistung beider begrenzt.
+
+Es folgt eine Diskussion verschiedener Modellansätze. Anschließend werden die Einzelmodelle der verschiedenen Märkte betrachtet und zum schluss zusammen geführt.\\
+-------------------------------------\\
+\todo{aussortieren was noch mit oben rein soll}
+Zur Analyse des vorliegenden Problems wurde ein Model in GAMS erstellt.
+Ziel des Models war es auf möglichst geringem Rechenaufwand einen Batteriespeicher zu optimieren der mit
+einer Analage zur produktion erneuerbarer energien kombiniert wurde. Dabei sollte vermmieden werden
+auf sehr detailierte Zeitreihenvorhersagen, weil sehr aufwendig, angewiesen zu sein. Es sollten aber auch
+Grundannahmen wie perfekte Vorraussicht vermieden werden um realistische Planungsentscheidungen ab zu bilden.
+
+(Zur Vereinfachung werden zuerst alle Formeln für nur einen Zeitschritt aufgestellt. Am Ende wird die Zeitvariable entsprechend hinzugefügt.)
+\todo{ausführliche Erklärung stochastische Programmierung}
+\\
+Das grundlegende Modell stellt einen Energiespeicher da, der am Regelleistungsmarkt, Day Ahead Markt und Regelarbeitsmarkt vermarktet werden kann.
+Der darraus resultierende Profit soll maximiert werden. Für jede Teilentscheidung/Markt existiert ein eigenes Modell. So kann, für jedes Teilmodell,
+vermieden werden die anschließenden Marktergebnisse (Zuschlag oder Ablehnung) zu integrieren. Dies ist wichtig, da anderen Falls der
+Algorithmus allwissend wäre und nur perfekte Gebote errechnen würde. Die Ergebnisse eines jeden Teilmodells werden immer an das nachfolgende
+Modell übergeben und erst an dieser Stelle ausgewertet. Jedes Teilmodell ermittelt Mengengebote zu bestimmten Preisen. Die verschiedenen Preise
+werden durch verschiedene Szenarien abgebildet. Jedem Szenario ist eine bestimmte Wahrscheinlichkeit zugeordnet.
+(Die Preis-Wahrscheinlichkeits-Kombinationen der verschiedenen Szenarien wurden vorher exogen mittels SARIMA-Analyse ermittelt.)
+Ein Gebot stellt sich dann wie folgt dar:\\
+---------------------------------\\
+
+- modeldesign erklären
+-> verschiedene designoptionen dann "design optionen"/alternativen/erklärung?!? part erklären
+normalerweise liegt die logik in den daten und ich lasse den solver die logik in den daten erkennen.
+wenn ich aber keinen realistischen vorcast daten habe muss ich die logik in das programm schon selber legen.
+
+das wesentliche meiner
+
+- anschluss punkt
+
+- kombination aus park und batterie
+
+\section{Market Modeling Approaches}
+\textbf{ansatz wie das darzustellende umgesetzt wird damit es optimierbar ist} \\
+- eventuell in Konzepte umbenennen und ganz allgemein über verschiedene konzepte sprechen\\
+
+Verschiedene Modellierungsansätze erfordern unterschiedliche zu grunde liegende Datensätze und anders herum.
+So erfordert zum Beispiel ein stochastische model, welches eine optimierung über mehrere unsichere mögliche Szenarien vornimmt,
+einen Datensatz der diese verschiedenen Szenarien abbildet. Bei der direkten verwendung historischer Daten benötigt man ein model,
+welches  von einer perfekten Vorhersage ausgeht und so nur eine Datenreihe berücksichtigt.
+
+Im folgenden werden verschiedene Ansätze bezüglich Model und Daten besprochen.
+\todo{gewinnmaximierung}
+%\subsubsection{Modelansätze Marktdesigns}
+
+Ein möglicher Modelierungsansatz ist der der dem Model die perfekte Vorhersage unterstellt, hier werden historische
+Daten eingespeist und anschließend die Ergebnisse
+unter dieser Prämisse betrachtet. So werden dann die perfekten Ergebnisse mit einem abgeschätzen Prozentsatz herunterskaliert um zu einem
+realistisch erzielbaren ergebnis zu kommen. Der Vorteil dieser Methode in unserem Fall läge in der einfachen Komplexität. Da man immer
+genau weiß was eintritt muss auch nur ein einzelner Zeitstrahl verfolgt werden.
+Der Nachteil liegt ganz klar darin das man bei der Betrachtung der Ergebnisse eventuell auf falsche Strategien schließt.
+So müssen in  unserem Fall Entscheidungen getroffen werden mit unsicherer Zukunft Szenarien.
+So kann es sein das zum Beispiel die Anschlusskapazität es nicht zulässt zugleich am DA-Markt und am RA- zu bieten.
+\todo{abkürzungen} Bei perfekter Vorraussicht weiß ich genau welche entscheidung bei gegeben Daten die richtige ist auch wenn
+der Unterschied zwischen den beiden Entscheidungen nur marginal ist.
+Dies ist dann aber nur eine Einzelfallentscheidung, in realität kann es aber sein, dass eine andere strategie, über mehrere Fälle hinweg sich
+als vorteilhaft herausstellt.
+\todo{verweis wissenschaftliche arbeit und appendix für umsetzung}
+So lassen sich mit diesem Ansatz gut Einzelfall entscheidungen treffen aber nicht gut auf eine allgemeine Strategie schließen.
+Um eine Allgemeinere Strategie ableiten zu können bieten sich stochastische programmieransätze an. Diese bestimmen optimale Entscheidungen
+unter betrachtung  mehrerer möglicher unsicherer Zukunftszenarien. So wird im Model eine entscheidungsvariable mit mehreren szenarien und deren
+eintrittswahscheinlichkeiten kombiniert um so auf eine best mögliche Entscheidung unter Unsicherheit zu schließen.
+So lassen sich einfacher optimalere allgemein gültige Strategien ableiten, allerdings ist hier die Erstellung der dafür notwendigen Daten wesentlich
+schwieriger. So braucht man verschiedene Datensätze die die verschiedenen Szenarien präsentieren und muss diese Datensätze auch mit eintrittswahrscheinlichkeiten bewerten.
+Im folgenden werden mehrere Ansätze diskutiert wie man dies für Zeitreihen-Datensätze macht \todo{abschnitt ergänzen}.
+Außerdem müssen müssen oft vereinfachende Annahmen getroffen werden um die Modelkomplexität zu reduzieren.
+Besonders wichtig ist dies zum Beispiel beim Batteriespeicher. In unserem Model wird der aktuelle Ladestatus des Batteriespeichers viertelstündlich neu berechnet. Selbst bei nur 2 möglichen betrachteten Szenarien
+müsste man $ 2^{96} = 79228162514264337593543950336$ mögliche Batteriespeicher Zustände am Ende des Tages betrachten. Wenn man beachtet das die Planung immer für den Folgetag erfolgt
+müsste man sogar $2^{182} = 6,13* 10^{54}$ mögliche Batteriespeicher Zustände beachten bevor man wieder Planungssicherheit hat. Deswegen werden erfolgt eine Betrachtung verschiedener Vereinfachungen in Kapitel []
+\todo{den part nochmal nachdenken}\\
+\todo{abschnitt ergänzen}\\
+In Summe sind die Vorteile eine stochastischem Ansätzes größer, vor allem um die hier vorliegende Forschungsfrage nach allgemein güiltigen Strategien
+zu beantworten.
+Zur erstellung von optimalen allgemeinen strategien \\
+
+
+

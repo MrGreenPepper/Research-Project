@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  7 APR 2025 00:08
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  7 APR 2025 22:54
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2322,11 +2322,11 @@ LaTeX Warning: Label `tab:my_label' multiply defined.
 
 LaTeX Warning: Label `tab:my_label' multiply defined.
 
-) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model.aux
+) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model/general.aux) (./chapters/model/marketDescription.aux) (./chapters/model/completeModel.aux
 
 LaTeX Warning: Label `tab:my_label' multiply defined.
 
-) (./chapters/results.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
+) (./chapters/model/dataDescription.aux) (./chapters/model/simplifications.aux) (./chapters/model.aux) (./chapters/results.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
@@ -2748,48 +2748,46 @@ Overfull \hbox (3.26643pt too wide) in paragraph at lines 5--5
 LaTeX Warning: Marginpar on page III moved.
 
 
-Overfull \hbox (97.00516pt too wide) in paragraph at lines 8--19
+Underfull \hbox (badness 10000) in paragraph at lines 6--21
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 22--23
+
+ []
+
+
+Overfull \hbox (266.51305pt too wide) in paragraph at lines 24--42
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--20
+Underfull \hbox (badness 10000) in paragraph at lines 24--42
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-
-Overfull \hbox (264.61542pt too wide) in paragraph at lines 23--41
-[][] 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--41
-
- []
-
-
-Overfull \hbox (5.27435pt too wide) in paragraph at lines 42--42
+Overfull \hbox (5.27435pt too wide) in paragraph at lines 45--45
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) entweder 
  []
 
 
-Overfull \hbox (5.27435pt too wide) in paragraph at lines 42--42
+Overfull \hbox (5.27435pt too wide) in paragraph at lines 45--45
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) entweder 
  []
 
 
-Overfull \hbox (107.9761pt too wide) in paragraph at lines 46--67
+LaTeX Warning: Marginpar on page III moved.
+
+
+Overfull \hbox (110.1409pt too wide) in paragraph at lines 49--70
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 77.
+               Default added (so using `tbp') on input line 80.
 
 )
 
@@ -2950,67 +2948,58 @@ chapter 2.
 [6])
 
 [7]
-\openout2 = `chapters/model.aux'.
-
- (./chapters/model.tex
 chapter 3.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 7.
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 14--14
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 14--14
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-Overfull \hbox (35.91489pt too wide) in paragraph at lines 32--32
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
- []
-
-
-Overfull \hbox (35.91489pt too wide) in paragraph at lines 32--32
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
- []
-
 
 
 [8
 
 
 
-
 ]
+\openout2 = `chapters/model/general.aux'.
 
-LaTeX Warning: Marginpar on page 9 moved.
+ (./chapters/model/general.tex
+Overfull \hbox (24.77884pt too wide) in paragraph at lines 5--5
+\T1/opensans-TLF/l/n/10.95 (-20) entscheidung 
+ []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 36--39
+Overfull \hbox (11.62929pt too wide) in paragraph at lines 5--5
+\T1/opensans-TLF/l/n/10.95 (-20) gänge!!!!!!!!![]  
+ []
+
+
+Overfull \hbox (24.77884pt too wide) in paragraph at lines 5--5
+\T1/opensans-TLF/l/n/10.95 (-20) entscheidung 
+ []
+
+
+Overfull \hbox (11.62929pt too wide) in paragraph at lines 5--5
+\T1/opensans-TLF/l/n/10.95 (-20) gänge!!!!!!!!![]  
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 4--9
 
  []
 
 
-Overfull \hbox (3.3052pt too wide) in paragraph at lines 46--46
+Overfull \hbox (3.3052pt too wide) in paragraph at lines 16--16
 \T1/opensans-TLF/l/n/10.95 (-20) nachden- 
  []
 
 
-Overfull \hbox (3.3052pt too wide) in paragraph at lines 46--46
+Overfull \hbox (3.3052pt too wide) in paragraph at lines 16--16
 \T1/opensans-TLF/l/n/10.95 (-20) nachden- 
  []
 
 
-Overfull \hbox (51.25003pt too wide) in paragraph at lines 49--49
+Overfull \hbox (51.25003pt too wide) in paragraph at lines 19--19
 \T1/opensans-TLF/l/n/10.95 (-20) speicherzuständen 
  []
 
 
-Overfull \hbox (51.25003pt too wide) in paragraph at lines 49--49
+Overfull \hbox (51.25003pt too wide) in paragraph at lines 19--19
 \T1/opensans-TLF/l/n/10.95 (-20) speicherzuständen 
  []
 
@@ -3018,12 +3007,12 @@ Overfull \hbox (51.25003pt too wide) in paragraph at lines 49--49
 LaTeX Warning: Marginpar on page 9 moved.
 
 
-Overfull \hbox (4.01118pt too wide) in paragraph at lines 52--52
+Overfull \hbox (4.01118pt too wide) in paragraph at lines 22--22
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abshcnitt 
  []
 
 
-Overfull \hbox (4.01118pt too wide) in paragraph at lines 52--52
+Overfull \hbox (4.01118pt too wide) in paragraph at lines 22--22
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abshcnitt 
  []
 
@@ -3031,116 +3020,131 @@ Overfull \hbox (4.01118pt too wide) in paragraph at lines 52--52
 LaTeX Warning: Marginpar on page 9 moved.
 
 
-Overfull \hbox (20.34807pt too wide) in paragraph at lines 57--57
+Overfull \hbox (20.34807pt too wide) in paragraph at lines 27--27
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) aussortieren 
  []
 
 
-Overfull \hbox (20.34807pt too wide) in paragraph at lines 57--57
+Overfull \hbox (20.34807pt too wide) in paragraph at lines 27--27
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) aussortieren 
  []
 
 
+LaTeX Warning: Marginpar on page 9 moved.
 
-[9{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}]
-Overfull \hbox (18.8017pt too wide) in paragraph at lines 65--65
+
+Overfull \hbox (18.8017pt too wide) in paragraph at lines 35--35
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) ausführliche 
  []
 
 
-Overfull \hbox (5.41586pt too wide) in paragraph at lines 65--65
+Overfull \hbox (5.41586pt too wide) in paragraph at lines 35--35
 \T1/opensans-TLF/l/n/10.95 (-20) Erklärung 
  []
 
 
-Overfull \hbox (18.8017pt too wide) in paragraph at lines 65--65
+Overfull \hbox (18.8017pt too wide) in paragraph at lines 35--35
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) ausführliche 
  []
 
 
-Overfull \hbox (5.41586pt too wide) in paragraph at lines 65--65
+Overfull \hbox (5.41586pt too wide) in paragraph at lines 35--35
 \T1/opensans-TLF/l/n/10.95 (-20) Erklärung 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--76
+Underfull \hbox (badness 10000) in paragraph at lines 34--46
 
  []
 
 
-Overfull \hbox (46.86609pt too wide) in paragraph at lines 77--81
+
+[9
+
+{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}]
+Overfull \hbox (46.86609pt too wide) in paragraph at lines 47--51
 []\T1/opensans-TLF/l/n/10.95 (-20) - mod-eldesign erklären -> ver-schiedene designop-tionen dann "design op-tionen"/alternativen/erklärung?!?
  []
 
 
-Overfull \hbox (0.57861pt too wide) in paragraph at lines 89--90
+Overfull \hbox (0.57861pt too wide) in paragraph at lines 59--61
 \T1/opensans-TLF/l/n/10.95 (-20) - even-tuell in Konzepte um-ben-ennen und ganz allge-mein über ver-schiedene konzepte sprechen 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 89--90
+Underfull \hbox (badness 10000) in paragraph at lines 59--61
 
+ []
+
+
+Overfull \hbox (1.64058pt too wide) in paragraph at lines 62--66
+[]\T1/opensans-TLF/l/n/10.95 (-20) Verschiedene Mod-el-lier-ung-sansätze er-fordern un-ter-schied-liche zu grunde lie-gende Datensätze
  []
 
 
 
 [10]
-Overfull \hbox (1.64058pt too wide) in paragraph at lines 91--95
-[]\T1/opensans-TLF/l/n/10.95 (-20) Verschiedene Mod-el-lier-ung-sansätze er-fordern un-ter-schied-liche zu grunde lie-gende Datensätze
+Overfull \hbox (57.07591pt too wide) in paragraph at lines 68--68
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) gewinnmaximierung[]  
  []
 
 
-Overfull \hbox (22.77214pt too wide) in paragraph at lines 108--108
+Overfull \hbox (57.07591pt too wide) in paragraph at lines 68--68
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) gewinnmaximierung[]  
+ []
+
+
+Overfull \hbox (22.77214pt too wide) in paragraph at lines 79--79
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abkürzungen[]  
  []
 
 
-Overfull \hbox (22.77214pt too wide) in paragraph at lines 108--108
+Overfull \hbox (22.77214pt too wide) in paragraph at lines 79--79
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abkürzungen[]  
  []
 
 
-Overfull \hbox (7.39804pt too wide) in paragraph at lines 112--112
+Overfull \hbox (7.39804pt too wide) in paragraph at lines 83--83
 \T1/opensans-TLF/l/n/10.95 (-20) senschaft- 
  []
 
 
-Overfull \hbox (7.39804pt too wide) in paragraph at lines 112--112
+Overfull \hbox (7.39804pt too wide) in paragraph at lines 83--83
 \T1/opensans-TLF/l/n/10.95 (-20) senschaft- 
  []
 
 
-Overfull \hbox (4.01118pt too wide) in paragraph at lines 119--119
+Overfull \hbox (4.01118pt too wide) in paragraph at lines 90--90
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abschnitt 
  []
 
 
-Overfull \hbox (4.01118pt too wide) in paragraph at lines 119--119
+Overfull \hbox (4.01118pt too wide) in paragraph at lines 90--90
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abschnitt 
  []
 
 
-Overfull \hbox (3.3052pt too wide) in paragraph at lines 124--124
+Overfull \hbox (3.3052pt too wide) in paragraph at lines 95--95
 \T1/opensans-TLF/l/n/10.95 (-20) nachden- 
  []
 
 
-Overfull \hbox (3.3052pt too wide) in paragraph at lines 124--124
+Overfull \hbox (3.3052pt too wide) in paragraph at lines 95--95
 \T1/opensans-TLF/l/n/10.95 (-20) nachden- 
  []
 
 
-Overfull \hbox (4.01118pt too wide) in paragraph at lines 125--125
+Overfull \hbox (4.01118pt too wide) in paragraph at lines 96--96
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abschnitt 
  []
 
 
-Overfull \hbox (4.01118pt too wide) in paragraph at lines 125--125
+Overfull \hbox (4.01118pt too wide) in paragraph at lines 96--96
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) abschnitt 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 100--126
+Underfull \hbox (badness 10000) in paragraph at lines 71--100
 
  []
 
@@ -3150,488 +3154,331 @@ Underfull \hbox (badness 10000) in paragraph at lines 100--126
 
 LaTeX Warning: Marginpar on page 12 moved.
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 131--132
-
- []
-
-
+)
 
 [12]
-<pictures/capacityData_overview.png, id=256, 316.68312pt x 262.48062pt>
-File: pictures/capacityData_overview.png Graphic file (type png)
-<use pictures/capacityData_overview.png>
-Package pdftex.def Info: pictures/capacityData_overview.png  used on input line 146.
-(pdftex.def)             Requested size: 449.55357pt x 372.63698pt.
-<pictures/Autocorrelation negative Capacity Price.png, id=259, 433.62pt x 335.3328pt>
-File: pictures/Autocorrelation negative Capacity Price.png Graphic file (type png)
-<use pictures/Autocorrelation negative Capacity Price.png>
-Package pdftex.def Info: pictures/Autocorrelation negative Capacity Price.png  used on input line 157.
-(pdftex.def)             Requested size: 449.55357pt x 347.67358pt.
+\openout2 = `chapters/model/marketDescription.aux'.
 
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pictures/Autocorrelation Negative Capacity - 4 Weeks.png, id=261, 433.62pt x 335.3328pt>
-File: pictures/Autocorrelation Negative Capacity - 4 Weeks.png Graphic file (type png)
-<use pictures/Autocorrelation Negative Capacity - 4 Weeks.png>
-Package pdftex.def Info: pictures/Autocorrelation Negative Capacity - 4 Weeks.png  used on input line 164.
-(pdftex.def)             Requested size: 449.55357pt x 347.67358pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[13 <./pictures/capacityData_overview.png>]
-Overfull \hbox (4.1291pt too wide) in paragraph at lines 181--181
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+ (./chapters/model/marketDescription.tex
+Overfull \hbox (6.18529pt too wide) in paragraph at lines 7--7
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) Übersicht 
  []
 
 
-Overfull \hbox (4.1291pt too wide) in paragraph at lines 181--181
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+Overfull \hbox (6.18529pt too wide) in paragraph at lines 7--7
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) Übersicht 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 16--17
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 20--24
+
+ []
+
+
+Package caption Warning: \label without proper reference on input line 37.
+See the caption package documentation for explanation.
+
+
+LaTeX Warning: Reference `tab:example_scenario' on page 13 undefined on input line 26.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 25--29
+
  []
 
 
 
-[14 <./pictures/Autocorrelation negative Capacity Price.png>]
+[13
+
+
+
+{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}]
+Underfull \hbox (badness 10000) in paragraph at lines 41--43
+
+ []
+
+
+LaTeX Warning: Reference `subsec:RA)' on page 14 undefined on input line 44.
+
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 56--56
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 56--56
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 60--61
+
+ []
+
+
+Overfull \hbox (6.77602pt too wide) in paragraph at lines 64--65
+[]\T1/opensans-TLF/l/n/10.95 (-20) Durch Um-wand-lung in ein Szenario ab-hängiges Prob-lem er-gibt sich dann die fol-gende Gleichung: 
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 64--65
+
+ []
+
+
+
+[14]
+Underfull \hbox (badness 10000) in paragraph at lines 66--67
+
+ []
+
+
+Overfull \hbox (6.05327pt too wide) in paragraph at lines 69--69
+\T1/opensans-TLF/l/n/10.95 (-20) prechend 
+ []
+
+
+Overfull \hbox (6.05327pt too wide) in paragraph at lines 69--69
+\T1/opensans-TLF/l/n/10.95 (-20) prechend 
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 70--70
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 70--70
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
 
 LaTeX Warning: Marginpar on page 15 moved.
 
-<pictures/autocorrelation_posCap_4weeks.png, id=278, 424.2249pt x 328.8285pt>
-File: pictures/autocorrelation_posCap_4weeks.png Graphic file (type png)
-<use pictures/autocorrelation_posCap_4weeks.png>
-Package pdftex.def Info: pictures/autocorrelation_posCap_4weeks.png  used on input line 196.
-(pdftex.def)             Requested size: 449.55357pt x 348.46121pt.
 
+Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
-[15 <./pictures/Autocorrelation Negative Capacity - 4 Weeks.png>]
-<pictures/overviewDAprices_year.png, id=286, 1467.081pt x 630.9171pt>
-File: pictures/overviewDAprices_year.png Graphic file (type png)
-<use pictures/overviewDAprices_year.png>
-Package pdftex.def Info: pictures/overviewDAprices_year.png  used on input line 206.
-(pdftex.def)             Requested size: 449.55357pt x 193.32956pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-
-
-[16 <./pictures/autocorrelation_posCap_4weeks.png>]
-<pictures/DA/Mean DA Prices per Day and Hour - 2020.png, id=299, 406.1574pt x 328.8285pt>
-File: pictures/DA/Mean DA Prices per Day and Hour - 2020.png Graphic file (type png)
-<use pictures/DA/Mean DA Prices per Day and Hour - 2020.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2020.png  used on input line 227.
-(pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2020.png, id=300, 406.1574pt x 328.8285pt>
-File: pictures/DA/Standard Deviation per Day and Hour - 2020.png Graphic file (type png)
-<use pictures/DA/Standard Deviation per Day and Hour - 2020.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2020.png  used on input line 232.
-(pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-<pictures/DA/Mean DA Prices per Day and Hour - 2021.png, id=301, 412.6617pt x 328.8285pt>
-File: pictures/DA/Mean DA Prices per Day and Hour - 2021.png Graphic file (type png)
-<use pictures/DA/Mean DA Prices per Day and Hour - 2021.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2021.png  used on input line 242.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2021.png, id=302, 412.6617pt x 328.8285pt>
-File: pictures/DA/Standard Deviation per Day and Hour - 2021.png Graphic file (type png)
-<use pictures/DA/Standard Deviation per Day and Hour - 2021.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2021.png  used on input line 247.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pictures/DA/Mean DA Prices per Day and Hour - 2022.png, id=303, 412.6617pt x 328.8285pt>
-File: pictures/DA/Mean DA Prices per Day and Hour - 2022.png Graphic file (type png)
-<use pictures/DA/Mean DA Prices per Day and Hour - 2022.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2022.png  used on input line 257.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2022.png, id=304, 412.6617pt x 328.8285pt>
-File: pictures/DA/Standard Deviation per Day and Hour - 2022.png Graphic file (type png)
-<use pictures/DA/Standard Deviation per Day and Hour - 2022.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2022.png  used on input line 262.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pictures/DA/Mean DA Prices per Day and Hour - 2023.png, id=305, 412.6617pt x 328.8285pt>
-File: pictures/DA/Mean DA Prices per Day and Hour - 2023.png Graphic file (type png)
-<use pictures/DA/Mean DA Prices per Day and Hour - 2023.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2023.png  used on input line 272.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2023.png, id=306, 406.1574pt x 328.8285pt>
-File: pictures/DA/Standard Deviation per Day and Hour - 2023.png Graphic file (type png)
-<use pictures/DA/Standard Deviation per Day and Hour - 2023.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2023.png  used on input line 277.
-(pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pictures/DA/Mean DA Prices per Day and Hour - 2024.png, id=307, 412.6617pt x 328.8285pt>
-File: pictures/DA/Mean DA Prices per Day and Hour - 2024.png Graphic file (type png)
-<use pictures/DA/Mean DA Prices per Day and Hour - 2024.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2024.png  used on input line 287.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2024.png, id=308, 412.6617pt x 328.8285pt>
-File: pictures/DA/Standard Deviation per Day and Hour - 2024.png Graphic file (type png)
-<use pictures/DA/Standard Deviation per Day and Hour - 2024.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2024.png  used on input line 292.
-(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pictures/Autocorrelation Positive Energy - 2 Weeks.png, id=310, 416.2752pt x 335.3328pt>
-File: pictures/Autocorrelation Positive Energy - 2 Weeks.png Graphic file (type png)
-<use pictures/Autocorrelation Positive Energy - 2 Weeks.png>
-Package pdftex.def Info: pictures/Autocorrelation Positive Energy - 2 Weeks.png  used on input line 307.
-(pdftex.def)             Requested size: 449.55357pt x 362.15913pt.
-
-
-[17 <./pictures/overviewDAprices_year.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2020.png> <./pictures/DA/Standard Deviation per Day and Hour - 2020.png>]
-
-LaTeX Warning: Text page 18 contains only floats.
-
-
-
-[18 <./pictures/DA/Mean DA Prices per Day and Hour - 2021.png> <./pictures/DA/Standard Deviation per Day and Hour - 2021.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2022.png> <./pictures/DA/Standard Deviation per Day and Hour - 2022.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2023.png> <./pictures/DA/Standard Deviation per Day and Hour - 2023.png>]
-
-[19 <./pictures/DA/Mean DA Prices per Day and Hour - 2024.png> <./pictures/DA/Standard Deviation per Day and Hour - 2024.png> <./pictures/Autocorrelation Positive Energy - 2 Weeks.png>]
-<pictures/posEngOverview.png, id=342, 1475.7534pt x 643.203pt>
-File: pictures/posEngOverview.png Graphic file (type png)
-<use pictures/posEngOverview.png>
-Package pdftex.def Info: pictures/posEngOverview.png  used on input line 316.
-(pdftex.def)             Requested size: 449.55357pt x 195.93617pt.
-
-Overfull \hbox (0.60947pt too wide) in paragraph at lines 320--320
-\T1/opensans-TLF/l/n/10.95 (-20) zpreisen[]  
  []
 
 
-Overfull \hbox (0.60947pt too wide) in paragraph at lines 320--320
-\T1/opensans-TLF/l/n/10.95 (-20) zpreisen[]  
+
+[15]
+
+LaTeX Warning: Reference `s' on page 16 undefined on input line 92.
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 92--100
+
  []
 
 
-Overfull \hbox (8.80363pt too wide) in paragraph at lines 321--321
-\T1/opensans-TLF/l/n/10.95 (-20) schiedene 
+
+[16]
+Overfull \hbox (27.9445pt too wide) in paragraph at lines 107--107
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) formelzeichen 
  []
 
 
-Overfull \hbox (6.2368pt too wide) in paragraph at lines 321--321
-\T1/opensans-TLF/l/n/10.95 (-20) szenarien[]  
+Overfull \hbox (27.9445pt too wide) in paragraph at lines 107--107
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) formelzeichen 
  []
 
 
-Overfull \hbox (8.80363pt too wide) in paragraph at lines 321--321
-\T1/opensans-TLF/l/n/10.95 (-20) schiedene 
+Overfull \hbox (1.69662pt too wide) in paragraph at lines 108--108
+\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
  []
 
 
-Overfull \hbox (6.2368pt too wide) in paragraph at lines 321--321
-\T1/opensans-TLF/l/n/10.95 (-20) szenarien[]  
+Overfull \hbox (1.69662pt too wide) in paragraph at lines 108--108
+\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
  []
 
 
-LaTeX Warning: Marginpar on page 20 moved.
-
-
-Overfull \hbox (4.1291pt too wide) in paragraph at lines 322--322
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+Overfull \hbox (1.69662pt too wide) in paragraph at lines 109--109
+\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
  []
 
 
-Overfull \hbox (4.1291pt too wide) in paragraph at lines 322--322
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+Overfull \hbox (12.20044pt too wide) in paragraph at lines 109--109
+\T1/opensans-TLF/l/n/10.95 (-20) chreibung? 
  []
 
 
-LaTeX Warning: Marginpar on page 20 moved.
-
-
-
-[20 <./pictures/posEngOverview.png>]
-Overfull \hbox (19.75456pt too wide) in paragraph at lines 367--367
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
+Overfull \hbox (1.69662pt too wide) in paragraph at lines 109--109
+\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
  []
 
 
-Overfull \hbox (19.75456pt too wide) in paragraph at lines 367--367
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
+Overfull \hbox (12.20044pt too wide) in paragraph at lines 109--109
+\T1/opensans-TLF/l/n/10.95 (-20) chreibung? 
  []
 
 
-LaTeX Warning: Marginpar on page 21 moved.
+LaTeX Warning: Marginpar on page 17 moved.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 383--384
+LaTeX Warning: Marginpar on page 17 moved.
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 119--126
+
+ []
+
+
+
+[17]
+Overfull \hbox (5.2882pt too wide) in paragraph at lines 144--144
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
+ []
+
+
+Overfull \hbox (5.2882pt too wide) in paragraph at lines 144--144
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
+ []
+
+
+Overfull \hbox (35.91489pt too wide) in paragraph at lines 157--157
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
+ []
+
+
+Overfull \hbox (35.91489pt too wide) in paragraph at lines 157--157
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 158--158
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Overfull \hbox (5.38367pt too wide) in paragraph at lines 158--158
+\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 158--158
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Overfull \hbox (5.38367pt too wide) in paragraph at lines 158--158
+\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+ []
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+LaTeX Warning: Marginpar on page 18 moved.
+
+
+
+[18]
+
+[19]
+
+[20]
+Overfull \hbox (21.58243pt too wide) in paragraph at lines 234--235
+[]\T1/opensans-TLF/l/n/10.95 (-20) angenommener pos-it-ives und abgelehntes neg-at-ives Re-gel-leis-tungs-mark-t-ge-bot $\OMS/iwona/l/n/10.95 ! \T1/opensans-TLF/l/it/10.95 (-20) Variable[]$ 
+ []
+
+
+Overfull \hbox (17.85802pt too wide) in paragraph at lines 235--236
+[]\T1/opensans-TLF/l/n/10.95 (-20) abgelehntes pos-it-ives und an-gen-om-mener neg-at-ives Re-gel-leis-tungs-mark-t-ge-bot $\OMS/iwona/l/n/10.95 ! \T1/opensans-TLF/l/it/10.95 (-20) Variable[]$ 
  []
 
 
 
 [21]
 
-LaTeX Warning: Marginpar on page 22 moved.
-
-
-LaTeX Warning: Marginpar on page 22 moved.
-
-
-LaTeX Warning: Marginpar on page 22 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 443--451
-
- []
-
-
-
 [22]
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Overfull \vbox (136.47473pt too high) has occurred while \output is active []
 
+
+
+[23]
+Overfull \hbox (76.25107pt too wide) in paragraph at lines 281--281
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--456
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 457--458
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 459--460
-
- []
-
-
-
-[23{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 482--497
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--497
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--497
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 482--497
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 498--499
-
- []
-
-
-Overfull \hbox (5.41586pt too wide) in paragraph at lines 500--500
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Erklärung 
- []
-
-
-Overfull \hbox (5.41586pt too wide) in paragraph at lines 500--500
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Erklärung 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 502--504
-
- []
-
-
-Overfull \hbox (6.18529pt too wide) in paragraph at lines 508--508
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Übersicht 
- []
-
-
-Overfull \hbox (6.18529pt too wide) in paragraph at lines 508--508
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Übersicht 
+Overfull \hbox (76.25107pt too wide) in paragraph at lines 281--281
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
  []
 
 
 
 [24]
-Underfull \hbox (badness 10000) in paragraph at lines 514--515
-
+Overfull \hbox (9.23598pt too wide) detected at line 337
+[]
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 516--517
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 524--525
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 528--529
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 530--531
-
- []
-
-
-Overfull \hbox (6.05327pt too wide) in paragraph at lines 533--533
-\T1/opensans-TLF/l/n/10.95 (-20) prechend 
- []
-
-
-Overfull \hbox (6.05327pt too wide) in paragraph at lines 533--533
-\T1/opensans-TLF/l/n/10.95 (-20) prechend 
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 534--534
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 534--534
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+Overfull \hbox (10.95pt too wide) in paragraph at lines 337--337
+[] 
  []
 
 
 
 [25]
 
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-Overfull \hbox (18.8017pt too wide) in paragraph at lines 543--543
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) ausführliche 
- []
-
-
-Overfull \hbox (5.41586pt too wide) in paragraph at lines 543--543
-\T1/opensans-TLF/l/n/10.95 (-20) Erklärung 
- []
-
-
-Overfull \hbox (18.8017pt too wide) in paragraph at lines 543--543
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) ausführliche 
- []
-
-
-Overfull \hbox (5.41586pt too wide) in paragraph at lines 543--543
-\T1/opensans-TLF/l/n/10.95 (-20) Erklärung 
- []
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 550--551
-
- []
-
-
-Overfull \hbox (1.69662pt too wide) in paragraph at lines 566--566
-\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
- []
-
-
-Overfull \hbox (1.69662pt too wide) in paragraph at lines 566--566
-\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
- []
-
-
-Overfull \hbox (1.69662pt too wide) in paragraph at lines 567--567
-\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
- []
-
-
-Overfull \hbox (12.20044pt too wide) in paragraph at lines 567--567
-\T1/opensans-TLF/l/n/10.95 (-20) chreibung? 
- []
-
-
-Overfull \hbox (1.69662pt too wide) in paragraph at lines 567--567
-\T1/opensans-TLF/l/n/10.95 (-20) gleichun- 
- []
-
-
-Overfull \hbox (12.20044pt too wide) in paragraph at lines 567--567
-\T1/opensans-TLF/l/n/10.95 (-20) chreibung? 
- []
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-LaTeX Warning: Marginpar on page 26 moved.
-
-
-
 [26]
-Underfull \hbox (badness 10000) in paragraph at lines 579--580
-
+Overfull \hbox (403.76576pt too wide) detected at line 347
+[]
  []
 
 
-Overfull \hbox (5.2882pt too wide) in paragraph at lines 587--587
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
+Overfull \hbox (10.95pt too wide) in paragraph at lines 347--347
+[] 
  []
 
 
-Overfull \hbox (5.2882pt too wide) in paragraph at lines 587--587
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
+Overfull \hbox (18.72765pt too wide) in paragraph at lines 350--350
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) entscheiden 
  []
 
 
-Overfull \hbox (5.38367pt too wide) in paragraph at lines 592--592
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+Overfull \hbox (20.93408pt too wide) in paragraph at lines 350--350
+\T1/opensans-TLF/l/n/10.95 (-20) kapazitätkos- 
  []
 
 
-Overfull \hbox (5.38367pt too wide) in paragraph at lines 592--592
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+Overfull \hbox (18.72765pt too wide) in paragraph at lines 350--350
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) entscheiden 
  []
 
 
-LaTeX Warning: Marginpar on page 27 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 599--603
-
+Overfull \hbox (20.93408pt too wide) in paragraph at lines 350--350
+\T1/opensans-TLF/l/n/10.95 (-20) kapazitätkos- 
  []
 
-
+)
 
 [27]
+\openout2 = `chapters/model/completeModel.aux'.
 
-[28]
+ (./chapters/model/completeModel.tex
+
+[28
+
+
+
+]
 
 [29]
 
 [30]
-LaTeX Font Info:    Trying to load font information for TS1+opensans-TLF on input line 678.
+LaTeX Font Info:    Trying to load font information for TS1+opensans-TLF on input line 73.
  (c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
 File: TS1opensans-TLF.fd 2019/06/24 Font definitions for TS1/opensans-TLF.
 )
@@ -3640,75 +3487,331 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Overfull \hbox (6.23528pt too wide) in paragraph at lines 679--680
+Overfull \hbox (6.23528pt too wide) in paragraph at lines 74--75
 []$\T1/opensans-TLF/l/it/10.95 (-20) Q[]$ \T1/opensans-TLF/l/n/10.95 (-20) - Menge am Day Ahead Markt re-striktiert durch ein bezusch-lagtes Regelleistungsmarkt-
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 693--695
+Underfull \hbox (badness 10000) in paragraph at lines 88--90
 
  []
 
 
 
 [31{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc}]
-Underfull \hbox (badness 10000) in paragraph at lines 703--705
+Underfull \hbox (badness 10000) in paragraph at lines 98--100
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 713--715
+Underfull \hbox (badness 10000) in paragraph at lines 108--110
 
  []
 
 
 
 [32]
-Underfull \hbox (badness 10000) in paragraph at lines 727--740
+Underfull \hbox (badness 10000) in paragraph at lines 122--135
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 745--751
+Underfull \hbox (badness 10000) in paragraph at lines 140--146
 
  []
 
 
 
 [33]
-Underfull \hbox (badness 10000) in paragraph at lines 752--758
+Underfull \hbox (badness 10000) in paragraph at lines 147--153
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 773--795
+Underfull \hbox (badness 10000) in paragraph at lines 168--190
 
  []
 
 
 
 [34]
-Underfull \hbox (badness 10000) in paragraph at lines 815--823
+Underfull \hbox (badness 10000) in paragraph at lines 210--218
 
  []
 
 
 
 [35]
-Underfull \hbox (badness 10000) in paragraph at lines 824--831
+Underfull \hbox (badness 10000) in paragraph at lines 219--226
 
  []
 
 )
 
 [36]
+\openout2 = `chapters/model/dataDescription.aux'.
+
+ (./chapters/model/dataDescription.tex
+<pictures/capacityData_overview.png, id=450, 316.68312pt x 262.48062pt>
+File: pictures/capacityData_overview.png Graphic file (type png)
+<use pictures/capacityData_overview.png>
+Package pdftex.def Info: pictures/capacityData_overview.png  used on input line 16.
+(pdftex.def)             Requested size: 314.68613pt x 260.84589pt.
+
+
+[37
+
+
+
+ <./pictures/capacityData_overview.png>]
+<pictures/Autocorrelation negative Capacity Price.png, id=461, 433.62pt x 335.3328pt>
+File: pictures/Autocorrelation negative Capacity Price.png Graphic file (type png)
+<use pictures/Autocorrelation negative Capacity Price.png>
+Package pdftex.def Info: pictures/Autocorrelation negative Capacity Price.png  used on input line 27.
+(pdftex.def)             Requested size: 314.68613pt x 243.36844pt.
+<pictures/Autocorrelation Negative Capacity - 4 Weeks.png, id=463, 433.62pt x 335.3328pt>
+File: pictures/Autocorrelation Negative Capacity - 4 Weeks.png Graphic file (type png)
+<use pictures/Autocorrelation Negative Capacity - 4 Weeks.png>
+Package pdftex.def Info: pictures/Autocorrelation Negative Capacity - 4 Weeks.png  used on input line 34.
+(pdftex.def)             Requested size: 314.68613pt x 243.36844pt.
+
+
+[38 <./pictures/Autocorrelation negative Capacity Price.png> <./pictures/Autocorrelation Negative Capacity - 4 Weeks.png>]
+Overfull \hbox (4.1291pt too wide) in paragraph at lines 51--51
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+ []
+
+
+Overfull \hbox (4.1291pt too wide) in paragraph at lines 51--51
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+ []
+
+<pictures/RL/Negative Capacity Price Prediction - 2023.png, id=475, 1454.7951pt x 515.2851pt>
+File: pictures/RL/Negative Capacity Price Prediction - 2023.png Graphic file (type png)
+<use pictures/RL/Negative Capacity Price Prediction - 2023.png>
+Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction - 2023.png  used on input line 62.
+(pdftex.def)             Requested size: 449.55357pt x 159.22566pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pictures/RL/Negative Capacity Price Prediction Interval - 2023.png, id=476, 1454.7951pt x 515.2851pt>
+File: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png Graphic file (type png)
+<use pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>
+Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png  used on input line 68.
+(pdftex.def)             Requested size: 449.55357pt x 159.22566pt.
+
+
+[39]
+<pictures/overviewDAprices_year.png, id=485, 1467.081pt x 630.9171pt>
+File: pictures/overviewDAprices_year.png Graphic file (type png)
+<use pictures/overviewDAprices_year.png>
+Package pdftex.def Info: pictures/overviewDAprices_year.png  used on input line 82.
+(pdftex.def)             Requested size: 449.55357pt x 193.32956pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+
+[40 <./pictures/RL/Negative Capacity Price Prediction - 2023.png> <./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2020.png, id=497, 406.1574pt x 328.8285pt>
+File: pictures/DA/Mean DA Prices per Day and Hour - 2020.png Graphic file (type png)
+<use pictures/DA/Mean DA Prices per Day and Hour - 2020.png>
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2020.png  used on input line 103.
+(pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
+<pictures/DA/Standard Deviation per Day and Hour - 2020.png, id=498, 406.1574pt x 328.8285pt>
+File: pictures/DA/Standard Deviation per Day and Hour - 2020.png Graphic file (type png)
+<use pictures/DA/Standard Deviation per Day and Hour - 2020.png>
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2020.png  used on input line 108.
+(pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
+<pictures/DA/Mean DA Prices per Day and Hour - 2021.png, id=499, 412.6617pt x 328.8285pt>
+File: pictures/DA/Mean DA Prices per Day and Hour - 2021.png Graphic file (type png)
+<use pictures/DA/Mean DA Prices per Day and Hour - 2021.png>
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2021.png  used on input line 118.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+<pictures/DA/Standard Deviation per Day and Hour - 2021.png, id=500, 412.6617pt x 328.8285pt>
+File: pictures/DA/Standard Deviation per Day and Hour - 2021.png Graphic file (type png)
+<use pictures/DA/Standard Deviation per Day and Hour - 2021.png>
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2021.png  used on input line 123.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+
+
+[41 <./pictures/overviewDAprices_year.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2020.png> <./pictures/DA/Standard Deviation per Day and Hour - 2020.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2022.png, id=509, 412.6617pt x 328.8285pt>
+File: pictures/DA/Mean DA Prices per Day and Hour - 2022.png Graphic file (type png)
+<use pictures/DA/Mean DA Prices per Day and Hour - 2022.png>
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2022.png  used on input line 133.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+<pictures/DA/Standard Deviation per Day and Hour - 2022.png, id=510, 412.6617pt x 328.8285pt>
+File: pictures/DA/Standard Deviation per Day and Hour - 2022.png Graphic file (type png)
+<use pictures/DA/Standard Deviation per Day and Hour - 2022.png>
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2022.png  used on input line 138.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+<pictures/DA/Mean DA Prices per Day and Hour - 2023.png, id=511, 412.6617pt x 328.8285pt>
+File: pictures/DA/Mean DA Prices per Day and Hour - 2023.png Graphic file (type png)
+<use pictures/DA/Mean DA Prices per Day and Hour - 2023.png>
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2023.png  used on input line 148.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+<pictures/DA/Standard Deviation per Day and Hour - 2023.png, id=512, 406.1574pt x 328.8285pt>
+File: pictures/DA/Standard Deviation per Day and Hour - 2023.png Graphic file (type png)
+<use pictures/DA/Standard Deviation per Day and Hour - 2023.png>
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2023.png  used on input line 153.
+(pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
+<pictures/DA/Mean DA Prices per Day and Hour - 2024.png, id=513, 412.6617pt x 328.8285pt>
+File: pictures/DA/Mean DA Prices per Day and Hour - 2024.png Graphic file (type png)
+<use pictures/DA/Mean DA Prices per Day and Hour - 2024.png>
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2024.png  used on input line 163.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+<pictures/DA/Standard Deviation per Day and Hour - 2024.png, id=514, 412.6617pt x 328.8285pt>
+File: pictures/DA/Standard Deviation per Day and Hour - 2024.png Graphic file (type png)
+<use pictures/DA/Standard Deviation per Day and Hour - 2024.png>
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2024.png  used on input line 168.
+(pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
+
+
+[42 <./pictures/DA/Mean DA Prices per Day and Hour - 2021.png> <./pictures/DA/Standard Deviation per Day and Hour - 2021.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2022.png> <./pictures/DA/Standard Deviation per Day and Hour - 2022.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2023.png> <./pictures/DA/Standard Deviation per Day and Hour - 2023.png>]
+Overfull \hbox (5.38367pt too wide) in paragraph at lines 174--174
+\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+ []
+
+
+Overfull \hbox (12.94794pt too wide) in paragraph at lines 174--174
+\T1/opensans-TLF/l/n/10.95 (-20) bezwecken 
+ []
+
+
+Overfull \hbox (1.35646pt too wide) in paragraph at lines 174--174
+\T1/opensans-TLF/l/n/10.95 (-20) prechen- 
+ []
+
+
+Overfull \hbox (5.38367pt too wide) in paragraph at lines 174--174
+\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+ []
+
+
+Overfull \hbox (12.94794pt too wide) in paragraph at lines 174--174
+\T1/opensans-TLF/l/n/10.95 (-20) bezwecken 
+ []
+
+
+Overfull \hbox (1.35646pt too wide) in paragraph at lines 174--174
+\T1/opensans-TLF/l/n/10.95 (-20) prechen- 
+ []
+
+<pictures/Autocorrelation Positive Energy - 2 Weeks.png, id=529, 416.2752pt x 335.3328pt>
+File: pictures/Autocorrelation Positive Energy - 2 Weeks.png Graphic file (type png)
+<use pictures/Autocorrelation Positive Energy - 2 Weeks.png>
+Package pdftex.def Info: pictures/Autocorrelation Positive Energy - 2 Weeks.png  used on input line 184.
+(pdftex.def)             Requested size: 449.55357pt x 362.15913pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<pictures/posEngOverview.png, id=531, 1475.7534pt x 643.203pt>
+File: pictures/posEngOverview.png Graphic file (type png)
+<use pictures/posEngOverview.png>
+Package pdftex.def Info: pictures/posEngOverview.png  used on input line 193.
+(pdftex.def)             Requested size: 449.55357pt x 195.93617pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+
+Overfull \hbox (0.60947pt too wide) in paragraph at lines 197--197
+\T1/opensans-TLF/l/n/10.95 (-20) zpreisen[]  
+ []
+
+
+Overfull \hbox (0.60947pt too wide) in paragraph at lines 197--197
+\T1/opensans-TLF/l/n/10.95 (-20) zpreisen[]  
+ []
+
+
+LaTeX Warning: Marginpar on page 43 moved.
+
+
+Overfull \hbox (8.80363pt too wide) in paragraph at lines 198--198
+\T1/opensans-TLF/l/n/10.95 (-20) schiedene 
+ []
+
+
+Overfull \hbox (6.2368pt too wide) in paragraph at lines 198--198
+\T1/opensans-TLF/l/n/10.95 (-20) szenarien[]  
+ []
+
+
+Overfull \hbox (8.80363pt too wide) in paragraph at lines 198--198
+\T1/opensans-TLF/l/n/10.95 (-20) schiedene 
+ []
+
+
+Overfull \hbox (6.2368pt too wide) in paragraph at lines 198--198
+\T1/opensans-TLF/l/n/10.95 (-20) szenarien[]  
+ []
+
+
+LaTeX Warning: Marginpar on page 43 moved.
+
+
+Overfull \hbox (4.1291pt too wide) in paragraph at lines 199--199
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+ []
+
+
+Overfull \hbox (4.1291pt too wide) in paragraph at lines 199--199
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
+ []
+
+
+LaTeX Warning: Marginpar on page 43 moved.
+
+
+
+[43 <./pictures/DA/Mean DA Prices per Day and Hour - 2024.png> <./pictures/DA/Standard Deviation per Day and Hour - 2024.png>]
+
+[44 <./pictures/Autocorrelation Positive Energy - 2 Weeks.png> <./pictures/posEngOverview.png>]
+Overfull \hbox (19.75456pt too wide) in paragraph at lines 245--245
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
+ []
+
+
+Overfull \hbox (19.75456pt too wide) in paragraph at lines 245--245
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
+ []
+
+
+LaTeX Warning: Marginpar on page 45 moved.
+
+
+LaTeX Warning: Marginpar on page 45 moved.
+
+
+LaTeX Warning: Marginpar on page 45 moved.
+
+)
+
+[45]
+\openout2 = `chapters/model/simplifications.aux'.
+
+ (./chapters/model/simplifications.tex)
+
+[46
+
+
+
+]
+\openout2 = `chapters/model.aux'.
+
+ (./chapters/model.tex)
 \openout2 = `chapters/results.aux'.
 
  (./chapters/results.tex
 chapter 4.
 )
 
-[37
+[47
+
+
+
 
 
 
@@ -3720,7 +3823,7 @@ chapter 4.
 chapter 5.
 )
 
-[38
+[48
 
 
 
@@ -3730,9 +3833,49 @@ chapter 5.
 
  (./chapters/appendix.tex
 chapter 6.
+
+Overfull \hbox (62.16815pt too wide) detected at line 16
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 16--16
+[] 
+ []
+
+
+Overfull \hbox (58.4364pt too wide) detected at line 19
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 19--19
+[] 
+ []
+
+
+Overfull \hbox (63.56865pt too wide) detected at line 22
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 22--22
+[] 
+ []
+
+
+Overfull \hbox (63.077pt too wide) detected at line 25
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 25--25
+[] 
+ []
+
 )
 
-[39
+[49
 
 
 
@@ -3744,7 +3887,7 @@ chapter 6.
 chapter without number
 )
 
-[40
+[50
 
 
 
@@ -3757,27 +3900,30 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--21
 
  []
 
-<figures/unterschrift.png, id=483, 397.485pt x 128.27925pt>
+<figures/unterschrift.png, id=595, 397.485pt x 128.27925pt>
 File: figures/unterschrift.png Graphic file (type png)
 <use figures/unterschrift.png>
 Package pdftex.def Info: figures/unterschrift.png  used on input line 23.
 (pdftex.def)             Requested size: 224.77678pt x 72.5425pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--207
+Underfull \hbox (badness 10000) in paragraph at lines 25--214
 
  []
 
 
 
-[41
+[51
 
 
 
- <./figures/unterschrift.png>] (./main.aux (./chapters/opening.aux) (./chapters/variables.aux) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model.aux) (./chapters/results.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
+ <./figures/unterschrift.png>] (./main.aux (./chapters/opening.aux) (./chapters/variables.aux) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model/general.aux) (./chapters/model/marketDescription.aux) (./chapters/model/completeModel.aux) (./chapters/model/dataDescription.aux) (./chapters/model/simplifications.aux) (./chapters/model.aux) (./chapters/results.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
  ***********
+
+
+LaTeX Warning: There were undefined references.
 
 
 LaTeX Warning: There were multiply-defined labels.
@@ -3789,18 +3935,18 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 55889 strings out of 473329
- 1171482 string characters out of 5723857
- 2312487 words of memory out of 5000000
- 77614 multiletter control sequences out of 15000+600000
- 662140 words of font info for 368 fonts, out of 8000000 for 9000
+ 56152 strings out of 473329
+ 1179738 string characters out of 5723857
+ 2338279 words of memory out of 5000000
+ 77779 multiletter control sequences out of 15000+600000
+ 663791 words of font info for 376 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,21n,107p,10971b,2457s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Light.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-LightItalic.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-SemiBold.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonal.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonali.pfb>
-Output written on main.pdf (49 pages, 1701545 bytes).
+Output written on main.pdf (59 pages, 2250529 bytes).
 PDF statistics:
- 615 PDF objects out of 1000 (max. 8388607)
- 497 compressed objects within 5 object streams
- 183 named destinations out of 1000 (max. 500000)
- 126217 words of extra memory for PDF output out of 128383 (max. 10000000)
+ 747 PDF objects out of 1000 (max. 8388607)
+ 615 compressed objects within 7 object streams
+ 234 named destinations out of 1000 (max. 500000)
+ 130342 words of extra memory for PDF output out of 154059 (max. 10000000)
 

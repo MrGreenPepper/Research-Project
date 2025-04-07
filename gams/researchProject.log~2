@@ -1,11 +1,11 @@
 
---- Job first_optimised_historicData.gms Start 04/05/25 16:30:15 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job first_optimised_historicData.gms Start 04/07/25 21:44:25 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
     Input "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms"
     PageSize 0
-    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225a\"
+    ScrDir "C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\225b\"
     SysDir C:\GAMS\46\
     LogOption 3
     ErrMsg 1
@@ -23,106 +23,105 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
 --- first_optimised_historicData.gms(4) 2 Mb
 --- . loadHistoricSet.gms(20) 3 Mb
---- first_optimised_historicData.gms(7) 3 Mb
---- . loadData_historic.gms(4) 3 Mb
---- call gdxxrw.exe matchingRLData_RL_scenarioProbs_neg_Q1.xlsx par=omega_RL_in rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_in.txt
---- . loadData_historic.gms(6) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q1.gdx
---- . loadData_historic.gms(11) 3 Mb
---- call gdxxrw.exe matchingRLData_RL_scenarioValues_neg_Q1.xlsx par=p_in_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_in_RL.txt
---- . loadData_historic.gms(13) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q1.gdx
---- . loadData_historic.gms(18) 3 Mb
---- call gdxxrw.exe matchingRLData_RL_scenarioProbs_pos_Q1.xlsx par=omega_RL_out rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_out.txt
---- . loadData_historic.gms(20) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q1.gdx
---- . loadData_historic.gms(25) 3 Mb
---- call gdxxrw.exe matchingRLData_RL_scenarioValues_pos_Q1.xlsx par=p_out_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_out_RL.txt
---- . loadData_historic.gms(27) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q1.gdx
---- . loadData_historic.gms(34) 3 Mb
+--- first_optimised_historicData.gms(8) 3 Mb
+--- . loadData_historic_Q18.gms(4) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioProbs_neg_Q18.xlsx par=omega_RL_in rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_in.txt
+--- . loadData_historic_Q18.gms(6) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q18.gdx
+--- . loadData_historic_Q18.gms(11) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioValues_neg_Q18.xlsx par=p_in_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_in_RL.txt
+--- . loadData_historic_Q18.gms(13) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q18.gdx
+--- . loadData_historic_Q18.gms(18) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioProbs_pos_Q18.xlsx par=omega_RL_out rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_out.txt
+--- . loadData_historic_Q18.gms(20) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q18.gdx
+--- . loadData_historic_Q18.gms(25) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioValues_pos_Q18.xlsx par=p_out_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_out_RL.txt
+--- . loadData_historic_Q18.gms(27) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q18.gdx
+--- . loadData_historic_Q18.gms(34) 3 Mb
 --- call gdxxrw.exe da_expValues.xlsx par=DA_expV rng=Sheet1!A2:B8569 dim=1 rdim=1 log=log_RA_out_expV.txt
---- . loadData_historic.gms(36) 3 Mb
+--- . loadData_historic_Q18.gms(36) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
---- . loadData_historic.gms(44) 3 Mb
+--- . loadData_historic_Q18.gms(44) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioPerc.gdx
---- . loadData_historic.gms(51) 3 Mb
+--- . loadData_historic_Q18.gms(51) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
---- . loadData_historic.gms(58) 3 Mb
---- call gdxxrw.exe matchingRAData_priceNeg_Q1.xlsx par=RA_price_neg rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_neg.txt
---- . loadData_historic.gms(60) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q1.gdx
---- . loadData_historic.gms(65) 3 Mb
---- call gdxxrw.exe matchingRAData_qMax_Pos_Q1.xlsx par=RA_price_pos rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_pos.txt
---- . loadData_historic.gms(67) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- . loadData_historic.gms(72) 3 Mb
---- call gdxxrw.exe matchingRAData_qMax_Neg_Q1.xlsx par=q_in_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_in_RAmax.txt
---- . loadData_historic.gms(74) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q1.gdx
---- . loadData_historic.gms(79) 3 Mb
---- call gdxxrw.exe matchingRAData_qMax_Pos_Q1.xlsx par=q_out_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_out_RAmax.txt
---- . loadData_historic.gms(81) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- . loadData_historic.gms(90) 3 Mb
+--- . loadData_historic_Q18.gms(58) 3 Mb
+--- call gdxxrw.exe matchingRAData_priceNeg_Q18.xlsx par=RA_price_neg rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_neg.txt
+--- . loadData_historic_Q18.gms(60) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q18.gdx
+--- . loadData_historic_Q18.gms(65) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Pos_Q18.xlsx par=RA_price_pos rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_pos.txt
+--- . loadData_historic_Q18.gms(67) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q18.gdx
+--- . loadData_historic_Q18.gms(72) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Neg_Q18.xlsx par=q_in_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_in_RAmax.txt
+--- . loadData_historic_Q18.gms(74) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q18.gdx
+--- . loadData_historic_Q18.gms(79) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Pos_Q18.xlsx par=q_out_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_out_RAmax.txt
+--- . loadData_historic_Q18.gms(81) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q18.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q18.gdx
+--- . loadData_historic_Q18.gms(90) 3 Mb
 --- call gdxxrw.exe RApriceDown_scenarioPerc.xlsx par=omega_RA_in_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_in.txt
---- . loadData_historic.gms(92) 3 Mb
+--- . loadData_historic_Q18.gms(92) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
---- . loadData_historic.gms(97) 3 Mb
+--- . loadData_historic_Q18.gms(97) 3 Mb
 --- call gdxxrw.exe RApriceUP_scenarioPerc.xlsx par=omega_RA_out_call rng=Sheet1!A1:B102 dim=1 rdim=1 log=log_omega_RA_out.txt
---- . loadData_historic.gms(99) 3 Mb
+--- . loadData_historic_Q18.gms(99) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
---- . loadData_historic.gms(105) 3 Mb
+--- . loadData_historic_Q18.gms(105) 3 Mb
 --- call gdxxrw.exe RA_probMods_pos.xlsx par=RA_probMod_pos rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_pos.txt
---- . loadData_historic.gms(107) 3 Mb
+--- . loadData_historic_Q18.gms(107) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
---- . loadData_historic.gms(112) 3 Mb
+--- . loadData_historic_Q18.gms(112) 3 Mb
 --- call gdxxrw.exe RA_probMods_neg.xlsx par=RA_probMod_neg rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_neg.txt
---- . loadData_historic.gms(114) 3 Mb
+--- . loadData_historic_Q18.gms(114) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
---- . loadData_historic.gms(149) 3 Mb
+--- . loadData_historic_Q18.gms(149) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
---- . loadData_historic.gms(156) 3 Mb
---- first_optimised_historicData.gms(569) 3 Mb
---- Starting execution: elapsed 0:00:11.505
---- first_optimised_historicData.gms(218) 4 Mb
+--- . loadData_historic_Q18.gms(156) 3 Mb
+--- first_optimised_historicData.gms(586) 3 Mb
+--- Starting execution: elapsed 0:00:13.011
+--- first_optimised_historicData.gms(220) 4 Mb
 --- Generating MIP model testFirstDecision
---- first_optimised_historicData.gms(438) 39 Mb  5 secs
---- first_optimised_historicData.gms(475) 108 Mb  7 secs
---- first_optimised_historicData.gms(539) 535 Mb  3 secs
---- first_optimised_historicData.gms(705) 658 Mb
----   1,540,475 rows  2,326,139 columns  9,479,607 non-zeroes
+--- first_optimised_historicData.gms(449) 37 Mb  5 secs
+--- first_optimised_historicData.gms(486) 89 Mb  5 secs
+--- first_optimised_historicData.gms(722) 709 Mb
+---   1,540,859 rows  2,326,139 columns  10,765,827 non-zeroes
 --- Range statistics (absolute non-zero finite values)
---- RHS       [min, max] : [ 1.000E-03, 1.800E+05] - Zero values observed as well
+--- RHS       [min, max] : [ 1.000E-03, 3.349E+02] - Zero values observed as well
 --- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
---- Matrix    [min, max] : [ 1.960E-10, 4.430E+02]
---- Executing CPLEX (Solvelink=2): elapsed 0:00:45.445
+--- Matrix    [min, max] : [ 1.960E-10, 8.519E+02]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:45.960
 
 IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 
 --- GAMS/CPLEX licensed for continuous and discrete problems.
 --- GMO setup time: 0.00s
---- Space for names approximately 145.43 Mb
+--- Space for names approximately 145.45 Mb
 --- Use option 'names no' to turn use of names off
---- GMO memory 879.50 Mb (peak 897.24 Mb)
+--- GMO memory 938.54 Mb (peak 956.29 Mb)
 --- Dictionary memory 0.00 Mb
---- Cplex 22.1.1.0 link memory 62.00 Mb (peak 355.98 Mb)
+--- Cplex 22.1.1.0 link memory 62.00 Mb (peak 370.90 Mb)
 --- Starting Cplex
 
 Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
@@ -135,179 +134,175 @@ Parallel mode: deterministic, using up to 16 threads for concurrent optimization
  * Starting Barrier on 14 threads...
  * Starting primal Simplex on 1 thread...
 Tried aggregator 1 time.
-LP Presolve eliminated 1537644 rows and 2222210 columns.
-Reduced LP has 2830 rows, 103929 columns, and 267182 nonzeros.
-Presolve time = 2.31 sec. (1783.10 ticks)
+LP Presolve eliminated 1539118 rows and 2325935 columns.
+Reduced LP has 1740 rows, 204 columns, and 3564 nonzeros.
+Presolve time = 2.52 sec. (2040.98 ticks)
 
 Iteration log . . .
-Iteration:     1   Dual objective     =       -107318.175537
-Iteration:   474   Dual objective     =       -175339.644192
+Iteration:     1   Dual objective     =          7492.666330
 Perturbation started.
-Iteration:  1005   Dual objective     =       -175355.664472
-Iteration:  1320   Dual objective     =       -175365.538154
-Iteration:  1686   Dual objective     =       -175367.549647
-Iteration:  1951   Dual objective     =       -175368.214849
+Iteration:   102   Dual objective     =          2734.316555
 Removing perturbation.
 
 Dual simplex solved model.
 
 
 --- LP status (1): optimal.
---- Cplex Time: 4.58sec (det. 2980.94 ticks)
+--- Cplex Time: 4.33sec (det. 3081.32 ticks)
 
 
 Optimal solution found
-Objective:      -175368.214712
+Objective:         2734.316555
 
 --- Reading solution for model testFirstDecision
---- first_optimised_historicData.gms(705) 658 Mb  20 secs
---- Executing after solve: elapsed 0:01:03.686
---- first_optimised_historicData.gms(707) 658 Mb
+--- first_optimised_historicData.gms(722) 709 Mb  23 secs
+--- Executing after solve: elapsed 0:01:06.835
+--- first_optimised_historicData.gms(724) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\Result_Miehle.gdx
---- first_optimised_historicData.gms(708) 658 Mb
---- first_optimised_historicData.gms(710) 658 Mb
+--- first_optimised_historicData.gms(725) 709 Mb
+--- first_optimised_historicData.gms(727) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_in_RL.gdx
---- first_optimised_historicData.gms(711) 658 Mb
+--- first_optimised_historicData.gms(728) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_in_RL.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_in_RL.xlsx
-Total time = 1000 Ms
---- first_optimised_historicData.gms(712) 658 Mb
+Total time = 938 Ms
+--- first_optimised_historicData.gms(729) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_out_RL.gdx
---- first_optimised_historicData.gms(713) 658 Mb
+--- first_optimised_historicData.gms(730) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_out_RL.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_out_RL.xlsx
-Total time = 1063 Ms
---- first_optimised_historicData.gms(714) 658 Mb
+Total time = 969 Ms
+--- first_optimised_historicData.gms(731) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rB_DA.gdx
---- first_optimised_historicData.gms(715) 658 Mb
+--- first_optimised_historicData.gms(732) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rB_DA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rB_DA.xlsx
-Total time = 984 Ms
---- first_optimised_historicData.gms(716) 658 Mb
+Total time = 891 Ms
+--- first_optimised_historicData.gms(733) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrB_RA.gdx
---- first_optimised_historicData.gms(717) 658 Mb
+--- first_optimised_historicData.gms(734) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrB_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrB_RA.xlsx
-Total time = 953 Ms
---- first_optimised_historicData.gms(718) 658 Mb
+Total time = 797 Ms
+--- first_optimised_historicData.gms(735) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrB_RA.gdx
---- first_optimised_historicData.gms(719) 658 Mb
+--- first_optimised_historicData.gms(736) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrB_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrB_RA.xlsx
-Total time = 937 Ms
---- first_optimised_historicData.gms(720) 658 Mb
+Total time = 843 Ms
+--- first_optimised_historicData.gms(737) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rB_reload.gdx
---- first_optimised_historicData.gms(721) 658 Mb
+--- first_optimised_historicData.gms(738) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rB_reload.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rB_reload.xlsx
-Total time = 969 Ms
---- first_optimised_historicData.gms(722) 658 Mb
+Total time = 812 Ms
+--- first_optimised_historicData.gms(739) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrI_RA.gdx
---- first_optimised_historicData.gms(723) 658 Mb
+--- first_optimised_historicData.gms(740) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrI_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrI_RA.xlsx
-Total time = 1000 Ms
---- first_optimised_historicData.gms(724) 658 Mb
+Total time = 828 Ms
+--- first_optimised_historicData.gms(741) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrI_RA.gdx
---- first_optimised_historicData.gms(725) 658 Mb
+--- first_optimised_historicData.gms(742) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrI_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrI_RA.xlsx
-Total time = 813 Ms
---- first_optimised_historicData.gms(726) 658 Mb
+Total time = 844 Ms
+--- first_optimised_historicData.gms(743) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rI_DA.gdx
---- first_optimised_historicData.gms(727) 658 Mb
+--- first_optimised_historicData.gms(744) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rI_DA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rI_DA.xlsx
-Total time = 1016 Ms
---- first_optimised_historicData.gms(728) 658 Mb
+Total time = 813 Ms
+--- first_optimised_historicData.gms(745) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rI_reload.gdx
---- first_optimised_historicData.gms(729) 658 Mb
+--- first_optimised_historicData.gms(746) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rI_reload.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rI_reload.xlsx
-Total time = 843 Ms
---- first_optimised_historicData.gms(730) 658 Mb
+Total time = 828 Ms
+--- first_optimised_historicData.gms(747) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrO_RA.gdx
---- first_optimised_historicData.gms(731) 658 Mb
+--- first_optimised_historicData.gms(748) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrO_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrO_RA.xlsx
-Total time = 968 Ms
---- first_optimised_historicData.gms(732) 658 Mb
+Total time = 1171 Ms
+--- first_optimised_historicData.gms(749) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrO_RA.gdx
---- first_optimised_historicData.gms(733) 658 Mb
+--- first_optimised_historicData.gms(750) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrO_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrO_RA.xlsx
-Total time = 875 Ms
---- first_optimised_historicData.gms(734) 658 Mb
+Total time = 1000 Ms
+--- first_optimised_historicData.gms(751) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rO_DA.gdx
---- first_optimised_historicData.gms(735) 658 Mb
+--- first_optimised_historicData.gms(752) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rO_DA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rO_DA.xlsx
-Total time = 1000 Ms
---- first_optimised_historicData.gms(736) 658 Mb
+Total time = 1031 Ms
+--- first_optimised_historicData.gms(753) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rO_reload.gdx
---- first_optimised_historicData.gms(737) 658 Mb
+--- first_optimised_historicData.gms(754) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rO_reload.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rO_reload.xlsx
-Total time = 875 Ms
---- first_optimised_historicData.gms(738) 658 Mb
+Total time = 953 Ms
+--- first_optimised_historicData.gms(755) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrN_RA.gdx
---- first_optimised_historicData.gms(739) 658 Mb
+--- first_optimised_historicData.gms(756) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrN_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_outrN_RA.xlsx
-Total time = 1078 Ms
---- first_optimised_historicData.gms(740) 658 Mb
+Total time = 1031 Ms
+--- first_optimised_historicData.gms(757) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrN_RA.gdx
---- first_optimised_historicData.gms(741) 658 Mb
+--- first_optimised_historicData.gms(758) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrN_RA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_inrN_RA.xlsx
-Total time = 890 Ms
---- first_optimised_historicData.gms(742) 658 Mb
+Total time = 875 Ms
+--- first_optimised_historicData.gms(759) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rN_DA.gdx
---- first_optimised_historicData.gms(743) 658 Mb
+--- first_optimised_historicData.gms(760) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rN_DA.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_rN_DA.xlsx
-Total time = 968 Ms
---- first_optimised_historicData.gms(744) 658 Mb
+Total time = 797 Ms
+--- first_optimised_historicData.gms(761) 709 Mb
 --- GDX File (execute_unload) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_reload.gdx
---- first_optimised_historicData.gms(745) 658 Mb
+--- first_optimised_historicData.gms(762) 709 Mb
 
 GDXXRW           46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
 Input file : C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_reload.gdx
 Output file: C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\res_sum_Q_reload.xlsx
-Total time = 938 Ms
+Total time = 844 Ms
 *** Status: Normal completion
---- Job first_optimised_historicData.gms Stop 04/05/25 16:31:40 elapsed 0:01:24.564
+--- Job first_optimised_historicData.gms Stop 04/07/25 21:45:51 elapsed 0:01:26.582

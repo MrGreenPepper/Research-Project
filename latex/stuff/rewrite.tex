@@ -28,25 +28,25 @@ cdfont=true
 	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                                         \\
 	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                                       \\
 	               & + (\tfrac{1}{4} * (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})  ))				\notag                                                                 \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                       \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                     \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
 	\textbf{accepted RL in \& declined out:}        \notag                                                                                                                                                   \\
 	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag                                    \\
 	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                                         \\
 	               & + (\tfrac{1}{4} * (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                                   \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                       \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                     \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
 	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                                                                         \\
 	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag                                    \\
 	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                                       \\
 	               & + (\tfrac{1}{4} * (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                                   \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                       \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                     \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
 	\textbf{declined RL in \& out:}       \notag                                                                                                                                                             \\
 	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}))) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))  * (				\notag                               \\
 	               & + (\tfrac{1}{4} * (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                                   \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                       \\
-	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                     \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
 	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor, \omega_{RA}(s_{RA}) = 1 / |s_{RA}|      \notag \\
 \end{flalign}
 
@@ -108,25 +108,25 @@ cdfont=true
 *profit RA
 \begin{flalign}
 	\label{profit_{RA}in_EQ}                       profitRAin = \sum(t_{block},
-	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
 		)))
-		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
 	)))
-	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
 		)))
-		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{-}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
 	)))
 	);
 \end{flalign}
 \begin{flalign}
 	\label{profit_{RA}out_EQ}                        profitRAout = \sum(t_{block},
-	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
 		)))
-		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
 	)))
-	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )    )
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )    )
 		)))
-		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{+}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )    )
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )    )
 	)))
 	);
 \end{flalign}

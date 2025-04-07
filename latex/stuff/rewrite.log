@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  6 APR 2025 00:17
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  7 APR 2025 17:44
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1928,7 +1928,7 @@ the current column of the current alignment.
 Try to go on, since this might almost work.
 
 
-Overfull \hbox (2639.63855pt too wide) detected at line 132
+Overfull \hbox (2651.46576pt too wide) detected at line 132
 []
  []
 
@@ -3845,7 +3845,7 @@ Here is how much of TeX's memory you used:
  1141 hyphenation exceptions out of 8191
  108i,20n,107p,11000b,433s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Light.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-LightItalic.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonal.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonali.pfb>
-Output written on rewrite.pdf (9 pages, 89439 bytes).
+Output written on rewrite.pdf (9 pages, 89381 bytes).
 PDF statistics:
  80 PDF objects out of 1000 (max. 8388607)
  47 compressed objects within 1 object stream
