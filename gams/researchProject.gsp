@@ -112,8 +112,20 @@
         },
         {
             "codecMib": 106,
+            "file": "loadData_historic_Q1.gms",
+            "name": "loadData_historic_Q1.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
             "file": "loadData_historic_Q18.gms",
             "name": "loadData_historic_Q18.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "loadData_historic_Q36.gms",
+            "name": "loadData_historic_Q36.gms",
             "type": "gms"
         },
         {

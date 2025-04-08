@@ -1,5 +1,5 @@
 
---- Job first_optimised_historicData.gms Start 04/07/25 22:37:08 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job first_optimised_historicData.gms Start 04/08/25 16:18:03 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -95,21 +95,66 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- . loadData_historic_Q18.gms(114) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+--- . loadData_historic_Q18.gms(144) 3 Mb
+--- call gdxxrw.exe windOnProfil_hour_our.xlsx par=parkProfile rng=Sheet1!A2:B8761 dim=1 rdim=1  log=log_capacityFactorWindOn.txt
 --- . loadData_historic_Q18.gms(149) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
 --- . loadData_historic_Q18.gms(156) 3 Mb
---- first_optimised_historicData.gms(466) 3 Mb 3 Errors
-*** Error 140 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
-    Unknown symbol
-*** Error   8 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
-    ')' expected
-*** Error 409 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
-    Unrecognizable item - skip to find a new statement
-      looking for a ';' or a key word to get started again
---- first_optimised_historicData.gms(546) 3 Mb 4 Errors
-*** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
-    Solve statement not checked because of previous errors
---- first_optimised_historicData.gms(586) 3 Mb 4 Errors
-*** Status: Compilation error(s)
---- Job first_optimised_historicData.gms Stop 04/07/25 22:37:20 elapsed 0:00:11.612
+--- first_optimised_historicData.gms(608) 3 Mb
+--- Starting execution: elapsed 0:00:15.748
+--- first_optimised_historicData.gms(220) 4 Mb
+--- Generating MIP model testFirstDecision
+--- first_optimised_historicData.gms(746) 147 Mb
+---   164,287 rows  469,601 columns  2,412,526 non-zeroes
+--- Range statistics (absolute non-zero finite values)
+--- RHS       [min, max] : [ 1.000E-03, 1.634E+02] - Zero values observed as well
+--- Bound     [min, max] : [        NA,        NA] - Zero values observed as well
+--- Matrix    [min, max] : [ 1.960E-10, 5.730E+02]
+--- Executing CPLEX (Solvelink=2): elapsed 0:00:22.584
+
+IBM ILOG CPLEX   46.2.0 ac4adda6 Mar 5, 2024           WEI x86 64bit/MS Window
+
+--- GAMS/CPLEX licensed for continuous and discrete problems.
+--- GMO setup time: 0.00s
+--- Space for names approximately 24.20 Mb
+--- Use option 'names no' to turn use of names off
+--- GMO memory 184.21 Mb (peak 187.79 Mb)
+--- Dictionary memory 0.00 Mb
+--- Cplex 22.1.1.0 link memory 10.84 Mb (peak 70.60 Mb)
+--- Starting Cplex
+
+Version identifier: 22.1.1.0 | 2022-11-27 | 9160aff4d
+CPXPARAM_Advance                                 0
+CPXPARAM_MIP_Display                             4
+CPXPARAM_MIP_Pool_Capacity                       0
+CPXPARAM_MIP_Tolerances_AbsMIPGap                0
+Parallel mode: deterministic, using up to 16 threads for concurrent optimization:
+ * Starting dual Simplex on 1 thread...
+ * Starting Barrier on 14 threads...
+ * Starting primal Simplex on 1 thread...
+Tried aggregator 1 time.
+LP Presolve eliminated 55281 rows and 142900 columns.
+Aggregator did 101431 substitutions.
+Reduced LP has 7574 rows, 225270 columns, and 1140508 nonzeros.
+Presolve time = 0.98 sec. (624.65 ticks)
+
+Iteration log . . .
+Iteration:     1   Dual objective     =       2893040.635613
+Iteration:   794   Dual objective     =          3335.348656
+Iteration:  1287   Dual objective     =          2757.199275
+
+Dual simplex solved model.
+
+
+--- LP status (1): optimal.
+--- Cplex Time: 1.58sec (det. 955.83 ticks)
+
+
+Optimal solution found
+Objective:         2750.712208
+
+--- Reading solution for model testFirstDecision
+--- first_optimised_historicData.gms(746) 147 Mb  4 secs
+*** Status: Normal completion
+--- Job first_optimised_historicData.gms Stop 04/08/25 16:18:30 elapsed 0:00:26.711

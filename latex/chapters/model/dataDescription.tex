@@ -171,7 +171,36 @@ zu erwartender clearing-price. Das Nivau kann auch noch nachträglich leicht dur
 	\end{minipage}
 	\caption{Daily and hourly DA-Data - 2024 }
 \end{figure}
+
+Des weiteren gehen wir für unsere Simulation davon aus das der simulierte erneuerbare Energien park ein onshore wind park in
+Deutschland ist. Um ein Windprofil zu erhalten dividieren wir die gesamte produktion von onshore windanlagen durch die gesamte Kapazität dieser anlagen [\cite{.08.04.2025}].
+Das gewonnene profil entspricht aber dem mittelwert der deutschen windonshore produktion. Sprich sie ist der mittelwert des
+windes der über ganz deutschland weht. so arbeiten nie alle windkraftanlagen in deutschland gleichzeitig bei 100\%. das
+kann aber für unseren einzelnen windpark durchaus passieren. Um der begrenzung der maximalen Anschlusskapazität also eine
+sinnvolle bedeutung zu geben müssen wir also dieses profil entsprechend skalieren.
+Hierfür gehen wir davon aus das die gesamte deutsche windproduktion zumindest ein indikator dafür ist wieviel wind gerade
+an unserer anlage weht, skalieren aber die tiefen runter und die höhen hoch. eine weitere bedingung der neuberechnung ist
+das die höchsten werte auf 1 liegen, unser windpark also mit voller Leistung produziert.
+
+Das erreichen wir indem wir zuerst das gesamt deutsche windprofil um dessen mittelwert absenken. so erhalten wir eine zahlenreihe aus
+positiven und negativen zahlen, die wenn wir sie nun skalieren stärker nach unten und nach oben abweichen.
+Anschließend wird wieder der Mittelwert hinzu addiert
+so erreichen wir eine neue zahlenreihe deren durchschnitt und summe der ursprünglichen entspricht, deren maximum aber bei 1 liegt [\ref{eq:windProfil_our}].
+\begin{flalign}
+	wp_{our} = ((wp_{ger} - \bar{wp_{ger}}) * wsf) + \bar{wp_{ger}} \label{eq:windProfil_our}
+\end{flalign}
+
+Der skalierungsfaktor berechnet sich dabei wie folgt:
+
+\begin{flalign}
+	wsf = \frac{1-\bar{wp_{ger}}}{\max(wp_{ger}) - \bar{wp_{ger}}} \label{eq:windProfil_wsf}
+\end{flalign}
+\todo{variablen noch in anfangstabelle einfügen}
+
+
+\todo{nochmal nach windprofil suchen im gesamten text und schauen ob das da noch korrekt erklärt ist}
 \todo{ziel für das hoch und runter setzten der linie ... -> erklärung was ich damit bezwecken möchte in dem entsprechendem Mark .. habe ich das schon mit drinne?}
+
 
 
 \textbf{RA}\\

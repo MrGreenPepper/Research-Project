@@ -19,22 +19,22 @@
 \contentsline {subsection}{\numberline {3.3.4}Battery \& Working Point Adjustments}{19}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Access Point}{20}{subsection.3.3.5}%
 \contentsline {subsection}{\numberline {3.3.6}Complete Model}{21}{subsection.3.3.6}%
-\contentsline {subsubsection}{\nonumberline Berechnung optimale Erststufenentscheidungen}{30}{subsubsection*.61}%
-\contentsline {subsubsection}{\nonumberline Berechnung optimale Zweitstufenentscheidung}{33}{subsubsection*.63}%
-\contentsline {subsubsection}{\nonumberline Berechnung optimale Drittstufenentscheidung}{35}{subsubsection*.65}%
-\contentsline {section}{\numberline {3.4}Timeline Creation}{37}{section.3.4}%
-\contentsline {subsubsection}{\nonumberline Market Data Analysis}{37}{subsubsection*.67}%
-\contentsline {section}{\numberline {3.5}Simplification}{46}{section.3.5}%
-\contentsline {subsubsection}{\nonumberline RL}{46}{subsubsection*.94}%
-\contentsline {subsubsection}{\nonumberline DA}{46}{subsubsection*.96}%
-\contentsline {subsubsection}{\nonumberline RA}{46}{subsubsection*.98}%
-\contentsline {subsubsection}{\nonumberline Battery Storage Status}{46}{subsubsection*.100}%
-\contentsline {chapter}{\numberline {4}Results}{47}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{48}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Appendix}{49}{chapter.6}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Erststufenentscheidungen}{32}{subsubsection*.61}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Zweitstufenentscheidung}{35}{subsubsection*.63}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Drittstufenentscheidung}{37}{subsubsection*.65}%
+\contentsline {section}{\numberline {3.4}Timeline Creation}{39}{section.3.4}%
+\contentsline {subsubsection}{\nonumberline Market Data Analysis}{39}{subsubsection*.67}%
+\contentsline {section}{\numberline {3.5}Simplification}{49}{section.3.5}%
+\contentsline {subsubsection}{\nonumberline RL}{49}{subsubsection*.96}%
+\contentsline {subsubsection}{\nonumberline DA}{49}{subsubsection*.98}%
+\contentsline {subsubsection}{\nonumberline RA}{49}{subsubsection*.100}%
+\contentsline {subsubsection}{\nonumberline Battery Storage Status}{50}{subsubsection*.103}%
+\contentsline {chapter}{\numberline {4}Results}{51}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{52}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Appendix}{53}{chapter.6}%
 \setcounter {tocdepth}{-1}
-\contentsline {section}{\numberline {6.1}Further Model Constraints}{49}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Digital Appendix}{49}{section.6.2}%
+\contentsline {section}{\numberline {6.1}Further Model Constraints}{53}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Digital Appendix}{53}{section.6.2}%
 \setcounter {tocdepth}{+1}
-\contentsline {chapter}{\nonumberline Bibliography}{50}{chapter*.101}%
+\contentsline {chapter}{\nonumberline Bibliography}{54}{chapter*.104}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -71,6 +71,8 @@ testV1
 testV2
 testV3
 testV4
+testV5
+testV6
 ;
 
 
@@ -320,7 +322,7 @@ sum_Q_reload_EQ
 *testEQ1
 *testEQ2
 *testEQ3
-*testEQ4
+testEQ4
 
 *series probabilty modifications
 RA_probMod1_Q_outrN
@@ -434,7 +436,7 @@ profitEQ..      Profit  =e=
 *testEQ1(s_in_RL, s_out_RL)..                       testV1(s_in_RL, s_out_RL) =e=  sum(t_block, omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))* (sum(t_quarter, RA_in_expV * Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL) * omega_RA_in_call(t_quarter, s_in_RA)));
 *testEQ2(s_in_RL, s_out_RL)..                       testV2(s_in_RL, s_out_RL) =e= sum(t_quarter, Q_inrB_RA(t_quarter, s_in_RA, s_in_RL, s_out_RL));
 *testEQ3(s_in_RL, s_out_RL)..                       testV3(s_in_RL, s_out_RL) =e= sum(t_quarter, omega_RA_in_call(t_quarter, s_in_RA));
-*testEQ4(s_in_RL, s_out_RL)..                       testV4(s_in_RL, s_out_RL) =e= sum(t_quarter, RA_in_expV);
+testEQ4(quarter)..                       testV4(quarter) =e= sum(t_block$map_quarter_block(t_quarter, t_block), card(t_block)*5 -  card(t_quarter));
 
 workingCostsEQ..						workingCosts =e= sum(t_quarter,
 				sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)))           * (

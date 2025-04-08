@@ -48,6 +48,20 @@
       \verb https://www.regelleistung.net/xspproxy/api/StaticFiles/Regelleistung/Marktinformationen/Modalit%C3%A4ten_/Modalit%C3%A4ten_f%C3%BCr_Regelreserveanbieter_MfRRA/Modellbeschreibung_aFRR-Abrechnung_ab_01.10.2021.pdf
       \endverb
     \endentry
+    \entry{.08.04.2025}{misc}{}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
+      \field{labeltitlesource}{title}
+      \field{title}{ENTSO-E Transparency Platform}
+      \field{year}{08.04.2025}
+      \verb{urlraw}
+      \verb https://transparency.entsoe.eu/
+      \endverb
+      \verb{url}
+      \verb https://transparency.entsoe.eu/
+      \endverb
+      \warn{\item misc entry '.08.04.2025' (researchProject.bib): Invalid format '08.04.2025' of date field 'urldate' - ignoring}
+    \endentry
     \entry{.05.04.2025}{misc}{}{}
       \field{sortinit}{0}
       \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}

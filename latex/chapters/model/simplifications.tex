@@ -2,10 +2,33 @@
 
 wir betrachten uns als teil eines bieterbundes
 Um den rechenaufwand und die komplexität des models zu begrenzen wurden ein paar vereinfachungen vorgenommen.
+
 Diese vereinfachungen beschränken kaum die realitätsnähe des Models.
 
 Nochfolgende eine geordnete Aufführung welche Vereinfachungen getroffen wurden.
 \subsubsection{RL}
+Formal gibt es Mindestgebotsmengen jedoch können diese auch als Bieterbund erbracht werden.
+Zur vereinfachung der Nebenbedingungen betrachten wir uns als teil eines bieterbundes.
+
 \subsubsection{DA}
+Da der Day Ahead markt ein pay-as-cleared markt ist haben wir mit unserem Gebot nur einen einfluss darauf ob wir aktzeptiert werden oder nicht.
+Wir haben keinen einfluss darauf welcher preis für unseren strom bezahlt wird.
+Da wir uns als betreiber eines Solar oder windparks betrachten haben wir betriebskosten nahe 0 die als gleich 0 angenommen werden.
+Da die Day ahead preise über 0 liegen können wir als resultat in der praxis selbst entscheiden ob wir ein gebot abgeben zu einem preis der sicher aktzeptiert wird.
+Daraus folgt die vereinfachte optimierung für den DA-markt aus $Profit_{Da} = Q_{DA} * erwarteterPreis_{DA}$.
+
 \subsubsection{RA}
+Da auch der RA markt ein pay-as-cleared markt ist haben wir mit unserem Gebot nur einen einfluss darauf ob wir abgerufen werden oder nicht.
+Wir haben keinen einfluss darauf welcher preis für unseren strom bezahlt wird.
+\todo{eventuell nochmal umformulieren da sehr ähnlich zu DA}
+Da wir uns als betreiber eines Batteriespeichers betriebskosten nahe 0 haben, werden diese in folge als 0 angenommen.
+So können wir den erwarteten RA markt preis soweit unterbieten das davon aus zu gehen
+ist das unser Gebot auch abgerufen wird. Das gilt auch anders herum. Da wir bei einem bezugschlagtem RL Gebot
+verpflichtet sind auch ein entsprechendes RA Gebot ab zu geben. So würde sich eine Nebenbedingung ergeben die die
+mindest Gebotsmenge am RA markt durch die aktzeptierte gebotsmenge am RL markt begrenzt. In zusammenhang mit den eingeführten betrachten
+Quantils-Szenarien würde dies aber zur einführung weiterer Dimensionen führen müssen die die rechenkomplexität unnötig erhöhen.
+Praktisch lässt sich diese Regulatorische Bedingung durch einen sehr hohen Arbeitspreis umgehen der quasi sicherstellt das wir nicht abgerufen werden.
+Außerdem Stellen wir sicher das für jeden zeitpunkt im bezugschlagtem RL block genügend Speicherkapazität vorhanden wäre um notfalls
+den Abruf bedienen zu können. So vermeiden wir die rechenaufwendige direkt Verknüpfung von RL und RA markt und bilden trotzdem die realen mechanismen 1 zu 1 ab.
+
 \subsubsection{Battery Storage Status}
