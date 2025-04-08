@@ -6,6 +6,16 @@ Um den rechenaufwand und die komplexität des models zu begrenzen wurden ein paa
 Diese vereinfachungen beschränken kaum die realitätsnähe des Models.
 
 Nochfolgende eine geordnete Aufführung welche Vereinfachungen getroffen wurden.
+
+\subsubsection{RL/DA Quantil Data}
+Bei diesen Zeitreihen ist zu beachten das die Werte am Vortag bestimmt werden,
+der eventuelle Vorhersagefehler der Produktion am Folgetag also noch nicht eingetreten ist.
+Deswegen können an dieser Stelle die Quantilsdaten über die 10 Szenarien gemittelt werden.
+So wird  unnötige Komplexität vermieden und es können auch allgemeinere, strategische
+Aussagen über Gebotsverhalten am RL/DA markt in abhängigkeit möglicher hoher/mittlerer und niedriger
+absoluter Vorhersagefehler getroffen werden.
+
+
 \subsubsection{RL}
 Formal gibt es Mindestgebotsmengen jedoch können diese auch als Bieterbund erbracht werden.
 Zur vereinfachung der Nebenbedingungen betrachten wir uns als teil eines bieterbundes.
@@ -32,3 +42,22 @@ Außerdem Stellen wir sicher das für jeden zeitpunkt im bezugschlagtem RL block
 den Abruf bedienen zu können. So vermeiden wir die rechenaufwendige direkt Verknüpfung von RL und RA markt und bilden trotzdem die realen mechanismen 1 zu 1 ab.
 
 \subsubsection{Battery Storage Status}
+Der status des batteriespeichers wird viertelstündlich neu berechnet.
+dabei wird vom batteriestatus des vorherigen zeitfenster alle zugänge aufaddiert und alle abgänge abgezogen.
+da die Zu und abgänge unsicher sind würden sich am ende eines berechnungszeitfenster immer neue mögliche Batteriezustände bilden in
+abhängigkeit aller möglichen vorherigen batteriezustände. Da wir 96 hintereinander folgende mögliche Batteriestatuse berechnen würde
+sich die komplexität aus den anzahl der möglichen ausgänge hoch 96 errechnen. Selbst bei nur 2 möglichen betrachteten Ausgängen
+ist dies nicht für 96 aufeinanderfolgende Zeitfenster berechnbar. Deswegen müssen wir die Berechnung das Batteriespeichers
+approximieren. Wir tun dies indem wir einen erwarteteten Batteriespeicherstatus zum zeitpunkt $t_quarter$ berechnen und dann
+für die folge rechnung mit diesem einem erwarteten wert weiter kalkulieren. wir tun dies indem wir alle ein und ausgänge mit der
+entsprechenden Wahrscheinlichkeit gewichten und so über einen längeren Zeitraum hinweg den richtigen Batteriespeicher status annähernd gut ermitteln.
+
+Dieses Verfahren hat natürlich das potential potentielle kurven des Batterieladestatus ab zu flachen (je nachdem wie hoch die angenommenen verwendeten
+prozentsätze sind). In der Realität können natürlich auch mehrere 10\% Ereignisse hintereinander eintreffen und so eine wesentlich stärkere
+Veränderung des Akku status in eine richtung verursachen als im Model erwartet wird. Um sicher zu stellen das der Batteriespeicher auch in der realität
+über die benötigte maximale kapazität verfügt, muss der reale Kapazität neu berechnet werden. Dies erfolgt indem man die mengengebote ungewichtet betrachtet
+und die maximale amplitude bestimmt. Dieser Wert entspricht dann der real benötigten Speicherkapazität.
+Um so größer das angenommener Speicher/Gebotsverhältnis ist um so weniger wird dies eine Rolle spielen, da es in der
+realität immer unwahrscheinlicher wird das sich unwahrscheinliche ereignisse mit zunehmener länge anneinader reihen.
+\todo{letzen satz mit rein nehmen?}
+

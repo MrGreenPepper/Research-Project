@@ -6,35 +6,36 @@
 \contentsline {chapter}{\numberline {3}Methology}{8}{chapter.3}%
 \contentsline {section}{\numberline {3.1}General model explanation}{9}{section.3.1}%
 \contentsline {section}{\numberline {3.2}Market Modeling Approaches}{10}{section.3.2}%
-\contentsline {section}{\numberline {3.3}Market Design Descriptions}{13}{section.3.3}%
+\contentsline {section}{\numberline {3.3}Model Design Descriptions}{13}{section.3.3}%
 \contentsline {subsection}{\numberline {3.3.1}RL}{14}{subsection.3.3.1}%
 \contentsline {subsubsection}{\nonumberline general description}{14}{subsubsection*.35}%
 \contentsline {subsubsection}{\nonumberline model implementation}{14}{subsubsection*.38}%
 \contentsline {subsection}{\numberline {3.3.2}DA}{17}{subsection.3.3.2}%
-\contentsline {subsubsection}{\nonumberline general description}{17}{subsubsection*.45}%
-\contentsline {subsubsection}{\nonumberline model implementation}{17}{subsubsection*.47}%
+\contentsline {subsubsection}{\nonumberline general description}{17}{subsubsection*.46}%
+\contentsline {subsubsection}{\nonumberline model implementation}{17}{subsubsection*.48}%
 \contentsline {subsection}{\numberline {3.3.3}RA}{18}{subsection.3.3.3}%
-\contentsline {subsubsection}{\nonumberline general description}{18}{subsubsection*.50}%
-\contentsline {subsubsection}{\nonumberline model implementation}{19}{subsubsection*.55}%
+\contentsline {subsubsection}{\nonumberline general description}{18}{subsubsection*.51}%
+\contentsline {subsubsection}{\nonumberline model implementation}{19}{subsubsection*.56}%
 \contentsline {subsection}{\numberline {3.3.4}Battery \& Working Point Adjustments}{19}{subsection.3.3.4}%
 \contentsline {subsection}{\numberline {3.3.5}Access Point}{20}{subsection.3.3.5}%
 \contentsline {subsection}{\numberline {3.3.6}Complete Model}{21}{subsection.3.3.6}%
-\contentsline {subsubsection}{\nonumberline Berechnung optimale Erststufenentscheidungen}{32}{subsubsection*.61}%
-\contentsline {subsubsection}{\nonumberline Berechnung optimale Zweitstufenentscheidung}{35}{subsubsection*.63}%
-\contentsline {subsubsection}{\nonumberline Berechnung optimale Drittstufenentscheidung}{37}{subsubsection*.65}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Erststufenentscheidungen}{32}{subsubsection*.63}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Zweitstufenentscheidung}{35}{subsubsection*.65}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Drittstufenentscheidung}{37}{subsubsection*.67}%
 \contentsline {section}{\numberline {3.4}Timeline Creation}{39}{section.3.4}%
-\contentsline {subsubsection}{\nonumberline Market Data Analysis}{39}{subsubsection*.67}%
+\contentsline {subsubsection}{\nonumberline Market Data Analysis}{39}{subsubsection*.69}%
 \contentsline {section}{\numberline {3.5}Simplification}{49}{section.3.5}%
-\contentsline {subsubsection}{\nonumberline RL}{49}{subsubsection*.96}%
-\contentsline {subsubsection}{\nonumberline DA}{49}{subsubsection*.98}%
-\contentsline {subsubsection}{\nonumberline RA}{49}{subsubsection*.100}%
-\contentsline {subsubsection}{\nonumberline Battery Storage Status}{50}{subsubsection*.103}%
-\contentsline {chapter}{\numberline {4}Results}{51}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{52}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Appendix}{53}{chapter.6}%
+\contentsline {subsubsection}{\nonumberline RL/DA Quantil Data}{49}{subsubsection*.98}%
+\contentsline {subsubsection}{\nonumberline RL}{49}{subsubsection*.100}%
+\contentsline {subsubsection}{\nonumberline DA}{49}{subsubsection*.102}%
+\contentsline {subsubsection}{\nonumberline RA}{50}{subsubsection*.104}%
+\contentsline {subsubsection}{\nonumberline Battery Storage Status}{50}{subsubsection*.107}%
+\contentsline {chapter}{\numberline {4}Results}{52}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{53}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Appendix}{54}{chapter.6}%
 \setcounter {tocdepth}{-1}
-\contentsline {section}{\numberline {6.1}Further Model Constraints}{53}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Digital Appendix}{53}{section.6.2}%
+\contentsline {section}{\numberline {6.1}Further Model Constraints}{54}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Digital Appendix}{54}{section.6.2}%
 \setcounter {tocdepth}{+1}
-\contentsline {chapter}{\nonumberline Bibliography}{54}{chapter*.104}%
+\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.109}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

@@ -1,5 +1,5 @@
 {
-    "file": "first_optimised_historicData.gms",
+    "file": "first_optimised_historicData_test.gms",
     "name": "researchProject",
     "nodes": [
         {
@@ -42,6 +42,18 @@
             "codecMib": 106,
             "file": "first_optimised_historicData.lst",
             "name": "first_optimised_historicData.lst",
+            "type": "lst"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_historicData_test.gms",
+            "name": "first_optimised_historicData_test.gms",
+            "type": "gms"
+        },
+        {
+            "codecMib": 106,
+            "file": "first_optimised_historicData_test.lst",
+            "name": "first_optimised_historicData_test.lst",
             "type": "lst"
         },
         {

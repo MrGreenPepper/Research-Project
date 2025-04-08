@@ -1,7 +1,7 @@
 
 
 
-\section{Market Design Descriptions}
+\section{Model Design Descriptions}
 Das Modell ist in der Lage an drei Märkten zu bieten. Ein Gebot umfasst immer eine Menge sowie einen dazu gehörigen Preis. Zuerst erfolgt
 das Gebot am Regelleistungsmarkt, dann am Day Ahead Markt und schließlich das Gebot am Regelarbeitsmarkt.
 \todo{Übersicht über zeitlichen Ablauf der einzelnen Märkte}
@@ -104,6 +104,8 @@ viertelstunde im entsprechenden Block 25MWh postive bzw. negative Arbeit vorgeha
 	Q^{in}_{RL}(t_{block}, s^{in}_{RL}))	* 0.25    & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res1} \\
 	Q^{out}_{RL}(t_{block}, s^{out}_{RL})	* 0.25   & \leq BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res2}
 \end{flalign}
+
+\todo{strict a  einführen}
 \todo{formelzeichen kontrollieren}
 \todo{alle gleichungen checken wegen $\forall$}
 \todo{alle gleichungen mit nummerierung und beschreibung{?} überarbeiten}
@@ -218,7 +220,7 @@ wir die Arbeit des Windparks geviertelt.
 	\quad \forall s_{RA},  t_{quarter},  t_{hour} = \left\lfloor \frac{t_{quarter}}{4}\right\rfloor \label{eq:a_general_neg}
 \end{alignat}
 
-
+\todo{strikte variante einfügen}
 
 
 \subsection{Complete Model}

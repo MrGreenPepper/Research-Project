@@ -259,13 +259,15 @@ Hierbei zeigt sich das besonders Solar und Wind Onshore Kraftwerke einer volatil
 
 Anschließend wird die summierte Produktion von Solar und Wind Onshore je Zeitpunkt berchnet und
 durch die gesamte Produktion aller Kraftwerke zum gleichen Zeitpunkt geteilt. So erzielen wir den relativen
-Anteil dieser besonders volatilen Kraftwerke an der gesamten Produktion. Die These ist nun das wenn ein Vorhersagefehler eintritt
-dieser besonders starke Auswirkungen hat, da er einen größeren Anteil an der Gesamtproduktion betrifft.
-Diese relativen Produktionsdaten volatiler Kraftwerke werden nun in 36 Quantile eingeteilt. Das erste, mittlere und letzten
+Anteil dieser besonders volatilen Kraftwerke an der gesamten Produktion. Die relative stündliche Produktion wurde dann verwendeten
+Tagesbezogene mittelwerte zu bestimmen. Die These ist nun das wenn ein Vorhersagefehler eintritt
+dieser besonders starke Auswirkungen hat wenn er an Tagen eintritt mit einem hohen Anteil volatiler produktion an der Gesamtproduktion.
+Diese relativen Produktionsdaten volatiler Kraftwerke werden nun in 36 Quantile eingeteilt. Das erste, mittlere und letzte
 Quantil werden nun zur Szenariogeneration benutzt.
 
-Hierfür werden die Zeitpunkte der Quantile, die auf stündlichen Daten beruhen, auf einen viertelstündlichen rythmus extrapoliert und
-dazugehörigen Regelarbeitsmarkt daten vom betreffenden Zeitabschnit exportiert.
+Hierfür werden die Zeitpunkte der Quantile, die nun täglichen Daten beruhen, auf einen viertelstündlichen rythmus extrapoliert und
+dazugehörigen Regelarbeitsmarkt daten vom betreffenden Zeitabschnit exportiert. Simultan dazu werden die passenden Zeitabschnitte aus
+den DA und RL Zeitreihen exportiert.
 
 So ergeben sich 10 mögliche Szenarien für Tage mit hoher, mittlerer und niedrigem Anteil einer volatilem Produktion. Die wahrscheinlichkeit
 wird dabei als gleichverteilt angenommen, so das jedes Szenario die eine Wahrscheinlichkeit von 10\% hat.

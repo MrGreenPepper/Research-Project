@@ -1,5 +1,5 @@
 
---- Job first_optimised_historicData.gms Start 04/08/25 16:14:47 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
+--- Job first_optimised_historicData.gms Start 04/08/25 20:03:12 46.2.0 ac4adda6 WEX-WEI x86 64bit/MS Windows
 --- Applying:
     C:\GAMS\46\gmsprmNT.txt
 --- GAMS Parameters defined
@@ -23,64 +23,70 @@ GAMS 46.2.0   Copyright (C) 1987-2024 GAMS Development. All rights reserved
 --- Starting compilation
 --- first_optimised_historicData.gms(4) 2 Mb
 --- . loadHistoricSet.gms(20) 3 Mb
---- first_optimised_historicData.gms(7) 3 Mb
---- . loadData_historic_Q1.gms(6) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q1.gdx
---- . loadData_historic_Q1.gms(13) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q1.gdx
---- . loadData_historic_Q1.gms(20) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q1.gdx
---- . loadData_historic_Q1.gms(27) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q1.gdx
---- . loadData_historic_Q1.gms(36) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_expValues.gdx
---- . loadData_historic_Q1.gms(44) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioPerc.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioPerc.gdx
---- . loadData_historic_Q1.gms(51) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\da_prices_scenarioValues.gdx
---- . loadData_historic_Q1.gms(60) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q1.gdx
---- . loadData_historic_Q1.gms(65) 3 Mb
---- call gdxxrw.exe matchingRAData_qMax_Pos_Q1.xlsx par=RA_price_pos rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_pos.txt
---- . loadData_historic_Q1.gms(67) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- . loadData_historic_Q1.gms(74) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q1.gdx
---- . loadData_historic_Q1.gms(81) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q1.gdx
---- . loadData_historic_Q1.gms(82) 3 Mb 1 Error
-*** Error 492 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\loadData_historic_Q1.gms
-    Symbol not in GDX
---- . loadData_historic_Q1.gms(92) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceDown_scenarioPerc.gdx
---- . loadData_historic_Q1.gms(99) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RApriceUP_scenarioPerc.gdx
---- . loadData_historic_Q1.gms(107) 3 Mb
+--- first_optimised_historicData.gms(9) 3 Mb
+--- . loadData_historic_Q36.gms(4) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioProbs_neg_Q36.xlsx par=omega_RL_in rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_in.txt
+--- . loadData_historic_Q36.gms(6) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q36.gdx
+--- . loadData_historic_Q36.gms(11) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioProbs_pos_Q36.xlsx par=omega_RL_out rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_out.txt
+--- . loadData_historic_Q36.gms(13) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q36.gdx
+--- . loadData_historic_Q36.gms(18) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioValues_pos_Q36.xlsx par=p_out_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_out_RL.txt
+--- . loadData_historic_Q36.gms(20) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q36.gdx
+--- . loadData_historic_Q36.gms(25) 3 Mb
+--- call gdxxrw.exe matchingRLData_RL_scenarioValues_neg_Q36.xlsx par=p_in_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_in_RL.txt
+--- . loadData_historic_Q36.gms(27) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q36.gdx
+--- . loadData_historic_Q36.gms(34) 3 Mb
+--- call gdxxrw.exe matchingDAData_prices_Q36.xlsx par=DA_expV rng=Sheet1!A2:B25 dim=1 rdim=1 log=log_DA_expV.txt
+--- . loadData_historic_Q36.gms(36) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prices_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prices_Q36.gdx
+--- . loadData_historic_Q36.gms(44) 3 Mb
+--- call gdxxrw.exe matchingRAData_priceNeg_Q36.xlsx par=RA_price_neg rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_neg.txt
+--- . loadData_historic_Q36.gms(46) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q36.gdx
+--- . loadData_historic_Q36.gms(51) 3 Mb
+--- call gdxxrw.exe matchingRAData_pricePos_Q36.xlsx par=RA_price_pos rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_pos.txt
+--- . loadData_historic_Q36.gms(53) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_pricePos_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_pricePos_Q36.gdx
+--- . loadData_historic_Q36.gms(58) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Neg_Q36.xlsx par=q_in_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_in_RAmax.txt
+--- . loadData_historic_Q36.gms(60) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q36.gdx
+--- . loadData_historic_Q36.gms(65) 3 Mb
+--- call gdxxrw.exe matchingRAData_qMax_Pos_Q36.xlsx par=q_out_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_out_RAmax.txt
+--- . loadData_historic_Q36.gms(67) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q36.gdx
+--- . loadData_historic_Q36.gms(79) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
---- . loadData_historic_Q1.gms(114) 3 Mb
+--- . loadData_historic_Q36.gms(86) 3 Mb
 --- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
 --- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
---- . loadData_historic_Q1.gms(149) 3 Mb
---- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
---- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\windOnProfil_hour.gdx
---- . loadData_historic_Q1.gms(156) 4 Mb
---- first_optimised_historicData.gms(570) 4 Mb 2 Errors
+--- . loadData_historic_Q36.gms(116) 3 Mb
+--- call gdxxrw.exe matchingDAData_prod_Q36.xlsx par=parkProfile rng=Sheet1!A2:B25 dim=1 rdim=1  log=log_capacityFactorWindOn.txt
+--- . loadData_historic_Q36.gms(120) 3 Mb
+--- GDXin=C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prod_Q36.gdx
+--- GDX File ($gdxIn) C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prod_Q36.gdx
+--- . loadData_historic_Q36.gms(127) 3 Mb
+--- first_optimised_historicData.gms(502) 3 Mb 1 Error
+*** Error 171 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
+    Domain violation for set
+--- first_optimised_historicData.gms(637) 3 Mb 2 Errors
 *** Error 257 in C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
     Solve statement not checked because of previous errors
---- first_optimised_historicData.gms(608) 4 Mb 2 Errors
+--- first_optimised_historicData.gms(675) 3 Mb 2 Errors
 *** Status: Compilation error(s)
---- Job first_optimised_historicData.gms Stop 04/08/25 16:14:48 elapsed 0:00:01.042
+--- Job first_optimised_historicData.gms Stop 04/08/25 20:03:21 elapsed 0:00:08.498
