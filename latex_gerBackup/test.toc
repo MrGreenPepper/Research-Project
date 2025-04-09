@@ -1,0 +1,40 @@
+\babel@toc {british}{}\relax 
+\babel@toc {british}{}\relax 
+\contentsline {chapter}{\nonumberline Abstract}{I}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{5}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Methology}{8}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Market Design Descriptions}{8}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}RL}{8}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}DA}{8}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}RA}{8}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}General model explanation}{9}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Modellierungansätze}{11}{subsection.3.2.1}%
+\contentsline {subsubsection}{\nonumberline Modelansätze Marktdesigns}{11}{subsubsection*.28}%
+\contentsline {subsubsection}{\nonumberline Modellierung von Zeitreihen}{12}{subsubsection*.35}%
+\contentsline {subsubsection}{\nonumberline Data Overview}{13}{subsubsection*.37}%
+\contentsline {subsection}{\numberline {3.2.2}Preis Vorhersagen - genaue Modelierung}{19}{subsection.3.2.2}%
+\contentsline {subsubsection}{\nonumberline Augmented Dickey Fuller Test}{19}{subsubsection*.58}%
+\contentsline {subsubsection}{\nonumberline Stationary}{19}{subsubsection*.60}%
+\contentsline {subsection}{\numberline {3.2.3}Simplification}{20}{subsection.3.2.3}%
+\contentsline {subsubsection}{\nonumberline RL}{20}{subsubsection*.62}%
+\contentsline {subsubsection}{\nonumberline DA}{20}{subsubsection*.64}%
+\contentsline {subsubsection}{\nonumberline RA}{20}{subsubsection*.66}%
+\contentsline {subsubsection}{\nonumberline Battery Storage Status}{20}{subsubsection*.68}%
+\contentsline {subsubsection}{\nonumberline Preisvorhersage}{22}{subsubsection*.70}%
+\contentsline {subsection}{\numberline {3.2.4}Marktmodelle}{23}{subsection.3.2.4}%
+\contentsline {subsubsection}{\nonumberline Regelleistungsmarkt}{23}{subsubsection*.74}%
+\contentsline {subsubsection}{\nonumberline Day Ahead Markt}{25}{subsubsection*.83}%
+\contentsline {subsubsection}{\nonumberline Regelarbeitsmarkt}{25}{subsubsection*.86}%
+\contentsline {subsection}{\numberline {3.2.5}Berechnung optimale Einzelentscheidungen}{26}{subsection.3.2.5}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Erststufenentscheidungen}{28}{subsubsection*.90}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Zweitstufenentscheidung}{31}{subsubsection*.92}%
+\contentsline {subsubsection}{\nonumberline Berechnung optimale Drittstufenentscheidung}{33}{subsubsection*.94}%
+\contentsline {chapter}{\numberline {4}Results}{35}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{36}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Appendix}{37}{chapter.6}%
+\setcounter {tocdepth}{-1}
+\contentsline {section}{\numberline {6.1}Further Model Constraints}{37}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Digital Appendix}{37}{section.6.2}%
+\setcounter {tocdepth}{+1}
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

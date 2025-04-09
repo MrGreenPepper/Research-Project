@@ -1,0 +1,878 @@
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 04/09/25 00:47:39 Page 1
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+C o m p i l a t i o n
+
+
+   1  *$include loadFullSet
+   2  *$include loadTestSet
+   3   
+INCLUDE    C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\loadHistoricSet.gms
+   5  Sets
+   6  *scenario sets
+   7  s_in_RL                 /s0, s5, s7, s8, s9, s10, s11, s12, s13, s15, s20, s25, s30, s35, s40, s45, s50/
+   8  s_out_RL                /s0, s5, s7, s8, s9, s10, s11, s12, s13, s15, s20, s25, s30, s35, s40, s45, s50/
+   9  s_DA                    /s0, s5, s7, s8, s9, s10, s11, s12, s13, s15, s20, s25, s30, s35, s40, s45, s50/
+  10  s_in_RA                 /s0, s5, s7, s8, s9, s10, s11, s12, s13, s15, s20, s25, s30, s35, s40, s45, s50/
+  11  s_out_RA                /s0, s5, s7, s8, s9, s10, s11, s12, s13, s15, s20, s25, s30, s35, s40, s45, s50/
+  12  t_block                 / b0*b5/
+  13  t_hour                          / h0*h23 /
+  14  t_quarter                       / q0*q95 /
+  15  ser                     /ser1 * ser8/
+  16  s_RA                    /s1*s10/
+  17  ;
+  18   
+  19  Sets
+  20  *time mapping
+  21  map_quarter_hour(t_quarter, t_hour)
+  22  map_quarter_block(t_quarter, t_block)
+  23  map_hour_block(t_hour, t_block);
+  24  ;
+  25   
+  26  *$include convertData.gms
+  27  *$include loadData_historic_Q1.gms
+  28  *$include loadData_historic_Q18.gms
+INCLUDE    C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\loadData_historic_Q36.gms
+  30   
+  31   
+  32  *RL
+  34  Parameter omega_RL_in(t_block, s_in_RL)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q36.gdx
+--- LOAD  omega_RL_in = 1:omega_RL_in
+  38  ;
+  39   
+  41  Parameter omega_RL_out(t_block, s_out_RL)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q36.gdx
+--- LOAD  omega_RL_out = 1:omega_RL_out
+  45  ;
+  46   
+  48  Parameter p_out_RL(t_block, s_out_RL)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q36.gdx
+--- LOAD  p_out_RL = 1:p_out_RL
+  52  ;
+  53   
+  55  Parameter p_in_RL(t_block, s_in_RL)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q36.gdx
+--- LOAD  p_in_RL = 1:p_in_RL
+  59  ;
+  60   
+  61   
+  62  *DA
+  64  Parameter DA_expV(t_hour)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prices_Q36.gdx
+--- LOAD  DA_expV = 1:DA_expV
+  68  ;
+  69   
+  70   
+  71   
+  72  *RA
+  74  Parameter RA_price_neg(t_quarter, s_RA)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q36.gdx
+--- LOAD  RA_price_neg = 1:RA_price_neg
+  78  ;
+  79   
+  81  Parameter RA_price_pos(t_quarter, s_RA)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_pricePos_Q36.gdx
+--- LOAD  RA_price_pos = 1:RA_price_pos
+  85  ;
+  86   
+  88  Parameter q_in_RAmax(t_quarter, s_RA)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q36.gdx
+--- LOAD  q_in_RAmax = 1:q_in_RAmax
+  92  ;
+  93   
+  95  Parameter q_out_RAmax(t_quarter, s_RA)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q36.gdx
+--- LOAD  q_out_RAmax = 1:q_out_RAmax
+  99  ;
+ 100   
+ 101   
+ 102   
+ 103   
+ 104   
+ 105   
+ 106  *$call gdxxrw.exe RA_probMods_pos.xlsx par=RA_probMod_pos rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_pos.txt
+ 107  Parameter RA_probMod_pos(ser)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
+--- LOAD  RA_probMod_pos = 1:RA_probMod_pos
+ 111  ;
+ 112   
+ 113  *$call gdxxrw.exe RA_probMods_neg.xlsx par=RA_probMod_neg rng=Sheet1!A2:B100 dim=1 rdim=1 log=log_RA_probMods_neg.txt
+ 114  Parameter RA_probMod_neg(ser)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+--- LOAD  RA_probMod_neg = 1:RA_probMod_neg
+ 118  ;
+ 119   
+ 120  *Parameter p_in_RA(t_quarter, s_in_RA)
+ 121  *$gdxIn negEnAverage_scenarioValues.gdx
+ 122  *$load p_in_RA
+ 123  *$gdxIn
+ 124  *;
+ 125   
+ 126   
+ 127  *Parameter omega_RA_out(t_quarter, s_out_RA)
+ 128  *$gdxIn posEnAverage_scenarioPerc.gdx
+ 129  *$load omega_RA_out
+ 130  *$gdxIn
+ 131  *;
+ 132   
+ 133  *Parameter p_out_RA(t_quarter, s_out_RA)
+ 134  *$gdxIn posEnAverage_scenarioValues.gdx
+ 135  *$load p_out_RA
+ 136  *$gdxIn
+ 137  *;
+ 138  *
+ 139  *Parameter omega_RA_in(t_quarter, s_in_RA)
+ 140  *$gdxIn negEnAverage_scenarioPerc.gdx
+ 141  *$load omega_RA_in
+ 142  *$gdxIn
+ 143  *;
+ 144   
+ 146  **$call gdxxrw.exe windOffProfil_hour.xlsx par=parkProfile rng=Sheet1!A2:B8761 dim=1 rdim=1 log=log_capacityFactorWindOff.txt
+ 147  **$call gdxxrw.exe solarProfil_hour.xlsx par=parkProfile rng=Sheet1!A2:B8761 dim=1 rdim=1 log=log_capacityFactorSolar.txt
+ 148  Parameter parkProfile(t_hour)
+GDXIN   C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prod_Q36.gdx
+ 150  *$gdxIn windOffProfil_hour.gdx
+ 151  *$gdxIn solarProfil_hour.gdx
+ 152   
+--- LOAD  parkProfile = 1:parkProfile
+ 155  ;
+ 156   
+ 157   
+ 158   
+ 159  *assign correct mapping
+ 160  Loop(t_hour,
+ 161      Loop(t_quarter$(ord(t_quarter) > 4 * (ord(t_hour) - 1) and ord(t_quarter) <= 4 * ord(t_hour)),
+ 162          map_quarter_hour(t_quarter, t_hour) = YES;
+ 163      );
+ 164  );
+ 165   
+ 166  Loop(t_block,
+ 167      Loop(t_quarter$(ord(t_quarter) > 16 * (ord(t_block) - 1) and ord(t_quarter) <= 16 * ord(t_block)),
+ 168          map_quarter_block(t_quarter, t_block) = YES;
+ 169      );
+ 170  );
+ 171   
+ 172  Loop(t_block,
+ 173      Loop(t_hour$(ord(t_hour) > 4 * (ord(t_block) - 1) and ord(t_hour) <= 4 * ord(t_block)),
+ 174          map_hour_block(t_hour, t_block) = YES;
+ 175      );
+ 176  );
+ 177   
+ 178   
+ 179  Scalars
+ 180      a           /3/
+ 181      rBat        /0.95/
+ 182      batCosts    /60/
+ 183      parkCap     /3/
+ 184          rl_factor       /0.25/
+ 185      m           /10000000/
+ 186          workingPointFactor /3/
+ 187          probRA
+ 188   
+ 189          BatCap         /10/
+ 190          strict_aCon    /1/
+ 191      strict_BatCon  /1/
+ 192  ;
+ 193   
+ 194   
+ 195  probRA = (1 / card(s_RA));
+ 196   
+ 197  Variables
+ 198  seriesOne
+ 199   
+ 200  Profit
+ 201  profitRLout
+ 202  profitRLin
+ 203  profitDA
+ 204  profitRAout
+ 205  profitRAin
+ 206   
+ 207  *sum
+ 208  sum_Q_in_RL
+ 209  sum_Q_out_RL
+ 210  sum_Q_rB_DA
+ 211  sum_Q_outrB_RA
+ 212  sum_Q_inrB_RA
+ 213  sum_Q_rB_reload
+ 214  sum_Q_outrI_RA
+ 215  sum_Q_inrI_RA
+ 216  sum_Q_rI_DA
+ 217  sum_Q_rI_reload
+ 218  sum_Q_outrO_RA
+ 219  sum_Q_inrO_RA
+ 220  sum_Q_rO_DA
+ 221  sum_Q_rO_reload
+ 222  sum_Q_outrN_RA
+ 223  sum_Q_inrN_RA
+ 224  sum_Q_rN_DA
+ 225  sum_Q_reload
+ 226   
+ 227  testV1
+ 228  testV2
+ 229  testV3
+ 230  testV4
+ 231  testV5
+ 232  testV6
+ 233  testV7
+ 234  ;
+ 235   
+ 236   
+ 237   
+ 238  Variable
+ 239  meanQRA_max_in
+ 240  meanQRA_max_out
+ 241   
+ 242  priceMean_RLin
+ 243  priceMean_RLout
+ 244  priceMean_DA
+ 245  priceMean_RAin
+ 246  priceMean_RAout
+ 247   
+ 248   
+ 249  omega_RA_outrN_call
+ 250  omega_RA_outrB_call
+ 251  omega_RA_outrI_call
+ 252  omega_RA_outrO_call
+ 253  omega_RA_inrN_call
+ 254  omega_RA_inrB_call
+ 255  omega_RA_inrI_call
+ 256  omega_RA_inrO_call
+ 257   
+ 258  testV
+ 259  sumRLOut
+ 260  sumRLin
+ 261   
+ 262  sumSum_Q_RL_in
+ 263  sumSum_Q_RL_out
+ 264  sumSum_Q_DA
+ 265  sumSum_Q_RA_in
+ 266  sumSum_Q_RA_out
+ 267  ;
+ 268   
+ 269  Positive Variables
+ 270   
+ 271  workingCosts
+ 272  BatStat(t_quarter, s_RA)
+ 273  r
+ 274   
+ 275   
+ 276  * accepted  RL\ in \ out:
+ 277  Q_in_RL(t_block, s_in_RL)
+ 278  Q_out_RL(t_block, s_out_RL)
+ 279  Q_rB_DA(t_hour, s_in_RL, s_out_RL)
+ 280  Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 281  Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 282  Q_rB_reload(t_hour, s_in_RL, s_out_RL)
+ 283   
+ 284  *accepted RL in     \ declined out:
+ 285  Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 286  Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 287  Q_rI_DA(t_hour, s_in_RL, s_out_RL)
+ 288  Q_rI_reload(t_hour, s_in_RL, s_out_RL)
+ 289   
+ 290  *declined RL in\ accepted out:
+ 291  Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 292  Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 293  Q_rO_DA(t_hour, s_in_RL, s_out_RL)
+ 294  Q_rO_reload(t_hour, s_in_RL, s_out_RL)
+ 295   
+ 296  *declined RL in\ out:
+ 297  Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 298  Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 299  Q_rN_DA(t_hour, s_in_RL, s_out_RL)
+ 300  Q_reload(t_hour, s_in_RL, s_out_RL)
+ 301   
+ 302  *reload
+ 303  Q_rB_reload(t_hour, s_in_RL, s_out_RL)
+ 304  Q_rI_reload(t_hour, s_in_RL, s_out_RL)
+ 305  Q_rO_reload(t_hour, s_in_RL, s_out_RL)
+ 306  Q_rN_reload(t_hour, s_in_RL, s_out_RL)
+ 307   
+ 308  *fakeReload
+ 309  fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 310  fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 311  fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 312  fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 313  fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 314  fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 315  fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 316  fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 317   
+ 318  emerg_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 319  emerg_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 320  emerg_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 321  emerg_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 322  emerg_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 323  emerg_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 324  emerg_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 325  emerg_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)
+ 326  ;
+ 327   
+ 328  Equations
+ 329  profitEQ
+ 330  workingCostsEQ
+ 331  *   constraints:
+ 332  *battery cap
+ 333  *batCapCalc
+ 334  *batter cap restrictions
+ 335  batStatCap
+ 336   
+ 337  batCap_Q_out_RL
+ 338  batCap_Q_in_RL
+ 339   
+ 340  batCap_Q_outrB_RA
+ 341  batCap_Q_outrI_RA
+ 342  batCap_Q_outrO_RA
+ 343  batCap_Q_outrN_RA
+ 344   
+ 345  batCap_Q_inrB_RA
+ 346  batCap_Q_inrI_RA
+ 347  batCap_Q_inrO_RA
+ 348  batCap_Q_inrN_RA
+ 349   
+ 350  *access point:
+ 351  accPointCon_a_B
+ 352  accPointCon_a_I
+ 353  accPointCon_a_O
+ 354  accPointCon_a_N
+ 355   
+ 356  accPointCon_a_B_in
+ 357  accPointCon_a_I_in
+ 358  accPointCon_a_O_in
+ 359  accPointCon_a_N_in
+ 360   
+ 361  accPointCon_RLout
+ 362  accPointCon_RLin
+ 363   
+ 364  accPointCon_a_B_strict
+ 365  accPointCon_a_I_strict
+ 366  accPointCon_a_O_strict
+ 367  accPointCon_a_N_strict
+ 368  accPointCon_a_B_in_strict
+ 369  accPointCon_a_I_in_strict
+ 370  accPointCon_a_O_in_strict
+ 371  accPointCon_a_N_in_strict
+ 372   
+ 373  *battery status restrictions
+ 374  batStatcon_
+ 375   
+ 376  fakeReload_inrB_RAEQ
+ 377  fakeReload_outrB_RAEQ
+ 378  fakeReload_inrI_RAEQ
+ 379  fakeReload_outrI_RAEQ
+ 380  fakeReload_inrO_RAEQ
+ 381  fakeReload_outrO_RAEQ
+ 382  fakeReload_inrN_RAEQ
+ 383  fakeReload_outrN_RAEQ
+ 384   
+ 385  *battery performance restrictions:
+ 386  calc_r
+ 387  storCon_Q_out_RL
+ 388  storCon_Q_in_RL
+ 389   
+ 390  storCon_Q_outrB_RA
+ 391  storCon_Q_outrI_RA
+ 392  storCon_Q_outrO_RA
+ 393  storCon_Q_outrN_RA
+ 394   
+ 395  storCon_Q_inrB_RA
+ 396  storCon_Q_inrI_RA
+ 397  storCon_Q_inrO_RA
+ 398  storCon_Q_inrN_RA
+ 399   
+ 400   
+ 401  *park restrictions:
+ 402  parkCon_Q_rB_DA
+ 403  parkCon_Q_rI_DA
+ 404  parkCon_Q_rO_DA
+ 405  parkCon_Q_rN_DA
+ 406   
+ 407  *profits
+ 408  profit_RLout_EQ
+ 409  profit_RLin_EQ
+ 410  profit_DA_EQ
+ 411  profit_RAout_EQ
+ 412  profit_RAin_EQ
+ 413   
+ 414  *sums
+ 415  sum_Q_in_RL_EQ
+ 416  sum_Q_out_RL_EQ
+ 417  sum_Q_rB_DA_EQ
+ 418  sum_Q_outrB_RA_EQ
+ 419  sum_Q_inrB_RA_EQ
+ 420  sum_Q_rB_reload_EQ
+ 421  sum_Q_outrI_RA_EQ
+ 422  sum_Q_inrI_RA_EQ
+ 423  sum_Q_rI_DA_EQ
+ 424  sum_Q_rI_reload_EQ
+ 425  sum_Q_outrO_RA_EQ
+ 426  sum_Q_inrO_RA_EQ
+ 427  sum_Q_rO_DA_EQ
+ 428  sum_Q_rO_reload_EQ
+ 429  sum_Q_outrN_RA_EQ
+ 430  sum_Q_inrN_RA_EQ
+ 431  sum_Q_rN_DA_EQ
+ 432  sum_Q_reload_EQ
+ 433   
+ 434   
+ 435   
+ 436  Q_inrB_RA_EQ
+ 437  Q_inrO_RA_EQ
+ 438  Q_inrI_RA_EQ
+ 439  Q_inrN_RA_EQ
+ 440  Q_outrB_RA_EQ
+ 441  Q_outrI_RA_EQ
+ 442  Q_outrO_RA_EQ
+ 443  Q_outrN_RA_EQ
+ 444   
+ 445  Q_in_RL_EQ
+ 446  Q_out_RL_EQ
+ 447   
+ 448  BatCapEQ
+ 449  Q_in_RL_max
+ 450  Q_out_RL_max
+ 451  Q_in_RL_max_a
+ 452  Q_out_RL_max_a
+ 453   
+ 454  *analyse
+ 455  priceMean_RLin_EQ
+ 456  priceMean_RLout_EQ
+ 457  priceMean_DA_EQ
+ 458  priceMean_RAin_EQ
+ 459  priceMean_RAout_EQ
+ 460   
+ 461  testEQ1
+ 462  testEQ2
+ 463  testEQ3
+ 464  testEQ4
+ 465  testEQ5
+ 466  testEQ6
+ 467  testEQ7
+ 468   
+ 469  meanQRA_max_in_EQ
+ 470  meanQRA_max_out_EQ
+ 471   
+ 472  sumSum_Q_RL_in_EQ
+ 473  sumSum_Q_RL_out_EQ
+ 474  sumSum_Q_DA_EQ
+ 475  sumSum_Q_RA_in_EQ
+ 476  sumSum_Q_RA_out_EQ
+ 477  ;
+ 478   
+ 479   
+ 480   
+ 481  *analyse
+ 482  *testEQ1(t_quarter)..                       testV1(t_quarter) =e=  sum(t_block$map_quarter_block(t_quarter, t_block),sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)) * (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))));
+ 483  *testEQ2(t_block)..                       sumRLout(t_block) =e= sum((s_out_RL), Q_out_RL(t_block, s_out_RL));
+ 484  *testEQ3(t_block)..                       sumRLin(t_block) =e= sum((s_in_RL), Q_in_RL(t_block, s_in_RL));
+ 485  *testEQ4..                                testV4 =e= sum(t_block, sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (
+ 486  *                                                            + (4 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))))));
+ 487  testEQ5..                       testV5 =e= sum(t_quarter, sum(t_block$map_quarter_block(t_quarter, t_block), sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (
+ 488                                                              + (0.25 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL))))))));
+ 489  testEQ6(t_quarter)..                       testV6(t_quarter) =e= sum(t_block$map_quarter_block(t_quarter, t_block), ord(t_quarter));
+ 490  testEQ7(t_quarter)..                       testV7(t_quarter) =e= sum(t_block$map_quarter_block(t_quarter, t_block), 16 * ord(t_block) - ord(t_quarter));
+ 491   
+ 492   
+ 493  testEQ1(t_quarter, s_RA)..                                      testV1(t_quarter, s_RA) =e=  sum(t_block$map_quarter_block(t_quarter, t_block), sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))  * (  (Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )))));
+ 494  testEQ2(t_quarter, s_RA)..                                      testV2(t_quarter, s_RA) =e=  sum(t_block$map_quarter_block(t_quarter, t_block), sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))    * (Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))));
+ 495  testEQ3(t_quarter, s_RA)..                                      testV3(t_quarter, s_RA) =e=  sum(t_block$map_quarter_block(t_quarter, t_block),sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))  * (Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))));
+ 496  testEQ4(t_quarter, s_RA)..                                      testV4(t_quarter, s_RA) =e=  sum(t_block$map_quarter_block(t_quarter, t_block),sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))) * (Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))));
+ 497   
+ 498  priceMean_RLin_EQ..                                             priceMean_RLin =e= sum((t_block, s_in_RL) , p_in_RL(t_block, s_in_RL))  / (card(t_block)*       card(s_in_RL))  ;
+ 499  priceMean_RLout_EQ..                                            priceMean_RLout =e= sum((t_block, s_out_RL) , p_out_RL(t_block, s_out_RL))       / (card(t_block)* card(s_out_RL));
+ 500  priceMean_DA_EQ..                                                   priceMean_DA =e= sum(t_hour , DA_expV(t_hour)) / (card(t_hour));
+ 501  priceMean_RAin_EQ..                                             priceMean_RAin =e= sum((t_quarter, s_RA) , RA_price_neg(t_quarter, s_RA))       / (96*card(s_RA))       ;
+ 502  priceMean_RAout_EQ..                                            priceMean_RAout =e= sum((t_quarter, s_RA) , RA_price_pos(t_quarter, s_RA))   / (96*card(s_RA))  ;
+ 503   
+ 504  meanQRA_max_in_EQ..                                                     meanQRA_max_in =e=      sum((t_quarter, s_RA) , q_in_RAmax(t_quarter, s_RA))   / (96*card(s_RA))        ;
+ 505  meanQRA_max_out_EQ..                                                    meanQRA_max_out =e=     sum((t_quarter, s_RA) , q_out_RAmax(t_quarter, s_RA))   / (96*card(s_RA))       ;
+ 506   
+ 507  *obj function:
+ 508  profitEQ..      Profit  =e=
+ 509                  - (BatCap * batCosts)
+ 510                                  - workingCosts
+ 511                  + sum(t_quarter,
+ 512                                  + sum(t_block$map_quarter_block(t_quarter, t_block),
+ 513                                  + sum(t_hour$map_quarter_hour(t_quarter, t_hour),
+ 514  * accepted  RL\ in \ out:
+ 515                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (
+ 516                          + (rl_factor * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))
+ 517                          + (rl_factor * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
+ 518                          + (0.25 * ((Q_rB_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)  )))
+ 519                          + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))
+ 520                          + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  ))
+ 521  *accepted RL in     \ declined out:
+ 522                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (
+ 523                          + (rl_factor * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL)))
+ 524                          + (0.25 * ((Q_rI_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour))))
+ 525                          + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))
+ 526                          + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  ))
+ 527  *declined RL in     \ accepted out:
+ 528                  + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (
+ 529                          + (rl_factor * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))
+ 530                          + (0.25 * ((Q_rO_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour))))
+ 531                          + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))
+ 532                          + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  ))
+ 533  *declined RL in\ out:
+ 534                  + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (
+ 535                          + (0.25 * ((Q_rN_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour))))
+ 536                          + (sum(s_RA, probRA * RA_price_neg(t_quarter, s_RA) * Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))
+ 537                          + (sum(s_RA, probRA * RA_price_pos(t_quarter, s_RA) * Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)))  )  ))
+ 538                  )));
+ 539   
+ 540   
+ 541  workingCostsEQ..                                                workingCosts =e= sum(t_quarter,
+ 542                                  sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)))           * (
+ 543   
+ 544                          + sum(s_RA, emerg_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * RA_price_pos(t_quarter, s_RA) * workingPointFactor * probRA))
+ 545                          + sum(s_RA, emerg_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) *RA_price_neg(t_quarter, s_RA) * workingPointFactor  * probRA)           ))
+ 546  *
+ 547  *accepted RL in     \ declined out:
+ 548                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))       * (
+ 549   
+ 550                          + sum(s_RA, emerg_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * RA_price_pos(t_quarter, s_RA) * workingPointFactor * probRA))
+ 551                          + sum(s_RA, emerg_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) *RA_price_neg(t_quarter, s_RA) * workingPointFactor  * probRA)           ))
+ 552   
+ 553  *declined RL in     \ accepted out:
+ 554                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL)))       * (
+ 555   
+ 556                          + sum(s_RA, emerg_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * RA_price_pos(t_quarter, s_RA) * workingPointFactor * probRA))
+ 557                          + sum(s_RA, emerg_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) *RA_price_neg(t_quarter, s_RA) * workingPointFactor  * probRA)           ))
+ 558  *
+ 559  *declined RL in\ out:
+ 560                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))))       * (
+ 561   
+ 562                          + sum(s_RA, emerg_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * RA_price_pos(t_quarter, s_RA) * workingPointFactor * probRA))
+ 563                          + sum(s_RA, emerg_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) *RA_price_neg(t_quarter, s_RA) * workingPointFactor  * probRA)           ))
+ 564                                  );
+ 565   
+ 566  *profits
+ 567  *profit RL
+ 568  profit_RLout_EQ..                       profitRLout =e= + sum(t_block,
+ 569                                          + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (
+ 570                                              + (4 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL))))))
+ 571                                          + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))  * (
+ 572                                              + (4 * (Q_out_RL(t_block, s_out_RL)      * p_out_RL(t_block, s_out_RL)))))));
+ 573   
+ 574  profit_RLin_EQ..                        profitRLin =e= + sum(t_block,
+ 575                                          + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (
+ 576                                              + (4 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL))))))
+ 577   
+ 578                                          + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))  * (
+ 579                                              + (4 * (Q_in_RL(t_block, s_in_RL)        * p_in_RL(t_block, s_in_RL))))))
+ 580                                              );
+ 581   
+ 582  *profit DA
+ 583  profit_DA_EQ..                          profitDA =e= sum(t_block,
+ 584                                                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rB_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)  ))
+ 585                                                  )))
+ 586                                                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rI_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
+ 587                                                  )))
+ 588                                                  + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rO_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
+ 589                                                  )))
+ 590                                                  + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (sum(t_hour$map_hour_block(t_hour, t_block),           (Q_rN_DA(t_hour, s_in_RL, s_out_RL)              * DA_expV(t_hour)    ))
+ 591                                                  )))
+ 592                                                  );
+ 593   
+ 594  *profit RA
+ 595  profit_RAin_EQ..                       profitRAin =e= sum(t_block,
+ 596                                                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), sum(s_RA, RA_price_neg(t_quarter, s_RA) * Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  * probRA )    )
+ 597                                                  )))
+ 598                                                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  sum(s_RA, RA_price_neg(t_quarter, s_RA) * Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * probRA )      )
+ 599                                                  )))
+ 600                                                  + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  sum(s_RA, RA_price_neg(t_quarter, s_RA) * Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * probRA )      )
+ 601                                                  )))
+ 602                                                  + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block),  sum(s_RA, RA_price_neg(t_quarter, s_RA) * Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * probRA )      )
+ 603                                                  )))
+ 604                                                  );
+ 605  profit_RAout_EQ..                        profitRAout =e= sum(t_block,
+ 606                                                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL))      * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), sum(s_RA, RA_price_pos(t_quarter, s_RA) * Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  * probRA )    )
+ 607                                                  )))
+ 608                                                  + sum(s_out_RL, sum(s_in_RL, (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), sum(s_RA, RA_price_pos(t_quarter, s_RA) * Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  * probRA )    )
+ 609                                                  )))
+ 610                                                  + sum(s_out_RL, sum(s_in_RL, ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL))   * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), sum(s_RA, RA_price_pos(t_quarter, s_RA) * Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * probRA )    )
+ 611                                                  )))
+ 612                                                  + sum(s_out_RL, sum(s_in_RL, (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))  * (0.25 * sum(t_quarter$map_quarter_block(t_quarter, t_block), sum(s_RA, RA_price_pos(t_quarter, s_RA) * Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) * probRA )    )
+ 613                                                  )))
+ 614                                                  );
+ 615   
+ 616  * accepted  RL\ in \ out:
+ 617  sum_Q_in_RL_EQ(t_block)..                                sum_Q_in_RL(t_block) =e= sum((s_in_RL), Q_in_RL(t_block, s_in_RL));
+ 618  sum_Q_out_RL_EQ(t_block)..                               sum_Q_out_RL(t_block) =e= sum((s_out_RL), Q_out_RL(t_block, s_out_RL));
+ 619  sum_Q_rB_DA_EQ(t_hour)..                                        sum_Q_rB_DA(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rB_DA(t_hour, s_in_RL, s_out_RL));
+ 620  sum_Q_outrB_RA_EQ(t_quarter)..                             sum_Q_outrB_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 621  sum_Q_inrB_RA_EQ(t_quarter)..                              sum_Q_inrB_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 622  sum_Q_rB_reload_EQ(t_hour)..                                sum_Q_rB_reload(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rB_reload(t_hour, s_in_RL, s_out_RL));
+ 623   
+ 624  *accepted RL in     \ declined out:
+ 625  sum_Q_outrI_RA_EQ(t_quarter)..                             sum_Q_outrI_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 626  sum_Q_inrI_RA_EQ(t_quarter)..                              sum_Q_inrI_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 627  sum_Q_rI_DA_EQ(t_hour)..                               sum_Q_rI_DA(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rI_DA(t_hour, s_in_RL, s_out_RL)                            );
+ 628  sum_Q_rI_reload_EQ(t_hour)..                                sum_Q_rI_reload(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rI_reload(t_hour, s_in_RL, s_out_RL)                         );
+ 629   
+ 630  *declined RL in\ accepted out:
+ 631  sum_Q_outrO_RA_EQ(t_quarter)..                             sum_Q_outrO_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 632  sum_Q_inrO_RA_EQ(t_quarter)..                              sum_Q_inrO_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 633  sum_Q_rO_DA_EQ(t_hour)..                               sum_Q_rO_DA(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rO_DA(t_hour, s_in_RL, s_out_RL)                            );
+ 634  sum_Q_rO_reload_EQ(t_hour)..                                sum_Q_rO_reload(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rO_reload(t_hour, s_in_RL, s_out_RL)                         );
+ 635   
+ 636  *declined RL in\ out:
+ 637  sum_Q_outrN_RA_EQ(t_quarter)..                             sum_Q_outrN_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 638  sum_Q_inrN_RA_EQ(t_quarter)..                              sum_Q_inrN_RA(t_quarter) =e= sum((s_RA, s_in_RL, s_out_RL), Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 639  sum_Q_rN_DA_EQ(t_hour)..                                sum_Q_rN_DA(t_hour) =e= sum((s_in_RL, s_out_RL), Q_rN_DA(t_hour, s_in_RL, s_out_RL)                         );
+ 640  sum_Q_reload_EQ(t_hour)..                               sum_Q_reload(t_hour) =e= sum((s_in_RL, s_out_RL), Q_reload(t_hour, s_in_RL, s_out_RL));
+ 641   
+ 642  sumSum_Q_RL_in_EQ..                                                                               sumSum_Q_RL_in =e= sum(t_block,  sum_Q_in_RL(t_block));
+ 643  sumSum_Q_RL_out_EQ..                                                                            sumSum_Q_RL_out =e= sum(t_block, sum_Q_out_RL(t_block));
+ 644  sumSum_Q_DA_EQ..                                                                                sumSum_Q_DA =e= sum(t_hour, sum_Q_rN_DA(t_hour) + sum_Q_rO_DA(t_hour) + sum_Q_rI_DA(t_hour) + sum_Q_rB_DA(t_hour));
+ 645  sumSum_Q_RA_in_EQ..                                                                             sumSum_Q_RA_in =e= sum(t_quarter, sum_Q_inrN_RA(t_quarter) + sum_Q_inrO_RA(t_quarter) + sum_Q_inrI_RA(t_quarter) + sum_Q_inrB_RA(t_quarter));
+ 646  sumSum_Q_RA_out_EQ..                                                                            sumSum_Q_RA_out =e= sum(t_quarter, sum_Q_outrN_RA(t_quarter) + sum_Q_outrO_RA(t_quarter) + sum_Q_outrI_RA(t_quarter) + sum_Q_outrB_RA(t_quarter));
+ 647  *   constraints
+ 648  *battery cap
+ 649  **batCapCalc..                        BatCap =g= max(Q_inrB_RA, Q_inrI_RA, Q_inrO_RA, Q_inrN_RA, Q_outrB_RA, Q_outrI_RA, Q_outrO_RA, Q_outrN_RA);
+ 650  *batCapCalc..                       BatCap =g= max( Q_inrB_RA, Q_inrI_RA, Q_inrO_RA, Q_inrN_RA, Q_outrB_RA, Q_outrI_RA, Q_outrO_RA, Q_outrN_RA,
+ 651  *                                                   Q_in_RL * 4, Q_out_RL * 4);
+ 652   
+ 653   
+ 654  *access point:
+ 655  accPointCon_a_B(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 656  accPointCon_a_I(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 657  accPointCon_a_O(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 658  accPointCon_a_N(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)) =g= sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 659   
+ 660   
+ 661  accPointCon_a_B_in(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =g= sum((s_in_RL, s_out_RL), fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 662  accPointCon_a_I_in(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =g= sum((s_in_RL, s_out_RL), fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 663  accPointCon_a_O_in(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =g= sum((s_in_RL, s_out_RL), fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 664  accPointCon_a_N_in(t_quarter, s_RA)..        a + sum((s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =g= sum((s_in_RL, s_out_RL), fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 665   
+ 666  accPointCon_RLout(t_quarter)..                                          a =g= sum((s_out_RL), sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL)) * 0.25);
+ 667  accPointCon_RLin(t_quarter)..                                           a =g= sum((s_in_RL), sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL)) * 0.25);
+ 668   
+ 669  accPointCon_a_B_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 670  accPointCon_a_I_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 671  accPointCon_a_O_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 672  accPointCon_a_N_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_DA, s_in_RL, s_out_RL), sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_DA(t_hour, s_in_RL, s_out_RL)) * 0.25) + sum((s_in_RL, s_out_RL), fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 673  accPointCon_a_B_in_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_in_RL, s_out_RL), fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 674  accPointCon_a_I_in_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_in_RL, s_out_RL), fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 675  accPointCon_a_O_in_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_in_RL, s_out_RL), fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 676  accPointCon_a_N_in_strict(t_quarter, s_RA)..        a =g= strict_aCon * sum((s_in_RL, s_out_RL), fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 677   
+ 678  *battery performance restrictions:
+ 679  calc_r..                                        r =e= BatCap * 0.168 * rBat;
+ 680  storCon_Q_out_RL(t_block)..                     sum(s_out_RL, Q_out_RL(t_block, s_out_RL))          =l= r;
+ 681  storCon_Q_in_RL(t_block)..                      sum(s_in_RL, Q_in_RL(t_block, s_in_RL))             =l= r;
+ 682   
+ 683   
+ 684  storCon_Q_outrB_RA(t_quarter, s_RA)..                 sum((s_in_RL, s_out_rl), Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= r/4;
+ 685  storCon_Q_outrI_RA(t_quarter, s_RA)..                 sum((s_in_RL, s_out_rl), Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= r/4;
+ 686  storCon_Q_outrO_RA(t_quarter, s_RA)..                 sum((s_in_RL, s_out_rl), Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= r/4;
+ 687  storCon_Q_outrN_RA(t_quarter, s_RA)..                 sum((s_in_RL, s_out_rl), Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= r/4;
+ 688   
+ 689  storCon_Q_inrB_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_RL), Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= r/4;
+ 690  storCon_Q_inrI_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_RL), Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= r/4;
+ 691  storCon_Q_inrO_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_RL), Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= r/4;
+ 692  storCon_Q_inrN_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_RL), Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= r/4;
+ 693   
+ 694  *batter cap restrictions
+ 695  batStatCap(t_quarter, s_RA)..                         BatStat(t_quarter, s_RA) =l= BatCap;
+ 696  batCap_Q_out_RL(t_block)..                      sum(s_out_RL, Q_out_RL(t_block, s_out_RL)) * 4      =l= BatCap;
+ 697  batCap_Q_in_RL(t_block)..                       sum(s_in_RL, Q_in_RL(t_block, s_in_RL)) * 4         =l= BatCap;
+ 698   
+ 699  batCap_Q_outrB_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_rl), Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= BatCap;
+ 700  batCap_Q_outrI_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_rl), Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= BatCap;
+ 701  batCap_Q_outrO_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_rl), Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= BatCap;
+ 702  batCap_Q_outrN_RA(t_quarter, s_RA)..                  sum((s_in_RL, s_out_rl), Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))      =l= BatCap;
+ 703   
+ 704  batCap_Q_inrB_RA(t_quarter, s_RA)..                   sum((s_in_RL, s_out_RL), Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= BatCap;
+ 705  batCap_Q_inrI_RA(t_quarter, s_RA)..                   sum((s_in_RL, s_out_RL), Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= BatCap;
+ 706  batCap_Q_inrO_RA(t_quarter, s_RA)..                   sum((s_in_RL, s_out_RL), Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= BatCap;
+ 707  batCap_Q_inrN_RA(t_quarter, s_RA)..                   sum((s_in_RL, s_out_RL), Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= BatCap;
+ 708   
+ 709  *battery status restrictions
+ 710  *expectet battery value in t+1:
+ 711  batStatcon_(t_quarter, s_RA)..                    BatStat(t_quarter + 1, s_RA) =e= BatStat(t_quarter, s_RA)
+ 712  *accepted  RL\ in \ out:
+ 713                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * omega_RL_out(t_block, s_out_RL)))           * (
+ 714                          + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rB_reload(t_hour, s_in_RL, s_out_RL) / 4)
+ 715                          + (probRA * (fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))
+ 716                          - (probRA * (fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))   )))
+ 717  *
+ 718  *accepted RL in     \ declined out:
+ 719                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL))))       * (
+ 720                          + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rI_reload(t_hour, s_in_RL, s_out_RL) / 4)
+ 721                          + (probRA * (fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))
+ 722                          - (probRA * (fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))   )))
+ 723   
+ 724  *declined RL in     \ accepted out:
+ 725                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), ((1-omega_RL_in(t_block, s_in_RL)) * omega_RL_out(t_block, s_out_RL)))       * (
+ 726                          + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rO_reload(t_hour, s_in_RL, s_out_RL) / 4)
+ 727                          + (probRA * (fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))
+ 728                          - (probRA * (fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))   )))
+ 729  *
+ 730  *declined RL in\ out:
+ 731                  +sum(s_out_RL, sum(s_in_RL, sum(t_block$map_quarter_block(t_quarter, t_block), (1-(omega_RL_in(t_block, s_in_RL) * (1-omega_RL_out(t_block, s_out_RL)))))       * (
+ 732                          + sum(t_hour$map_quarter_hour(t_quarter, t_hour), Q_rN_reload(t_hour, s_in_RL, s_out_RL) / 4)
+ 733                          + (probRA * (fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))
+ 734                          - (probRA * (fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))))   )));
+ 735  *
+ 736   
+ 737  fakeReload_inrB_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..              fakeReload_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)          =e= emerg_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  ;
+ 738  fakeReload_outrB_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..     fakeReload_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL)         =e= emerg_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) ;
+ 739  fakeReload_inrI_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..              fakeReload_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)          =e= emerg_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  ;
+ 740  fakeReload_outrI_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..     fakeReload_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL)         =e= emerg_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) ;
+ 741  fakeReload_inrO_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..              fakeReload_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)          =e= emerg_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  ;
+ 742  fakeReload_outrO_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..     fakeReload_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL)         =e= emerg_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) ;
+ 743  fakeReload_inrN_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..              fakeReload_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)          =e= emerg_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)  ;
+ 744  fakeReload_outrN_RAEQ(t_quarter, s_RA, s_in_RL, s_out_RL)..     fakeReload_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL)         =e= emerg_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) ;
+ 745  *spmOne(t_quarter, s_RA, s_in_RL, s_out_RL)..                         testSPM(t_quarter, s_RA) =e= omega_RA_out_call(t_quarter, s_RA) - 0.1 * seriesOne(t_quarter, s_RA, s_in_RL, s_out_RL);
+ 746  *binconO(t_quarter, s_RA, s_in_RL, s_out_RL)..                         0 =l= Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) + (m * (1-seriesOne(t_quarter, s_RA, s_in_RL, s_out_RL)));
+ 747  *binconT(t_quarter, s_RA, s_in_RL, s_out_RL)..                         0 =g= Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) - (m * seriesOne(t_quarter, s_RA, s_in_RL, s_out_RL));
+ 748   
+ 749   
+ 750  *RA dynamics
+ 751  *out
+ 752   
+ 753   
+ 754  *park restrictions:
+ 755  parkCon_Q_rB_DA(t_hour)..                   sum((s_DA, s_in_RL, s_out_RL), Q_rB_DA(t_hour, s_in_RL, s_out_RL)) =l= parkCap * parkProfile(t_hour) - sum((s_DA, s_in_RL, s_out_RL), Q_rB_reload(t_hour, s_in_RL, s_out_RL));
+ 756  parkCon_Q_rI_DA(t_hour)..                   sum((s_DA, s_in_RL, s_out_RL), Q_rI_DA(t_hour, s_in_RL, s_out_RL)) =l= parkCap * parkProfile(t_hour) - sum((s_DA, s_in_RL, s_out_RL), Q_rI_reload(t_hour, s_in_RL, s_out_RL));
+ 757  parkCon_Q_rO_DA(t_hour)..                   sum((s_DA, s_in_RL, s_out_RL), Q_rO_DA(t_hour, s_in_RL, s_out_RL)) =l= parkCap * parkProfile(t_hour) - sum((s_DA, s_in_RL, s_out_RL), Q_rO_reload(t_hour, s_in_RL, s_out_RL));
+ 758  parkCon_Q_rN_DA(t_hour)..                   sum((s_DA, s_in_RL, s_out_RL), Q_rN_DA(t_hour, s_in_RL, s_out_RL)) =l= parkCap * parkProfile(t_hour) - sum((s_DA, s_in_RL, s_out_RL), Q_rN_reload(t_hour, s_in_RL, s_out_RL));
+ 759   
+ 760   
+ 761   
+ 762   
+ 763  *market restrictions:
+ 764  *marketCon_outrB_RA(t_quarter, s_in_RL, s_out_RL)..                 ( Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )      =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL));
+ 765  *marketCon_outrO_RA(t_quarter, s_in_RL, s_out_RL)..                 ( Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )      =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL));
+ 766  *marketCon_inrI_RA(t_quarter, s_in_RL, s_out_RL)..                  ( Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )         =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL));
+ 767  *marketCon_inrB_RA(t_quarter, s_in_RL, s_out_RL)..                  ( Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )         =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL));
+ 768   
+ 769  *marketCon_outrI_RA(t_quarter)..                ( Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )      =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL));
+ 770  *marketCon_out_RA(t_quarter)..                  ( Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )      =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL));
+ 771   
+ 772  *marketCon_inrO_RA(t_quarter)..                 ( Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )         =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL));
+ 773  *marketCon_in_RA(t_quarter)..                   ( Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL) )         =g= sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL));
+ 774   
+ 775   
+ 776   
+ 777  * accepted  RL\ in \ out:
+ 778  Q_inrB_RA_EQ(t_quarter, s_RA)..                                                 sum((s_in_RL, s_out_RL),Q_inrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =l= q_in_RAmax(t_quarter, s_RA);
+ 779  Q_inrO_RA_EQ(t_quarter, s_RA)..                                                 sum((s_in_RL, s_out_RL),Q_inrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =l= q_in_RAmax(t_quarter, s_RA);
+ 780  Q_inrI_RA_EQ(t_quarter, s_RA)..                                                 sum((s_in_RL, s_out_RL),Q_inrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =l= q_in_RAmax(t_quarter, s_RA);
+ 781  Q_inrN_RA_EQ(t_quarter, s_RA)..                                                 sum((s_in_RL, s_out_RL),Q_inrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))  =l= q_in_RAmax(t_quarter, s_RA);
+ 782  Q_outrB_RA_EQ(t_quarter, s_RA)..                                        sum((s_in_RL, s_out_RL),Q_outrB_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= q_out_RAmax(t_quarter, s_RA);
+ 783  Q_outrI_RA_EQ(t_quarter, s_RA)..                                        sum((s_in_RL, s_out_RL),Q_outrI_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= q_out_RAmax(t_quarter, s_RA);
+ 784  Q_outrO_RA_EQ(t_quarter, s_RA)..                                        sum((s_in_RL, s_out_RL),Q_outrO_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= q_out_RAmax(t_quarter, s_RA);
+ 785  Q_outrN_RA_EQ(t_quarter, s_RA)..                                        sum((s_in_RL, s_out_RL),Q_outrN_RA(t_quarter, s_RA, s_in_RL, s_out_RL))         =l= q_out_RAmax(t_quarter, s_RA);
+ 786   
+ 787   
+ 788  Q_in_RL_EQ(t_quarter, s_in_RL, s_RA)..                          sum(t_block$map_quarter_block(t_quarter, t_block), Q_in_RL(t_block, s_in_RL)    * 0.25 * ( strict_BatCon * (16 * ord(t_block) - ord(t_quarter)))) =l= BatCap - BatStat(t_quarter, s_RA);
+ 789  Q_out_RL_EQ(t_quarter, s_out_RL, s_RA)..                        sum(t_block$map_quarter_block(t_quarter, t_block), Q_out_RL(t_block, s_out_RL)  * 0.25 * ( strict_BatCon * (16 * ord(t_block) - ord(t_quarter)))) =l= BatStat(t_quarter, s_RA);
+ 790  *accepted RL in     \ declined out:
+ 791  *declined RL in\ accepted out:
+ 792  *declined RL in\ out:
+ 793   
+ 794  BatCapEQ..                                          BatCap =g= 0;
+ 795  Q_in_RL_max(t_block)..                                                          sum( s_in_RL, Q_in_RL(t_block, s_in_RL)) =l= 5;
+ 796  Q_out_RL_max(t_block)..                                                         sum( s_out_RL, Q_out_RL(t_block, s_out_RL)) =l= 5;
+ 797  Q_in_RL_max_a(t_block)..                              sum( s_in_RL, Q_in_RL(t_block, s_in_RL)) =l= a;
+ 798  Q_out_RL_max_a(t_block)..                             sum( s_out_RL, Q_out_RL(t_block, s_out_RL)) =l= a;
+ 799   
+ 800   
+ 801  Model testFirstDecision /all/;
+ 802  Solve testFirstDecision maximising Profit using MIP;
+ 803   
+ 804   
+ 805  execute_unload "res_sum_Q_in_RL.gdx" sum_Q_in_RL.l
+ 806  execute 'gdxxrw.exe res_sum_Q_in_RL.gdx o=res_sum_Q_in_RL.xlsx var=sum_Q_in_RL.L'
+ 807  execute_unload "res_sum_Q_out_RL.gdx" sum_Q_out_RL.l
+ 808  execute 'gdxxrw.exe res_sum_Q_out_RL.gdx o=res_sum_Q_out_RL.xlsx var=sum_Q_out_RL.L'
+ 809  execute_unload "res_sum_Q_rB_DA.gdx" sum_Q_rB_DA.l
+ 810  execute 'gdxxrw.exe res_sum_Q_rB_DA.gdx o=res_sum_Q_rB_DA.xlsx var=sum_Q_rB_DA.L'
+ 811  execute_unload "res_sum_Q_outrB_RA.gdx" sum_Q_outrB_RA.l
+ 812  execute 'gdxxrw.exe res_sum_Q_outrB_RA.gdx o=res_sum_Q_outrB_RA.xlsx var=sum_Q_outrB_RA.L'
+ 813  execute_unload "res_sum_Q_inrB_RA.gdx" sum_Q_inrB_RA.l
+ 814  execute 'gdxxrw.exe res_sum_Q_inrB_RA.gdx o=res_sum_Q_inrB_RA.xlsx var=sum_Q_inrB_RA.L'
+ 815  execute_unload "res_sum_Q_rB_reload.gdx" sum_Q_rB_reload.l
+ 816  execute 'gdxxrw.exe res_sum_Q_rB_reload.gdx o=res_sum_Q_rB_reload.xlsx var=sum_Q_rB_reload.L'
+ 817  execute_unload "res_sum_Q_outrI_RA.gdx" sum_Q_outrI_RA.l
+ 818  execute 'gdxxrw.exe res_sum_Q_outrI_RA.gdx o=res_sum_Q_outrI_RA.xlsx var=sum_Q_outrI_RA.L'
+ 819  execute_unload "res_sum_Q_inrI_RA.gdx" sum_Q_inrI_RA.l
+ 820  execute 'gdxxrw.exe res_sum_Q_inrI_RA.gdx o=res_sum_Q_inrI_RA.xlsx var=sum_Q_inrI_RA.L'
+ 821  execute_unload "res_sum_Q_rI_DA.gdx" sum_Q_rI_DA.l
+ 822  execute 'gdxxrw.exe res_sum_Q_rI_DA.gdx o=res_sum_Q_rI_DA.xlsx var=sum_Q_rI_DA.L'
+ 823  execute_unload "res_sum_Q_rI_reload.gdx" sum_Q_rI_reload.l
+ 824  execute 'gdxxrw.exe res_sum_Q_rI_reload.gdx o=res_sum_Q_rI_reload.xlsx var=sum_Q_rI_reload.L'
+ 825  execute_unload "res_sum_Q_outrO_RA.gdx" sum_Q_outrO_RA.l
+ 826  execute 'gdxxrw.exe res_sum_Q_outrO_RA.gdx o=res_sum_Q_outrO_RA.xlsx var=sum_Q_outrO_RA.L'
+ 827  execute_unload "res_sum_Q_inrO_RA.gdx" sum_Q_inrO_RA.l
+ 828  execute 'gdxxrw.exe res_sum_Q_inrO_RA.gdx o=res_sum_Q_inrO_RA.xlsx var=sum_Q_inrO_RA.L'
+ 829  execute_unload "res_sum_Q_rO_DA.gdx" sum_Q_rO_DA.l
+ 830  execute 'gdxxrw.exe res_sum_Q_rO_DA.gdx o=res_sum_Q_rO_DA.xlsx var=sum_Q_rO_DA.L'
+ 831  execute_unload "res_sum_Q_rO_reload.gdx" sum_Q_rO_reload.l
+ 832  execute 'gdxxrw.exe res_sum_Q_rO_reload.gdx o=res_sum_Q_rO_reload.xlsx var=sum_Q_rO_reload.L'
+ 833  execute_unload "res_sum_Q_outrN_RA.gdx" sum_Q_outrN_RA.l
+ 834  execute 'gdxxrw.exe res_sum_Q_outrN_RA.gdx o=res_sum_Q_outrN_RA.xlsx var=sum_Q_outrN_RA.L'
+ 835  execute_unload "res_sum_Q_inrN_RA.gdx" sum_Q_inrN_RA.l
+ 836  execute 'gdxxrw.exe res_sum_Q_inrN_RA.gdx o=res_sum_Q_inrN_RA.xlsx var=sum_Q_inrN_RA.L'
+ 837  execute_unload "res_sum_Q_rN_DA.gdx" sum_Q_rN_DA.l
+ 838  execute 'gdxxrw.exe res_sum_Q_rN_DA.gdx o=res_sum_Q_rN_DA.xlsx var=sum_Q_rN_DA.L'
+ 839  execute_unload "res_sum_Q_reload.gdx" sum_Q_reload.l
+ 840  execute 'gdxxrw.exe res_sum_Q_reload.gdx o=res_sum_Q_reload.xlsx var=sum_Q_reload.L'
+ 841   
+ 842   
+ 843  execute_unload "res_sumSum_Q_RL_in.gdx" sumSum_Q_RL_in.l
+ 844  execute 'gdxxrw.exe res_sumSum_Q_RL_in.gdx o=sumSum_Q_RL_in.xlsx var=sumSum_Q_RL_in.L'
+ 845  execute_unload "res_sumSum_Q_RL_out.gdx" sumSum_Q_RL_out.l
+ 846  execute 'gdxxrw.exe res_sumSum_Q_RL_out.gdx o=sumSum_Q_RL_out.xlsx var=sumSum_Q_RL_out.L'
+ 847  execute_unload "res_sumSum_Q_DA.gdx" sumSum_Q_DA.l
+ 848  execute 'gdxxrw.exe res_sumSum_Q_DA.gdx o=sumSum_Q_DA.xlsx var=sumSum_Q_DA.L'
+ 849  execute_unload "res_sumSum_Q_RA_in.gdx" sumSum_Q_RA_in.l
+ 850  execute 'gdxxrw.exe res_sumSum_Q_RA_in.gdx o=sumSum_Q_RA_in.xlsx var=sumSum_Q_RA_in.L'
+ 851  execute_unload "res_sumSum_Q_RA_out.gdx" sumSum_Q_RA_out.l
+ 852  execute 'gdxxrw.exe res_sumSum_Q_RA_out.gdx o=sumSum_Q_RA_out.xlsx var=sumSum_Q_RA_out.L'
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 04/09/25 00:47:39 Page 2
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Include File Summary
+
+
+   SEQ   GLOBAL TYPE      PARENT   LOCAL  FILENAME
+
+     1        1 INPUT          0       0  C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\first_optimised_historicData.gms
+     2        4 INCLUDE        1       4  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\loadHistoricSet.gms
+     3       29 INCLUDE        1       9  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\loadData_historic_Q36.gms
+     4       33 CALL           3       4  .gdxxrw.exe matchingRLData_RL_scenarioProbs_neg_Q36.xlsx par=omega_RL_in rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_in.txt
+     5       35 GDXIN          3       6  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_neg_Q36.gdx
+     6       40 CALL           3      11  .gdxxrw.exe matchingRLData_RL_scenarioProbs_pos_Q36.xlsx par=omega_RL_out rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_omega_RL_out.txt
+     7       42 GDXIN          3      13  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioProbs_pos_Q36.gdx
+     8       47 CALL           3      18  .gdxxrw.exe matchingRLData_RL_scenarioValues_pos_Q36.xlsx par=p_out_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_out_RL.txt
+     9       49 GDXIN          3      20  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_pos_Q36.gdx
+    10       54 CALL           3      25  .gdxxrw.exe matchingRLData_RL_scenarioValues_neg_Q36.xlsx par=p_in_RL rng=Sheet1!A1:BA7 dim=2 rdim=1 cdim=1 log=log_p_in_RL.txt
+    11       56 GDXIN          3      27  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRLData_RL_scenarioValues_neg_Q36.gdx
+    12       63 CALL           3      34  .gdxxrw.exe matchingDAData_prices_Q36.xlsx par=DA_expV rng=Sheet1!A2:B25 dim=1 rdim=1 log=log_DA_expV.txt
+    13       65 GDXIN          3      36  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prices_Q36.gdx
+    14       73 CALL           3      44  .gdxxrw.exe matchingRAData_priceNeg_Q36.xlsx par=RA_price_neg rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_neg.txt
+    15       75 GDXIN          3      46  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_priceNeg_Q36.gdx
+    16       80 CALL           3      51  .gdxxrw.exe matchingRAData_pricePos_Q36.xlsx par=RA_price_pos rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_RA_price_pos.txt
+    17       82 GDXIN          3      53  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_pricePos_Q36.gdx
+    18       87 CALL           3      58  .gdxxrw.exe matchingRAData_qMax_Neg_Q36.xlsx par=q_in_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_in_RAmax.txt
+    19       89 GDXIN          3      60  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Neg_Q36.gdx
+    20       94 CALL           3      65  .gdxxrw.exe matchingRAData_qMax_Pos_Q36.xlsx par=q_out_RAmax rng=Sheet1!A1:K97 dim=2 cdim=1 rdim=1 log=log_q_out_RAmax.txt
+    21       96 GDXIN          3      67  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingRAData_qMax_Pos_Q36.gdx
+    22      108 GDXIN          3      79  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_pos.gdx
+    23      115 GDXIN          3      86  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\RA_probMods_neg.gdx
+    24      145 CALL           3     116  .gdxxrw.exe matchingDAData_prod_Q36.xlsx par=parkProfile rng=Sheet1!A2:B25 dim=1 rdim=1  log=log_capacityFactorWindOn.txt
+    25      149 GDXIN          3     120  .C:\Users\sebas\Documents\CloudDrive\Uni\WS24\Research Project\gams\matchingDAData_prod_Q36.gdx
+
+
+COMPILATION TIME     =        9.156 SECONDS      3 MB  46.2.0 ac4adda6 WEX-WEI
+GAMS 46.2.0  ac4adda6 Mar 5, 2024           WEX-WEI x86 64bit/MS Windows - 04/09/25 00:47:39 Page 3
+G e n e r a l   A l g e b r a i c   M o d e l i n g   S y s t e m
+Equation Listing    SOLVE testFirstDecision Using MIP From line 802
+
+
+---- profitEQ  =E=  
+
+profitEQ..  Profit + workingCosts - 472.167590833333*Q_in_RL(b0,s5) - 535.118406666667*Q_in_RL(b0,s7) - 550.640925333333*Q_in_RL(b0,s8) - 558.022875*Q_in_RL(b0,s9) - 555.396885*Q_in_RL(b0,s10) - 546.745706833333*Q_in_RL(b0,s11) - 533.07597*Q_in_RL(b0,s12) - 514.723217666667*Q_in_RL(b0,s13) - 488.871805*Q_in_RL(b0,s15) - 397.108043333333*Q_in_RL(b0,s20) - 303.447733333333*Q_in_RL(b0,s25) - 218.8325*Q_in_RL(b0,s30) - 137.353865833333*Q_in_RL(b0,s35) - 86.3658933333333*Q_in_RL(b0,s40) - 36.76386*Q_in_RL(b0,s45) - 20.4243666666667*Q_in_RL(b0,s50) - 413.323777422222*Q_in_RL(b1,s5) - 468.429357511111*Q_in_RL(b1,s7) - 482.017384675556*Q_in_RL(b1,s8) - 488.47936*Q_in_RL(b1,s9) - 486.1806336*Q_in_RL(b1,s10) - 478.607607182222*Q_in_RL(b1,s11) - 466.6414592*Q_in_RL(b1,s12) - 450.575915804444*Q_in_RL(b1,s13) - 427.946231466667*Q_in_RL(b1,s15) - 347.618514488889*Q_in_RL(b1,s20) - 265.630606222222*Q_in_RL(b1,s25) - 191.560533333333*Q_in_RL(b1,s30) - 120.236161422222*Q_in_RL(b1,s35) - 75.6025571555556*Q_in_RL(b1,s40) - 32.1821696*Q_in_RL(b1,s45) - 17.8789831111111*Q_in_RL(b1,s50) - 370.419402861111*Q_in_RL(b2,s5) - 419.804841555556*Q_in_RL(b2,s7) - 431.982386577778*Q_in_RL(b2,s8) - 437.7735875*Q_in_RL(b2,s9) - 435.7134765*Q_in_RL(b2,s10) - 428.926555261111*Q_in_RL(b2,s11) - 418.202533*Q_in_RL(b2,s12) - 403.804646122222*Q_in_RL(b2,s13) - 383.523997833334*Q_in_RL(b2,s15) - 311.534563444444*Q_in_RL(b2,s20) - 238.057271111111*Q_in_RL(b2,s25) - 171.675916666667*Q_in_RL(b2,s30) - 107.755250361111*Q_in_RL(b2,s35) - 67.7547617777778*Q_in_RL(b2,s40) - 28.841554*Q_in_RL(b2,s45) - 16.0230855555556*Q_in_RL(b2,s50) - 532.808740577778*Q_in_RL(b3,s5) - 603.844418488889*Q_in_RL(b3,s7) - 621.360516124444*Q_in_RL(b3,s8) - 629.69054*Q_in_RL(b3,s9) - 626.7272904*Q_in_RL(b3,s10) - 616.965029217778*Q_in_RL(b3,s11) - 601.5396688*Q_in_RL(b3,s12) - 580.829846595556*Q_in_RL(b3,s13) - 551.658300533333*Q_in_RL(b3,s15) - 448.109189511111*Q_in_RL(b3,s20) - 342.419953777778*Q_in_RL(b3,s25) - 246.937466666667*Q_in_RL(b3,s30) - 154.994416577778*Q_in_RL(b3,s35) - 97.4579868444444*Q_in_RL(b3,s40) - 41.4854944*Q_in_RL(b3,s45) - 23.0474968888889*Q_in_RL(b3,s50) - 234.162968627778*Q_in_RL(b4,s5) - 265.382286088889*Q_in_RL(b4,s7) - 273.080398204444*Q_in_RL(b4,s8) - 276.7413425*Q_in_RL(b4,s9) - 275.4390303*Q_in_RL(b4,s10) - 271.148635107778*Q_in_RL(b4,s11) - 264.3693766*Q_in_RL(b4,s12) - 255.267661335555*Q_in_RL(b4,s13) - 242.447121233333*Q_in_RL(b4,s15) - 196.938544911111*Q_in_RL(b4,s20) - 150.489409777778*Q_in_RL(b4,s25) - 108.526016666667*Q_in_RL(b4,s30) - 68.1181631277778*Q_in_RL(b4,s35) - 42.8316012444444*Q_in_RL(b4,s40) - 18.2323708*Q_in_RL(b4,s45) - 10.1290948888889*Q_in_RL(b4,s50) - 250.650778461111*Q_in_RL(b5,s5) - 284.068300755555*Q_in_RL(b5,s7) - 292.308449937778*Q_in_RL(b5,s8) - 296.2271675*Q_in_RL(b5,s9) - 294.8331573*Q_in_RL(b5,s10) - 290.240668141111*Q_in_RL(b5,s11) - 282.9840706*Q_in_RL(b5,s12) - 273.241488202222*Q_in_RL(b5,s13) - 259.518232233333*Q_in_RL(b5,s15) - 210.805320244444*Q_in_RL(b5,s20) - 161.085623111111*Q_in_RL(b5,s25) - 116.167516666667*Q_in_RL(b5,s30) - 72.9144779611111*Q_in_RL(b5,s35) - 45.8474465777778*Q_in_RL(b5,s40) - 19.5161428*Q_in_RL(b5,s45) - 10.8423015555556*Q_in_RL(b5,s50) - 148.7543316*Q_out_RL(b0,s5) - 166.420601946667*Q_out_RL(b0,s7) - 166.319961493333*Q_out_RL(b0,s8) - 163.35106812*Q_out_RL(b0,s9) - 156.186242*Q_out_RL(b0,s10) - 146.470567466667*Q_out_RL(b0,s11) - 136.42200528*Q_out_RL(b0,s12) - 125.548965533333*Q_out_RL(b0,s13) - 104.801549*Q_out_RL(b0,s15) - 65.8807890666667*Q_out_RL(b0,s20) - 44.5140466666666*Q_out_RL(b0,s25) - 29.7276416*Q_out_RL(b0,s30) - 21.6764053333333*Q_out_RL(b0,s35) - 15.9476410666667*Q_out_RL(b0,s40) - 9.580197*Q_out_RL(b0,s45) - 5.41910133333333*Q_out_RL(b0,s50) - 296.2731814*Q_out_RL(b1,s5) - 331.458994564444*Q_out_RL(b1,s7) - 331.258549528889*Q_out_RL(b1,s8) - 325.34542098*Q_out_RL(b1,s9) - 311.075276333333*Q_out_RL(b1,s10) - 291.724620977778*Q_out_RL(b1,s11) - 271.71095512*Q_out_RL(b1,s12) - 250.055181855556*Q_out_RL(b1,s13) - 208.732666833333*Q_out_RL(b1,s15) - 131.214404044445*Q_out_RL(b1,s20) - 88.6583811111111*Q_out_RL(b1,s25) - 59.2083797333333*Q_out_RL(b1,s30) - 43.1727768888889*Q_out_RL(b1,s35) - 31.7628287111111*Q_out_RL(b1,s40) - 19.0808255*Q_out_RL(b1,s45) - 10.7931942222222*Q_out_RL(b1,s50) - 399.2333856*Q_out_RL(b2,s5) - 446.646895146667*Q_out_RL(b2,s7) - 446.376791893334*Q_out_RL(b2,s8) - 438.40874592*Q_out_RL(b2,s9) - 419.179472*Q_out_RL(b2,s10) - 393.104119466667*Q_out_RL(b2,s11) - 366.13534848*Q_out_RL(b2,s12) - 336.953808533333*Q_out_RL(b2,s13) - 281.270984*

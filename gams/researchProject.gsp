@@ -1,5 +1,5 @@
 {
-    "file": "first_optimised_historicData_test.gms",
+    "file": "first_optimised_historicData.gms",
     "name": "researchProject",
     "nodes": [
         {

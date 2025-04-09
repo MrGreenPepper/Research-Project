@@ -1,52 +1,5 @@
 \chapter{Introduction}
 
-1. Einführung ins Thema
-Kurze Darstellung des Themas.
-
-Warum ist das Thema relevant (wissenschaftlich, gesellschaftlich, praktisch)?
-
-Aktueller Forschungsstand oder gesellschaftlicher Kontext (je nach Fachgebiet).
-
-Beispiel:
-„In den letzten Jahren ist das Interesse an nachhaltiger Stadtentwicklung stark gestiegen. Besonders die Rolle grüner Infrastruktur wird dabei zunehmend als zentral betrachtet.“
-
-2. Problemstellung
-Was genau ist die Forschungsfrage oder das Problem?
-
-Gibt es eine Forschungslücke oder ein konkretes Problem, das du adressierst?
-
-Beispiel:
-„Trotz umfangreicher Forschung zur Wirkung urbaner Grünflächen fehlen Studien zur langfristigen Wirkung auf die mentale Gesundheit in dicht besiedelten Quartieren.“
-
-3. Zielsetzung und Forschungsfrage(n)
-Was willst du mit der Arbeit erreichen?
-
-Welche Forschungsfrage(n) leitest du daraus ab?
-
-
-Beispiel:
-„Ziel dieser Arbeit ist es, die Wirkung von urbaner Begrünung auf das subjektive Wohlbefinden von Stadtbewohner:innen zu untersuchen. Die zentrale Forschungsfrage lautet daher: Welche Effekte hat grüne Infrastruktur auf das psychische Wohlbefinden in urbanen Räumen?“
-
-4. Methodisches Vorgehen (kurz)
-Wie wirst du vorgehen (z.B. Literaturarbeit, empirisch, qualitativ/quantitativ)?
-
-Beispiel:
-„Zur Beantwortung der Forschungsfrage wird eine qualitative Inhaltsanalyse von Experteninterviews durchgeführt.“
-
-5. Aufbau der Arbeit
-Wie ist die Arbeit strukturiert?
-
-Kurzer Überblick über die Kapitel.
-
-Beispiel:
-„Kapitel 2 stellt die theoretischen Grundlagen dar, Kapitel 3 erläutert das methodische Vorgehen, Kapitel 4 präsentiert
-die Ergebnisse und Kapitel 5 diskutiert diese im Kontext der Forschungsfrage.“\\
-----------------------------------------\\
--- positive synergie plant/battery
-
-Im Allgemeinen ok, ich lasse das erstmal so stehen und überarbeite dann wenn ich genauer weiß wo genau der rote Pfaden liegen wird.\\
-
-
 The accelerating transition towards renewable energy sources presents both opportunities and challenges for modern
 power systems. But, the inherent variability and limited predictability of renewable energy generation pose
 challenges to grid stability and economic efficiency. As a result, flexible technologies such as battery energy
@@ -72,13 +25,31 @@ requires sophisticated optimization techniques that consider market mechanisms, 
 and operational synergies. In this context, mathematical programming tools such as GAMS (General Algebraic Modeling System)
 are well-suited to model and solve complex multi-market dispatch problems.
 
-This paper presents a mixed-integer optimization model developed in GAMS to simulate the joint operation of a
+The objective of this approach is to determine an optimal marketing strategy for battery energy storage
+systems that simultaneously accounts for participation with both facilities in all three relevant electricity
+markets.
+In practice, this requires a sequence of three interdependent decisions: first, submitting a bid in
+the balancing capacity market, followed by participation in the day-ahead market, and finally,
+submitting a bid in the balancing energy market.
+
+This paper presents a optimization model developed in GAMS to simulate the joint operation of a
 wind farm and a co-located battery storage system. The wind farm's revenues are derived from the German day-ahead
 electricity market, while the battery system participates in the secondary balancing market.
-The model aims to maximize total system profit while adhering to market and technical constraints.
+The model maximizes total system profit while adhering to market and technical constraints.
+
+To achieve this objective, time series data for each individual market were simulated,
+and representative scenario cases were subsequently extracted. These scenarios were then
+implemented into a GAMS optimization model, which was used to compute the optimal marketing
+strategy for the battery storage system.
+
+The following chapter provides a brief overview of the current state of research. Chapter 3 offers a detailed
+discussion of the applied methodology. It begins with an explanation of the general modeling approach,
+followed by an in-depth examination of each modelpart. Furthermore, the process of simulating the relevant
+time series and selecting representative scenarios is described.
+-----------------------------------------\\
+
 
 (This work contributes to the growing body of research on hybrid renewable systems by addressing the
 integration of distinct market participation strategies and quantifying the economic benefits of coordinated operation.)
------------------------------------------\\
+\todo{nochmal lesen und schauen ob roter faden gut}
 
-\todo{forschungsfrage ergänzen}

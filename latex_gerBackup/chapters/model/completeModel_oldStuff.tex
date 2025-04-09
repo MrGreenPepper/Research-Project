@@ -1,0 +1,226 @@
+Um die optimale Erststufenentscheidung zu berechnen wird der Erwartungswert sämtlicher Zweige des Szenario-Baum ausgerechnet.
+Die Entscheidung zu welchem Preis am positiven sowie negativen Regelleistungsmarkt geboten werden soll erfolgt zeitgleich.
+Daraus ergeben sich 4 Szenarien:
+\begin{enumerate}
+	\item $RL^{in}$ \& $RL^{out}$ angenommen
+	\item nur $RL^{in}$ angenommen
+	\item nur $RL^{out}$ angenommen
+	\item $RL^{in}$ \& $RL^{out}$ abgelehnt
+\end{enumerate}
+Es folgt eine systematische Darstellung dieser Rechnung:
+\begin{table}
+
+
+	\begin{tabular}{|c|c|}
+		\hline
+		Formelzeichen & Erklärung                                       \\
+		\hline
+		$\omega()$    & Wahrscheinlichkeit für Preis/Mengen Kombination \\
+		$E()$         & Ertrag von Preis/Mengen                         \\
+		              & Kombination am Markt                            \\
+		$RL^{in/out}$ & Preis/Mengen Kombination am Regelleistungsmarkt \\
+		$DA$          & Preis/Mengen Kombination am Day Ahead Markt     \\
+		$RA^{in/out}$ & Preis/Mengen Kombination am Regelarbeitsmarkt   \\
+		\hline
+	\end{tabular}
+	\caption{table}
+	\label{tab:my_label}
+\end{table}
+
+\begin{alignat*}{3}
+	max Profit =                                                                                                                                               \\
+	\sum \sum \omega(RL^{in})* \omega(RL^{out})       & * \Biggl[E(RL^{in}) + E(RL^{out})                                                                      \\
+	                                                  & +\sum_{DA} \omega(DA) *           &  & \Biggl(E(DA)                                                    \\
+	                                                  &                                   &  & + \sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})                   \\
+	                                                  &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr)         \\
+	                                                  & +\sum_{DA} (1- \omega(DA) *       &  & \Biggl(\sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})              \\
+	                                                  &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr) \Biggr] \\
+	+\sum \sum (1-\omega(RL^{in})) * \omega(RL^{out}) & * \Biggl[E(RL^{in}) + E(RL^{out})                                                                      \\
+	                                                  & +\sum_{DA} \omega(DA) *           &  & \Biggl(E(DA)                                                    \\
+	                                                  &                                   &  & + \sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})                   \\
+	                                                  &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr)         \\
+	                                                  & +\sum_{DA} (1- \omega(DA)) *      &  & \Biggl(\sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})              \\
+	                                                  &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr) \Biggr] \\
+\end{alignat*}
+\begin{alignat*}{3}
+	+\sum \sum \omega(RL^{in})* (1-\omega(RL^{out}))     & * \Biggl[E(RL^{in}) + E(RL^{out})                                                                       \\
+	                                                     & +\sum_{DA} \omega(DA) *           &  & \Biggl(E(DA)                                                     \\
+	                                                     &                                   &  & + \sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})                    \\
+	                                                     &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr)          \\
+	                                                     & +\sum_{DA} (1- \omega(DA)) *      &  & \Biggl(\sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})               \\
+	                                                     &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr) \Biggr]  \\
+	+\sum \sum (1-\omega(RL^{in}))* (1-\omega(RL^{out})) & * \Biggl[E(RL^{in}) + E(RL^{out})                                                                       \\
+	                                                     & +\sum_{DA} \omega(DA) *           &  & \Biggl(E(DA)                                                     \\
+	                                                     &                                   &  & + \sum_{RA^{in}} \omega(RA^{in}) * E(RA^{in})                    \\
+	                                                     &                                   &  & + \sum_{RA^{out}} \omega(RA^{out}) * E(RA^{out})\Biggr)          \\
+	                                                     & +\sum_{DA} (1- \omega(DA)) *      &  & \Biggl(\sum_{RA^{in}}\omega(RA^{in}) * E(RA^{in})                \\
+	                                                     &                                   &  & + \sum_{RA^{out}} \omega (RA^{out}) * E(RA^{out})\Biggr) \Biggr] \\
+\end{alignat*}
+
+\subsubsection{Berechnung optimale Erststufenentscheidungen}
+
+Da die einzelnen Mengen, je nach Szenario, unterschiedlichen Restriktionen unterliegen werden ihnen separate Variablen zugewiesen.
+Es folgt eine ausführliche Formel für die Berechnung der optimalen Erststufenentscheidung:
+(Die einzelnen Mengen Formelzeichen setzen sich wie folgt zusammen:
+\begin{enumerate}
+	\item $Q$ - Menge
+	\item $Q_{\pmb{y}}$ - am welchem Markt die Menge Geboten wird
+	\item $Q^{\pmb{i}}_{y}$ - (nur für die Regelmärkte) welche Art von Leistung geboten wird: negativ$\rightarrow$in / positiv$\rightarrow$out
+	\item $Q^{i\pmb{r...}}_{y}$ - welchen Restriktionen die Menge unterliegt, da in vorhergehenden Märkten entsprechende Zuschläge erfolgt sind
+\end{enumerate}
+Beispiele:
+\begin{itemize}
+	\item $Q^{outrRL}_{RA}$ - positive Menge am Regelarbeitsmarkt restriktiert durch ein bezuschlagtes Regelleistungsmarkt-Gebot
+	\item $Q^{rRL}_{DA}$ - Menge am Day Ahead Markt restriktiert durch ein bezuschlagtes Regelleistungsmarkt-Gebot
+	\item $Q^{in}_{RA}$ - negative Menge am Regelarbeitsmarkt mit keinen Restriktionen
+\end{itemize}
+
+
+\begin{alignat*}{3}
+	max Profit  =                                                                            &                                                                                                                                                                                          \\
+	for\quad accepted\quad RL\quad in \& out:                                                &                                                                                                                                                                                          \\
+	\sum_{s^{out}_{RL}}\sum_{s^{in}_{RL}} \omega_{RL}(s^{in}_{RL})*\omega_{RL}(s^{out}_{RL}) & *\Biggl[\tfrac{1}{4} * Q^{in}_{RL} (s^{in}_{RL}) * p(s^{in}_{RL}) &  & +\tfrac{1}{4} *  Q^{out}_{RL}(s^{out}_{RL}) * p(s^{out}_{RL})                                                     \\
+	                                                                                         & + \sum_{s_{DA}}\omega_{DA}(s_{DA})                                &  & \Biggl(\tfrac{1}{4}(Q^{rRL}_{DA}(s_{DA}) * p(s_{DA}))                                                             \\
+	                                                                                         &                                                                   &  & + \sum_{s^{in}_{RA}} Q^{inrRLDA}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})                    \\
+	                                                                                         &                                                                   &  & + \sum_{s^{out}_{RA}} Q^{outrRLDA}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr)        \\
+	                                                                                         & + \sum_{s_{DA}}(1-\omega_{DA}(s_{DA}))                            &  & * \Biggl(\sum_{s^{in}_{RA}} Q^{inrRL}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) *             \omega_{RA}(s^{in}_{RA})   \\
+	                                                                                         &                                                                   &  & + \sum_{s^{out}_{RA}} Q^{outrRL}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA}) \Biggr) \Biggr] \\
+\end{alignat*}
+for accepted RL in 	\& declined out:\\
+\begin{alignat*}{3}
+	+\sum_{s^{out}_{RL}}\sum_{s^{in}_{RL}} \omega_{RL}(s^{in}_{RL})*(1-\omega_{RL}(s^{out}_{RL})) * & \Biggl[Q^{in}_{RL}(s^{in}_{RL}) * p(s^{in}_{RL}) &  &                                                                                                              \\
+	                                                                                                & + \sum_{s_{DA}}\omega_{DA}(s_{DA}) *             &  & \Biggl(Q^{rRL}_{DA}(s_{DA}) * p(s_{DA})                                                                      \\
+	                                                                                                &                                                  &  & + \sum_{s^{in}_{RA}} Q^{inrRLDA}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})               \\
+	                                                                                                &                                                  &  & + \sum_{s^{out}_{RA}} Q^{outrDA}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr)     \\
+	                                                                                                & + \sum_{s_{DA}}(1-\omega_{DA}(s_{DA}))           &  &                                                                                                              \\
+	                                                                                                &                                                  &  & * \Biggl( \sum_{s^{in}_{RA}} Q^{inrRL}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})         \\
+	                                                                                                &                                                  &  & + \sum_{s^{out}_{RA}} Q^{out}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr)\Biggr]
+\end{alignat*}
+for declined RL in\& accepted out:\\
+\begin{alignat*}{3}
+	+\sum_{s^{out}_{RL}}\sum_{s^{in}_{RL}}(1-\omega_{RL}(s^{in}_{RL}))*\omega_{RL}(s^{out}_{RL})* & \Biggl[Q^{out}_{RL}(s^{out}_{RL}) * p(s^{out}_{RL}) &  &                                                                                                                  \\
+	                                                                                              & + \sum_{s_{DA}}\omega_{DA}(s_{DA})                  &  & * \Biggl(Q^{rRL}_{DA}(s_{DA}) * p(s_{DA})                                                                        \\
+	                                                                                              &                                                     &  & + \sum_{s^{in}_{RA}} Q^{inrDA}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})                     \\
+	                                                                                              &                                                     &  & + \sum_{s^{out}_{RA}} Q^{outrRLDA}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr)       \\
+	                                                                                              & + \sum_{s_{DA}}(1-\omega_{DA}(s_{DA}))              &  &                                                                                                                  \\
+	                                                                                              &                                                     &  & * \Biggl(\sum_{s^{in}_{RA}} Q^{in}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})                 \\
+	                                                                                              &                                                     &  & + \sum_{s^{out}_{RA}} Q^{outrRL}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr) \Biggr]
+\end{alignat*}
+for declined RL in\& out:\\
+\begin{alignat*}{3}
+	+\sum_{s^{out}_{RL}}\sum_{s^{in}_{RL}} (1-\omega_{RL}(s^{in}_{RL}))*(1-\omega_{RL}(s^{out}_{RL})) & *\Biggl[\sum_{s_{DA}}\omega_{DA}(s_{DA}) &  & *\Biggl(Q_{DA}(s_{DA}) * p(s_{DA})                                                                            \\
+	                                                                                                  &                                          &  & + \sum_{s^{in}_{RA}} Q^{inrDA}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})                  \\
+	                                                                                                  &                                          &  & + \sum_{s^{out}_{RA}} Q^{outrDA}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr)      \\
+	                                                                                                  & + \sum_{s_{DA}}(1-\omega_{DA}(s_{DA}))   &  &                                                                                                               \\
+	                                                                                                  &                                          &  & * \Biggl(\sum_{s^{in}_{RA}} Q^{in}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})              \\
+	                                                                                                  &                                          &  & + \sum_{s^{out}_{RA}} Q^{out}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr) \Biggr]
+\end{alignat*}
+
+
+
+
+\textbf{Nebenbedingungen}\\
+$ Q_{DA} \leq capPark$
+Anschlusspunkt:\\
+$a + Q^{in}_{RA} \geq Q^{outrRLDA}_{RA} + Q^{rRL}_{DA}$ \\
+$a + Q^{in}_{RA} \geq Q^{outrDA}_{RA} + Q_{DA}$ \\
+$a + Q^{in}_{RA} \geq Q^{out}_{RA}$ \\
+Batterie Restriktionen:\\
+$Q^{out}_{RL}, Q^{in}_{RL}, Q^{out}_{RA}, Q^{in}_{RA}, Q^{outrRL}_{RA}, Q^{inrRL}_{RA}, Q^{outrDA}_{RA}, Q^{inrDA}_{RA}, Q^{outrRLDA}_{RA}, Q^{inrRLDA}_{RA} \leq r$\\
+Markt Restriktionen:\\
+$\sum_{s^{out}_{RA}} Q^{outrRL}_{RA} \geq \sum_{s^{out}_{RL}} Q^{out}_{RL} $\\
+$\sum_{s^{in}_{RA}} Q^{inrRL}_{RA} \geq \sum_{s^{in}_{RL}} Q^{in}_{RL} $\\
+$\sum_{s^{out}_{RA}} Q^{outrRLDA}_{RA} \geq \sum_{s^{out}_{RL}} Q^{out}_{RL} $\\
+$\sum_{s^{in}_{RA}} Q^{inrRLDA}_{RA} \geq \sum_{s^{in}_{RL}} Q^{in}_{RL} $\\
+
+
+
+
+\subsubsection{Berechnung optimale Zweitstufenentscheidung}
+Die vorher berechneten optimalen Gebotsmengen $q^{in^*}_{RL}$ \& $q^{out^*}_{RL}$ und Preise $p(s^{out}_{RL})$ \& $p(s^{in}_{RL})$  werden nun exogen in das Modell eingespeist. Sie werden mit einer binären Variable gekoppelt welche angibt ob zum entsprechenden Preis ein Zuschlag erfolgt. Die korrekte Setzung der binären Variable wird über eine Kombination aus 2 Nebenbedingungen sicher gestellt.\\
+Schematisch stellt sich dies dann wie folgt dar:\\
+$\sum_s q^*(s) * p(s) * B(s)$\\
+s.t.:\\
+$c \leq p(s) + M * B(s)\quad\forall s $ \\
+$c \geq p(s) - M * (1 - B(s))\quad\forall s $ \\
+
+\begin{tabular}{c|c}
+	$c$    & Clearing Preis Markt                                                 \\
+	$p(s)$ & Gebotspreis für Szenario s                                           \\
+	$M$    & sehr große Zahl                                                      \\
+	$B(s)$ & binäre Variable welche angibt ob Szenariopreis zuschlag erhalten hat \\
+\end{tabular}\\
+
+Das gesamte Modell für den Day Ahead Markt ergibt sich dann wie folgt dar:
+\begin{alignat*}{3}
+	max Profit  =                  &                                                                                                                                                             \\
+	q^{in^*}_{RL} (s^{in}_{RL})    & * p(s^{in}_{RL}) * B^{in}_{RL} (s_{RL})                                                                                                                     \\
+	+ q^{out^*}_{RL}(s^{out}_{RL}) & * p(s^{out}_{RL}) * B^{out}_{RL} (s_{RL})                                                                                                                   \\
+	                               & + \sum_{s_{DA}}\omega_{DA}(s_{DA})        &  & * \Biggl(Q_{DA}(s_{DA}) * p(s_{DA})                                                                          \\
+	                               &                                           &  & + \sum_{s^{in}_{RA}} Q^{inrDA}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})                 \\
+	                               &                                           &  & + \sum_{s^{out}_{RA}} Q^{outrDA}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA})\Biggr)     \\
+	                               & + \sum_{s_{DA}}(1-\omega_{DA}(s_{DA}))    &  & * \Biggl(\sum_{s^{in}_{RA}} Q^{in}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) *             \omega_{RA}(s^{in}_{RA}) \\
+	                               &                                           &  & + \sum_{s^{out}_{RA}} Q^{out}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA}) \Biggr)       \\
+\end{alignat*}
+
+
+
+\textbf{Nebenbedingungen}\\
+Anschlusspunkt:\\
+$a + Q^{in}_{RA} \geq Q^{outrRLDA}_{RA} + Q^{rRL}_{DA}$ \\
+$a + Q^{in}_{RA} \geq Q^{outrDA}_{RA} + Q_{DA}$ \\
+$a + Q^{in}_{RA} \geq Q^{out}_{RA}$ \\
+Batterie Restriktionen:\\
+$Q^{out}_{RA}, Q^{in}_{RA}, Q^{outrRL}_{RA}, Q^{inrRL}_{RA}, Q^{outrDA}_{RA}, Q^{inrDA}_{RA}, Q^{outrRLDA}_{RA}, Q^{inrRLDA}_{RA} \leq r$\\
+Markt Restriktionen:\\
+$Q^{out}_{RA} \geq q^{out^*}_{RL} (s^{out}_{RL}) * B^{out}_{RL} (s^{out}_{RL}) $\\
+$Q^{in}_{RA} \geq q^{in^*}_{RL} (s^{in}_{RL}) * B^{in}_{RL} (s^{in}_{RL}) $\\
+$Q^{outrRL}_{RA} \geq q^{out^*}_{RL} (s^{out}_{RL}) * B^{out}_{RL} (s^{out}_{RL}) $\\
+$Q^{inrRL}_{RA} \geq q^{in^*}_{RL} (s^{in}_{RL}) * B^{in}_{RL} (s^{in}_{RL}) $\\
+$Q^{outrDA}_{RA} \geq q^{out^*}_{RL} (s^{out}_{RL}) * B^{out}_{RL} (s^{out}_{RL}) $\\
+$Q^{inrDA}_{RA} \geq q^{in^*}_{RL} (s^{in}_{RL}) * B^{in}_{RL} (s^{in}_{RL}) $\\
+$Q^{outrRLDA}_{RA} \geq q^{out^*}_{RL} (s^{out}_{RL}) * B^{out}_{RL} (s^{out}_{RL}) $\\
+$Q^{inrRLDA}_{RA} \geq q^{in^*}_{RL} (s^{in}_{RL}) * B^{in}_{RL} (s^{in}_{RL}) $\\
+Modell Restriktionen:\\
+(Angenommene/Abgelehnte Gebote)\\
+$c^{in}_{RL} \leq p(s^{in}_{RL}) + M * B^{in}_{RL}(s^{in}_{RL})\quad\forall s^{in}_{RL} $ \\
+$c^{in}_{RL} \geq p(s^{in}_{RL}) - M * (1 - B^{in}_{RL}(s^{in}_{RL}))\quad\forall s^{in}_{RL} $ \\
+$c^{out}_{RL} \leq p(s^{out}_{RL}) + M * B^{out}_{RL}(s^{out}_{RL})\quad\forall s^{out}_{RL} $ \\
+$c^{out}_{RL} \geq p(s^{out}_{RL}) - M * (1 - B^{out}_{RL}(s^{out}_{RL}))\quad\forall s^{out}_{RL} $ \\
+
+
+
+
+\subsubsection{Berechnung optimale Drittstufenentscheidung}
+Die optimalen 1. und 2. Stufenentscheidungen werden eingefügt. Simultan zum vorherigen Schritt werden sie mit binären Variablen kombiniert die das eintreffen der verschiedenen Szenarien (Gebotsannahme/-ablehnung) signalisieren.
+\begin{alignat*}{3}
+	max Profit  =                             &                                                                                                \\
+	for\quad accepted\quad RL\quad in \& out: &                                                                                                \\
+	                                          & q^{in^*}_{RL} (s^{in}_{RL}) * p(s^{in}_{RL}) * B^{in}_{RL} (s_{RL})                            \\
+	                                          & + q^{out^*}_{RL}(s^{in}_{RL}) * p(s^{out}_{RL}) * B^{out}_{RL} (s_{RL})                        \\
+	                                          & + q^*_{DA}(s_{DA}) * p_{DA}(s_{DA}) * B_{DA}(s_{DA})                                           \\
+	                                          & + \sum_{s^{in}_{RA}} Q^{in}_{RA}(s^{in}_{RA}) * p(s^{in}_{RA}) * \omega_{RA}(s^{in}_{RA})      \\
+	                                          & + \sum_{s^{out}_{RA}} Q^{out}_{RA}(s^{out}_{RA}) * p(s^{out}_{RA}) * \omega_{RA}(s^{out}_{RA}) \\
+\end{alignat*}
+
+
+
+
+
+\textbf{Nebenbedingungen}\\
+Anschlusspunkt:\\
+$a + \sum_{s^{in}_{RA}} q^{in^*}_{RA} \geq Q^{out}_{RA} + \sum_{s^{out}_{RA}}(q^{out^*}_{DA} * B^{out}_{DA})$ \\
+Batterie Restriktionen:\\
+$Q^{out}_{RA}, Q^{in}_{RA}, Q^{outrRL}_{RA}, Q^{inrRL}_{RA}, Q^{outrDA}_{RA}, Q^{inrDA}_{RA}, Q^{outrRLDA}_{RA}, Q^{inrRLDA}_{RA} \leq r$\\
+Markt Restriktionen:\\
+$Q^{out}_{RA} \geq q^{out^*}_{RL} (s^{out}_{RL}) * B^{out}_{RL} (s^{out}_{RL}) $\\
+$Q^{in}_{RA} \geq q^{in^*}_{RL} (s^{in}_{RL}) * B^{in}_{RL} (s^{in}_{RL}) $\\
+
+(Angenommene/Abgelehnte Gebote)\\
+$c^{in}_{RL} \leq p(s^{in}_{RL}) + M * B^{in}_{RL}(s^{in}_{RL})\quad\forall s^{in}_{RL} $ \\
+$c^{in}_{RL} \geq p(s^{in}_{RL}) - M * (1 - B^{in}_{RL}(s^{in}_{RL}))\quad\forall s^{in}_{RL} $ \\
+$c^{out}_{RL} \leq p(s^{out}_{RL}) + M * B^{out}_{RL}(s^{out}_{RL})\quad\forall s^{out}_{RL} $ \\
+$c^{out}_{RL} \geq p(s^{out}_{RL}) - M * (1 - B^{out}_{RL}(s^{out}_{RL}))\quad\forall s^{out}_{RL} $ \\
+$c_{DA} \leq p(s_{DA}) + M * B_{DA}(s_{DA})\quad\forall s_{DA} $ \\
+$c_{DA} \geq p(s_{DA}) - M * (1 - B_{DA}(s_{DA}))\quad\forall s_{DA} $ \\
+
