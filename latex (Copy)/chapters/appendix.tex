@@ -1,0 +1,26 @@
+\chapter{Appendix}
+%% change chapter title to german if necessary
+%% *** local page settings ***
+\markright{Appendix}
+\addtocontents{toc}{\protect\setcounter{tocdepth}{-1}} %decrease the depth of the appendix entry in the ToC
+\setcounter{table}{0}
+\setcounter{figure}{0}
+\renewcommand{\thefigure}{A.\arabic{figure}}
+\renewcommand{\thetable}{A.\arabic{table}}
+
+
+\section{Further Model Constraints}
+
+\begin{flalign}
+	\label{parkCon_Q^{rB}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rB_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{parkCon_Q^{rI}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rI_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{parkCon_Q^{rO}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rO_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{parkCon_Q^{rN}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rN_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\section{Digital Appendix}

@@ -58,7 +58,7 @@ Das Modell soll folgende Bereiche abdecken:
 
 
 \section{Methodik}
-(Es gibt eine Variablenzusammenfassung am Ende dieses Abschnitts)\\
+ (Es gibt eine Variablenzusammenfassung am Ende dieses Abschnitts)\\
 Im Kontext der Speicherwertermittlung sind mehrere Szenarien zu betrachten, 
 diese werden die Unsicherheiten hinsichtlich des Preises und des Wetters abbilden.
 
@@ -80,15 +80,15 @@ gebotenen Preis abhängig.\\
 
 \begin{flushleft}\textbf{Zu optimierende math. Terme:}\end{flushleft}
 \begin{tabular}{l l}
-	$\chi_s * \lambda_s^l * P(\lambda_s^l, PBV)$& 		mögl. Gewinn Regelleistungsmarkt\\
-	$\gamma_s * \lambda_s^a * P(s,\lambda_s^a)$&		mögl. Gewinn Regelarbeitsmarkt\\
+	$\chi_s * \lambda_s^l * P(\lambda_s^l, PBV)$ & mögl. Gewinn Regelleistungsmarkt \\
+	$\gamma_s * \lambda_s^a * P(s,\lambda_s^a)$  & mögl. Gewinn Regelarbeitsmarkt   \\
 \end{tabular}
 
 
 
 \begin{flushleft}\textbf{Optimierungsfunktion:}\\\end{flushleft}
 \begin{addmargin}[25pt]{0pt}
-$\max \pi = \chi_s * \lambda_s^l * P(\lambda_s^l, PBV) + \sum_{s} \gamma_s * \lambda_s^a *P(s,\lambda_s^a)$\\
+	$\max \pi = \chi_s * \lambda_s^l * P(\lambda_s^l, PBV) + \sum_{s} \gamma_s * \lambda_s^a *P(s,\lambda_s^a)$\\
 \end{addmargin}
 
 \begin{flushleft}\textbf{Nebenbedingungen:}\end{flushleft}
@@ -105,55 +105,55 @@ Bei einer möglichen Modellerweiterung um einen Wind-/Solarpark würde sich dann
 um einen möglichen Gewinn durch den Park erweitern.\\
 
 
-	\begin{itemize}
-		\item $ P(s, \lambda_s^a) * \psi_s * \lambda_s^e$ mögl. Einspeisung im Falle das \\Regelarbeitsmarkt-Gebot Zuschlag erhält\\
-		\item $ (1 - P(s, \lambda_s^a)) * \psi_s * \lambda_s^e$ mögl. Einspeisung im Falle das \\Regelarbeitsmarkt-Gebot nicht den Zuschlag erhält\\
-		\item 	$c(\gamma_s, \psi_s) = \left\{
-			\begin{array}{ll}
-				0 & \gamma_s + \psi_s \leq K \\
-				C * (\gamma_s + \psi_s - K) & \gamma_s + \psi_s \geq K \\
-			\end{array}
-		\right. $ Kosten/Strafe für Nichterbringung der Leistung\\
+\begin{itemize}
+	\item $ P(s, \lambda_s^a) * \psi_s * \lambda_s^e$ mögl. Einspeisung im Falle das \\Regelarbeitsmarkt-Gebot Zuschlag erhält\\
+	\item $ (1 - P(s, \lambda_s^a)) * \psi_s * \lambda_s^e$ mögl. Einspeisung im Falle das \\Regelarbeitsmarkt-Gebot nicht den Zuschlag erhält\\
+	\item 	$c(\gamma_s, \psi_s) = \left\{
+		      \begin{array}{ll}
+			      0                           & \gamma_s + \psi_s \leq K \\
+			      C * (\gamma_s + \psi_s - K) & \gamma_s + \psi_s \geq K \\
+		      \end{array}
+		      \right. $ Kosten/Strafe für Nichterbringung der Leistung\\
+	      
+\end{itemize}
 
-	\end{itemize}
-	
-	
+
 
 
 Damit würde sich dann die folgende, erweiterte Optimierungsfunktion ergeben:\\
 \begin{addmargin}[25pt]{0pt}
 	$\max \pi = \chi_s * \lambda_s^l * P(\lambda_s^l, PBV) \\
-	+ \sum_{s} \gamma_s * \lambda_s^a * P(s,\lambda_s^a)\\
-	+P(s, \lambda_s^a) * \psi_s * \lambda_s^e\\
-	+(1 - P(s, \lambda_s^a)) * \psi_s * \lambda_s^e\\
-	- \left\{
+		+ \sum_{s} \gamma_s * \lambda_s^a * P(s,\lambda_s^a)\\
+		+P(s, \lambda_s^a) * \psi_s * \lambda_s^e\\
+		+(1 - P(s, \lambda_s^a)) * \psi_s * \lambda_s^e\\
+		- \left\{
 		\begin{array}{ll}
-			0 & \gamma_s + \psi_s \leq K \\
+			0                           & \gamma_s + \psi_s \leq K \\
 			C * (\gamma_s + \psi_s - K) & \gamma_s + \psi_s \geq K \\
 		\end{array}
-	\right. $
-	\end{addmargin}
+		\right. $
+\end{addmargin}
 
 
 \begin{tabular}{ c l }
-	\textbf{Variablen:}&\\
-	$\pi$& Gewinn \\
-	$ \rho $& Prognose \\
-	$ B  $& Bedarf \\
-	$ PBV = \rho / B$ & Prognose-Bedarf-Verhältnis\\
-	$ s $& Szenario \\
-	$ \chi_s $ & Regelleistungsmarkt Gebots-Menge \\
-	$\lambda_s^l$ & Regelleistungsmarkt Gebots-Preis \\
-	$ P(\lambda_s^l, PBV)$& Wahrscheinlichkeit für Zuschlag bei Preis $\lambda_s^l$ am Regelleistungsmarkt\\
-	$ \gamma_s  $ & Regelarbeitsmarkt Gebots-Menge \\
-	$ \lambda_s^a  $& Regelarbeitsmarkt Gebots-Preis \\
-	$ P(s, \lambda_s^a)$& Wahrscheinlichkeit für Zuschlag bei Preis $\lambda_s^a$ am Regelarbeitsmarkt\\
-	$ P(s) $& Wahrscheinlichkeit für Szenario s \\
-	$ K $& Kapazität Netzanschlusspunkt\\
-	$ \lambda_s^e $& Strompreis für reguläre Einspeisung \\
-	$ \psi $ & Strommenge der regulären Einspeisung \\
-	$ c(\gamma_s, \psi)$& Kosten für Strafe \\
-	$ C $& Strafe für nicht erbrachte Leistung \\
+	\textbf{Variablen:}    &                                                                                \\
+	$\pi$                  & Gewinn                                                                         \\
+	$ \rho $               & Prognose                                                                       \\
+	$ B  $                 & Bedarf                                                                         \\
+	$ PBV = \rho / B$      & Prognose-Bedarf-Verhältnis                                                     \\
+	$ s $                  & Szenario                                                                       \\
+	$ \chi_s $             & Regelleistungsmarkt Gebots-Menge                                               \\
+	$\lambda_s^l$          & Regelleistungsmarkt Gebots-Preis                                               \\
+	$ P(\lambda_s^l, PBV)$ & Wahrscheinlichkeit für Zuschlag bei Preis $\lambda_s^l$ am Regelleistungsmarkt \\
+	$ \gamma_s  $          & Regelarbeitsmarkt Gebots-Menge                                                 \\
+	$ \lambda_s^a  $       & Regelarbeitsmarkt Gebots-Preis                                                 \\
+	$ P(s, \lambda_s^a)$   & Wahrscheinlichkeit für Zuschlag bei Preis $\lambda_s^a$ am Regelarbeitsmarkt   \\
+	$ P(s) $               & Wahrscheinlichkeit für Szenario s                                              \\
+	$ K $                  & Kapazität Netzanschlusspunkt                                                   \\
+	$ \lambda_s^e $        & Strompreis für reguläre Einspeisung                                            \\
+	$ \psi $               & Strommenge der regulären Einspeisung                                           \\
+	$ c(\gamma_s, \psi)$   & Kosten für Strafe                                                              \\
+	$ C $                  & Strafe für nicht erbrachte Leistung                                            \\
 \end{tabular}\\
 
 

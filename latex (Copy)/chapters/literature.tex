@@ -1,0 +1,112 @@
+\chapter{Literature Review}
+\begin{enumerate}
+	\item perfektes wissen unrealistisch
+	\item konkrete preise unrealistisch
+\end{enumerate}
+
+durch die steigenden durchdringung des energie markt mit erneuerbaren  energien gibt es ein paar neue herausforderungen für
+die betreiber von erneuerbaren kraftwerken und netzbetreiberen.
+
+%% ref- http://researchgate.net/publication/299570140_The_impact_of_wind_power_on_electricity_prices$
+- geringe preise bei underforecast
+- hohe preise bei overforecast
+--> besonders starke auswirkung bei hohen anteil erneuerbarer energien
+
+--> wie gleiche ich den nachteil aus
+--> temporäre verschiebung der produktion durch speicher
+
+- eventuell paper wieso batterien der beste speicher wären und dann entsprechend diese noch in das model mit den  randdaten einfügen
+
+- verschiedene analysestrategien für batterie management vorstellen
+
+Energy Storage Arbitrage Under Day-Ahead and Real-Time Price Uncertainty
+
+--> binäre variablen + speicherstatus is an szenario gebunden (komplexität explodiert)
+--> außerdem ohne besonderheiten des deutschen marktes
+
+
+Optimal Operation of Independent Storage Systems in Energy and Reserve Markets With High Wind Penetration
+--> kein deutsches marktdesign
+
+Bidding strategy for a battery storage in the German secondary balancing power market
+--zwar deutscher markt aber altes marktdesign
+
+%%https://onlinelibrary.wiley.com/doi/epdf/10.1002/eej.23466?saml_referrer
+Demonstration of participation in the German balancing
+power market using a large-capacity hybrid battery
+storage system
+- neues marktdesign aber kein fokus auf model sondern generelle setup analyse
+
+--> probleme mit den forecast	... eventuell dazu nochmal ein paper
+
+wir probieren ein relativ leichtes model zu schaffen aus dem man generelle strategien ableiten kann.
+- unabhängiges model von den forecast daten
+approximierter speicher (siehe modell)
+
+
+
+
+- wirtschaftliche frage/herausfordung
+- systemische frage/herausforderung
+The integration of battery storage systems with renewable energy sources, particularly wind energy,
+has garnered increasing attention in recent years as a strategy to mitigate the variability of renewables
+and improve grid stability. Numerous studies have explored the techno-economic feasibility and operational
+strategies of hybrid wind-storage systems, especially in the context of market participation and ancillary
+service provision.
+
+Wind Energy and Day-Ahead Market Participation
+Wind farms primarily participate in the day-ahead electricity market, where they are scheduled based on
+forecasted generation. However, due to the intermittent nature of wind, the accuracy of forecasts plays
+a critical role in market performance. According to Morales et al. (2014), wind power producers face
+significant uncertainty in both generation and market prices, leading to potential imbalances and penalties.
+Strategies such as improved forecasting (Pinson, 2013) and risk-aware bidding (Bathurst et al., 2002)
+have been proposed to mitigate these uncertainties and maximize revenue in day-ahead markets.
+
+Role of Battery Storage in Power Systems
+Battery energy storage systems (BESS) offer operational flexibility by decoupling generation from consumption,
+enabling energy arbitrage, peak shaving, and ancillary service provision (Zakeri and Syri, 2015). When co-located
+with wind farms, storage systems can enhance the economic value of wind energy by reducing curtailment and
+participating in multiple electricity markets (Lund et al., 2015).
+
+In hybrid configurations, storage can shift energy from periods of high generation and low prices to periods of
+high demand and prices, effectively arbitraging across the day-ahead market. Beyond arbitrage, BESS are particularly
+suited for participation in ancillary service markets due to their fast response and ramping capabilities.
+
+Participation in the German Secondary Balancing Market
+Germany’s ancillary service market includes primary (FCR), secondary (aFRR), and tertiary (mFRR) reserves.
+Battery storage has gained a competitive edge in the secondary control reserve market (aFRR), given its
+technical characteristics and minimal ramping delay (Regelleistung.net, 2023). Research by Nooij and van den Broek
+(2021) demonstrates that batteries can significantly contribute to balancing markets, especially under
+regulatory frameworks that favor flexibility.
+
+The economic potential of battery participation in the German balancing market has been explored in
+various studies. For instance, Schittekatte et al. (2020) analyzed the revenue stacking potential for
+BESS across different markets in Germany, highlighting that aFRR remains one of the most lucrative avenues
+for flexible assets. However, market saturation and regulatory changes can significantly influence profitability
+(Kunze et al., 2019).
+
+Optimization Models for Hybrid Systems
+To capture the complexity of market interactions and technical constraints, mixed-integer linear programming
+(MILP) and stochastic optimization models are widely employed (Conejo et al., 2010). These models consider
+operational constraints, forecast uncertainties, and market rules to optimize bidding strategies and dispatch
+schedules. Recent studies (e.g., Zhang et al., 2021; Garcia et al., 2022) have modeled co-located wind-storage
+systems, optimizing their joint operation to maximize total profit across energy and ancillary service markets.
+
+The integration of such models within software environments like GAMS (General Algebraic Modeling System) allows
+for a detailed representation of temporal constraints, market dynamics, and technical performance, making it
+suitable for evaluating real-world hybrid systems.
+
+Research Gap and Contribution
+While a growing body of literature addresses the economic optimization of wind and storage systems, few
+studies explicitly model a co-located system participating simultaneously in the day-ahead and the German
+secondary balancing markets. Furthermore, most models assume ideal or simplified market conditions, leaving
+room for more detailed representations that reflect the regulatory and technical nuances of actual markets.
+This paper contributes to the literature by developing a GAMS-based optimization model that captures the joint
+operation of a wind farm and battery storage, with distinct market participation strategies and revenue streams.
+
+
+
+
+%%http://researchgate.net/publication/299570140_The_impact_of_wind_power_on_electricity_prices
+Carlo Brancucci Martinez-AnidoCarlo Brancucci Martinez-AnidoGreg BrinkmanBri-Mathias S. HodgeBri-Mathias S. Hodge
+he analysis concludes that electricity price volatility increases even as electricity prices decrease with increasing wind penetration levels. The impact of wind power on price volatility is larger in the shorter term (5-min compared to hour-to-hour). The results presented show that over-forecasting wind power increases electricity prices while under-forecasting wind power reduces them.

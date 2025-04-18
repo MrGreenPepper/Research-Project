@@ -2,27 +2,39 @@
 
 The accelerating transition towards renewable energy sources presents both opportunities and challenges for modern
 power systems. But, the inherent variability and limited predictability of renewable energy generation pose
-challenges to grid stability and economic efficiency. As a result, flexible technologies such as battery energy
-storage systems (BESS) have become increasingly important to ensure reliable and market-efficient integration of
-renewable resources.
-
-When deployed in conjunction with renewable energy plants, battery storage systems offer complementary capabilities.
-While wind farms primarily participate in the day-ahead market based on forecasted production,
-battery systems can operate more strategically by responding rapidly to price signals and grid requirements.
-
-\todo{hier noch mit rein das batterie speicher in kombination mit einem windpark positive spillovers haben kann}
+challenges to grid stability. As a result, there is a increasing demand for flexible technologies such as battery energy
+storage systems (BESS) to ensure reliable grids.
 
 In particular, the provision of ancillary services—especially frequency regulation has emerged as a promising
 revenue stream for storage technologies. Germany's balancing markets, including the secondary
 control reserve (aFRR), offer significant potential for batteries due to their fast ramping capabilities and
 high availability.
 
-Combining renewable energy generation with battery storage in a co-located hybrid system allows operators to diversify
-revenue streams by participating simultaneously in multiple electricity markets.
+While renewable energy sources primarily participate in the day-ahead market based on forecasted production,
+battery systems mostly operate on balancing markets.
+
+\todo{hier noch mit rein das batterie speicher in kombination mit einem windpark positive spillovers haben kann}
+deploying such a BESS in conjunction with renewable energy plants, battery storage systems offer complementary capabilities.
+On the on hand the BESS can be reloaded by the renewable energy, avoiding market fees, on the other hand the renewable energy production
+can be time shifted towards time windows with higher energy prices. Also combining renewable energy generation with battery storage in
+a co-located hybrid system allows operators to diversify revenue streams by participating simultaneously in multiple electricity markets.
+
+
 \todo{- vor und nachteile, begrenzte kapazität des anschlusspunkts, überschüssige energie kann zum laden genutzt werden.}
-However, such joint operation
-requires sophisticated optimization techniques that consider market mechanisms, physical constraints,
-and operational synergies. In this context, mathematical programming tools such as GAMS (General Algebraic Modeling System)
+However, such joint operation requires sophisticated optimization techniques that consider market mechanisms, physical constraints,
+and operational synergies.
+
+hier literatur teil
+
+There has been various research on this field.
+
+Studie batterie für sekundären Markt
+Studie für Windkraft
+
+--> ich fokus auf batterie in kombination sowie vereinfachendes model
+
+
+In this context, mathematical programming tools such as GAMS (General Algebraic Modeling System)
 are well-suited to model and solve complex multi-market dispatch problems.
 
 The objective of this approach is to determine an optimal marketing strategy for battery energy storage

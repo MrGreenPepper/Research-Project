@@ -12,16 +12,16 @@
 \section{Further Model Constraints}
 
 \begin{flalign}
-	\label{parkCon_Q^{rB}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rB_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+	\label{parkCon_Q^{rB}_{DA}(t_{hour})}                   \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) \leq parkCap * parkProfile(t_{hour}) - \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rB}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})
 \end{flalign}
 \begin{flalign}
-	\label{parkCon_Q^{rI}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rI_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+	\label{parkCon_Q^{rI}_{DA}(t_{hour})}                   \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) \leq parkCap * parkProfile(t_{hour}) - \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rI}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})
 \end{flalign}
 \begin{flalign}
-	\label{parkCon_Q^{rO}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rO_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+	\label{parkCon_Q^{rO}_{DA}(t_{hour})}                   \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) \leq parkCap * parkProfile(t_{hour}) - \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rO}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})
 \end{flalign}
 \begin{flalign}
-	\label{parkCon_Q^{rN}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rN_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+	\label{parkCon_Q^{rN}_{DA}(t_{hour})}                   \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) \leq parkCap * parkProfile(t_{hour}) - \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rN}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})
 \end{flalign}
 \section{Quantile Market Data}
 

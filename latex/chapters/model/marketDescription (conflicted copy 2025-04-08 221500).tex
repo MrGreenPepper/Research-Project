@@ -1,0 +1,395 @@
+
+
+
+\section{Model Design Descriptions}
+Das Modell ist in der Lage an drei Märkten zu bieten. Ein Gebot umfasst immer eine Menge sowie einen dazu gehörigen Preis. Zuerst erfolgt
+das Gebot am Regelleistungsmarkt, dann am Day Ahead Markt und schließlich das Gebot am Regelarbeitsmarkt.
+\todo{Übersicht über zeitlichen Ablauf der einzelnen Märkte}
+
+- vielleicht noch einen allgemeine aussage wie szenarien in den verschieden Marktmodellen zu interpretieren sind.
+.. oder ich beschreibe zuerst die verschiedenen märkte und dann die erstellung der dafür nötigen Daten.
+
+
+Ziel ist es dabei den Profit zu maximieren, dieser setzt sich aus der Menge und dem Preis zusammen.
+Die Menge ist dabei die Menge die am Markt angeboten wird und der Preis ist der Preis zu dem die Menge angeboten wird.
+
+So ergibt sich der Ertrag wie folgt:\\
+
+$Ertrag = Menge * Preis$
+
+In Kombination mit unserem stochastischen Ansatz wird eine Wahrscheinlichkeit ($\omega$) hinzugefügt. Die
+bedeutung der einzelnen Wahrscheinlichkeiten ist in der detailierten Beschreibung der einzelnen Märkte zu finden.
+Der zu erwartende Ertrag ergibt sich dann aus der summe aller möglichkeiten:\\
+$Ertrag = \sum_s Menge * Preis * \omega(Preis)$\\
+
+Die verschiedenen Preise weren in Form von verschiedenen Szenarien abgebildet. Die Mengengebote können
+für jedes Preisszeanrio separat abgegeben werden. In Tabelle \ref{tab:example_scenario} ist ein Beispiel für die
+Szenarien und deren Wahrscheinlichkeiten zu finden. Die Wahrscheinlichkeit in diesem Fall würde angeben mit welcher
+Wahrscheinlichkeit das Gebot zum dazugehörigen Preis angenommen werden würde.\\
+
+\begin{table}[H]
+	\begin{tabular}{c|c|c}
+		Scenario $s^{out}_{RL}$ & Price $p(s^{out}_{RL})$ & Probability $\omega(s^{out}_{RL})$ \\
+		s1                      & 90                      & 0.6                                \\
+		s2                      & 100                     & 0.5                                \\
+		s3                      & 110                     & 0.4                                \\
+	\end{tabular}\\
+	\label{tab:example_scenario}
+	\caption{Example Scenario Data Table}
+\end{table}
+
+Die zu optimierende Zielfunktion für dieses beispiel wäre dann wie folgt:\\
+$max Profit = \sum_{s^{out}_{RL}} Q^{out}_{RL}(s^{out}_{RL}) * p(s^{out}_{RL}) * \omega(s^{out}_{RL})$\\
+
+In den folgenden Kapiteln werden zuerst die einzelnen Märkte  individuell beschrieben \autoref{subsec:RL} bis \autoref{subsec:RA)}.
+Nachfolgend wird die Überführung der Einzelmarktprobleme in eine Gesamtentscheidung erläutert [\autoref{subsec:completeModel}].
+
+\subsection{RL}
+\label{subsec:RL}
+\subsubsection{general description}
+Der aFFr Markt in deutschland trennt sich in 2 Teile auf. Zum einen in den Regelleistungsmarkt und zum anderen in den Regelarbeitsmarkt.
+Am Regelleistungsmarkt wird die bereitstellung von positiver oder negativer Regelleistung für ein 4 Stunden Zeitfenster am nächsten Tag geboten.
+Auktionsschluss ist jeweils um 9 Uhr am Vortag.
+Die Abrechnung erfolgt in [(Euro/MW)/h] der bezahlte Preis entspricht dabei dem eigenem Gebotspreis ("Pay-as-bid"-Verfahren).
+	[https://www.next-kraftwerke.de/wissen/day-ahead-handel]
+Bei bezugschlagtem Regelleistungsgebot muss auch für den selben Zeitraum am Regelarbeitsmarkt Gebote abgegeben werden werden.
+\todo{eventuell raus lassen oder halt in vereinfachungsassumptions mit rein}
+Die Mindestgebotsmenge beträgt 1 MW und zur Teilnahme ist eine Präquailifikation notwendig.
+
+\subsubsection{model implementation}
+Für den Regelleistungsmarkt ergibt sich dann die folgende Zielfunktion.\\
+
+$max Profit_{RL} =  Q_{RL} * p_{RL} * \omega_{RL}(p_{RL}) \quad\forall t_{block}$
+
+Durch Umwandlung in ein Szenario abhängiges Problem ergibt sich dann die folgende Gleichung:\\
+
+$max Profit_{RL} = \sum_{t_{block}, s_{RL}} Q_{RL}(t_{block}, s_{RL}) * p_{RL}(t_{block}, s_{RL}) * \omega_{RL}(t_{block}, s_{RL})$\\
+
+Zu beachten ist, dass auch die Menge nun Szenarioabhängig ist, so kann theoretisch auf für jedes angenommene Szenario separat geboten werden. Praktisch ist dies nicht an zu nehmen, da der Algorithmus die höchst mögliche Menge immer dem höchsten Preiserwartungswert  zuordnen wird. Auf diese Weise dient die Menge als abstrakte binäre Aktivierungsvariable der verschiedenen Preisszenarien.
+\todo{den Part Menge als abstrakte binäre Aktivierungsvariable eventuell nochmal überarbeiten und entsprechend oben anpassen }
+\todo{eventuell binär variable nur an Preis koppeln und das dann anders heraus ziehen}
+
+Zu beachten ist das sowohl positive als auch negative Leistungsgebote abgegeben werden können. Die Aufteilung in angenommene und Abgelehnte
+Gebote erfolgt durch die Wahrscheinlichkeiten $\omega$ und $1-\omega$. Das wäre an dieser Stelle noch nicht nötig, macht aber
+die spätere integration der anderen Mörkte einfacher.\\
+
+\begin{alignat}{3}
+	\label{eq:RL}
+	\max Profit_{RL}  = 						\notag                                                                                                                        \\
+	\textbf{accepted  RL in \& out:}            \notag                                                                                                      \\
+	 & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (				\notag  \\
+	 & + (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                      \\
+	 & + (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL}))				\notag                                                     \\
+	\textbf{accepted RL in \& declined out:}        \notag                                                                                                  \\
+	 & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag \\
+	 & + (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                      \\
+	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                        \\
+	 & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag \\
+	 & + (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL}))			\notag                                                      \\                                                                                                                                          \\
+	 & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor    \notag
+\end{alignat}
+
+Die Nebenbedingungen \ref{eq:positeQ} bis \ref stellen sicher das die Gebotenen Mengen positiv sind. Außerdem das die Anschlusskapazität $a$
+nicht überschritten wird [\ref{eq:RLaccessPoint}] und das die Batterie die entsprechende Leistung bedienen kann [\ref{eq:RLrate}].
+Außerdem ist es wichtig das der Batteriespeicher Status im entsprechenden Zeitfenster die Gebotene Leistung erfüllen kann
+	[\ref{eq:RL_battery_res1} \& \ref{eq:RL_battery_res2}]. Hierbei ist zu beachten das die Gebotene Leistung pro Stunde notiert ist
+und der Batteriespeicher im viertelstunden takt berechnet wird. Deswegen muss die gebotene Leistung mit 0.25 multipliziert werden
+um den viertelstunden wert zu entsprechen.
+Sollte also beispielsweise 100MW geboten am RL geboten werden so muss für jede
+viertelstunde im entsprechenden Block 25MWh postive bzw. negative Arbeit vorgehalten werden.   \\
+\begin{flalign}
+	0 \leq                                         & Q^{in}_{RL}(s^{in}_{RL}),Q^{out}_{RL}(s^{out}_{RL})\quad\forall  s^{in}_{RL},s^{out}_{RL} \label{eq:positeQ}                                     \\
+	r \geq                                         & \sum_{s^{in}_{RL}}Q^{in}_{RL}(s^{in}_{RL}),\sum_{s^{out}_{RL}}Q^{out}_{RL}(s^{out}_{RL})  \label{eq:RLrate}                                      \\
+	a + \sum_{s^{in}_{RL}}Q^{in}_{RL}(s^{in}_{RL}) & \geq \sum_{s^{out}_{RL}}Q^{out}_{RL}(s^{out}_{RL}) \label{eq:RLaccessPoint}                                                                      \\
+	Q^{in}_{RL}(t_{block}, s^{in}_{RL}))	* 0.25    & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res1} \\
+	Q^{out}_{RL}(t_{block}, s^{out}_{RL})	* 0.25   & \leq BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res2}
+\end{flalign}
+
+\todo{strict a  einführen}
+\todo{formelzeichen kontrollieren}
+\todo{alle gleichungen checken wegen $\forall$}
+\todo{alle gleichungen mit nummerierung und beschreibung{?} überarbeiten}
+\subsection{DA}
+\subsubsection{general description}
+
+Die erneuerbare Energien anlage wird am Day-Ahead Markt vermarktet. Hier werden Gebote für 1h Fenster am folgetag getätigt.
+Die Auktion schließt um 12 am Vortag. Die Mindestmenge beträgt 0.1 MWh. Es werden Gebote zwischen -500 Euro und 3000 Euro aktzeptiert.
+Die Abrechnung erfolgt in [Euro/MWh] und der Preis wird im "Pay-as-cleared" Verfahren festgelegt.
+Das heißt alle bekommen den Preis des am höchsten noch bezugschlagtem Teilnehmers.
+
+\subsubsection{model implementation}
+Simultan zu dem vorherigen Kapitel ergeben sich dann dich Gleichungen für den Day Ahead Markt.
+Der Day Ahead Markt ist der Markt an dem der Strom des Windparks vermarktet wird.
+Dementsprechend gibt es keine positiven und negativen Gebote. Als Windpark Betreiber
+verfügen wir über Betriebskosten nahe 0 und können unseren Strom zu einem sehr niedrigem Preis anbieten.
+In der Praxis versetzt uns das in die Lage quasi frei wählen zu können ob wir am Day Ahead Markt bezugschlagt werden
+und den Clearing Preis erhalten oder nicht.	Die Wahrscheinlichkeit $\omega_{DA}(t_{hour}, s_{DA})$ gibt hierbei die
+Wahrscheinlichkeit für den entsprechenden $p(t_{hour}, s_{DA})$ an. So wird der zu erwartende Profit wie folgt berechnet:\\
+
+\begin{alignat}{3}
+	\max_{Q_{DA}(t_{hour}, s_{DA})} Profit_{DA}	=            & \sum_{t_{hour}} Q_{DA}(t_{hour}) * \sum_{t_{hour}, s_{DA}}  p(t_{hour}, s_{DA}) * \omega_{DA}(t_{hour}, s_{DA}) \\
+	\rightarrow max_{Q_{DA}(t_{hour}, s_{DA})} Profit_{DA}	= & \sum_{t_{hour}} Q_{DA}(t_{hour}) * p^{exp}_{DA}(t_{hour})
+\end{alignat}{3}
+
+
+Wichtig zu beachten ist das wir nicht frei wählen können wieviel Strom über den Windpark generiert wird
+sondern das wir nach oben hin durch gegebene Wetterbedingungen begrenzt sind.
+Außerdem verfügen wir auch über die möglichkeit anstatt strom in das netz ein zu speisen den strom zu speichern und damit die
+Batterie wieder auf zuladen [\ref{eq:DA_capPark}].
+
+
+\begin{alignat}{3}
+	0                & \leq Q_{DA}(t_{hour}, s_{DA}) \quad\forall  t_{hour}, s_{DA}      \label{eq:DA_nonNeg}                 \\
+	Q_{DA}(t_{hour}) & \leq capPark * windProfil(t_{hour}) - Q_{reload}(t_{hour}) \quad\forall t_{hour} \label{eq:DA_capPark} \\
+	Q_{DA}(t_{hour}) & \leq a \quad\forall t_{hour} \label{eq:DA_a}
+\end{alignat}
+\todo{annahme perfekte Vorraussicht Windpark}
+
+\subsection{RA}
+\label{subsec:RA}
+\subsubsection{general description}
+Am sekundären Regelarbeitsmarkt wird auf 15 Minuten Fenster Geboten. Auktionsschluss ist jeweils 25 Minuten vor Begin des 15 Minuten Blocks.
+Jeder vorqualifizierte Teilnehmer darf an diesem Markt mit bieten, egal ob ein zuschlag am Regelleistungsmarkt erfolgt ist oder nicht.
+Wurde ein Regelleistungsmarktgebot bezugschlagt so muss auch auf das entsprechende Zeitfenster am Regelarbeitsmarkt geboten werden.
+Bezahlt wird jeweils nur die tatsächlich erbrachte Leistung. Der Abbruf der Leistung erfolgt anhand der Merit-Order Liste, vom billigsten zum teuersten Anbieter.
+Mit einem hohem angebotenen Regelarbeitspreis sinkt so die wahrscheinlichkeit für den Abruf der angebotenen Regelarbeit.
+Dies ist ein Pay-as-cleared Market sprich alle Teilnehmer bekommen den Preis des letzten bezugschlagtem Teilnehmers.
+Seit dem Beitritt Deutschlands zum PICASSO Netzwerk entspricht der Grenzpreis dem CBMP \cite{50hertzamprionTENNETTRANSNETBW.}.
+\todo{ref}
+\todo{mindestmenge?}
+\todo{eventuell erklärung wieder mit positive und negative Arbeit?}
+\subsubsection{model implementation}
+Simultan zum Regelleistungsmarkt ergibt sich der Regelarbeitsmarkt. Die Wahrscheinlichkeit gibt hierbei an wie warscheinlich ein Abbruf der Arbeit ist.
+
+
+\begin{alignat}{3}
+	\max Profit =  \sum_{t_{quarter}} & \biggl[ \sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{in}_{RA}(t_{quarter}, s_{RA})				\notag     \\
+	                                  & + \sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{out}_{RA}(t_{quarter}, s_{RA}) \biggr]				\notag \\
+\end{alignat}
+
+Auch die zu erbringende Arbeit unterliegt ein paar Restriktionen. So muss natürlich der Batteriespeicher in der Lage sein die Arbeit zu leisten [\ref{eq:RA_Q_in_Bat} \& \ref{eq:RA_Q_out_Bat}].
+Und der Anschlusspunkt muss auch noch über genügend Kapaziäteten verfügen [\ref{eq:RA_Q_in_a} \& \ref{eq:RA_Q_out_a}].
+
+\begin{alignat}{3}
+	\sum_{s_{RA}} Q^{out}_{RA}(t_{quarter}, s_{RA}) & \leq r/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_out_r}                                    \\
+	\sum_{s_{RA}} Q^{in}_{RA}(t_{quarter}, s_{RA})  & \leq r/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_in_r}                                     \\
+	\sum_{s_{RA}} Q^{out}_{RA}(t_{quarter}, s_{RA}) & \leq a/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_out_a}                                    \\
+	\sum_{s_{RA}} Q^{in}_{RA}(t_{quarter}, s_{RA})  & \leq a/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_in_a}                                     \\
+	\sum_{s_{RA}} Q^{out}_{RA}(t_{quarter}, s_{RA}) & \leq BatStat(t_{quarter, s_{RA}}) \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_out_Bat}         \\
+	\sum_{s_{RA}} Q^{in}_{RA}(t_{quarter}, s_{RA})  & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_in_Bat} \\
+\end{alignat}
+
+
+
+\subsection{Battery \& Working Point Adjustments}
+Die grundlegenden eigenschaften des Batteriespeichers werden durch Parameter in kombination mit Nebenbedingungen beschrieben.
+So verfügt der Batteriespeicher über eine maximale Lade und Entladeleistung $r$ und eine maximale Kapazität $BatCap$.
+Der Batteriestatus wird viertelstündlich neu berechnet und ist in der Gleichung \ref{eq:BatStat} zu finden.
+Da die Nachlademenge $Q_{reload}$, die vom Windpark stammt, stündlich berechnet wird muss sie noch für die viertelstunden umgerechnet werden.
+Ansonsten ergibt sich der Batteriespeicherstatus für den Zeitpunkt $t_{quarter} + 1$ aus der Batteriespeicherstatus des vorherigen Zeitpunkts $t_{quarter}$ und der
+tatsächlich erbrachten negativen Regelarbeit abzüglich der tatsächlich erbrachten positiven Regelarbeit.
+Des weiteren besteht die möglichkeit einer Arbeitspunktanpassung $WP$. Diese kann vorgenommen werden um den Ladestand den Batterie so an zu
+passen das die eingegangenen Verbindlichkeiten erfüllt werden können.
+
+\begin{alignat}{3}
+	BatStat(t_{quarter, s_{RA}} + 1)  = BatStat(t_{quarter, s_{RA}}) + & \frac{1}{4} Q_{reload}(t_{hour})\notag                                                               \\
+	                                                                   & +\sum_{s_{RA}}1/|s_{RA}|  * Q^{in}_{RA}(t_{quarter}, s_{RA}\notag                                    \\
+	                                                                   & - \sum_{s_{RA}}1/|s_{RA}|  * Q^{out}_{RA}(t_{quarter}, s_{RA})\notag                                 \\
+	                                                                   & - \sum_{s_{RA}}1/|s_{RA}|  * WP_{out}(t_{quarter}, s_{RA})\notag                                     \\
+	                                                                   & + \sum_{s_{RA}}1/|s_{RA}|  * WP_{in}(t_{quarter}, s_{RA})\notag                                      \\                                   \\
+	                                                                   & \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor  \label{eq:BatStat} \\
+	0 \leq  BatStat                                                    & (t_{quarter}) 			\label{eq:BatStat_nonNeg}                                                           \\
+	BatStat(t_{quarter, s_{RA}}) \leq  BatCap                          & \label{eq:BatStat_cap}
+\end{alignat}
+
+
+\subsection{Access Point}
+Der Acceess Point repräsentiert den gemeinsamen Anschlusspunkt von Windpark und Batteriespeicher an das Stromnetz.
+Die maximale Leistung die durch den Anschlusspunkt fließen kann begrägt  $a$. Diese Leistungsgrenze gillt in beide Richtungen
+wie in Gleichung \ref{eq:a_general_pos} und \ref{eq:a_general_neg} zu sehen ist. Da die Bedingung für alle viertel Stunden gelten muss
+wir die Arbeit des Windparks geviertelt.
+
+\begin{alignat}{3}
+	a + Q^{in}_{RA}(t_{quarter}, s_{RA}) +  WP_{in}(t_{quarter}, s_{RA}) \notag                                             \\
+	\geq \notag                                                                                                             \\
+	\frac{1}{4} Q_{DA}  + Q^{out}_{RA}(t_{quarter}, s_{RA}) + WP_{out}(t_{quarter}, s_{RA}) \notag                          \\
+	\quad \forall s_{RA},  t_{quarter},  t_{hour} = \left\lfloor \frac{t_{quarter}}{4}\right\rfloor\label{eq:a_general_pos} \\
+	a + \frac{1}{4}Q_{DA} +  Q^{out}_{RA}(t_{quarter}, s_{RA}) + WP_{out}(t_{quarter}, s_{RA}) \notag                       \\
+	\geq \notag                                                                                                             \\
+	Q^{in}_{RA}(t_{quarter}, s_{RA}) +  WP_{in}(t_{quarter}, s_{RA}) \notag                                                 \\
+	\quad \forall s_{RA},  t_{quarter},  t_{hour} = \left\lfloor \frac{t_{quarter}}{4}\right\rfloor \label{eq:a_general_neg}
+\end{alignat}
+
+\todo{strikte variante}
+
+
+\subsection{Complete Model}
+\label{subsec:completeModel}
+Um alles in einem gesamten model zusammenfügen zu können sind noch ein paar anpassungen notwending.
+Zum einen wird der RL markt zuerst geschlossen. Das heißt wenn die entscheidung am für den DA markt fällt ist das der Ausgang vom RL Markt bekannt.
+Das bedeutet wiederum die Variablen am in den Anschließenden Märkten können unter berücksichtigung der verschiedenen möglichen Ausgänge geplant werden.
+Um dieß möglich zu machen werden alle folgenden Variablen in die 4 Grundszenarion aufgesplittet.
+
+Diese wären:
+\begin{enumerate}
+	\item angenommenes positives und negatives Regelleistungsmarktgebot	$\rightarrow Variable^{...rB}$
+	\item angenommener positives und abgelehntes negatives Regelleistungsmarktgebot $\rightarrow Variable^{...rO}$
+	\item abgelehntes positives und angenommener negatives Regelleistungsmarktgebot $\rightarrow Variable^{...rI}$
+	\item abgelehntes positives und negatives Regelleistungsmarktgebot $\rightarrow Variable^{...rN}$
+\end{enumerate}
+
+So können außerdem Dimensionen pro Variable vermieden werden und die komplexität des grundmodels reduziert werden.
+Um aber alle Grundsätzlichen Preisoptionen (Szenarien) und deren Folgeplanungen in allen Variablen berücksichtigen
+zu können werden wird die Dimension der Variablen $Q_{DA}, Q^{out}_RA \& Q^{in}_RA$ um die Dimensionen $s^{out}_RL \& s^{in}_RL$ erweitert.
+Die resultierenden, gesplitteten und hoch dimensionierten Objekt-Funktionen der folgemärkte werden dann
+entsprechend in die zu maximierende Profitgleichung der ersten Entscheidung am RL markt eingefügt [\ref{eq:overallObj}]. Außerdem müssen die
+stündlich berechneten Erträge aus den Regelleistungsmarkt und dem Day-Ahead Markt noch für die viertelstündliche Berechnung angepasst werden
+
+\begin{flalign}
+	\max Profit  = & - Costs				\notag                                                                                                                                                             \\
+	               & + \sum_{t_{quarter}}							\notag                                                                                                                                             \\
+	\textbf{accepted  RL in \& out:}            \notag                                                                                                                                             \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (				\notag                           \\
+	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                               \\
+	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                             \\
+	               & + (\tfrac{1}{4} * (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})  ))				\notag                                                       \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	\textbf{accepted RL in \& declined out:}        \notag                                                                                                                                         \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag                          \\
+	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                               \\
+	               & + (\tfrac{1}{4} * (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                         \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                                                               \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag                          \\
+	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                             \\
+	               & + (\tfrac{1}{4} * (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                         \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	\textbf{declined RL in \& out:}       \notag                                                                                                                                                   \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}))) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))  * (				\notag                     \\
+	               & + (\tfrac{1}{4} * (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                         \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor,1/|s_{RA}| = 1 / |s_{RA}|      \notag \\
+	\label{eq:overallObj}
+\end{flalign}
+\begin{flalign}
+	Costs = (BatCap * batCosts)	- workingCosts
+	\label{eq:overallCosts}
+\end{flalign}
+
+\todo{speicherkapazitätkosten weg lassen?}
+Die Kosten hierbei ergeben sich aus den Arbeitspunktanpassung und den Kosten für die benötigte Speicherkapazität [\ref{eq:overallCosts}].
+Die zu erwartenden WorkingPointkosten ergeben sich dabei aus dem gegenteiligen Marktespreis des Regelarbeitmarktes faktoriert um um einen
+WorkingPointFaktor $WPF$.
+Diese Annahme legt zur Grunde, dass wenn ich zum Beispiel spontan Leistung abgeben möchte jemand anderes sich spontan
+dazu bereit erklören muss diese Leistung wiederum auf zu nehmen. Sprich wir haben eine positive Leistungsabgabe
+und zahlen dafür das jemand anderes eine negative Leistungsabgabe bereitstellt. Der Preis für diese negative Leistungsabgabe
+ist vom Preis des negativen Regelarbeitmarktes abgeleitet und um einen workingPoint factor angepasst [\ref{eq:workingCostsEQ}].
+
+\begin{flalign}
+	workingCosts = & \sum_{t_{quarter}}\notag                                                                                                                                 \\
+	\textbf{accepted  RL in \& out:}            \notag                                                                                                                        \\
+	               & \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL})))           * ( \notag     \\
+	               & + \sum_{s_{RA}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|)\notag                                    \\
+	               & + \sum_{s_{RA}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|\notag                                    \\                                                                                                                                               \\
+	\textbf{accepted RL in \& declined out:}        \notag                                                                                                                    \\
+	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))       * (\notag     \\
+	               & + \sum_{s_{RA}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|)\notag                                    \\
+	               & + \sum_{s_{RA}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|\notag                                    \\
+	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                                          \\
+	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL})))       * (\notag     \\
+	               & + \sum_{s_{RA}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|)\notag                                    \\
+	               & + \sum_{s_{RA}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|\notag                                    \\
+	\textbf{declined RL in \& out:}       \notag                                                                                                                              \\
+	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))))       * (\notag \\
+	               & + \sum_{s_{RA}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|)\notag                                    \\
+	               & + \sum_{s_{RA}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|\notag                                    \\
+	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor      \notag                                                                     \\
+	\label{eq:workingCostsEQ}
+\end{flalign}
+
+Zur Berechnung des Batteriespeicherstatus ergibt sich dann folgende Gesamtgleichung:
+\begin{flalign}
+	BatStat(t_{quarter, s_{RA}} + 1) = & BatStat(t_{quarter, s_{RA}})	\notag                                                                                                                      \\
+	\text{accepted  RL in \& out:}\notag                                                                                                                                                          \\
+	                                   & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))           * (	\notag     \\
+	                                   & + Q^{rB}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)	\notag                                                                                       \\
+	                                   & + (WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag               \\
+	                                   & - (WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag             \\
+	\text{accepted RL in \& declined out:}\notag                                                                                                                                                  \\
+	                                   & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))       * (	\notag     \\
+	                                   & + Q^{rI}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)	\notag                                                                                       \\
+	                                   & + (WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag               \\
+	                                   & - (WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag             \\
+	\text{declined RL in \& accepted out:}\notag                                                                                                                                                  \\
+	                                   & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))       * (	\notag     \\
+	                                   & + Q^{rO}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)	\notag                                                                                       \\
+	                                   & + (WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag               \\
+	                                   & - (WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag             \\
+	\text{declined RL in \& out:}\notag                                                                                                                                                           \\
+	                                   & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))       * (	\notag \\
+	                                   & + Q^{rN}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)	\notag                                                                                       \\
+	                                   & + (WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag               \\
+	                                   & - (WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag             \\
+	\quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor
+	\label{eq:batStatcon_(t_{quarter})}
+\end{flalign}
+
+
+Die Anschlusspunkt- Restriktionen muss für alle möglichen Ausgänge und Folgevariablen definiert werden. Außerdem als absicherung in die positive und in die negative Richtung.
+
+\begin{flalign}
+	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_B(t_{quarter})}                                                  \\
+	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_I(t_{quarter})}                                                  \\
+	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_O(t_{quarter})}                                                  \\
+	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_N(t_{quarter})}
+\end{flalign}
+\begin{flalign}
+	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_B_neg(t_{quarter})}                                               \\
+	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_I_neg(t_{quarter})}                                               \\
+	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_O_neg(t_{quarter})}                                               \\
+	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_N_neg(t_{quarter})}
+\end{flalign}
+
+
+\todo{entscheiden ob ich kapazitätkosten noch mit rein nehme}
+working point Kosten
+- unterschiedliche q's sparen uns eine dimension und wir können besser je nach eintreffenden szenario bestimmte marktregulatorische und reale
+restriktionen in gleichungen formulieren
+- außerdem bedarf es  einer zusammenführung der verschiedenen skalierungen der zeitachsen und einer entsprechenden skalierung der Werte
+der betroffenen Zeitreihen.
+- auch die batterie, workingpoint variablen müssen entsprechend hoch dimensioniert werden.
+
+
+Eine vollständige aufführung aller Nebenbedingungen sowie ein vollständiges Modell zum herunterladen befindet sich unter Appendix \todo{referenz ergänzen}
+
+- können frei entscheiden ob wir am DA/RA markt teilnehmen
+
+Appendix

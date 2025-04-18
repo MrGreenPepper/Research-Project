@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  9 APR 2025 09:33
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  18 APR 2025 15:41
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2322,7 +2322,7 @@ LaTeX Warning: Label `tab:my_label' multiply defined.
 
 LaTeX Warning: Label `tab:my_label' multiply defined.
 
-) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model/general.aux) (./chapters/model/marketDescription.aux) (./chapters/model/dataDescription.aux) (./chapters/model/simplifications.aux) (./chapters/model.aux) (./chapters/results.aux
+) (./chapters/vorwort.aux) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model/general.aux) (./chapters/model/marketDescription.aux) (./chapters/model/dataDescription.aux) (./chapters/model/simplifications.aux) (./chapters/model.aux) (./chapters/results.aux
 
 LaTeX Warning: Label `fig:Negative Balance Energy - Q1' multiply defined.
 
@@ -2763,32 +2763,32 @@ Overfull \hbox (3.26643pt too wide) in paragraph at lines 5--5
 LaTeX Warning: Marginpar on page III moved.
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 6--21
+Underfull \hbox (badness 10000) in paragraph at lines 6--22
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 22--23
+Underfull \hbox (badness 10000) in paragraph at lines 23--24
 
  []
 
 
-Overfull \hbox (266.51305pt too wide) in paragraph at lines 24--42
+Overfull \hbox (266.51305pt too wide) in paragraph at lines 25--43
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 24--42
+Underfull \hbox (badness 10000) in paragraph at lines 25--43
 
  []
 
 
-Overfull \hbox (5.27435pt too wide) in paragraph at lines 45--45
+Overfull \hbox (5.27435pt too wide) in paragraph at lines 46--46
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) entweder 
  []
 
 
-Overfull \hbox (5.27435pt too wide) in paragraph at lines 45--45
+Overfull \hbox (5.27435pt too wide) in paragraph at lines 46--46
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) entweder 
  []
 
@@ -2796,13 +2796,13 @@ Overfull \hbox (5.27435pt too wide) in paragraph at lines 45--45
 LaTeX Warning: Marginpar on page III moved.
 
 
-Overfull \hbox (110.1409pt too wide) in paragraph at lines 49--70
+Overfull \hbox (110.1409pt too wide) in paragraph at lines 50--71
  [][] 
  []
 
 
 LaTeX Warning: No positions in optional float specifier.
-               Default added (so using `tbp') on input line 80.
+               Default added (so using `tbp') on input line 81.
 
 )
 
@@ -2826,115 +2826,138 @@ LaTeX Warning: Marginpar on page V moved.
 
 
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.190 \include{chapters/introduction.tex}
-                                          [1
+[5
 
 
 ]
+\openout2 = `chapters/vorwort.aux'.
+
+ (./chapters/vorwort.tex
+
+LaTeX Warning: Citation 'OConnor.2024' on page 6 undefined on input line 32.
+
+
+
+[6
+
+
+]
+Overfull \hbox (22.23885pt too wide) in paragraph at lines 45--45
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) formulierung 
+ []
+
+
+Overfull \hbox (22.23885pt too wide) in paragraph at lines 45--45
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) formulierung 
+ []
+
+
+
+[7])
+
+[8]
 \openout2 = `chapters/introduction.aux'.
 
  (./chapters/introduction.tex
 chapter 1.
 
-Overfull \hbox (0.55379pt too wide) in paragraph at lines 13--13
+Overfull \hbox (0.55379pt too wide) in paragraph at lines 16--16
 \T1/opensans-TLF/l/n/10.95 (-20) speicher 
  []
 
 
-Overfull \hbox (4.50911pt too wide) in paragraph at lines 13--13
+Overfull \hbox (4.50911pt too wide) in paragraph at lines 16--16
 \T1/opensans-TLF/l/n/10.95 (-20) spillovers 
  []
 
 
-Overfull \hbox (0.55379pt too wide) in paragraph at lines 13--13
+Overfull \hbox (0.55379pt too wide) in paragraph at lines 16--16
 \T1/opensans-TLF/l/n/10.95 (-20) speicher 
  []
 
 
-Overfull \hbox (4.50911pt too wide) in paragraph at lines 13--13
+Overfull \hbox (4.50911pt too wide) in paragraph at lines 16--16
 \T1/opensans-TLF/l/n/10.95 (-20) spillovers 
  []
 
 
-Overfull \hbox (4.36868pt too wide) in paragraph at lines 22--22
+Overfull \hbox (4.36868pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) nachteile, 
  []
 
 
-Overfull \hbox (2.7653pt too wide) in paragraph at lines 22--22
+Overfull \hbox (2.7653pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) kapazität 
  []
 
 
-Overfull \hbox (28.71089pt too wide) in paragraph at lines 22--22
+Overfull \hbox (28.71089pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) schlusspunkts, 
  []
 
 
-Overfull \hbox (6.24648pt too wide) in paragraph at lines 22--22
+Overfull \hbox (6.24648pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) schüssige 
  []
 
 
-Overfull \hbox (4.36868pt too wide) in paragraph at lines 22--22
+Overfull \hbox (4.36868pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) nachteile, 
  []
 
 
-Overfull \hbox (2.7653pt too wide) in paragraph at lines 22--22
+Overfull \hbox (2.7653pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) kapazität 
  []
 
 
-Overfull \hbox (28.71089pt too wide) in paragraph at lines 22--22
+Overfull \hbox (28.71089pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) schlusspunkts, 
  []
 
 
-Overfull \hbox (6.24648pt too wide) in paragraph at lines 22--22
+Overfull \hbox (6.24648pt too wide) in paragraph at lines 23--23
 \T1/opensans-TLF/l/n/10.95 (-20) schüssige 
  []
 
 
-LaTeX Warning: Marginpar on page 2 moved.
+LaTeX Warning: Marginpar on page 1 moved.
 
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.39 
-      [2
+l.46 
+      [1
+
+
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 45--50
+Underfull \hbox (badness 10000) in paragraph at lines 57--62
 
  []
 
 
-Overfull \hbox (1.19647pt too wide) in paragraph at lines 54--54
+Overfull \hbox (1.19647pt too wide) in paragraph at lines 66--66
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
  []
 
 
-Overfull \hbox (1.19647pt too wide) in paragraph at lines 54--54
+Overfull \hbox (1.19647pt too wide) in paragraph at lines 66--66
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
  []
 
 )
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.190 \include{chapters/introduction.tex}
-                                          [3]
+l.192 \include{chapters/introduction.tex}
+                                          [2]
 \openout2 = `chapters/literature.aux'.
 
  (./chapters/literature.tex
@@ -2942,24 +2965,29 @@ chapter 2.
 
 
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.49 -
-       wirtschaftliche frage/herausfordung [4
+       wirtschaftliche frage/herausfordung [3
 
 
 
 
 ]
 
-[5])
 
-[6]
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.87 
+      [4])
+
+[5]
 chapter 3.
 
 
-[7
+[6
 
 
 
@@ -3012,7 +3040,7 @@ Overfull \hbox (51.25003pt too wide) in paragraph at lines 19--19
  []
 
 
-LaTeX Warning: Marginpar on page 8 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 
 Overfull \hbox (4.01118pt too wide) in paragraph at lines 22--22
@@ -3025,7 +3053,7 @@ Overfull \hbox (4.01118pt too wide) in paragraph at lines 22--22
  []
 
 
-LaTeX Warning: Marginpar on page 8 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 
 Overfull \hbox (20.34807pt too wide) in paragraph at lines 27--27
@@ -3038,7 +3066,7 @@ Overfull \hbox (20.34807pt too wide) in paragraph at lines 27--27
  []
 
 
-LaTeX Warning: Marginpar on page 8 moved.
+LaTeX Warning: Marginpar on page 7 moved.
 
 
 Overfull \hbox (18.8017pt too wide) in paragraph at lines 35--35
@@ -3067,7 +3095,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 34--46
 
 
 
-[8
+[7
 
 {c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}]
 Overfull \hbox (46.86609pt too wide) in paragraph at lines 47--51
@@ -3091,7 +3119,7 @@ Overfull \hbox (1.64058pt too wide) in paragraph at lines 62--66
 
 
 
-[9]
+[8]
 Overfull \hbox (57.07591pt too wide) in paragraph at lines 68--68
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) gewinnmaximierung[]  
  []
@@ -3158,13 +3186,13 @@ Underfull \hbox (badness 10000) in paragraph at lines 71--100
 
 
 
-[10]
+[9]
 
-LaTeX Warning: Marginpar on page 11 moved.
+LaTeX Warning: Marginpar on page 10 moved.
 
 )
 
-[11]
+[10]
 \openout2 = `chapters/model/marketDescription.aux'.
 
  (./chapters/model/marketDescription.tex
@@ -3192,7 +3220,7 @@ Package caption Warning: \label without proper reference on input line 37.
 See the caption package documentation for explanation.
 
 
-LaTeX Warning: Reference `tab:example_scenario' on page 12 undefined on input line 26.
+LaTeX Warning: Reference `tab:example_scenario' on page 11 undefined on input line 26.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 25--29
@@ -3201,7 +3229,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 25--29
 
 
 
-[12
+[11
 
 
 
@@ -3211,7 +3239,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 41--43
  []
 
 
-LaTeX Warning: Reference `subsec:RA)' on page 13 undefined on input line 44.
+LaTeX Warning: Reference `subsec:RA)' on page 12 undefined on input line 44.
 
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 47.
@@ -3244,7 +3272,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 64--65
 
 
 
-[13]
+[12]
 Underfull \hbox (badness 10000) in paragraph at lines 66--67
 
  []
@@ -3270,7 +3298,7 @@ Overfull \hbox (3.26643pt too wide) in paragraph at lines 70--70
  []
 
 
-LaTeX Warning: Marginpar on page 14 moved.
+LaTeX Warning: Marginpar on page 13 moved.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 72--75
@@ -3279,9 +3307,9 @@ Underfull \hbox (badness 10000) in paragraph at lines 72--75
 
 
 
-[14]
+[13]
 
-LaTeX Warning: Reference `s' on page 15 undefined on input line 92.
+LaTeX Warning: Reference `s' on page 14 undefined on input line 92.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 92--100
@@ -3290,7 +3318,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 92--100
 
 
 
-[15]
+[14]
 Overfull \hbox (27.9445pt too wide) in paragraph at lines 109--109
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) formelzeichen 
  []
@@ -3301,7 +3329,7 @@ Overfull \hbox (27.9445pt too wide) in paragraph at lines 109--109
  []
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 15 moved.
 
 
 Overfull \hbox (1.69662pt too wide) in paragraph at lines 110--110
@@ -3314,7 +3342,7 @@ Overfull \hbox (1.69662pt too wide) in paragraph at lines 110--110
  []
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 15 moved.
 
 
 Overfull \hbox (1.69662pt too wide) in paragraph at lines 111--111
@@ -3337,7 +3365,7 @@ Overfull \hbox (12.20044pt too wide) in paragraph at lines 111--111
  []
 
 
-LaTeX Warning: Marginpar on page 16 moved.
+LaTeX Warning: Marginpar on page 15 moved.
 
 
 Underfull \hbox (badness 10000) in paragraph at lines 121--128
@@ -3346,59 +3374,59 @@ Underfull \hbox (badness 10000) in paragraph at lines 121--128
 
 
 
+[15]
+Overfull \hbox (5.2882pt too wide) in paragraph at lines 146--146
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
+ []
+
+
+Overfull \hbox (5.2882pt too wide) in paragraph at lines 146--146
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
+ []
+
+
+Overfull \hbox (35.91489pt too wide) in paragraph at lines 159--159
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
+ []
+
+
+Overfull \hbox (35.91489pt too wide) in paragraph at lines 159--159
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 160--160
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Overfull \hbox (5.38367pt too wide) in paragraph at lines 160--160
+\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 160--160
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
+ []
+
+
+Overfull \hbox (5.38367pt too wide) in paragraph at lines 160--160
+\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
+ []
+
+
+LaTeX Warning: Marginpar on page 16 moved.
+
+
+LaTeX Warning: Marginpar on page 16 moved.
+
+
+
 [16]
-Overfull \hbox (5.2882pt too wide) in paragraph at lines 146--146
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
- []
-
-
-Overfull \hbox (5.2882pt too wide) in paragraph at lines 146--146
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) annahme 
- []
-
-
-Overfull \hbox (35.91489pt too wide) in paragraph at lines 159--159
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
- []
-
-
-Overfull \hbox (35.91489pt too wide) in paragraph at lines 159--159
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) mindestmenge?[]  
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 160--160
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-Overfull \hbox (5.38367pt too wide) in paragraph at lines 160--160
-\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 160--160
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-Overfull \hbox (5.38367pt too wide) in paragraph at lines 160--160
-\T1/opensans-TLF/l/n/10.95 (-20) erklärung 
- []
-
-
-LaTeX Warning: Marginpar on page 17 moved.
-
-
-LaTeX Warning: Marginpar on page 17 moved.
-
-
 
 [17]
 
 [18]
-
-[19]
 Overfull \hbox (21.58243pt too wide) in paragraph at lines 236--237
 []\T1/opensans-TLF/l/n/10.95 (-20) angenommener pos-it-ives und abgelehntes neg-at-ives Re-gel-leis-tungs-mark-t-ge-bot $\OMS/iwona/l/n/10.95 ! \T1/opensans-TLF/l/it/10.95 (-20) Variable[]$ 
  []
@@ -3410,32 +3438,32 @@ Overfull \hbox (17.85802pt too wide) in paragraph at lines 237--238
 
 
 
-[20]
+[19]
 
-[21]
+[20]
 Overfull \vbox (136.47473pt too high) has occurred while \output is active []
 
 
 
+[21]
+Overfull \hbox (76.25107pt too wide) in paragraph at lines 283--283
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
+ []
+
+
+Overfull \hbox (76.25107pt too wide) in paragraph at lines 283--283
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
+ []
+
+
+
 [22]
-Overfull \hbox (76.25107pt too wide) in paragraph at lines 283--283
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
- []
-
-
-Overfull \hbox (76.25107pt too wide) in paragraph at lines 283--283
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
- []
-
-
 
 [23]
 
 [24]
 
 [25]
-
-[26]
 Overfull \hbox (18.72765pt too wide) in paragraph at lines 382--382
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) entscheiden 
  []
@@ -3457,9 +3485,9 @@ Overfull \hbox (20.93408pt too wide) in paragraph at lines 382--382
 
 
 
-[27])
+[26])
 
-[28]
+[27]
 \openout2 = `chapters/model/dataDescription.aux'.
 
  (./chapters/model/dataDescription.tex
@@ -3472,31 +3500,31 @@ Overfull \hbox (0.84016pt too wide) in paragraph at lines 3--3
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuel 
  []
 
-<pictures/capacityData_overview.png, id=424, 316.68312pt x 262.48062pt>
+<pictures/capacityData_overview.png, id=452, 316.68312pt x 262.48062pt>
 File: pictures/capacityData_overview.png Graphic file (type png)
 <use pictures/capacityData_overview.png>
 Package pdftex.def Info: pictures/capacityData_overview.png  used on input line 17.
 (pdftex.def)             Requested size: 314.68613pt x 260.84589pt.
 
 
-[29
+[28
 
 
 
  <./pictures/capacityData_overview.png>]
-<pictures/Autocorrelation negative Capacity Price.png, id=436, 433.62pt x 335.3328pt>
+<pictures/Autocorrelation negative Capacity Price.png, id=463, 433.62pt x 335.3328pt>
 File: pictures/Autocorrelation negative Capacity Price.png Graphic file (type png)
 <use pictures/Autocorrelation negative Capacity Price.png>
 Package pdftex.def Info: pictures/Autocorrelation negative Capacity Price.png  used on input line 28.
 (pdftex.def)             Requested size: 314.68613pt x 243.36844pt.
-<pictures/Autocorrelation Negative Capacity - 4 Weeks.png, id=438, 433.62pt x 335.3328pt>
+<pictures/Autocorrelation Negative Capacity - 4 Weeks.png, id=465, 433.62pt x 335.3328pt>
 File: pictures/Autocorrelation Negative Capacity - 4 Weeks.png Graphic file (type png)
 <use pictures/Autocorrelation Negative Capacity - 4 Weeks.png>
 Package pdftex.def Info: pictures/Autocorrelation Negative Capacity - 4 Weeks.png  used on input line 35.
 (pdftex.def)             Requested size: 314.68613pt x 243.36844pt.
 
 
-[30 <./pictures/Autocorrelation negative Capacity Price.png> <./pictures/Autocorrelation Negative Capacity - 4 Weeks.png>]
+[29 <./pictures/Autocorrelation negative Capacity Price.png> <./pictures/Autocorrelation Negative Capacity - 4 Weeks.png>]
 Overfull \hbox (4.1291pt too wide) in paragraph at lines 52--52
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
  []
@@ -3506,7 +3534,7 @@ Overfull \hbox (4.1291pt too wide) in paragraph at lines 52--52
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
  []
 
-<pictures/RL/Negative Capacity Price Prediction - 2023.png, id=450, 1454.7951pt x 515.2851pt>
+<pictures/RL/Negative Capacity Price Prediction - 2023.png, id=479, 1454.7951pt x 515.2851pt>
 File: pictures/RL/Negative Capacity Price Prediction - 2023.png Graphic file (type png)
 <use pictures/RL/Negative Capacity Price Prediction - 2023.png>
 Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction - 2023.png  used on input line 63.
@@ -3514,15 +3542,15 @@ Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction - 2023.p
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/RL/Negative Capacity Price Prediction Interval - 2023.png, id=451, 1454.7951pt x 515.2851pt>
+<pictures/RL/Negative Capacity Price Prediction Interval - 2023.png, id=480, 1454.7951pt x 515.2851pt>
 File: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png Graphic file (type png)
 <use pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>
 Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png  used on input line 69.
 (pdftex.def)             Requested size: 449.55357pt x 159.22566pt.
 
 
-[31]
-<pictures/overviewDAprices_year.png, id=460, 1467.081pt x 630.9171pt>
+[30]
+<pictures/overviewDAprices_year.png, id=490, 1467.081pt x 630.9171pt>
 File: pictures/overviewDAprices_year.png Graphic file (type png)
 <use pictures/overviewDAprices_year.png>
 Package pdftex.def Info: pictures/overviewDAprices_year.png  used on input line 83.
@@ -3533,65 +3561,65 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[32 <./pictures/RL/Negative Capacity Price Prediction - 2023.png> <./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>]
-<pictures/DA/Mean DA Prices per Day and Hour - 2020.png, id=472, 406.1574pt x 328.8285pt>
+[31 <./pictures/RL/Negative Capacity Price Prediction - 2023.png> <./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2020.png, id=504, 406.1574pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2020.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2020.png>
 Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2020.png  used on input line 104.
 (pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2020.png, id=473, 406.1574pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2020.png, id=505, 406.1574pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2020.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2020.png>
 Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2020.png  used on input line 109.
 (pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-<pictures/DA/Mean DA Prices per Day and Hour - 2021.png, id=474, 412.6617pt x 328.8285pt>
+<pictures/DA/Mean DA Prices per Day and Hour - 2021.png, id=506, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2021.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2021.png>
 Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2021.png  used on input line 119.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2021.png, id=475, 412.6617pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2021.png, id=507, 412.6617pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2021.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2021.png>
 Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2021.png  used on input line 124.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
 
 
-[33 <./pictures/overviewDAprices_year.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2020.png> <./pictures/DA/Standard Deviation per Day and Hour - 2020.png>]
-<pictures/DA/Mean DA Prices per Day and Hour - 2022.png, id=483, 412.6617pt x 328.8285pt>
+[32 <./pictures/overviewDAprices_year.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2020.png> <./pictures/DA/Standard Deviation per Day and Hour - 2020.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2022.png, id=515, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2022.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2022.png>
 Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2022.png  used on input line 134.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2022.png, id=484, 412.6617pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2022.png, id=516, 412.6617pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2022.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2022.png>
 Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2022.png  used on input line 139.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Mean DA Prices per Day and Hour - 2023.png, id=485, 412.6617pt x 328.8285pt>
+<pictures/DA/Mean DA Prices per Day and Hour - 2023.png, id=517, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2023.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2023.png>
 Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2023.png  used on input line 149.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2023.png, id=486, 406.1574pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2023.png, id=518, 406.1574pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2023.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2023.png>
 Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2023.png  used on input line 154.
 (pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-<pictures/DA/Mean DA Prices per Day and Hour - 2024.png, id=487, 412.6617pt x 328.8285pt>
+<pictures/DA/Mean DA Prices per Day and Hour - 2024.png, id=519, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2024.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2024.png>
 Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2024.png  used on input line 164.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2024.png, id=488, 412.6617pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2024.png, id=520, 412.6617pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2024.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2024.png>
 Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2024.png  used on input line 169.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
 
 
-[34 <./pictures/DA/Mean DA Prices per Day and Hour - 2021.png> <./pictures/DA/Standard Deviation per Day and Hour - 2021.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2022.png> <./pictures/DA/Standard Deviation per Day and Hour - 2022.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2023.png> <./pictures/DA/Standard Deviation per Day and Hour - 2023.png>]
+[33 <./pictures/DA/Mean DA Prices per Day and Hour - 2021.png> <./pictures/DA/Standard Deviation per Day and Hour - 2021.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2022.png> <./pictures/DA/Standard Deviation per Day and Hour - 2022.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2023.png> <./pictures/DA/Standard Deviation per Day and Hour - 2023.png>]
 
-[35 <./pictures/DA/Mean DA Prices per Day and Hour - 2024.png> <./pictures/DA/Standard Deviation per Day and Hour - 2024.png>]
+[34 <./pictures/DA/Mean DA Prices per Day and Hour - 2024.png> <./pictures/DA/Standard Deviation per Day and Hour - 2024.png>]
 Overfull \hbox (3.24637pt too wide) in paragraph at lines 199--199
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) variablen 
  []
@@ -3612,7 +3640,7 @@ Overfull \hbox (1.19647pt too wide) in paragraph at lines 202--202
  []
 
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 35 moved.
 
 
 Overfull \hbox (5.38367pt too wide) in paragraph at lines 203--203
@@ -3645,17 +3673,17 @@ Overfull \hbox (1.35646pt too wide) in paragraph at lines 203--203
  []
 
 
-LaTeX Warning: Marginpar on page 36 moved.
+LaTeX Warning: Marginpar on page 35 moved.
 
-<pictures/Autocorrelation Positive Energy - 2 Weeks.png, id=514, 416.2752pt x 335.3328pt>
+<pictures/Autocorrelation Positive Energy - 2 Weeks.png, id=545, 416.2752pt x 335.3328pt>
 File: pictures/Autocorrelation Positive Energy - 2 Weeks.png Graphic file (type png)
 <use pictures/Autocorrelation Positive Energy - 2 Weeks.png>
 Package pdftex.def Info: pictures/Autocorrelation Positive Energy - 2 Weeks.png  used on input line 214.
 (pdftex.def)             Requested size: 449.55357pt x 362.15913pt.
 
 
-[36 <./pictures/Autocorrelation Positive Energy - 2 Weeks.png>]
-<pictures/posEngOverview.png, id=524, 1475.7534pt x 643.203pt>
+[35 <./pictures/Autocorrelation Positive Energy - 2 Weeks.png>]
+<pictures/posEngOverview.png, id=558, 1475.7534pt x 643.203pt>
 File: pictures/posEngOverview.png Graphic file (type png)
 <use pictures/posEngOverview.png>
 Package pdftex.def Info: pictures/posEngOverview.png  used on input line 223.
@@ -3691,7 +3719,7 @@ Overfull \hbox (6.2368pt too wide) in paragraph at lines 228--228
  []
 
 
-LaTeX Warning: Marginpar on page 37 moved.
+LaTeX Warning: Marginpar on page 36 moved.
 
 
 Overfull \hbox (4.1291pt too wide) in paragraph at lines 229--229
@@ -3704,32 +3732,32 @@ Overfull \hbox (4.1291pt too wide) in paragraph at lines 229--229
  []
 
 
+LaTeX Warning: Marginpar on page 36 moved.
+
+
+
+[36 <./pictures/posEngOverview.png>]
+Overfull \hbox (19.75456pt too wide) in paragraph at lines 277--277
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
+ []
+
+
+Overfull \hbox (19.75456pt too wide) in paragraph at lines 277--277
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
+ []
+
+
 LaTeX Warning: Marginpar on page 37 moved.
 
 
-
-[37 <./pictures/posEngOverview.png>]
-Overfull \hbox (19.75456pt too wide) in paragraph at lines 277--277
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
- []
+LaTeX Warning: Marginpar on page 37 moved.
 
 
-Overfull \hbox (19.75456pt too wide) in paragraph at lines 277--277
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) abbildungen 
- []
-
-
-LaTeX Warning: Marginpar on page 38 moved.
-
-
-LaTeX Warning: Marginpar on page 38 moved.
-
-
-LaTeX Warning: Marginpar on page 38 moved.
+LaTeX Warning: Marginpar on page 37 moved.
 
 )
 
-[38]
+[37]
 \openout2 = `chapters/model/simplifications.aux'.
 
  (./chapters/model/simplifications.tex
@@ -3744,15 +3772,15 @@ Overfull \hbox (3.26643pt too wide) in paragraph at lines 33--33
 
 
 
-[39
+[38
 
 
 
 ]
 
-[40])
+[39])
 
-[41]
+[40]
 \openout2 = `chapters/model.aux'.
 
  (./chapters/model.tex)
@@ -3760,14 +3788,14 @@ Overfull \hbox (3.26643pt too wide) in paragraph at lines 33--33
 
  (./chapters/results.tex
 chapter 4.
-<pictures/results/relativeProduktionQuantils.png, id=560, 409.7709pt x 337.5009pt>
+<pictures/results/relativeProduktionQuantils.png, id=596, 409.7709pt x 337.5009pt>
 File: pictures/results/relativeProduktionQuantils.png Graphic file (type png)
 <use pictures/results/relativeProduktionQuantils.png>
 Package pdftex.def Info: pictures/results/relativeProduktionQuantils.png  used on input line 8.
 (pdftex.def)             Requested size: 314.68613pt x 259.19672pt.
 
 
-[42
+[41
 
 
 
@@ -3796,22 +3824,22 @@ Overfull \hbox (5.38367pt too wide) in paragraph at lines 32--32
  []
 
 
-LaTeX Warning: Marginpar on page 43 moved.
+LaTeX Warning: Marginpar on page 42 moved.
 
 
 
-[43]
-<pictures/results/Negative Balance Energy - Q1.png, id=577, 1438.173pt x 502.2765pt>
+[42]
+<pictures/results/Negative Balance Energy - Q1.png, id=614, 1438.173pt x 502.2765pt>
 File: pictures/results/Negative Balance Energy - Q1.png Graphic file (type png)
 <use pictures/results/Negative Balance Energy - Q1.png>
 Package pdftex.def Info: pictures/results/Negative Balance Energy - Q1.png  used on input line 73.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
-<pictures/results/Positive Balance Energy - Q1.png, id=578, 1438.173pt x 502.2765pt>
+<pictures/results/Positive Balance Energy - Q1.png, id=615, 1438.173pt x 502.2765pt>
 File: pictures/results/Positive Balance Energy - Q1.png Graphic file (type png)
 <use pictures/results/Positive Balance Energy - Q1.png>
 Package pdftex.def Info: pictures/results/Positive Balance Energy - Q1.png  used on input line 79.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
-<pictures/results/Negative Balance Energy - Q18.png, id=579, 1438.173pt x 502.2765pt>
+<pictures/results/Negative Balance Energy - Q18.png, id=616, 1438.173pt x 502.2765pt>
 File: pictures/results/Negative Balance Energy - Q18.png Graphic file (type png)
 <use pictures/results/Negative Balance Energy - Q18.png>
 Package pdftex.def Info: pictures/results/Negative Balance Energy - Q18.png  used on input line 87.
@@ -3820,7 +3848,7 @@ Package pdftex.def Info: pictures/results/Negative Balance Energy - Q18.png  use
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Positive Balance Energy - Q18.png, id=580, 1438.173pt x 502.2765pt>
+<pictures/results/Positive Balance Energy - Q18.png, id=617, 1438.173pt x 502.2765pt>
 File: pictures/results/Positive Balance Energy - Q18.png Graphic file (type png)
 <use pictures/results/Positive Balance Energy - Q18.png>
 Package pdftex.def Info: pictures/results/Positive Balance Energy - Q18.png  used on input line 93.
@@ -3828,7 +3856,7 @@ Package pdftex.def Info: pictures/results/Positive Balance Energy - Q18.png  use
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Negative Balance Energy - Q36.png, id=581, 1438.173pt x 502.2765pt>
+<pictures/results/Negative Balance Energy - Q36.png, id=618, 1438.173pt x 502.2765pt>
 File: pictures/results/Negative Balance Energy - Q36.png Graphic file (type png)
 <use pictures/results/Negative Balance Energy - Q36.png>
 Package pdftex.def Info: pictures/results/Negative Balance Energy - Q36.png  used on input line 102.
@@ -3836,7 +3864,7 @@ Package pdftex.def Info: pictures/results/Negative Balance Energy - Q36.png  use
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Positive Balance Energy - Q36.png, id=582, 1438.173pt x 502.2765pt>
+<pictures/results/Positive Balance Energy - Q36.png, id=619, 1438.173pt x 502.2765pt>
 File: pictures/results/Positive Balance Energy - Q36.png Graphic file (type png)
 <use pictures/results/Positive Balance Energy - Q36.png>
 Package pdftex.def Info: pictures/results/Positive Balance Energy - Q36.png  used on input line 108.
@@ -3846,18 +3874,18 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 
-[44 <./pictures/results/Negative Balance Energy - Q1.png> <./pictures/results/Positive Balance Energy - Q1.png>]
+[43 <./pictures/results/Negative Balance Energy - Q1.png> <./pictures/results/Positive Balance Energy - Q1.png>]
 
-[45 <./pictures/results/Negative Balance Energy - Q18.png> <./pictures/results/Positive Balance Energy - Q18.png> <./pictures/results/Negative Balance Energy - Q36.png>]
+[44 <./pictures/results/Negative Balance Energy - Q18.png> <./pictures/results/Positive Balance Energy - Q18.png> <./pictures/results/Negative Balance Energy - Q36.png>]
 
-[46 <./pictures/results/Positive Balance Energy - Q36.png>]
+[45 <./pictures/results/Positive Balance Energy - Q36.png>]
 \openout2 = `chapters/conclusion.aux'.
 
  (./chapters/conclusion.tex
 chapter 5.
 
 
-[47
+[46
 
 
 
@@ -3869,179 +3897,133 @@ Overfull \hbox (2.37071pt too wide) in paragraph at lines 33--37
 
 )
 
-[48]
+[47]
 \openout2 = `chapters/appendix.aux'.
 
  (./chapters/appendix.tex
 chapter 6.
-
-Overfull \hbox (62.16815pt too wide) detected at line 16
-[]
- []
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 16--16
-[] 
- []
-
-
-Overfull \hbox (58.4364pt too wide) detected at line 19
-[]
- []
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 19--19
-[] 
- []
-
-
-Overfull \hbox (63.56865pt too wide) detected at line 22
-[]
- []
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 22--22
-[] 
- []
-
-
-Overfull \hbox (63.077pt too wide) detected at line 25
-[]
- []
-
-
-Overfull \hbox (10.95pt too wide) in paragraph at lines 25--25
-[] 
- []
-
 File: pictures/results/relativeProduktionQuantils.png Graphic file (type png)
 <use pictures/results/relativeProduktionQuantils.png>
 Package pdftex.def Info: pictures/results/relativeProduktionQuantils.png  used on input line 29.
 (pdftex.def)             Requested size: 314.68613pt x 259.19672pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-<pictures/results/Activated_negEnergy_Q1.png, id=618, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_negEnergy_Q1.png, id=656, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_negEnergy_Q1.png Graphic file (type png)
 <use pictures/results/Activated_negEnergy_Q1.png>
 Package pdftex.def Info: pictures/results/Activated_negEnergy_Q1.png  used on input line 38.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
 
 
-[49
+[48
 
 
 
 
 ]
-<pictures/results/Activated_negEnergy_Q18.png, id=629, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_negEnergy_Q18.png, id=667, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_negEnergy_Q18.png Graphic file (type png)
 <use pictures/results/Activated_negEnergy_Q18.png>
 Package pdftex.def Info: pictures/results/Activated_negEnergy_Q18.png  used on input line 46.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-
-
-[50 <./pictures/results/Activated_negEnergy_Q1.png>]
-<pictures/results/Activated_negEnergy_Q36.png, id=637, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_negEnergy_Q36.png, id=668, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_negEnergy_Q36.png Graphic file (type png)
 <use pictures/results/Activated_negEnergy_Q36.png>
 Package pdftex.def Info: pictures/results/Activated_negEnergy_Q36.png  used on input line 53.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/Activated_posEnergy_Q1.png, id=638, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_posEnergy_Q1.png, id=669, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_posEnergy_Q1.png Graphic file (type png)
 <use pictures/results/Activated_posEnergy_Q1.png>
 Package pdftex.def Info: pictures/results/Activated_posEnergy_Q1.png  used on input line 58.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/Activated_posEnergy_Q18.png, id=639, 1441.7865pt x 888.921pt>
+
+
+[49 <./pictures/results/Activated_negEnergy_Q1.png> <./pictures/results/Activated_negEnergy_Q18.png>]
+<pictures/results/Activated_posEnergy_Q18.png, id=680, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_posEnergy_Q18.png Graphic file (type png)
 <use pictures/results/Activated_posEnergy_Q18.png>
 Package pdftex.def Info: pictures/results/Activated_posEnergy_Q18.png  used on input line 64.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/Activated_posEnergy_Q36.png, id=640, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_posEnergy_Q36.png, id=681, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_posEnergy_Q36.png Graphic file (type png)
 <use pictures/results/Activated_posEnergy_Q36.png>
 Package pdftex.def Info: pictures/results/Activated_posEnergy_Q36.png  used on input line 70.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/CBMP_negBal_Q1.png, id=641, 1806.75pt x 1084.05pt>
+<pictures/results/CBMP_negBal_Q1.png, id=682, 1806.75pt x 1084.05pt>
 File: pictures/results/CBMP_negBal_Q1.png Graphic file (type png)
 <use pictures/results/CBMP_negBal_Q1.png>
 Package pdftex.def Info: pictures/results/CBMP_negBal_Q1.png  used on input line 79.
 (pdftex.def)             Requested size: 449.55357pt x 269.72162pt.
 
 
-[51 <./pictures/results/Activated_negEnergy_Q18.png> <./pictures/results/Activated_negEnergy_Q36.png>]
+[50 <./pictures/results/Activated_posEnergy_Q1.png> <./pictures/results/Activated_negEnergy_Q36.png>]
 
-[52 <./pictures/results/Activated_posEnergy_Q1.png> <./pictures/results/Activated_posEnergy_Q18.png>]
-<pictures/results/CBMP_negBal_Q18.png, id=658, 1806.75pt x 1084.05pt>
+[51 <./pictures/results/Activated_posEnergy_Q18.png> <./pictures/results/Activated_posEnergy_Q36.png>]
+<pictures/results/CBMP_negBal_Q18.png, id=699, 1806.75pt x 1084.05pt>
 File: pictures/results/CBMP_negBal_Q18.png Graphic file (type png)
 <use pictures/results/CBMP_negBal_Q18.png>
 Package pdftex.def Info: pictures/results/CBMP_negBal_Q18.png  used on input line 87.
 (pdftex.def)             Requested size: 449.55357pt x 269.72162pt.
-
-
-[53 <./pictures/results/Activated_posEnergy_Q36.png> <./pictures/results/CBMP_negBal_Q1.png>]
-<pictures/results/CBMP_negBal_Q36.png, id=668, 1806.75pt x 1084.05pt>
+<pictures/results/CBMP_negBal_Q36.png, id=700, 1806.75pt x 1084.05pt>
 File: pictures/results/CBMP_negBal_Q36.png Graphic file (type png)
 <use pictures/results/CBMP_negBal_Q36.png>
 Package pdftex.def Info: pictures/results/CBMP_negBal_Q36.png  used on input line 95.
 (pdftex.def)             Requested size: 449.55357pt x 269.72162pt.
-<pictures/results/CBMP_PosBal_Q1.png, id=669, 1447.5681pt x 888.921pt>
+
+
+[52 <./pictures/results/CBMP_negBal_Q1.png> <./pictures/results/CBMP_negBal_Q18.png>]
+<pictures/results/CBMP_PosBal_Q1.png, id=709, 1447.5681pt x 888.921pt>
 File: pictures/results/CBMP_PosBal_Q1.png Graphic file (type png)
 <use pictures/results/CBMP_PosBal_Q1.png>
 Package pdftex.def Info: pictures/results/CBMP_PosBal_Q1.png  used on input line 101.
 (pdftex.def)             Requested size: 449.55357pt x 276.05096pt.
-<pictures/results/CBMP_PosBal_Q18.png, id=670, 1447.5681pt x 888.921pt>
+<pictures/results/CBMP_PosBal_Q18.png, id=710, 1447.5681pt x 888.921pt>
 File: pictures/results/CBMP_PosBal_Q18.png Graphic file (type png)
 <use pictures/results/CBMP_PosBal_Q18.png>
 Package pdftex.def Info: pictures/results/CBMP_PosBal_Q18.png  used on input line 107.
 (pdftex.def)             Requested size: 449.55357pt x 276.05096pt.
-<pictures/results/CBMP_PosBal_Q36.png, id=671, 1447.5681pt x 888.921pt>
+<pictures/results/CBMP_PosBal_Q36.png, id=711, 1447.5681pt x 888.921pt>
 File: pictures/results/CBMP_PosBal_Q36.png Graphic file (type png)
 <use pictures/results/CBMP_PosBal_Q36.png>
 Package pdftex.def Info: pictures/results/CBMP_PosBal_Q36.png  used on input line 112.
 (pdftex.def)             Requested size: 449.55357pt x 276.05096pt.
-<pictures/results/DAPrices.png, id=672, 1441.7865pt x 499.3857pt>
+<pictures/results/DAPrices.png, id=712, 1441.7865pt x 499.3857pt>
 File: pictures/results/DAPrices.png Graphic file (type png)
 <use pictures/results/DAPrices.png>
 Package pdftex.def Info: pictures/results/DAPrices.png  used on input line 120.
 (pdftex.def)             Requested size: 449.55357pt x 155.70712pt.
-<pictures/results/DAProd.png, id=673, 1438.173pt x 499.3857pt>
+<pictures/results/DAProd.png, id=713, 1438.173pt x 499.3857pt>
 File: pictures/results/DAProd.png Graphic file (type png)
 <use pictures/results/DAProd.png>
 Package pdftex.def Info: pictures/results/DAProd.png  used on input line 125.
 (pdftex.def)             Requested size: 449.55357pt x 156.09573pt.
 
 
-[54 <./pictures/results/CBMP_negBal_Q18.png> <./pictures/results/CBMP_negBal_Q36.png>]
+[53 <./pictures/results/CBMP_PosBal_Q1.png> <./pictures/results/CBMP_negBal_Q36.png>]
 
-[55 <./pictures/results/CBMP_PosBal_Q1.png> <./pictures/results/CBMP_PosBal_Q18.png>]
-<pictures/results/RL_negPrice_Overview.png, id=691, 1435.2822pt x 499.3857pt>
+[54 <./pictures/results/CBMP_PosBal_Q18.png> <./pictures/results/CBMP_PosBal_Q36.png>]
+<pictures/results/RL_negPrice_Overview.png, id=730, 1435.2822pt x 499.3857pt>
 File: pictures/results/RL_negPrice_Overview.png Graphic file (type png)
 <use pictures/results/RL_negPrice_Overview.png>
 Package pdftex.def Info: pictures/results/RL_negPrice_Overview.png  used on input line 134.
 (pdftex.def)             Requested size: 449.55357pt x 156.41579pt.
-<pictures/results/RL_posPrice_Overview.png, id=692, 1435.2822pt x 499.3857pt>
+<pictures/results/RL_posPrice_Overview.png, id=731, 1435.2822pt x 499.3857pt>
 File: pictures/results/RL_posPrice_Overview.png Graphic file (type png)
 <use pictures/results/RL_posPrice_Overview.png>
 Package pdftex.def Info: pictures/results/RL_posPrice_Overview.png  used on input line 139.
 (pdftex.def)             Requested size: 449.55357pt x 156.41579pt.
-
-
-[56 <./pictures/results/CBMP_PosBal_Q36.png> <./pictures/results/DAPrices.png>]
-<pictures/results/DA Energy - Q1.png, id=701, 1451.1816pt x 502.2765pt>
+<pictures/results/DA Energy - Q1.png, id=732, 1451.1816pt x 502.2765pt>
 File: pictures/results/DA Energy - Q1.png Graphic file (type png)
 <use pictures/results/DA Energy - Q1.png>
 Package pdftex.def Info: pictures/results/DA Energy - Q1.png  used on input line 147.
 (pdftex.def)             Requested size: 449.55357pt x 155.5968pt.
 
 
-[57 <./pictures/results/DAProd.png> <./pictures/results/RL_posPrice_Overview.png> <./pictures/results/RL_negPrice_Overview.png>]
-<pictures/results/DA Energy - Q18.png, id=712, 1444.6773pt x 502.2765pt>
+[55 <./pictures/results/DAProd.png> <./pictures/results/DAPrices.png> <./pictures/results/RL_negPrice_Overview.png>]
+<pictures/results/DA Energy - Q18.png, id=744, 1444.6773pt x 502.2765pt>
 File: pictures/results/DA Energy - Q18.png Graphic file (type png)
 <use pictures/results/DA Energy - Q18.png>
 Package pdftex.def Info: pictures/results/DA Energy - Q18.png  used on input line 153.
 (pdftex.def)             Requested size: 449.55357pt x 156.29424pt.
-<pictures/results/DA Energy - Q36.png, id=713, 1451.1816pt x 502.2765pt>
+<pictures/results/DA Energy - Q36.png, id=745, 1451.1816pt x 502.2765pt>
 File: pictures/results/DA Energy - Q36.png Graphic file (type png)
 <use pictures/results/DA Energy - Q36.png>
 Package pdftex.def Info: pictures/results/DA Energy - Q36.png  used on input line 159.
@@ -4052,27 +4034,29 @@ Package pdftex.def Info: pictures/results/DA Energy - Q1.png  used on input line
 (pdftex.def)             Requested size: 449.55357pt x 155.5968pt.
 
 
-[58 <./pictures/results/DA Energy - Q1.png> <./pictures/results/DA Energy - Q18.png> <./pictures/results/DA Energy - Q36.png>]
-<pictures/results/Balance Capacity - Q18.png, id=725, 1444.6773pt x 502.2765pt>
+[56 <./pictures/results/RL_posPrice_Overview.png> <./pictures/results/DA Energy - Q1.png> <./pictures/results/DA Energy - Q18.png>]
+<pictures/results/Balance Capacity - Q18.png, id=757, 1444.6773pt x 502.2765pt>
 File: pictures/results/Balance Capacity - Q18.png Graphic file (type png)
 <use pictures/results/Balance Capacity - Q18.png>
 Package pdftex.def Info: pictures/results/Balance Capacity - Q18.png  used on input line 170.
 (pdftex.def)             Requested size: 449.55357pt x 156.29424pt.
-<pictures/results/Balance Capacity - Q36.png, id=726, 1444.6773pt x 502.2765pt>
+<pictures/results/Balance Capacity - Q36.png, id=758, 1444.6773pt x 502.2765pt>
 File: pictures/results/Balance Capacity - Q36.png Graphic file (type png)
 <use pictures/results/Balance Capacity - Q36.png>
 Package pdftex.def Info: pictures/results/Balance Capacity - Q36.png  used on input line 176.
 (pdftex.def)             Requested size: 449.55357pt x 156.29424pt.
-)
 
-[59 <./pictures/results/Balance Capacity - Q18.png> <./pictures/results/Balance Capacity - Q36.png>]
+
+[57 <./pictures/results/DA Energy - Q36.png> <./pictures/results/Balance Capacity - Q18.png>])
+
+[58 <./pictures/results/Balance Capacity - Q36.png>]
 \openout2 = `chapters/bibliography.aux'.
 
  (./chapters/bibliography.tex
 chapter without number
 )
 
-[60
+[59
 
 
 
@@ -4094,23 +4078,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--21
 
  []
 
-<figures/unterschrift.png, id=749, 397.485pt x 128.27925pt>
+<figures/unterschrift.png, id=792, 397.485pt x 128.27925pt>
 File: figures/unterschrift.png Graphic file (type png)
 <use figures/unterschrift.png>
 Package pdftex.def Info: figures/unterschrift.png  used on input line 23.
 (pdftex.def)             Requested size: 224.77678pt x 72.5425pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--213
+Underfull \hbox (badness 10000) in paragraph at lines 25--215
 
  []
 
 
 
-[61
+[60
 
 
 
-{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc} <./figures/unterschrift.png>] (./main.aux (./chapters/opening.aux) (./chapters/variables.aux) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model/general.aux) (./chapters/model/marketDescription.aux) (./chapters/model/dataDescription.aux) (./chapters/model/simplifications.aux) (./chapters/model.aux) (./chapters/results.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
+{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc} <./figures/unterschrift.png>] (./main.aux (./chapters/opening.aux) (./chapters/variables.aux) (./chapters/vorwort.aux) (./chapters/introduction.aux) (./chapters/literature.aux) (./chapters/model/general.aux) (./chapters/model/marketDescription.aux) (./chapters/model/dataDescription.aux) (./chapters/model/simplifications.aux) (./chapters/model.aux) (./chapters/results.aux) (./chapters/conclusion.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
  ***********
 LaTeX2e <2024-11-01> patch level 1
 L3 programming layer <2020/03/25>
@@ -4124,23 +4108,70 @@ LaTeX Warning: There were multiply-defined labels.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+Package biblatex Warning: Please (re)run Biber on the file:
+(biblatex)                main
+(biblatex)                and rerun LaTeX afterwards.
+
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56481 strings out of 473329
- 1191430 string characters out of 5723857
- 2338274 words of memory out of 5000000
- 78072 multiletter control sequences out of 15000+600000
+ 56562 strings out of 473329
+ 1193602 string characters out of 5723857
+ 2342216 words of memory out of 5000000
+ 78123 multiletter control sequences out of 15000+600000
  663161 words of font info for 372 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,21n,107p,10971b,2457s stack positions out of 10000i,1000n,20000p,200000b,200000s
+
+pdfTeX warning (dest): name{table.caption.91} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.87} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.82} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.72} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{figure.caption.69} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{table.caption.38} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{chapter*.140} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.110} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.107} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.90} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.85} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.74} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.70} has been referenced but does not exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section*.37} has been referenced but does not exist, replaced by a fixed one
+
 <c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Light.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-LightItalic.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-SemiBold.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonal.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonali.pfb>
-Output written on main.pdf (69 pages, 6601715 bytes).
+Output written on main.pdf (72 pages, 6610338 bytes).
 PDF statistics:
- 918 PDF objects out of 1000 (max. 8388607)
- 719 compressed objects within 8 object streams
- 283 named destinations out of 1000 (max. 500000)
+ 965 PDF objects out of 1000 (max. 8388607)
+ 763 compressed objects within 8 object streams
+ 306 named destinations out of 1000 (max. 500000)
  130498 words of extra memory for PDF output out of 154059 (max. 10000000)
 

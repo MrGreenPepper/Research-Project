@@ -1,0 +1,68 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{ynt/global//global/global/global}
+    \entry{50hertzamprionTENNETTRANSNETBW.}{article}{}{}
+      \name{author}{1}{}{%
+        {{hash=891a4824bffcc3a0e0b0f7b1dfcd5680}{%
+           family={{50hertz, amprion, TENNET, TRANSNET BW}},
+           familyi={5\bibinitperiod}}}%
+      }
+      \strng{namehash}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{fullhash}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{fullhashraw}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{bibnamehash}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{authorbibnamehash}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{authornamehash}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{authorfullhash}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \strng{authorfullhashraw}{891a4824bffcc3a0e0b0f7b1dfcd5680}
+      \field{sortinit}{9}
+      \field{sortinithash}{0a5ebc79d83c96b6579069544c73c7d4}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{Modellbeschreibung aFRR-Abrechnung ab 01.10.2021: Modell- {\&} Schnittstellenbeschreibung}
+      \verb{file}
+      \verb Modellbeschreibung aFRR-Abrechnung ab 01.10.2021:Attachments/Modellbeschreibung aFRR-Abrechnung ab 01.10.2021.pdf:application/pdf
+      \endverb
+      \verb{urlraw}
+      \verb https://www.regelleistung.net/xspproxy/api/StaticFiles/Regelleistung/Marktinformationen/Modalit%C3%A4ten_/Modalit%C3%A4ten_f%C3%BCr_Regelreserveanbieter_MfRRA/Modellbeschreibung_aFRR-Abrechnung_ab_01.10.2021.pdf
+      \endverb
+      \verb{url}
+      \verb https://www.regelleistung.net/xspproxy/api/StaticFiles/Regelleistung/Marktinformationen/Modalit%C3%A4ten_/Modalit%C3%A4ten_f%C3%BCr_Regelreserveanbieter_MfRRA/Modellbeschreibung_aFRR-Abrechnung_ab_01.10.2021.pdf
+      \endverb
+    \endentry
+    \entry{.05.04.2025}{misc}{}{}
+      \field{sortinit}{0}
+      \field{sortinithash}{c5602f03f17cc894ea7a6362c3cb0e13}
+      \field{labeltitlesource}{title}
+      \field{title}{TBATS --- sktime documentation}
+      \field{year}{05.04.2025}
+      \verb{urlraw}
+      \verb https://www.sktime.net/en/latest/api_reference/auto_generated/sktime.forecasting.tbats.TBATS.html
+      \endverb
+      \verb{url}
+      \verb https://www.sktime.net/en/latest/api_reference/auto_generated/sktime.forecasting.tbats.TBATS.html
+      \endverb
+      \warn{\item misc entry '.05.04.2025' (researchProject.bib): Invalid format '06.04.2025' of date field 'urldate' - ignoring}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+

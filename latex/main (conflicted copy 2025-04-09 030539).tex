@@ -1,0 +1,218 @@
+\documentclass[british,         % thesis language
+% ngerman
+BCOR=2mm,                       % binding correction for printing (ca. 1mm per 10 pages for hardcover binding)
+11pt,                           % font size
+a4paper,						% page layout
+oneside,						% oneside/twoside option for printing
+cdgeometry=centered,            % setting of page geometry (format, height, page margins; set to 'cdgeometry=false' for individual type area calculation by package 'typearea'
+toc=chapterentrydotfill,        % dots in table of contents
+toc=indent,                     % indentation of toc items
+bibliography=totoc,         	% bibliography to table of contents
+listof=totoc,                   % lists to table of contents
+numbers=noenddot,				% last number in table of contents without dot
+parskip=full,                   % line break with a free line
+cdfont=true
+%cdmath=false					% regular font in math mode
+]{tudscrreprt}                  % document class ('tudscrreprt' in most cases)
+
+\headlogo[]{figures/EE2_logo.png}
+\iftutex
+\usepackage{fontspec}
+\else
+\usepackage[T1]{fontenc}
+\usepackage[ngerman=ngerman-x-latest]{hyphsubst}
+\fi
+\usepackage{isodate}
+
+%% ****************************************************************
+%% Packages
+%% ****************************************************************
+
+% basic packages
+
+%% set language (german or english)
+%% Note that the choice of language for babel only determines the language of chapter titles and paper formalia which are defined in the tudscr package.
+%\usepackage[ngerman]{babel}
+\usepackage[british]{babel}
+
+\usepackage{geometry}                       % definition of individual page style/geometry
+\usepackage{setspace}                   	% line spacing 
+\usepackage{enumitem}	                    % enumerations
+\usepackage[hyphens]{url}                   % line break at a slash in urls
+\usepackage[headsepline]{scrlayer-scrpage}  % head and foot notes
+\usepackage{mathptmx}                       % sets Times New Roman for math
+\usepackage{amsmath}                        % mathematical equations
+%\setlength\mathindent{0pt}
+\usepackage[gen]{eurosym}                   % for € symbol
+\usepackage{microtype}                      % for several typographical details
+\usepackage[pdfborder={0 0 0}]{hyperref}    % for links in the document
+\usepackage[output-decimal-marker={.}]{siunitx} % definition of units, displayed with decimal point; may change decimal separator to "," for german language
+\usepackage[nohyperlinks]{acronym}	        % for abbreviations list and makros
+\usepackage{listings}                       % for code listings
+\usepackage{xcolor}                         % definition of colors for highlighting, drawings, ...
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}    % background color for code listings
+\usepackage{scrhack}                        % avoids warnings for deprecated packages
+
+% packages for tables and graphics
+\usepackage{circledsteps}
+\usepackage{placeins}
+\usepackage{graphicx}                       % import of graphical elements (png, pdf, ...)
+\usepackage{hvfloat}	                    % rotating tables and pictures
+\usepackage[countmax]{subfloat}             % arrangement of two tables/figures in one environment
+\usepackage{here}
+\usepackage{multirow}                       
+\usepackage{multicol}      
+\usepackage{tabularx}
+\usepackage{diagbox}
+\usepackage{makecell}
+\usepackage{colortbl}
+\usepackage{threeparttable}
+
+%\usepackage{showframe}                     % displays page margins, ...
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}} % new centered column type
+\newcolumntype{L}[1]{>{\arraybackslash}m{#1}}
+
+\usepackage[labelfont=bf, singlelinecheck=off]{caption} % global settings for figure and table captions
+\captionsetup[figure]{justification=raggedright}
+\captionsetup[table]{justification=raggedright}
+\DeclareCaptionType{listing}[Listings][List of Listings] % definition of new environment with title for toc
+
+
+
+
+%% ****************************************************************
+%% Page and font settings
+%% ****************************************************************
+% normal spacing between items of enumerations
+\setlist{noitemsep}
+
+% URLs keep the same font
+\urlstyle{same} 
+
+% change name of toc according to thesis language
+\addto\captionsbritish{
+	\renewcommand{\contentsname}
+	{Table of Contents}
+}
+\addto\captionsngerman{
+	\renewcommand{\contentsname}
+	{Inhaltsverzeichnis}
+}
+
+% set the titles of chapters etc. to the same font like chosen for the content
+\setkomafont{chapter}{\normalfont\huge\bfseries}
+\addtokomafont{section}{\normalfont\Large\bfseries}
+\addtokomafont{subsection}{\normalfont\large\bfseries}
+\addtokomafont{subsubsection}{\normalfont\bfseries}
+\addtokomafont{paragraph}{\normalfont\bfseries}
+\addtokomafont{chapterentry}{\normalfont}
+\addtokomafont{disposition}{\setstretch{1}}
+
+
+% global settings for spacing around headlines
+\RedeclareSectionCommand[
+%runin=false,
+afterindent=false,
+beforeskip=\baselineskip,
+afterskip=.1em]{section}
+
+\RedeclareSectionCommand[
+%runin=false,w
+afterindent=false,
+beforeskip=0.5\baselineskip,
+afterskip=.1em]{subsection}
+
+
+% set individual page style with header and footer
+\pagestyle{scrheadings} 
+\clearpairofpagestyles
+\ohead{\headmark}
+\automark[section]{chapter}     % chapter title in page header
+\ofoot[\pagemark]{\pagemark}    % page number in footer
+\renewcommand*\chapterpagestyle{scrheadings}    % header on first page of a chapter 
+\renewcommand*\chaptermarkformat{}  % removes chapter number from header
+
+
+%% my stuff
+\usepackage{csquotes}
+\usepackage{chemformula}
+\usepackage{blindtext}
+\usepackage{hyperref}
+\usepackage[
+backend=biber,
+style=numeric,
+sorting=ynt
+]{biblatex}
+
+\addbibresource{researchProject.bib}
+\usepackage{graphicx} % Required for inserting images
+\usepackage{setspace}
+\usepackage{float}
+\usepackage{todonotes}
+\usepackage{amsmath}
+
+\usepackage{todonotes}
+\setlength {\marginparwidth }{2cm}
+
+
+
+\title{Research Project}
+\author{Sebastian Trümper}
+\date{February 2025}
+
+\begin{document}
+\listoftodos
+\doublespacing
+
+\include{chapters/opening}
+
+\begin{abstract}
+	\input{chapters/abstract.tex}
+\end{abstract}
+
+
+\tableofcontents
+
+\include{chapters/variables}
+\todo{tables and figures verzeichniss}
+%% ********************
+%% Content
+%% ********************
+%\mainmatter
+%% *** new settings from here ***
+\pagenumbering{arabic} %%common arabic page numbers for text pages
+\setcounter{page}{1}
+
+
+
+%% inclusion of paper chapters
+\include{chapters/introduction.tex}
+\include{chapters/literature.tex}
+\chapter{Methology}
+
+\include{chapters/model/general}
+\include{chapters/model/marketDescription}
+\include{chapters/model/dataDescription}
+\include{chapters/model/simplifications}
+\include{chapters/model.tex}
+\include{chapters/results.tex}
+\include{chapters/conclusion.tex}
+
+
+%% ********************
+%% Backmatter
+%% ********************
+%\backmatter
+
+\include{chapters/appendix}
+\include{chapters/bibliography}
+
+
+
+\include{chapters/confirmation}
+
+
+
+
+\end{document}

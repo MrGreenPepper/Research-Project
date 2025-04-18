@@ -513,6 +513,9 @@ INPUT chapters/opening.aux
 INPUT ./chapters/variables.aux
 INPUT ./chapters/variables.aux
 INPUT chapters/variables.aux
+INPUT ./chapters/vorwort.aux
+INPUT ./chapters/vorwort.aux
+INPUT chapters/vorwort.aux
 INPUT ./chapters/introduction.aux
 INPUT ./chapters/introduction.aux
 INPUT chapters/introduction.aux
@@ -789,6 +792,11 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItali
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_uv4o4i.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT ./chapters/vorwort.tex
+OUTPUT chapters/vorwort.aux
+INPUT ./chapters/vorwort.tex
+INPUT ./chapters/vorwort.tex
+INPUT chapters/vorwort.tex
 INPUT ./chapters/introduction.tex
 OUTPUT chapters/introduction.aux
 INPUT ./chapters/introduction.tex
@@ -1152,6 +1160,9 @@ INPUT chapters/opening.aux
 INPUT ./chapters/variables.aux
 INPUT ./chapters/variables.aux
 INPUT chapters/variables.aux
+INPUT ./chapters/vorwort.aux
+INPUT ./chapters/vorwort.aux
+INPUT chapters/vorwort.aux
 INPUT ./chapters/introduction.aux
 INPUT ./chapters/introduction.aux
 INPUT chapters/introduction.aux

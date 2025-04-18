@@ -1,0 +1,439 @@
+\documentclass[british,         % thesis language
+% ngerman
+BCOR=2mm,                       % binding correction for printing (ca. 1mm per 10 pages for hardcover binding)
+11pt,                           % font size
+a4paper,						% page layout
+oneside,						% oneside/twoside option for printing
+cdgeometry=centered,            % setting of page geometry (format, height, page margins; set to 'cdgeometry=false' for individual type area calculation by package 'typearea'
+toc=chapterentrydotfill,        % dots in table of contents
+toc=indent,                     % indentation of toc items
+bibliography=totoc,         	% bibliography to table of contents
+listof=totoc,                   % lists to table of contents
+numbers=noenddot,				% last number in table of contents without dot
+parskip=full,                   % line break with a free line
+cdfont=true
+%cdmath=false					% regular font in math mode
+]{tudscrreprt}                  % document class ('tudscrreprt' in most cases)
+\usepackage{amsmath}
+
+\begin{document}
+
+\begin{flalign}
+	\max Profit  = & \notag                                                                                                                                                                                  \\
+	               & - (BatCap * batCosts)				\notag                                                                                                                                                         \\
+	               & - workingCosts				\notag                                                                                                                                                                \\
+	               & + \sum_{t_{quarter}}							\notag                                                                                                                                                       \\
+	\textbf{accepted  RL in \& out:}            \notag                                                                                                                                                       \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (				\notag                                     \\
+	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                                         \\
+	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                                       \\
+	               & + (\tfrac{1}{4} * (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})  ))				\notag                                                                 \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	\textbf{accepted RL in \& declined out:}        \notag                                                                                                                                                   \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag                                    \\
+	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                                         \\
+	               & + (\tfrac{1}{4} * (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                                   \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                                                                         \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag                                    \\
+	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                                       \\
+	               & + (\tfrac{1}{4} * (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                                   \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	\textbf{declined RL in \& out:}       \notag                                                                                                                                                             \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}))) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))  * (				\notag                               \\
+	               & + (\tfrac{1}{4} * (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                                   \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
+	               & + (\sum_{s_{RA}} \omega_{RA}(s_{RA}) * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor, \omega_{RA}(s_{RA}) = 1 / |s_{RA}|      \notag \\
+\end{flalign}
+
+
+
+
+\begin{flalign}
+	workingCosts = & \sum_{t_{quarter}}\notag                                                                                                                                 \\
+	\textbf{accepted  RL in \& out:}            \notag                                                                                                                        \\
+	               & \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL})))           * ( \notag     \\
+	               & + \sum_{s_{RA}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^-_{ER} * \omega_{RA}(s_{RA}))\notag                                   \\
+	               & + \sum_{s_{RA}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^+_{ER} * \omega_{RA}(s_{RA})\notag                                   \\                                                                                                                                               \\
+	\textbf{accepted RL in \& declined out:}        \notag                                                                                                                    \\
+	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))       * (\notag     \\
+	               & + \sum_{s_{RA}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^-_{ER} * \omega_{RA}(s_{RA}))\notag                                   \\
+	               & + \sum_{s_{RA}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^+_{ER} * \omega_{RA}(s_{RA})\notag                                   \\
+	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                                          \\
+	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL})))       * (\notag     \\
+	               & + \sum_{s_{RA}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^-_{ER} * \omega_{RA}(s_{RA}))\notag                                   \\
+	               & + \sum_{s_{RA}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^+_{ER} * \omega_{RA}(s_{RA})\notag                                   \\
+	\textbf{declined RL in \& out:}       \notag                                                                                                                              \\
+	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))))       * (\notag \\
+	               & + \sum_{s_{RA}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^-_{ER} * \omega_{RA}(s_{RA}))\notag                                   \\
+	               & + \sum_{s_{RA}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^+_{ER} * \omega_{RA}(s_{RA})\notag                                   \\
+	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor      \notag                                                                     \\
+	\label{workingCostsEQ}
+\end{flalign}
+*profits
+*profit RL
+\begin{flalign}
+	\label{profit_{RL}out_EQ}                       profitRLout = + \sum(t_{block},
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (
+	+ (4 * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL}))))))
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))  * (
+	+ (4 * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))))));
+\end{flalign}
+\begin{flalign}
+	\label{profit_{RL}in_EQ}                        profitRLin = + \sum(t_{block},
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (
+	+ (4 * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL}))))))
+
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))  * (
+	+ (4 * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL}))))))
+	);
+\end{flalign}
+*profit DA
+\begin{flalign}
+	\label{profit_DA_EQ}                          profitDA = \sum(t_{block},
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (\sum(t_{hour}$map_hour_block(t_{hour}, t_{block}),           (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})  ))
+		)))
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (\sum(t_{hour}$map_hour_block(t_{hour}, t_{block}),           (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})    ))
+	)))
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (\sum(t_{hour}$map_hour_block(t_{hour}, t_{block}),           (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})    ))
+		)))
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (\sum(t_{hour}$map_hour_block(t_{hour}, t_{block}),           (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})    ))
+	)))
+	);
+\end{flalign}
+*profit RA
+\begin{flalign}
+	\label{profit_{RA}in_EQ}                       profitRAin = \sum(t_{block},
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
+		)))
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
+	)))
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
+		)))
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}),  \sum_{s_{RA}} p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )      )
+	)))
+	);
+\end{flalign}
+\begin{flalign}
+	\label{profit_{RA}out_EQ}                        profitRAout = \sum(t_{block},
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
+		)))
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  * \omega_{RA}(s_{RA}) )    )
+	)))
+	+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )    )
+		)))
+		+ \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))  * (0.25 * \sum(t_{quarter}$map_quarter_block(t_{quarter}, t_{block}), \sum_{s_{RA}} p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * \omega_{RA}(s_{RA}) )    )
+	)))
+	);
+\end{flalign}
+* accepted  RL\ in \ out:
+\begin{flalign}
+\label{\sum_Q^{in}_{RL}_EQ}                                \sum_Q^{in}_{RL} = \sum((t_{block}, s^{in}_{RL}), Q^{in}_{RL}(t_{block}, s^{in}_{RL}));
+\begin{flalign}
+\label{\sum_Q^{out}_{RL}_EQ}                               \sum_Q^{out}_{RL} = \sum((t_{block}, s^{out}_{RL}), Q^{out}_{RL}(t_{block}, s^{out}_{RL}));
+\begin{flalign}
+\label{\sum_Q^{rB}_{DA}_EQ(s^{in}_{RL}, s^{out}_{RL})}                               \sum_Q^{rB}_{DA}(s^{in}_{RL}, s^{out}_{RL}) = \sum((t_{hour}), Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\begin{flalign}
+\label{\sum_Q^{outrB}_{RA}_EQ}                             \sum_Q^{outrB}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\begin{flalign}
+\label{\sum_Q^{inrB}_{RA}_EQ}                              \sum_Q^{inrB}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\begin{flalign}
+\label{\sum_Q_rB_reload_EQ}                                \sum_Q_rB_reload = \sum((t_{hour}, s^{in}_{RL}, s^{out}_{RL}), Q_rB_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+
+*accepted RL in     \ declined out:
+\begin{flalign}
+\label{\sum_Q^{outrI}_{RA}_EQ}                             \sum_Q^{outrI}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\begin{flalign}
+\label{\sum_Q^{inrI}_{RA}_EQ}                              \sum_Q^{inrI}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\begin{flalign}
+\label{\sum_Q^{rI}_{DA}_EQ(s^{in}_{RL}, s^{out}_{RL})}                               \sum_Q^{rI}_{DA}(s^{in}_{RL}, s^{out}_{RL}) = \sum((t_{hour}), Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})                            );
+\begin{flalign}
+\label{\sum_Q_rI_reload_EQ}                                \sum_Q_rI_reload = \sum((t_{hour}, s^{in}_{RL}, s^{out}_{RL}), Q_rI_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL})                         );
+
+*declined RL in\ accepted out:
+\begin{flalign}
+	\label{\sum_Q^{outrO}_{RA}_EQ}                             \sum_Q^{outrO}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{\sum_Q^{inrO}_{RA}_EQ}                              \sum_Q^{inrO}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{\sum_Q^{rO}_{DA}_EQ(s^{in}_{RL}, s^{out}_{RL})}                               \sum_Q^{rO}_{DA}(s^{in}_{RL}, s^{out}_{RL}) = \sum((t_{hour}), Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})                            );
+\end{flalign}
+\begin{flalign}
+	\label{\sum_Q_rO_reload_EQ}                                \sum_Q_rO_reload = \sum((t_{hour}, s^{in}_{RL}, s^{out}_{RL}), Q_rO_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL})                         );
+\end{flalign}
+
+*declined RL in\ out:
+\begin{flalign}
+	\label{\sum_Q^{outrN}_{RA}_EQ}                             \sum_Q^{outrN}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{\sum_Q^{inrN}_{RA}_EQ}                              \sum_Q^{inrN}_{RA} = \sum((t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{\sum_Q^{rN}_{DA}_EQ}                                \sum_Q^{rN}_{DA} = \sum((t_{hour}, s^{in}_{RL}, s^{out}_{RL}), Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})                         );
+\end{flalign}
+\begin{flalign}
+	\label{\sum_Q_reload_EQ}                               \sum_Q_reload = \sum((t_{hour}, s^{in}_{RL}, s^{out}_{RL}), Q_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+*   constraints
+*battery cap
+\begin{flalign}
+	\label{**batCapCalc}                        BatCap \geq max(Q^{inrB}_{RA}, Q^{inrI}_{RA}, Q^{inrO}_{RA}, Q^{inrN}_{RA}, Q^{outrB}_{RA}, Q^{outrI}_{RA}, Q^{outrO}_{RA}, Q^{outrN}_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{*batCapCalc}                       BatCap \geq max( Q^{inrB}_{RA}, Q^{inrI}_{RA}, Q^{inrO}_{RA}, Q^{inrN}_{RA}, Q^{outrB}_{RA}, Q^{outrI}_{RA}, Q^{outrO}_{RA}, Q^{outrN}_{RA},
+\end{flalign}
+*                                                   Q^{in}_{RL} * 4, Q^{out}_{RL} * 4);
+
+
+*access point:
+\begin{flalign}
+	\label{accPointCon_a_B(t_{quarter})}        a + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})) \geq \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) * 0.25) + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{accPointCon_a_I(t_{quarter})}        a + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})) \geq \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) * 0.25) + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{accPointCon_a_O(t_{quarter})}        a + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})) \geq \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) * 0.25) + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{accPointCon_a_N(t_{quarter})}        a + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})) \geq \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) * 0.25) + \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), fakeReload^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+
+*battery performance restrictions:
+\begin{flalign}
+	\label{calc_r}                                        r = BatCap * rBat;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{out}_{RL}(t_{block})}                     \sum_{s^{out}_{RL}} Q^{out}_{RL}(t_{block}, s^{out}_{RL}))          \leq r;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{in}_{RL}(t_{block})}                      \sum_{s^{in}_{RL}} Q^{in}_{RL}(t_{block}, s^{in}_{RL}))             \leq r;
+\end{flalign}
+
+
+\begin{flalign}
+	\label{storCon_Q^{outrB}_{RA}(t_{quarter})}                 \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq r/4;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{outrI}_{RA}(t_{quarter})}                 \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq r/4;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{outrO}_{RA}(t_{quarter})}                 \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq r/4;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{outrN}_{RA}(t_{quarter})}                 \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq r/4;
+\end{flalign}
+
+\begin{flalign}
+	\label{storCon_Q^{inrB}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq r/4;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{inrI}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq r/4;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{inrO}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq r/4;
+\end{flalign}
+\begin{flalign}
+	\label{storCon_Q^{inrN}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq r/4;
+\end{flalign}
+
+*batter cap restrictions
+\begin{flalign}
+	\label{batStatCap(t_{quarter})}                         BatStat(t_{quarter}) \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{out}_{RL}(t_{block})}                      \sum_{s^{out}_{RL}} Q^{out}_{RL}(t_{block}, s^{out}_{RL})) * 4      \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{in}_{RL}(t_{block})}                       \sum_{s^{in}_{RL}} Q^{in}_{RL}(t_{block}, s^{in}_{RL})) * 4         \leq BatCap;
+\end{flalign}
+
+\begin{flalign}
+	\label{batCap_Q^{outrB}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{outrI}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{outrO}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{outrN}_{RA}(t_{quarter})}                  \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))      \leq BatCap;
+\end{flalign}
+
+\begin{flalign}
+	\label{batCap_Q^{inrB}_{RA}(t_{quarter})}                   \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{inrI}_{RA}(t_{quarter})}                   \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{inrO}_{RA}(t_{quarter})}                   \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq BatCap;
+\end{flalign}
+\begin{flalign}
+	\label{batCap_Q^{inrN}_{RA}(t_{quarter})}                   \sum((s_{RA}, s^{in}_{RL}, s^{out}_{RL}), Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))         \leq BatCap;
+\end{flalign}
+
+*battery status restrictions
+*expectet battery value in t+1:
+\begin{flalign}
+	\label{batStatcon_(t_{quarter})}                    BatStat(t_{quarter} + 1) = BatStat(t_{quarter})
+
+	*accepted  RL\ in \ out:
+	+\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL})))           * (
+		+ \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q_rB_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)
+	+ \sum_{s_{RA}} fakeReload^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))
+	- \sum_{s_{RA}} fakeReload^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))   )))
+	*
+	*accepted RL in     \ declined out:
+	+\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))       * (
+		+ \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q_rI_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)
+	+ \sum_{s_{RA}} fakeReload^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))
+	- \sum_{s_{RA}} fakeReload^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))   )))
+
+	*declined RL in     \ accepted out:
+	+\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL})))       * (
+		+ \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q_rO_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)
+	+ \sum_{s_{RA}} fakeReload^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))
+	- \sum_{s_{RA}} fakeReload^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))   )))
+	*
+	*declined RL in\ out:
+	+\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))))       * (
+		+ \sum(t_{hour}$map_quarter_hour(t_{quarter}, t_{hour}), Q_rN_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)
+	+ \sum_{s_{RA}} fakeReload^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))
+	- \sum_{s_{RA}} fakeReload^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + ((1/card(s_{RA})) * (Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))))   )));
+\end{flalign}
+
+\begin{flalign}
+	\label{fakeReload^{inrB}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 		fakeReload^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 		= WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{outrB}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 	fakeReload^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	= WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{inrI}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 		fakeReload^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 		= WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{outrI}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 	fakeReload^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	= WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{inrO}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 		fakeReload^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 		= WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{outrO}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 	fakeReload^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	= WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{inrN}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 		fakeReload^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 		= WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})  ;
+\end{flalign}
+\begin{flalign}
+	\label{fakeReload^{outrN}_{RA}EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 	fakeReload^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	= WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) ;
+\end{flalign}
+\begin{flalign}
+	\label{*spmOne(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})}                         testSPM(t_{quarter}, s_{RA}) = \omega_{RA}(s_{RA})^{out}_call(t_{quarter}, s_{RA}) - 0.1 * seriesOne(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL});
+\end{flalign}
+\begin{flalign}
+	\label{*binconO(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})}                         0 \leq Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + (m * (1-seriesOne(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})));
+\end{flalign}
+\begin{flalign}
+	\label{*binconT(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})}                         0 \geq Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) - (m * seriesOne(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+
+
+*RA dynamics
+*out
+
+
+*park restrictions:
+\begin{flalign}
+	\label{parkCon_Q^{rB}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rB_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{parkCon_Q^{rI}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rI_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{parkCon_Q^{rO}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rO_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{parkCon_Q^{rN}_{DA}(t_{hour})}                   \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})) \leq parkCap * parkProfile(t_{hour}) - \sum((s_DA, s^{in}_{RL}, s^{out}_{RL}), Q_rN_reload(t_{hour}, s^{in}_{RL}, s^{out}_{RL}));
+\end{flalign}
+
+
+
+
+*market restrictions:
+\begin{flalign}
+	\label{*marketCon^{outrB}_{RA}(t_{quarter}, s^{in}_{RL}, s^{out}_{RL})}                 ( Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )      \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{out}_{RL}(t_{block}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{*marketCon^{outrO}_{RA}(t_{quarter}, s^{in}_{RL}, s^{out}_{RL})}                 ( Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )      \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{out}_{RL}(t_{block}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{*marketCon^{inrI}_{RA}(t_{quarter}, s^{in}_{RL}, s^{out}_{RL})}                  ( Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )         \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{in}_{RL}(t_{block}, s^{in}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{*marketCon^{inrB}_{RA}(t_{quarter}, s^{in}_{RL}, s^{out}_{RL})}                  ( Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )         \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{in}_{RL}(t_{block}, s^{in}_{RL}));
+\end{flalign}
+
+\begin{flalign}
+	\label{*marketCon^{outrI}_{RA}(t_{quarter})}                ( Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )      \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{out}_{RL}(t_{block}, s^{out}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{*marketCon^{out}_{RA}(t_{quarter})}                  ( Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )      \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{out}_{RL}(t_{block}, s^{out}_{RL}));
+\end{flalign}
+
+\begin{flalign}
+	\label{*marketCon^{inrO}_{RA}(t_{quarter})}                 ( Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )         \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{in}_{RL}(t_{block}, s^{in}_{RL}));
+\end{flalign}
+\begin{flalign}
+	\label{*marketCon^{in}_{RA}(t_{quarter})}                   ( Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) )         \geq \sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{in}_{RL}(t_{block}, s^{in}_{RL}));
+\end{flalign}
+
+
+
+* accepted  RL\ in \ out:
+\begin{flalign}
+	\label{Q^{inrB}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 						Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{in}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{inrO}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 						Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{in}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{inrI}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 						Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{in}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{inrN}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 						Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{in}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{outrB}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 					Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{out}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{outrI}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 					Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{out}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{outrO}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 					Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{out}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{outrN}_{RA}_EQ(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})} 					Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) 	\leq q^{out}_{RA}max(t_{quarter}, s_{RA});
+\end{flalign}
+
+
+\begin{flalign}
+	\label{Q^{in}_{RL}_EQ(t_{quarter}, s^{in}_{RL})}										\sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{in}_{RL}(t_{block}, s^{in}_{RL}))	* 0.25	\leq BatCap - BatStat(t_{quarter});
+\end{flalign}
+\begin{flalign}
+	\label{Q^{out}_{RL}_EQ(t_{quarter}, s^{out}_{RL})}										\sum(t_{block}$map_quarter_block(t_{quarter}, t_{block}), Q^{out}_{RL}(t_{block}, s^{out}_{RL}))	* 0.25	\leq BatStat(t_{quarter});
+\end{flalign}
+*accepted RL in     \ declined out:
+*declined RL in\ accepted out:
+*declined RL in\ out:
+
+
+
+\end{document}
