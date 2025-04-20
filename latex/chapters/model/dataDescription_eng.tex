@@ -1,7 +1,6 @@
 \section{Timeline Simulation and Scenario Selection}
 \label{chap:dataDescription}
 
-\todo{just to remember the red line: How are the different time series generated?}
 To develop robust and generally applicable bidding strategies, high-quality data is essential.
 Inaccurate or poorly constructed datasets inevitably lead to misleading results and suboptimal strategies.
 
@@ -23,6 +22,7 @@ the real market data from 2023 for the negative capacity market price is display
 Below that, the corresponding trend and seasonality components are illustrated.
 
 \begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.7\linewidth]{pictures/capacityData_overview.png}
 	\caption{Total Average Negative Capacity Price}
 	\label{fig:Overview Average Negativ Capacity Price}
@@ -34,6 +34,7 @@ correspond to a full day. Figure~\ref{fig:Autocorrelation Negative Capacity Pric
 clearly illustrates the presence of a daily pattern in the autocorrelation of the data.
 
 \begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.7\linewidth]{pictures/Autocorrelation negative Capacity Price.png}
 	\caption{Autocorrelation Negative Capacity Price – 5 Days}
 	\label{fig:Autocorrelation Negative Capacity Price - 5 Days}
@@ -42,6 +43,7 @@ clearly illustrates the presence of a daily pattern in the autocorrelation of th
 Moreover, Figure \ref{fig:AutocorrNegCap4Weeks} indicates a moderate weekly cycle.
 
 \begin{figure}[!h]
+	\centering
 	\includegraphics[width=0.7\linewidth]{pictures/Autocorrelation Negative Capacity - 4 Weeks.png}
 	\caption{Autocorrelation Negative Capacity Price – 4 Weeks}
 	\label{fig:AutocorrNegCap4Weeks}
@@ -83,12 +85,14 @@ we assume that the mean forecast does not lose accuracy over time
 and use it as the basis for scenario generation.
 
 \begin{figure}[!h]
+	\centering
 	\includegraphics[width=1\linewidth]{pictures/RL/Negative Capacity Price Prediction - 2023.png}
 	\caption{Negative Capacity Price Prediction – 2023}
 	\label{fig:Negative Capacity Price Prediction - 2023}
 \end{figure}
 
 \begin{figure}[H]
+	\centering
 	\includegraphics[width=1\linewidth]{pictures/RL/Negative Capacity Price Prediction Interval - 2023.png}
 	\caption{Negative Capacity Price Prediction 10\%-Interval – 2023}
 	\label{fig:Negative Capacity Price Prediction Interval - 2023}
@@ -104,6 +108,7 @@ Although the Day-Ahead market prices are variable, they exhibit a daily and week
 Over the course of the year, only general trends are observable, as shown in Figure~\ref{fig:overviewDAprices}.
 
 \begin{figure}[!h]
+	\centering
 	\includegraphics[width=1\linewidth]{pictures/overviewDAprices_year.png}
 	\caption{Overview DA prices}
 	\label{fig:overviewDAprices}
@@ -329,19 +334,5 @@ This results in 10 possible scenarios for days with high, medium, and low shares
 The probabilities are assumed to be evenly distributed, thus each scenario-day has a probability of 10\%.
 
 
+The entire python code and origin data used can be found in Appendix~\ref{app:python}
 
-
-\todo{Python Code appendix verweis}
-
-
-%--> kann über  mondpreis eskapen\\
-%--> können eine kaum genutzte szenarioeplosion vermeiden (wording nochmal überarbeiten)\\
-%- vereinfachung der RL markt mechanik/restriktionen
-%--> stellen über batterie gleichung sicher das wir immer liefer können und vermeiden so komplexe $q_RA$ restriktionen (wann wie wo gelten)\\
-%--> wir stellen einfach sicher das wir immer liefern könnten und fertig\\
-
-
-- verschiedene Methoden ...\\
--> implementiert in python\\
--> alle können dem model hinzugefügt werden\\
--> ich habe dann aus diesen und jenen gründe diese Variante gewählt\\

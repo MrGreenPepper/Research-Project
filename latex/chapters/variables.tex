@@ -1,14 +1,13 @@
 \chapter*{Sets \& Variables \& Parameters}
-\todo{sauber und ausführlich machen }
-\todo{alle tabellen nochmal korrektur lesen }
-\todo{make tables look nice}
-\todo{eventuell table heads dick machen}
+
 \textbf{Abbreviations}
 \begin{table}[!h]
+	\centering
 	\begin{tabular}{c|c}
 		\textbf{Abbreviations} & \textbf{Description}                              \\
 		\hline
 		aFRR                   & automatic Frequency Restoration Reserve           \\
+		                       & (german secondary balance market)                 \\
 		BESS                   & battery energy storage systems                    \\
 		GAMS                   & General Algebraic Modeling System                 \\
 		TSO                    & transmission system operators                     \\
@@ -17,80 +16,89 @@
 		SARIMA                 & Seasonal Autoregressive Integrated Moving Average \\
 		TBATS                  & Trigonometric seasonality Box-Cox transformation  \\
 		                       & ARMA errors Trend Seasonal components             \\
-		$RL$                   & aFFR capacity market                              \\
+		$RL$                   & aFFR capacity / seconday capacity balance market  \\
 		$DA$                   & Day Ahead Markt                                   \\
-		$RA$                   & aFFR energy market
+		$RA$                   & aFFR energy / seconday energy balance market
 	\end{tabular}
 	\caption{Abbreviations Overview}
 	\label{tab:Abbreviations_Overview}
 \end{table}\\
 
-
-\begin{table}[!h]
-	\begin{tabular}{c|c|c}
-		\textbf{Variable} & \textbf{Description}                                                      \\
+\textbf{Variables}
+\begin{table}[H]
+	\centering
+	\begin{tabular}{c|c}
+		\textbf{Variable} & \textbf{Description}                                                                        \\
 		\hline
-		$Q^{in}_{RL}$     & Negative quantity bid at RL                                               \\
-		$Q^{out}_{RL}$    & Positive quantity bid at RL                                               \\
-		$Q^{inrB}_{RA}$   & Negative quantity bid at RA restricted due to RL positve and negative bid \\
-		$Q^{inrI}_{RA}$   & Negative quantity bid at RA restricted due to RL negative bid             \\
-		$Q^{inrO}_{RA}$   & Negative quantity bid at RA restricted due to RL positve bid              \\
-		$Q^{inrN}_{RA}$   & Negative quantity bid at RA no restrictions                               \\
-		$Q^{outrB}_{RA}$  & Negative quantity bid at RA restricted due to RL positve and negative bid \\
-		$Q^{outrI}_{RA}$  & Negative quantity bid at RA restricted due to RL negative bid             \\
-		$Q^{outrO}_{RA}$  & Negative quantity bid at RA restricted due to RL positve bid              \\
-		$Q^{outrN}_{RA}$  & Negative quantity bid at RA no restrictions                               \\
-		$Q^{rB}_{DA}$     & Quantity bid at DA restricted due to RL positve and negative bid          \\
-		$Q^{rI}_{DA}$     & Quantity bid at DA restricted due to RL negative bid                      \\
-		$Q^{rO}_{DA}$     & Quantity bid at DA restricted due to RL positve bid                       \\
-		$Q^{rN}_{DA}$     & Quantity bid at DA no restrictions                                        \\
-		$Q^{rB}_{reload}$ & Reload renew. prod. to bat., restr. due to RL positve and negative bid    \\
-		$Q^{rI}_{reload}$ & Reload renew. prod. to bat., restr. due to RL negative bid                \\
-		$Q^{rO}_{reload}$ & Reload renew. prod. to bat., restr. due to RL positve bid                 \\
-		$Q^{rN}_{reload}$ & Reload renew. prod. to bat., no restrictions                              \\
+		$Q^{in}_{RL}$     & Negative quantity bid at RL                                                                 \\
+		$Q^{out}_{RL}$    & Positive quantity bid at RL                                                                 \\
+		$Q^{inrB}_{RA}$   & Negative quantity bid at RA restricted due to RL positve and negative bid                   \\
+		$Q^{inrI}_{RA}$   & Negative quantity bid at RA restricted due to RL negative bid                               \\
+		$Q^{inrO}_{RA}$   & Negative quantity bid at RA restricted due to RL positve bid                                \\
+		$Q^{inrN}_{RA}$   & Negative quantity bid at RA no restrictions                                                 \\
+		$Q^{outrB}_{RA}$  & Negative quantity bid at RA restricted due to RL positve and negative bid                   \\
+		$Q^{outrI}_{RA}$  & Negative quantity bid at RA restricted due to RL negative bid                               \\
+		$Q^{outrO}_{RA}$  & Negative quantity bid at RA restricted due to RL positve bid                                \\
+		$Q^{outrN}_{RA}$  & Negative quantity bid at RA no restrictions                                                 \\
+		$Q^{rB}_{DA}$     & Quantity bid at DA restricted due to RL positve and negative bid                            \\
+		$Q^{rI}_{DA}$     & Quantity bid at DA restricted due to RL negative bid                                        \\
+		$Q^{rO}_{DA}$     & Quantity bid at DA restricted due to RL positve bid                                         \\
+		$Q^{rN}_{DA}$     & Quantity bid at DA no restrictions                                                          \\
+		$Q^{rB}_{reload}$ & Reload renew. prod. to bat., restr. due to RL positve and negative bid                      \\
+		$Q^{rI}_{reload}$ & Reload renew. prod. to bat., restr. due to RL negative bid                                  \\
+		$Q^{rO}_{reload}$ & Reload renew. prod. to bat., restr. due to RL positve bid                                   \\
+		$Q^{rN}_{reload}$ & Reload renew. prod. to bat., no restrictions                                                \\
+		$WP^{inrB}_{WP}$  & Working point adjustment (in) quantity at RA restricted due to RL positve and negative bid  \\
+		$WP^{inrI}_{WP}$  & Working point adjustment (in) quantity at RA restricted due to RL negative bid              \\
+		$WP^{inrO}_{WP}$  & Working point adjustment (in) quantity at RA restricted due to RL positve bid               \\
+		$WP^{inrN}_{WP}$  & Working point adjustment (in) quantity at RA no restrictions                                \\
+		$WP^{outrB}_{WP}$ & Working point adjustment (out) quantity at RA restricted due to RL positve and negative bid \\
+		$WP^{outrI}_{WP}$ & Working point adjustment (out) quantity at RA restricted due to RL negative bid             \\
+		$WP^{outrO}_{WP}$ & Working point adjustment (out) quantity at RA restricted due to RL positve bid              \\
+		$WP^{outrN}_{WP}$ & Working point adjustment (out) quantity at RA no restrictions                               \\
 	\end{tabular}
 	\caption{Variable Overview}
 	\label{tab:Variable_Overview}
 \end{table}
 
 \textbf{Sets}
-\begin{table}[!h]
+\begin{table}[H]
+	\centering
 	\begin{tabular}{c|c}
-		\textbf{set}  & \textbf{Description}                        \\
+		\textbf{Set}  & \textbf{Description}                  \\
 		\hline
-		$t_{quarter}$ & timesteps in 15 min                         \\
-		$t_{hour}$    & timesteps in 1h                             \\
-		$t_{block}$   & timesteps in 4h                             \\
-		$s_{RL}$      & price scenarios balancing capacity market   \\
-		$s_{RA}$      & price scenarios for balancing energy market \\
+		$t_{quarter}$ & timesteps in 15 min interval          \\
+		$t_{hour}$    & timesteps in 1h interval              \\
+		$t_{block}$   & timesteps in 4h interval              \\
+		$s_{RL}$      & scenarios balancing capacity market   \\
+		$s_{DA}$      & scenarios day ahead market            \\
+		$s_{RA}$      & scenarios for balancing energy market \\
 	\end{tabular}
 	\caption{Set Overview}
 	\label{tab:Set_Overview}
-\end{table}\\
+\end{table}
 
 \textbf{Parameter}
-\begin{table}
+\begin{table}[H]
 	\centering
 	\begin{tabular}{c|c}
-		\textbf{Parameter}      & Description                                                   \\
+		\textbf{Parameter}      & \textbf{Description}                                           \\
 		\hline
-		$f_{DA}$                & forecast price day ahead market                               \\
-		$f_{RT}$                & forecast price real time market                               \\
-
-		$p_{DA}$                & probability for price $p_{DA}$                                \\
-		$p_{RT}$                & probability for price $p_{RT}$                                \\
-
-
-		$r$                     & rate for charge/discharge BESS                                \\
-		$a$                     & Access point capacity                                         \\
-		$\omega^i_{y}(P^i_{y})$ & Probability for bid for $P^i_{y}$                             \\
-		$p^i_{y}(s^i_y)$        & Bid price of type i(=in/out) at market y for scenario $s^i_y$ \\
-		$p^{exp}_{y}$           & expected price for the market year                            \\
-		$\omega^i_{y}(s^i_y)$   & acceptance rate for price scenario $s^i_y$                    \\
-		$c^i_y$                 & market clearing price of type i(=in/out) at market y          \\
-		$m$                     & a arbitrary big number                                        \\
-		$wp_{ger}$              & german wind profile                                           \\
-		$wp_{our}$              & local wind profile                                            \\
+		$f_{DA}$                & forecast price day ahead market                                \\
+		$f_{RA}$                & forecast price RA                                              \\
+		$capPark$               & total capacity for the renewable generation                    \\
+		$windProfile$           & adjustment of the total capacity due to environment conditions \\
+		$\rho(p_{DA})$          & probability for price $p_{DA}$                                 \\
+		$\rho(p_{RA})$          & probability for price $p_{RA}$                                 \\
+		$r$                     & rate for charge/discharge BESS                                 \\
+		$a$                     & Access point capacity                                          \\
+		$\omega^i_{y}(s^i_{y})$ & Probability for scenario of type i(=in/out) at market y        \\
+		$p^i_{y}(s^i_y)$        & Bid price of type i(=in/out) at market y for scenario $s^i_y$  \\
+		$p^{exp}_{y}$           & expected price for the market y                                \\
+		$c^i_y$                 & market clearing price of type i(=in/out) at market y           \\
+		$m$                     & a arbitrary big number                                         \\
+		$wp_{ger}$              & german wind profile                                            \\
+		$wp_{our}$              & local wind profile                                             \\
 		$wsf$                   & scaling factor for local wind profile
 	\end{tabular}
 	\caption{Parameter Overview}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  20 APR 2025 04:20
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (TeX Live 2024) (preloaded format=pdflatex 2024.12.4)  20 APR 2025 15:42
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -1512,18 +1512,18 @@ File: omliwona.fd 2008/07/22 v0.995 font definition file for OML/iwona (MW)
 ) (c:/texlive/2024/texmf-dist/tex/latex/iwona/omsiwona.fd
 File: omsiwona.fd 2008/07/22 v0.995 font definition file for OMS/iwona (MW)
 )
-LaTeX Info: Redefining \textcdln on input line 164.
-LaTeX Info: Redefining \textcdrn on input line 164.
-LaTeX Info: Redefining \textcdsn on input line 164.
-LaTeX Info: Redefining \textcdbn on input line 164.
-LaTeX Info: Redefining \textcdxn on input line 164.
-LaTeX Info: Redefining \textcdli on input line 164.
-LaTeX Info: Redefining \textcdri on input line 164.
-LaTeX Info: Redefining \textcdsi on input line 164.
-LaTeX Info: Redefining \textcdbi on input line 164.
-LaTeX Info: Redefining \textcdxi on input line 164.
-LaTeX Font Info:    Setting tudtt sub-encoding to TS1/4 on input line 164.
-LaTeX Font Info:    Trying to load font information for T1+opensans-TLF on input line 164.
+LaTeX Info: Redefining \textcdln on input line 165.
+LaTeX Info: Redefining \textcdrn on input line 165.
+LaTeX Info: Redefining \textcdsn on input line 165.
+LaTeX Info: Redefining \textcdbn on input line 165.
+LaTeX Info: Redefining \textcdxn on input line 165.
+LaTeX Info: Redefining \textcdli on input line 165.
+LaTeX Info: Redefining \textcdri on input line 165.
+LaTeX Info: Redefining \textcdsi on input line 165.
+LaTeX Info: Redefining \textcdbi on input line 165.
+LaTeX Info: Redefining \textcdxi on input line 165.
+LaTeX Font Info:    Setting tudtt sub-encoding to TS1/4 on input line 165.
+LaTeX Font Info:    Trying to load font information for T1+opensans-TLF on input line 165.
  (c:/texlive/2024/texmf-dist/tex/latex/opensans/T1opensans-TLF.fd
 File: T1opensans-TLF.fd 2019/06/24 Font definitions for T1/opensans-TLF.
 ) (c:/texlive/2024/texmf-dist/tex/latex/mathastext/mathastext.sty
@@ -1920,378 +1920,378 @@ File: lgrenc.dfu 2023-03-21 1.9 UTF-8 support for Greek
 )
 \symtudupgrk=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `bold'
-(Font)                  LGR/cmr/m/n --> LGR/cmr/bx/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/cmr/bx/n on input line 165.
 \symtuditgrk=\mathgroup9
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `bold'
-(Font)                  LGR/cmr/m/it --> LGR/cmr/bx/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/cmr/bx/it on input line 165.
 \c@mv@tudnormal@lm=\count566
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@lm'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudnormal@lm'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/l/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@lm'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@lm'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@lm'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@lm'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/l/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/l/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@lm'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@lm'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/l/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/l/n on input line 165.
 \c@mv@tudbold@lm=\count567
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@lm'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudbold@lm'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/m/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@lm'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@lm'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@lm'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@lm'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@lm'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@lm'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/m/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@lm'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/l/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@lm'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/m/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@lm'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/l/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/l/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@lm'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/m/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@lm'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/l/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@lm'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/m/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@lm'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/l/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@lm'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/m/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@lm'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/l/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/l/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@lm'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@lm'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/l/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@lm'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@lm'
-(Font)                  OT1/iwona/l/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  OT1/iwona/l/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@lm'
-(Font)                  OT1/iwona/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  OT1/iwona/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@lm'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@lm'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@lm'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@lm'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@lm'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/l/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/l/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@lm'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@lm'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/l/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@lm'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/m/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@lm'
-(Font)                  OMS/iwona/l/n --> U/eus/m/n on input line 164.
+(Font)                  OMS/iwona/l/n --> U/eus/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@lm'
-(Font)                  OMS/iwona/m/n --> U/eus/b/n on input line 164.
+(Font)                  OMS/iwona/m/n --> U/eus/b/n on input line 165.
 \c@mv@tudnormal@lsb=\count568
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@lsb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudnormal@lsb'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/l/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@lsb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@lsb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@lsb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@lsb'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/l/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/l/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@lsb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@lsb'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/l/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/l/n on input line 165.
 \c@mv@tudbold@lsb=\count569
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@lsb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudbold@lsb'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/sb/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@lsb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@lsb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@lsb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@lsb'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/sb/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/sb/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@lsb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@lsb'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/sb/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@lsb'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/l/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@lsb'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/sb/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@lsb'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/l/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/l/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@lsb'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/sb/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/sb/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@lsb'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/l/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@lsb'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/sb/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@lsb'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/l/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@lsb'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/sb/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@lsb'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/l/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/l/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@lsb'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/sb/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/sb/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@lsb'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/l/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@lsb'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/sb/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@lsb'
-(Font)                  > T1/opensans-TLF/l/n on input line 164.
+(Font)                  > T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@lsb'
-(Font)                  > T1/opensans-TLF/sb/n on input line 164.
+(Font)                  > T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@lsb'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@lsb'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/b/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@lsb'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/l/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@lsb'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@lsb'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/l/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/l/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@lsb'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/sb/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/sb/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@lsb'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/l/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/l/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@lsb'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/sb/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@lsb'
-(Font)                  > U/eus/m/n on input line 164.
+(Font)                  > U/eus/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@lsb'
-(Font)                  > U/eus/b/n on input line 164.
+(Font)                  > U/eus/b/n on input line 165.
 \c@mv@tudnormal@msb=\count570
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@msb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudnormal@msb'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/m/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@msb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@msb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@msb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@msb'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@msb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@msb'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/m/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/m/n on input line 165.
 \c@mv@tudbold@msb=\count571
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@msb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudbold@msb'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/sb/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@msb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@msb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@msb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@msb'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/sb/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/sb/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@msb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@msb'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/sb/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@msb'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/m/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@msb'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/sb/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@msb'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/m/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@msb'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/sb/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/sb/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@msb'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/m/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@msb'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/sb/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@msb'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/m/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@msb'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/sb/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/sb/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@msb'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@msb'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/sb/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/sb/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@msb'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@msb'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/sb/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@msb'
-(Font)                  > T1/opensans-TLF/m/n on input line 164.
+(Font)                  > T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@msb'
-(Font)                  > T1/opensans-TLF/sb/n on input line 164.
+(Font)                  > T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@msb'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@msb'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/b/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@msb'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@msb'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/sb/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@msb'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@msb'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/sb/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/sb/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@msb'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/m/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@msb'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/sb/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/sb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@msb'
-(Font)                  > U/eus/m/n on input line 164.
+(Font)                  > U/eus/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@msb'
-(Font)                  > U/eus/b/n on input line 164.
+(Font)                  > U/eus/b/n on input line 165.
 \c@mv@tudnormal@mb=\count572
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudnormal@mb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudnormal@mb'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/m/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudnormal@mb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudnormal@mb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudnormal@mb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudnormal@mb'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudnormal@mb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudnormal@mb'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/m/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/m/n on input line 165.
 \c@mv@tudbold@mb=\count573
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `tudbold@mb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/b/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/b/it on input line 165.
 
 Package mathastext Info: Latin letters in math version `tudbold@mb'
-(mathastext)             declared on input line 164
+(mathastext)             declared on input line 165
 (mathastext)             will use the font T1/opensans-TLF/b/it
 (mathastext)             Other characters (digits, ...) and \log-like names
 (mathastext)             will be in `n' shape.
 
 LaTeX Font Info:    Overwriting math alphabet `\Mathnormalbold' in version `tudbold@mb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `tudbold@mb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/b/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathbf' in version `tudbold@mb'
-(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  T1/opensans-TLF/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathit' in version `tudbold@mb'
-(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/b/it on input line 164.
+(Font)                  T1/opensans-TLF/l/it --> T1/opensans-TLF/b/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathsf' in version `tudbold@mb'
-(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/b/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\Mathtt' in version `tudbold@mb'
-(Font)                  T1/tudtt/l/n --> T1/tudtt/b/n on input line 164.
+(Font)                  T1/tudtt/l/n --> T1/tudtt/b/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudnormal@mb'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/m/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `operators' in version `tudbold@mb'
-(Font)                  OT1/ztmcm/m/n --> OT1/iwona/b/n on input line 164.
+(Font)                  OT1/ztmcm/m/n --> OT1/iwona/b/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudnormal@mb'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/m/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `letters' in version `tudbold@mb'
-(Font)                  OML/ztmcm/m/it --> OML/iwona/b/it on input line 164.
+(Font)                  OML/ztmcm/m/it --> OML/iwona/b/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudnormal@mb'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/m/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `symbols' in version `tudbold@mb'
-(Font)                  OMS/ztmcm/m/n --> OMS/iwona/b/n on input line 164.
+(Font)                  OMS/ztmcm/m/n --> OMS/iwona/b/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudnormal@mb'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/m/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `tudbold@mb'
-(Font)                  OMX/ztmcm/m/n --> OMX/iwona/b/n on input line 164.
+(Font)                  OMX/ztmcm/m/n --> OMX/iwona/b/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudnormal@mb'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tuditgrk' in version `tudbold@mb'
-(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/b/it on input line 164.
+(Font)                  LGR/cmr/m/it --> LGR/opensans-TLF/b/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudnormal@mb'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `tudupgrk' in version `tudbold@mb'
-(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/b/n on input line 164.
+(Font)                  LGR/cmr/m/n --> LGR/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudnormal@mb'
-(Font)                  > T1/opensans-TLF/m/n on input line 164.
+(Font)                  > T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathrm' in version `tudbold@mb'
-(Font)                  > T1/opensans-TLF/b/n on input line 164.
+(Font)                  > T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudnormal@mb'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/b/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `tudbold@mb'
-(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/eb/n on input line 164.
+(Font)                  OT1/cmr/bx/n --> T1/opensans-TLF/eb/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudnormal@mb'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/m/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `tudbold@mb'
-(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/b/n on input line 164.
+(Font)                  OT1/cmss/m/n --> T1/opensans-TLF/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudnormal@mb'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/m/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/m/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `tudbold@mb'
-(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/b/it on input line 164.
+(Font)                  OT1/cmr/m/it --> T1/opensans-TLF/b/it on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudnormal@mb'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/m/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `tudbold@mb'
-(Font)                  OT1/cmtt/m/n --> T1/tudtt/b/n on input line 164.
+(Font)                  OT1/cmtt/m/n --> T1/tudtt/b/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudnormal@mb'
-(Font)                  > U/eus/m/n on input line 164.
+(Font)                  > U/eus/m/n on input line 165.
 LaTeX Font Info:    Overwriting math alphabet `\mathcal' in version `tudbold@mb'
-(Font)                  > U/eus/b/n on input line 164.
+(Font)                  > U/eus/b/n on input line 165.
 Package typearea Info: These are the values describing the layout:
 (typearea)             DIV  = 10
 (typearea)             BCOR = 5.69054pt
@@ -2308,9 +2308,9 @@ Package typearea Info: These are the values describing the layout:
 (typearea)              \topskip        = 11.0pt
 (typearea)              \footskip       = 47.6pt
 (typearea)              \baselineskip   = 13.6pt
-(typearea)              on input line 164.
+(typearea)              on input line 165.
 Package typearea Info: Using dirty hack to recalculate internal output
-(typearea)             dimensions of LaTeX on input line 164.
+(typearea)             dimensions of LaTeX on input line 165.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -2318,130 +2318,130 @@ Package csquotes Info: Redefining alias 'default' -> 'british'.
  (./main_eng.aux (./chapters/opening.aux) (./chapters/variables.aux) (./chapters/introduction.aux) (./chapters/literatureReview_eng.aux) (./chapters/model/general_eng.aux) (./chapters/model/marketDescription_eng.aux) (./chapters/model/modelComponents_eng.aux) (./chapters/model/completeModel_eng.aux) (./chapters/model/dataDescription_eng.aux) (./chapters/model/simplifications_eng.aux) (./chapters/model_eng.aux) (./chapters/results_eng.aux) (./chapters/conclusion_eng.aux) (./chapters/appendix.aux) (./chapters/bibliography.aux) (./chapters/confirmation.aux))
 \openout1 = `main_eng.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 164.
-LaTeX Font Info:    ... okay on input line 164.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 164.
-LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 164.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 165.
+LaTeX Font Info:    ... okay on input line 165.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 165.
+LaTeX Font Info:    Trying to load font information for LGR+cmr on input line 165.
  (c:/texlive/2024/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 File: lgrcmr.fd 2017/07/29 v1.2 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 164.
-Package scrbase Info: activating british \abstractname on input line 164.
-Package scrbase Info: activating british \partname on input line 164.
-Package scrbase Info: activating british \chaptername on input line 164.
-Package scrbase Info: activating british \appendixname on input line 164.
-Package scrbase Info: activating british \figurename on input line 164.
-Package scrbase Info: activating british \tablename on input line 164.
-Package scrbase Info: activating british \contentsname on input line 164.
-Package scrbase Info: activating british \listfigurename on input line 164.
-Package scrbase Info: activating british \listtablename on input line 164.
-Package scrbase Info: activating british \bibname on input line 164.
-Package scrbase Info: activating british \indexname on input line 164.
-Package scrbase Info: activating british \graduationtext on input line 164.
-Package scrbase Info: activating british \refereename on input line 164.
-Package scrbase Info: activating british \refereeothername on input line 164.
-Package scrbase Info: activating british \advisorname on input line 164.
-Package scrbase Info: activating british \advisorothername on input line 164.
-Package scrbase Info: activating british \supervisorname on input line 164.
-Package scrbase Info: activating british \supervisorothername on input line 164.
-Package scrbase Info: activating british \professorname on input line 164.
-Package scrbase Info: activating british \professorothername on input line 164.
-Package scrbase Info: activating british \datetext on input line 164.
-Package scrbase Info: activating british \dateofbirthtext on input line 164.
-Package scrbase Info: activating british \placeofbirthtext on input line 164.
-Package scrbase Info: activating british \defensedatetext on input line 164.
-Package scrbase Info: activating british \matriculationyearname on input line 164.
-Package scrbase Info: activating british \matriculationnumbername on input line 164.
-Package scrbase Info: activating british \coverpagename on input line 164.
-Package scrbase Info: activating british \titlepagename on input line 164.
-Package scrbase Info: activating british \titlename on input line 164.
-Package scrbase Info: activating british \confirmationname on input line 164.
-Package scrbase Info: activating british \confirmationtext on input line 164.
-Package scrbase Info: activating british \blockingname on input line 164.
-Package scrbase Info: activating british \blockingtext on input line 164.
-Package scrbase Info: activating british \coursename on input line 164.
-Package scrbase Info: activating british \disciplinename on input line 164.
-Package scrbase Info: activating british \listingname on input line 164.
-Package scrbase Info: activating british \listlistingname on input line 164.
-Package scrbase Info: activating british \habilitationname on input line 164.
-Package scrbase Info: activating british \dissertationname on input line 164.
-Package scrbase Info: activating british \diplomathesisname on input line 164.
-Package scrbase Info: activating british \masterthesisname on input line 164.
-Package scrbase Info: activating british \bachelorthesisname on input line 164.
-Package scrbase Info: activating british \studentthesisname on input line 164.
-Package scrbase Info: activating british \studentresearchname on input line 164.
-Package scrbase Info: activating british \projectpapername on input line 164.
-Package scrbase Info: activating british \seminarpapername on input line 164.
-Package scrbase Info: activating british \termpapername on input line 164.
-Package scrbase Info: activating british \researchname on input line 164.
-Package scrbase Info: activating british \logname on input line 164.
-Package scrbase Info: activating british \internshipname on input line 164.
-Package scrbase Info: activating british \reportname on input line 164.
+LaTeX Font Info:    ... okay on input line 165.
+Package scrbase Info: activating british \abstractname on input line 165.
+Package scrbase Info: activating british \partname on input line 165.
+Package scrbase Info: activating british \chaptername on input line 165.
+Package scrbase Info: activating british \appendixname on input line 165.
+Package scrbase Info: activating british \figurename on input line 165.
+Package scrbase Info: activating british \tablename on input line 165.
+Package scrbase Info: activating british \contentsname on input line 165.
+Package scrbase Info: activating british \listfigurename on input line 165.
+Package scrbase Info: activating british \listtablename on input line 165.
+Package scrbase Info: activating british \bibname on input line 165.
+Package scrbase Info: activating british \indexname on input line 165.
+Package scrbase Info: activating british \graduationtext on input line 165.
+Package scrbase Info: activating british \refereename on input line 165.
+Package scrbase Info: activating british \refereeothername on input line 165.
+Package scrbase Info: activating british \advisorname on input line 165.
+Package scrbase Info: activating british \advisorothername on input line 165.
+Package scrbase Info: activating british \supervisorname on input line 165.
+Package scrbase Info: activating british \supervisorothername on input line 165.
+Package scrbase Info: activating british \professorname on input line 165.
+Package scrbase Info: activating british \professorothername on input line 165.
+Package scrbase Info: activating british \datetext on input line 165.
+Package scrbase Info: activating british \dateofbirthtext on input line 165.
+Package scrbase Info: activating british \placeofbirthtext on input line 165.
+Package scrbase Info: activating british \defensedatetext on input line 165.
+Package scrbase Info: activating british \matriculationyearname on input line 165.
+Package scrbase Info: activating british \matriculationnumbername on input line 165.
+Package scrbase Info: activating british \coverpagename on input line 165.
+Package scrbase Info: activating british \titlepagename on input line 165.
+Package scrbase Info: activating british \titlename on input line 165.
+Package scrbase Info: activating british \confirmationname on input line 165.
+Package scrbase Info: activating british \confirmationtext on input line 165.
+Package scrbase Info: activating british \blockingname on input line 165.
+Package scrbase Info: activating british \blockingtext on input line 165.
+Package scrbase Info: activating british \coursename on input line 165.
+Package scrbase Info: activating british \disciplinename on input line 165.
+Package scrbase Info: activating british \listingname on input line 165.
+Package scrbase Info: activating british \listlistingname on input line 165.
+Package scrbase Info: activating british \habilitationname on input line 165.
+Package scrbase Info: activating british \dissertationname on input line 165.
+Package scrbase Info: activating british \diplomathesisname on input line 165.
+Package scrbase Info: activating british \masterthesisname on input line 165.
+Package scrbase Info: activating british \bachelorthesisname on input line 165.
+Package scrbase Info: activating british \studentthesisname on input line 165.
+Package scrbase Info: activating british \studentresearchname on input line 165.
+Package scrbase Info: activating british \projectpapername on input line 165.
+Package scrbase Info: activating british \seminarpapername on input line 165.
+Package scrbase Info: activating british \termpapername on input line 165.
+Package scrbase Info: activating british \researchname on input line 165.
+Package scrbase Info: activating british \logname on input line 165.
+Package scrbase Info: activating british \internshipname on input line 165.
+Package scrbase Info: activating british \reportname on input line 165.
 <TUD-black.pdf, id=4, 256.15298pt x 74.32167pt>
 File: TUD-black.pdf Graphic file (type pdf)
 <use TUD-black.pdf>
-Package pdftex.def Info: TUD-black.pdf  used on input line 164.
+Package pdftex.def Info: TUD-black.pdf  used on input line 165.
 (pdftex.def)             Requested size: 162.1807pt x 47.05765pt.
 <TUD-blue.pdf, id=5, 256.15298pt x 74.32167pt>
 File: TUD-blue.pdf Graphic file (type pdf)
 <use TUD-blue.pdf>
-Package pdftex.def Info: TUD-blue.pdf  used on input line 164.
+Package pdftex.def Info: TUD-blue.pdf  used on input line 165.
 (pdftex.def)             Requested size: 162.1807pt x 47.05765pt.
 <TUD-white.pdf, id=6, 256.15298pt x 74.32167pt>
 File: TUD-white.pdf Graphic file (type pdf)
 <use TUD-white.pdf>
-Package pdftex.def Info: TUD-white.pdf  used on input line 164.
+Package pdftex.def Info: TUD-white.pdf  used on input line 165.
 (pdftex.def)             Requested size: 162.1807pt x 47.05765pt.
 <DDC-24.pdf, id=7, 144.20576pt x 51.4994pt>
 File: DDC-24.pdf Graphic file (type pdf)
 <use DDC-24.pdf>
-Package pdftex.def Info: DDC-24.pdf  used on input line 164.
+Package pdftex.def Info: DDC-24.pdf  used on input line 165.
 (pdftex.def)             Requested size: 131.77533pt x 47.05765pt.
 <DDC-27.pdf, id=8, 144.20576pt x 51.4994pt>
 File: DDC-27.pdf Graphic file (type pdf)
 <use DDC-27.pdf>
-Package pdftex.def Info: DDC-27.pdf  used on input line 164.
+Package pdftex.def Info: DDC-27.pdf  used on input line 165.
 (pdftex.def)             Requested size: 131.77533pt x 47.05765pt.
 <DDC-30.pdf, id=9, 144.20576pt x 51.4994pt>
 File: DDC-30.pdf Graphic file (type pdf)
 <use DDC-30.pdf>
-Package pdftex.def Info: DDC-30.pdf  used on input line 164.
+Package pdftex.def Info: DDC-30.pdf  used on input line 165.
 (pdftex.def)             Requested size: 131.77533pt x 47.05765pt.
 <figures/EE2_logo.png, id=10, 886.9938pt x 464.6961pt>
 File: figures/EE2_logo.png Graphic file (type png)
 <use figures/EE2_logo.png>
-Package pdftex.def Info: figures/EE2_logo.png  used on input line 164.
+Package pdftex.def Info: figures/EE2_logo.png  used on input line 165.
 (pdftex.def)             Requested size: 89.81439pt x 47.05765pt.
 <DDC-22.pdf, id=11, 34.71169pt x 69.42436pt>
 File: DDC-22.pdf Graphic file (type pdf)
 <use DDC-22.pdf>
-Package pdftex.def Info: DDC-22.pdf  used on input line 164.
+Package pdftex.def Info: DDC-22.pdf  used on input line 165.
 (pdftex.def)             Requested size: 23.52893pt x 47.05765pt.
 <DDC-25.pdf, id=12, 34.71169pt x 69.42436pt>
 File: DDC-25.pdf Graphic file (type pdf)
 <use DDC-25.pdf>
-Package pdftex.def Info: DDC-25.pdf  used on input line 164.
+Package pdftex.def Info: DDC-25.pdf  used on input line 165.
 (pdftex.def)             Requested size: 23.52893pt x 47.05765pt.
 <DDC-28.pdf, id=13, 34.71169pt x 69.42436pt>
 File: DDC-28.pdf Graphic file (type pdf)
 <use DDC-28.pdf>
-Package pdftex.def Info: DDC-28.pdf  used on input line 164.
+Package pdftex.def Info: DDC-28.pdf  used on input line 165.
 (pdftex.def)             Requested size: 23.52893pt x 47.05765pt.
 
 *geometry* detected driver: <none>
@@ -2479,19 +2479,19 @@ Package pdftex.def Info: DDC-28.pdf  used on input line 164.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 isodate: babel.sty has been loaded
-LaTeX Info: Redefining \microtypecontext on input line 164.
-Package microtype Info: Applying patch `item' on input line 164.
-Package microtype Info: Applying patch `toc' on input line 164.
-Package microtype Info: Applying patch `eqnum' on input line 164.
-Package microtype Info: Applying patch `footnote' on input line 164.
-Package microtype Info: Applying patch `verbatim' on input line 164.
+LaTeX Info: Redefining \microtypecontext on input line 165.
+Package microtype Info: Applying patch `item' on input line 165.
+Package microtype Info: Applying patch `toc' on input line 165.
+Package microtype Info: Applying patch `eqnum' on input line 165.
+Package microtype Info: Applying patch `footnote' on input line 165.
+Package microtype Info: Applying patch `verbatim' on input line 165.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using default protrusion set `alltext'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 164.
+LaTeX Info: Redefining \showhyphens on input line 165.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -2499,7 +2499,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `opensans-TLF' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-Package hyperref Info: Link coloring OFF on input line 164.
+Package hyperref Info: Link coloring OFF on input line 165.
 (./main_eng.out) (./main_eng.out)
 \@outlinefile=\write5
 \openout5 = `main_eng.out'.
@@ -2511,7 +2511,7 @@ Class scrreprt Info: loading recommended package `bookmark'.
 (scrreprt)           `bookmarkpackage=false' before \begin{document} and
 (scrreprt)           you can avoid this message adding:
 (scrreprt)             \usepackage{bookmark}
-(scrreprt)           before \begin{document} on input line 164.
+(scrreprt)           before \begin{document} on input line 165.
  (c:/texlive/2024/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (c:/texlive/2024/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
@@ -2521,7 +2521,7 @@ File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 File: translations-basic-dictionary-english.trsl (english translation file `translations-basic-dictionary')
 )
 \c@lstlisting=\count575
-Package tocbasic Info: setting babel extension for `lol' on input line 164.
+Package tocbasic Info: setting babel extension for `lol' on input line 165.
 \scr@dte@lstlisting@maxnumwidth=\skip145
  (c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
@@ -2591,29 +2591,29 @@ Package biblatex Warning: Biber reported the following issues
 (biblatex)                - misc entry '.05.04.2025' (researchProject.bib): Invalid format '06.04.2025' of date field 'urldate' - ignoring.
 
 )
-Package biblatex Info: Reference section=0 on input line 164.
-Package biblatex Info: Reference segment=0 on input line 164.
+Package biblatex Info: Reference section=0 on input line 165.
+Package biblatex Info: Reference segment=0 on input line 165.
 
 
-Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 164.
+Package todonotes Warning: The length marginparwidth is less than 2cm and will most likely cause issues with the appearance of inserted todonotes. The issue can be solved by adding a line like \setlength {\marginparwidth }{2cm} prior to loading the todonotes package. on input line 165.
 
 LaTeX Font Info:    Encoding `T1' has changed to `OML' for symbol font
-(Font)              `mtletterfont' in the math version `normal' on input line 164.
+(Font)              `mtletterfont' in the math version `normal' on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `normal'
-(Font)                  T1/opensans-TLF/l/n --> OML/ztmcm/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> OML/ztmcm/m/it on input line 165.
 LaTeX Font Info:    Encoding `T1' has changed to `OML' for symbol font
-(Font)              `mtletterfont' in the math version `bold' on input line 164.
+(Font)              `mtletterfont' in the math version `bold' on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtletterfont' in version `bold'
-(Font)                  T1/opensans-TLF/l/n --> OML/ztmcm/m/it on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> OML/ztmcm/m/it on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `normal'
-(Font)                  T1/opensans-TLF/l/n --> T1/ztmcm/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/ztmcm/m/n on input line 165.
 LaTeX Font Info:    Overwriting symbol font `mtoperatorfont' in version `bold'
-(Font)                  T1/opensans-TLF/l/n --> T1/ztmcm/m/n on input line 164.
+(Font)                  T1/opensans-TLF/l/n --> T1/ztmcm/m/n on input line 165.
 
 Package mathastext Info: ...entering subdued mode...
-(mathastext)             ...done on input line 164.
+(mathastext)             ...done on input line 165.
 
-LaTeX Font Info:    Trying to load font information for OT1+iwona on input line 166.
+LaTeX Font Info:    Trying to load font information for OT1+iwona on input line 167.
 (c:/texlive/2024/texmf-dist/tex/latex/iwona/ot1iwona.fd
 File: ot1iwona.fd 2008/07/22 v0.995 font definition file for OT1/iwona (MW)
 )
@@ -2621,31 +2621,31 @@ Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `iwona' (encoding: OT1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
-LaTeX Font Info:    Trying to load font information for OMX+iwona on input line 166.
+LaTeX Font Info:    Trying to load font information for OMX+iwona on input line 167.
  (c:/texlive/2024/texmf-dist/tex/latex/iwona/omxiwona.fd
 File: omxiwona.fd 2008/07/22 v0.995 font definition file for OMX/iwona (MW)
 )
-LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 166.
+LaTeX Font Info:    Trying to load font information for OT1+ptm on input line 167.
  (c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <20.74> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
  (c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-ptm.cfg
 File: mt-ptm.cfg 2006/04/20 v1.7 microtype config. file: Times (RS)
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
-LaTeX Font Info:    Trying to load font information for LGR+opensans-TLF on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
+LaTeX Font Info:    Trying to load font information for LGR+opensans-TLF on input line 167.
  (c:/texlive/2024/texmf-dist/tex/latex/opensans/LGRopensans-TLF.fd
 File: LGRopensans-TLF.fd 2019/06/24 Font definitions for LGR/opensans-TLF.
 )
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 166.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 167.
  (./main_eng.tdo
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10.95> not available
 (Font)              Font shape `OT1/ptm/b/n' tried instead on input line 1.
@@ -2656,14 +2656,12 @@ LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
 
 
 LaTeX Font Info:    Font shape `T1/opensans-TLF/l/sl' in size <10.95> not available
-(Font)              Font shape `T1/opensans-TLF/l/it' tried instead on input line 18.
+(Font)              Font shape `T1/opensans-TLF/l/it' tried instead on input line 16.
 [1
 
 
 
-{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc}]
-
-[2{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/sy-iwona.enc}])
+{c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc}])
 \tf@tdo=\write6
 \openout6 = `main_eng.tdo'.
 
@@ -2677,7 +2675,7 @@ Package scrlayer-scrpage Warning: \headheight to low.
 (scrlayer-scrpage)                processing, but you should do this yourself,
 (scrlayer-scrpage)                e.g., setting geometry's option
 (scrlayer-scrpage)                `head=21.89993pt'.
-(scrlayer-scrpage)                I'll also decrease \topmargin on input line 168.
+(scrlayer-scrpage)                I'll also decrease \topmargin on input line 169.
 
 
 Overfull \vbox (4.89993pt too high) has occurred while \output is active []
@@ -2692,14 +2690,14 @@ Package scrlayer-scrpage Warning: \footheight to low.
 (scrlayer-scrpage)                e.g., using
 (scrlayer-scrpage)                  \setlength{\footheight}{21.89993pt}
 (scrlayer-scrpage)                in your preamble.
-(scrlayer-scrpage)                I'll also increase \footskip on input line 168.
+(scrlayer-scrpage)                I'll also increase \footskip on input line 169.
 
-[3]
+[2]
 \openout2 = `chapters/opening.aux'.
 
  (./chapters/opening.tex
 
-[4
+[3
 
 
 
@@ -2738,10 +2736,21 @@ Overfull \hbox (6.0683pt too wide) in paragraph at lines 13--13
 
 
 ]
-Package tocbasic Info: character protrusion at toc deactivated on input line 175.
+Package marginnote Info: Using workaround for absolute page number on input line 173.
+Package tocbasic Info: character protrusion at toc deactivated on input line 176.
  (./main_eng.toc)
 \tf@toc=\write7
 \openout7 = `main_eng.toc'.
+
+
+Overfull \hbox (17.72644pt too wide) in paragraph at lines 177--177
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) danksagung 
+ []
+
+
+Overfull \hbox (17.72644pt too wide) in paragraph at lines 177--177
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) danksagung 
+ []
 
 
 
@@ -2752,57 +2761,36 @@ Package tocbasic Info: character protrusion at toc deactivated on input line 175
 \openout2 = `chapters/variables.aux'.
 
  (./chapters/variables.tex
-
-LaTeX Warning: Marginpar on page III moved.
-
-
-LaTeX Warning: Marginpar on page III moved.
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 5--5
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 5--5
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
-
-
-LaTeX Warning: Marginpar on page III moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 6--27
+Underfull \hbox (badness 10000) in paragraph at lines 3--26
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 56--70
-
+Overfull \hbox (62.16103pt too wide) in paragraph at lines 30--60
+ [][] 
  []
 
 
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-)
 
 [3
 
 
 ]
 
-[4{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_uv4o4i.enc}]
-Overfull \hbox (0.6861pt too wide) in paragraph at lines 178--178
+[4])
+
+[5{c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_uv4o4i.enc}]
+Overfull \hbox (0.6861pt too wide) in paragraph at lines 179--179
 \T1/opensans-TLF/l/n/10.95 (-20) verzeich- 
  []
 
 
-Overfull \hbox (0.6861pt too wide) in paragraph at lines 178--178
+Overfull \hbox (0.6861pt too wide) in paragraph at lines 179--179
 \T1/opensans-TLF/l/n/10.95 (-20) verzeich- 
  []
 
 
-LaTeX Warning: Marginpar on page V moved.
+LaTeX Warning: Marginpar on page VI moved.
 
 
 
@@ -2810,11 +2798,12 @@ LaTeX Warning: Marginpar on page V moved.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \include{chapters/introduction.tex}
+l.193 \include{chapters/introduction.tex}
                                           [1
 
 
 ]
+Package marginnote Info: Using workaround for absolute page number on input line 193.
 \openout2 = `chapters/introduction.aux'.
 
  (./chapters/introduction.tex
@@ -2833,7 +2822,7 @@ Package microtype Info: Loading generic protrusion settings for font family
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.40 
+l.39 
       [2
 
 
@@ -2843,7 +2832,7 @@ l.40
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.192 \include{chapters/introduction.tex}
+l.193 \include{chapters/introduction.tex}
                                           [3]
 \openout2 = `chapters/literatureReview_eng.aux'.
 
@@ -2851,249 +2840,86 @@ l.192 \include{chapters/introduction.tex}
 chapter 2.
 
 
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.39 
-      [4
+[4
 
 
 
 
-]
-Underfull \hbox (badness 10000) in paragraph at lines 58--63
+])
+Underfull \hbox (badness 10000) in paragraph at lines 58--194
 
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 64--65
-
- []
-
-
-Overfull \hbox (1.19647pt too wide) in paragraph at lines 76--76
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
- []
-
-
-Overfull \hbox (1.19647pt too wide) in paragraph at lines 76--76
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
  []
 
 
 
 [5]
-
-[6])
-
-[7]
 chapter 3.
 
 
-[8
+[6
 
 
 
 ]
 \openout2 = `chapters/model/general_eng.aux'.
 
- (./chapters/model/general_eng.tex
-Underfull \hbox (badness 10000) in paragraph at lines 1--2
+ (./chapters/model/general_eng.tex)
 
- []
-
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-
-LaTeX Warning: Marginpar on page 9 moved.
-
-)
-
-[9
+[7
 
 ]
 \openout2 = `chapters/model/marketDescription_eng.aux'.
 
  (./chapters/model/marketDescription_eng.tex
-Overfull \hbox (3.36588pt too wide) in paragraph at lines 8--8
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Overview 
- []
-
-
-Overfull \hbox (3.36588pt too wide) in paragraph at lines 8--8
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Overview 
- []
-
-
-LaTeX Warning: Marginpar on page 10 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 37--44
+Underfull \hbox (badness 10000) in paragraph at lines 25--30
 
  []
 
 
 
-[10
+[8
 
 
 
-{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}]
+{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/sy-iwona.enc}{c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc}]
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 58.
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 60--60
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 55.
 
 
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 60--60
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) eventuell 
- []
+[9]
 
-
+[10]
 
 [11]
-Overfull \hbox (2.51866pt too wide) in paragraph at lines 88--88
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Consider 
+Underfull \hbox (badness 10000) in paragraph at lines 138--144
+
  []
-
-
-Overfull \hbox (2.51866pt too wide) in paragraph at lines 88--88
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Consider 
- []
-
-
-Overfull \hbox (2.51866pt too wide) in paragraph at lines 89--89
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Consider 
- []
-
-
-Overfull \hbox (12.6496pt too wide) in paragraph at lines 89--89
-\T1/opensans-TLF/l/n/10.95 (-20) dependent 
- []
-
-
-Overfull \hbox (2.51866pt too wide) in paragraph at lines 89--89
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Consider 
- []
-
-
-Overfull \hbox (12.6496pt too wide) in paragraph at lines 89--89
-\T1/opensans-TLF/l/n/10.95 (-20) dependent 
- []
-
-
-LaTeX Warning: Marginpar on page 12 moved.
 
 
 
 [12]
-Overfull \hbox (30.1143pt too wide) in paragraph at lines 132--132
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Formelzeichen 
- []
 
-
-Overfull \hbox (30.1143pt too wide) in paragraph at lines 132--132
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Formelzeichen 
- []
-
-
-LaTeX Warning: Marginpar on page 13 moved.
-
-
-Overfull \hbox (3.84499pt too wide) in paragraph at lines 133--133
-\T1/opensans-TLF/l/n/10.95 (-20) Gleichun- 
- []
-
-
-Overfull \hbox (3.84499pt too wide) in paragraph at lines 133--133
-\T1/opensans-TLF/l/n/10.95 (-20) Gleichun- 
- []
-
-
-LaTeX Warning: Marginpar on page 13 moved.
-
-
-Overfull \hbox (3.84499pt too wide) in paragraph at lines 134--134
-\T1/opensans-TLF/l/n/10.95 (-20) Gleichun- 
- []
-
-
-Overfull \hbox (8.14366pt too wide) in paragraph at lines 134--134
-\T1/opensans-TLF/l/n/10.95 (-20) chreibung 
- []
-
-
-Overfull \hbox (3.84499pt too wide) in paragraph at lines 134--134
-\T1/opensans-TLF/l/n/10.95 (-20) Gleichun- 
- []
-
-
-Overfull \hbox (8.14366pt too wide) in paragraph at lines 134--134
-\T1/opensans-TLF/l/n/10.95 (-20) chreibung 
- []
-
-
-LaTeX Warning: Marginpar on page 13 moved.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 143--149
-
- []
-
-
-
-[13]
-Overfull \hbox (17.75179pt too wide) in paragraph at lines 166--166
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Assumption: 
- []
-
-
-Overfull \hbox (17.75179pt too wide) in paragraph at lines 166--166
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Assumption: 
- []
-
-
+[13])
 
 [14]
-Overfull \hbox (5.28392pt too wide) in paragraph at lines 182--182
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Minimum 
- []
-
-
-Overfull \hbox (5.28392pt too wide) in paragraph at lines 182--182
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) Minimum 
- []
-
-
-LaTeX Warning: Marginpar on page 15 moved.
-
-
-
-[15])
-
-[16]
 \openout2 = `chapters/model/modelComponents_eng.aux'.
 
  (./chapters/model/modelComponents_eng.tex
 
-[17
+[15
 
 
 
 ])
 
-[18]
+[16]
 \openout2 = `chapters/model/completeModel_eng.aux'.
 
  (./chapters/model/completeModel_eng.tex
 
-[19
+[17
 
 
 
@@ -3102,49 +2928,31 @@ Overfull \vbox (19.47469pt too high) has occurred while \output is active []
 
 
 
+[18]
+
+[19]
+Overfull \hbox (33.03047pt too wide) detected at line 113
+[]
+ []
+
+
+Overfull \hbox (10.95pt too wide) in paragraph at lines 113--113
+[] 
+ []
+
+
+
 [20]
-Overfull \hbox (76.25107pt too wide) in paragraph at lines 56--56
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
- []
-
-
-Overfull \hbox (76.25107pt too wide) in paragraph at lines 56--56
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) speicherkapazitätkosten 
- []
-
-
-LaTeX Warning: Marginpar on page 21 moved.
-
-
 
 [21]
 
-[22]
+[22])
 
 [23]
-
-[24]
-Overfull \hbox (11.45636pt too wide) in paragraph at lines 155--155
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) implement 
- []
-
-
-Overfull \hbox (11.45636pt too wide) in paragraph at lines 155--155
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) implement 
- []
-
-
-LaTeX Warning: Marginpar on page 25 moved.
-
-
-
-[25])
-
-[26]
 \openout2 = `chapters/model/dataDescription_eng.aux'.
 
  (./chapters/model/dataDescription_eng.tex
-<pictures/capacityData_overview.png, id=432, 316.68312pt x 262.48062pt>
+<pictures/capacityData_overview.png, id=363, 316.68312pt x 262.48062pt>
 File: pictures/capacityData_overview.png Graphic file (type png)
 <use pictures/capacityData_overview.png>
 Package pdftex.def Info: pictures/capacityData_overview.png  used on input line 26.
@@ -3153,52 +2961,52 @@ Package pdftex.def Info: pictures/capacityData_overview.png  used on input line 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/Autocorrelation negative Capacity Price.png, id=435, 433.62pt x 335.3328pt>
+<pictures/Autocorrelation negative Capacity Price.png, id=366, 433.62pt x 335.3328pt>
 File: pictures/Autocorrelation negative Capacity Price.png Graphic file (type png)
 <use pictures/Autocorrelation negative Capacity Price.png>
-Package pdftex.def Info: pictures/Autocorrelation negative Capacity Price.png  used on input line 37.
+Package pdftex.def Info: pictures/Autocorrelation negative Capacity Price.png  used on input line 38.
 (pdftex.def)             Requested size: 314.68613pt x 243.36844pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/Autocorrelation Negative Capacity - 4 Weeks.png, id=437, 433.62pt x 335.3328pt>
+<pictures/Autocorrelation Negative Capacity - 4 Weeks.png, id=368, 433.62pt x 335.3328pt>
 File: pictures/Autocorrelation Negative Capacity - 4 Weeks.png Graphic file (type png)
 <use pictures/Autocorrelation Negative Capacity - 4 Weeks.png>
-Package pdftex.def Info: pictures/Autocorrelation Negative Capacity - 4 Weeks.png  used on input line 45.
+Package pdftex.def Info: pictures/Autocorrelation Negative Capacity - 4 Weeks.png  used on input line 47.
 (pdftex.def)             Requested size: 314.68613pt x 243.36844pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[27
+[24
 
 
 
 ]
 
-[28 <./pictures/capacityData_overview.png> <./pictures/Autocorrelation negative Capacity Price.png>]
-<pictures/RL/Negative Capacity Price Prediction - 2023.png, id=456, 1454.7951pt x 515.2851pt>
+[25 <./pictures/capacityData_overview.png> <./pictures/Autocorrelation negative Capacity Price.png>]
+<pictures/RL/Negative Capacity Price Prediction - 2023.png, id=387, 1454.7951pt x 515.2851pt>
 File: pictures/RL/Negative Capacity Price Prediction - 2023.png Graphic file (type png)
 <use pictures/RL/Negative Capacity Price Prediction - 2023.png>
-Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction - 2023.png  used on input line 86.
+Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction - 2023.png  used on input line 89.
 (pdftex.def)             Requested size: 449.55357pt x 159.22566pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/RL/Negative Capacity Price Prediction Interval - 2023.png, id=457, 1454.7951pt x 515.2851pt>
+<pictures/RL/Negative Capacity Price Prediction Interval - 2023.png, id=388, 1454.7951pt x 515.2851pt>
 File: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png Graphic file (type png)
 <use pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>
-Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png  used on input line 92.
+Package pdftex.def Info: pictures/RL/Negative Capacity Price Prediction Interval - 2023.png  used on input line 96.
 (pdftex.def)             Requested size: 449.55357pt x 159.22566pt.
 
 
-[29 <./pictures/Autocorrelation Negative Capacity - 4 Weeks.png>]
-<pictures/overviewDAprices_year.png, id=468, 1467.081pt x 630.9171pt>
+[26 <./pictures/Autocorrelation Negative Capacity - 4 Weeks.png>]
+<pictures/overviewDAprices_year.png, id=398, 1467.081pt x 630.9171pt>
 File: pictures/overviewDAprices_year.png Graphic file (type png)
 <use pictures/overviewDAprices_year.png>
-Package pdftex.def Info: pictures/overviewDAprices_year.png  used on input line 107.
+Package pdftex.def Info: pictures/overviewDAprices_year.png  used on input line 112.
 (pdftex.def)             Requested size: 449.55357pt x 193.32956pt.
 
 
@@ -3206,154 +3014,149 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
 
-[30 <./pictures/RL/Negative Capacity Price Prediction - 2023.png> <./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>]
-<pictures/DA/Mean DA Prices per Day and Hour - 2020.png, id=478, 406.1574pt x 328.8285pt>
+[27 <./pictures/RL/Negative Capacity Price Prediction - 2023.png> <./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2020.png, id=408, 406.1574pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2020.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2020.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2020.png  used on input line 145.
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2020.png  used on input line 150.
 (pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2020.png, id=479, 406.1574pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2020.png, id=409, 406.1574pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2020.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2020.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2020.png  used on input line 150.
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2020.png  used on input line 155.
 (pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
 
 
-[31 <./pictures/overviewDAprices_year.png>]
-<pictures/DA/Mean DA Prices per Day and Hour - 2021.png, id=487, 412.6617pt x 328.8285pt>
+[28 <./pictures/overviewDAprices_year.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2021.png, id=417, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2021.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2021.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2021.png  used on input line 160.
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2021.png  used on input line 165.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2021.png, id=488, 412.6617pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2021.png, id=418, 412.6617pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2021.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2021.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2021.png  used on input line 165.
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2021.png  used on input line 170.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Mean DA Prices per Day and Hour - 2022.png, id=489, 412.6617pt x 328.8285pt>
+<pictures/DA/Mean DA Prices per Day and Hour - 2022.png, id=419, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2022.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2022.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2022.png  used on input line 175.
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2022.png  used on input line 180.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2022.png, id=490, 412.6617pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2022.png, id=420, 412.6617pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2022.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2022.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2022.png  used on input line 180.
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2022.png  used on input line 185.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Mean DA Prices per Day and Hour - 2023.png, id=491, 412.6617pt x 328.8285pt>
+<pictures/DA/Mean DA Prices per Day and Hour - 2023.png, id=421, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2023.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2023.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2023.png  used on input line 190.
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2023.png  used on input line 195.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2023.png, id=492, 406.1574pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2023.png, id=422, 406.1574pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2023.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2023.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2023.png  used on input line 195.
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2023.png  used on input line 200.
 (pdftex.def)             Requested size: 220.2837pt x 178.34245pt.
 
 
-[32 <./pictures/DA/Mean DA Prices per Day and Hour - 2020.png> <./pictures/DA/Standard Deviation per Day and Hour - 2020.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2021.png> <./pictures/DA/Standard Deviation per Day and Hour - 2021.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2022.png> <./pictures/DA/Standard Deviation per Day and Hour - 2022.png>]
-<pictures/DA/Mean DA Prices per Day and Hour - 2024.png, id=505, 412.6617pt x 328.8285pt>
+[29 <./pictures/DA/Mean DA Prices per Day and Hour - 2020.png> <./pictures/DA/Standard Deviation per Day and Hour - 2020.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2021.png> <./pictures/DA/Standard Deviation per Day and Hour - 2021.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2022.png> <./pictures/DA/Standard Deviation per Day and Hour - 2022.png>]
+<pictures/DA/Mean DA Prices per Day and Hour - 2024.png, id=437, 412.6617pt x 328.8285pt>
 File: pictures/DA/Mean DA Prices per Day and Hour - 2024.png Graphic file (type png)
 <use pictures/DA/Mean DA Prices per Day and Hour - 2024.png>
-Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2024.png  used on input line 205.
+Package pdftex.def Info: pictures/DA/Mean DA Prices per Day and Hour - 2024.png  used on input line 210.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
-<pictures/DA/Standard Deviation per Day and Hour - 2024.png, id=506, 412.6617pt x 328.8285pt>
+<pictures/DA/Standard Deviation per Day and Hour - 2024.png, id=438, 412.6617pt x 328.8285pt>
 File: pictures/DA/Standard Deviation per Day and Hour - 2024.png Graphic file (type png)
 <use pictures/DA/Standard Deviation per Day and Hour - 2024.png>
-Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2024.png  used on input line 210.
+Package pdftex.def Info: pictures/DA/Standard Deviation per Day and Hour - 2024.png  used on input line 215.
 (pdftex.def)             Requested size: 220.2837pt x 175.53265pt.
 
 
-[33 <./pictures/DA/Mean DA Prices per Day and Hour - 2023.png> <./pictures/DA/Standard Deviation per Day and Hour - 2023.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2024.png> <./pictures/DA/Standard Deviation per Day and Hour - 2024.png>]
-<pictures/Autocorrelation Positive Energy - 2 Weeks.png, id=519, 416.2752pt x 335.3328pt>
+[30 <./pictures/DA/Mean DA Prices per Day and Hour - 2023.png> <./pictures/DA/Standard Deviation per Day and Hour - 2023.png> <./pictures/DA/Mean DA Prices per Day and Hour - 2024.png> <./pictures/DA/Standard Deviation per Day and Hour - 2024.png>]
+<pictures/Autocorrelation Positive Energy - 2 Weeks.png, id=451, 416.2752pt x 335.3328pt>
 File: pictures/Autocorrelation Positive Energy - 2 Weeks.png Graphic file (type png)
 <use pictures/Autocorrelation Positive Energy - 2 Weeks.png>
-Package pdftex.def Info: pictures/Autocorrelation Positive Energy - 2 Weeks.png  used on input line 265.
+Package pdftex.def Info: pictures/Autocorrelation Positive Energy - 2 Weeks.png  used on input line 270.
 (pdftex.def)             Requested size: 449.55357pt x 362.15913pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/posEngOverview.png, id=521, 1475.7534pt x 643.203pt>
+<pictures/posEngOverview.png, id=453, 1475.7534pt x 643.203pt>
 File: pictures/posEngOverview.png Graphic file (type png)
 <use pictures/posEngOverview.png>
-Package pdftex.def Info: pictures/posEngOverview.png  used on input line 275.
+Package pdftex.def Info: pictures/posEngOverview.png  used on input line 280.
 (pdftex.def)             Requested size: 449.55357pt x 195.93617pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 
-Overfull \hbox (0.60947pt too wide) in paragraph at lines 279--279
+Overfull \hbox (0.60947pt too wide) in paragraph at lines 284--284
 \T1/opensans-TLF/l/n/10.95 (-20) zpreisen[]  
  []
 
 
-Overfull \hbox (0.60947pt too wide) in paragraph at lines 279--279
+Overfull \hbox (0.60947pt too wide) in paragraph at lines 284--284
 \T1/opensans-TLF/l/n/10.95 (-20) zpreisen[]  
  []
 
 
-Overfull \hbox (8.80363pt too wide) in paragraph at lines 280--280
+Overfull \hbox (8.80363pt too wide) in paragraph at lines 285--285
 \T1/opensans-TLF/l/n/10.95 (-20) schiedene 
  []
 
 
-Overfull \hbox (6.2368pt too wide) in paragraph at lines 280--280
+Overfull \hbox (6.2368pt too wide) in paragraph at lines 285--285
 \T1/opensans-TLF/l/n/10.95 (-20) szenarien[]  
  []
 
 
-Overfull \hbox (8.80363pt too wide) in paragraph at lines 280--280
+Overfull \hbox (8.80363pt too wide) in paragraph at lines 285--285
 \T1/opensans-TLF/l/n/10.95 (-20) schiedene 
  []
 
 
-Overfull \hbox (6.2368pt too wide) in paragraph at lines 280--280
+Overfull \hbox (6.2368pt too wide) in paragraph at lines 285--285
 \T1/opensans-TLF/l/n/10.95 (-20) szenarien[]  
  []
 
 
-LaTeX Warning: Marginpar on page 34 moved.
+LaTeX Warning: Marginpar on page 31 moved.
 
 
-Overfull \hbox (4.1291pt too wide) in paragraph at lines 281--281
+Overfull \hbox (4.1291pt too wide) in paragraph at lines 286--286
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
  []
 
 
-Overfull \hbox (4.1291pt too wide) in paragraph at lines 281--281
+Overfull \hbox (4.1291pt too wide) in paragraph at lines 286--286
 [][][]\T1/opensans-TLF/l/n/10.95 (-20) appendix 
  []
 
 
-LaTeX Warning: Marginpar on page 34 moved.
+LaTeX Warning: Marginpar on page 31 moved.
 
 
 
-[34]
+[31]
 
-[35 <./pictures/Autocorrelation Positive Energy - 2 Weeks.png> <./pictures/posEngOverview.png>])
-Underfull \hbox (badness 10000) in paragraph at lines 344--200
+[32 <./pictures/Autocorrelation Positive Energy - 2 Weeks.png> <./pictures/posEngOverview.png>])
 
- []
-
-
-
-[36]
+[33]
 \openout2 = `chapters/model/simplifications_eng.aux'.
 
  (./chapters/model/simplifications_eng.tex
 
-[37
+[34
 
 
 
 ]
 
-[38])
+[35])
 
-[39]
+[36]
 \openout2 = `chapters/model_eng.aux'.
 
 
@@ -3383,16 +3186,16 @@ Overfull \hbox (6.63493pt too wide) in paragraph at lines 3--3
  []
 
 
-LaTeX Warning: Marginpar on page 40 moved.
+LaTeX Warning: Marginpar on page 37 moved.
 
-<pictures/results/relativeProduktionQuantils.png, id=564, 409.7709pt x 337.5009pt>
+<pictures/results/relativeProduktionQuantils.png, id=497, 409.7709pt x 337.5009pt>
 File: pictures/results/relativeProduktionQuantils.png Graphic file (type png)
 <use pictures/results/relativeProduktionQuantils.png>
-Package pdftex.def Info: pictures/results/relativeProduktionQuantils.png  used on input line 11.
+Package pdftex.def Info: pictures/results/relativeProduktionQuantils.png  used on input line 12.
 (pdftex.def)             Requested size: 314.68613pt x 259.19672pt.
 
 
-[40
+[37
 
 
 
@@ -3401,116 +3204,160 @@ Package pdftex.def Info: pictures/results/relativeProduktionQuantils.png  used o
 
 
  <./pictures/results/relativeProduktionQuantils.png>]
-<pictures/results/Negative Balance Energy - Q1.png, id=576, 1438.173pt x 502.2765pt>
+<pictures/results/Negative Balance Energy - Q1.png, id=509, 1438.173pt x 502.2765pt>
 File: pictures/results/Negative Balance Energy - Q1.png Graphic file (type png)
 <use pictures/results/Negative Balance Energy - Q1.png>
-Package pdftex.def Info: pictures/results/Negative Balance Energy - Q1.png  used on input line 56.
+Package pdftex.def Info: pictures/results/Negative Balance Energy - Q1.png  used on input line 57.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
-<pictures/results/Positive Balance Energy - Q1.png, id=577, 1438.173pt x 502.2765pt>
+<pictures/results/Positive Balance Energy - Q1.png, id=510, 1438.173pt x 502.2765pt>
 File: pictures/results/Positive Balance Energy - Q1.png Graphic file (type png)
 <use pictures/results/Positive Balance Energy - Q1.png>
-Package pdftex.def Info: pictures/results/Positive Balance Energy - Q1.png  used on input line 62.
+Package pdftex.def Info: pictures/results/Positive Balance Energy - Q1.png  used on input line 63.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Negative Balance Energy - Q18.png, id=578, 1438.173pt x 502.2765pt>
+<pictures/results/Negative Balance Energy - Q18.png, id=511, 1438.173pt x 502.2765pt>
 File: pictures/results/Negative Balance Energy - Q18.png Graphic file (type png)
 <use pictures/results/Negative Balance Energy - Q18.png>
-Package pdftex.def Info: pictures/results/Negative Balance Energy - Q18.png  used on input line 68.
+Package pdftex.def Info: pictures/results/Negative Balance Energy - Q18.png  used on input line 69.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Positive Balance Energy - Q18.png, id=579, 1438.173pt x 502.2765pt>
+<pictures/results/Positive Balance Energy - Q18.png, id=512, 1438.173pt x 502.2765pt>
 File: pictures/results/Positive Balance Energy - Q18.png Graphic file (type png)
 <use pictures/results/Positive Balance Energy - Q18.png>
-Package pdftex.def Info: pictures/results/Positive Balance Energy - Q18.png  used on input line 74.
+Package pdftex.def Info: pictures/results/Positive Balance Energy - Q18.png  used on input line 75.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Negative Balance Energy - Q36.png, id=580, 1438.173pt x 502.2765pt>
+<pictures/results/Negative Balance Energy - Q36.png, id=513, 1438.173pt x 502.2765pt>
 File: pictures/results/Negative Balance Energy - Q36.png Graphic file (type png)
 <use pictures/results/Negative Balance Energy - Q36.png>
-Package pdftex.def Info: pictures/results/Negative Balance Energy - Q36.png  used on input line 80.
+Package pdftex.def Info: pictures/results/Negative Balance Energy - Q36.png  used on input line 81.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<pictures/results/Positive Balance Energy - Q36.png, id=581, 1438.173pt x 502.2765pt>
+<pictures/results/Positive Balance Energy - Q36.png, id=514, 1438.173pt x 502.2765pt>
 File: pictures/results/Positive Balance Energy - Q36.png Graphic file (type png)
 <use pictures/results/Positive Balance Energy - Q36.png>
-Package pdftex.def Info: pictures/results/Positive Balance Energy - Q36.png  used on input line 86.
+Package pdftex.def Info: pictures/results/Positive Balance Energy - Q36.png  used on input line 87.
 (pdftex.def)             Requested size: 449.55357pt x 156.99934pt.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 )
 
-[41 <./pictures/results/Negative Balance Energy - Q1.png>]
+[38 <./pictures/results/Negative Balance Energy - Q1.png>]
 
-[42 <./pictures/results/Positive Balance Energy - Q1.png> <./pictures/results/Negative Balance Energy - Q18.png> <./pictures/results/Positive Balance Energy - Q18.png>]
+[39 <./pictures/results/Positive Balance Energy - Q1.png> <./pictures/results/Negative Balance Energy - Q18.png> <./pictures/results/Positive Balance Energy - Q18.png>]
 
-[43 <./pictures/results/Negative Balance Energy - Q36.png> <./pictures/results/Positive Balance Energy - Q36.png>]
+[40 <./pictures/results/Negative Balance Energy - Q36.png> <./pictures/results/Positive Balance Energy - Q36.png>]
 \openout2 = `chapters/conclusion_eng.aux'.
 
  (./chapters/conclusion_eng.tex
 chapter 5.
 
-Underfull \hbox (badness 10000) in paragraph at lines 3--5
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 7--10
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 11--14
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 15--17
-
- []
-
-
-Overfull \hbox (7.40538pt too wide) in paragraph at lines 22--22
+Overfull \hbox (7.40538pt too wide) in paragraph at lines 7--7
 \T1/opensans-TLF/l/n/10.95 (-20) aufteilugn 
  []
 
 
-Overfull \hbox (5.7335pt too wide) in paragraph at lines 22--22
+Overfull \hbox (5.7335pt too wide) in paragraph at lines 7--7
 \T1/opensans-TLF/l/n/10.95 (-20) geschieht 
  []
 
 
-Overfull \hbox (19.6133pt too wide) in paragraph at lines 22--22
+Overfull \hbox (19.6133pt too wide) in paragraph at lines 7--7
 \T1/opensans-TLF/l/n/10.95 (-20) vorhersagen 
  []
 
 
-Overfull \hbox (7.40538pt too wide) in paragraph at lines 22--22
+Overfull \hbox (7.40538pt too wide) in paragraph at lines 7--7
 \T1/opensans-TLF/l/n/10.95 (-20) aufteilugn 
  []
 
 
-Overfull \hbox (5.7335pt too wide) in paragraph at lines 22--22
+Overfull \hbox (5.7335pt too wide) in paragraph at lines 7--7
 \T1/opensans-TLF/l/n/10.95 (-20) geschieht 
  []
 
 
-Overfull \hbox (19.6133pt too wide) in paragraph at lines 22--22
+Overfull \hbox (19.6133pt too wide) in paragraph at lines 7--7
 \T1/opensans-TLF/l/n/10.95 (-20) vorhersagen 
  []
 
 
-LaTeX Warning: Marginpar on page 44 moved.
+LaTeX Warning: Marginpar on page 41 moved.
 
+
+Overfull \hbox (1.19647pt too wide) in paragraph at lines 21--21
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
+ []
+
+
+Overfull \hbox (1.19647pt too wide) in paragraph at lines 21--21
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
+ []
+
+
+LaTeX Warning: Marginpar on page 41 moved.
+
+
+
+[41
+
+
+
+
+]
+
+[42]
+
+LaTeX Warning: Marginpar on page 43 moved.
+
+
+LaTeX Warning: Marginpar on page 43 moved.
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 74--74
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) evenutell 
+ []
+
+
+Overfull \hbox (3.94214pt too wide) in paragraph at lines 74--74
+\T1/opensans-TLF/l/n/10.95 (-20) windkraft 
+ []
+
+
+Overfull \hbox (3.26643pt too wide) in paragraph at lines 74--74
+[][][]\T1/opensans-TLF/l/n/10.95 (-20) evenutell 
+ []
+
+
+Overfull \hbox (3.94214pt too wide) in paragraph at lines 74--74
+\T1/opensans-TLF/l/n/10.95 (-20) windkraft 
+ []
+
+
+LaTeX Warning: Marginpar on page 43 moved.
+
+)
+
+[43]
+\openout2 = `chapters/appendix.aux'.
+
+ (./chapters/appendix.tex
+chapter 6.
+<pictures/results/Activated_negEnergy_Q1.png, id=559, 1441.7865pt x 888.921pt>
+File: pictures/results/Activated_negEnergy_Q1.png Graphic file (type png)
+<use pictures/results/Activated_negEnergy_Q1.png>
+Package pdftex.def Info: pictures/results/Activated_negEnergy_Q1.png  used on input line 30.
+(pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
 
 
 [44
@@ -3519,206 +3366,152 @@ LaTeX Warning: Marginpar on page 44 moved.
 
 
 ]
-Overfull \hbox (1.19647pt too wide) in paragraph at lines 36--36
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
- []
-
-
-Overfull \hbox (1.19647pt too wide) in paragraph at lines 36--36
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) nochmal 
- []
-
-
-
-[45]
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 88--88
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) evenutell 
- []
-
-
-Overfull \hbox (3.94214pt too wide) in paragraph at lines 88--88
-\T1/opensans-TLF/l/n/10.95 (-20) windkraft 
- []
-
-
-Overfull \hbox (3.26643pt too wide) in paragraph at lines 88--88
-[][][]\T1/opensans-TLF/l/n/10.95 (-20) evenutell 
- []
-
-
-Overfull \hbox (3.94214pt too wide) in paragraph at lines 88--88
-\T1/opensans-TLF/l/n/10.95 (-20) windkraft 
- []
-
-
-LaTeX Warning: Marginpar on page 46 moved.
-
-)
-
-[46]
-\openout2 = `chapters/appendix.aux'.
-
- (./chapters/appendix.tex
-chapter 6.
-<pictures/results/Activated_negEnergy_Q1.png, id=626, 1441.7865pt x 888.921pt>
-File: pictures/results/Activated_negEnergy_Q1.png Graphic file (type png)
-<use pictures/results/Activated_negEnergy_Q1.png>
-Package pdftex.def Info: pictures/results/Activated_negEnergy_Q1.png  used on input line 30.
-(pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-
-
-[47
-
-
-
-
-]
-<pictures/results/Activated_negEnergy_Q18.png, id=637, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_negEnergy_Q18.png, id=569, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_negEnergy_Q18.png Graphic file (type png)
 <use pictures/results/Activated_negEnergy_Q18.png>
 Package pdftex.def Info: pictures/results/Activated_negEnergy_Q18.png  used on input line 37.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/Activated_negEnergy_Q36.png, id=638, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_negEnergy_Q36.png, id=570, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_negEnergy_Q36.png Graphic file (type png)
 <use pictures/results/Activated_negEnergy_Q36.png>
 Package pdftex.def Info: pictures/results/Activated_negEnergy_Q36.png  used on input line 44.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
 
 
-[48 <./pictures/results/Activated_negEnergy_Q1.png> <./pictures/results/Activated_negEnergy_Q18.png>]
-<pictures/results/Activated_posEnergy_Q1.png, id=647, 1441.7865pt x 888.921pt>
+[45 <./pictures/results/Activated_negEnergy_Q1.png> <./pictures/results/Activated_negEnergy_Q18.png>]
+<pictures/results/Activated_posEnergy_Q1.png, id=579, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_posEnergy_Q1.png Graphic file (type png)
 <use pictures/results/Activated_posEnergy_Q1.png>
 Package pdftex.def Info: pictures/results/Activated_posEnergy_Q1.png  used on input line 50.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/Activated_posEnergy_Q18.png, id=648, 1441.7865pt x 888.921pt>
+<pictures/results/Activated_posEnergy_Q18.png, id=580, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_posEnergy_Q18.png Graphic file (type png)
 <use pictures/results/Activated_posEnergy_Q18.png>
 Package pdftex.def Info: pictures/results/Activated_posEnergy_Q18.png  used on input line 56.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
 
 
-[49 <./pictures/results/Activated_negEnergy_Q36.png> <./pictures/results/Activated_posEnergy_Q1.png>]
-<pictures/results/Activated_posEnergy_Q36.png, id=657, 1441.7865pt x 888.921pt>
+[46 <./pictures/results/Activated_negEnergy_Q36.png> <./pictures/results/Activated_posEnergy_Q1.png>]
+<pictures/results/Activated_posEnergy_Q36.png, id=589, 1441.7865pt x 888.921pt>
 File: pictures/results/Activated_posEnergy_Q36.png Graphic file (type png)
 <use pictures/results/Activated_posEnergy_Q36.png>
 Package pdftex.def Info: pictures/results/Activated_posEnergy_Q36.png  used on input line 62.
 (pdftex.def)             Requested size: 449.55357pt x 277.1632pt.
-<pictures/results/CBMP_negBal_Q1.png, id=658, 1806.75pt x 1084.05pt>
+<pictures/results/CBMP_negBal_Q1.png, id=590, 1806.75pt x 1084.05pt>
 File: pictures/results/CBMP_negBal_Q1.png Graphic file (type png)
 <use pictures/results/CBMP_negBal_Q1.png>
 Package pdftex.def Info: pictures/results/CBMP_negBal_Q1.png  used on input line 71.
 (pdftex.def)             Requested size: 449.55357pt x 269.72162pt.
 
 
-[50 <./pictures/results/Activated_posEnergy_Q18.png> <./pictures/results/Activated_posEnergy_Q36.png>]
-<pictures/results/CBMP_negBal_Q18.png, id=667, 1806.75pt x 1084.05pt>
+[47 <./pictures/results/Activated_posEnergy_Q18.png> <./pictures/results/Activated_posEnergy_Q36.png>]
+<pictures/results/CBMP_negBal_Q18.png, id=600, 1806.75pt x 1084.05pt>
 File: pictures/results/CBMP_negBal_Q18.png Graphic file (type png)
 <use pictures/results/CBMP_negBal_Q18.png>
 Package pdftex.def Info: pictures/results/CBMP_negBal_Q18.png  used on input line 79.
 (pdftex.def)             Requested size: 449.55357pt x 269.72162pt.
-<pictures/results/CBMP_negBal_Q36.png, id=668, 1806.75pt x 1084.05pt>
+<pictures/results/CBMP_negBal_Q36.png, id=601, 1806.75pt x 1084.05pt>
 File: pictures/results/CBMP_negBal_Q36.png Graphic file (type png)
 <use pictures/results/CBMP_negBal_Q36.png>
 Package pdftex.def Info: pictures/results/CBMP_negBal_Q36.png  used on input line 87.
 (pdftex.def)             Requested size: 449.55357pt x 269.72162pt.
 
 
-[51 <./pictures/results/CBMP_negBal_Q1.png> <./pictures/results/CBMP_negBal_Q18.png>]
-<pictures/results/CBMP_PosBal_Q1.png, id=677, 1447.5681pt x 888.921pt>
+[48 <./pictures/results/CBMP_negBal_Q1.png> <./pictures/results/CBMP_negBal_Q18.png>]
+<pictures/results/CBMP_PosBal_Q1.png, id=610, 1447.5681pt x 888.921pt>
 File: pictures/results/CBMP_PosBal_Q1.png Graphic file (type png)
 <use pictures/results/CBMP_PosBal_Q1.png>
 Package pdftex.def Info: pictures/results/CBMP_PosBal_Q1.png  used on input line 93.
 (pdftex.def)             Requested size: 449.55357pt x 276.05096pt.
-<pictures/results/CBMP_PosBal_Q18.png, id=678, 1447.5681pt x 888.921pt>
+<pictures/results/CBMP_PosBal_Q18.png, id=611, 1447.5681pt x 888.921pt>
 File: pictures/results/CBMP_PosBal_Q18.png Graphic file (type png)
 <use pictures/results/CBMP_PosBal_Q18.png>
 Package pdftex.def Info: pictures/results/CBMP_PosBal_Q18.png  used on input line 99.
 (pdftex.def)             Requested size: 449.55357pt x 276.05096pt.
-<pictures/results/CBMP_PosBal_Q36.png, id=679, 1447.5681pt x 888.921pt>
+<pictures/results/CBMP_PosBal_Q36.png, id=612, 1447.5681pt x 888.921pt>
 File: pictures/results/CBMP_PosBal_Q36.png Graphic file (type png)
 <use pictures/results/CBMP_PosBal_Q36.png>
 Package pdftex.def Info: pictures/results/CBMP_PosBal_Q36.png  used on input line 104.
 (pdftex.def)             Requested size: 449.55357pt x 276.05096pt.
 
 
-[52 <./pictures/results/CBMP_negBal_Q36.png> <./pictures/results/CBMP_PosBal_Q1.png>]
-<pictures/results/DAPrices.png, id=689, 1441.7865pt x 499.3857pt>
+[49 <./pictures/results/CBMP_negBal_Q36.png> <./pictures/results/CBMP_PosBal_Q1.png>]
+<pictures/results/DAPrices.png, id=621, 1441.7865pt x 499.3857pt>
 File: pictures/results/DAPrices.png Graphic file (type png)
 <use pictures/results/DAPrices.png>
 Package pdftex.def Info: pictures/results/DAPrices.png  used on input line 112.
 (pdftex.def)             Requested size: 449.55357pt x 155.70712pt.
-<pictures/results/DAProd.png, id=690, 1438.173pt x 499.3857pt>
+<pictures/results/DAProd.png, id=622, 1438.173pt x 499.3857pt>
 File: pictures/results/DAProd.png Graphic file (type png)
 <use pictures/results/DAProd.png>
 Package pdftex.def Info: pictures/results/DAProd.png  used on input line 117.
 (pdftex.def)             Requested size: 449.55357pt x 156.09573pt.
 
 
-[53 <./pictures/results/CBMP_PosBal_Q18.png> <./pictures/results/CBMP_PosBal_Q36.png>]
-<pictures/results/RL_negPrice_Overview.png, id=700, 1435.2822pt x 499.3857pt>
+[50 <./pictures/results/CBMP_PosBal_Q18.png> <./pictures/results/CBMP_PosBal_Q36.png>]
+<pictures/results/RL_negPrice_Overview.png, id=631, 1435.2822pt x 499.3857pt>
 File: pictures/results/RL_negPrice_Overview.png Graphic file (type png)
 <use pictures/results/RL_negPrice_Overview.png>
 Package pdftex.def Info: pictures/results/RL_negPrice_Overview.png  used on input line 125.
 (pdftex.def)             Requested size: 449.55357pt x 156.41579pt.
-<pictures/results/RL_posPrice_Overview.png, id=701, 1435.2822pt x 499.3857pt>
+<pictures/results/RL_posPrice_Overview.png, id=632, 1435.2822pt x 499.3857pt>
 File: pictures/results/RL_posPrice_Overview.png Graphic file (type png)
 <use pictures/results/RL_posPrice_Overview.png>
 Package pdftex.def Info: pictures/results/RL_posPrice_Overview.png  used on input line 130.
 (pdftex.def)             Requested size: 449.55357pt x 156.41579pt.
-<pictures/results/DA Energy - Q1.png, id=702, 1451.1816pt x 502.2765pt>
+<pictures/results/DA Energy - Q1.png, id=633, 1451.1816pt x 502.2765pt>
 File: pictures/results/DA Energy - Q1.png Graphic file (type png)
 <use pictures/results/DA Energy - Q1.png>
 Package pdftex.def Info: pictures/results/DA Energy - Q1.png  used on input line 138.
 (pdftex.def)             Requested size: 449.55357pt x 155.5968pt.
 
 
-[54 <./pictures/results/DAPrices.png> <./pictures/results/DAProd.png> <./pictures/results/RL_negPrice_Overview.png>]
-<pictures/results/DA Energy - Q18.png, id=713, 1444.6773pt x 502.2765pt>
+[51 <./pictures/results/DAPrices.png> <./pictures/results/DAProd.png> <./pictures/results/RL_negPrice_Overview.png>]
+<pictures/results/DA Energy - Q18.png, id=644, 1444.6773pt x 502.2765pt>
 File: pictures/results/DA Energy - Q18.png Graphic file (type png)
 <use pictures/results/DA Energy - Q18.png>
 Package pdftex.def Info: pictures/results/DA Energy - Q18.png  used on input line 144.
 (pdftex.def)             Requested size: 449.55357pt x 156.29424pt.
-<pictures/results/DA Energy - Q36.png, id=714, 1451.1816pt x 502.2765pt>
+<pictures/results/DA Energy - Q36.png, id=645, 1451.1816pt x 502.2765pt>
 File: pictures/results/DA Energy - Q36.png Graphic file (type png)
 <use pictures/results/DA Energy - Q36.png>
 Package pdftex.def Info: pictures/results/DA Energy - Q36.png  used on input line 150.
 (pdftex.def)             Requested size: 449.55357pt x 155.5968pt.
 
 
-[55 <./pictures/results/RL_posPrice_Overview.png> <./pictures/results/DA Energy - Q1.png> <./pictures/results/DA Energy - Q18.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 159--160
+[52 <./pictures/results/RL_posPrice_Overview.png> <./pictures/results/DA Energy - Q1.png> <./pictures/results/DA Energy - Q18.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 160--161
 
  []
 
 LaTeX Font Info:    Font shape `T1/tudtt/l/n' will be
-(Font)              scaled to size 9.85492pt on input line 161.
+(Font)              scaled to size 9.85492pt on input line 162.
 Package microtype Info: Loading generic protrusion settings for font family
 (microtype)             `tudtt' (encoding: T1).
 (microtype)             For optimal results, create family-specific settings.
 (microtype)             See the microtype manual for details.
 
-Underfull \hbox (badness 10000) in paragraph at lines 168--169
+Underfull \hbox (badness 10000) in paragraph at lines 170--171
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 178--179
+Underfull \hbox (badness 10000) in paragraph at lines 180--181
 
  []
 
 
 
-[56{c:/texlive/2024/texmf-dist/fonts/enc/dvips/roboto/rbto_e24joy.enc} <./pictures/results/DA Energy - Q36.png>])
+[53{c:/texlive/2024/texmf-dist/fonts/enc/dvips/roboto/rbto_e24joy.enc} <./pictures/results/DA Energy - Q36.png>])
 
-[57]
+[54]
 \openout2 = `chapters/bibliography.aux'.
 
  (./chapters/bibliography.tex
 chapter without number
 )
 
-[58
+[55
 
 
 
@@ -3731,19 +3524,19 @@ Underfull \hbox (badness 10000) in paragraph at lines 14--21
 
  []
 
-<figures/unterschrift.png, id=767, 397.485pt x 128.27925pt>
+<figures/unterschrift.png, id=699, 397.485pt x 128.27925pt>
 File: figures/unterschrift.png Graphic file (type png)
 <use figures/unterschrift.png>
 Package pdftex.def Info: figures/unterschrift.png  used on input line 23.
 (pdftex.def)             Requested size: 224.77678pt x 72.5425pt.
 )
-Underfull \hbox (badness 10000) in paragraph at lines 25--217
+Underfull \hbox (badness 10000) in paragraph at lines 25--218
 
  []
 
 
 
-[59
+[56
 
 
 
@@ -3759,18 +3552,18 @@ Package logreq Info: Writing requests to 'main_eng.run.xml'.
 
  ) 
 Here is how much of TeX's memory you used:
- 56500 strings out of 473329
- 1194927 string characters out of 5723857
- 2345285 words of memory out of 5000000
- 78052 multiletter control sequences out of 15000+600000
- 666855 words of font info for 396 fonts, out of 8000000 for 9000
+ 56265 strings out of 473329
+ 1189572 string characters out of 5723857
+ 2318634 words of memory out of 5000000
+ 77848 multiletter control sequences out of 15000+600000
+ 666662 words of font info for 394 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  108i,21n,107p,10975b,2457s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Light.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-LightItalic.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb><c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-SemiBold.pfb><c:/texlive/2024/texmf-dist/fonts/type1/google/roboto/RobotoMono-Light.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonal.pfb><c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonali.pfb>
-Output written on main_eng.pdf (67 pages, 6585727 bytes).
+Output written on main_eng.pdf (64 pages, 6567458 bytes).
 PDF statistics:
- 939 PDF objects out of 1000 (max. 8388607)
- 744 compressed objects within 8 object streams
- 274 named destinations out of 1000 (max. 500000)
- 131000 words of extra memory for PDF output out of 154059 (max. 10000000)
+ 866 PDF objects out of 1000 (max. 8388607)
+ 675 compressed objects within 7 object streams
+ 246 named destinations out of 1000 (max. 500000)
+ 131008 words of extra memory for PDF output out of 154059 (max. 10000000)
 

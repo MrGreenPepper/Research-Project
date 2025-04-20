@@ -2377,16 +2377,12 @@
     <bcf:citekey order="3" intorder="1">Nitsch.2021</bcf:citekey>
     <bcf:citekey order="4" intorder="1">Krishnamurthy.2018</bcf:citekey>
     <bcf:citekey order="5" intorder="1">OConnor.2024</bcf:citekey>
-    <bcf:citekey order="6" intorder="1">Olk.2019</bcf:citekey>
-    <bcf:citekey order="7" intorder="1">Cai.2016</bcf:citekey>
-    <bcf:citekey order="8" intorder="1">Krishnamurthy.2018</bcf:citekey>
-    <bcf:citekey order="9" intorder="1">OConnor.2024</bcf:citekey>
-    <bcf:citekey order="10" intorder="1">.04.12.2024</bcf:citekey>
-    <bcf:citekey order="11" intorder="1">50hertzamprionTENNETTRANSNETBW.</bcf:citekey>
-    <bcf:citekey order="12" intorder="1">.08.04.2025</bcf:citekey>
-    <bcf:citekey order="13" intorder="1">50HertzTransmissionGmbHAmprionGmbHTenneTTSOGmbH.18.04.2025</bcf:citekey>
-    <bcf:citekey order="14" intorder="1">.05.04.2025</bcf:citekey>
-    <bcf:citekey order="15" intorder="1">.08.04.2025</bcf:citekey>
+    <bcf:citekey order="6" intorder="1">.04.12.2024</bcf:citekey>
+    <bcf:citekey order="7" intorder="1">50hertzamprionTENNETTRANSNETBW.</bcf:citekey>
+    <bcf:citekey order="8" intorder="1">.08.04.2025</bcf:citekey>
+    <bcf:citekey order="9" intorder="1">50HertzTransmissionGmbHAmprionGmbHTenneTTSOGmbH.18.04.2025</bcf:citekey>
+    <bcf:citekey order="10" intorder="1">.05.04.2025</bcf:citekey>
+    <bcf:citekey order="11" intorder="1">.08.04.2025</bcf:citekey>
   </bcf:section>
   <!-- SORTING TEMPLATES -->
   <bcf:sortingtemplate name="ynt">

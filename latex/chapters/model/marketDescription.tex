@@ -98,11 +98,11 @@ um den viertelstunden wert zu entsprechen.
 Sollte also beispielsweise 100MW geboten am RL geboten werden so muss für jede
 viertelstunde im entsprechenden Block 25MWh postive bzw. negative Arbeit vorgehalten werden.   \\
 \begin{flalign}
-	0 \leq                                         & Q^{in}_{RL}(s^{in}_{RL}),Q^{out}_{RL}(s^{out}_{RL})\quad\forall  s^{in}_{RL},s^{out}_{RL} \label{eq:positeQ}                                     \\
-	r \geq                                         & \sum_{s^{in}_{RL}}Q^{in}_{RL}(s^{in}_{RL}),\sum_{s^{out}_{RL}}Q^{out}_{RL}(s^{out}_{RL})  \label{eq:RLrate}                                      \\
-	a + \sum_{s^{in}_{RL}}Q^{in}_{RL}(s^{in}_{RL}) & \geq \sum_{s^{out}_{RL}}Q^{out}_{RL}(s^{out}_{RL}) \label{eq:RLaccessPoint}                                                                      \\
-	Q^{in}_{RL}(t_{block}, s^{in}_{RL}))	* 0.25    & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res1} \\
-	Q^{out}_{RL}(t_{block}, s^{out}_{RL})	* 0.25   & \leq BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res2}
+	0 \leq                                                   & Q^{in}_{RL}(s^{in}_{RL}),Q^{out}_{RL}(s^{out}_{RL})\quad\forall  s^{in}_{RL},s^{out}_{RL} \label{eq:positeQ}                                     \\
+	r \geq                                                   & \sum_{s^{in}_{RL}}Q^{in}_{RL}(s^{in}_{RL}),\sum_{s^{out}_{RL}}Q^{out}_{RL}(s^{out}_{RL})  \label{eq:RLrate}                                      \\
+	\frac{a}{4} + \sum_{s^{in}_{RL}}Q^{in}_{RL}(s^{in}_{RL}) & \geq \sum_{s^{out}_{RL}}Q^{out}_{RL}(s^{out}_{RL}) \label{eq:RLaccessPoint}                                                                      \\
+	Q^{in}_{RL}(t_{block}, s^{in}_{RL}))	* 0.25              & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res1} \\
+	Q^{out}_{RL}(t_{block}, s^{out}_{RL})	* 0.25             & \leq BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res2}
 \end{flalign}
 
 \todo{strict a  einführen}

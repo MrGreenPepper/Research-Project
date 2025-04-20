@@ -749,7 +749,6 @@ INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
-INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/sy-iwona.enc
 OUTPUT main_eng.tdo
 INPUT ./chapters/opening.tex
 INPUT ./chapters/opening.tex
@@ -824,6 +823,7 @@ INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T
 INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/sy-iwona.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
 INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm

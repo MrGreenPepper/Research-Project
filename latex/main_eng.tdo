@@ -1,46 +1,20 @@
 \contentsline {todo}{nochmal checken ob die ergebnisse den letzten satz so hergeben}{I}{section*.4}%
-\contentsline {todo}{sauber und ausführlich machen }{III}{section*.7}%
-\contentsline {todo}{alle tabellen nochmal korrektur lesen }{III}{section*.8}%
-\contentsline {todo}{make tables look nice}{III}{section*.9}%
-\contentsline {todo}{eventuell table heads dick machen}{III}{section*.10}%
-\contentsline {todo}{tables and figures verzeichniss}{1}{section*.15}%
-\contentsline {todo}{Check whether the market participation constraint is discussed later in the model section— if not, consider briefly mentioning it here as a potential downside.}{2}{section*.16}%
-\contentsline {todo}{nochmal lesen und schauen ob roter faden gut}{6}{section*.17}%
-\contentsline {todo}{Final read-through to ensure a consistent line of argumentation.}{7}{section*.18}%
-\contentsline {todo}{sollte hier noch eine GAMS erwähnung mit rein?}{9}{section*.19}%
-\contentsline {todo}{check if constraints are in already included in this part}{9}{section*.20}%
-\contentsline {todo}{end: check if order ist still correct}{9}{section*.21}%
-\contentsline {todo}{Overview of the chronological sequence of the markets.}{10}{section*.22}%
-\contentsline {todo}{It might be useful to make a general statement on how scenarios are interpreted within the different market models. Alternatively, I could first describe the individual markets and then explain the creation of the required data for each.}{10}{section*.23}%
-\contentsline {todo}{eventuell noch mit rein das ich mein scenario selbst wählen kann}{11}{section*.25}%
-\contentsline {todo}{This might be omitted or included in the simplification assumptions.}{11}{section*.28}%
-\contentsline {todo}{Consider revising the part about the quantity as an abstract binary activation variable and adjust the previous sections accordingly.}{12}{section*.31}%
-\contentsline {todo}{Consider making the binary variable only price-dependent and extracting it differently.}{12}{section*.32}%
-\contentsline {todo}{strict a einführen}{13}{section*.33}%
-\contentsline {todo}{Formelzeichen kontrollieren}{13}{section*.34}%
-\contentsline {todo}{alle Gleichungen checken wegen $\forall $}{13}{section*.35}%
-\contentsline {todo}{alle Gleichungen mit Nummerierung und Beschreibung überarbeiten}{13}{section*.36}%
-\contentsline {todo}{Assumption: perfect wind park forecast}{14}{section*.41}%
-\contentsline {todo}{Minimum quantity?}{15}{section*.44}%
-\contentsline {todo}{Possibly explanation for positive and negative work?}{15}{section*.45}%
-\contentsline {todo}{strikte variante}{18}{section*.48}%
-\contentsline {todo}{speicherkapazitätkosten weg lassen?}{21}{section*.49}%
-\contentsline {todo}{implement strictFactor from Gams model}{25}{section*.50}%
-\contentsline {todo}{decide whether to include capacity costs}{25}{section*.51}%
-\contentsline {todo}{add reference}{26}{section*.52}%
-\contentsline {todo}{just to remember the red line: How are the different time series generated?}{27}{section*.53}%
-\contentsline {todo}{redo figure with bigger legend}{30}{section*.60}%
-\contentsline {todo}{das ist eine grafik mit den alten average preise, mache eine graifk mit den richtigen grenzpreisen}{34}{section*.68}%
-\contentsline {todo}{grafiken verschiedene Preisszenarien}{34}{section*.69}%
-\contentsline {todo}{appendix verweis zu python code}{34}{section*.70}%
-\contentsline {todo}{Python Code appendix verweis}{36}{section*.72}%
-\contentsline {todo}{beachten das das die durchschnittlichen q's über alle möglichen szenarion innerhalb des erwarteten quantils sind}{40}{section*.81}%
-\contentsline {todo}{neue DA markt linie}{40}{section*.82}%
-\contentsline {todo}{perhaps add a clarification in the data section as to why medians are used here}{40}{section*.84}%
-\contentsline {todo}{insert graphic here ... !! rather important !!}{41}{section*.85}%
-\contentsline {todo}{hier nochmal rein das die ganze sache am RA markt forecasting hängt, und das man gute erfolge damit haben könnte wenn man nicht probiert bestimmte genaue zahlen zu forecasten sondern eher annimmt das der markt bestimmten rythmen unterliegt --> verweiß auf appendix als einen aufschlag dazu}{44}{section*.92}%
-\contentsline {todo}{ob die aufteilugn in q36 zwischen RA und DA wirklich so geschieht ist stark davon bedingt ob man den RA markt so genau vorhersagen kann und damit so perfekt alle preisspitzen mitnehmen kann}{44}{section*.93}%
-\contentsline {todo}{nochmal überlegen ob das hier sinn macht}{45}{section*.94}%
-\contentsline {todo}{Include simulations with other providers}{46}{section*.95}%
-\contentsline {todo}{evenutell noch mit rein das die optimierung der windkraft noch komplett fehlt so kann die batterie auch genutzt werden um relativ teure fehler aus zu gleichen wie im paper (Optimal Dispatch Scheduling of a Wind-Battery-System in German Power Market) opmitiert}{46}{section*.96}%
-\contentsline {todo}{base model stats a/r wpf and and and ... all the scalars used}{47}{section*.97}%
+\contentsline {todo}{danksagung uka meißen}{II}{section*.6}%
+\contentsline {todo}{tables and figures verzeichniss}{1}{section*.12}%
+\contentsline {todo}{strikte variante}{16}{section*.26}%
+\contentsline {todo}{redo figure with bigger legend}{27}{section*.33}%
+\contentsline {todo}{das ist eine grafik mit den alten average preise, mache eine graifk mit den richtigen grenzpreisen}{31}{section*.41}%
+\contentsline {todo}{grafiken verschiedene Preisszenarien}{31}{section*.42}%
+\contentsline {todo}{appendix verweis zu python code}{31}{section*.43}%
+\contentsline {todo}{beachten das das die durchschnittlichen q's über alle möglichen szenarion innerhalb des erwarteten quantils sind}{37}{section*.53}%
+\contentsline {todo}{neue DA markt linie}{37}{section*.54}%
+\contentsline {todo}{perhaps add a clarification in the data section as to why medians are used here}{37}{section*.56}%
+\contentsline {todo}{insert graphic here ... !! rather important !!}{38}{section*.57}%
+\contentsline {todo}{hier nochmal rein das die ganze sache am RA markt forecasting hängt, und das man gute erfolge damit haben könnte wenn man nicht probiert bestimmte genaue zahlen zu forecasten sondern eher annimmt das der markt bestimmten rythmen unterliegt --> verweiß auf appendix als einen aufschlag dazu}{41}{section*.64}%
+\contentsline {todo}{ob die aufteilugn in q36 zwischen RA und DA wirklich so geschieht ist stark davon bedingt ob man den RA markt so genau vorhersagen kann und damit so perfekt alle preisspitzen mitnehmen kann}{41}{section*.65}%
+\contentsline {todo}{nochmal überlegen ob das hier sinn macht}{41}{section*.66}%
+\contentsline {todo}{!!!!!!}{43}{section*.67}%
+\contentsline {todo}{Include simulations with other providers}{43}{section*.68}%
+\contentsline {todo}{evenutell noch mit rein das die optimierung der windkraft noch komplett fehlt so kann die batterie auch genutzt werden um relativ teure fehler aus zu gleichen wie im paper (Optimal Dispatch Scheduling of a Wind-Battery-System in German Power Market) opmitiert}{43}{section*.69}%
+\contentsline {todo}{base model stats a/r wpf and and and ... all the scalars used}{44}{section*.70}%
+\contentsline {todo}{Park properties}{54}{section*.90}%

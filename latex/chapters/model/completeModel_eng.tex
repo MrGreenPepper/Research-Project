@@ -24,36 +24,35 @@ the initial decision in the aFFR capacity market [\ref{eq:overallObj}]. Addition
 from the aFFR capacity market and the day-ahead market need to be adjusted for the quarter-hourly calculations.
 
 \begin{flalign}
-	\max Profit  = & - workingCosts	+ \sum_{t_{quarter}}							\notag                                                                                                                              \\
+	\max Profit  = & - workingCosts	+ \sum_{t_{quarter}}							\notag                                                                                                           \\
 	\textbf{accepted  RL in \& out:}
-	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (				\notag                           \\
-	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                               \\
-	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                             \\
-	               & + (\tfrac{1}{4} * (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})  ))				\notag                                                       \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (				\notag        \\
+	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                            \\
+	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                          \\
+	               & + (\tfrac{1}{4} * (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})  ))				\notag                                    \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                   \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                \\
 	\textbf{accepted RL in \& declined out:}
-	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag                          \\
-	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                               \\
-	               & + (\tfrac{1}{4} * (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                         \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag       \\
+	               & + (\tfrac{1}{4} * (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                            \\
+	               & + (\tfrac{1}{4} * (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                   \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                \\
 	\textbf{declined RL in \& accepted out:	}
-	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag                          \\
-	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                                             \\
-	               & + (\tfrac{1}{4} * (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                         \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag       \\
+	               & + (\tfrac{1}{4} * (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL})))				\notag                                          \\
+	               & + (\tfrac{1}{4} * (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                   \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                \\
 	\textbf{declined RL in \& out:}
-	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}))) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))  * (				\notag                     \\
-	               & + (\tfrac{1}{4} * (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                                         \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                                      \\
-	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                                   \\
-	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor,1/|s_{RA}| = 1 / |s_{RA}|      \notag \\
+	               & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}))) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))  * (				\notag  \\
+	               & + (\tfrac{1}{4} * (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})              * p^{exp}_{DA}(t_{hour})))				\notag                                      \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))				\notag                   \\
+	               & + (\sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL})))				\notag                \\
+	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor, s_{RA}     \notag \\
 	\label{eq:overallObj}
 \end{flalign}
 
-\todo{speicherkapazitätkosten weg lassen?}
 The costs in this context arise from the working point adjustments.
 The expected working point costs are derived from the opposite market price of the aFFR energy market,
 factored by a working point factor $WPF$.
@@ -81,7 +80,7 @@ working point factor due to its urgency[\ref{eq:workingCostsEQ}].
 	               & +\sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (1-(\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL}))))       * (\notag \\
 	               & + \sum_{s_{RA}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|)\notag                                   \\
 	               & + \sum_{s_{RA}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) * p^{in}_{ER} * WPF *1/|s_{RA}|\notag                                   \\
-	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor      \notag                                                                    \\
+	               & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor      \notag     \\
 	\label{eq:workingCostsEQ}
 \end{flalign}
 
@@ -109,7 +108,7 @@ The calculation of the battery storage status is then given by the following ove
 	                                   & + Q^{rN}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) / 4)	\notag                                                                                       \\
 	                                   & + (WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag               \\
 	                                   & - (WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) +  Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}))	\notag             \\
-	\quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor
+	\quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor
 	\label{eq:batStatcon_(t_{quarter})}
 \end{flalign}
 
@@ -117,52 +116,42 @@ The connection point constraints must be defined for all possible outcomes and s
 Additionally, they must be ensured in both the positive and negative directions as a safeguard.
 
 \begin{flalign}
-	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_B(t_{quarter})}                                                  \\
-	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_I(t_{quarter})}                                                  \\
-	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_O(t_{quarter})}                                                  \\
-	 & a + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                            \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_N(t_{quarter})}
+	 & \frac{a}{4} + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag      \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                           \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_B(t_{quarter})} \\
+	 & \frac{a}{4} + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag      \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                           \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_I(t_{quarter})} \\
+	 & \frac{a}{4} + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag      \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                           \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_O(t_{quarter})} \\
+	 & \frac{a}{4} + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag      \\
+	 & \geq \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                           \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_N(t_{quarter})}
 \end{flalign}
 \begin{flalign}
-	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
-	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_B_neg(t_{quarter})}                                               \\
-	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
-	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_I_neg(t_{quarter})}                                               \\
-	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
-	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_O_neg(t_{quarter})}                                               \\
-	 & a + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                              \\
-	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag  \\
-	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag \\
-	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor \label{accPointCon_a_N_neg(t_{quarter})}
+	 & \frac{a}{4} + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rB}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                      \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                    \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrB}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                   \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_B_neg(t_{quarter})} \\
+	 & \frac{a}{4} + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rI}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                      \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                    \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrI}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                   \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_I_neg(t_{quarter})} \\
+	 & \frac{a}{4} + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rO}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                      \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                    \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrO}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                   \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_O_neg(t_{quarter})} \\
+	 & \frac{a}{4} + \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}}  (Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) * 0.25) \ \notag                                                                      \\
+	 & + \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{outrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                    \\
+	 & \geq \sum_{s^{in}_{RL}, s^{out}_{RL}} WP^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) + Q^{inrN}_{RA}(t_{quarter}, s_{RA}, s^{in}_{RL}, s^{out}_{RL}) \ \notag                   \\
+	 & \quad \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor  \label{accPointCon_a_N_neg(t_{quarter})}
 \end{flalign}
 
 A full GAMS model with all constraints can be found in Appendix~\ref{app:fullModel}
-\todo{implement strictFactor from Gams model}
 
-\todo{decide whether to include capacity costs}
-Working point costs:
-- The use of different $Q$'s allows us to avoid an additional dimension, enabling us to formulate specific market-regulatory and real-world constraints in equations, depending on the scenario that occurs.
-- Furthermore, the various time-axis scalings need to be consolidated, along with the appropriate scaling of the values for the affected time series.
-- Additionally, the battery and working point variables must be appropriately high-dimensional.
-
-A complete listing of all constraints, as well as a full model for download, can be found in the Appendix \todo{add reference}.
-
-- We can freely decide whether to participate in the DA/RA market.
 

@@ -17,22 +17,21 @@ Operating a BESS in conjunction with a renewable power plant provides several te
 
 On the one hand, excess renewable electricity can be used to charge the battery, thereby
 avoiding market-related fees. On the other hand, generation can be time-shifted to periods
-with higher energy prices. Moreover, the co-location of renewable generation and storage in a hybrid system
+with higher energy prices. Moreover, the battery can be utilized to compensate for forecast errors and thereby avoid market penalties.
+Furthermore, the co-location of renewable generation and storage in a hybrid system
 enables operators to diversify their revenue streams by participating in multiple electricity markets simultaneously.
-
-\todo{Check whether the market participation constraint is discussed later in the model section—
-	if not, consider briefly mentioning it here as a potential downside.}
+Conversely, sharing a single grid connection point can also present drawbacks.
+For example, commitments made by either the battery or the wind farm might
+limit the other's ability to participate freely in the market.
 
 However, such joint operation requires advanced optimization techniques that account for market
 mechanisms, physical constraints, and operational synergies.
-
 In this context, mathematical programming tools such as GAMS (General Algebraic Modeling System)
 are well-suited to model and solve complex multi-market dispatch problems.
 
 The objective of this study is to determine an optimal bidding strategy for a battery energy storage system
 co-located with a wind farm, across three relevant electricity markets. These include the day-ahead market,
 the balancing capacity market, and the balancing energy market.
-
 In practice, this requires a sequence of interdependent decisions:
 first, the submission of a capacity bid in the balancing market;
 second, participation in the day-ahead energy market;

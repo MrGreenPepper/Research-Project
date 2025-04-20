@@ -19,9 +19,10 @@ in relation to potential high, medium, and low prediction errors.
 \subsubsection{Day Ahead Market}
 Since the Day-Ahead market operates under a pay-as-cleared structure, our bid influences only the acceptance or rejection of our offer,
 with no impact on the price paid for the electricity.
-Given our assumption that we operate a solar or wind farm, we consider operational costs to be negligible, and thus, assume them to be zero.
+Given our assumption that we operate a wind farm, we consider operational costs to be negligible, and thus, assume them to be zero.
 As Day-Ahead prices are non-negative, we can effectively choose whether to submit a bid at a price that will almost certainly be accepted.
 This results in a simplified optimization for the DA market, represented by $Profit_{Da} = Q_{DA} * p^{exp}_{DA}$.
+We further assume our specific renewable production forecast as perfect.
 
 \subsubsection{aFFR Energy Market}
 As the aFFR Energy Market market also follows a pay-as-cleared principle, our bid influences only whether we are called upon to deliver, with no impact on the price paid for the electricity.
