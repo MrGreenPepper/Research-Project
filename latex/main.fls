@@ -507,6 +507,51 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/amsfonts/ueus.fd
 INPUT ./main.aux
 INPUT ./main.aux
 INPUT main.aux
+INPUT ./chapters/opening.aux
+INPUT ./chapters/opening.aux
+INPUT chapters/opening.aux
+INPUT ./chapters/variables.aux
+INPUT ./chapters/variables.aux
+INPUT chapters/variables.aux
+INPUT ./chapters/vorwort.aux
+INPUT ./chapters/vorwort.aux
+INPUT chapters/vorwort.aux
+INPUT ./chapters/introduction.aux
+INPUT ./chapters/introduction.aux
+INPUT chapters/introduction.aux
+INPUT ./chapters/literature.aux
+INPUT ./chapters/literature.aux
+INPUT chapters/literature.aux
+INPUT ./chapters/model/general.aux
+INPUT ./chapters/model/general.aux
+INPUT chapters/model/general.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT chapters/model/marketDescription.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT chapters/model/dataDescription.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT chapters/model/simplifications.aux
+INPUT ./chapters/model.aux
+INPUT ./chapters/model.aux
+INPUT chapters/model.aux
+INPUT ./chapters/results.aux
+INPUT ./chapters/results.aux
+INPUT chapters/results.aux
+INPUT ./chapters/conclusion.aux
+INPUT ./chapters/conclusion.aux
+INPUT chapters/conclusion.aux
+INPUT ./chapters/appendix.aux
+INPUT ./chapters/appendix.aux
+INPUT chapters/appendix.aux
+INPUT ./chapters/bibliography.aux
+INPUT ./chapters/bibliography.aux
+INPUT chapters/bibliography.aux
+INPUT ./chapters/confirmation.aux
+INPUT ./chapters/confirmation.aux
+INPUT chapters/confirmation.aux
 OUTPUT main.aux
 INPUT c:/texlive/2024/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
@@ -514,3 +559,640 @@ INPUT c:/texlive/2024/texmf-dist/tex/latex/cbfonts-fd/lgrcmr.fd
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-black.pdf
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-black.pdf
 INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-black.pdf
+OUTPUT main.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-black.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-blue.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-blue.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-blue.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-blue.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-white.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-white.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-white.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/TUD-white.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-24.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-24.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-24.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-24.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-27.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-27.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-27.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-27.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-30.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-30.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-30.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-30.pdf
+INPUT ./figures/EE2_logo.png
+INPUT ./figures/EE2_logo.png
+INPUT ./figures/EE2_logo.png
+INPUT ./figures/EE2_logo.png
+INPUT ./figures/EE2_logo.png
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-22.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-22.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-22.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-22.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-25.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-25.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-25.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-25.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-28.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-28.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-28.pdf
+INPUT c:/texlive/2024/texmf-dist/tex/latex/tudscr/logo/DDC-28.pdf
+INPUT ./main.out
+INPUT ./main.out
+INPUT main.out
+INPUT main.out
+INPUT ./main.out
+INPUT ./main.out
+OUTPUT main.out
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bookmark/bookmark.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT c:/texlive/2024/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT c:/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+INPUT c:/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+INPUT c:/texlive/2024/texmf-dist/tex/latex/translations/translations-basic-dictionary-english.trsl
+INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2024/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
+INPUT c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/grfext/grfext.sty
+INPUT c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/british.lbx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+INPUT c:/texlive/2024/texmf-dist/tex/latex/biblatex/lbx/english.lbx
+OUTPUT main.bcf
+INPUT main.bbl
+INPUT ./main.bbl
+INPUT ./main.bbl
+INPUT ./main.bbl
+INPUT main.bbl
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/tex/latex/iwona/ot1iwona.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/iwona/ot1iwona.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/iwona/ot1iwona.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/tex/latex/iwona/omxiwona.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/iwona/omxiwona.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/iwona/omxiwona.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/psnfss/ot1ptm.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+INPUT c:/texlive/2024/texmf-dist/tex/latex/microtype/mt-ptm.cfg
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/LGRopensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/LGRopensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/LGRopensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT ./main.tdo
+INPUT ./main.tdo
+INPUT main.tdo
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-var/fonts/map/pdftex/updmap/pdftex.map
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_jg4h6q.enc
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/sy-iwona.enc
+OUTPUT main.tdo
+INPUT ./chapters/opening.tex
+INPUT ./chapters/opening.tex
+OUTPUT chapters/opening.aux
+INPUT ./chapters/opening.tex
+INPUT ./chapters/opening.tex
+INPUT chapters/opening.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Regular-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT ./chapters/abstract.tex
+INPUT ./chapters/abstract.tex
+INPUT chapters/abstract.tex
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
+OUTPUT main.toc
+INPUT ./chapters/variables.tex
+INPUT ./chapters/variables.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-LightItalic-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF--base.tfm
+OUTPUT chapters/variables.aux
+INPUT ./chapters/variables.tex
+INPUT ./chapters/variables.tex
+INPUT chapters/variables.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Regular-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-LightItalic-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-LightItalic-LGR-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_uv4o4i.enc
+INPUT ./chapters/vorwort.tex
+OUTPUT chapters/vorwort.aux
+INPUT ./chapters/vorwort.tex
+INPUT ./chapters/vorwort.tex
+INPUT chapters/vorwort.tex
+INPUT ./chapters/introduction.tex
+OUTPUT chapters/introduction.aux
+INPUT ./chapters/introduction.tex
+INPUT ./chapters/introduction.tex
+INPUT chapters/introduction.tex
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/tex/latex/opensans/TS1opensans-TLF.fd
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-TS1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-TS1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-TS1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/opensans/a_nvvucy.enc
+INPUT ./chapters/literature.tex
+OUTPUT chapters/literature.aux
+INPUT ./chapters/literature.tex
+INPUT ./chapters/literature.tex
+INPUT chapters/literature.tex
+INPUT ./chapters/model/general.tex
+INPUT ./chapters/model/general.tex
+OUTPUT chapters/model/general.aux
+INPUT ./chapters/model/general.tex
+INPUT ./chapters/model/general.tex
+INPUT chapters/model/general.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/rm-iwona.enc
+INPUT ./chapters/model/marketDescription.tex
+INPUT ./chapters/model/marketDescription.tex
+OUTPUT chapters/model/marketDescription.aux
+INPUT ./chapters/model/marketDescription.tex
+INPUT ./chapters/model/marketDescription.tex
+INPUT chapters/model/marketDescription.tex
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/iwona/ex-iwona.enc
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/rm-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/mi-iwonali.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/sy-iwonalz.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/nowacki/iwona/ex-iwonal.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmb7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/adobe/times/ptmri7t.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-LGR-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-LightItalic-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-LightItalic-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-SemiBold-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-SemiBold-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT ./chapters/model/dataDescription.tex
+INPUT ./chapters/model/dataDescription.tex
+OUTPUT chapters/model/dataDescription.aux
+INPUT ./chapters/model/dataDescription.tex
+INPUT ./chapters/model/dataDescription.tex
+INPUT chapters/model/dataDescription.tex
+INPUT ./pictures/capacityData_overview.png
+INPUT ./pictures/capacityData_overview.png
+INPUT ./pictures/capacityData_overview.png
+INPUT ./pictures/capacityData_overview.png
+INPUT ./pictures/capacityData_overview.png
+INPUT ./pictures/Autocorrelation negative Capacity Price.png
+INPUT ./pictures/Autocorrelation negative Capacity Price.png
+INPUT ./pictures/Autocorrelation negative Capacity Price.png
+INPUT ./pictures/Autocorrelation negative Capacity Price.png
+INPUT ./pictures/Autocorrelation negative Capacity Price.png
+INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
+INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
+INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
+INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
+INPUT ./pictures/Autocorrelation Negative Capacity - 4 Weeks.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/RL/Negative Capacity Price Prediction Interval - 2023.png
+INPUT ./pictures/overviewDAprices_year.png
+INPUT ./pictures/overviewDAprices_year.png
+INPUT ./pictures/overviewDAprices_year.png
+INPUT ./pictures/overviewDAprices_year.png
+INPUT ./pictures/overviewDAprices_year.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2020.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2020.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2020.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2020.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2020.png
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF.tfm
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2020.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2020.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2020.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2020.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2020.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2021.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2021.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2021.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2021.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2021.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2021.png
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Regular-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Regular-T1-TLF--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/ascender/opensans/OpenSans-Light-T1-TLF.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/ascender/opensans/OpenSans-Light-T1-TLF--base.tfm
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2022.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2023.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Mean DA Prices per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/DA/Standard Deviation per Day and Hour - 2024.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/Autocorrelation Positive Energy - 2 Weeks.png
+INPUT ./pictures/posEngOverview.png
+INPUT ./pictures/posEngOverview.png
+INPUT ./pictures/posEngOverview.png
+INPUT ./pictures/posEngOverview.png
+INPUT ./pictures/posEngOverview.png
+INPUT ./chapters/model/simplifications.tex
+INPUT ./chapters/model/simplifications.tex
+OUTPUT chapters/model/simplifications.aux
+INPUT ./chapters/model/simplifications.tex
+INPUT ./chapters/model/simplifications.tex
+INPUT chapters/model/simplifications.tex
+INPUT ./chapters/model.tex
+OUTPUT chapters/model.aux
+INPUT ./chapters/model.tex
+INPUT ./chapters/model.tex
+INPUT chapters/model.tex
+INPUT ./chapters/results.tex
+OUTPUT chapters/results.aux
+INPUT ./chapters/results.tex
+INPUT ./chapters/results.tex
+INPUT chapters/results.tex
+INPUT ./pictures/results/relativeProduktionQuantils.png
+INPUT ./pictures/results/relativeProduktionQuantils.png
+INPUT ./pictures/results/relativeProduktionQuantils.png
+INPUT ./pictures/results/relativeProduktionQuantils.png
+INPUT ./pictures/results/relativeProduktionQuantils.png
+INPUT ./pictures/results/Negative Balance Energy - Q1.png
+INPUT ./pictures/results/Negative Balance Energy - Q1.png
+INPUT ./pictures/results/Negative Balance Energy - Q1.png
+INPUT ./pictures/results/Negative Balance Energy - Q1.png
+INPUT ./pictures/results/Negative Balance Energy - Q1.png
+INPUT ./pictures/results/Positive Balance Energy - Q1.png
+INPUT ./pictures/results/Positive Balance Energy - Q1.png
+INPUT ./pictures/results/Positive Balance Energy - Q1.png
+INPUT ./pictures/results/Positive Balance Energy - Q1.png
+INPUT ./pictures/results/Positive Balance Energy - Q1.png
+INPUT ./pictures/results/Negative Balance Energy - Q18.png
+INPUT ./pictures/results/Negative Balance Energy - Q18.png
+INPUT ./pictures/results/Negative Balance Energy - Q18.png
+INPUT ./pictures/results/Negative Balance Energy - Q18.png
+INPUT ./pictures/results/Negative Balance Energy - Q18.png
+INPUT ./pictures/results/Positive Balance Energy - Q18.png
+INPUT ./pictures/results/Positive Balance Energy - Q18.png
+INPUT ./pictures/results/Positive Balance Energy - Q18.png
+INPUT ./pictures/results/Positive Balance Energy - Q18.png
+INPUT ./pictures/results/Positive Balance Energy - Q18.png
+INPUT ./pictures/results/Negative Balance Energy - Q36.png
+INPUT ./pictures/results/Negative Balance Energy - Q36.png
+INPUT ./pictures/results/Negative Balance Energy - Q36.png
+INPUT ./pictures/results/Negative Balance Energy - Q36.png
+INPUT ./pictures/results/Negative Balance Energy - Q36.png
+INPUT ./pictures/results/Positive Balance Energy - Q36.png
+INPUT ./pictures/results/Positive Balance Energy - Q36.png
+INPUT ./pictures/results/Positive Balance Energy - Q36.png
+INPUT ./pictures/results/Positive Balance Energy - Q36.png
+INPUT ./pictures/results/Positive Balance Energy - Q36.png
+INPUT ./chapters/conclusion.tex
+OUTPUT chapters/conclusion.aux
+INPUT ./chapters/conclusion.tex
+INPUT ./chapters/conclusion.tex
+INPUT chapters/conclusion.tex
+INPUT ./chapters/appendix.tex
+INPUT ./chapters/appendix.tex
+OUTPUT chapters/appendix.aux
+INPUT ./chapters/appendix.tex
+INPUT ./chapters/appendix.tex
+INPUT chapters/appendix.tex
+INPUT ./pictures/results/Activated_negEnergy_Q1.png
+INPUT ./pictures/results/Activated_negEnergy_Q1.png
+INPUT ./pictures/results/Activated_negEnergy_Q1.png
+INPUT ./pictures/results/Activated_negEnergy_Q1.png
+INPUT ./pictures/results/Activated_negEnergy_Q1.png
+INPUT ./pictures/results/Activated_negEnergy_Q18.png
+INPUT ./pictures/results/Activated_negEnergy_Q18.png
+INPUT ./pictures/results/Activated_negEnergy_Q18.png
+INPUT ./pictures/results/Activated_negEnergy_Q18.png
+INPUT ./pictures/results/Activated_negEnergy_Q18.png
+INPUT ./pictures/results/Activated_negEnergy_Q36.png
+INPUT ./pictures/results/Activated_negEnergy_Q36.png
+INPUT ./pictures/results/Activated_negEnergy_Q36.png
+INPUT ./pictures/results/Activated_negEnergy_Q36.png
+INPUT ./pictures/results/Activated_negEnergy_Q36.png
+INPUT ./pictures/results/Activated_posEnergy_Q1.png
+INPUT ./pictures/results/Activated_posEnergy_Q1.png
+INPUT ./pictures/results/Activated_posEnergy_Q1.png
+INPUT ./pictures/results/Activated_posEnergy_Q1.png
+INPUT ./pictures/results/Activated_posEnergy_Q1.png
+INPUT ./pictures/results/Activated_posEnergy_Q18.png
+INPUT ./pictures/results/Activated_posEnergy_Q18.png
+INPUT ./pictures/results/Activated_posEnergy_Q18.png
+INPUT ./pictures/results/Activated_posEnergy_Q18.png
+INPUT ./pictures/results/Activated_posEnergy_Q18.png
+INPUT ./pictures/results/Activated_posEnergy_Q36.png
+INPUT ./pictures/results/Activated_posEnergy_Q36.png
+INPUT ./pictures/results/Activated_posEnergy_Q36.png
+INPUT ./pictures/results/Activated_posEnergy_Q36.png
+INPUT ./pictures/results/Activated_posEnergy_Q36.png
+INPUT ./pictures/results/CBMP_negBal_Q1.png
+INPUT ./pictures/results/CBMP_negBal_Q1.png
+INPUT ./pictures/results/CBMP_negBal_Q1.png
+INPUT ./pictures/results/CBMP_negBal_Q1.png
+INPUT ./pictures/results/CBMP_negBal_Q1.png
+INPUT ./pictures/results/CBMP_negBal_Q18.png
+INPUT ./pictures/results/CBMP_negBal_Q18.png
+INPUT ./pictures/results/CBMP_negBal_Q18.png
+INPUT ./pictures/results/CBMP_negBal_Q18.png
+INPUT ./pictures/results/CBMP_negBal_Q18.png
+INPUT ./pictures/results/CBMP_negBal_Q36.png
+INPUT ./pictures/results/CBMP_negBal_Q36.png
+INPUT ./pictures/results/CBMP_negBal_Q36.png
+INPUT ./pictures/results/CBMP_negBal_Q36.png
+INPUT ./pictures/results/CBMP_negBal_Q36.png
+INPUT ./pictures/results/CBMP_PosBal_Q1.png
+INPUT ./pictures/results/CBMP_PosBal_Q1.png
+INPUT ./pictures/results/CBMP_PosBal_Q1.png
+INPUT ./pictures/results/CBMP_PosBal_Q1.png
+INPUT ./pictures/results/CBMP_PosBal_Q1.png
+INPUT ./pictures/results/CBMP_PosBal_Q18.png
+INPUT ./pictures/results/CBMP_PosBal_Q18.png
+INPUT ./pictures/results/CBMP_PosBal_Q18.png
+INPUT ./pictures/results/CBMP_PosBal_Q18.png
+INPUT ./pictures/results/CBMP_PosBal_Q18.png
+INPUT ./pictures/results/CBMP_PosBal_Q36.png
+INPUT ./pictures/results/CBMP_PosBal_Q36.png
+INPUT ./pictures/results/CBMP_PosBal_Q36.png
+INPUT ./pictures/results/CBMP_PosBal_Q36.png
+INPUT ./pictures/results/CBMP_PosBal_Q36.png
+INPUT ./pictures/results/DAPrices.png
+INPUT ./pictures/results/DAPrices.png
+INPUT ./pictures/results/DAPrices.png
+INPUT ./pictures/results/DAPrices.png
+INPUT ./pictures/results/DAPrices.png
+INPUT ./pictures/results/DAProd.png
+INPUT ./pictures/results/DAProd.png
+INPUT ./pictures/results/DAProd.png
+INPUT ./pictures/results/DAProd.png
+INPUT ./pictures/results/DAProd.png
+INPUT ./pictures/results/RL_negPrice_Overview.png
+INPUT ./pictures/results/RL_negPrice_Overview.png
+INPUT ./pictures/results/RL_negPrice_Overview.png
+INPUT ./pictures/results/RL_negPrice_Overview.png
+INPUT ./pictures/results/RL_negPrice_Overview.png
+INPUT ./pictures/results/RL_posPrice_Overview.png
+INPUT ./pictures/results/RL_posPrice_Overview.png
+INPUT ./pictures/results/RL_posPrice_Overview.png
+INPUT ./pictures/results/RL_posPrice_Overview.png
+INPUT ./pictures/results/RL_posPrice_Overview.png
+INPUT ./pictures/results/DA Energy - Q1.png
+INPUT ./pictures/results/DA Energy - Q1.png
+INPUT ./pictures/results/DA Energy - Q1.png
+INPUT ./pictures/results/DA Energy - Q1.png
+INPUT ./pictures/results/DA Energy - Q1.png
+INPUT ./pictures/results/DA Energy - Q18.png
+INPUT ./pictures/results/DA Energy - Q18.png
+INPUT ./pictures/results/DA Energy - Q18.png
+INPUT ./pictures/results/DA Energy - Q18.png
+INPUT ./pictures/results/DA Energy - Q18.png
+INPUT ./pictures/results/DA Energy - Q36.png
+INPUT ./pictures/results/DA Energy - Q36.png
+INPUT ./pictures/results/DA Energy - Q36.png
+INPUT ./pictures/results/DA Energy - Q36.png
+INPUT ./pictures/results/DA Energy - Q36.png
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/google/roboto/RobotoMono-Light-tlf-t1.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/vf/google/roboto/RobotoMono-Light-tlf-t1.vf
+INPUT c:/texlive/2024/texmf-dist/fonts/tfm/google/roboto/RobotoMono-Light-tlf-t1--base.tfm
+INPUT c:/texlive/2024/texmf-dist/fonts/enc/dvips/roboto/rbto_e24joy.enc
+INPUT ./chapters/bibliography.tex
+INPUT ./chapters/bibliography.tex
+OUTPUT chapters/bibliography.aux
+INPUT ./chapters/bibliography.tex
+INPUT ./chapters/bibliography.tex
+INPUT chapters/bibliography.tex
+INPUT ./chapters/confirmation.tex
+INPUT ./chapters/confirmation.tex
+OUTPUT chapters/confirmation.aux
+INPUT ./chapters/confirmation.tex
+INPUT ./chapters/confirmation.tex
+INPUT chapters/confirmation.tex
+INPUT ./figures/unterschrift.png
+INPUT ./figures/unterschrift.png
+INPUT ./figures/unterschrift.png
+INPUT ./figures/unterschrift.png
+INPUT ./figures/unterschrift.png
+INPUT main.aux
+INPUT ./chapters/opening.aux
+INPUT ./chapters/opening.aux
+INPUT chapters/opening.aux
+INPUT ./chapters/variables.aux
+INPUT ./chapters/variables.aux
+INPUT chapters/variables.aux
+INPUT ./chapters/vorwort.aux
+INPUT ./chapters/vorwort.aux
+INPUT chapters/vorwort.aux
+INPUT ./chapters/introduction.aux
+INPUT ./chapters/introduction.aux
+INPUT chapters/introduction.aux
+INPUT ./chapters/literature.aux
+INPUT ./chapters/literature.aux
+INPUT chapters/literature.aux
+INPUT ./chapters/model/general.aux
+INPUT ./chapters/model/general.aux
+INPUT chapters/model/general.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT ./chapters/model/marketDescription.aux
+INPUT chapters/model/marketDescription.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT ./chapters/model/dataDescription.aux
+INPUT chapters/model/dataDescription.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT ./chapters/model/simplifications.aux
+INPUT chapters/model/simplifications.aux
+INPUT ./chapters/model.aux
+INPUT ./chapters/model.aux
+INPUT chapters/model.aux
+INPUT ./chapters/results.aux
+INPUT ./chapters/results.aux
+INPUT chapters/results.aux
+INPUT ./chapters/conclusion.aux
+INPUT ./chapters/conclusion.aux
+INPUT chapters/conclusion.aux
+INPUT ./chapters/appendix.aux
+INPUT ./chapters/appendix.aux
+INPUT chapters/appendix.aux
+INPUT ./chapters/bibliography.aux
+INPUT ./chapters/bibliography.aux
+INPUT chapters/bibliography.aux
+INPUT ./chapters/confirmation.aux
+INPUT ./chapters/confirmation.aux
+INPUT chapters/confirmation.aux
+INPUT ./main.out
+INPUT ./main.out
+INPUT main.run.xml
+OUTPUT main.run.xml
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Light.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-LightItalic.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-Regular.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/ascender/opensans/OpenSans-SemiBold.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/google/roboto/RobotoMono-Light.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonal.pfb
+INPUT c:/texlive/2024/texmf-dist/fonts/type1/nowacki/iwona/iwonali.pfb

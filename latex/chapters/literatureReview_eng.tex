@@ -6,8 +6,8 @@ They differ with respect to the markets considered as marketing options,
 the modeling approaches applied, the data used, and often they focus solely on optimizing
 battery storage systems or a renewable power plant.
 
-Many models consider only individual markets. \cite{Olk.2019} consider only the secondary german balancing market and
-optimize the battery in this context. \cite{Cai.2016} propose an optimization for a battery combined with an wind park, but
+Many models consider only individual markets.  Olk et al. \cite{Olk.2019} consider only the secondary german balancing market and
+optimize the battery in this context . Cai et al. \cite{Cai.2016} propose an optimization for a battery combined with an wind park, but
 focus on the revenue from the park at the day ahead market and use the battery to avoid penalties due to prediction errors.
 
 A core challenge in developing such models lies in how to represent the uncertainty
@@ -20,13 +20,13 @@ that decision-makers face in practice, which limits the applicability of the res
 To better address this issue, two methodological approaches are commonly used:
 Either the model\textquotesingle s knowledge of future events is restricted,
 or the data is modified to represent the uncertainty.
-For instance \cite{Nitsch.2021} modeled an optimization problem with perfect foresight but predicted data.
+For instance Nitsch et al. \cite{Nitsch.2021} modeled an optimization problem with perfect foresight but predicted data.
 Such data could include forecast values that represent expected values or scenario-based data with associated
-probabilities of occurrence, as discussed in \cite{Krishnamurthy.2018}.
+probabilities of occurrence, as discussed by Krishnamurthy et al. \cite{Krishnamurthy.2018}.
 While this approach is useful for representing uncertainty, obtaining suitable data can be very
-challenging—especially for markets that are highly volatile and influenced by many factors.
+challenging, especially for markets that are highly volatile and influenced by many factors.
 This is particularly true for the secondary balancing energy market, where energy is traded at short notice to maintain grid stability.
-\cite{OConnor.2024} also address the difficulty of predicting prices in balancing energy markets.
+OConnor et al. \cite{OConnor.2024} also address the difficulty of predicting prices in balancing energy markets .
 They demonstrate that even with highly sophisticated models, forecasting balancing prices remains a significant challenge.
 In the present case, this becomes especially critical since initial bids must be submitted the day before at a time when it is
 extremely difficult to predict the exact grid status at any given moment the next day.

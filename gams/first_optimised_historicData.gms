@@ -5,8 +5,8 @@ $include loadHistoricSet
 
 *$include convertData.gms
 *$include loadData_historic_Q1.gms
-*$include loadData_historic_Q18.gms
-$include loadData_historic_Q36.gms
+$include loadData_historic_Q18.gms
+*$include loadData_historic_Q36.gms
 
 
 *assign correct mapping
@@ -654,6 +654,11 @@ Q_out_RL_max_a(t_block)..                             sum( s_out_RL, Q_out_RL(t_
 Model testFirstDecision /all/;
 Solve testFirstDecision maximising Profit using MIP;
 
+
+execute_unload "res_Q_in_RL.gdx" Q_in_RL.l
+execute 'gdxxrw.exe res_Q_in_RL.gdx o=res_Q_in_RL.xlsx var=Q_in_RL.L'               
+execute_unload "res_Q_out_RL.gdx" Q_out_RL.l
+execute 'gdxxrw.exe res_Q_out_RL.gdx o=res_Q_out_RL.xlsx var=Q_out_RL.L'    
 
 execute_unload "res_sum_Q_in_RL.gdx" sum_Q_in_RL.l
 execute 'gdxxrw.exe res_sum_Q_in_RL.gdx o=res_sum_Q_in_RL.xlsx var=sum_Q_in_RL.L'				

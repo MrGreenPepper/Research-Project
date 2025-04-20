@@ -1,76 +1,13 @@
-\chapter*{Vorwort}
+\chapter*{Preface}
 
-Ich habe lange überlegt ob ich dieses Vorwort schreiben soll oder nicht, aber ich möchte doch nochmal gerne
-darauf eingehen wie diese Arbeit entstanden ist und wo Schwierigkeiten lagen.
+This thesis was developed in collaboration with the UKA - Meißen,
+under the supervision of Dr. Hannes Hobbie.
+I would like to express my sincere gratitude to all those involved
+for their time and support throughout the process.
 
-Angefangen hat das ganze mit dem Auftrag einen Speicher zu optimieren der an dem sekundären Regelleistungsmarkt angebungen ist und mit einem Wind- oder
-Solarkraftwerk kombiniert ist.
+In particular, I extend my heartfelt thanks to Dr. Hannes Hobbie for his guidance and for organizing the framework of this work,
+as well as to Margrit Wicke and Dr. Christoph Zöphel
+for generously sharing their time, expertise, and practical insights.
 
-Zur Optimierung an den einzelnen Märkten gibt es eine Vielzahl an arbeiten.
-
-Die dabei benutzten optimierungsmodelle sind diverse.
-
-Sie unterscheiden sich hinsichttlich der betrachteten Märkte als vermaktungsoption, hinsichtlich der benutzen Modelansätze, hinsichtlich der genutzten Daten und oft wird nur ein
-batteriespeicher ohne kombunuerten erneurbaren energie produzent optimiert.
-
-So betrachten viele Modellansätze nur einzelne Märkte. \todo{cite}
-
-
-Die Modellansätze unterscheiden sich hauptsächlich darin ob eine perfekte Vorraussicht unterstellt wird oder nicht. \cite{Nitsch.2021} \& \cite{Olk.2019}
-zum Beispiel beschreiben den den sekundären Regelleistungsmarkt mit einem solchem Model mit perfekter Vorraussicht. Kombiniert mit exakten Realwelt Daten
-ergibt sich daraus ein maximal zu erreichender Ertrag für den Energiespeicher. Jedoch lassen sich aus der Kombination
-von Modell mit perfekter Vorraussicht und exakten Daten schlecht allgemeine Strategien ableiten, da man auch die Ausnahmefälle
-perfekt einplanen kann.
-
-Um diese Problemstellung besser an gehen zu können werden hauptsächlich 2 methodische Ansätze verfolgt. Entweder man limitiert das Model hinsichtlich
-seines Wissens über zukünftige Ereignisse und bildet so die in der realen welt inherente Unsicherheit ab. Oder man beschränkt nicht die fähigkeiten des
-Modells, sondern modifziert die Daten das diese die Unsicherheit abbilden. Solche Daten wären dann zum Beispiel Vorhersage Prognosen die
-die einen Erwartungswert berechnen, oder Daten die mehrere mögliche Szenarien darstellen kombiniert mit einer berechneten Eintrittswahrsceinlichkeit für
-die jeweiligen Szenarien \cite{Krishnamurthy.2018}. Wärend dieser Ansatz gut ist um die Unsicherheiten ab zu bilden, kann es jedoch sehr schwer sein
-die entsprechenden Daten zu ermitteln. Vor allem Daten für Märkte vorher zu sagen die sehr vielen Einflüssen unterliegen und sehr unregelmäßig sind
-gestaltet sich dabei als besonders schwierig. Das gilt in unserem Fall für den sekundären Regelarbeitsmarkt. Dies ist der Markt
-an dem relativ kurzfristig die tatsächlich beötigte Energie gehandelt wird um das Netz aus zu gleichen. \cite{OConnor.2024} beschäftigen sich ebenfalls mit
-dem Problem der Preisvorhersage an den Regelenrergie Mörkten. Sie zeigen auf das selbst mit sehr komplexen Modellen eine es schwierig ist den Balancing Preis gut vorher zu sagen.
-Für den hier vorliegenden Fall ist dies besonders kritisch, da die ersten Gebote schon am Vortag abgegeben werden müssen, zu diesem Zeitpunkt es aber sehr schwer ist vorher zu sagen
-wie der genaue Netzstatus am Folgetag zum Zeitpunkt x
-sein wird. Damit ist unklar welche Regelarbeit zum Zeitpunkt x benötigt wird.
-
-
-Außerdem werden in all diesen Arbeiten nicht die Kombination (BASS, erneurbarer Erzeuger, aFFR, DA Markt) betrachtet.
-
-Die Herausfordung für diese Arbeit ist es nun die einzelnen Ansätze für die einzelnen Probleme zu kombinieren.
-Dabei stellen sich 2 Hauptprobleme. Zum einen müssen die gewählten Modelllösungsansätze und Daten für die einzelnen Teilmärkte technisch kombinierbar sein.
-Zum anderen darf die Komplexität nicht explodieren. Wärend es noch relativ einfach ist ein komplexes Teilproblem (in unserem Fall
-eine einzelne Marktbetrachtung) zu lösen. So Steigt die komplexität expotentiel um so mehr teilprobleme kombiniert werden.
-Dies betrifft sowohl die einfache Umsetzung, als auch ganz direkt die schlichte Berechenbarkeit.\todo{formulierung komplexitäts explossions abschnitt}
-
-So versucht diese Arbeit die Kombination aus Batterie und erneurbaren Erzeuger zu
-
-... ohne die Komplexität explodieren zu lassen und trotzdem verwertbare Strategien ab zu leiten.
-
-... auflistung der Kapitel ... innerhalb des Methodischen Abschnitts wird auch nochmal explizit auf die gewählten vereinfachungen ein gegangen, die
-gewählt wurden um die Komplexität zu begrenzen.
-
-Zum einen gibt es optimierungsmodelle die eine perfekte Vorraussicht unterstellen
-
-
-Electricity price modeling with stochastic time change
-
-ein markt: Electricity Price Forecasting in the Irish Balancing Market
-
-eventuell einführung Regelarbeitsmarkt noch mit rein
-
-Bidding strategy for a battery storage in the German secondary balancing power market ... aber altes system
-
-------------------------------
-cite:
-nur einzelne Mörkte:
-
-
-perfect foresight:
-Economic Value of Energy Storage Systems: The Influence of Ownership Structures ... perfect foresight
-An Optimal Energy Storage Control Strategy for Grid-connected Microgrids ... perfect demand foresight
-Economic evaluation of battery storage systems bidding on day-ahead and automatic frequency restoration reserves markets ... perfect full foresight
-Bidding strategy for a battery storage in the German secondary balancing power market ... perfect full foresight
-
-
+Thank you very much,\\
+Sebastian Trümper

@@ -73,7 +73,7 @@ of time series with multiple seasonal patterns~\cite{.05.04.2025}.
 
 The resulting forecasted time series closely resembles the actual historical time series
 (Figure~\ref{fig:Negative Capacity Price Prediction - 2023}).
-Note that the time series shown here corresponds to the most probable scenario—
+Note that the timeseries shown here corresponds to the most probable scenario,
 meaning that 50\% of all possible forecast values lie above, and 50\% lie below the prediction.
 
 When generating longterm forecast scenarios using the trained predictor,
@@ -113,7 +113,6 @@ Over the course of the year, only general trends are observable, as shown in Fig
 	\caption{Overview DA prices}
 	\label{fig:overviewDAprices}
 \end{figure}
-\todo{redo figure with bigger legend}
 
 The extraordinary curve movement observed in 2022 (green curve) can be attributed to
 Russia's war of aggression against Ukraine and the resulting turmoil
@@ -263,12 +262,12 @@ The scaling factor is calculated as follows:
 \label{chap:affR_energy}
 
 The aFFR energy market exhibit a high degree of variability and are extremely difficult to predict statistically.
-As such, they exhibit only a very weak autocorrelation, with only a slight daily rhythm, as shown in Figure
-\ref{fig:Autocorrelation Positive Energy Price} (1 lag = 15 min).
+As such, they exhibit only a very weak autocorrelation, as shown in Figure~\ref{fig:Autocorrelation Positive Energy Price} (1 lag = 15 min).
 
 \begin{figure}[!h]
-	\includegraphics[width=1\linewidth]{pictures/Autocorrelation Positive Energy - 2 Weeks.png}
-	\caption{Total Average Positive Energy Price}
+	\centering
+	\includegraphics[width=0.6\linewidth]{pictures/posEngCBMP_autoCorr.png}
+	\caption{Autocorrelation Positive Energy CBMP}
 	\label{fig:Autocorrelation Positive Energy Price}
 \end{figure}
 
@@ -277,13 +276,10 @@ As shown in Figure \ref{fig:posEngOverview}, we present 30-day samples from the 
 In these periods, neither trends nor seasonal developments are observable.
 
 \begin{figure}[!h]
-	\includegraphics[width=1\linewidth]{pictures/posEngOverview.png}
-	\caption{Overview Positive Energy Price}
+	\includegraphics[width=1\linewidth]{pictures/posEngCBMP.png}
+	\caption{Overview Positive Energy CBMP}
 	\label{fig:posEngOverview}
 \end{figure}
-\todo{das ist eine grafik mit den alten average preise, mache eine graifk mit den richtigen grenzpreisen}
-\todo{grafiken verschiedene Preisszenarien}
-\todo{appendix verweis zu python code}
 
 Since no reliable forecasts can be made, real-world data is used for scenario generation.
 For this purpose, data from the year 2023 was employed [see Table \ref{tab:energy_sources_std}].

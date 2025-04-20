@@ -10,7 +10,7 @@ Subsequently, the modeling of the grid connection point is discussed.
 
 \subsection{Battery \& Charging Capabilities}
 The fundamental properties of the battery storage are described through parameters combined with constraints.
-The battery storage has a maximum charging and discharging reate $r$ and a maximum capacity $BatCap$.
+The battery storage has a maximum charging and discharging reate $r$ and a maximum capacity $batCap$.
 The battery status $BatStat$ is recalculated every quarter-hour and can be found in equation~\ref{eq:BatStat}.
 Since the recharge amount $Q_{reload}$, which comes from the wind park, is calculated hourly,
 it must be converted to quarter-hourly values. The battery status for the timestep $t_{quarter} + 1$
@@ -26,7 +26,7 @@ This adjustment can be made to align the battery's charge level with the obligat
 	                                                   & + \sum_{s_{RA}}1/|s_{RA}|  * WP_{in}(t_{quarter}, s_{RA})\notag                                      \\
 	                                                   & \forall t_{quarter}, t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor  \label{eq:BatStat} \\
 	0 \leq  BatStat                                    & (t_{quarter}) 			\label{eq:BatStat_nonNeg}                                                           \\
-	BatStat(t_{quarter}) \leq  BatCap                  & \label{eq:BatStat_cap}
+	BatStat(t_{quarter}) \leq  batCap                  & \label{eq:BatStat_cap}
 \end{alignat}
 
 
@@ -36,15 +36,18 @@ share a common grid connection. As a result, their combined output is subject to
 a maximum power constraint, which must be respected throughout the optimization process.
 The maximum power that can flow through the connection point is $a$. This power limit applies in both directions,
 as shown in equations \ref{eq:a_general_pos} and \ref{eq:a_general_neg}. Since this constraint applies to all quarter-hour
-intervals, we have to divide the work of the wind farm and the grid connection maximum power by four.
+intervals, we have to divide the work of the wind farm and the grid connection maximum power by four. The $strictFactor$ describes a binary parameter
+that can be set to either 0 or 1.
+When set to 0, the parameter is considered active,
+meaning that power contributions in the opposite direction
+do not relax the corresponding constraint.
+For subsequent calculations, this factor is always assumed to be active.
 
 \begin{alignat}{3}
-	\frac{a}{4} + Q^{in}_{RA}(t_{quarter}, s_{RA}) +  WP_{in}(t_{quarter}, s_{RA}) \notag                                   \\
-	\geq \frac{1}{4} Q_{DA}  + Q^{out}_{RA}(t_{quarter}, s_{RA}) + WP_{out}(t_{quarter}, s_{RA}) \notag                     \\
-	\quad \forall s_{RA},  t_{quarter},  t_{hour} = \left\lfloor \frac{t_{quarter}}{4}\right\rfloor\label{eq:a_general_pos} \\
-	\frac{a}{4} + \frac{1}{4}Q_{DA} +  Q^{out}_{RA}(t_{quarter}, s_{RA}) + WP_{out}(t_{quarter}, s_{RA}) \notag             \\
-	\geq Q^{in}_{RA}(t_{quarter}, s_{RA}) +  WP_{in}(t_{quarter}, s_{RA}) \notag                                            \\
+	\frac{a}{4} + strictFactor * (Q^{in}_{RA}(t_{quarter}, s_{RA}) +  WP_{in}(t_{quarter}, s_{RA})) \notag                                  \\
+	\geq \frac{1}{4} Q_{DA}(t_{hour})  + Q^{out}_{RA}(t_{quarter}, s_{RA}) + WP_{out}(t_{quarter}, s_{RA}) \notag                           \\
+	\quad \forall s_{RA},  t_{quarter},  t_{hour} = \left\lfloor \frac{t_{quarter}}{4}\right\rfloor\label{eq:a_general_pos}                 \\
+	\frac{a}{4} + strictFactor * ( \frac{1}{4}Q_{DA}(t_{hour}) +  Q^{out}_{RA}(t_{quarter}, s_{RA}) + WP_{out}(t_{quarter}, s_{RA}) )\notag \\
+	\geq Q^{in}_{RA}(t_{quarter}, s_{RA}) +  WP_{in}(t_{quarter}, s_{RA}) \notag                                                            \\
 	\quad \forall s_{RA},  t_{quarter},  t_{hour} = \left\lfloor \frac{t_{quarter}}{4}\right\rfloor \label{eq:a_general_neg}
 \end{alignat}
-
-\todo{strikte variante}

@@ -82,24 +82,26 @@
 \begin{table}[H]
 	\centering
 	\begin{tabular}{c|c}
-		\textbf{Parameter}      & \textbf{Description}                                           \\
+		\textbf{Parameter}      & \textbf{Description}                                                                 \\
 		\hline
-		$f_{DA}$                & forecast price day ahead market                                \\
-		$f_{RA}$                & forecast price RA                                              \\
-		$capPark$               & total capacity for the renewable generation                    \\
-		$windProfile$           & adjustment of the total capacity due to environment conditions \\
-		$\rho(p_{DA})$          & probability for price $p_{DA}$                                 \\
-		$\rho(p_{RA})$          & probability for price $p_{RA}$                                 \\
-		$r$                     & rate for charge/discharge BESS                                 \\
-		$a$                     & Access point capacity                                          \\
-		$\omega^i_{y}(s^i_{y})$ & Probability for scenario of type i(=in/out) at market y        \\
-		$p^i_{y}(s^i_y)$        & Bid price of type i(=in/out) at market y for scenario $s^i_y$  \\
-		$p^{exp}_{y}$           & expected price for the market y                                \\
-		$c^i_y$                 & market clearing price of type i(=in/out) at market y           \\
-		$m$                     & a arbitrary big number                                         \\
-		$wp_{ger}$              & german wind profile                                            \\
-		$wp_{our}$              & local wind profile                                             \\
-		$wsf$                   & scaling factor for local wind profile
+		$f_{DA}$                & forecast price day ahead market                                                      \\
+		$f_{RA}$                & forecast price RA                                                                    \\
+		$parkCap$               & total capacity for the renewable generation                                          \\
+		$batCap$                & maximum capacity of the BESS                                                         \\
+		$windProfile$           & adjustment of the total capacity due to environment conditions                       \\
+		$\rho(p_{DA})$          & probability for price $p_{DA}$                                                       \\
+		$\rho(p_{RA})$          & probability for price $p_{RA}$                                                       \\
+		$r$                     & rate for charge/discharge BESS                                                       \\
+		$a$                     & Access/grid connection point capacity                                                \\
+		$\omega^i_{y}(s^i_{y})$ & Probability for scenario of type i(=in/out) at market y                              \\
+		$p^i_{y}(s^i_y)$        & Bid price of type i(=in/out) at market y for scenario $s^i_y$                        \\
+		$p^{exp}_{y}$           & expected price for the market y                                                      \\
+		$c^i_y$                 & market clearing price of type i(=in/out) at market y                                 \\
+		$m$                     & a arbitrary big number                                                               \\
+		$wp_{ger}$              & german wind profile                                                                  \\
+		$wp_{our}$              & local wind profile                                                                   \\
+		$wsf$                   & scaling factor for local wind profile                                                \\
+		$strictFactor$          & binary Parameter which sets the strictness for the grid connection point constraints \\
 	\end{tabular}
 	\caption{Parameter Overview}
 	\label{tab:Parameter_Overview}

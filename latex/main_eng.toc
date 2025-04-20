@@ -1,44 +1,44 @@
 \babel@toc {british}{}\relax 
 \babel@toc {british}{}\relax 
-\contentsline {chapter}{\nonumberline Abstract}{I}{chapter*.3}%
-\contentsline {chapter}{\numberline {1}Introduction}{2}{chapter.1}%
-\contentsline {chapter}{\numberline {2}Literatur Review}{4}{chapter.2}%
-\contentsline {chapter}{\numberline {3}Methology}{6}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Market Design Descriptions}{8}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}aFFR - Capacity}{9}{subsection.3.1.1}%
-\contentsline {subsubsection}{\nonumberline General Description}{9}{subsubsection*.15}%
-\contentsline {subsubsection}{\nonumberline Model Implementation}{10}{subsubsection*.17}%
-\contentsline {subsection}{\numberline {3.1.2}Day Ahead Market}{12}{subsection.3.1.2}%
-\contentsline {subsubsection}{\nonumberline General Description}{12}{subsubsection*.19}%
-\contentsline {subsubsection}{\nonumberline Model Implementation}{12}{subsubsection*.21}%
-\contentsline {subsection}{\numberline {3.1.3}aFFR - Energy}{13}{subsection.3.1.3}%
-\contentsline {subsubsection}{\nonumberline General Description}{13}{subsubsection*.23}%
-\contentsline {subsubsection}{\nonumberline Model Implementation}{14}{subsubsection*.25}%
-\contentsline {section}{\numberline {3.2}Model components}{15}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Battery \& Charging Capabilities}{15}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Grid Connection}{16}{subsection.3.2.2}%
-\contentsline {section}{\numberline {3.3}Complete Model}{17}{section.3.3}%
-\contentsline {section}{\numberline {3.4}Timeline Simulation and Scenario Selection}{24}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}aFFR - Capacity}{24}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Day Ahead Market}{27}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}aFFR - Energy}{31}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Simplifications}{34}{section.3.5}%
-\contentsline {subsubsection}{\nonumberline aFFR Capacity/DA Quantile Data}{34}{subsubsection*.46}%
-\contentsline {subsubsection}{\nonumberline Day Ahead Market}{34}{subsubsection*.48}%
-\contentsline {subsubsection}{\nonumberline aFFR Energy Market}{34}{subsubsection*.50}%
-\contentsline {subsubsection}{\nonumberline Battery Storage Status}{35}{subsubsection*.52}%
-\contentsline {chapter}{\numberline {4}Results}{37}{chapter.4}%
-\contentsline {chapter}{\numberline {5}Conclusion}{41}{chapter.5}%
-\contentsline {chapter}{\numberline {6}Appendix}{44}{chapter.6}%
+\contentsline {chapter}{\nonumberline Abstract}{I}{chapter*.2}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literatur Review}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Methodology}{5}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Market Design Descriptions}{7}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}aFFR - Capacity}{8}{subsection.3.1.1}%
+\contentsline {subsubsection}{\nonumberline General Description}{8}{subsubsection*.12}%
+\contentsline {subsubsection}{\nonumberline Model Implementation}{9}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {3.1.2}Day Ahead Market}{11}{subsection.3.1.2}%
+\contentsline {subsubsection}{\nonumberline General Description}{11}{subsubsection*.16}%
+\contentsline {subsubsection}{\nonumberline Model Implementation}{11}{subsubsection*.18}%
+\contentsline {subsection}{\numberline {3.1.3}aFFR - Energy}{12}{subsection.3.1.3}%
+\contentsline {subsubsection}{\nonumberline General Description}{12}{subsubsection*.20}%
+\contentsline {subsubsection}{\nonumberline Model Implementation}{13}{subsubsection*.22}%
+\contentsline {section}{\numberline {3.2}Model components}{14}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Battery \& Charging Capabilities}{14}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Grid Connection}{15}{subsection.3.2.2}%
+\contentsline {section}{\numberline {3.3}Complete Model}{16}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Timeline Simulation and Scenario Selection}{23}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}aFFR - Capacity}{23}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Day Ahead Market}{26}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}aFFR - Energy}{30}{subsection.3.4.3}%
+\contentsline {section}{\numberline {3.5}Simplifications}{33}{section.3.5}%
+\contentsline {subsubsection}{\nonumberline aFFR Capacity/DA Quantile Data}{33}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline Day Ahead Market}{33}{subsubsection*.40}%
+\contentsline {subsubsection}{\nonumberline aFFR Energy Market}{33}{subsubsection*.42}%
+\contentsline {subsubsection}{\nonumberline Battery Storage Status}{34}{subsubsection*.44}%
+\contentsline {chapter}{\numberline {4}Results}{36}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{40}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Appendix}{42}{chapter.6}%
 \setcounter {tocdepth}{-1}
-\contentsline {section}{\numberline {6.1}Further Model Constraints}{44}{section.6.1}%
-\contentsline {section}{\numberline {6.2}Quantile aFFR Market Data}{45}{section.6.2}%
-\contentsline {section}{\numberline {6.3}Model Results}{52}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Digital Appendix}{53}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Full GAMS Data}{53}{subsection.6.4.1}%
-\contentsline {subsection}{\numberline {6.4.2}Python Code, Data \& Graphics}{53}{subsection.6.4.2}%
-\contentsline {subsection}{\numberline {6.4.3}Alternative Model}{54}{subsection.6.4.3}%
-\contentsline {section}{\numberline {6.5}Park Properties}{54}{section.6.5}%
+\contentsline {section}{\numberline {6.1}Further Model Constraints}{42}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Quantile aFFR Market Data}{43}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Model Results}{50}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Digital Appendix}{51}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Full GAMS Model \& Data}{51}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Python Code, Data \& Graphics}{51}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Alternative Model}{52}{subsection.6.4.3}%
+\contentsline {subsection}{\numberline {6.4.4}Latex Files}{52}{subsection.6.4.4}%
 \setcounter {tocdepth}{+1}
-\contentsline {chapter}{\nonumberline Bibliography}{55}{chapter*.91}%
+\contentsline {chapter}{\nonumberline Bibliography}{53}{chapter*.71}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

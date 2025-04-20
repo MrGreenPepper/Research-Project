@@ -7,7 +7,7 @@
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{A.\arabic{figure}}
 \renewcommand{\thetable}{A.\arabic{table}}
-\todo{base model stats a/r wpf and and and ... all the scalars used}
+
 
 \section{Further Model Constraints}
 
@@ -23,6 +23,8 @@
 \begin{flalign}
 	\label{parkCon_Q^{rN}_{DA}(t_{hour})}                   \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) \leq parkCap * parkProfile(t_{hour}) - \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rN}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})
 \end{flalign}
+
+
 \section{Quantile aFFR Market Data}
 \label{chap:app_QaFFRmarketData}
 \begin{figure}[H]
@@ -155,9 +157,9 @@
 
 \section{Digital Appendix}
 
-\subsection{Full GAMS Data}
+\subsection{Full GAMS Model \& Data}
 \label{app:fullModel}
-\href{https://zenodo.org/records/15250066?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImQ0YTVlZDAzLWU0NDktNDkyYS1iZGNlLTZjMTc3YWNmM2Y3ZCIsImRhdGEiOnt9LCJyYW5kb20iOiJhMDhlZTcwOTU3MjFiZmExMGY0YmUzMjUwZGM2ZjY5ZCJ9.RLOwEcGXlgFzX0IFm-1bEa9GjshtvCu_SmehFOBJg8yQ11NlqWq_4L8OuvG4eeULVS_BRhnSywxuA7vsCfTH9w}{Full GAMS Model}\\
+\href{https://zenodo.org/records/15250066?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImQ0YTVlZDAzLWU0NDktNDkyYS1iZGNlLTZjMTc3YWNmM2Y3ZCIsImRhdGEiOnt9LCJyYW5kb20iOiJhMDhlZTcwOTU3MjFiZmExMGY0YmUzMjUwZGM2ZjY5ZCJ9.RLOwEcGXlgFzX0IFm-1bEa9GjshtvCu_SmehFOBJg8yQ11NlqWq_4L8OuvG4eeULVS_BRhnSywxuA7vsCfTH9w}{Full GAMS Model - Link}\\
 
 \texttt{\detokenize{https://zenodo.org/records/15250066?token=eyJhbGciOiJIUzUxMiJ9}}\\
 \texttt{\detokenize{.eyJpZCI6ImQ0YTVlZDAzLWU0NDktNDkyYS1iZGNlLTZjMTc3YWNmM2Y3ZC}}\\
@@ -167,7 +169,7 @@
 
 \subsection{Python Code, Data \& Graphics}
 \label{app:python}
-\href{https://zenodo.org/records/15250072?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNmZDY2ZTRmLThiZjctNDI2Yy1hMjkzLWI5NDZkYmVkMTllNSIsImRhdGEiOnt9LCJyYW5kb20iOiJhNjI4MWVmYmJiMGViZTYzOTU0ZDVjMTRmNDU4MWJiMCJ9.uA9bX6OLFf9Pp2ubAHRNnt2GhgJh5wo5rXNeOsO-d_enloZMZBcsV4rCj-NJIkZboyPzi6s5PkMfnyhZUCjNkQ}{Python code for analysis}\\
+\href{https://zenodo.org/records/15250072?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNmZDY2ZTRmLThiZjctNDI2Yy1hMjkzLWI5NDZkYmVkMTllNSIsImRhdGEiOnt9LCJyYW5kb20iOiJhNjI4MWVmYmJiMGViZTYzOTU0ZDVjMTRmNDU4MWJiMCJ9.uA9bX6OLFf9Pp2ubAHRNnt2GhgJh5wo5rXNeOsO-d_enloZMZBcsV4rCj-NJIkZboyPzi6s5PkMfnyhZUCjNkQ}{Python code for analysis - Link}\\
 
 \texttt{\detokenize{https://zenodo.org/records/15250072?token=eyJhbGciOiJIUzUxMiJ9}}\\
 \texttt{\detokenize{.eyJpZCI6ImNmZDY2ZTRmLThiZjctNDI2Yy1hMjkzLWI5NDZkYmVkMTllNS}}\\
@@ -177,7 +179,7 @@
 
 \subsection{Alternative Model}
 \label{app:altModel}
-\href{https://zenodo.org/records/15250055?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjE1YWFjM2QxLWJmOTItNDliOS1iNDY4LWZmODkyNjY1OWRiNiIsImRhdGEiOnt9LCJyYW5kb20iOiI3ZGI5YjEyODgyNzgxYzdhNGE5Zjc1NWIwOWVhN2YxNSJ9.FBCfOpGd3SIIQKDdfnO6MmOsvnNoW9iQm4AwVD-54T6XpgzppI0E8JzMH1Oq6b0KZh-11kKp2PpRsM_fNMbOnQ}{Alternative Model Link}\\
+\href{https://zenodo.org/records/15250055?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjE1YWFjM2QxLWJmOTItNDliOS1iNDY4LWZmODkyNjY1OWRiNiIsImRhdGEiOnt9LCJyYW5kb20iOiI3ZGI5YjEyODgyNzgxYzdhNGE5Zjc1NWIwOWVhN2YxNSJ9.FBCfOpGd3SIIQKDdfnO6MmOsvnNoW9iQm4AwVD-54T6XpgzppI0E8JzMH1Oq6b0KZh-11kKp2PpRsM_fNMbOnQ}{Alternative Model - Link}\\
 
 \texttt{\detokenize{https://zenodo.org/records/15250055?token=eyJhbGciOiJIUzUxMiJ9}}\\
 \texttt{\detokenize{.eyJpZCI6IjE1YWFjM2QxLWJmOTItNDliOS1iNDY4LWZmODkyNjY1OWRiNi}}\\
@@ -185,5 +187,11 @@
 \texttt{\detokenize{WIwOWVhN2YxNSJ9.FBCfOpGd3SIIQKDdfnO6MmOsvnNoW9iQm4AwVD-54T6}}\\
 \texttt{\detokenize{XpgzppI0E8JzMH1Oq6b0KZh-11kKp2PpRsM_fNMbOnQ}}
 
-\section{Park Properties}
-\todo{Park properties}
+\subsection{Latex Files}
+\href{https://zenodo.org/records/15252964?preview=1&token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImZlNjk4YTU4LTMzNTgtNGUyYS05NTIxLTAxZWVkODliZDY0OCIsImRhdGEiOnt9LCJyYW5kb20iOiI5NTg4MDU3MDAzZjMzYjM2YjdkMzVhYThiYzVhN2NhMCJ9.QdtnjJpt0wm1z23v3elTxCvZCGXYiNPDW-LytW3zddZQprKqDhbdlg1VkccNoTqtO-4UuMMwPjjLu8F_UjxBGg}{Latex Files - Link}\\
+
+\texttt{\detokenize{https://zenodo.org/records/15252964?preview=1&token=eyJhbGciOiJIUzUxMiJ9}}\\
+\texttt{\detokenize{.eyJpZCI6ImZlNjk4YTU4LTMzNTgtNGUyYS05NTIxLTAxZWVkODliZDY0OCIsImRhdGEiOnt}}\\
+\texttt{\detokenize{9LCJyYW5kb20iOiI5NTg4MDU3MDAzZjMzYjM2YjdkMzVhYThiYzVhN2NhMCJ9.QdtnjJpt0w}}\\
+\texttt{\detokenize{m1z23v3elTxCvZCGXYiNPDW-LytW3zddZQprKqDhbdlg1VkccNoTqtO-4UuMMwPjjLu8F_Uj}}\\
+\texttt{\detokenize{xBGg}}

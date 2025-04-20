@@ -1,0 +1,20 @@
+[0] Config.pm:308> INFO - This is Biber 2.20
+[27] Config.pm:311> INFO - Logfile is 'main.blg'
+[1797] biber-MSWIN64:340> INFO - === 
+[3039] Biber.pm:420> INFO - Reading 'main.bcf'
+[3208] Biber.pm:994> INFO - Found 3 citekeys in bib section 0
+[3398] Biber.pm:4463> INFO - Processing section 0
+[3524] Biber.pm:4654> INFO - Looking for bibtex file 'researchProject.bib' for section 0
+[3641] bibtex.pm:1713> INFO - LaTeX decoding ...
+[3958] bibtex.pm:1519> INFO - Found BibTeX data source 'researchProject.bib'
+[4304] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'normalization = NFD' with 'normalization = prenormalized'
+[4304] UCollate.pm:68> INFO - Overriding locale 'en-GB' defaults 'variable = shifted' with 'variable = non-ignorable'
+[4306] Biber.pm:4283> INFO - Sorting list 'ynt/global//global/global/global' of type 'entry' with template 'ynt' and locale 'en-GB'
+[4306] Biber.pm:4289> INFO - No sort tailoring available for locale 'en-GB'
+[4500] bbl.pm:676> INFO - Writing 'main.bbl' with encoding 'UTF-8'
+[4501] bbl.pm:779> INFO - Output to main.bbl
+[4501] Biber.pm:131> WARN - legacy year field '05.04.2025' in entry '.05.04.2025' is not an integer - this will probably not sort properly.
+[4501] Biber.pm:131> WARN - misc entry '.05.04.2025' (researchProject.bib): Invalid format '06.04.2025' of date field 'urldate' - ignoring
+[4502] Biber.pm:131> WARN - legacy year field '08.04.2025' in entry '.08.04.2025' is not an integer - this will probably not sort properly.
+[4502] Biber.pm:131> WARN - misc entry '.08.04.2025' (researchProject.bib): Invalid format '08.04.2025' of date field 'urldate' - ignoring
+[4502] Biber.pm:133> INFO - WARNINGS: 4

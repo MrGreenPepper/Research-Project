@@ -1,0 +1,43 @@
+\babel@toc {british}{}\relax 
+\babel@toc {british}{}\relax 
+\contentsline {chapter}{\nonumberline Abstract}{I}{chapter*.3}%
+\contentsline {chapter}{\numberline {1}Introduction}{1}{chapter.1}%
+\contentsline {chapter}{\numberline {2}Literature Review}{3}{chapter.2}%
+\contentsline {chapter}{\numberline {3}Methology}{6}{chapter.3}%
+\contentsline {section}{\numberline {3.1}General model explanation}{7}{section.3.1}%
+\contentsline {section}{\numberline {3.2}Market Modeling Approaches}{8}{section.3.2}%
+\contentsline {section}{\numberline {3.3}Model Design Descriptions}{11}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}RL}{12}{subsection.3.3.1}%
+\contentsline {subsubsection}{\nonumberline general description}{12}{subsubsection*.27}%
+\contentsline {subsubsection}{\nonumberline model implementation}{12}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {3.3.2}DA}{15}{subsection.3.3.2}%
+\contentsline {subsubsection}{\nonumberline general description}{15}{subsubsection*.38}%
+\contentsline {subsubsection}{\nonumberline model implementation}{15}{subsubsection*.40}%
+\contentsline {subsection}{\numberline {3.3.3}RA}{16}{subsection.3.3.3}%
+\contentsline {subsubsection}{\nonumberline general description}{16}{subsubsection*.43}%
+\contentsline {subsubsection}{\nonumberline model implementation}{17}{subsubsection*.48}%
+\contentsline {subsection}{\numberline {3.3.4}Battery \& Working Point Adjustments}{17}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Access Point}{18}{subsection.3.3.5}%
+\contentsline {subsection}{\numberline {3.3.6}Complete Model}{19}{subsection.3.3.6}%
+\contentsline {section}{\numberline {3.4}Timeline Simulation and Scenario Selection}{28}{section.3.4}%
+\contentsline {subsubsection}{\nonumberline Market Data Analysis}{28}{subsubsection*.55}%
+\contentsline {section}{\numberline {3.5}Simplification}{38}{section.3.5}%
+\contentsline {subsubsection}{\nonumberline RL/DA Quantil Data}{38}{subsubsection*.84}%
+\contentsline {subsubsection}{\nonumberline RL}{38}{subsubsection*.86}%
+\contentsline {subsubsection}{\nonumberline DA}{38}{subsubsection*.88}%
+\contentsline {subsubsection}{\nonumberline RA}{39}{subsubsection*.90}%
+\contentsline {subsubsection}{\nonumberline Battery Storage Status}{39}{subsubsection*.93}%
+\contentsline {chapter}{\numberline {4}Results}{41}{chapter.4}%
+\contentsline {chapter}{\numberline {5}Conclusion}{46}{chapter.5}%
+\contentsline {chapter}{\numberline {6}Appendix}{48}{chapter.6}%
+\setcounter {tocdepth}{-1}
+\contentsline {section}{\numberline {6.1}Further Model Constraints}{48}{section.6.1}%
+\contentsline {section}{\numberline {6.2}Quantile aFFR Market Data}{49}{section.6.2}%
+\contentsline {section}{\numberline {6.3}Model Results}{56}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Digital Appendix}{57}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Full GAMS Model \& Data}{57}{subsection.6.4.1}%
+\contentsline {subsection}{\numberline {6.4.2}Python Code, Data \& Graphics}{57}{subsection.6.4.2}%
+\contentsline {subsection}{\numberline {6.4.3}Alternative Model}{58}{subsection.6.4.3}%
+\setcounter {tocdepth}{+1}
+\contentsline {chapter}{\nonumberline Bibliography}{59}{chapter*.123}%
+\providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 
