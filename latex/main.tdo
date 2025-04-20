@@ -1,59 +1,55 @@
-\contentsline {todo}{den part mit den preisen drinne lassen?}{I}{section*.4}%
-\contentsline {todo}{sauber und ausführlich machen }{III}{section*.7}%
-\contentsline {todo}{alle tabellen nochmal korrektur lesen }{III}{section*.8}%
-\contentsline {todo}{make tables look nice}{III}{section*.9}%
-\contentsline {todo}{eventuell table heads dick machen}{III}{section*.10}%
-\contentsline {todo}{sets hinzufügen}{III}{section*.12}%
-\contentsline {todo}{entweder überall gams äquivalnt ergänzen oder überall weg lassen}{III}{section*.13}%
-\contentsline {todo}{tables and figures verzeichniss}{V}{section*.17}%
-\contentsline {todo}{cite}{VI}{section*.19}%
-\contentsline {todo}{formulierung komplexitäts explossions abschnitt}{VII}{section*.20}%
-\contentsline {todo}{hier noch mit rein das batterie speicher in kombination mit einem windpark positive spillovers haben kann}{1}{section*.21}%
-\contentsline {todo}{- vor und nachteile, begrenzte kapazität des anschlusspunkts, überschüssige energie kann zum laden genutzt werden.}{1}{section*.22}%
-\contentsline {todo}{nochmal lesen und schauen ob roter faden gut}{2}{section*.23}%
-\contentsline {todo}{noch mit rein erste entscheidung RL --> dann 4 mögliche Ausgänge!!!!!!!!!}{7}{section*.24}%
-\contentsline {todo}{den part nochmal nachdenken}{7}{section*.25}%
-\contentsline {todo}{den part mit den speicherzuständen eventuell in die Modelierungsansatz Diskussion}{7}{section*.26}%
-\contentsline {todo}{abshcnitt eränzen}{7}{section*.27}%
-\contentsline {todo}{aussortieren was noch mit oben rein soll}{7}{section*.28}%
-\contentsline {todo}{ausführliche Erklärung stochastische Programmierung}{8}{section*.29}%
-\contentsline {todo}{gewinnmaximierung}{9}{section*.30}%
-\contentsline {todo}{abkürzungen}{9}{section*.31}%
-\contentsline {todo}{verweis wissenschaftliche arbeit und appendix für umsetzung}{9}{section*.32}%
-\contentsline {todo}{abschnitt ergänzen}{9}{section*.33}%
-\contentsline {todo}{den part nochmal nachdenken}{10}{section*.34}%
-\contentsline {todo}{abschnitt ergänzen}{10}{section*.35}%
-\contentsline {todo}{Übersicht über zeitlichen Ablauf der einzelnen Märkte}{11}{section*.36}%
-\contentsline {todo}{eventuell raus lassen oder halt in vereinfachungsassumptions mit rein}{12}{section*.40}%
-\contentsline {todo}{den Part Menge als abstrakte binäre Aktivierungsvariable eventuell nochmal überarbeiten und entsprechend oben anpassen }{13}{section*.43}%
-\contentsline {todo}{eventuell binär variable nur an Preis koppeln und das dann anders heraus ziehen}{13}{section*.44}%
-\contentsline {todo}{strict a einführen}{15}{section*.45}%
-\contentsline {todo}{formelzeichen kontrollieren}{15}{section*.46}%
-\contentsline {todo}{alle gleichungen checken wegen $\forall $}{15}{section*.47}%
-\contentsline {todo}{alle gleichungen mit nummerierung und beschreibung{?} überarbeiten}{15}{section*.48}%
-\contentsline {todo}{annahme perfekte Vorraussicht Windpark}{16}{section*.53}%
-\contentsline {todo}{ref}{16}{section*.56}%
-\contentsline {todo}{mindestmenge?}{16}{section*.57}%
-\contentsline {todo}{eventuell erklärung wieder mit positive und negative Arbeit?}{16}{section*.58}%
-\contentsline {todo}{strikte variante}{19}{section*.61}%
-\contentsline {todo}{speicherkapazitätkosten weg lassen?}{22}{section*.62}%
-\contentsline {todo}{entscheiden ob ich kapazitätkosten noch mit rein nehme}{26}{section*.63}%
-\contentsline {todo}{referenz ergänzen}{27}{section*.64}%
-\contentsline {todo}{eventuel scenario selection nochmal abspalten als extra subsubsection}{28}{section*.65}%
-\contentsline {todo}{price in titel ergänzen}{29}{section*.69}%
-\contentsline {todo}{verweis einfügen}{30}{section*.72}%
-\contentsline {todo}{appendix verweis}{30}{section*.73}%
-\contentsline {todo}{variablen noch in anfangstabelle einfügen}{35}{section*.82}%
-\contentsline {todo}{nochmal nach windprofil suchen im gesamten text und schauen ob das da noch korrekt erklärt ist}{35}{section*.83}%
-\contentsline {todo}{ziel für das hoch und runter setzten der linie ... -> erklärung was ich damit bezwecken möchte in dem entsprechendem Mark .. habe ich das schon mit drinne?}{35}{section*.84}%
-\contentsline {todo}{das ist eine grafik mit den alten average preise, mache eine graifk mit den richtigen grenzpreisen}{36}{section*.87}%
-\contentsline {todo}{grafiken verschiedene Preisszenarien}{36}{section*.88}%
-\contentsline {todo}{appendix verweis zu python code}{36}{section*.89}%
-\contentsline {todo}{abbildungen ergänzen}{37}{section*.91}%
-\contentsline {todo}{den teil drinne lassen?}{37}{section*.92}%
-\contentsline {todo}{ref entsoe}{37}{section*.93}%
-\contentsline {todo}{Python Code appendix verweis}{37}{section*.94}%
-\contentsline {todo}{eventuell nochmal umformulieren da sehr ähnlich zu DA}{39}{section*.103}%
-\contentsline {todo}{letzen satz mit rein nehmen?}{40}{section*.106}%
-\contentsline {todo}{eventuell nochmal erklärung in data abschnitt wieso das hier die medianen sind}{42}{section*.108}%
-\contentsline {todo}{grafik hierfür einblenden .. !! eher wichtig !!}{42}{section*.109}%
+\contentsline {todo}{sauber und ausführlich machen }{III}{section*.6}%
+\contentsline {todo}{alle tabellen nochmal korrektur lesen }{III}{section*.7}%
+\contentsline {todo}{make tables look nice}{III}{section*.8}%
+\contentsline {todo}{eventuell table heads dick machen}{III}{section*.9}%
+\contentsline {todo}{tables and figures verzeichniss}{V}{section*.14}%
+\contentsline {todo}{cite}{VI}{section*.16}%
+\contentsline {todo}{formulierung komplexitäts explossions abschnitt}{VII}{section*.17}%
+\contentsline {todo}{Check whether the market participation constraint is discussed later in the model section— if not, consider briefly mentioning it here as a potential downside.}{1}{section*.18}%
+\contentsline {todo}{noch mit rein erste entscheidung RL --> dann 4 mögliche Ausgänge!!!!!!!!!}{7}{section*.19}%
+\contentsline {todo}{den part nochmal nachdenken}{7}{section*.20}%
+\contentsline {todo}{den part mit den speicherzuständen eventuell in die Modelierungsansatz Diskussion}{7}{section*.21}%
+\contentsline {todo}{abshcnitt eränzen}{7}{section*.22}%
+\contentsline {todo}{aussortieren was noch mit oben rein soll}{7}{section*.23}%
+\contentsline {todo}{ausführliche Erklärung stochastische Programmierung}{8}{section*.24}%
+\contentsline {todo}{gewinnmaximierung}{9}{section*.25}%
+\contentsline {todo}{abkürzungen}{9}{section*.26}%
+\contentsline {todo}{verweis wissenschaftliche arbeit und appendix für umsetzung}{9}{section*.27}%
+\contentsline {todo}{abschnitt ergänzen}{9}{section*.28}%
+\contentsline {todo}{den part nochmal nachdenken}{10}{section*.29}%
+\contentsline {todo}{abschnitt ergänzen}{10}{section*.30}%
+\contentsline {todo}{Übersicht über zeitlichen Ablauf der einzelnen Märkte}{11}{section*.31}%
+\contentsline {todo}{eventuell raus lassen oder halt in vereinfachungsassumptions mit rein}{12}{section*.35}%
+\contentsline {todo}{den Part Menge als abstrakte binäre Aktivierungsvariable eventuell nochmal überarbeiten und entsprechend oben anpassen }{13}{section*.38}%
+\contentsline {todo}{eventuell binär variable nur an Preis koppeln und das dann anders heraus ziehen}{13}{section*.39}%
+\contentsline {todo}{strict a einführen}{15}{section*.40}%
+\contentsline {todo}{formelzeichen kontrollieren}{15}{section*.41}%
+\contentsline {todo}{alle gleichungen checken wegen $\forall $}{15}{section*.42}%
+\contentsline {todo}{alle gleichungen mit nummerierung und beschreibung{?} überarbeiten}{15}{section*.43}%
+\contentsline {todo}{annahme perfekte Vorraussicht Windpark}{16}{section*.48}%
+\contentsline {todo}{ref}{16}{section*.51}%
+\contentsline {todo}{mindestmenge?}{16}{section*.52}%
+\contentsline {todo}{eventuell erklärung wieder mit positive und negative Arbeit?}{16}{section*.53}%
+\contentsline {todo}{strikte variante}{19}{section*.56}%
+\contentsline {todo}{speicherkapazitätkosten weg lassen?}{22}{section*.57}%
+\contentsline {todo}{entscheiden ob ich kapazitätkosten noch mit rein nehme}{26}{section*.58}%
+\contentsline {todo}{referenz ergänzen}{27}{section*.59}%
+\contentsline {todo}{eventuel scenario selection nochmal abspalten als extra subsubsection}{28}{section*.60}%
+\contentsline {todo}{price in titel ergänzen}{29}{section*.64}%
+\contentsline {todo}{verweis einfügen}{30}{section*.67}%
+\contentsline {todo}{appendix verweis}{30}{section*.68}%
+\contentsline {todo}{variablen noch in anfangstabelle einfügen}{35}{section*.77}%
+\contentsline {todo}{nochmal nach windprofil suchen im gesamten text und schauen ob das da noch korrekt erklärt ist}{35}{section*.78}%
+\contentsline {todo}{ziel für das hoch und runter setzten der linie ... -> erklärung was ich damit bezwecken möchte in dem entsprechendem Mark .. habe ich das schon mit drinne?}{35}{section*.79}%
+\contentsline {todo}{das ist eine grafik mit den alten average preise, mache eine graifk mit den richtigen grenzpreisen}{36}{section*.82}%
+\contentsline {todo}{grafiken verschiedene Preisszenarien}{36}{section*.83}%
+\contentsline {todo}{appendix verweis zu python code}{36}{section*.84}%
+\contentsline {todo}{abbildungen ergänzen}{37}{section*.86}%
+\contentsline {todo}{den teil drinne lassen?}{37}{section*.87}%
+\contentsline {todo}{ref entsoe}{37}{section*.88}%
+\contentsline {todo}{Python Code appendix verweis}{37}{section*.89}%
+\contentsline {todo}{eventuell nochmal umformulieren da sehr ähnlich zu DA}{39}{section*.98}%
+\contentsline {todo}{letzen satz mit rein nehmen?}{40}{section*.101}%
+\contentsline {todo}{eventuell nochmal erklärung in data abschnitt wieso das hier die medianen sind}{42}{section*.103}%
+\contentsline {todo}{grafik hierfür einblenden .. !! eher wichtig !!}{42}{section*.104}%
+\contentsline {todo}{base model stats a/r wpf and and and ... all the scalars used}{48}{section*.111}%

@@ -12,3 +12,4 @@ gams\python\venv\
 gams\python\wvenv\
 gams/python/venv/
 gams/python/wvenv/
+*.rar

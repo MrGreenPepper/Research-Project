@@ -1,0 +1,208 @@
+\section{Market Design Descriptions}
+\label{chap:marketDesignDescription}
+
+The model is capable of submitting bids on three markets. Each bid consists of an amount and a corresponding price.
+The bidding process starts on the secondary balance market with capacity bid, followed by the Day-Ahead market,
+and finally on the secondary balancing market again with an energy bid.
+
+\todo{Overview of the chronological sequence of the markets.}
+
+\todo{It might be useful to make a general statement on how scenarios are interpreted within the different market models.
+	Alternatively, I could first describe the individual markets and then explain the creation of the required data for each.}
+
+The goal is to maximize the overall profit, which is composed of the amount and the price.
+The amount represents the quantity offered on the market, and the price is the price at which the quantity is offered.
+
+The resulting revenue is then given by the following equation:
+
+$Revenue = Quantity * price$
+
+In combination with our stochastic approach, a probability ($\omega$) is added.
+This probability is always interpreted in relation to the associated market price.
+While the underlying concept remains consistent, the specific interpretation of these probabilities
+varies slightly across the different markets and is discussed in detail in the respective sections.
+The expected revenue is calculated as the sum of all possibilities:
+
+\begin{equation}
+	Revenue = \sum_{price} Quantity(price) * price * \omega(price)
+\end{equation}
+
+The different prices are represented as different scenarios. Quantity bids can be submitted separately for each scenario,
+but the total sum of the quantity bids across all scenarios is constrained.
+An example of scenarios and their associated probabilities can be found in Table \ref{tab:example_scenario}.
+In this case, the probability would indicate the likelihood that the bid at the corresponding price will be accepted.
+This approach allows us to independently determine which quantities are allocated to each scenario.
+
+\begin{table}[H]
+	\begin{tabular}{c|c|c}
+		\hline
+		Scenario $s$ & Price $p$ & Probability $\omega(s)$ \\
+		s1           & 90        & 0.6                     \\
+		s2           & 100       & 0.5                     \\
+		s3           & 110       & 0.4                     \\
+	\end{tabular}\\
+	\caption{Example Scenario Data Table}
+	\label{tab:example_scenario}
+\end{table}
+
+The objective function to be optimized for this example is as follows:
+
+\begin{alignat}{3}
+	\max Profit = & \sum_{s} Q(s) * p(s) * \omega(s) \\
+	0 \leq        & \sum_{s} Q(s) \leq q_{max}
+\end{alignat}
+
+In the following chapters, the individual markets will first be described separately from \autoref{subsec:RL} to \autoref{subsec:RA}.
+Subsequently, the transition from individual market problems to an overall decision will be explained [\autoref{subsec:completeModel}].
+
+\subsection{aFFR - Capacity}
+\label{subsec:RL}
+\todo{eventuell noch mit rein das ich mein scenario selbst wählen kann}
+\subsubsection{General Description}
+The aFFr market in Germany is divided into two parts: the capacity and the energy market.
+On the capacity market, bids for the provision of positive or negative balancing capacity are made for a 4-hour time window on the following day.
+The auction closes at 9 a.m. on the previous day.
+The settlement is made in [(Euro/MW)/h], and the paid price corresponds to the submitted bid price ("Pay-as-bid" method) [\cite{.04.12.2024}].
+In the case of a successful bid for capacity, bids must also be placed on the Balancing Energy Market for the same period.
+The minimum bid quantity is 1 MW, and pre-qualification is required to participate.
+\todo{This might be omitted or included in the simplification assumptions.}
+
+\subsubsection{Model Implementation}
+For the Frequency Control Market, the following objective function arises:
+
+\begin{equation}
+	\max Profit_{RL} = Q_{RL} * p_{RL} * \omega_{RL}(p_{RL}) \quad \forall t_{block}
+\end{equation}
+
+By transforming this into a scenario-dependent problem, the following equation results:
+
+\begin{equation}
+	\max Profit_{RL} = \sum_{t_{block}, s_{RL}} Q_{RL}(t_{block}, s_{RL}) * p_{RL}(t_{block}, s_{RL}) * \omega_{RL}(t_{block}, s_{RL})
+\end{equation}
+
+
+It should be noted that the quantity is now also scenario-dependent, meaning bids could theoretically be made separately for each assumed scenario.
+In practice, this is not assumed, as the optimization algorithm will always assign the quantity on the most promising price-acceptance-probability combination.
+Thus, the quantity serves as an abstract binary activation variable for the different price scenarios.
+
+\todo{Consider revising the part about the quantity as an abstract binary activation variable and adjust the previous sections accordingly.}
+\todo{Consider making the binary variable only price-dependent and extracting it differently.}
+
+It should also be noted that both positive (out) and negative (in) capacity bids can be placed.
+The distinction of accepted and rejected bids is determined by the probabilities $\omega$ and $1-\omega$.
+While this step is not strictly necessary at this point, it simplifies the later integration of the other markets.
+
+\begin{alignat}{3}
+	\label{eq:RL}
+	\\max Profit_{RL}  = 						\notag                                                                                                                        \\
+	\textbf{accepted  RL in \& out:}            \notag                                                                                                      \\
+	 & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))      * (				\notag  \\
+	 & + (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                      \\
+	 & + (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL}))				\notag                                                     \\
+	\textbf{accepted RL in \& declined out:}        \notag                                                                                                  \\
+	 & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} (\omega^{in}_{RL}(t_{block}, s^{in}_{RL}) * (1-\omega^{out}_{RL}(t_{block}, s^{out}_{RL})))   * (				\notag \\
+	 & + (Q^{in}_{RL}(t_{block}, s^{in}_{RL})        * p^{in}_{RL}(t_{block}, s^{in}_{RL})))				\notag                                                      \\
+	\textbf{declined RL in \& accepted out:	}	\notag                                                                                                        \\
+	 & + \sum_{s^{out}_{RL}} \sum_{s^{in}_{RL}} ((1-\omega^{in}_{RL}(t_{block}, s^{in}_{RL})) * \omega^{out}_{RL}(t_{block}, s^{out}_{RL}))   * (				\notag \\
+	 & + (Q^{out}_{RL}(t_{block}, s^{out}_{RL})      * p^{out}_{RL}(t_{block}, s^{out}_{RL}))			\notag                                                      \\                                                                                                                                          \\
+	 & \quad\forall t_{hour} = \left\lfloor \frac{t_{quarter}}{4} \right\rfloor, t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor    \notag
+\end{alignat}
+
+The constraints \ref{eq:positeQ} ensure that the offered quantities are not negative.
+Additionally, it is ensured that the connection capacity $a$ is not exceeded (equation~\ref{eq:RLaccessPoint}),
+and that the battery is capable of handling the corresponding power demand (equation~\ref{eq:RLrate}).
+
+It is also important that the battery storage state can fulfill the offered power within the respective
+time window \ref{eq:RL_battery_res1} \& \ref{eq:RL_battery_res2}. Note that the offered capacity is specified per hour,
+while the battery storage is calculated in 15-minute intervals. Therefore, the offered capacity must be multiplied by 0.25
+to obtain the value for the quarter-hour interval.
+
+For example, if 100 MW are offered in the secondary balancing market, then for each quarter-hour in the corresponding block,
+25 MWh of positive or negative work must be reserved.
+
+\begin{flalign}
+	0 \leq                                                     & Q^{in}_{RL}(t_{block}, s^{in}_{RL}),Q^{out}_{RL}(t_{block}, s^{out}_{RL})\quad\forall  s^{in}_{RL},s^{out}_{RL} \label{eq:positeQ}               \\
+	r \geq                                                     & \sum_{s^{in}_{RL}}Q^{in}_{RL}(t_{block}, s^{in}_{RL}),\sum_{s^{out}_{RL}}Q^{out}_{RL}(t_{block}, s^{out}_{RL})  \label{eq:RLrate}                \\
+	a + \sum_{s^{in}_{RL}} Q^{in}_{RL}(t_{block}, s^{in}_{RL}) & \geq \sum_{s^{out}_{RL}}Q^{out}_{RL}(t_{block}, s^{out}_{RL}) \label{eq:RLaccessPoint}                                                           \\
+	Q^{in}_{RL}(t_{block}, s^{in}_{RL}))	* 0.25                & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res1} \\
+	Q^{out}_{RL}(t_{block}, s^{out}_{RL})	* 0.25               & \leq BatStat(t_{quarter, s_{RA}}) \quad\forall t_{block} = \left\lfloor \frac{t_{quarter}}{16} \right\rfloor \label{eq:RL_battery_res2}
+\end{flalign}
+
+\todo{strict a einführen}
+\todo{Formelzeichen kontrollieren}
+\todo{alle Gleichungen checken wegen $\forall$}
+\todo{alle Gleichungen mit Nummerierung und Beschreibung überarbeiten}
+
+\subsection{Day Ahead Market}
+\subsubsection{General Description}
+The wind park is marketed in the Day-Ahead Market (DA). Here, bids are made for 1-hour intervals on the following day.
+The auction closes at 12:00 PM the day before. The minimum bid quantity is 0.1 MWh, and bids between -500 Euros and 3000 Euros are accepted. The settlement is in [Euro/MWh],
+and the price is determined using the "Pay-as-cleared" method. This means that all participants receive the price of the highest accepted bid.
+
+\subsubsection{Model Implementation}
+In parallel with the previous chapter, the equations for the Day-Ahead Market (DA) are derived.
+The Day-Ahead Market is the platform where the electricity from the wind farm is marketed. Consequently, there are no positive and negative bids.
+As the operator of the wind farm, we have operating costs that are close to zero, allowing us to offer electricity at a very low price.
+In practice, this means that we are almost free to decide whether or not to sell electricity on the day-ahead market and receive the clearing price.
+The probability $\omega_{DA}(t_{hour}, s_{DA})$ indicates the probability for the corresponding price $p(t_{hour}, s_{DA})$.
+The expected profit is thus calculated as follows:\\
+
+\begin{alignat}{3}
+	\max_{Q_{DA}(t_{hour}, s_{DA})} Profit_{DA}	=            & \sum_{t_{hour}} Q_{DA}(t_{hour}) * \sum_{t_{hour}, s_{DA}}  p(t_{hour}, s_{DA}) * \omega_{DA}(t_{hour}, s_{DA}) \\
+	\rightarrow max_{Q_{DA}(t_{hour}, s_{DA})} Profit_{DA}	= & \sum_{t_{hour}} Q_{DA}(t_{hour}) * p^{exp}_{DA}(t_{hour})
+\end{alignat}
+
+It is important to note that the amount of electricity generated by the wind park cannot be freely chosen.
+Rather, it is constrained by the prevailing weather conditions (equation~\ref{eq:DA_capPark}).
+In addition, we have the option to store the generated electricity instead of feeding it into the grid,
+thus allowing the battery to be recharged (equation~\ref{eq:DA_capPark}).
+
+
+\begin{alignat}{3}
+	0                & \leq Q_{DA}(t_{hour}, s_{DA}) \quad\forall  t_{hour}, s_{DA}      \label{eq:DA_nonNeg}                 \\
+	Q_{DA}(t_{hour}) & \leq capPark * windProfil(t_{hour}) - Q_{reload}(t_{hour}) \quad\forall t_{hour} \label{eq:DA_capPark} \\
+	Q_{DA}(t_{hour}) & \leq a \quad\forall t_{hour} \label{eq:DA_a}
+\end{alignat}
+\todo{Assumption: perfect wind park forecast}
+
+\subsection{aFFR - Energy}
+\label{subsec:RA}
+\subsubsection{General Description}
+In the secondary reserve energy market, bids are placed for 15-minute intervals.
+The auction closes 25 minutes before the start of the associated 15-minute block. Each prequalified
+participant is allowed to bid on this market, regardless of whether a bid has been successful
+in the aFFR capacity market. If a bid has been accepted in the aFFR capacity market,
+a bid must also be made for the corresponding time window in the secondary market.
+Payment is made only for the actual energy delivered. The dispatch of energy is based on the merit-order list,
+from the cheapest to the most expensive supplier. With a high offered energy price, the likelihood of the offered
+energy being called decreases. This is a "Pay-as-cleared" market, meaning all participants receive the price of the
+last accepted bid. Since Germany's entry into the PICASSO network, the marginal price corresponds to the cross-border marginal price
+(CBMP) \cite{50hertzamprionTENNETTRANSNETBW.}.
+
+\todo{Minimum quantity?}
+\todo{Possibly explanation for positive and negative work?}
+
+\subsubsection{Model Implementation}
+In parallel to the aFFR capacity market, the aFFR energy market is constructed (equation~\ref{eq:RA_base}).
+Since we cannot precisely predict the state of the electricity market on the following day,
+multiple possible scenarios are considered, all of which are assumed to be equally likely
+(for more details, see Chapter \ref{chap:affR_energy}). This applies to both positive (out) and negative (in) balancing energy.
+
+\begin{alignat}{3}
+	max Profit =  \sum_{t_{quarter}} & \biggl[ \sum_{s_{RA}}1/|s_{RA}| * p^{in}_{RA}(t_{quarter}, s_{RA}) * Q^{in}_{RA}(t_{quarter}, s_{RA})				\notag              \\
+	                                 & + \sum_{s_{RA}}1/|s_{RA}| * p^{out}_{RA}(t_{quarter}, s_{RA}) * Q^{out}_{RA}(t_{quarter}, s_{RA}) \biggr] \label{eq:RA_base}
+\end{alignat}
+
+The energy is also subject to several constraints. Specifically,
+the battery storage must be able to deliver the required work (equation~\ref{eq:RA_Q_out_r} - \ref{eq:RA_Q_in_Bat}),
+and the connection point must have sufficient capacity (equation~\ref{eq:RA_Q_out_a} \& \ref{eq:RA_Q_in_a}).
+
+\begin{alignat}{3}
+	\sum_{s_{RA}} Q^{out}_{RA}(t_{quarter}, s_{RA}) & \leq r/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_out_r}                                    \\
+	\sum_{s_{RA}} Q^{in}_{RA}(t_{quarter}, s_{RA})  & \leq r/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_in_r}                                     \\
+	\sum_{s_{RA}} Q^{out}_{RA}(t_{quarter}, s_{RA}) & \leq BatStat(t_{quarter, s_{RA}}) \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_out_Bat}         \\
+	\sum_{s_{RA}} Q^{in}_{RA}(t_{quarter}, s_{RA})  & \leq BatCap - BatStat(t_{quarter, s_{RA}}) \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_in_Bat} \\
+	\sum_{s_{RA}} Q^{out}_{RA}(t_{quarter}, s_{RA}) & \leq a/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_out_a}                                    \\
+	\sum_{s_{RA}} Q^{in}_{RA}(t_{quarter}, s_{RA})  & \leq a/4 \quad \forall s_{RA}, t_{quarter} \label{eq:RA_Q_in_a}
+\end{alignat}
+

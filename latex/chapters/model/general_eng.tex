@@ -1,0 +1,30 @@
+\textbf{What is represented in the model?} \\
+
+The objective of the model is to optimize the marketing of a battery storage system in combination with a wind farm in the simplest way possible.
+There are various approaches to modeling this. The battery storage system is marketed on the secondary capacity \& energy balancing markets,
+while the wind farm is offered on the Day-Ahead market.
+The challenge is to connect all three markets without introducing excessive complexity that would limit computational feasibility.
+In addition, physical characteristics must be taken into account.
+In particular, both the battery system and the grid connection point
+must be accurately represented with respect to their key technical properties.
+\todo{sollte hier noch eine GAMS erwähnung mit rein?}
+The following section outlines the overall modeling approach.
+First, the general structure and logic of the model are presented.
+Subsequently, the individual market models are described in detail,
+highlighting the specific regulations and formulations applied to each market.
+
+Subsequently, the individual structural components are examined in greater detail,
+with a focus on the specific constraints and modifications they introduce (see Section~\ref{chap:marketDesignDescription}).
+\todo{check if constraints are in already included in this part}
+
+Finally, the integration of these subparts into a unified optimization framework
+is explained, including the mechanisms used to ensure consistency
+across the different market layers (see Section~\ref{subsec:completeModel}).
+\todo{end: check if order ist still correct}
+
+This is followed by a description of how the relevant time series data
+were generated for each of the considered electricity markets (see Section~\ref{chap:dataDescription}).
+
+Finally, the chapter concludes with a discussion of the key simplifications
+implemented to ensure computational feasibility of the model (see Section~\ref{chap:Simplifications}).
+

@@ -1,0 +1,141 @@
+\section{General model explanation}
+
+\textbf{What is represented in the model?} \\
+\todo{Add first RL decision --> then four possible outcomes!}
+
+The objective of the model is to optimize the marketing of a battery storage system in combination with a wind farm in the simplest way possible.
+There are various approaches to modeling this. The battery storage system is marketed on the secondary capacity \& energy balancing markets,
+while the wind farm is offered on the Day-Ahead market.
+The challenge is to connect all three markets without introducing excessive complexity that would limit computational feasibility.
+
+The following section outlines the overall modeling approach.
+First, the general structure and logic of the model are presented.
+Subsequently, the individual market models are described in detail,
+highlighting the specific regulations and formulations applied to each market.
+Finally, the integration of these submodels into a unified optimization framework
+is explained, including the mechanisms used to ensure consistency
+across the different market layers. \todo{end: check if order ist still correct}
+
+Subsequently, the individual components of the model are examined in greater detail,
+with a focus on the specific constraints and modifications they introduce.%
+\todo{See Section~\ref{...} for further details.}
+
+This is followed by a description of how the relevant time series data
+were generated for each of the considered electricity markets.
+\todo{See Section~\ref{...} for additional information.}
+
+Finally, the chapter concludes with a discussion of the key simplifications
+implemented to ensure computational feasibility of the model.%
+\todo{See Section~\ref{Simplification} for a full overview.}
+
+\rule{\textwidth}{0.4pt}
+
+\todo{den folgenden part entweder oben noch mit rein als beispiel erklärung für simplifications oder halt nur unten bei der Batterie}
+This is especially important for the battery storage system, which has its charge status recalculated every 15 minutes.
+Even with only two considered scenario outputs, this results in
+\[
+	2^{96} = 79228162514264337593543950336
+\]
+possible battery storage states at the end of the day.
+Considering that planning always takes place for the following day,
+one would need to account for
+\[
+	2^{182} = 6.13 \times 10^{54}
+\]
+possible battery storage states before achieving planning certainty again.
+\todo{Reconsider this part.} Since a full enumeration of all possible future system states quickly becomes computationally infeasible,
+it is necessary to either assume perfect foresight and calculate a single, most probable trajectory
+for the battery storage system, or to approximate certain internal processes along the time series.
+To address this and other computational challenges, a number of simplifications have been implemented.
+These simplifications aim to reduce model complexity while preserving the core dynamics
+and decision-relevant characteristics of the system.
+Further details and justifications for each simplification are provided in Section~\ref{chap:Simplifications}.
+
+
+Furthermore, it is important to consider that the wind farm and the battery storage system
+share a common grid connection point. As a result, their combined output is subject to
+a maximum power constraint, which must be respected throughout the optimization process.
+
+The following is a discussion of different modeling approaches. First, the individual models of the various markets are considered.
+
+-------------------------------------\\
+\todo{Filter out what should be added above. <-- noch alt ... kann glaube ich fast alles weg}
+
+A model was created in GAMS to analyze the given problem. The goal of the model was to optimize a battery storage system combined with a renewable energy production facility while minimizing computational effort.
+It was important to avoid relying on highly detailed time series forecasts, as they are very time-consuming,
+and also to avoid basic assumptions like perfect foresight, in order to reflect realistic planning decisions.
+
+(For simplicity, all formulas are first derived for only one time step. The time variable is added at the end.)
+\todo{Detailed explanation of stochastic programming.}
+
+The basic model represents an energy storage system that can be marketed on the frequency control market, Day-Ahead market, and balancing energy market.
+The resulting profit is to be maximized. Each sub-decision/market has its own model, which avoids the need to integrate subsequent market results (acceptance or rejection). This is important because otherwise, the algorithm would be omniscient and would calculate only perfect bids. The results of each sub-model are always passed to the subsequent model and are evaluated only at that point. Each sub-model calculates quantity bids at certain prices, which are represented by different scenarios. Each scenario is assigned a specific probability.
+(The price-probability combinations for the different scenarios were exogenously determined through SARIMA analysis.)
+A bid is then represented as follows:
+
+---------------------------------\\
+
+- Explain the model design
+-> Different design options, then "design options"/alternatives/explanation?!? Explain the part.
+
+Typically, the logic is embedded in the data, and I let the solver recognize the logic in the data.
+However, if I do not have realistic forecast data, I must program the logic myself.
+
+The core of my model includes:
+
+- Connection point
+
+- Combination of the park and the battery
+
+\section{Market Modeling Approaches}
+\textbf{Approach for optimizing the representation and making it computable} \\
+
+- Possibly rename to concepts and discuss different general concepts. \\
+
+Different modeling approaches require different underlying datasets, and vice versa.
+For example, a stochastic model, which performs optimization over multiple uncertain possible scenarios, requires a dataset that represents these different scenarios.
+When directly using historical data, a model is needed that assumes perfect prediction and thus only considers one data series.
+
+The following discusses various approaches regarding models and data.
+\todo{Profit maximization}
+%\subsubsection{Model approaches for market designs}
+
+One possible modeling approach assumes perfect foresight, where historical data is input and the results are examined under this assumption.
+The perfect results are then downscaled by an estimated percentage to reach a realistically achievable result.
+The advantage of this approach in our case lies in its simplicity. Since we always know exactly what will happen, only one time series needs to be followed.
+The disadvantage is that, when examining the results, one might conclude with incorrect strategies.
+In our case, decisions need to be made under uncertain future scenarios.
+For example, the connection capacity might not allow simultaneous bidding on both the DA market and the RA market.
+\todo{Abbreviations}
+
+With perfect foresight, I know exactly which decision is the right one given the data, even if the difference between the two decisions is marginal.
+However, this is a single-case decision. In reality, a different strategy might prove to be advantageous across multiple cases.
+
+\todo{Reference scientific work and appendix for implementation.}
+
+This approach allows for making good decisions in individual cases but does not necessarily provide insight into a general strategy.
+To derive a more general strategy, stochastic programming approaches are suitable. These determine optimal decisions by considering several possible uncertain future scenarios.
+In the model, a decision variable is combined with multiple scenarios and their probabilities of occurrence in order to make the best possible decision under uncertainty.
+This allows for deriving optimal general strategies more easily, but creating the necessary data for this is much more difficult.
+For example, different datasets are needed to represent the various scenarios, and these datasets must also be evaluated with probabilities of occurrence.
+In the following, several approaches are discussed for doing this with time series datasets.
+\todo{Add section.}
+
+Moreover, simplifying assumptions are often necessary to reduce model complexity. This is particularly important for the battery storage system.
+In our model, the current charge status of the battery storage system is recalculated every 15 minutes. Even with just two possible scenarios, one would have to consider
+\[
+	2^{96} = 79228162514264337593543950336
+\]
+possible battery storage states at the end of the day. If one takes into account that planning is always done for the following day,
+one would have to consider
+\[
+	2^{182} = 6.13 \times 10^{54}
+\]
+possible battery storage states before planning certainty is regained.
+Thus, various simplifications are considered in chapter [].
+\todo{Reconsider this part.}
+
+\todo{Add section.}
+
+In summary, the advantages of a stochastic approach are greater, especially to answer the research question regarding generalizable strategies.
+The goal is to develop optimal general strategies.

@@ -1,0 +1,72 @@
+\section{Simplifications}
+\label{chap:Simplifications}
+In this study, we assume the role of a participant within a bidding consortium.
+As such, minimum bid requirements can be disregarded,
+as we assume our consortium partners to be sufficiently large to always meet these minimum thresholds.
+
+To manage the computational effort and reduce the model's complexity, several simplifications have been implemented.
+These simplifications do not substantially compromise the realism of the model.
+The following is a structured list of the simplifications employed.
+
+\subsubsection{aFFR Capacity/DA Quantile Data}
+For the time series analyzed, it is important to note that the values are determined based on the preceding day.
+As a result, the prediction error for the following day has not yet materialized.
+Consequently, the quantile data for the day ahead aFFR capacity can be averaged over the 10 scenarios days.
+This approach minimizes unnecessary complexity and allows for more general,
+strategic conclusions to be drawn regarding bidding behavior in the aFFR capacity/DA market,
+in relation to potential high, medium, and low prediction errors.
+
+\subsubsection{Day Ahead Market}
+Since the Day-Ahead market operates under a pay-as-cleared structure, our bid influences only the acceptance or rejection of our offer,
+with no impact on the price paid for the electricity.
+Given our assumption that we operate a solar or wind farm, we consider operational costs to be negligible, and thus, assume them to be zero.
+As Day-Ahead prices are non-negative, we can effectively choose whether to submit a bid at a price that will almost certainly be accepted.
+This results in a simplified optimization for the DA market, represented by $Profit_{Da} = Q_{DA} * p^{exp}_{DA}$.
+
+\subsubsection{aFFR Energy Market}
+As the aFFR Energy Market market also follows a pay-as-cleared principle, our bid influences only whether we are called upon to deliver, with no impact on the price paid for the electricity.
+Assuming the role of a battery storage operator with near-zero operational costs, these are considered negligible.
+Thus, we can submit a bid below the expected RA market price to ensure that our offer is likely to be called.
+The reverse is also true.
+
+When an aFFR capacity bid is accepted, we are obligated to submit a corresponding aFFR energy bid.
+This creates a constraint that limits the minimum bid quantity in the aFFR energy market based on the accepted aFFR capacity bid quantity.
+However, integrating the introduced case would lead to an increase in computational complexity due to the need for extra variables and additional
+dimensions. In practice, this regulatory constraint can be bypassed by setting a sufficiently high working price, ensuring that our bid is not called upon.
+Therefore, this constraint was not explicitly incorporated into the model.
+But, we incorporated a constraint that links the minimum and maximum $BatStat$ to the accepted aFFR energy bids.
+This ensures that, at all times during the relevant aFFR block, sufficient storage capacity is available to fulfill any potential requests.
+This approach avoids the computationally intensive direct linkage between the aFFR capacity and aFFR energy markets while still
+accurately reflecting the underlying mechanisms.
+
+\subsubsection{Battery Storage Status}
+
+
+
+The battery storage status is recalculated at 15-minute intervals.
+The battery status from the previous time window is updated by adding all inflows and subtracting all outflows.
+Given the uncertainty of these inflows and outflows, multiple possible battery states would arise at the end of each calculation window, based on the possible preceding states.
+Since we calculate the battery status over 96 consecutive time periods, the computational complexity would increase exponentially due to the number of possible outcomes over these 96 periods.
+Even with only two considered scenario outputs, this results in
+\[
+	2^{96} = 79228162514264337593543950336
+\]
+possible battery storage states at the end of the day.
+Considering that planning always takes place for the following day,
+one would need to account for
+\[
+	2^{182} = 6.13 \times 10^{54}
+\]
+possible battery storage states before achieving planning certainty again.
+Since a full enumeration of all possible future system states quickly becomes computationally infeasible,
+it is necessary to either assume perfect foresight and calculate a single, most probable trajectory
+for the battery storage system, or to approximate certain processes along the time series.
+Therefore, we approximate the battery storage calculation by determining an expected battery status at time $t_quarter$ and using this expected value for subsequent calculations.
+Inflows and outflows are weighted by their respective probabilities, allowing for an approximation of the correct battery status over the entire period.
+
+This method inherently flattens the battery loading status curve, depending on the assumed probability distributions.
+For example in reality, consecutive 10\% fluctuations may occur, leading to a more pronounced shift in the battery status than the model predicts.
+To ensure that the storage capacity meets the required levels, the actual capacity have to be recalculated by considering unweighted quantity bids and determining the maximum fluctuation.
+This value corresponds to the actual required storage capacity.
+As the storage/bid ratio increases, the impact of this adjustment becomes negligible, as the likelihood of consecutive unlikely events diminishes over time.
+

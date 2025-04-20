@@ -177,6 +177,55 @@
       \endverb
       \keyw{Agent-based modeling;Automatic Frequency Restoration Reserves market;Battery storage system;Day-ahead market;Energy system modeling}
     \endentry
+    \entry{OConnor.2024}{article}{}{}
+      \name{author}{4}{}{%
+        {{hash=4ec943917a50efdf4fc6c26cb9a28a99}{%
+           family={O'Connor},
+           familyi={O\bibinitperiod},
+           given={Ciaran},
+           giveni={C\bibinitperiod}}}%
+        {{hash=9983b03613f451fcf3bfbffc3c00b958}{%
+           family={Collins},
+           familyi={C\bibinitperiod},
+           given={Joseph},
+           giveni={J\bibinitperiod}}}%
+        {{hash=48723f71036121efe3847a4c1b61635a}{%
+           family={Prestwich},
+           familyi={P\bibinitperiod},
+           given={Steven},
+           giveni={S\bibinitperiod}}}%
+        {{hash=f161f337343ff60c96e1a19172268c46}{%
+           family={Visentin},
+           familyi={V\bibinitperiod},
+           given={Andrea},
+           giveni={A\bibinitperiod}}}%
+      }
+      \strng{namehash}{456350cff9d33559f5870b033cc7a5bc}
+      \strng{fullhash}{9d6a3cdc0bacff2043c8c2defed7e93b}
+      \strng{fullhashraw}{9d6a3cdc0bacff2043c8c2defed7e93b}
+      \strng{bibnamehash}{456350cff9d33559f5870b033cc7a5bc}
+      \strng{authorbibnamehash}{456350cff9d33559f5870b033cc7a5bc}
+      \strng{authornamehash}{456350cff9d33559f5870b033cc7a5bc}
+      \strng{authorfullhash}{9d6a3cdc0bacff2043c8c2defed7e93b}
+      \strng{authorfullhashraw}{9d6a3cdc0bacff2043c8c2defed7e93b}
+      \field{sortinit}{2}
+      \field{sortinithash}{8b555b3791beccb63322c22f3320aa9a}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{issn}{2211-467X}
+      \field{journaltitle}{Energy Strategy Reviews}
+      \field{title}{Electricity Price Forecasting in the Irish Balancing Market}
+      \field{volume}{54}
+      \field{year}{2024}
+      \field{pages}{101436}
+      \range{pages}{1}
+      \verb{doi}
+      \verb 10.1016/j.esr.2024.101436
+      \endverb
+      \verb{file}
+      \verb Electricity Price Forecasting in the Irish Balancing Market - guter Forecasting method {\"u}berblick:Attachments/Electricity Price Forecasting in the Irish Balancing Market - guter Forecasting method {\"u}berblick.pdf:application/pdf
+      \endverb
+    \endentry
     \entry{50hertzamprionTENNETTRANSNETBW.}{article}{}{}
       \name{author}{1}{}{%
         {{hash=891a4824bffcc3a0e0b0f7b1dfcd5680}{%

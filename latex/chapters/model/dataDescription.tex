@@ -75,7 +75,6 @@ Prozent mit der skalierten Zeitreihe ein Gebotszuschlag erfolgt wäre.
 - wobei zuviele daten ein overfitting verursachen können
 
 
-
 \textbf{DA}\\
 Die Day-Ahead Markt Preise sind zwar Variabel unterliegen aber einem Täglichem wie Wöchentlichen Rythmus.
 Im Jahresverlauf sind nur allgemeine Trends ablesbar wie Abbildung \ref{fig:overviewDAprices} zeigt.
@@ -187,6 +186,7 @@ Das erreichen wir indem wir zuerst das gesamt deutsche windprofil um dessen mitt
 positiven und negativen zahlen, die wenn wir sie nun skalieren stärker nach unten und nach oben abweichen.
 Anschließend wird wieder der Mittelwert hinzu addiert
 so erreichen wir eine neue zahlenreihe deren durchschnitt und summe der ursprünglichen entspricht, deren maximum aber bei 1 liegt [\ref{eq:windProfil_our}].
+
 \begin{flalign}
 	wp_{our} = ((wp_{ger} - \bar{wp_{ger}}) * wsf) + \bar{wp_{ger}} \label{eq:windProfil_our}
 \end{flalign}

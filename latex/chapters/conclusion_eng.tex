@@ -1,0 +1,88 @@
+\chapter{Conclusion}
+
+$\rightarrow$ This is presumably due to better preparation in scenarios where large fluctuations are expected.\\
+$\rightarrow$ Conversely, in scenarios where the majority of providers do not anticipate high volatility, an unexpected surge in demand appears to trigger a **price shock**.\\
+
+
+aFFR capacity:\\
+$\rightarrow$ This suggests that many providers expect to deliver balancing energy the following day.\\
+$\rightarrow$ In this context, the balancing energy price serves as a form of "bonus" revenue, which leads to an oversupply—driven by higher participation—that ultimately results in falling prices for balancing energy.\\
+
+aFFR negative energy:\\
+$\rightarrow$ This leads to more predictable obligations and a smoother charging curve, while in higher-price scenarios the focus shifts toward capturing price peaks as efficiently as possible.\\
+$\rightarrow$ Whether such optimization could be achieved in practice, or only under perfect information in the scenario model, remains uncertain.\\
+
+aFFR capacity:\\
+$\rightarrow$ Bids are submitted in such a way that the battery storage system can reliably meet all constraints without significantly impacting the balancing energy market.\\
+
+\todo{hier nochmal rein das die ganze sache am RA markt forecasting hängt, und das man gute erfolge damit haben könnte wenn man nicht probiert bestimmte genaue zahlen zu
+	forecasten sondern eher annimmt das der markt bestimmten rythmen unterliegt --> verweiß auf appendix als einen aufschlag dazu}
+
+\todo{ob die aufteilugn in q36 zwischen RA und DA wirklich so geschieht ist stark davon bedingt ob man den RA markt so genau vorhersagen kann
+	und damit so perfekt alle preisspitzen mitnehmen kann}
+The analyses presented in this work clearly demonstrate that increasing market penetration by volatile energy producers
+has significant effects on both the utilization and pricing of balancing energy. In particular,
+it is observed that with a growing share of volatile generation, the volume of activated negative balancing energy increases,
+while demand for positive balancing energy decreases. This pattern is also reflected in the marginal prices: while the prices
+for negative balancing energy tend to rise with increasing generation volatility, the prices for positive balancing energy show
+a declining trend.
+
+Notably, strong price outliers can be observed for positive balancing energy in scenarios with low or medium market penetration
+by volatile producers. These anomalies appear to be driven by unexpectedly high demand peaks in scenarios where market participants
+did not anticipate major fluctuations. This suggests that the expectations and preparedness of market participants play a crucial
+role in maintaining price stability under conditions of variable renewable energy feed-in.
+
+The analyzed capacity prices reveal a nuanced picture: median values peak for both positive and negative balancing energy
+in the medium scenario, indicating heightened competition in this setting\todo{nochmal überlegen ob das hier sinn macht}.
+Furthermore, the lower quantiles reveal that for
+negative balancing energy, there is little difference between Q1 and Q36, whereas for positive balancing energy,
+a more pronounced price divergence occurs towards the end of the day. This implies that in scenarios with anticipated high volatility,
+providers expect to deliver balancing energy the following day and treat the capacity price as an opportunistic “take-along price.”
+This behavior leads to a supply increase that exceeds the rise in demand, resulting in falling energy prices.
+
+Across all scenarios, the bidding strategies for the balancing capacity market are positioned just below the expected marginal prices.
+
+In scenarios with low to medium levels of volatile production, a shift toward earlier provisioning in the negative balancing energy
+market is observed. This is reflected in a more regular schedule of negative balancing energy delivery. In contrast, in high volatility
+scenarios with elevated prices, a strategy focused on capitalizing on price peaks becomes evident. In such cases, providers may forgo
+profits in the capacity market in favor of maximizing returns in the energy market.
+
+In the domain of negative balancing energy in particular, earlier provisioning is evident in scenarios with low and medium price levels.
+This suggests stronger adherence to obligations and more regular charging patterns. By contrast, in high-price scenarios, the focus shifts towards optimal exploitation of price spikes—a strategy that may not be fully replicable under real market conditions, as it presumes perfect knowledge of future price developments.
+
+For positive balancing energy, the analysis reveals that bidding volumes in low and medium volatility scenarios differ only marginally.
+Pronounced differences emerge only in high-volatility scenarios. Again, the data show that the more restrictive the capacity market
+constraints, the earlier the provision of balancing energy occurs.
+
+Overall, the findings highlight that both the expectations of market participants and their bidding strategies in the aFFR capacity and
+energy balancing markets play a critical role in price formation.
+
+It is also worth noting that, while the model accounts for different possible aFFR energy market scenarios,
+it assumes perfect foresight within each individual daily scenario.
+As a result, the revenue potential from the aFFR energy market is likely overestimated.
+Moreover, the model heavily exploits price peaks, which may not be fully realizable in practice.
+Whether such behavior can be implemented in reality depends largely on the quality of intraday forecasts
+and requires further investigation.
+
+An alternative modeling approach would be to refrain from using precise price data for the aFFR energy market
+and instead attempt to represent general market cycles.
+Under the hypothesis that the transmission system operator continuously strives to balance the grid,
+it can be postulated that any imbalance will eventually be corrected.
+Prolonged imbalances are assumed to be relatively unlikely.
+Based on this assumption, certain recurring patterns could be forecasted within a 4-hour window,
+characterized by a defined expected value.
+Appendix \ref{app:altModel} presents a preliminary model approach for this idea.
+However, both the scientific validation of the underlying hypothesis and the development of a suitable aFFR prediction cycle algorithm
+remain subjects for further research.
+
+
+
+\begin{enumerate}
+	\item Only a single day was simulated; the actual reload effects may become relevant only in multi-day scenarios.
+\end{enumerate}
+
+\todo{Include simulations with other providers}
+
+\todo{evenutell noch mit rein das die optimierung der windkraft noch komplett fehlt so kann die batterie auch genutzt werden
+	um relativ teure fehler aus zu gleichen wie im paper (Optimal Dispatch Scheduling of a Wind-Battery-System in German
+	Power Market) opmitiert}

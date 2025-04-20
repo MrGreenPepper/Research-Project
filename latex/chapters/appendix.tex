@@ -7,7 +7,7 @@
 \setcounter{figure}{0}
 \renewcommand{\thefigure}{A.\arabic{figure}}
 \renewcommand{\thetable}{A.\arabic{table}}
-
+\todo{base model stats a/r wpf and and and ... all the scalars used}
 
 \section{Further Model Constraints}
 
@@ -23,23 +23,14 @@
 \begin{flalign}
 	\label{parkCon_Q^{rN}_{DA}(t_{hour})}                   \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rN}_{DA}(t_{hour}, s^{in}_{RL}, s^{out}_{RL}) \leq parkCap * parkProfile(t_{hour}) - \sum_{s_{DA}, s^{in}_{RL}, s^{out}_{RL}} Q^{rN}_{reload}(t_{hour}, s^{in}_{RL}, s^{out}_{RL})
 \end{flalign}
-\section{Quantile Market Data}
-
-\begin{figure}[!h]
-	\includegraphics[width=0.7\linewidth]{pictures/results/relativeProduktionQuantils.png}
-	\caption{Relative Production Quantiles}
-	\label{fig:Relative Production Quantiles}
-\end{figure}
-
-Die daraus Resultierenden Zeitreihen für aktivierte Regelarbeit und deren Preise stellen sich dann wie folgt dar:
+\section{Quantile aFFR Market Data}
+\label{chap:app_QaFFRmarketData}
 \begin{figure}[H]
 	\centering
-
 	\includegraphics[width=1\linewidth]{pictures/results/Activated_negEnergy_Q1.png}
 	\caption{Activated Negative Energy Q1}
 	\label{fig:_negEnergy_Q1}
 \end{figure}
-
 
 \begin{figure}[H]
 	\centering
@@ -54,19 +45,20 @@ Die daraus Resultierenden Zeitreihen für aktivierte Regelarbeit und deren Preis
 	\caption{Activated Negative Energy Q36}
 	\label{fig:_negEnergy_Q36}
 \end{figure}
-\begin{figure}
+
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/Activated_posEnergy_Q1.png}
 	\caption{Activated Positive Energy Q1}
 	\label{fig:_posEnergy_Q1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/Activated_posEnergy_Q18.png}
 	\caption{Activated Positive Energy Q18}
 	\label{fig:_posEnergy_Q18}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/Activated_posEnergy_Q36.png}
 	\caption{Activated Positive Energy Q36}
 	\label{fig:_posEnergy_Q36}
@@ -97,37 +89,36 @@ Die daraus Resultierenden Zeitreihen für aktivierte Regelarbeit und deren Preis
 	\label{fig:CBMP_negBal_Q36}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/CBMP_PosBal_Q1.png}
 	\caption{CBMP Positive Energy Q1}
 	\label{fig:CBMP_PosBal_Q1}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/CBMP_PosBal_Q18.png}
 	\caption{CBMP Positive Energy Q18}
 	\label{fig:CBMP_PosBal_Q18}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/CBMP_PosBal_Q36.png}
 	\caption{CBMP Positive Energy Q36}
 	\label{fig:CBMP_PosBal_Q36}
 \end{figure}
 
-Für den selben Zeitabschnitt lässt sich der DA Markt wie folgt zusammenfassen:
+\textbf{DA}
 \begin{figure}[H]
 	\centering
 	\includegraphics[width=1\linewidth]{pictures/results/DAPrices.png}
 	\caption{DA Prices}
 	\label{fig:DAPrices}
 \end{figure}
-\begin{figure}
+\begin{figure}[H]
 	\includegraphics[width=1\linewidth]{pictures/results/DAProd.png}
 	\caption{DA Production}
 	\label{fig:DAProd}
 \end{figure}
 
-Außerdem stellt sich der entsprechende RL Markt wie folgt dar:
 
 \begin{figure}[H]
 	\centering
@@ -160,30 +151,35 @@ Außerdem stellt sich der entsprechende RL Markt wie folgt dar:
 	\caption{DA Energy - Q36}
 	\label{fig:DA Energy - Q36}
 \end{figure}
-\begin{figure}[H]
-	\includegraphics[width=1\linewidth]{pictures/results/DA Energy - Q1.png}
-	\caption{Balance Capacity - Q1}
-	\label{fig:Balance Capacity - Q1}
-\end{figure}
-
-\begin{figure}[H]
-	\includegraphics[width=1\linewidth]{pictures/results/Balance Capacity - Q18.png}
-	\caption{Balance Capacity - Q18}
-	\label{fig:Balance Capacity - Q18}
-\end{figure}
-
-\begin{figure}[H]
-	\includegraphics[width=1\linewidth]{pictures/results/Balance Capacity - Q36.png}
-	\caption{Balance Capacity - Q36}
-	\label{fig:Balance Capacity - Q36}
-\end{figure}
-
-
-
-
-
 
 
 \section{Digital Appendix}
 
+\subsection{Full GAMS Data}
+\href{https://zenodo.org/records/15250066?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImQ0YTVlZDAzLWU0NDktNDkyYS1iZGNlLTZjMTc3YWNmM2Y3ZCIsImRhdGEiOnt9LCJyYW5kb20iOiJhMDhlZTcwOTU3MjFiZmExMGY0YmUzMjUwZGM2ZjY5ZCJ9.RLOwEcGXlgFzX0IFm-1bEa9GjshtvCu_SmehFOBJg8yQ11NlqWq_4L8OuvG4eeULVS_BRhnSywxuA7vsCfTH9w}{Full GAMS Model}\\
+
+\texttt{\detokenize{https://zenodo.org/records/15250066?token=eyJhbGciOiJIUzUxMiJ9}}\\
+\texttt{\detokenize{.eyJpZCI6ImQ0YTVlZDAzLWU0NDktNDkyYS1iZGNlLTZjMTc3YWNmM2Y3ZC}}\\
+\texttt{\detokenize{IsImRhdGEiOnt9LCJyYW5kb20iOiJhMDhlZTcwOTU3MjFiZmExMGY0YmUzM}}\\
+\texttt{\detokenize{jUwZGM2ZjY5ZCJ9.RLOwEcGXlgFzX0IFm-1bEa9GjshtvCu_SmehFOBJg8y}}\\
+\texttt{\detokenize{Q11NlqWq_4L8OuvG4eeULVS_BRhnSywxuA7vsCfTH9w}}
+
+\subsection{Python Code \& Graphics}
+\href{https://zenodo.org/records/15250072?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6ImNmZDY2ZTRmLThiZjctNDI2Yy1hMjkzLWI5NDZkYmVkMTllNSIsImRhdGEiOnt9LCJyYW5kb20iOiJhNjI4MWVmYmJiMGViZTYzOTU0ZDVjMTRmNDU4MWJiMCJ9.uA9bX6OLFf9Pp2ubAHRNnt2GhgJh5wo5rXNeOsO-d_enloZMZBcsV4rCj-NJIkZboyPzi6s5PkMfnyhZUCjNkQ}{Python code for analysis}\\
+
+\texttt{\detokenize{https://zenodo.org/records/15250072?token=eyJhbGciOiJIUzUxMiJ9}}\\
+\texttt{\detokenize{.eyJpZCI6ImNmZDY2ZTRmLThiZjctNDI2Yy1hMjkzLWI5NDZkYmVkMTllNS}}\\
+\texttt{\detokenize{IsImRhdGEiOnt9LCJyYW5kb20iOiJhNjI4MWVmYmJiMGViZTYzOTU0ZDVjM}}\\
+\texttt{\detokenize{TRmNDU4MWJiMCJ9.uA9bX6OLFf9Pp2ubAHRNnt2GhgJh5wo5rXNeOsO-d_e}}\\
+\texttt{\detokenize{nloZMZBcsV4rCj-NJIkZboyPzi6s5PkMfnyhZUCjNkQ}}
+
+\subsection{Alternative Model}
+\label{app:altModel}
+\href{https://zenodo.org/records/15250055?token=eyJhbGciOiJIUzUxMiJ9.eyJpZCI6IjE1YWFjM2QxLWJmOTItNDliOS1iNDY4LWZmODkyNjY1OWRiNiIsImRhdGEiOnt9LCJyYW5kb20iOiI3ZGI5YjEyODgyNzgxYzdhNGE5Zjc1NWIwOWVhN2YxNSJ9.FBCfOpGd3SIIQKDdfnO6MmOsvnNoW9iQm4AwVD-54T6XpgzppI0E8JzMH1Oq6b0KZh-11kKp2PpRsM_fNMbOnQ}{Alternative Model Link}\\
+
+\texttt{\detokenize{https://zenodo.org/records/15250055?token=eyJhbGciOiJIUzUxMiJ9}}\\
+\texttt{\detokenize{.eyJpZCI6IjE1YWFjM2QxLWJmOTItNDliOS1iNDY4LWZmODkyNjY1OWRiNi}}\\
+\texttt{\detokenize{IsImRhdGEiOnt9LCJyYW5kb20iOiI3ZGI5YjEyODgyNzgxYzdhNGE5Zjc1N}}\\
+\texttt{\detokenize{WIwOWVhN2YxNSJ9.FBCfOpGd3SIIQKDdfnO6MmOsvnNoW9iQm4AwVD-54T6}}\\
+\texttt{\detokenize{XpgzppI0E8JzMH1Oq6b0KZh-11kKp2PpRsM_fNMbOnQ}}
 
